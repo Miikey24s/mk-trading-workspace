@@ -1,0 +1,114 @@
+{
+  "artifact_schema": 1,
+  "captured_at_local": "2026-09-21T21:21:05.2344355+07:00",
+  "scope": "VALIDATION_ONLY",
+  "authority": {
+    "run_id": "20260921T115933Z-315e8ddd",
+    "owner_generation": 1,
+    "plan_pool_ceiling": 10,
+    "product_source_policy": "read-only; preserve dirty user/worker WIP",
+    "forbidden_without_separate_gate": [
+      "F6 or U rollout",
+      "broker/MT5/live",
+      "holdout",
+      "provider or route reconfiguration",
+      "credentials",
+      "push/deploy"
+    ]
+  },
+  "plan_hashes": {
+    "EXECUTION-ENTRYPOINT.md": "1186354D409DC7AACC4035979BFFAC61504F6D7BCD67D885C53B3DB62DBB3273",
+    "PRODUCT-COMPLETION-PLAN.md": "B709097E9FC0C9898E5582644629287FF7240183ECE7E837EB97D324EC84715F",
+    "COORDINATOR-OPERATING-PLAN.md": "2241CCD873D668E02426BC3A1DF3DEB88B0042A4DAE9D9319EDF8745E6678457",
+    "FOUNDATION-RESEARCH-PLAN.md": "ABE0A374EA688CEE7793654574EA4D86FA7B7B0929447EC2D635801A3A02D64A",
+    "FOUNDATION-TARGET-DOSSIER.md": "23C0062F2D4F43188F6BE3E9CE171496D9253BEED2C0192570D11A9BF0C9BB4C"
+  },
+  "product_source": {
+    "path": "D:/ANNAM/TradingWorkspace/projects/mt5-tradingview-backtester",
+    "branch": "Nam",
+    "head": "7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd",
+    "dirty_status_entries": 54
+  },
+  "webgpt_source": {
+    "path": "D:/ANNAM/AI/codex-chatgpt-web-cockpit",
+    "head": "3998073f34bceb7e5543631582e78425f7a4a7c0",
+    "clean": true,
+    "per_instance_browser_cap_from_source": 5
+  },
+  "provider_pool": {
+    "configured_provider_capacity": 10,
+    "providers": [
+      {
+        "id": "cmp_webgpt_primary",
+        "base_url": "http://127.0.0.1:17841/v1",
+        "model": "chatgpt-web/high"
+      },
+      {
+        "id": "cmp_webgpt_instance_2",
+        "base_url": "http://127.0.0.1:17842/v1",
+        "model": "chatgpt-web/high"
+      }
+    ],
+    "cockpit_local_access_port": 54005,
+    "cockpit_account_count": 5,
+    "cockpit_rule_count": 4,
+    "routing_owner": "cockpit",
+    "affinity_owner": "cockpit",
+    "note": "provider metadata is redacted; no API key/account identifier is stored in this artifact"
+  },
+  "health_now": [
+    {
+      "port": 17841,
+      "status": "ok",
+      "version": "5.0.8",
+      "accepting_turns": true,
+      "active_browser_turns": 1,
+      "active_http_turns": 0,
+      "provider_healthy_now": true
+    },
+    {
+      "port": 17842,
+      "status": "ok",
+      "version": "5.0.8",
+      "accepting_turns": true,
+      "active_browser_turns": 0,
+      "active_http_turns": 0,
+      "provider_healthy_now": true
+    }
+  ],
+  "native_batch_observation": {
+    "protocol_user_report": {
+      "17841": "native",
+      "17842": "native"
+    },
+    "spawn_mechanism": "native collaboration tool with chatgpt-web/high",
+    "children_spawned": 4,
+    "children_simultaneously_running": 4,
+    "host_agent_tree_observed": "root + 4 children",
+    "verified_host_agent_capacity_minimum": 5,
+    "verified_concurrent_web_children_minimum": 4,
+    "mid_batch_health": {
+      "captured_at_local": "2026-09-21T21:10:07.5867362+07:00",
+      "17841_active_browser_turns": 5,
+      "17841_active_http_turns": 4,
+      "17842_active_browser_turns": 0,
+      "17842_active_http_turns": 0
+    },
+    "routing_result": "all four observed child HTTP turns landed on 17841; two-instance balancing/affinity is not yet verified",
+    "host_slot_ceiling": "not exposed by the current native collaboration API; empirical minimum is 5 total agents in this tree"
+  },
+  "capacity_conclusion": {
+    "plan_ceiling": 10,
+    "healthy_configured_provider_capacity": 10,
+    "verified_end_to_end_child_concurrency_for_this_run": 4,
+    "verified_host_capacity_minimum_total_agents": 5,
+    "two_instance_routed_capacity_10": "not verified",
+    "admission_rule": "use only empirically available capacity after subtracting current occupancy and task/resource constraints; never treat the plan ceiling as a reservation"
+  },
+  "limitations": [
+    "CO-03 still owns the accepted one-child artifact loop with independent verifier/reviewer.",
+    "CO-04 still owns routed overlap/integration evidence and must record any inability to use 17842 without changing provider configuration.",
+    "Occupancy is point-in-time and may change immediately after capture.",
+    "No product source, provider configuration, credentials, broker, MT5, holdout, push, or deployment was changed."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "task": "F3-SPIKES",
+  "candidate_sha256": "8358423bc10f481ffc0aae1e5e714965d07933848a4032b8a13e0f36c68f6cc9",
+  "reviewer_locator": "/root/review_f3",
+  "verdict": "FAIL",
+  "findings": [
+    {
+      "severity": "high",
+      "finding": "E-PERF-02 split-process and threaded candidates both fail the frozen W1 <=2x control-latency threshold; disposition must not imply the compute boundary passed, and missing C-JOB/C-PERF coverage must be explicit."
+    },
+    {
+      "severity": "high",
+      "finding": "E-CHANGE-01 migration publication accepts a breaking migration without the F1-C2 required data/state mapping."
+    },
+    {
+      "severity": "medium",
+      "finding": "Crash/recovery fixture does not measure lost-owner detection/recovery latency against the <=30s fixture target."
+    },
+    {
+      "severity": "medium",
+      "finding": "Benchmark provenance is missing script/test/verifier hashes, environment-noise/current-load notes, explicit cold/warm state, and candidate-specific operational effort."
+    }
+  ],
+  "required_revision": "new immutable candidate/raw/verification artifacts; do not rewrite original candidate",
+  "limits": [
+    "Reviewer confirmed 6/6 semantic unit tests pass; the failure is conclusion/protocol completeness.",
+    "Actual PostgreSQL, Parquet/Arrow, client/chart, real engine finalists, remote topology, representative product-slice change, and E-PATH-01 remain unrun."
+  ]
+}

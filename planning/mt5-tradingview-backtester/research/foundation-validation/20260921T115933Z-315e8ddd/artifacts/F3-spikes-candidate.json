@@ -1,0 +1,138 @@
+{
+  "conclusions": {
+    "E-CHANGE-01": {
+      "disposition": "KEEP_F1_C2_COMPATIBILITY_AND_NAMED_MIGRATION_OWNERSHIP_RULES",
+      "evidence": {
+        "contract_change_rules_rehearsed": true,
+        "limit": "This proves the version/migration rule is executable in a small fixture only. A representative product-slice change rehearsal is still decisive before D11/F5.",
+        "repo_structure_winner": null
+      },
+      "not_a_winner": "No repo structure or PATH selected."
+    },
+    "E-PERF-02": {
+      "disposition": "KEEP_ISOLATED_COMPUTE_BOUNDARY_AS_F1_BASELINE_FOR_FURTHER_TEST",
+      "evidence": {
+        "compute_isolation_signal": "split-process control p95 is lower under the same compute semantics",
+        "limit": "stdlib Python/GIL CPU fixture only; not a scheduler/framework winner and not production certification",
+        "shared_threads_meets_fixture_w1_control_ratio": false,
+        "split_process_meets_fixture_w1_control_ratio": false
+      },
+      "not_a_winner": "No scheduler/framework/runtime product candidate selected."
+    },
+    "E-PERF-03": {
+      "disposition": "KEEP_SQLITE_ONLY_AS_LOCAL_PROXY",
+      "evidence": {
+        "canonical_store_winner": null,
+        "limit": "No PostgreSQL candidate, networked transaction semantics, HA, or production-sized dataset was tested; this cannot select D04/D03 storage winners.",
+        "sqlite_proxy_result": "correct on this modest local contention fixture"
+      },
+      "not_a_winner": "No PostgreSQL/SQLite/storage winner selected."
+    },
+    "E-PERF-04": {
+      "disposition": "ADOPT_ORACLE_FIRST_ENGINE_COMPARISON_HARNESS; DEFER_ENGINE_SELECTION",
+      "evidence": {
+        "engine_winner": null,
+        "harness_valid": true,
+        "limit": "This validates oracle-first comparison mechanics only. Actual engine finalists, DST/calendar corpus, large stateful fill models, and W2 memory/runtime remain unrun."
+      },
+      "not_a_winner": "Decimal/integer fixture implementations are not product engine finalists."
+    },
+    "E-PORT-01": {
+      "disposition": "KEEP_VERSIONED_MOVABLE_SEAM_BASELINE; REMOTE_READY_UNPROVEN",
+      "evidence": {
+        "limit": "Both endpoints are on one machine and use a tiny stdlib TCP fixture. Remote host, TLS/auth, locator/object storage, deployment, and network partitions remain untested.",
+        "local_split_seam_rehearsed": true,
+        "remote_or_cloud_ready": false
+      },
+      "not_a_winner": "No transport/framework/cloud topology selected."
+    }
+  },
+  "contract_revision": "F1-C2",
+  "decisive_experiments_unrun": [
+    {
+      "experiment": "E-PERF-01",
+      "missing": "Actual Parquet/Arrow storage layouts and bytes-read/RAM/cold-warm benchmark",
+      "why_decisive": "stdlib environment has no pyarrow; storage/layout winner remains unknown"
+    },
+    {
+      "experiment": "E-PERF-03",
+      "missing": "Actual PostgreSQL transactional candidate under equivalent contention/backup/restore workload",
+      "why_decisive": "SQLite result is only a local proxy and cannot select the canonical transactional store"
+    },
+    {
+      "experiment": "E-PERF-04",
+      "missing": "Actual research/backtest engine finalists with full F1 corpus, DST/calendar, stateful fills/costs and W2 memory/runtime",
+      "why_decisive": "current Decimal/integer harness validates method and oracle ordering, not an engine winner"
+    },
+    {
+      "experiment": "E-CLIENT-01",
+      "missing": "Actual client/chart finalists on 5,000-candle UX fixture plus license/change-effort checks",
+      "why_decisive": "no browser/client/chart dependency is available or authorized in this local stdlib spike"
+    },
+    {
+      "experiment": "E-PORT-01",
+      "missing": "Remote-host topology, object/data locator, auth/TLS and real network partition/reconnect behavior",
+      "why_decisive": "localhost split process is not cloud/remote readiness proof"
+    },
+    {
+      "experiment": "E-CHANGE-01",
+      "missing": "Representative real product-slice broker-fake/client/versioned-contract change with build/test graph",
+      "why_decisive": "fixture module counts are not measured repository change cost"
+    },
+    {
+      "experiment": "E-PATH-01",
+      "missing": "PATH-1/2/3 capability rehearsal after relevant F2/F3 packets are complete",
+      "why_decisive": "explicitly prohibited from selecting/ranking PATH before prerequisite evidence"
+    }
+  ],
+  "environment": {
+    "available_physical_memory_bytes_at_start": 16907251712,
+    "captured_at_utc": "2026-09-21T20:54:11.402294+00:00",
+    "logical_cpu_count": 6,
+    "machine": "AMD64",
+    "os": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+    "python_executable": "C:\\Users\\MIIKEY\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "python_implementation": "CPython",
+    "python_version": "3.12.10",
+    "release": "11",
+    "run_disk_free_bytes_at_start": 254718955520,
+    "sqlite_version": "3.49.1",
+    "stdlib_only": true,
+    "system": "Windows",
+    "total_physical_memory_bytes": 34302349312
+  },
+  "evidence": {
+    "raw_artifact": "F3-spikes-raw.json",
+    "raw_artifact_sha256": "603f9a914383c43200ef56d87c2e36239ebbc90908b5f085f4601e825c315d98",
+    "semantics_pass_before_speed": true
+  },
+  "generated_at_utc": "2026-09-21T20:54:44.490708+00:00",
+  "inputs": {
+    "f1_c1_sha256": "c46e631f8239115179962cd1acdfe1e7a50cb32c4e2677559e3568c16b789430",
+    "f1_c2_sha256": "0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902",
+    "repetitions": 5,
+    "seed": 315833,
+    "warmups": 1
+  },
+  "limits": [
+    "No external network was used; E-PORT-01 is localhost only.",
+    "No broker, MT5, provider, protected holdout, product repository, plan document, controller ledger, or STATE mutation was used.",
+    "Audited environment lacks duckdb/pyarrow/pandas/fastapi/sqlalchemy; no dependency was installed.",
+    "SQLite is a transactional proxy only; it does not stand in for an actual PostgreSQL comparison.",
+    "No Parquet/Arrow, client/chart, real engine finalist, or E-PATH-01 winner evidence exists in this packet."
+  ],
+  "path_decision": {
+    "PATH-1": "NOT_SELECTED",
+    "PATH-2": "NOT_SELECTED",
+    "PATH-3": "NOT_SELECTED",
+    "ranked": false,
+    "reason": "E-PATH-01 remains unrun/prohibited until prerequisite F2/F3 evidence exists.",
+    "selected": null
+  },
+  "result": "READY_FOR_REVIEW",
+  "run": "20260921T115933Z-315e8ddd",
+  "schema": 1,
+  "scope": "local-only stdlib F3 decision-changing spikes; no broker/MT5/provider/holdout/external network",
+  "task": "F3-SPIKES"
+}

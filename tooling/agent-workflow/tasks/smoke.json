@@ -1,0 +1,10 @@
+{
+  "id": "smoke-fixture",
+  "objective": "Read src/risk.py and tests/test_risk.py. Implement loss_streak_probability(q,k) by reusing probability_power instead of adding a duplicate exponent calculation. Only change src/risk.py, using the file edit/apply_patch tool. Read-only inspection commands (Get-Content, Get-ChildItem, rg) are allowed inside staging. Do not execute Python, tests or scripts for this smoke; the controller will run the fixed unittest command. Report the test cases you inspected, but do not claim tests executed. Do not install anything.",
+  "acceptance": ["q=0.5,k=3 gives 0.125", "q=0,k=1 gives 0; q=1,k=2 gives 1", "Reject q outside [0,1], nonfinite q and k that is not a positive integer", "Reuse probability_power; preserve test file"],
+  "allowed_files": ["src/risk.py"],
+  "inputs": [
+    {"source": "fixtures/risk.py", "destination": "src/risk.py"},
+    {"source": "fixtures/test_risk.py", "destination": "tests/test_risk.py"}
+  ]
+}

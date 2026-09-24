@@ -1,0 +1,89 @@
+{
+  "accepted_output_elapsed_ms": 9672.656,
+  "candidate_path": "D:\\ANNAM\\TradingWorkspace\\planning\\mt5-tradingview-backtester\\research\\foundation-validation\\20260921T115933Z-315e8ddd\\artifacts\\CO-04-batch-candidate-r1.json",
+  "candidate_sha256": "6b947579fec43a8e857c95ff4c0cf581171f00deb21eddec1a7985e011861776",
+  "checks": [
+    {
+      "check": "lane-a:single-output",
+      "observed": [
+        "lane-output.json"
+      ],
+      "pass": true
+    },
+    {
+      "check": "lane-a:identity",
+      "pass": true
+    },
+    {
+      "check": "lane-a:no-cross-talk",
+      "foreign_tokens": [],
+      "pass": true
+    },
+    {
+      "check": "lane-b:single-output",
+      "observed": [
+        "lane-output.json"
+      ],
+      "pass": true
+    },
+    {
+      "check": "lane-b:identity",
+      "pass": true
+    },
+    {
+      "check": "lane-b:no-cross-talk",
+      "foreign_tokens": [],
+      "pass": true
+    },
+    {
+      "check": "lane-c:single-output",
+      "observed": [
+        "lane-output.json"
+      ],
+      "pass": true
+    },
+    {
+      "check": "lane-c:identity",
+      "pass": true
+    },
+    {
+      "check": "lane-c:no-cross-talk",
+      "foreign_tokens": [],
+      "pass": true
+    },
+    {
+      "check": "three-way-overlap",
+      "overlap_ms": 586.624,
+      "pass": true
+    },
+    {
+      "check": "integration-byte-determinism",
+      "pass": true
+    },
+    {
+      "check": "integration-hash",
+      "pass": true,
+      "sha256": "de88dd89f6a2ce7963419689a48ba9866be4153a8beba8eb964e6f6c8166dfaf"
+    },
+    {
+      "check": "candidate-overlap-claim",
+      "pass": true
+    },
+    {
+      "check": "capacity-claim-bounded",
+      "pass": true
+    }
+  ],
+  "independent_overlap_ms": 586.624,
+  "integration_sha256": "de88dd89f6a2ce7963419689a48ba9866be4153a8beba8eb964e6f6c8166dfaf",
+  "limits": [
+    "PASS is scoped to the local three-lane fixture batch.",
+    "Browser child concurrency, multi-instance routing/affinity, and total capacity 10 remain unverified in this task context."
+  ],
+  "result": "PASS",
+  "schema": 1,
+  "task": "CO-04",
+  "verification_elapsed_ms": 4.998,
+  "verification_ended_at": "2026-09-21T15:03:48.005310Z",
+  "verification_started_at": "2026-09-21T15:03:48.000312Z"
+}

@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "lane": 2,
+  "token": "CO04-NATIVE-LANE-2",
+  "started_utc": "2026-09-21T15:08:17.8052441Z",
+  "finished_utc": "2026-09-21T15:08:20.8217794Z",
+  "scope": "fixture-only",
+  "limits": [
+    "no routing inference",
+    "no product readiness"
+  ]
+}

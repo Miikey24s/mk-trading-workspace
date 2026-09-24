@@ -1,0 +1,11 @@
+{
+  "task": "U5-NAUTILUS-ADAPTER-r1",
+  "attempt": "U5-NAUTILUS-ADAPTER-r1-a1",
+  "child": "/root/nautilus_adapter_spike",
+  "status": "errored before completion",
+  "error": "ChatGPT Web supports at most 5 simultaneous browser turns",
+  "preflight": {"17841": {"healthy": true, "active_browser_turns": 0}, "17842": {"healthy": true, "active_browser_turns": 5}},
+  "route_attribution": "unknown; no account/instance switch attempted",
+  "disposition": "Stop fan-out on this capacity-limited lane. Root continues local in-scope work; do not infer failed child executed or retry a concurrent writer. Reconcile child artifact namespace before any retry.",
+  "root_task_status": "running; not blocked"
+}

@@ -1,0 +1,57 @@
+{
+  "acceptance": [
+    "Existing fixed-horizon playbooks remain behaviorally compatible by default",
+    "Optional protective mode uses explicit stop-loss/take-profit semantics and actual Nautilus contingent orders for supported cases",
+    "A bar that can hit both stop and take-profit without lower-timeframe ordering fails closed before result publication; no invented intrabar winner",
+    "Gap-through-stop/take-profit behavior is explicit and does not claim perfect trigger fills",
+    "Insufficient-margin behavior uses an immutable research leverage/margin assumption and an independent oracle; it is not broker margin evidence",
+    "Reference and Nautilus outputs reconcile for independent long/short stop, take-profit, horizon fallback, gap and insufficient-margin fixtures",
+    "Native protective fills remain linked to the accepted ledger and existing cancel/deadline/crash isolation stays green",
+    "Focused review and integrated regression pass before acceptance; manual/replay comparison, durable progress/checkpoints and U5c remain separate"
+  ],
+  "allowed_files": [
+    "foundation_v2/engine_runtime/",
+    "foundation_v2/trading_workspace_v2/",
+    "foundation_v2/tests/",
+    "foundation_v2/evidence/U5-*",
+    "foundation_v2/README.md"
+  ],
+  "base_revision": "f9d8c19cf87655b495de5438297a1596d15f6a0c",
+  "dependencies": [
+    "U5-NAUTILUS-ADAPTER-r1"
+  ],
+  "open_after_slice": [
+    "Manual/replay comparison on the same unseen segment",
+    "Durable progress/restart checkpoints and concurrency admission",
+    "U5c chronological OOS/walk-forward/stress/bounded sweep",
+    "Real licensed dataset and owner UX acceptance"
+  ],
+  "ownership": {
+    "implementation": "/root",
+    "integration": "/root",
+    "review": "independent read-only child",
+    "shared_contracts_schema": "/root"
+  },
+  "requirements": [
+    "Y06",
+    "Y19",
+    "Y20",
+    "K10",
+    "K11",
+    "K12"
+  ],
+  "resource_budget": {
+    "compute_workers": 1,
+    "max_memory_mb": 4096,
+    "route": "local accepted runtime"
+  },
+  "rollback": "Additive optional research semantics only; fixed-horizon reference and accepted Nautilus adapter remain the fallback/default contract.",
+  "safety": "Synthetic/local fixture data only. No broker, MT5 execution, holdout opening, external provider, paid API, deployment, secret, or global environment change.",
+  "sources": [
+    "PRODUCT-COMPLETION-PLAN.md U5b",
+    "artifacts/U5-NAUTILUS-ADAPTER-acceptance-r1.json",
+    "foundation_v2/evidence/U5-nautilus-review-r1.json",
+    "accepted bar-breakout-v1 reference/Nautilus contracts"
+  ],
+  "task": "U5B-PROTECTIVE-MARGIN-r1"
+}

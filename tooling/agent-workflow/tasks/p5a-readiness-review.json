@@ -1,0 +1,17 @@
+{
+  "id": "p5a-readiness-review",
+  "objective": "READ-ONLY confirmation review of P5A. Read exactly the four staged files and return immediately. Confirm or reject only these claims: A) live_readiness.py performs broker reads only and has no broker-write call; B) readiness fails closed for non-real/wrong identity, missing protocol or terminal state, missing/malformed limits/actions/symbol scope, max positions, and any durable live request still unknown; C) p5_app.py exposes only GET readiness locally and defaults the readiness backend to disabled; D) execution_service.py still requires demo mode, so P5A does not widen P4 into live execution. Do not broaden the review and do not execute code/tests.",
+  "acceptance": [
+    "Return PASS, FINDINGS or BLOCKED",
+    "Cite exact staged file and line/behavior for any finding",
+    "Any broker-write path, live-mode widening or fail-open readiness is blocking",
+    "If all four claims hold, say PASS and note tests were not executed by reviewer"
+  ],
+  "allowed_files": [],
+  "inputs": [
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/P5-CONTRACT.md", "destination": "P5-CONTRACT.md"},
+    {"root": "mt5", "source": "live_readiness.py", "destination": "live_readiness.py"},
+    {"root": "mt5", "source": "p5_app.py", "destination": "p5_app.py"},
+    {"root": "mt5", "source": "execution_service.py", "destination": "execution_service.py"}
+  ]
+}

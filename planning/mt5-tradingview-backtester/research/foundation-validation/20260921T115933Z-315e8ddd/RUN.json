@@ -1,0 +1,16 @@
+{
+  "entrypoint_sha256": "1186354d409dc7aacc4035979bffac61504f6d7bcd67d885c53b3db62dbb3273",
+  "owner_generation": 1,
+  "plan_entrypoint": "D:\\ANNAM\\TradingWorkspace\\planning\\mt5-tradingview-backtester\\EXECUTION-ENTRYPOINT.md",
+  "pool_ceiling": 10,
+  "product_repo_read_only": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester",
+  "protected": [
+    "product source",
+    "broker/live",
+    "holdout",
+    "global config",
+    "provider routing"
+  ],
+  "run_id": "20260921T115933Z-315e8ddd",
+  "scope": "VALIDATION_ONLY"
+}

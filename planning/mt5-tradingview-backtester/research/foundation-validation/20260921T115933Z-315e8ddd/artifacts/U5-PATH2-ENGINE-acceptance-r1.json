@@ -1,0 +1,62 @@
+{
+  "task": "U5-PATH2-ENGINE-r1",
+  "commit": "c49dfc2e504d13b54cab6279c9d86625ce14609e",
+  "base": "86d300055e58e8659c6ad0217c97c15d290c4214",
+  "result": "PASS",
+  "verification": {
+    "test_hash": "332b926f0cb3868c8d3024d9c4df70a414741f306f1fb0794be635141b972016",
+    "input_hashes": {
+      "validation": "332b926f0cb3868c8d3024d9c4df70a414741f306f1fb0794be635141b972016",
+      "review": "984cd70e55dc3aa69ccfc3e2adc0ad9c901f1b4eecb1dba45449fa9b52701dfb",
+      "commit": "c49dfc2e504d13b54cab6279c9d86625ce14609e"
+    },
+    "test_scope": "U5 golden/API negative cases plus U2/U3/F7/FH1/FH2/reference/contracts/provider regressions",
+    "expected_outcomes": [
+      "zero skipped tests",
+      "no publication on cancel/tamper/budget/holdout",
+      "independent monetary oracle",
+      "tenant/lease regressions preserved"
+    ],
+    "exit_code": 0,
+    "tests": 58,
+    "acceptance_scope": "partial reference protocol slice; not full U5 or production"
+  },
+  "review": {
+    "schema": "u5-review-v1",
+    "date": "2026-09-22",
+    "reviewer": "/root/u5_final_review",
+    "verdict": "pass",
+    "scope": "Partial U5 fixed-horizon reference/protocol slice only; not the primary Nautilus adapter or full U5",
+    "validation": "U5-validation-r2.json",
+    "validation_sha256": "a47a272166d8e8dfdf2e165125a12226b219ffd1e9d25e3671629a8b2eeadc81",
+    "checks": {
+      "independent_source_review": "PASS; no actionable blocker in claimed scope",
+      "evidence_source_hashes": "Reviewer independently matched all R2 source hashes to current files",
+      "fixture_validation": "58/58 PASS, zero skipped, source stable; executed by coordinator",
+      "reviewer_test_rerun": "Not run: reviewer could not launch the venv base Python in its environment; not a DB/test PASS claim"
+    },
+    "findings": [
+      {
+        "severity": "closed",
+        "finding": "Sub-timeframe bars now require QA review and engine rejects overlap before signal use."
+      },
+      {
+        "severity": "closed",
+        "finding": "Independent Decimal reconciliation and hand-calculated golden tests cover money, fills, timing and rounding adjustment."
+      },
+      {
+        "severity": "closed",
+        "finding": "Source closure hash and loaded-source guard reject drift; budget/lease rechecked before publish, late candidates quarantined."
+      },
+      {
+        "severity": "scope",
+        "finding": "Protective orders, margin, simultaneous events, replay comparison, Nautilus adapter, hard resource isolation, progress/checkpoints and U5c remain open."
+      },
+      {
+        "severity": "gate",
+        "finding": "No UX, empirical, real licensed data, broker/demo/live, paid provider or deployment acceptance claimed."
+      }
+    ]
+  },
+  "validation": "foundation_v2/evidence/U5-validation-integrated-r1.json"
+}

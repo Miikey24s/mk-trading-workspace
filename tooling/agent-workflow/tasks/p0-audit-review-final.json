@@ -1,0 +1,22 @@
+{
+  "id": "p0-audit-review-final",
+  "objective": "READ-ONLY final review of the updated P0 decision gate. Return a verdict quickly after checking only concrete blockers: (1) P1 truly requires no MT5/socket and no migration-on-read, (2) execution fake contract is deny-by-default and idempotency cannot confuse different intents, (3) metrics-v1 derives realized R from net P/L and planned risk rather than trusting legacy r, (4) benchmark conclusions are scoped to the synthetic harness, and (5) keeping current repo plus Flask for P1 is supported rather than presented as a production-performance conclusion. Do not run code/tests or edit files.",
+  "acceptance": [
+    "Return PASS, FINDINGS or BLOCKED with concise file references",
+    "Flag only issues that materially invalidate the P0 decision or P1 read-only safety/reproducibility",
+    "Do not require product implementation at P0 when the contract explicitly marks it as future P1 work"
+  ],
+  "allowed_files": [],
+  "inputs": [
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/P0-AUDIT-2026-09-17.md", "destination": "docs/P0-AUDIT.md"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/P1-CONTRACT.md", "destination": "docs/P1-CONTRACT.md"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/DATA-AND-METRICS.md", "destination": "docs/DATA-AND-METRICS.md"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/p0-spikes/metrics_core.py", "destination": "spikes/metrics_core.py"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/p0-spikes/execution_guard.py", "destination": "spikes/execution_guard.py"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/p0-spikes/test_spikes.py", "destination": "spikes/test_spikes.py"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/p0-spikes/tech_spike.py", "destination": "spikes/tech_spike.py"},
+    {"root": "mt5", "source": "app.py", "destination": "product/app.py"},
+    {"root": "mt5", "source": "history_store.py", "destination": "product/history_store.py"},
+    {"root": "mt5", "source": "static/js/trading.js", "destination": "product/static/js/trading.js"}
+  ]
+}

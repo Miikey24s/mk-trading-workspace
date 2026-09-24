@@ -1,0 +1,65 @@
+{
+  "artifact_schema": 1,
+  "task": "CO-02",
+  "scope": "local orchestration fixture recovery only",
+  "implementation": {
+    "controller.py_sha256": "DD8D70F3DBFAFA77F7A812F9F94834C9CA0AD5C33B292BD2CBA07AE075445029",
+    "test_controller.py_sha256": "FB34B4E344F50BF0BA31AD144484BA84A3F5DF79DD01AA38ABB38BD6B4C2C3C0"
+  },
+  "fault_cases": [
+    {
+      "case": "dispatch prepared then controller connection closes/reopens",
+      "expected": "attempt/task remain dispatch_prepared and duplicate redispatch is rejected"
+    },
+    {
+      "case": "late uncertainty arrives after acceptance",
+      "expected": "accepted task/attempt cannot be downgraded"
+    },
+    {
+      "case": "forced task update failure after attempt insert",
+      "expected": "transaction rollback leaves no attempt/event and task remains ready"
+    },
+    {
+      "case": "snapshot bytes are modified/torn",
+      "expected": "checksum validation rejects snapshot"
+    },
+    {
+      "case": "snapshot predates current event revision",
+      "expected": "minimum_event_seq validation rejects stale snapshot"
+    },
+    {
+      "case": "promotion observed before ledger finalize",
+      "expected": "wrong revision is rejected; matching candidate revision finalizes once"
+    },
+    {
+      "case": "fresh owner takeover",
+      "expected": "requires external old-owner-inactive confirmation; generation increments; stale owner cannot mutate"
+    }
+  ],
+  "durability": {
+    "sqlite_transaction": "BEGIN IMMEDIATE + rollback/commit",
+    "sqlite_journal_mode": "WAL",
+    "sqlite_synchronous": "FULL",
+    "snapshot_write": "temp file + flush/fsync + atomic replace",
+    "checksum_sidecar_write": "temp file + flush/fsync + atomic replace",
+    "snapshot_revision": "latest durable event sequence"
+  },
+  "focused_validation": {
+    "suite": "python -B -m unittest -v test_controller.py",
+    "result": "16 passed",
+    "co02_cases_present": [
+      "test_prepared_dispatch_survives_reopen_and_blocks_duplicate_dispatch",
+      "test_late_result_cannot_overwrite_accepted_task",
+      "test_prepare_attempt_rolls_back_if_later_task_update_fails",
+      "test_snapshot_checksum_rejects_torn_or_modified_export",
+      "test_stale_snapshot_rejected_against_current_event_revision",
+      "test_promotion_before_finalize_recovery",
+      "test_takeover_requires_confirmation_and_fences_old_generation"
+    ]
+  },
+  "limits": [
+    "This proves controller/storage recovery semantics on a local fixture, not provider/browser process resurrection.",
+    "Fresh-root end-to-end recovery from files remains CO-05.",
+    "No broker/execution exactly-once claim is made."
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "candidate_sha256": "a374195195cab36ebdfdf69b9e4b57e8038acde3aaa93beea80e5e72e497d324",
+  "checks": [
+    {
+      "check": "three-way-overlap",
+      "pass": true
+    },
+    {
+      "check": "unique-lanes",
+      "pass": true
+    },
+    {
+      "check": "unique-tokens",
+      "pass": true
+    },
+    {
+      "check": "two-accepted-one-unavailable",
+      "pass": true
+    },
+    {
+      "check": "uncertainty-preserved",
+      "pass": true
+    },
+    {
+      "check": "integration-hash",
+      "pass": true
+    },
+    {
+      "check": "integration-membership",
+      "pass": true
+    },
+    {
+      "check": "lane-ok-a-artifact-hash",
+      "pass": true
+    },
+    {
+      "check": "lane-ok-a-no-crosstalk",
+      "pass": true
+    },
+    {
+      "check": "lane-ok-b-artifact-hash",
+      "pass": true
+    },
+    {
+      "check": "lane-ok-b-no-crosstalk",
+      "pass": true
+    },
+    {
+      "check": "unavailable-receipt-hash",
+      "pass": true
+    },
+    {
+      "check": "rework-accounted",
+      "pass": true
+    },
+    {
+      "check": "routing-limit-truthful",
+      "pass": true
+    },
+    {
+      "check": "time-includes-prior-rework",
+      "pass": true
+    }
+  ],
+  "limits": [
+    "Overlap and unavailable-lane behavior are proven on isolated local fixture workers.",
+    "Three native Web GPT lanes completed earlier but were serialized; multi-instance affinity remains unverified.",
+    "Final time-to-accepted is written only after independent r4 review and controller finalization.",
+    "No provider configuration, product repository, broker, MT5, holdout, or live action is performed."
+  ],
+  "result": "PASS",
+  "rework_cycles_before_r4": 2,
+  "schema": 1,
+  "task": "CO-04",
+  "time_to_verified_ms_from_first_attempt": 19433284.403,
+  "verification_elapsed_ms": 1.971,
+  "verified_at": "2026-09-21T20:35:39.284403Z"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "p0-audit-review",
+  "objective": "READ-ONLY review of the Trading Workspace P0 technical decision gate. Verify the audit and P1 contract claims against the staged current product source and P0 spike source. Focus on correctness of the execution-safety findings, metrics semantics, replay cutoff claim, benchmark interpretation, reuse matrix, and whether the recommendation to keep the current repo plus Flask for P1 is actually supported. Identify missing blockers that would make P1 unsafe or non-reproducible. Do not propose product implementation beyond what is necessary to explain a finding.",
+  "acceptance": [
+    "Check that mode/local/replay versus live execution claims match app.py and trading.js",
+    "Check metrics-v1 semantics and expected fixture values for cost, breakeven, drawdown percent, R and loss streak",
+    "Check storage/API benchmark conclusions do not overclaim from the harness",
+    "Check P1 read-only contract blocks broker/MT5 side effects and migration-on-read",
+    "Check the final keep/split/replace decisions are supported by evidence or flag concrete gaps",
+    "Return PASS, FINDINGS or BLOCKED with concrete file references"
+  ],
+  "allowed_files": [],
+  "inputs": [
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/P0-AUDIT-2026-09-17.md", "destination": "docs/P0-AUDIT-2026-09-17.md"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/P1-CONTRACT.md", "destination": "docs/P1-CONTRACT.md"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/DATA-AND-METRICS.md", "destination": "docs/DATA-AND-METRICS.md"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/p0-spikes/metrics_core.py", "destination": "spikes/metrics_core.py"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/p0-spikes/execution_guard.py", "destination": "spikes/execution_guard.py"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/p0-spikes/test_spikes.py", "destination": "spikes/test_spikes.py"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/p0-spikes/tech_spike.py", "destination": "spikes/tech_spike.py"},
+    {"root": "mt5", "source": "app.py", "destination": "product/app.py"},
+    {"root": "mt5", "source": "mt5_data.py", "destination": "product/mt5_data.py"},
+    {"root": "mt5", "source": "session_store.py", "destination": "product/session_store.py"},
+    {"root": "mt5", "source": "history_store.py", "destination": "product/history_store.py"},
+    {"root": "mt5", "source": "static/js/trading.js", "destination": "product/static/js/trading.js"},
+    {"root": "mt5", "source": "static/js/analytics.js", "destination": "product/static/js/analytics.js"},
+    {"root": "mt5", "source": "static/js/datafeed.js", "destination": "product/static/js/datafeed.js"}
+  ]
+}

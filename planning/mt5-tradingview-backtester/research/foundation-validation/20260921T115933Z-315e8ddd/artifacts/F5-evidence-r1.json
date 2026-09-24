@@ -1,0 +1,292 @@
+{
+  "client": {
+    "advanced_charts_entitlement": "UNKNOWN_NOT_USED",
+    "assessment": {
+      "accepted": false,
+      "decisive_missing": [
+        "built representative clients on three target screens",
+        "interaction/performance measurement",
+        "renderer change-effort comparison"
+      ],
+      "reason": "Registry metadata can screen availability/license, but cannot select the client/chart stack."
+    },
+    "experiment": "E-CLIENT-01 dependency/license reconnaissance",
+    "packages": [
+      {
+        "available": false,
+        "package": "react",
+        "reason": "JSONDecodeError: Extra data: line 5 column 1 (char 46)"
+      },
+      {
+        "available": true,
+        "package": "vite",
+        "registry": {
+          "license": "MIT",
+          "version": "8.3.0"
+        }
+      },
+      {
+        "available": true,
+        "package": "lightweight-charts",
+        "registry": {
+          "license": "Apache-2.0",
+          "version": "5.2.1"
+        }
+      },
+      {
+        "available": true,
+        "package": "vue",
+        "registry": {
+          "license": "MIT",
+          "version": "3.5.43"
+        }
+      },
+      {
+        "available": true,
+        "package": "klinecharts",
+        "registry": {
+          "license": "Apache-2.0",
+          "version": "10.0.3"
+        }
+      }
+    ]
+  },
+  "engine": {
+    "assessment": {
+      "accepted": false,
+      "actual_engine_loaded": true,
+      "decisive_missing": [
+        "same semantic strategy/fill/timing/cost oracle against a second finalist",
+        "DST/calendar cases",
+        "cancel/resume/checkpoint and memory/runtime measurements"
+      ],
+      "reason": "Loading an actual engine closes install/Windows lifecycle uncertainty only; it is not backtest semantic parity evidence.",
+      "winner_selected": null
+    },
+    "experiment": "E-PERF-04 capability smoke",
+    "nautilus_trader": {
+      "engine_setup_ms": 967.5004000018816,
+      "instrument": "AUD/USD.SIM",
+      "version": "1.231.0"
+    }
+  },
+  "environment": {
+    "cpu_logical": 6,
+    "executable": "D:\\ANNAM\\TradingWorkspace\\planning\\mt5-tradingview-backtester\\research\\foundation-validation\\20260921T115933Z-315e8ddd\\.f5-venv\\Scripts\\python.exe",
+    "memory_total_bytes": 34302349312,
+    "os": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "duckdb": "1.5.5",
+      "fastapi": "0.141.1",
+      "nautilus_trader": "1.231.0",
+      "numpy": "2.5.3",
+      "psycopg": "3.3.6",
+      "pyarrow": "25.0.1"
+    },
+    "protocol": {
+      "cold_state": "process/filesystem cache not reset; no true cold-cache claim",
+      "repetitions": 5,
+      "seed": 20260922,
+      "warmup": "one unrecorded read/request before measured repetitions"
+    },
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "f5_gate": {
+    "decisive_missing": [
+      "actual PostgreSQL transactional candidate benchmark/restore under the target contract",
+      "two engine finalists with independent fill/timing/cost semantic parity",
+      "built and measured client/chart finalists on representative screens",
+      "fresh dependency/build reconstruction plus separated-topology E-PORT slice",
+      "representative E-CHANGE-01/D11/D12 rehearsal",
+      "E-PATH-01 after the above target decisions are sufficiently frozen"
+    ],
+    "path_selected": null,
+    "status": "RESEARCH_OPEN"
+  },
+  "recovery": {
+    "assessment": {
+      "accepted": false,
+      "partial": true,
+      "reason": "File-level synthetic restore meets checksum/time target, but this is not a clean dependency/build reconstruction and does not prove a separated-host topology."
+    },
+    "backup_ms": 7.418799999868497,
+    "checksums_equal": true,
+    "experiment": "C-REC-01 synthetic data restore slice",
+    "fresh_destination_was_empty": true,
+    "manifest": {
+      "events.parquet": "406d35212e1e4a6cf4771d165789965593495233e0e5266a7b11fe7eabddef46",
+      "events.sqlite3": "1da4f92825ed72e0b4111271d0cc90aa666a9ad8c6c976c29b27d6f56d8f82f3"
+    },
+    "restore_ms": 3.304300014860928,
+    "target_restore_under_30_min": true
+  },
+  "repo_change": {
+    "assessment": {
+      "accepted": false,
+      "reason": "Pinned HEAD+WIP as required, but no same-change monorepo/multi-repo or semantic-conflict rehearsal has been executed yet.",
+      "representative_change_rehearsal_run": false
+    },
+    "experiment": "E-CHANGE-01/D11/D12 precondition snapshot",
+    "head": "7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd",
+    "product_repo": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester",
+    "wip_entries": 55,
+    "wip_manifest_sha256": "434755420fa31e087b6f85995256aa22361f5a74a029a51bb19a71ddaeddadd4"
+  },
+  "runtime": {
+    "assessment": {
+      "accepted": false,
+      "fastapi_representative_candidate_exercised": true,
+      "limit": "In-process test clients exclude socket/server startup, W1 saturation, worker isolation, and .NET implementation; they cannot select the control runtime alone.",
+      "winner_selected": null
+    },
+    "dotnet_available": true,
+    "dotnet_version": "10.0.400",
+    "experiment": "D03 representative in-process control slice",
+    "fastapi_candidate": {
+      "enqueue_ack_ms": {
+        "max": 62.57710000500083,
+        "mean": 5.153561999555677,
+        "min": 2.690900000743568,
+        "p50": 3.8085499982116744,
+        "p95": 8.190599997760728
+      },
+      "metadata_ms": {
+        "max": 53.88870000024326,
+        "mean": 4.614064201014116,
+        "min": 2.5920000043697655,
+        "p50": 3.409650002140552,
+        "p95": 7.392500003334135
+      }
+    },
+    "flask_incumbent": {
+      "enqueue_ack_ms": {
+        "max": 3.09810001635924,
+        "mean": 0.383104199077934,
+        "min": 0.2784999960567802,
+        "p50": 0.29769999673590064,
+        "p95": 0.6509999802801758
+      },
+      "metadata_ms": {
+        "max": 2.380799996899441,
+        "mean": 0.2922302002552897,
+        "min": 0.21669999114237726,
+        "p50": 0.23594999220222235,
+        "p95": 0.4650999908335507
+      }
+    },
+    "same_semantics": true
+  },
+  "schema": "F5-EVIDENCE-r1",
+  "scope": "VALIDATION_ONLY; synthetic/local; no product mutation, broker, live execution, cloud deploy, or system service installation",
+  "storage": {
+    "assessment": {
+      "limit": "This is a deterministic local historical-read fixture, not production storage sizing or a true cold-cache benchmark.",
+      "parquet_arrow_actual_candidate_exercised": true,
+      "semantics_parity": true,
+      "winner_selected": null
+    },
+    "dataset": {
+      "columns": [
+        "event_index",
+        "tenant_id",
+        "known_index",
+        "price_cents",
+        "qty_units",
+        "fee_cents"
+      ],
+      "rows": 120000,
+      "seed": 20260922
+    },
+    "duckdb_parquet_query": {
+      "checksum": {
+        "price_sum": 6055619373,
+        "qty_sum": 2989940,
+        "rows": 60000
+      },
+      "parity": true,
+      "warm_query_ms": {
+        "max": 59.27860000520013,
+        "mean": 14.573180000297725,
+        "min": 2.355600008741021,
+        "p50": 3.1829999934416264,
+        "p95": 5.019600008381531
+      }
+    },
+    "experiment": "E-PERF-01 + analytical read slice",
+    "oracle": {
+      "price_sum": 6055619373,
+      "qty_sum": 2989940,
+      "rows": 60000
+    },
+    "parquet_arrow": {
+      "bytes": 762809,
+      "checksum": {
+        "price_sum": 6055619373,
+        "qty_sum": 2989940,
+        "rows": 60000
+      },
+      "max_observed_rss_delta_bytes": 1908736,
+      "parity": true,
+      "path": "f5-fixtures\\data\\events.parquet",
+      "sha256": "406d35212e1e4a6cf4771d165789965593495233e0e5266a7b11fe7eabddef46",
+      "warm_read_ms": {
+        "max": 4.147800005739555,
+        "mean": 3.849960002116859,
+        "min": 3.575900016585365,
+        "p50": 3.719700005603954,
+        "p95": 4.093499999726191
+      }
+    },
+    "sqlite_incumbent_layout": {
+      "bytes": 3981312,
+      "checksum": {
+        "price_sum": 6055619373,
+        "qty_sum": 2989940,
+        "rows": 60000
+      },
+      "max_observed_rss_delta_bytes": 4096,
+      "parity": true,
+      "path": "f5-fixtures\\data\\events.sqlite3",
+      "sha256": "1da4f92825ed72e0b4111271d0cc90aa666a9ad8c6c976c29b27d6f56d8f82f3",
+      "warm_read_ms": {
+        "max": 25.9074000059627,
+        "mean": 23.60830000252463,
+        "min": 22.7739000110887,
+        "p50": 23.19319997332059,
+        "p95": 23.37690000422299
+      }
+    }
+  },
+  "transaction_store": {
+    "assessment": {
+      "accepted": false,
+      "decisive_gap": true,
+      "reason": "Target dossier names PostgreSQL as the transactional metadata baseline; an actual server candidate was not available within local-only/no-service scope."
+    },
+    "embedded_alternative": {
+      "correct": true,
+      "final_value": 200,
+      "latency_ms": {
+        "max": 9.862799983238801,
+        "mean": 4.391413500416093,
+        "min": 3.101800015429035,
+        "p50": 3.7530999834416434,
+        "p95": 6.7915999970864505
+      },
+      "transactions": 200
+    },
+    "experiment": "E-PERF-03",
+    "postgresql_candidate": {
+      "docker_on_path": false,
+      "error": "connection timeout expired",
+      "error_type": "ConnectionTimeout",
+      "official_installer_downloaded": "pg-dist\\PostgreSQL 17_17.11-4_Machine_X64_exe_en-US.exe",
+      "official_installer_hash_verified": true,
+      "official_installer_sha256_actual": "c9828fd3a4daebbeeace19bec2de5f38d73c047fce47278148b525cfbe28a5e4",
+      "official_installer_sha256_expected": "c9828fd3a4daebbeeace19bec2de5f38d73c047fce47278148b525cfbe28a5e4",
+      "psql_on_path": false,
+      "scope_decision": "BLOCKED_NO_LOCAL_SERVER: do not install/register a Windows service or substitute SQLite as PostgreSQL evidence.",
+      "server_available": false
+    }
+  }
+}

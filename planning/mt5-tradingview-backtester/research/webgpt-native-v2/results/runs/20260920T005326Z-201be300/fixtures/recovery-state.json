@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "run_id": "20260920T005326Z-201be300",
+  "tasks": [
+    {"task_id": "A", "status": "accepted", "attempt_id": "A-1", "artifact": "fixtures/accepted-a.txt", "sha256": null},
+    {"task_id": "B", "status": "pending", "attempt_id": null, "artifact": null, "sha256": null}
+  ]
+}

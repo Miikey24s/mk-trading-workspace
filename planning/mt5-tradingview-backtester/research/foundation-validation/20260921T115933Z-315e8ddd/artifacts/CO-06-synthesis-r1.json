@@ -1,0 +1,25 @@
+{
+  "schema": "CO-06-SYNTHESIS-r1",
+  "run_id": "20260921T115933Z-315e8ddd",
+  "scope": "validation-only synthesis through F5",
+  "accepted_inputs": {
+    "F1-CONTRACT": "0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902",
+    "F2-SAFETY": "270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41",
+    "F3-SPIKES": "d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4"
+  },
+  "f5_candidate": {
+    "path": "artifacts/F5-decision-candidate-r1.md",
+    "sha256": "b887b453324b226a55961a0617f7a57f5cc8e95bf4545d2c4ae679a6a0a5ec69",
+    "selected_path": "PATH-2"
+  },
+  "f5_verification": {
+    "path": "artifacts/F5-verification-r2.json",
+    "result": "pass"
+  },
+  "result": "PASS",
+  "limits": [
+    "No broker/live action is authorized by this synthesis.",
+    "Remote/cloud production acceptance is not claimed.",
+    "F6/F7 execution requires the owner instruction and the accepted F5 decision."
+  ]
+}

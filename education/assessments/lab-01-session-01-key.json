@@ -1,0 +1,23 @@
+{
+  "audience": "tutor_only",
+  "id": "LAB-01-S01",
+  "data_kind": "synthetic_not_market_history",
+  "rule_ref": "../modules/05-phuong-phap.md",
+  "student_sheet": "../practice/lab-01-session-01.md",
+  "A": {"signal": false, "reason": "Close1.1048 equals max prior High1.1048, not strictly greater; High1.1052 cannot replace Close."},
+  "B": {"signal": true, "entry_ask": "1.1052", "sl_bid": "1.1012", "sl_pips": "40", "tp_bid": "1.1132", "raw_lots": "0.025", "rounded_lots": "0.02", "units": "2000", "planned_price_loss_usd": "8", "margin_usd": "110.52", "opening_spread_loss_usd": "0.4", "equity_after_open_usd": "999.6", "eligible": true, "R_budget_usd": "10"},
+  "future_B": {
+    "disclosure": "Do not reveal until learner submits B plan. Precommitted before the first answer; do not select a future outcome based on learner success.",
+    "bars_bid_ohlc": [
+      ["1.1050", "1.1060", "1.1030", "1.1040"],
+      ["1.1040", "1.1055", "1.1020", "1.1025"],
+      ["1.1025", "1.1030", "1.1008", "1.1010"],
+      ["1.1010", "1.1020", "1.1005", "1.1015"]
+    ],
+    "exit": "SL1.1012 touched in bar3, no gap through SL or TP ambiguity",
+    "net_usd": "-8",
+    "net_R": "-0.8",
+    "balance_usd": "992"
+  },
+  "rubric": "Assess strict signal, correct bid/ask, SL/TP, floor rounding and margin separately. After reply reveal fixed future bars and grade exit/net. No claim of edge, retention or independent live execution; no learner output prefilled."
+}

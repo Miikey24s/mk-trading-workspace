@@ -1,0 +1,143 @@
+{
+  "acceptance_interpretation": {
+    "bounded_overlap_integration": "pass on isolated local fixture workers",
+    "capacity_10": "not verified",
+    "multi_instance_affinity": "not demonstrated",
+    "native_child_completion": "pass for three Web GPT lanes",
+    "native_child_overlap": "not demonstrated; lanes serialized"
+  },
+  "attempt": "r2-native-plus-local",
+  "limits": [
+    "No account switch, provider config mutation, broker, MT5, product repo write, or external network action was used.",
+    "Configured 2x5 capacity is not promoted to routed usable capacity.",
+    "CO-04 acceptance must retain the serialized native-batch limitation; this evidence is not production concurrency certification."
+  ],
+  "local_overlap_proof": {
+    "actual_concurrency_tested": 3,
+    "candidate_sha256": "6b947579fec43a8e857c95ff4c0cf581171f00deb21eddec1a7985e011861776",
+    "integration_sha256": "de88dd89f6a2ce7963419689a48ba9866be4153a8beba8eb964e6f6c8166dfaf",
+    "overlap_ms": 586.624,
+    "overlap_observed": true
+  },
+  "native_webgpt_batch": {
+    "all_three_completed": true,
+    "lanes": [
+      {
+        "finished_utc": "2026-09-21T15:08:35.244Z",
+        "lane": 1,
+        "limits": [
+          "no routing inference",
+          "no product readiness"
+        ],
+        "path": "artifacts/co04-native-r2/lane-1.json",
+        "schema": 1,
+        "scope": "fixture-only",
+        "sha256": "a9f74084b1d439ded5338e6a95ef2f7c07fe55d3cbb66a18b098273c6bd2e509",
+        "started_utc": "2026-09-21T15:08:32.177Z",
+        "token": "CO04-NATIVE-LANE-1"
+      },
+      {
+        "finished_utc": "2026-09-21T15:08:20.8217794Z",
+        "lane": 2,
+        "limits": [
+          "no routing inference",
+          "no product readiness"
+        ],
+        "path": "artifacts/co04-native-r2/lane-2.json",
+        "schema": 1,
+        "scope": "fixture-only",
+        "sha256": "29c15434063374837688d556df5bc8c5e6aee2f981e5c708d27060165c4d226f",
+        "started_utc": "2026-09-21T15:08:17.8052441Z",
+        "token": "CO04-NATIVE-LANE-2"
+      },
+      {
+        "finished_utc": "2026-09-21T15:08:48.2481783Z",
+        "lane": 3,
+        "limits": [
+          "no routing inference",
+          "no product readiness"
+        ],
+        "path": "artifacts/co04-native-r2/lane-3.json",
+        "schema": 1,
+        "scope": "fixture-only",
+        "sha256": "7d06017671f6dcdf6bd8f70e726c9830328dca4871c9b1726af69f4e34a4ef58",
+        "started_utc": "2026-09-21T15:08:45.2293040Z",
+        "token": "CO04-NATIVE-LANE-3"
+      }
+    ],
+    "overlap_observed": false,
+    "pairwise_overlap_seconds": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "result": "serialized"
+  },
+  "routing_observation": {
+    "browser_limit_signal": "A concurrent reviewer attempt failed with provider message: ChatGPT Web supports at most 5 simultaneous browser turns; 17842 remained healthy/idle in health samples.",
+    "configured_pool_ceiling": 10,
+    "health_artifact_sha256": "bb1385621f94b5c559c20396cffe1c898812e22264cbb43f76399db62618ed06",
+    "health_samples": [
+      {
+        "health": {
+          "accepting_turns": true,
+          "active_browser_turns": 5,
+          "active_http_turns": 3,
+          "integration_owner": "cockpit",
+          "last_model_catalog_result": {
+            "at": "2026-09-21T14:15:28.317Z",
+            "request": 2,
+            "status": 200
+          },
+          "last_successful_model_catalog_request_at": "2026-09-21T14:15:28.317Z",
+          "mode": "full",
+          "model_catalog_requests": 2,
+          "pid": 3216,
+          "port": 17841,
+          "provider_base_url": "http://127.0.0.1:17841/v1",
+          "routing_owner": "cockpit",
+          "service": "codex-chatgpt-web",
+          "status": "ok",
+          "successful_model_catalog_requests": 2,
+          "uptime": 7131.203,
+          "version": "5.0.8"
+        },
+        "ok": true,
+        "port": 17841
+      },
+      {
+        "health": {
+          "accepting_turns": true,
+          "active_browser_turns": 0,
+          "active_http_turns": 0,
+          "integration_owner": "cockpit",
+          "last_model_catalog_result": {
+            "at": "2026-09-21T14:15:28.398Z",
+            "request": 5,
+            "status": 200
+          },
+          "last_successful_model_catalog_request_at": "2026-09-21T14:15:28.398Z",
+          "mode": "full",
+          "model_catalog_requests": 5,
+          "pid": 15160,
+          "port": 17842,
+          "provider_base_url": "http://127.0.0.1:17842/v1",
+          "routing_owner": "cockpit",
+          "service": "codex-chatgpt-web",
+          "status": "ok",
+          "successful_model_catalog_requests": 5,
+          "uptime": 7131.315,
+          "version": "5.0.8"
+        },
+        "ok": true,
+        "port": 17842
+      }
+    ],
+    "route_attribution": "unknown",
+    "two_instance_balancing_verified": false,
+    "usable_routed_capacity_10_verified": false
+  },
+  "schema": 1,
+  "scope": "validation run fixture only",
+  "task": "CO-04"
+}

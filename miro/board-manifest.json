@@ -1,0 +1,34 @@
+{
+  "board_url": "https://miro.com/app/board/uXjVHn-wZXY=/",
+  "updated_on": "2026-09-14",
+  "purpose": "Personal trading education + strategy research + mt5-tradingview-backtester planning",
+  "automatic_sync": false,
+  "design_version": "v2 - editorial investigation board",
+  "current_snapshot": "miro/trading-lab-redesign-v2.snapshot.svg",
+  "start_url": "https://miro.com/app/board/uXjVHn-wZXY=/?moveToWidget=3458764683596111314",
+  "redesign_validation": "Live read before edits; no items deleted; details moved below; hero inspected in browser. All final updates successful. Prior geometric update failure resolved by preserving position and simplifying content.",
+  "source_repository": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester",
+  "frames": {
+    "home": "3458764683595937992",
+    "knowledge": "3458764683595938316",
+    "course": "3458764683595938829",
+    "br": "3458764683596013254",
+    "evidence": "3458764683596013796",
+    "project": "3458764683596064276",
+    "kanban": "3458764683596094033"
+  },
+  "source_files": [
+    "education/COURSE.md",
+    "education/progress.json",
+    "education/practice/eurusd-breakout-retest-v0.md",
+    "education/research/br01-screen/RESEARCH-RESULTS.md",
+    "education/research/br01-screen/RESEARCH-RUN-PROTOCOL.md"
+  ],
+  "validation": {
+    "canvas_writes": "All returned success, no failed items",
+    "browser": "Board loaded; overview and BR-01 candles visually inspected",
+    "permissions": "MCP roles: only owner. Browser Share: no invited teammates; Anyone with link=No access. Free team boards may become accessible to future teammates; recheck before inviting.",
+    "project_code": "Read-only inspection; no repo changes, no runtime tests or order calls"
+  },
+  "update_note": "Snapshot only. Read live target area before edits; preserve data-miro-id and learner edits. Do not replay snapshot as a blind full overwrite."
+}

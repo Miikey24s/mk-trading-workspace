@@ -1,0 +1,56 @@
+{
+  "acceptance": [
+    "exact frozen tenant-scoped playbook revision and immutable protocol",
+    "closed-bar timing, explicit fixed-horizon assumptions, deterministic output",
+    "transitive computation source hashes and bounded input/runtime checks",
+    "independent golden money/timing fixtures and fail-closed reconciliation",
+    "disposable PostgreSQL integrated regressions and independent final review",
+    "partial U5a/U5b only; protective orders, margin, U5c, UI and real-data gates remain pending"
+  ],
+  "allowed_files": [
+    "foundation_v2/trading_workspace_v2/",
+    "foundation_v2/tests/",
+    "foundation_v2/evidence/U5-*",
+    "foundation_v2/README.md"
+  ],
+  "base_revision": "86d300055e58e8659c6ad0217c97c15d290c4214",
+  "dependencies": [
+    "U2-PATH2-DATA-r1",
+    "U3-PATH2-PLAYBOOK-JOURNAL-r1"
+  ],
+  "open_review": [
+    "U2 sub-timeframe rows can enter before signal close",
+    "U5b execution capability incomplete, cannot claim full baseline",
+    "reconciliation must not reuse the metric implementation as oracle",
+    "engine source hash omits retained computation dependencies",
+    "component monetary rounding needs explicit reconciliation adjustment",
+    "runtime budget currently checked only after execution",
+    "half-open holdout boundary and skipped-overlap counter need regression cases"
+  ],
+  "ownership": {
+    "admitted_total": 2,
+    "continuity": "same task resumed after model/tool interruption; no new coordinator takeover",
+    "integration_owner": "/root in existing task 01a0c89a-0191-7293-9520-b1924fcd61e2",
+    "pool_ceiling": 10,
+    "reviewer": "independent child; read-only product source; candidate oracle in sandbox only",
+    "route": "unknown; both existing localhost instances healthy; no pool10 claim"
+  },
+  "task": "U5-PATH2-ENGINE-r1",
+  "wip_sha256": {
+    "foundation_v2/trading_workspace_v2/__init__.py": "b036547e55400f4374c27ec0539b660e5a97e7126e819c51bf0265a01bbaf061",
+    "foundation_v2/trading_workspace_v2/api.py": "419616220e2288cf64237346369b038ef01cfa6631445819aa69244529f64678",
+    "foundation_v2/trading_workspace_v2/artifacts.py": "b1695de06d7f08410230520d7e9fe1f16a03ef49082cdb58658c669db65e3fcb",
+    "foundation_v2/trading_workspace_v2/auth.py": "d8df4595c34c8fc5daf2dbb09e40ea836ef6603c74420b704257c62c4edc0dd1",
+    "foundation_v2/trading_workspace_v2/contracts.py": "a582160ba42b2080a7e92dbd4d79f89d4a3dc5a34580adac9bec76236c318ea1",
+    "foundation_v2/trading_workspace_v2/data_ingest.py": "faa57650d9190d988eb235ef209a1218915d1167951ee5023ac4a4790e482a83",
+    "foundation_v2/trading_workspace_v2/data_sources.py": "be40b3bedb4eb6d0e0d7b47b983975e5548a2f27a2af5bc13bc16c90e4fb499d",
+    "foundation_v2/trading_workspace_v2/product.py": "834bc479909b91be0cb2d3cf7733e1c11d4511747c9ffb541e2860402863e5c4",
+    "foundation_v2/trading_workspace_v2/replay.py": "73b576851cb0d6b58d625c64118e01ce13818a35e8781702396f559cd4534924",
+    "foundation_v2/trading_workspace_v2/research.py": "e964783f754ada8af2313b2c8fde509aaef9f484148902aee5c342c77199bf1b",
+    "foundation_v2/trading_workspace_v2/research_engine.py": "f00edaddf166d15b726f19ae7a0cb9a4a9c4da6391ce2119f556ecda9374caea",
+    "foundation_v2/trading_workspace_v2/research_validation.py": "70c0e6862ade46a106aca3dbd25513b58fd733517e9152a9918bc4331b86f7ad",
+    "foundation_v2/trading_workspace_v2/retained.py": "d3af6271a5dd337f20164dbc95970d050c86bbde954d94bd59b042aa51fb0bf6",
+    "foundation_v2/trading_workspace_v2/store.py": "73906f0284492d7afff9a5333e062c1c544eefab97c460c724784b89190d0bc9",
+    "foundation_v2/trading_workspace_v2/worker.py": "45e8c4f620e997cf8d26e6e72e77c0f6e05a7308934b570b160499c5894ac287"
+  }
+}

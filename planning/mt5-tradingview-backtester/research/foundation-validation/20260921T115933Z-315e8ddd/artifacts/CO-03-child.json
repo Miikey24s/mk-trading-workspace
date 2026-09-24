@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "task": "CO-03",
+  "value": "FOUNDATION_NATIVE_CHILD_OK",
+  "author_locator": "/root/co03_child",
+  "scope": "fixture-only",
+  "inputs": {
+    "CO-00": "accepted dependency for validation foundation scope/capability context",
+    "CO-01": "accepted dependency for fixture controller/ledger foundation"
+  },
+  "limits": [
+    "This artifact is proof only of the native one-child artifact path for CO-03.",
+    "It does not prove multi-child balancing or routing behavior.",
+    "It does not prove production readiness or production reliability."
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "commands": [
+    "python.exe -m unittest -v test_f2_safety.py",
+    "python.exe run_f2_safety.py"
+  ],
+  "coverage": {
+    "F1-C2": [
+      "C-IDEM-01",
+      "C-IDEM-02",
+      "C-IDEM-03"
+    ],
+    "crash_windows": [
+      "C-EXE-03A",
+      "C-EXE-03B",
+      "C-EXE-03C",
+      "C-EXE-04A",
+      "C-EXE-04B"
+    ],
+    "experiments": [
+      "E-SAFE-01",
+      "E-SAFE-02",
+      "E-SAFE-03",
+      "E-SAFE-04",
+      "E-SAFE-05",
+      "E-TENANT-01",
+      "E-TENANT-02",
+      "E-RESTORE-01",
+      "E-DATA-01"
+    ],
+    "guards": [
+      "tenant/cache/job/export/realtime/AI",
+      "restore/hash",
+      "future/holdout",
+      "correction",
+      "publish/receipt"
+    ]
+  },
+  "errors": 0,
+  "failures": 0,
+  "fault_model": {
+    "excluded": [
+      "real MT5/broker/gateway/provider/network calls",
+      "OS/process kill, disk corruption, fsync semantics, hardware loss, real network partitions",
+      "broker-side fencing guarantees or adapter-specific absence proof beyond fake capability declaration",
+      "production authorization provider/RLS/cache/websocket implementation behavior",
+      "protected holdout contents and external vendor data"
+    ],
+    "included": [
+      "in-process deterministic crash failpoints around durable reservation/dispatch/send/outcome/response",
+      "logical-clock lease expiry and idempotency expiry",
+      "old owner returning after authority epoch replacement/network partition model",
+      "duplicate/reordered/corrected synthetic broker events and cancel/replace race",
+      "membership revocation before queued dispatch and reused worker context",
+      "metadata+artifact restore with outstanding possible-send intent",
+      "late/corrected/future/holdout synthetic data and interrupted/hash-mismatched publish"
+    ]
+  },
+  "generated_at_utc": "2026-09-21T20:51:44.638981+00:00",
+  "independent_oracles": [
+    "fake broker send log independent of durable intent state",
+    "risk acceptance/sum oracle separate from reservation implementation",
+    "reconciliation oracle separate from grouped reconciliation implementation",
+    "restore artifact SHA-256 proof"
+  ],
+  "interleavings": {
+    "reconcile_seeded_reorders": 4,
+    "risk_complete_permutations": 24,
+    "risk_seeded_shuffles": 4,
+    "same_intent_seeded_retry_orders": 4
+  },
+  "limits": [
+    "PASS demonstrates only the declared deterministic offline fault model; it is not broker-real safety acceptance.",
+    "Internal authority epoch fencing is proven only inside the fixture; broker fencing capability remains unknown.",
+    "Restore proof covers synthetic metadata/artifact IDs, counts, lineage references and SHA-256 bytes, not host/disk disaster RPO.",
+    "Tenant isolation validates fixture seams and server-side scoping semantics, not a selected production IdP/database/cache/provider stack."
+  ],
+  "result": "PASS",
+  "run": "20260921T115933Z-315e8ddd",
+  "schema": "F2-SAFETY-CANDIDATE-v2",
+  "scope": "offline deterministic F2 safety/isolation validation only",
+  "seeds": [
+    3,
+    7,
+    11,
+    29
+  ],
+  "sha256": {
+    "F1-C1": "c46e631f8239115179962cd1acdfe1e7a50cb32c4e2677559e3568c16b789430",
+    "F1-C2-delta": "0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902",
+    "F2-plan": "abe0a374ea688cee7793654574ea4d86fa7b7b0929447ec2d635801a3a02d64a",
+    "implementation": "abca2ca289e46fefc6ec48811250a9099413402755ea50dbd10819f061f9fb3e",
+    "runner": "bb4ca4cbf8bf880b9c9e0c947655f04a4ea2adb1c6ac1eb862f2b392892a75b0",
+    "tests": "0c0ace7214ca70f693448664d0b276fb6b4817592fa5c7adeeb926d209d02a84"
+  },
+  "supersedes_candidate": {
+    "path": "F2-safety-candidate.json",
+    "sha256": "367fd2555f83ef1927b2936fbaed3b250bd47d9abb809f7b2e2e2711261b1d35"
+  },
+  "tests": [
+    {
+      "id": "test_f2_safety.DataIntegrityTests.test_future_correction_late_data_and_publish_guards",
+      "status": "PASS"
+    },
+    {
+      "id": "test_f2_safety.RestoreTests.test_restore_hash_proof_and_reconcile_gate_before_writes",
+      "status": "PASS"
+    },
+    {
+      "id": "test_f2_safety.Safe01IdempotencyTests.test_f1_c2_idempotency_retention_expiry_and_unknown_nonexpiry",
+      "status": "PASS"
+    },
+    {
+      "id": "test_f2_safety.Safe01IdempotencyTests.test_same_intent_retries_and_conflicting_payload_or_scope",
+      "status": "PASS"
+    },
+    {
+      "id": "test_f2_safety.Safe02CrashWindowTests.test_c_exe_03a_before_durable_receive",
+      "status": "PASS"
+    },
+    {
+      "id": "test_f2_safety.Safe02CrashWindowTests.test_c_exe_03b_after_reservation_before_dispatch",
+      "status": "PASS"
+    },
+    {
+      "id": "test_f2_safety.Safe02CrashWindowTests.test_c_exe_03c_query_first_and_never_blind_resend",
+      "status": "PASS"
+    },
+    {
+      "id": "test_f2_safety.Safe02CrashWindowTests.test_c_exe_04a_possible_send_reconciles_without_resend",
+      "status": "PASS"
+    },
+    {
+      "id": "test_f2_safety.Safe02CrashWindowTests.test_c_exe_04b_durable_outcome_retry_returns_stored",
+      "status": "PASS"
+    },
+    {
+      "id": "test_f2_safety.Safe03RiskTests.test_atomic_risk_reservation_matches_independent_oracle_across_orders",
+      "status": "PASS"
+    },
+    {
+      "id": "test_f2_safety.Safe04FencingTests.test_expired_intent_key_and_account_switch_or_stale_quote_cannot_send",
+      "status": "PASS"
+    },
+    {
+      "id": "test_f2_safety.Safe04FencingTests.test_stale_owner_partition_and_expired_lease_fail_closed",
+      "status": "PASS"
+    },
+    {
+      "id": "test_f2_safety.Safe05ReconcileTests.test_partial_duplicate_reordered_correction_cancel_replace_matches_oracle",
+      "status": "PASS"
+    },
+    {
+      "id": "test_f2_safety.TenantIsolationTests.test_api_cache_export_realtime_ai_are_tenant_scoped",
+      "status": "PASS"
+    },
+    {
+      "id": "test_f2_safety.TenantIsolationTests.test_worker_reuse_role_revoke_and_log_redaction",
+      "status": "PASS"
+    }
+  ],
+  "tests_run": 15
+}

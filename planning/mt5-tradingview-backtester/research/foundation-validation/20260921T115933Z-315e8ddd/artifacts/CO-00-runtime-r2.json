@@ -1,0 +1,63 @@
+{
+  "artifact_schema": 1,
+  "captured_at_local": "2026-09-21T21:06:33.5428832+07:00",
+  "scope": "VALIDATION_ONLY",
+  "plan_pool_ceiling": 10,
+  "product_source": {
+    "path": "D:/ANNAM/TradingWorkspace/projects/mt5-tradingview-backtester",
+    "branch": "Nam",
+    "head": "7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd",
+    "tracked_modified": 19,
+    "untracked": 35,
+    "policy": "read-only; preserve user/worker WIP"
+  },
+  "webgpt_source": {
+    "path": "D:/ANNAM/AI/codex-chatgpt-web-cockpit",
+    "head": "3998073f34bceb7e5543631582e78425f7a4a7c0",
+    "clean": true,
+    "per_instance_browser_cap_from_source": 5
+  },
+  "instances": [
+    {
+      "id": "primary",
+      "port": 17841,
+      "enabled": true,
+      "health": "ok",
+      "version": "5.0.8",
+      "accepting_turns": true,
+      "active_http_turns": 0,
+      "active_browser_turns": 1,
+      "usable_now": true
+    },
+    {
+      "id": "instance-2",
+      "port": 17842,
+      "enabled": true,
+      "health": "ok",
+      "version": "5.0.8",
+      "accepting_turns": true,
+      "active_http_turns": 0,
+      "active_browser_turns": 0,
+      "usable_now": true
+    }
+  ],
+  "protocol_context": {
+    "user_reported_primary_subagent_protocol": "native",
+    "user_reported_instance_2_subagent_protocol": "native",
+    "runtime_proof_required": "native spawn/wait artifact loop; do not treat user-reported config alone as acceptance evidence"
+  },
+  "capacity_conclusion": {
+    "configured_if_both_instances_healthy": 10,
+    "healthy_provider_capacity": 10,
+    "browser_turns_already_active_at_capture": 1,
+    "conservative_additional_provider_slots_at_capture": 9,
+    "host_native_child_capacity": "to be measured by CO-03/CO-04",
+    "routed_two_instance_capacity_10": "not verified",
+    "admission_rule": "min(plan ceiling, healthy provider capacity, host capacity, local resource budget, ready independent tasks)"
+  },
+  "limitations": [
+    "Health and configured cap do not prove a task tree routes across both instances.",
+    "Native subagent protocol will be proved by actual native child work, not by configuration text alone.",
+    "No provider restart, route change, credentials, broker/MT5, holdout, or product-source write was performed."
+  ]
+}

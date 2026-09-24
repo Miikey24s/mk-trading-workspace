@@ -1,0 +1,64 @@
+{
+  "note": "Instance health/counters do not attribute the CO-04 fixture lanes to a browser/model route.",
+  "route_conclusion": "unknown",
+  "sampled_at": "2026-09-21T15:05:13.102715Z",
+  "samples": [
+    {
+      "health": {
+        "accepting_turns": true,
+        "active_browser_turns": 5,
+        "active_http_turns": 3,
+        "integration_owner": "cockpit",
+        "last_model_catalog_result": {
+          "at": "2026-09-21T14:15:28.317Z",
+          "request": 2,
+          "status": 200
+        },
+        "last_successful_model_catalog_request_at": "2026-09-21T14:15:28.317Z",
+        "mode": "full",
+        "model_catalog_requests": 2,
+        "pid": 3216,
+        "port": 17841,
+        "provider_base_url": "http://127.0.0.1:17841/v1",
+        "routing_owner": "cockpit",
+        "service": "codex-chatgpt-web",
+        "status": "ok",
+        "successful_model_catalog_requests": 2,
+        "uptime": 7131.203,
+        "version": "5.0.8"
+      },
+      "ok": true,
+      "port": 17841
+    },
+    {
+      "health": {
+        "accepting_turns": true,
+        "active_browser_turns": 0,
+        "active_http_turns": 0,
+        "integration_owner": "cockpit",
+        "last_model_catalog_result": {
+          "at": "2026-09-21T14:15:28.398Z",
+          "request": 5,
+          "status": 200
+        },
+        "last_successful_model_catalog_request_at": "2026-09-21T14:15:28.398Z",
+        "mode": "full",
+        "model_catalog_requests": 5,
+        "pid": 15160,
+        "port": 17842,
+        "provider_base_url": "http://127.0.0.1:17842/v1",
+        "routing_owner": "cockpit",
+        "service": "codex-chatgpt-web",
+        "status": "ok",
+        "successful_model_catalog_requests": 5,
+        "uptime": 7131.315,
+        "version": "5.0.8"
+      },
+      "ok": true,
+      "port": 17842
+    }
+  ],
+  "schema": 1,
+  "scope": "localhost health metadata only",
+  "task": "CO-04"
+}

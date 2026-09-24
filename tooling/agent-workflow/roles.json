@@ -1,0 +1,10 @@
+{
+  "worker": {"engine": "codex", "model": "chatgpt-web/high", "effort": "high", "write": true},
+  "reviewer": {"engine": "codex", "model": "chatgpt-web/high", "effort": "high", "write": false},
+  "risk-reviewer": {"engine": "codex", "model": "chatgpt-web/high", "effort": "high", "write": false},
+  "sol-worker": {"engine": "codex", "model": "gpt-5.6-sol", "effort": "high", "write": true},
+  "sol-reviewer": {"engine": "codex", "model": "gpt-5.6-sol", "effort": "high", "write": false},
+  "ui-worker": {"engine": "agy", "model": "gemini-3.8-flash-medium", "effort": "medium", "write": true},
+  "ui-reviewer": {"engine": "agy", "model": "gemini-3.8-flash-medium", "effort": "medium", "write": false},
+  "ui-designer": {"engine": "agy", "model": "gemini-3.1-pro-high", "effort": "high", "write": true}
+}

@@ -1,0 +1,4 @@
+alpha beta gamma
+delta epsilon
+
+Expected operation: uppercase each line and preserve line order.

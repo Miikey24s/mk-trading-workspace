@@ -1,0 +1,115 @@
+{
+  "artifact_schema": 1,
+  "authoritative_preservation": {
+    "all_source_hashes_unchanged_during_probe": true,
+    "checks": {
+      "STATE.json": true,
+      "STATE.json.sha256": true,
+      "artifacts/CO-02-recovery-r2.json": true,
+      "artifacts/CO-03-child.json": true,
+      "controller.py": true,
+      "ledger.sqlite3": true
+    },
+    "ledger_was_never_opened_writable_by_probe": true,
+    "source_hashes_after": {
+      "STATE.json": "44603c7f5ff7ff7c9c964bfa7964eef5bc5828e91358eb615ae17e4e47ae7dac",
+      "STATE.json.sha256": "8e08a07dce3b5ceb2402f0c4f5e036628908ebbd6439dfcf613790bd375e119d",
+      "artifacts/CO-02-recovery-r2.json": "b7a8ba634c7517dd19e43ec09cd494e15ba66355d0b463be2aa6f5c548e0b10f",
+      "artifacts/CO-03-child.json": "123d637739f5c2a5a04a0146832804a7e7465bb5f9eb184a5a3b452dd30b2a5a",
+      "controller.py": "75707d0af2b669c0f89f24c14bd32a4d0d8343208fba99428fba51f25265cf43",
+      "ledger.sqlite3": "3062ddaf5eb73dc589df7c9c33cab1e0fd706e6d52370fd46f1f611f09cee5c7"
+    },
+    "source_hashes_before": {
+      "STATE.json": "44603c7f5ff7ff7c9c964bfa7964eef5bc5828e91358eb615ae17e4e47ae7dac",
+      "STATE.json.sha256": "8e08a07dce3b5ceb2402f0c4f5e036628908ebbd6439dfcf613790bd375e119d",
+      "artifacts/CO-02-recovery-r2.json": "b7a8ba634c7517dd19e43ec09cd494e15ba66355d0b463be2aa6f5c548e0b10f",
+      "artifacts/CO-03-child.json": "123d637739f5c2a5a04a0146832804a7e7465bb5f9eb184a5a3b452dd30b2a5a",
+      "controller.py": "75707d0af2b669c0f89f24c14bd32a4d0d8343208fba99428fba51f25265cf43",
+      "ledger.sqlite3": "3062ddaf5eb73dc589df7c9c33cab1e0fd706e6d52370fd46f1f611f09cee5c7"
+    }
+  },
+  "classification": {
+    "fresh_os_process_from_durable_files": "verified on isolated local fixture copy",
+    "fresh_web_gpt_root": "not tested; human restart gate retained",
+    "provider_compaction": "not tested by CO-05 probe; separate capability",
+    "provider_or_app_process_resurrection": "not tested",
+    "same_thread_resume": "not tested by CO-05 probe; separate capability"
+  },
+  "fresh_process_reconstruction": {
+    "accepted_dependencies": {
+      "CO-02": {
+        "artifact_sha256": "b7a8ba634c7517dd19e43ec09cd494e15ba66355d0b463be2aa6f5c548e0b10f",
+        "attempt_id": "CO-02-a2",
+        "checks": {
+          "accepted_revision_matches_artifact": true,
+          "attempt_status_accepted": true,
+          "integration_finalized": true,
+          "passing_review_present": true,
+          "passing_verification_present": true,
+          "snapshot_agrees": true,
+          "task_status_accepted": true
+        }
+      },
+      "CO-03": {
+        "artifact_sha256": "123d637739f5c2a5a04a0146832804a7e7465bb5f9eb184a5a3b452dd30b2a5a",
+        "attempt_id": "CO-03-a1",
+        "checks": {
+          "accepted_revision_matches_artifact": true,
+          "attempt_status_accepted": true,
+          "integration_finalized": true,
+          "passing_review_present": true,
+          "passing_verification_present": true,
+          "snapshot_agrees": true,
+          "task_status_accepted": true
+        }
+      }
+    },
+    "ledger_event_seq_before_takeover": 53,
+    "parent_pid": 308,
+    "snapshot_revision": 53,
+    "source": "SQLite read-only backup plus checksumed STATE.json and accepted dependency artifacts",
+    "worker_exit_code": 0,
+    "worker_pid": 8060
+  },
+  "isolated_takeover": {
+    "confirmed_old_inactive_basis": "isolated copied ledger; authoritative owner is not being taken over",
+    "new_generation": 2,
+    "new_locator": "co05-fresh-process",
+    "old_generation": 1,
+    "old_locator": "codex-native2-parent"
+  },
+  "isolated_working_hashes_before_cleanup": {
+    "RECOVERED_STATE.json": "0840cdec3abe47f96ff6590122c63b6404ab91b4e3b6e238c84d9795b7c7a0d5",
+    "RECOVERED_STATE.json.sha256": "8087463a75778aad3ff87de6306c1b3b2dfc94f5a65759339bde295b88adb46f",
+    "ledger.sqlite3": "4828a99c639c92bf1304bcdf2ef27a99b3c9ea735ae9297d994d2f706a1c3ad0"
+  },
+  "limits": [
+    "This proves fresh local process reconstruction from durable files, not a new Web GPT root/chat capability.",
+    "This does not prove same-thread resume, provider compaction survival, or provider/app resurrection.",
+    "Owner takeover confirmation is valid only for the isolated copied ledger; authoritative owner generation is intentionally untouched.",
+    "No product repository, provider/config, broker, demo, or live execution state is touched."
+  ],
+  "resource_cleanup": {
+    "mutable_working_directory_removed": true,
+    "retained_evidence_only": [
+      "co05_sandbox/input",
+      "co05_sandbox/evidence/worker-result.json"
+    ],
+    "sqlite_sidecars_after_worker_close": {
+      "shm_exists": false,
+      "wal_exists": false
+    },
+    "worker_process_exited": true
+  },
+  "result": "pass",
+  "scope": "validation-run-local isolated recovery proof",
+  "stale_owner_fencing": {
+    "add_task_error": "stale owner generation",
+    "co05_revision_after_probe": 2,
+    "co05_status_after_probe": "ready",
+    "stale_probe_task_absent": true,
+    "transition_error": "stale owner generation"
+  },
+  "task": "CO-05",
+  "worker_result_sha256": "7b473f3e4d43330ddddcb99d21e251c53df602ee0b295b6b96d9ed45e31417f8"
+}

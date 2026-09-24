@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "finished_at_utc": "2026-09-20T23:53:39.0453283Z",
+  "p04": {
+    "bad_result": "rejected_bad_hash",
+    "valid_attempt2": "accepted",
+    "late_attempt1": "rejected_stale_attempt",
+    "duplicate_dispatch": "deduped",
+    "accepted_hash": "9142b6159b2abbfd28d048f2efc65e45658bcdec24b21ea572e3f17cc329dd41"
+  },
+  "p07": {
+    "partial_artifact": "uncertain_reconcile_before_retry",
+    "artifact_hash": "10369cfdd8d25bbe3915d9aeab589d59507ec64dbe04971983395ebeb18fba01",
+    "rule": "artifact_without_matching_verification_receipt_is_not_accepted_or_blindly_retried"
+  },
+  "p09": {
+    "truncated_state": "fail_closed_parse_error",
+    "missing_manifest": "fail_closed_missing_manifest",
+    "rule": "corrupt_or_incomplete_durable_state_fails_closed"
+  }
+}

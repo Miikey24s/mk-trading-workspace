@@ -1,0 +1,61 @@
+# Environments and Python caches
+.venv/
+.venv*/
+.f5-venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+*.ruff_cache/
+
+# Node / JS dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files, caches, and test distributions
+tmp/
+.tmp/
+.uv-cache/
+.artifacts/
+.codex/
+**/pg-dist/
+**/pg-dist/**
+co05_sandbox/
+f5-change-path-*/
+f5-client-*/
+f5-engine-*/
+f5-fixtures/
+f5-fresh-*/
+f5-port-*/
+f5-postgres-*/
+f5-runtime-*/
+*.log
+*.7z
+*.zip
+*.tar*
+
+# Large dataset dumps (Dukascopy, FTMO, QDM, tick data)
+education/research/br01-screen/quality-data/
+education/research/br01-screen/mcp-data/
+education/research/br01-screen/mt5-data/
+education/research/br01-screen/raw/
+
+# Data and SQLite
+*.sqlite3
+*.sqlite3-journal
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# IDE settings
+.idea/
+.vscode/
+*.swp
+*.swo

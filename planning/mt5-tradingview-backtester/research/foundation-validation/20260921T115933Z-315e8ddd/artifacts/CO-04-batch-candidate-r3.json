@@ -1,0 +1,78 @@
+{
+  "actual_concurrency_tested": 3,
+  "attempt": "r3-unavailable-and-time-to-accept",
+  "batch_started_at": "2026-09-21T15:16:58.816268Z",
+  "batch_started_ns": 1790003818816268000,
+  "candidate_written_at": "2026-09-21T15:16:59.749070Z",
+  "candidate_written_ns": 1790003819749070300,
+  "integration": {
+    "accepted_lane_count": 2,
+    "path": "artifacts/co04-batch-r3/integration.json",
+    "sha256": "207b5f785ac80c8d82efb5758110cf33192b555dca8e2940f5eda118afd09e88",
+    "unavailable_lane_count": 1,
+    "uncertainty_preserved": true
+  },
+  "lanes": [
+    {
+      "finished_at": "2026-09-21T15:16:59.570563Z",
+      "finished_ns": 1790003819570563800,
+      "lane": "lane-ok-a",
+      "output_path": "artifacts/co04-batch-r3/lane-ok-a/lane-output.json",
+      "output_sha256": "0fafcaefe613fc50dbc7838c3fe638befde03d2d50f57d365b50a3531cff231d",
+      "pid": 5084,
+      "started_at": "2026-09-21T15:16:59.020088Z",
+      "started_ns": 1790003819020088000,
+      "status": "accepted",
+      "token": "CO04_R3_A"
+    },
+    {
+      "finished_at": "2026-09-21T15:16:59.734357Z",
+      "finished_ns": 1790003819734357500,
+      "lane": "lane-ok-b",
+      "output_path": "artifacts/co04-batch-r3/lane-ok-b/lane-output.json",
+      "output_sha256": "c10e88e98cd644e39ed66937c4388b87569dc858d071400f379c95b2ea3c8ffb",
+      "pid": 14964,
+      "started_at": "2026-09-21T15:16:59.033597Z",
+      "started_ns": 1790003819033597200,
+      "status": "accepted",
+      "token": "CO04_R3_B"
+    },
+    {
+      "finished_at": "2026-09-21T15:16:59.342233Z",
+      "finished_ns": 1790003819342233200,
+      "lane": "lane-unavailable",
+      "pid": 24364,
+      "started_at": "2026-09-21T15:16:59.041784Z",
+      "started_ns": 1790003819041784500,
+      "status": "unavailable",
+      "token": "CO04_R3_UNAVAILABLE",
+      "unavailable_receipt": "artifacts/co04-batch-r3/lane-unavailable/unavailable.json",
+      "unavailable_sha256": "f53f02892b72a9683b1ff79bee96ef900ceee51876914784eaff0c7bf7d6c291"
+    }
+  ],
+  "limits": [
+    "Overlap and unavailable-lane behavior are proven on isolated local fixture workers.",
+    "Three native Web GPT lanes completed earlier but were serialized; multi-instance affinity remains unverified.",
+    "No provider configuration, product repository, broker, MT5, holdout, or live action is performed."
+  ],
+  "overlap_ms": 300.449,
+  "overlap_observed": true,
+  "probe_elapsed_ms": 932.802,
+  "rework": {
+    "fixed_findings": [
+      "missing unavailable/uncertain lane fixture",
+      "missing accepted-output time/rework accounting"
+    ],
+    "independent_review_failures_before_r3": 1,
+    "prior_candidate_r2_sha256": "8a9d0263cc5df2b9f78ce70d6e87f2a73f17b1a6edee95ab44aeacd6b9f5b0ea"
+  },
+  "routing": {
+    "multi_instance_routing_verified": false,
+    "native_webgpt_lanes_completed": 3,
+    "native_webgpt_overlap_observed": false,
+    "route_attribution": "unknown",
+    "usable_capacity_10_verified": false
+  },
+  "schema": 1,
+  "task": "CO-04"
+}

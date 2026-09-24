@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "20260920T233707Z-9b241f0d",
+  "checkpoint_kind": "fresh_context_recovery_probe",
+  "tasks": [
+    {
+      "task_id": "p01",
+      "status": "accepted",
+      "artifact": "fixtures/work/p01-output.txt",
+      "sha256": "3d57633b12cfae7915b3b71eac881128d2e4db66fc619decc76c7fee347ffc3a"
+    },
+    {
+      "task_id": "p03-good",
+      "status": "accepted",
+      "artifact": "fixtures/work/p03-good.txt",
+      "sha256": "7d14d40515651e5c80dbe84f36774b7ddd25ad210db876ec2476a7b85005764c"
+    },
+    {
+      "task_id": "p06-recovery-next",
+      "status": "pending",
+      "depends_on": ["p01", "p03-good"],
+      "output": "fixtures/work/p06-recovered.txt",
+      "acceptance": "verify both dependency hashes from disk, then write exactly RECOVERED AFTER VERIFY followed by the two dependency task ids on separate lines"
+    }
+  ],
+  "uncertain": [
+    {
+      "task_id": "p07-partial",
+      "rule": "artifact without a matching verification receipt is uncertain and must be reconciled before retry or acceptance"
+    }
+  ],
+  "next_action": "perform only p06-recovery-next after verifying accepted dependency hashes; report the uncertain task without acting on it"
+}

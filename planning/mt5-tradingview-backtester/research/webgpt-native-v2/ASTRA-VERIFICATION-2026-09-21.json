@@ -1,0 +1,234 @@
+{
+  "verified_at_utc": "2026-09-21T00:09:35.2549983+00:00",
+  "run_id": "20260920T233707Z-9b241f0d",
+  "thread_id": "01a0c129-0952-7fd1-92ef-abccc70dc1de",
+  "specialist_result_present": false,
+  "p02_a_end": "2026-09-20T23:42:24.0147372+00:00",
+  "p02_b_start": "2026-09-20T23:42:25.1705222+00:00",
+  "p02_gap_seconds": 1.155785,
+  "p02_overlap_seconds": 0,
+  "artifacts": [
+    {
+      "path": "PROGRESS.md",
+      "sha256": "480502c71ce03343c72a023847413487a3640323806ab7e90853a73d2f92f96b",
+      "bytes": 2289
+    },
+    {
+      "path": "fixtures/durable_state_probe.ps1",
+      "sha256": "8d1e8f0872ef485c9c157213124365b7d6896666028b5d1bc895728b40cc2ef7",
+      "bytes": 3604
+    },
+    {
+      "path": "fixtures/p05_integration_probe.ps1",
+      "sha256": "94915367d5481dc65e1a7409d9ed6cefe440bdeeead576dc8f3d3e5ca8de6ff4",
+      "bytes": 3614
+    },
+    {
+      "path": "fixtures/p07_owner.ps1",
+      "sha256": "8c4b4f8c7e7596ac7bf0d7c6c7b4d055cb8c771abd09e1ecb5541032a82b09f5",
+      "bytes": 574
+    },
+    {
+      "path": "fixtures/recovery-checkpoint.json",
+      "sha256": "90067f58d820393224a80245f077827a4f9269f8be2ee73197db15aa716242b3",
+      "bytes": 1205
+    },
+    {
+      "path": "fixtures/p05-repo/consumer.txt",
+      "sha256": "2d27fbdf4e8ca207afbfa388ca9172fbcc6c70e534af2476b3b704f87debadcf",
+      "bytes": 3
+    },
+    {
+      "path": "fixtures/p05-repo/contract.txt",
+      "sha256": "2dfede0e6610c473959c963b292fcec325452acba33fd1bba21110e04933df53",
+      "bytes": 4
+    },
+    {
+      "path": "fixtures/p05-repo/feature-a.txt",
+      "sha256": "5f83d28513d145eecfc18170706d6e6de8644c8b20d23ad237ca079e99003648",
+      "bytes": 4
+    },
+    {
+      "path": "fixtures/receipts/p01-child.md",
+      "sha256": "129c51102ea9e3cb183ee87902e09852f42c9ee5a54373231fc54e9da7af712f",
+      "bytes": 718
+    },
+    {
+      "path": "fixtures/receipts/p02-a.md",
+      "sha256": "3fbee7f70027f0cd5b5d22d62c566667f47aa73b37bd88ec4a5e4f67122a2457",
+      "bytes": 514
+    },
+    {
+      "path": "fixtures/receipts/p02-b.md",
+      "sha256": "d901b67d5d2b230d537988e682015470ef3a5f733144fa912d812ed3b1d91f27",
+      "bytes": 618
+    },
+    {
+      "path": "fixtures/receipts/p02r-a.md",
+      "sha256": "967f04a682e66737c76b34560b32fc7bedb06317e5bdbee1b06cc23e5a2a1156",
+      "bytes": 1004
+    },
+    {
+      "path": "fixtures/receipts/p03-failure-attempt1.md",
+      "sha256": "31b412de5a39bc655edbc07f8f0e2ad2eb2a252b07a376b79f7cb9fe4604162d",
+      "bytes": 711
+    },
+    {
+      "path": "fixtures/receipts/p03-failure-attempt2.md",
+      "sha256": "34e30577d3ea17fd474aa0b5c5308bfd8a91d60ed020996a566543fa06a99ee9",
+      "bytes": 742
+    },
+    {
+      "path": "fixtures/receipts/p03-good.md",
+      "sha256": "2923c070f46da8b9a6b41106fc3f1ee71da79dc7e49ee0cdadf0caa5dc691bbc",
+      "bytes": 380
+    },
+    {
+      "path": "fixtures/receipts/p04-p07-p09-state.json",
+      "sha256": "885fccd12c990a6fadce6ea21534752f1f4a33567fc3b8392ea35cb6dcd5005e",
+      "bytes": 806
+    },
+    {
+      "path": "fixtures/receipts/p05-integration.json",
+      "sha256": "3f54bc7e536825389ba69c554fe7d6a4dd74956f3d664fd540332687fc8a3f1e",
+      "bytes": 651
+    },
+    {
+      "path": "fixtures/receipts/p06-fresh-child.md",
+      "sha256": "c45f27a9972a302f35206cf44abe5b784dc2bd0d943a273c2b8a4aa89911627d",
+      "bytes": 1181
+    },
+    {
+      "path": "fixtures/receipts/p07-live-owner.md",
+      "sha256": "be4318f843833bb1ab7f7a377ba78679d6ae7529f4a2f9f2b5b3d6a69586b0b2",
+      "bytes": 599
+    },
+    {
+      "path": "fixtures/work/p01-input.txt",
+      "sha256": "415948923202814e7efe7c67505866ddba96533b9f040b04a88fd68a1f4dbb3e",
+      "bytes": 41
+    },
+    {
+      "path": "fixtures/work/p01-output.txt",
+      "sha256": "3d57633b12cfae7915b3b71eac881128d2e4db66fc619decc76c7fee347ffc3a",
+      "bytes": 41
+    },
+    {
+      "path": "fixtures/work/p02-a-output.txt",
+      "sha256": "d04ffb699e1709268449d994746b0b76cb208dbae0e1c7818a73a92aada8cf96",
+      "bytes": 44
+    },
+    {
+      "path": "fixtures/work/p02-a.txt",
+      "sha256": "80e0634685fda16a94d2874b3ce304abf3a0688657ee6c65341c229ade0a16b6",
+      "bytes": 28
+    },
+    {
+      "path": "fixtures/work/p02-b-output.txt",
+      "sha256": "69906bd70f512897cd9e54464bc1376e1f09604cfe50b7d3d50b69793fea3d60",
+      "bytes": 44
+    },
+    {
+      "path": "fixtures/work/p02-b.txt",
+      "sha256": "0d9d0813d41160820458f9100f7f9431786649b13d4151cdcf9bac9e7a54beec",
+      "bytes": 27
+    },
+    {
+      "path": "fixtures/work/p02r-a-output.txt",
+      "sha256": "a3037a4ba9e9c213f9c3b19fc9810d0626fcd27cf2dbcd843c2d9118eac6dbb5",
+      "bytes": 21
+    },
+    {
+      "path": "fixtures/work/p03-good.txt",
+      "sha256": "7d14d40515651e5c80dbe84f36774b7ddd25ad210db876ec2476a7b85005764c",
+      "bytes": 20
+    },
+    {
+      "path": "fixtures/work/p04-good-attempt2.txt",
+      "sha256": "9142b6159b2abbfd28d048f2efc65e45658bcdec24b21ea572e3f17cc329dd41",
+      "bytes": 21
+    },
+    {
+      "path": "fixtures/work/p06-recovered.txt",
+      "sha256": "41dd4e2a31e38e9becd0efa0c8071eba8bc91352dfef9510f2864e54bf4681be",
+      "bytes": 36
+    },
+    {
+      "path": "fixtures/work/p07-owned-partial.txt",
+      "sha256": "edd21a014b29a936b44e7474d4b0a02dbe13faaabdf84bcc870a0ebcb59a5fb7",
+      "bytes": 36
+    },
+    {
+      "path": "fixtures/work/p07-owner.json",
+      "sha256": "2893e8bc3b855aaac853ff38f60e33c640111fb78128bbc8b026926988f62bb7",
+      "bytes": 312
+    },
+    {
+      "path": "fixtures/work/p07-partial-no-receipt.txt",
+      "sha256": "10369cfdd8d25bbe3915d9aeab589d59507ec64dbe04971983395ebeb18fba01",
+      "bytes": 52
+    },
+    {
+      "path": "fixtures/work/p09-state-truncated.json",
+      "sha256": "3970dd91e12b58129c5882d0b55b943402eb6ff3f7a5544a23f84ae896b47e79",
+      "bytes": 29
+    }
+  ],
+  "schema_version": 1,
+  "kind": "astra_read_only_verification",
+  "specialist_package_status": "incomplete",
+  "not_performed": [
+    "provider restart",
+    "new agent experiments",
+    "rerun fixture scripts",
+    "product implementation",
+    "broker actions"
+  ],
+  "claims": [
+    {
+      "id": "P01",
+      "disposition": "accepted_narrow",
+      "basis": "task tool history + child receipt + independently matched artifact hash"
+    },
+    {
+      "id": "P02",
+      "disposition": "not_demonstrated",
+      "basis": "first shell intervals overlap 0 seconds, gap 1.155785 seconds; second attempt missing paired receipt; browser count 2 alone insufficient"
+    },
+    {
+      "id": "P03",
+      "disposition": "accepted_narrow",
+      "basis": "good artifact hash retained alongside failed attempts; no durability/reliability-rate proof"
+    },
+    {
+      "id": "P04",
+      "disposition": "downgraded_to_logic_demo",
+      "basis": "in-memory comparisons, declared verifier pass string, Sort-Object unique; no atomic persistent dedupe transaction tested"
+    },
+    {
+      "id": "P05",
+      "disposition": "accepted_toy_git_fixture",
+      "basis": "clean integration HEAD and separate trial-b contract mismatch independently inspected"
+    },
+    {
+      "id": "P06",
+      "disposition": "accepted_narrow",
+      "basis": "late receipt present; dependencies and output independently hash-match; fresh-child claim does not establish new-root/provider restart recovery"
+    },
+    {
+      "id": "P07",
+      "disposition": "accepted_toy_process_fixture",
+      "basis": "owned process/partial artifact receipts; not actual provider or coordinator crash"
+    },
+    {
+      "id": "P08",
+      "disposition": "not_tested",
+      "basis": "no actual compaction/new-root/restart evidence in handed-off run"
+    },
+    {
+      "id": "P09",
+      "disposition": "downgraded_to_logic_demo",
+      "basis": "JSON parsing/missing file rejection only, no interrupted atomic replace or disk recovery implementation tested"
+    }
+  ]
+}

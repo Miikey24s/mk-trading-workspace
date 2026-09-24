@@ -1,0 +1,31 @@
+{
+  "task": "U5-NAUTILUS-ADAPTER-r1",
+  "commit": "c118f438b493a9e67971a3ac9465c643c64540a9",
+  "base": "387a58f4fd96337baa9d4d50cb1763982282f661",
+  "result": "PASS",
+  "candidate_validation": "foundation_v2/evidence/U5-nautilus-validation-r1.json",
+  "integrated_validation": "foundation_v2/evidence/U5-nautilus-validation-integrated-r1.json",
+  "review": "foundation_v2/evidence/U5-nautilus-review-r1.json",
+  "verification": {
+    "test_hash": "056fcb6f7964e05a4460b1dc7ef3df1a67c7a1a249f8c7db9086aaab28e2e373",
+    "input_hashes": {
+      "validation": "056fcb6f7964e05a4460b1dc7ef3df1a67c7a1a249f8c7db9086aaab28e2e373",
+      "review": "37b2662f184764cc16a8e43421228931db8275d1e5a180e3214b4b53e0de87b1",
+      "commit": "c118f438b493a9e67971a3ac9465c643c64540a9"
+    },
+    "test_scope": "Nautilus adapter oracles, runtime isolation, cancellation/timeout/crash, raw-fill reconciliation plus U5/U2/U3/F7/FH/reference regressions; post-commit on Nam",
+    "expected_outcomes": [
+      "zero skipped tests",
+      "no result publication on cancel/deadline/tamper",
+      "worker crash kills owned engine child",
+      "runtime identity and native fills are fail-closed"
+    ],
+    "exit_code": 0,
+    "tests": 66,
+    "acceptance_scope": "U5 Nautilus primary-adapter slice; not full U5 or production"
+  },
+  "residual_scope": [
+    "Full U5b/U5c/data/UX gates remain deferred exactly as listed in the task packet.",
+    "Reviewer-local disposable PostgreSQL integration was unavailable; root post-commit integrated validation is recorded separately."
+  ]
+}

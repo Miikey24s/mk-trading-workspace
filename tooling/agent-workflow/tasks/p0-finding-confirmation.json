@@ -1,0 +1,16 @@
+{
+  "id": "p0-finding-confirmation",
+  "objective": "READ-ONLY confirmation review after two P0 safety fixes. Read exactly the four staged files and return immediately. Confirm or reject only these two claims: A) official average realized R is derived from net P/L divided by positive planned_risk_budget, legacy input r cannot override it, and missing planned risk yields N/A; B) durable execution idempotency binds a request_id to mode/account/operation/canonical payload so a reused key for a different intent is denied, while an identical intent can return the persisted result without resend. Also note any direct contradiction between tests and P1 contract. Do not broaden review to unrelated architecture or product source.",
+  "acceptance": [
+    "Return PASS, FINDINGS or BLOCKED",
+    "Cite exact staged file and line/behavior for any finding",
+    "If both fixes are internally consistent, say PASS with limitations that tests were not executed by reviewer"
+  ],
+  "allowed_files": [],
+  "inputs": [
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/P1-CONTRACT.md", "destination": "P1-CONTRACT.md"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/p0-spikes/metrics_core.py", "destination": "metrics_core.py"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/p0-spikes/execution_guard.py", "destination": "execution_guard.py"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/p0-spikes/test_spikes.py", "destination": "test_spikes.py"}
+  ]
+}

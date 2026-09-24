@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "finished_at_utc": "2026-09-20T23:53:49.0890521Z",
+  "base": "e3f4f8a467d76dae576bdda79314678e37381003",
+  "lane_a": "cd30df5aaa7e15e373a991471b1fa361abbcbbae",
+  "lane_b": "09aa48ecc1c1b91e825d0ab250a7f803ee62d866",
+  "accepted_commit": "cd30df5aaa7e15e373a991471b1fa361abbcbbae",
+  "trial_b_commit": "1bd3254e25fe4c9f3144b08767bb80cf7ef34d4f",
+  "lane_a_validation": "pass",
+  "lane_b_validation": "rejected_semantic_contract_mismatch",
+  "accepted_head_after_b_reject": "cd30df5aaa7e15e373a991471b1fa361abbcbbae",
+  "accepted_a_preserved": true,
+  "accepted_contract_consistent": true,
+  "git_status": []
+}

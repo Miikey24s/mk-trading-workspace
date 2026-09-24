@@ -1,0 +1,3703 @@
+{
+  "snapshot_schema": 1,
+  "state_revision": 223,
+  "tables": {
+    "attempts": [
+      {
+        "attempt_id": "CO-00-a1",
+        "base_revision": "EXECUTION-ENTRYPOINT@1186354D",
+        "child_locator": "parent-local",
+        "created_at": "2026-09-21 12:04:57",
+        "error": "runtime snapshot superseded: both 17841 and 17842 are now healthy",
+        "input_hash": "1186354D409DC7AACC4035979BFFAC61504F6D7BCD67D885C53B3DB62DBB3273",
+        "namespace": "co00-local",
+        "owner_generation": 1,
+        "route_locator": "local-readonly-audit",
+        "status": "uncertain",
+        "task_id": "CO-00",
+        "updated_at": "2026-09-21 14:08:06"
+      },
+      {
+        "attempt_id": "CO-00-a2",
+        "base_revision": "runtime-2026-09-21T21:06+07",
+        "child_locator": "parent-local",
+        "created_at": "2026-09-21 14:08:06",
+        "error": "review failed: refresh host capacity/routing evidence and semantics",
+        "input_hash": "3bbd2f8f3a2965a6c2d489cce3a55a16ee814cfcab75218eea802d5e377d8f99",
+        "namespace": "co00-local-r2",
+        "owner_generation": 1,
+        "route_locator": "local-readonly-audit",
+        "status": "uncertain",
+        "task_id": "CO-00",
+        "updated_at": "2026-09-21 14:22:58"
+      },
+      {
+        "attempt_id": "CO-00-a3",
+        "base_revision": "runtime-routing-review-r3",
+        "child_locator": "parent-local",
+        "created_at": "2026-09-21 14:22:58",
+        "error": null,
+        "input_hash": "73c7754c65e71db142a3c468fd95a70b229b6bbf0a9e9b116b126d59aca823e0",
+        "namespace": "co00-local-r3",
+        "owner_generation": 1,
+        "route_locator": "local-readonly-audit",
+        "status": "accepted",
+        "task_id": "CO-00",
+        "updated_at": "2026-09-21 14:26:51"
+      },
+      {
+        "attempt_id": "CO-01-a1",
+        "base_revision": "controller-dd8d70f3",
+        "child_locator": "parent-local",
+        "created_at": "2026-09-21 14:27:53",
+        "error": null,
+        "input_hash": "dd8d70f3dbfafa77f7a812f9f94834c9ca0ad5c33b292bd2cba07ae075445029",
+        "namespace": "co01-local",
+        "owner_generation": 1,
+        "route_locator": "parent-local",
+        "status": "accepted",
+        "task_id": "CO-01",
+        "updated_at": "2026-09-21 14:35:10"
+      },
+      {
+        "attempt_id": "F0-REFRESH-a1",
+        "base_revision": "foundation-plan-v1.4",
+        "child_locator": "/root/f0_refresh",
+        "created_at": "2026-09-21 14:27:53",
+        "error": null,
+        "input_hash": "cd02a046673b169c07120ce5b226734b101cd0a599732a6517173ba8b76cd4aa",
+        "namespace": "f0-refresh-a1",
+        "owner_generation": 1,
+        "route_locator": "unknown-native-route",
+        "status": "accepted",
+        "task_id": "F0-REFRESH",
+        "updated_at": "2026-09-21 15:03:30"
+      },
+      {
+        "attempt_id": "CO-02-a1",
+        "base_revision": "controller-dd8d70f3",
+        "child_locator": "parent-local",
+        "created_at": "2026-09-21 14:36:23",
+        "error": "review r1 failed; superseded by hardened controller r2",
+        "input_hash": "dd8d70f3dbfafa77f7a812f9f94834c9ca0ad5c33b292bd2cba07ae075445029",
+        "namespace": "co02-local",
+        "owner_generation": 1,
+        "route_locator": "parent-local",
+        "status": "uncertain",
+        "task_id": "CO-02",
+        "updated_at": "2026-09-21 14:46:53"
+      },
+      {
+        "attempt_id": "CO-03-a1",
+        "base_revision": "CO-00/01-accepted",
+        "child_locator": "/root/co03_child",
+        "created_at": "2026-09-21 14:36:23",
+        "error": null,
+        "input_hash": "53b0bd4cbc3fc4035147514ff465146a1680868c52db59df739c40917c8a4198",
+        "namespace": "co03-native-child-a1",
+        "owner_generation": 1,
+        "route_locator": "unknown-native-route",
+        "status": "accepted",
+        "task_id": "CO-03",
+        "updated_at": "2026-09-21 14:58:37"
+      },
+      {
+        "attempt_id": "CO-02-a2",
+        "base_revision": "controller-75707d0a",
+        "child_locator": "parent-local",
+        "created_at": "2026-09-21 14:46:53",
+        "error": null,
+        "input_hash": "75707d0af2b669c0f89f24c14bd32a4d0d8343208fba99428fba51f25265cf43",
+        "namespace": "co02-local-r2",
+        "owner_generation": 1,
+        "route_locator": "parent-local",
+        "status": "accepted",
+        "task_id": "CO-02",
+        "updated_at": "2026-09-21 14:58:37"
+      },
+      {
+        "attempt_id": "CO-05-a1",
+        "base_revision": "CO-02/03-accepted@state53",
+        "child_locator": "/root/co05_recovery",
+        "created_at": "2026-09-21 15:09:32",
+        "error": "r1 review failed; verifier hardened to tolerate legitimate lifecycle state changes",
+        "input_hash": "68e034068ad4f71aaaf1a4522625f74698da37f9c22600405f80a7182f94389c",
+        "namespace": "co05-fresh-process-a1",
+        "owner_generation": 1,
+        "route_locator": "parent-local",
+        "status": "uncertain",
+        "task_id": "CO-05",
+        "updated_at": "2026-09-21 15:19:37"
+      },
+      {
+        "attempt_id": "CO-04-a1",
+        "base_revision": "CO-03-accepted/native-batch-r2",
+        "child_locator": "/root/co04_batch+/root/co04_lane1..3",
+        "created_at": "2026-09-21 15:11:46",
+        "error": "r2 review failed; superseded by r3 unavailable-lane and accepted-output evidence",
+        "input_hash": "a064f2331b90804731c4e3832c0bac85af051c08bed60ba10667040b1992ae76",
+        "namespace": "co04-native-plus-local-r2",
+        "owner_generation": 1,
+        "route_locator": "unknown-native-route",
+        "status": "uncertain",
+        "task_id": "CO-04",
+        "updated_at": "2026-09-21 15:17:37"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a1",
+        "base_revision": "F0-accepted/F1-C1",
+        "child_locator": "/root/f1_contract",
+        "created_at": "2026-09-21 15:15:02",
+        "error": "F1-C1 independent review failed; superseded by additive F1-C2 contract revision",
+        "input_hash": "bec2134484fe731c23aa04d7e8ae17b96632c3bff63b213a0dea4dc6861693d1",
+        "namespace": "f1-contract-a1",
+        "owner_generation": 1,
+        "route_locator": "unknown-native-route",
+        "status": "uncertain",
+        "task_id": "F1-CONTRACT",
+        "updated_at": "2026-09-21 20:39:42"
+      },
+      {
+        "attempt_id": "CO-04-a2",
+        "base_revision": "CO-04-r2-review-failed/r3",
+        "child_locator": "parent-local",
+        "created_at": "2026-09-21 15:17:37",
+        "error": "r3 independent review failed; superseded by immutable r4 evidence revision",
+        "input_hash": "2eb4ddde280c788b5b0fbde285bb5fac96588406ed9deec80228399f11cf8d49",
+        "namespace": "co04-r3-unavailable-time",
+        "owner_generation": 1,
+        "route_locator": "unknown-native-route",
+        "status": "uncertain",
+        "task_id": "CO-04",
+        "updated_at": "2026-09-21 20:35:47"
+      },
+      {
+        "attempt_id": "CO-05-a2",
+        "base_revision": "CO-05-r1-review-failed/verifier-v2",
+        "child_locator": "parent-local",
+        "created_at": "2026-09-21 15:19:37",
+        "error": null,
+        "input_hash": "d6da2f738cfa68e54f1b62b6db33e3a8027ac0843467e14b2b22cd0f470faf11",
+        "namespace": "co05-fresh-process-a2",
+        "owner_generation": 1,
+        "route_locator": "parent-local",
+        "status": "accepted",
+        "task_id": "CO-05",
+        "updated_at": "2026-09-21 20:37:51"
+      },
+      {
+        "attempt_id": "CO-04-a3",
+        "base_revision": "CO-04-r3-review-failed/r4",
+        "child_locator": "parent-local",
+        "created_at": "2026-09-21 20:35:47",
+        "error": null,
+        "input_hash": "426347815770a1b9f5b99adc16eac055b6c252dc27307c26a451b9c6e72d18cd",
+        "namespace": "co04-r4-review-fix",
+        "owner_generation": 1,
+        "route_locator": "unknown-native-route",
+        "status": "accepted",
+        "task_id": "CO-04",
+        "updated_at": "2026-09-21 20:40:59"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a2",
+        "base_revision": "F1-C1-review-failed/F1-C2",
+        "child_locator": "parent-local",
+        "created_at": "2026-09-21 20:39:42",
+        "error": null,
+        "input_hash": "06233e1850b8339946d8707ffac9108c7adaf2373d757460a9f8ad666342767c",
+        "namespace": "f1-contract-a2",
+        "owner_generation": 1,
+        "route_locator": "parent-local",
+        "status": "accepted",
+        "task_id": "F1-CONTRACT",
+        "updated_at": "2026-09-21 20:44:50"
+      },
+      {
+        "attempt_id": "CO-06-a1",
+        "base_revision": "F1-C2/F2-candidate-r2/F3-candidate",
+        "child_locator": "/root/co06_validation",
+        "created_at": "2026-09-21 21:03:28",
+        "error": "browser provider cap 5 caused stream disconnect before completion; input also superseded by F2/F3 review failures",
+        "input_hash": "bfb8fb5bd93c2dac459e9d99159c4ec9bab6f758f3de9cde8f2645d6ec7fcaa4",
+        "namespace": "co06-validation-synthesis-a1",
+        "owner_generation": 1,
+        "route_locator": "unknown-native-route",
+        "status": "uncertain",
+        "task_id": "CO-06",
+        "updated_at": "2026-09-21 21:05:44"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a1",
+        "base_revision": "F1-C2/F2-safety-candidate-r2.json/review-fail-r1",
+        "child_locator": "/root/f2_fix_r3",
+        "created_at": "2026-09-21 21:06:56",
+        "error": "F2 r3 independent review failed; r4 addresses the two remaining blockers",
+        "input_hash": "81cc0b4bb71b83f084312cd3857489f53ee98c89f974241a8a4b486be1d285b4",
+        "namespace": "f2-safety-r3-fix",
+        "owner_generation": 1,
+        "route_locator": "unknown-native-route",
+        "status": "uncertain",
+        "task_id": "F2-SAFETY",
+        "updated_at": "2026-09-21 21:47:03"
+      },
+      {
+        "attempt_id": "F3-SPIKES-a1",
+        "base_revision": "F1-C2/F3-spikes-candidate.json/review-fail-r1",
+        "child_locator": "/root/f3_fix_r2",
+        "created_at": "2026-09-21 21:06:56",
+        "error": null,
+        "input_hash": "7496e8b799eb71ae4741cc2a2d887a0e9f8fe5ce860a817e61394ad0b0d1eaf9",
+        "namespace": "f3-spikes-r2-fix",
+        "owner_generation": 1,
+        "route_locator": "unknown-native-route",
+        "status": "accepted",
+        "task_id": "F3-SPIKES",
+        "updated_at": "2026-09-21 21:47:03"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a2",
+        "base_revision": "F2-r3-review-failed/7ebbcd8ba73f84adef7b34d94375ae010f6d88e4a706ca2a329ad376d8cf0863",
+        "child_locator": "parent-local",
+        "created_at": "2026-09-21 21:47:03",
+        "error": null,
+        "input_hash": "270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41",
+        "namespace": "f2-safety-r4",
+        "owner_generation": 1,
+        "route_locator": "parent-local",
+        "status": "accepted",
+        "task_id": "F2-SAFETY",
+        "updated_at": "2026-09-21 22:00:43"
+      },
+      {
+        "attempt_id": "CO-06-a2",
+        "base_revision": "F1-C2/0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902/F2-r4/270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41/F3-r2/d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4",
+        "child_locator": "parent-local",
+        "created_at": "2026-09-21 22:00:43",
+        "error": null,
+        "input_hash": "e240aa8b660ad972c6fe2d8e8588aec0590f5f9e3548100af30ad45117b9c657",
+        "namespace": "co06-validation-synthesis-a2",
+        "owner_generation": 1,
+        "route_locator": "parent-local",
+        "status": "accepted",
+        "task_id": "CO-06",
+        "updated_at": "2026-09-21 23:35:54"
+      },
+      {
+        "attempt_id": "F5-PACKAGE-a1",
+        "base_revision": "F1-C2/F2-r4/F3-r2/F5-evidence-set",
+        "child_locator": "fresh-session-parent",
+        "created_at": "2026-09-21 23:35:54",
+        "error": null,
+        "input_hash": "b887b453324b226a55961a0617f7a57f5cc8e95bf4545d2c4ae679a6a0a5ec69",
+        "namespace": "f5-path2-decision-r1",
+        "owner_generation": 1,
+        "route_locator": "fresh-session-parent",
+        "status": "accepted",
+        "task_id": "F5-PACKAGE",
+        "updated_at": "2026-09-21 23:35:54"
+      },
+      {
+        "attempt_id": "FH-0-a1",
+        "base_revision": "7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd+dirty-pinned-manifest",
+        "child_locator": "codex-native2-coordinator-fh3-20260922",
+        "created_at": "2026-09-22 04:28:34",
+        "error": null,
+        "input_hash": "9e89bb328c4aa14f72ba27a4f3e4d2708c8ea87c2cbf77dbbb61ce4355113946",
+        "namespace": "fh-0-20260922",
+        "owner_generation": 2,
+        "route_locator": "codex-native2-coordinator-fh3-20260922",
+        "status": "accepted",
+        "task_id": "FH-0",
+        "updated_at": "2026-09-22 04:28:34"
+      },
+      {
+        "attempt_id": "FH-1-a1",
+        "base_revision": "7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd+dirty-pinned-manifest",
+        "child_locator": "codex-native2-coordinator-fh3-20260922",
+        "created_at": "2026-09-22 04:28:34",
+        "error": null,
+        "input_hash": "986feae90621d865831a852d586fe32caf3ad9a008a5569a3b08c8ca197805ce",
+        "namespace": "fh-1-20260922",
+        "owner_generation": 2,
+        "route_locator": "codex-native2-coordinator-fh3-20260922",
+        "status": "accepted",
+        "task_id": "FH-1",
+        "updated_at": "2026-09-22 04:28:34"
+      },
+      {
+        "attempt_id": "FH-2-a1",
+        "base_revision": "7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd+dirty-pinned-manifest",
+        "child_locator": "codex-native2-coordinator-fh3-20260922",
+        "created_at": "2026-09-22 04:28:34",
+        "error": null,
+        "input_hash": "a51bf68a83bf865830b73b4d4cc15140f875d04adb4abe3af4225b5f160fa4ef",
+        "namespace": "fh-2-20260922",
+        "owner_generation": 2,
+        "route_locator": "codex-native2-coordinator-fh3-20260922",
+        "status": "accepted",
+        "task_id": "FH-2",
+        "updated_at": "2026-09-22 04:28:34"
+      },
+      {
+        "attempt_id": "FH-3-a1",
+        "base_revision": "7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd+dirty-pinned-manifest",
+        "child_locator": "codex-native2-coordinator-fh3-20260922",
+        "created_at": "2026-09-22 04:28:34",
+        "error": null,
+        "input_hash": "33993fa4a101d445b996b5a4bb1cd8681f0fa42742d58510b86798cfb4355511",
+        "namespace": "fh-3-20260922",
+        "owner_generation": 2,
+        "route_locator": "codex-native2-coordinator-fh3-20260922",
+        "status": "accepted",
+        "task_id": "FH-3",
+        "updated_at": "2026-09-22 04:28:34"
+      },
+      {
+        "attempt_id": "U2-PATH2-DATA-r1-a1",
+        "base_revision": "ec24ecc",
+        "child_locator": "codex-native2-coordinator-u2-20260922",
+        "created_at": "2026-09-22 06:04:36",
+        "error": null,
+        "input_hash": "b2bf473f8eb42cfaf7c9309b04129aea8203c57f28179d975d22eb9975adbca6",
+        "namespace": "u2-path2-data-20260922",
+        "owner_generation": 3,
+        "route_locator": "codex-native2-coordinator-u2-20260922",
+        "status": "accepted",
+        "task_id": "U2-PATH2-DATA-r1",
+        "updated_at": "2026-09-22 06:04:36"
+      },
+      {
+        "attempt_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1-a1",
+        "base_revision": "47d5fbf35614c269eecf8fb1133f5b63db801fd9",
+        "child_locator": "codex-native2-coordinator-u2-20260922",
+        "created_at": "2026-09-22 10:44:41",
+        "error": null,
+        "input_hash": "be7588e8dd0bdaab2903cc1102c8e970609523a5c8f4bf9e513e323db778ffc7",
+        "namespace": "u3-path2-playbook-journal-20260922",
+        "owner_generation": 3,
+        "route_locator": "codex-native2-coordinator-u2-20260922",
+        "status": "accepted",
+        "task_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1",
+        "updated_at": "2026-09-22 10:44:41"
+      },
+      {
+        "attempt_id": "U5-PATH2-ENGINE-r1-a1",
+        "base_revision": "86d300055e58e8659c6ad0217c97c15d290c4214",
+        "child_locator": "/root",
+        "created_at": "2026-09-22 11:45:58",
+        "error": null,
+        "input_hash": "b709c34e7d20471bcdcd89345ae0f92405d23cdce8fc98a053b18a08f0cdb7c9",
+        "namespace": "u5-path2-engine-r1",
+        "owner_generation": 3,
+        "route_locator": "unknown",
+        "status": "accepted",
+        "task_id": "U5-PATH2-ENGINE-r1",
+        "updated_at": "2026-09-22 12:16:29"
+      },
+      {
+        "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
+        "base_revision": "387a58f4fd96337baa9d4d50cb1763982282f661",
+        "child_locator": "/root",
+        "created_at": "2026-09-22 12:20:36",
+        "error": null,
+        "input_hash": "57b7c6bfb6194c04f577d1387c8763d78a85c6a329b91b55375af330d35ff65b",
+        "namespace": "u5-nautilus-r1",
+        "owner_generation": 3,
+        "route_locator": "unknown",
+        "status": "accepted",
+        "task_id": "U5-NAUTILUS-ADAPTER-r1",
+        "updated_at": "2026-09-22 13:18:15"
+      },
+      {
+        "attempt_id": "U5B-PROTECTIVE-MARGIN-r1-a1",
+        "base_revision": "f9d8c19cf87655b495de5438297a1596d15f6a0c",
+        "child_locator": "/root",
+        "created_at": "2026-09-22 13:29:30",
+        "error": null,
+        "input_hash": "f5dd2539c71fc36e60b17b85f4ad37584b95d588c0f32711df652691a1135881",
+        "namespace": "u5b-protective-margin-r1",
+        "owner_generation": 3,
+        "route_locator": "local",
+        "status": "running",
+        "task_id": "U5B-PROTECTIVE-MARGIN-r1",
+        "updated_at": "2026-09-22 13:29:30"
+      }
+    ],
+    "candidates": [
+      {
+        "artifact_hash": "3A65C1289257611D12CF1F02C0FF6D086EDBDF844F4D86C2CABBC56BCF7E0D52",
+        "artifact_path": "artifacts/CO-00-runtime.json",
+        "attempt_id": "CO-00-a1",
+        "created_at": "2026-09-21 12:04:57",
+        "provenance_json": "{\"captured_by\": \"parent\", \"source\": \"local runtime read-only\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "3bbd2f8f3a2965a6c2d489cce3a55a16ee814cfcab75218eea802d5e377d8f99",
+        "artifact_path": "artifacts/CO-00-runtime-r2.json",
+        "attempt_id": "CO-00-a2",
+        "created_at": "2026-09-21 14:08:06",
+        "provenance_json": "{\"captured_by\": \"parent\", \"source\": \"current local runtime read-only\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "73c7754c65e71db142a3c468fd95a70b229b6bbf0a9e9b116b126d59aca823e0",
+        "artifact_path": "artifacts/CO-00-runtime-r3.json",
+        "attempt_id": "CO-00-a3",
+        "created_at": "2026-09-21 14:22:58",
+        "provenance_json": "{\"captured_by\": \"parent\", \"source\": \"current runtime + native batch + redacted routing metadata\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "e4068db5f2a48563e23cdc49d19310054b0353435a00b893a33b318d2d8df1b1",
+        "artifact_path": "artifacts/CO-01-ledger.json",
+        "attempt_id": "CO-01-a1",
+        "created_at": "2026-09-21 14:27:53",
+        "provenance_json": "{\"controller_sha256\": \"dd8d70f3dbfafa77f7a812f9f94834c9ca0ad5c33b292bd2cba07ae075445029\", \"scope\": \"local orchestration fixture controller\", \"tests_sha256\": \"fb34b4e344f50bf0ba31ad144484ba84a3f5df79dd01aa38abb38bd6b4c2c3c0\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "2a42cc6f710dd07dd164dd9749444c4c374aeeafcd5b0d15d3812af64d77af63",
+        "artifact_path": "artifacts/CO-02-recovery.json",
+        "attempt_id": "CO-02-a1",
+        "created_at": "2026-09-21 14:36:23",
+        "provenance_json": "{\"controller_sha256\": \"dd8d70f3dbfafa77f7a812f9f94834c9ca0ad5c33b292bd2cba07ae075445029\", \"scope\": \"local orchestration recovery fixture\", \"tests_sha256\": \"fb34b4e344f50bf0ba31ad144484ba84a3f5df79dd01aa38abb38bd6b4c2c3c0\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "123d637739f5c2a5a04a0146832804a7e7465bb5f9eb184a5a3b452dd30b2a5a",
+        "artifact_path": "artifacts/CO-03-child.json",
+        "attempt_id": "CO-03-a1",
+        "created_at": "2026-09-21 14:42:24",
+        "provenance_json": "{\"author_locator\": \"/root/co03_child\", \"scope\": \"native Web GPT one-child fixture\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "b7a8ba634c7517dd19e43ec09cd494e15ba66355d0b463be2aa6f5c548e0b10f",
+        "artifact_path": "artifacts/CO-02-recovery-r2.json",
+        "attempt_id": "CO-02-a2",
+        "created_at": "2026-09-21 14:46:53",
+        "provenance_json": "{\"controller_sha256\": \"75707d0af2b669c0f89f24c14bd32a4d0d8343208fba99428fba51f25265cf43\", \"scope\": \"local orchestration recovery fixture r2\", \"tests_sha256\": \"a4e5f7199ff0768218792c504196a637df49ac926bde9792b297e0566ad61811\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "4ab7212f930982f0ea565ecab549545c0bb6f3959a8083f9dd7e8dc963067b0d",
+        "artifact_path": "artifacts/F0-knowledge-candidate.md",
+        "attempt_id": "F0-REFRESH-a1",
+        "created_at": "2026-09-21 15:03:30",
+        "provenance_json": "{\"author_locator\": \"/root/f0_refresh\", \"scope\": \"neutral knowledge/workload/current-source refresh\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2",
+        "artifact_path": "artifacts/CO-05-recovery.json",
+        "attempt_id": "CO-05-a1",
+        "created_at": "2026-09-21 15:09:32",
+        "provenance_json": "{\"author_locator\": \"/root/co05_recovery\", \"probe_sha256\": \"68e034068ad4f71aaaf1a4522625f74698da37f9c22600405f80a7182f94389c\", \"scope\": \"isolated fresh local process recovery fixture\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "8a9d0263cc5df2b9f78ce70d6e87f2a73f17b1a6edee95ab44aeacd6b9f5b0ea",
+        "artifact_path": "artifacts/CO-04-batch-candidate-r2.json",
+        "attempt_id": "CO-04-a1",
+        "created_at": "2026-09-21 15:11:46",
+        "provenance_json": "{\"capacity_10_verified\": false, \"native_overlap\": \"serialized\", \"scope\": \"local overlap plus three native Web GPT fixture lanes\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "c46e631f8239115179962cd1acdfe1e7a50cb32c4e2677559e3568c16b789430",
+        "artifact_path": "artifacts/F1-contract-corpus-candidate.md",
+        "attempt_id": "F1-CONTRACT-a1",
+        "created_at": "2026-09-21 15:15:02",
+        "provenance_json": "{\"author_locator\": \"/root/f1_contract\", \"frozen_contract\": \"F1-C1\", \"scope\": \"greenfield target contract and acceptance corpus\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "489d2ef1bf5bed71de77e164e7012ddd01672d8f2a95cb27c2ccfed417027fcf",
+        "artifact_path": "artifacts/CO-04-batch-candidate-r3.json",
+        "attempt_id": "CO-04-a2",
+        "created_at": "2026-09-21 15:17:37",
+        "provenance_json": "{\"capacity_10_verified\": false, \"native_batch_evidence\": \"three Web GPT lanes completed but serialized\", \"scope\": \"local overlap + unavailable lane + accepted-output/rework evidence\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2",
+        "artifact_path": "artifacts/CO-05-recovery.json",
+        "attempt_id": "CO-05-a2",
+        "created_at": "2026-09-21 15:19:37",
+        "provenance_json": "{\"scope\": \"same immutable recovery candidate with state-tolerant verifier v2\", \"source_attempt\": \"CO-05-a1\", \"verifier_sha256\": \"d6da2f738cfa68e54f1b62b6db33e3a8027ac0843467e14b2b22cd0f470faf11\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "a374195195cab36ebdfdf69b9e4b57e8038acde3aaa93beea80e5e72e497d324",
+        "artifact_path": "artifacts/CO-04-batch-candidate-r4.json",
+        "attempt_id": "CO-04-a3",
+        "created_at": "2026-09-21 20:35:47",
+        "provenance_json": "{\"capacity_10_verified\": false, \"native_batch_evidence\": \"three Web GPT lanes completed earlier but were serialized\", \"scope\": \"local overlap + unavailable lane + exact hash + full rework timing evidence\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902",
+        "artifact_path": "artifacts/F1-contract-corpus-candidate-r2.md",
+        "attempt_id": "F1-CONTRACT-a2",
+        "created_at": "2026-09-21 20:39:42",
+        "provenance_json": "{\"base_candidate_sha256\": \"c46e631f8239115179962cd1acdfe1e7a50cb32c4e2677559e3568c16b789430\", \"frozen_contract\": \"F1-C2\", \"scope\": \"F1-C1 plus additive F1-C2 contract delta\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "7ebbcd8ba73f84adef7b34d94375ae010f6d88e4a706ca2a329ad376d8cf0863",
+        "artifact_path": "artifacts/F2-safety-candidate-r3.json",
+        "attempt_id": "F2-SAFETY-a1",
+        "created_at": "2026-09-21 21:26:10",
+        "provenance_json": "{\"contract\": \"F1-C2\", \"parent_rerun\": \"python -B -m unittest -v test_f2_safety.py: 18/18 OK\", \"review_fix_scope\": [\"principal/membership authorization on all tenant seams\", \"owner epoch/lease enforced on send path\", \"metadata/lineage/artifact restore integrity\", \"cancel/replace order/deal/position reconciliation\", \"threaded retry and risk interleavings\"], \"supersedes\": \"F2-safety-candidate-r2.json\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4",
+        "artifact_path": "artifacts/F3-spikes-candidate-r2.json",
+        "attempt_id": "F3-SPIKES-a1",
+        "created_at": "2026-09-21 21:26:10",
+        "provenance_json": "{\"contract\": \"F1-C2\", \"parent_rerun\": \"python -B -m unittest -v test_f3_spikes.py: 8/8 OK\", \"path_selected\": null, \"supersedes\": \"F3-spikes-candidate.json\", \"verification_receipt\": \"artifacts/F3-spikes-verification-r2.json\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41",
+        "artifact_path": "artifacts/F2-safety-candidate-r4.json",
+        "attempt_id": "F2-SAFETY-a2",
+        "created_at": "2026-09-21 21:47:03",
+        "provenance_json": "{\"fixed_findings\": [\"immutable job_id collision guard preserves original queued job\", \"replace/cancel lifecycle replay follows event sequence\"], \"parent_rerun\": \"python -B -m unittest -v test_f2_safety.py: 20/20 OK\", \"prior_review\": \"F2-SAFETY-r3-review\", \"supersedes\": \"F2-safety-candidate-r3.json\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "b887b453324b226a55961a0617f7a57f5cc8e95bf4545d2c4ae679a6a0a5ec69",
+        "artifact_path": "artifacts/F5-decision-candidate-r1.md",
+        "attempt_id": "F5-PACKAGE-a1",
+        "created_at": "2026-09-21 23:35:54",
+        "provenance_json": "{\"candidate_created_in_prior_session\": true, \"deterministic_verification_receipt\": \"artifacts/F5-verification-r2.json\", \"recovered_from_disk\": true, \"selected_path\": \"PATH-2\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "d5994df07586137ba2b07cb1522a0cf5d1331ee96cc9831637ee6fc82c4940df",
+        "artifact_path": "artifacts/CO-06-synthesis-r1.json",
+        "attempt_id": "CO-06-a2",
+        "created_at": "2026-09-21 23:35:54",
+        "provenance_json": "{\"F1\": \"accepted\", \"F2\": \"accepted\", \"F3\": \"accepted\", \"F5\": \"b887b453324b226a55961a0617f7a57f5cc8e95bf4545d2c4ae679a6a0a5ec69\", \"owner_instruction\": \"continue full plan in this session\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "9e89bb328c4aa14f72ba27a4f3e4d2708c8ea87c2cbf77dbbb61ce4355113946",
+        "artifact_path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/FH0-baseline-r1.json",
+        "attempt_id": "FH-0-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "provenance_json": "{\"baseline_head\": \"7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd\", \"candidate_state\": \"dirty WIP pinned by receipt/source hashes\", \"source\": \"coordinator-resume-2026-09-22\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "986feae90621d865831a852d586fe32caf3ad9a008a5569a3b08c8ca197805ce",
+        "artifact_path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/FH1-job-lifecycle-r1.json",
+        "attempt_id": "FH-1-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "provenance_json": "{\"baseline_head\": \"7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd\", \"candidate_state\": \"dirty WIP pinned by receipt/source hashes\", \"source\": \"coordinator-resume-2026-09-22\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "a51bf68a83bf865830b73b4d4cc15140f875d04adb4abe3af4225b5f160fa4ef",
+        "artifact_path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/FH2-workspace-auth-r1.json",
+        "attempt_id": "FH-2-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "provenance_json": "{\"baseline_head\": \"7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd\", \"candidate_state\": \"dirty WIP pinned by receipt/source hashes\", \"source\": \"coordinator-resume-2026-09-22\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "33993fa4a101d445b996b5a4bb1cd8681f0fa42742d58510b86798cfb4355511",
+        "artifact_path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/FH3-hardening-r1.json",
+        "attempt_id": "FH-3-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "provenance_json": "{\"baseline_head\": \"7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd\", \"candidate_state\": \"dirty WIP pinned by receipt/source hashes\", \"source\": \"coordinator-resume-2026-09-22\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "47d5fbf35614c269eecf8fb1133f5b63db801fd9",
+        "artifact_path": "git:47d5fbf35614c269eecf8fb1133f5b63db801fd9",
+        "attempt_id": "U2-PATH2-DATA-r1-a1",
+        "created_at": "2026-09-22 06:04:36",
+        "provenance_json": "{\"base_revision\": \"ec24ecc\", \"integrated_commit\": \"47d5fbf35614c269eecf8fb1133f5b63db801fd9\", \"receipt\": \"foundation_v2/evidence/U2-data-foundation-r1.json\", \"receipt_sha256\": \"b2bf473f8eb42cfaf7c9309b04129aea8203c57f28179d975d22eb9975adbca6\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "86d300055e58e8659c6ad0217c97c15d290c4214",
+        "artifact_path": "git:86d300055e58e8659c6ad0217c97c15d290c4214",
+        "attempt_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1-a1",
+        "created_at": "2026-09-22 10:44:41",
+        "provenance_json": "{\"base_revision\": \"47d5fbf35614c269eecf8fb1133f5b63db801fd9\", \"integrated_commit\": \"86d300055e58e8659c6ad0217c97c15d290c4214\", \"receipt\": \"foundation_v2/evidence/U3-playbook-journal-r1.json\", \"receipt_sha256\": \"be7588e8dd0bdaab2903cc1102c8e970609523a5c8f4bf9e513e323db778ffc7\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "c49dfc2e504d13b54cab6279c9d86625ce14609e",
+        "artifact_path": "git:c49dfc2e504d13b54cab6279c9d86625ce14609e",
+        "attempt_id": "U5-PATH2-ENGINE-r1-a1",
+        "created_at": "2026-09-22 12:15:12",
+        "provenance_json": "{\"commit\": \"c49dfc2e504d13b54cab6279c9d86625ce14609e\", \"review\": \"a2b474466cfb7776bb26b7effa1eea7626af60028523e809f3bdef74ae2e19e5\", \"validation\": \"a47a272166d8e8dfdf2e165125a12226b219ffd1e9d25e3671629a8b2eeadc81\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "c118f438b493a9e67971a3ac9465c643c64540a9",
+        "artifact_path": "git:c118f438b493a9e67971a3ac9465c643c64540a9",
+        "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
+        "created_at": "2026-09-22 13:18:15",
+        "provenance_json": "{\"commit\": \"c118f438b493a9e67971a3ac9465c643c64540a9\", \"review\": \"37b2662f184764cc16a8e43421228931db8275d1e5a180e3214b4b53e0de87b1\", \"validation\": \"bf02387cb1875e7eb636387c071c4f9eb220658a431dc3191d59d89cc9e895c6\"}",
+        "schema_version": 1
+      }
+    ],
+    "events": [
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:01:46",
+        "event_type": "owner_acquired",
+        "owner_generation": 1,
+        "payload_json": "{\"locator\": \"codex-native2-parent\"}",
+        "seq": 1,
+        "task_id": null
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:01:46",
+        "event_type": "task_created",
+        "owner_generation": 1,
+        "payload_json": "{\"status\": \"accepted\"}",
+        "seq": 2,
+        "task_id": "CO-00"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:01:46",
+        "event_type": "task_created",
+        "owner_generation": 1,
+        "payload_json": "{\"status\": \"ready\"}",
+        "seq": 3,
+        "task_id": "CO-01"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:01:46",
+        "event_type": "task_created",
+        "owner_generation": 1,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 4,
+        "task_id": "CO-02"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:01:46",
+        "event_type": "task_created",
+        "owner_generation": 1,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 5,
+        "task_id": "CO-03"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:01:46",
+        "event_type": "task_created",
+        "owner_generation": 1,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 6,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:01:46",
+        "event_type": "task_created",
+        "owner_generation": 1,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 7,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:01:46",
+        "event_type": "task_created",
+        "owner_generation": 1,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 8,
+        "task_id": "CO-06"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:01:46",
+        "event_type": "task_created",
+        "owner_generation": 1,
+        "payload_json": "{\"status\": \"ready\"}",
+        "seq": 9,
+        "task_id": "F0-REFRESH"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:01:46",
+        "event_type": "task_created",
+        "owner_generation": 1,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 10,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:01:46",
+        "event_type": "task_created",
+        "owner_generation": 1,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 11,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:01:46",
+        "event_type": "task_created",
+        "owner_generation": 1,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 12,
+        "task_id": "F3-SPIKES"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:01:46",
+        "event_type": "task_created",
+        "owner_generation": 1,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 13,
+        "task_id": "F5-PACKAGE"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:03:16",
+        "event_type": "bootstrap_reconciled",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"accepted\", \"reason\": \"initial bootstrap bypassed acceptance path\", \"to\": \"ready\"}",
+        "seq": 14,
+        "task_id": "CO-00"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 12:03:16",
+        "event_type": "bootstrap_reconciled",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"ready\", \"reason\": \"CO-00 dependency reopened\", \"to\": \"planned\"}",
+        "seq": 15,
+        "task_id": "CO-01"
+      },
+      {
+        "attempt_id": "CO-00-a1",
+        "created_at": "2026-09-21 12:04:57",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"EXECUTION-ENTRYPOINT@1186354D\", \"input_hash\": \"1186354D409DC7AACC4035979BFFAC61504F6D7BCD67D885C53B3DB62DBB3273\"}",
+        "seq": 16,
+        "task_id": "CO-00"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 14:08:06",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"uncertain\", \"reason\": \"refresh CO-00 against current runtime before dispatch\", \"to\": \"ready\"}",
+        "seq": 17,
+        "task_id": "CO-00"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 14:08:06",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"ready\", \"reason\": \"dependency gate repaired: CO-00 is not accepted yet\", \"to\": \"planned\"}",
+        "seq": 18,
+        "task_id": "F0-REFRESH"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 14:22:58",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"uncertain\", \"from_revision\": 2, \"reason\": \"new evidence revision after independent review\", \"to\": \"ready\", \"to_revision\": 3}",
+        "seq": 19,
+        "task_id": "CO-00"
+      },
+      {
+        "attempt_id": "CO-00-a3",
+        "created_at": "2026-09-21 14:22:58",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"runtime-routing-review-r3\", \"from_revision\": 3, \"input_hash\": \"73c7754c65e71db142a3c468fd95a70b229b6bbf0a9e9b116b126d59aca823e0\", \"to_revision\": 4}",
+        "seq": 20,
+        "task_id": "CO-00"
+      },
+      {
+        "attempt_id": "CO-00-a3",
+        "created_at": "2026-09-21 14:26:51",
+        "event_type": "accepted",
+        "owner_generation": 1,
+        "payload_json": "{\"revision\": \"73c7754c65e71db142a3c468fd95a70b229b6bbf0a9e9b116b126d59aca823e0\"}",
+        "seq": 21,
+        "task_id": "CO-00"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 14:26:51",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"dependency CO-00 accepted\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 22,
+        "task_id": "CO-01"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 14:26:51",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"dependency CO-00 accepted\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 23,
+        "task_id": "F0-REFRESH"
+      },
+      {
+        "attempt_id": "CO-01-a1",
+        "created_at": "2026-09-21 14:27:53",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"controller-dd8d70f3\", \"from_revision\": 2, \"input_hash\": \"dd8d70f3dbfafa77f7a812f9f94834c9ca0ad5c33b292bd2cba07ae075445029\", \"to_revision\": 3}",
+        "seq": 24,
+        "task_id": "CO-01"
+      },
+      {
+        "attempt_id": "F0-REFRESH-a1",
+        "created_at": "2026-09-21 14:27:53",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"foundation-plan-v1.4\", \"from_revision\": 2, \"input_hash\": \"cd02a046673b169c07120ce5b226734b101cd0a599732a6517173ba8b76cd4aa\", \"to_revision\": 3}",
+        "seq": 25,
+        "task_id": "F0-REFRESH"
+      },
+      {
+        "attempt_id": "CO-01-a1",
+        "created_at": "2026-09-21 14:35:10",
+        "event_type": "accepted",
+        "owner_generation": 1,
+        "payload_json": "{\"revision\": \"e4068db5f2a48563e23cdc49d19310054b0353435a00b893a33b318d2d8df1b1\"}",
+        "seq": 26,
+        "task_id": "CO-01"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 14:35:10",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"CO-01 accepted and dependencies satisfied\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 27,
+        "task_id": "CO-02"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 14:35:10",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"CO-01 accepted and dependencies satisfied\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 28,
+        "task_id": "CO-03"
+      },
+      {
+        "attempt_id": "CO-02-a1",
+        "created_at": "2026-09-21 14:36:23",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"controller-dd8d70f3\", \"from_revision\": 2, \"input_hash\": \"dd8d70f3dbfafa77f7a812f9f94834c9ca0ad5c33b292bd2cba07ae075445029\", \"to_revision\": 3}",
+        "seq": 29,
+        "task_id": "CO-02"
+      },
+      {
+        "attempt_id": "CO-03-a1",
+        "created_at": "2026-09-21 14:36:23",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"CO-00/01-accepted\", \"from_revision\": 2, \"input_hash\": \"53b0bd4cbc3fc4035147514ff465146a1680868c52db59df739c40917c8a4198\", \"to_revision\": 3}",
+        "seq": 30,
+        "task_id": "CO-03"
+      },
+      {
+        "attempt_id": "CO-02-a1",
+        "created_at": "2026-09-21 14:46:53",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"CO-02-r1\", \"verdict\": \"fail\"}",
+        "seq": 31,
+        "task_id": "CO-02"
+      },
+      {
+        "attempt_id": "CO-02-a1",
+        "created_at": "2026-09-21 14:46:53",
+        "event_type": "attempt_uncertain",
+        "owner_generation": 1,
+        "payload_json": "{\"reason\": \"review r1 failed; superseded by hardened controller r2\"}",
+        "seq": 32,
+        "task_id": "CO-02"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 14:46:53",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"uncertain\", \"from_revision\": 7, \"reason\": \"r1 findings fixed and deterministic suite passes\", \"to\": \"ready\", \"to_revision\": 8}",
+        "seq": 33,
+        "task_id": "CO-02"
+      },
+      {
+        "attempt_id": "CO-02-a2",
+        "created_at": "2026-09-21 14:46:53",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"controller-75707d0a\", \"from_revision\": 8, \"input_hash\": \"75707d0af2b669c0f89f24c14bd32a4d0d8343208fba99428fba51f25265cf43\", \"to_revision\": 9}",
+        "seq": 34,
+        "task_id": "CO-02"
+      },
+      {
+        "attempt_id": "CO-02-a2",
+        "created_at": "2026-09-21 14:46:53",
+        "event_type": "attempt_running",
+        "owner_generation": 1,
+        "payload_json": "{\"child_locator\": \"parent-local\", \"route_locator\": \"parent-local\"}",
+        "seq": 35,
+        "task_id": "CO-02"
+      },
+      {
+        "attempt_id": "CO-02-a2",
+        "created_at": "2026-09-21 14:46:53",
+        "event_type": "candidate_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"artifact_hash\": \"b7a8ba634c7517dd19e43ec09cd494e15ba66355d0b463be2aa6f5c548e0b10f\", \"artifact_path\": \"artifacts/CO-02-recovery-r2.json\"}",
+        "seq": 36,
+        "task_id": "CO-02"
+      },
+      {
+        "attempt_id": "CO-02-a2",
+        "created_at": "2026-09-21 14:46:53",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"CO-02-v2\"}",
+        "seq": 37,
+        "task_id": "CO-02"
+      },
+      {
+        "attempt_id": "CO-02-a2",
+        "created_at": "2026-09-21 14:58:37",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"CO-02-r2\", \"verdict\": \"pass\"}",
+        "seq": 38,
+        "task_id": "CO-02"
+      },
+      {
+        "attempt_id": "CO-02-a2",
+        "created_at": "2026-09-21 14:58:37",
+        "event_type": "integration_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"candidate_hash\": \"b7a8ba634c7517dd19e43ec09cd494e15ba66355d0b463be2aa6f5c548e0b10f\", \"target_base\": \"validation-run-local\"}",
+        "seq": 39,
+        "task_id": "CO-02"
+      },
+      {
+        "attempt_id": "CO-02-a2",
+        "created_at": "2026-09-21 14:58:37",
+        "event_type": "accepted",
+        "owner_generation": 1,
+        "payload_json": "{\"revision\": \"b7a8ba634c7517dd19e43ec09cd494e15ba66355d0b463be2aa6f5c548e0b10f\"}",
+        "seq": 40,
+        "task_id": "CO-02"
+      },
+      {
+        "attempt_id": "CO-03-a1",
+        "created_at": "2026-09-21 14:58:37",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"CO-03-r1\", \"verdict\": \"pass\"}",
+        "seq": 41,
+        "task_id": "CO-03"
+      },
+      {
+        "attempt_id": "CO-03-a1",
+        "created_at": "2026-09-21 14:58:37",
+        "event_type": "integration_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"candidate_hash\": \"123d637739f5c2a5a04a0146832804a7e7465bb5f9eb184a5a3b452dd30b2a5a\", \"target_base\": \"validation-run-local\"}",
+        "seq": 42,
+        "task_id": "CO-03"
+      },
+      {
+        "attempt_id": "CO-03-a1",
+        "created_at": "2026-09-21 14:58:37",
+        "event_type": "accepted",
+        "owner_generation": 1,
+        "payload_json": "{\"revision\": \"123d637739f5c2a5a04a0146832804a7e7465bb5f9eb184a5a3b452dd30b2a5a\"}",
+        "seq": 43,
+        "task_id": "CO-03"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 14:58:37",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"CO-02 and CO-03 accepted; dependencies satisfied\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 44,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 14:58:37",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"CO-02 and CO-03 accepted; dependencies satisfied\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 45,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 14:58:37",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"CO-02 and CO-03 accepted; dependencies satisfied\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 46,
+        "task_id": "CO-06"
+      },
+      {
+        "attempt_id": "F0-REFRESH-a1",
+        "created_at": "2026-09-21 15:03:30",
+        "event_type": "candidate_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"artifact_hash\": \"4ab7212f930982f0ea565ecab549545c0bb6f3959a8083f9dd7e8dc963067b0d\", \"artifact_path\": \"artifacts/F0-knowledge-candidate.md\"}",
+        "seq": 47,
+        "task_id": "F0-REFRESH"
+      },
+      {
+        "attempt_id": "F0-REFRESH-a1",
+        "created_at": "2026-09-21 15:03:30",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"F0-REFRESH-v1\"}",
+        "seq": 48,
+        "task_id": "F0-REFRESH"
+      },
+      {
+        "attempt_id": "F0-REFRESH-a1",
+        "created_at": "2026-09-21 15:03:30",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"F0-REFRESH-r1\", \"verdict\": \"pass\"}",
+        "seq": 49,
+        "task_id": "F0-REFRESH"
+      },
+      {
+        "attempt_id": "F0-REFRESH-a1",
+        "created_at": "2026-09-21 15:03:30",
+        "event_type": "integration_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"candidate_hash\": \"4ab7212f930982f0ea565ecab549545c0bb6f3959a8083f9dd7e8dc963067b0d\", \"target_base\": \"validation-run-local\"}",
+        "seq": 50,
+        "task_id": "F0-REFRESH"
+      },
+      {
+        "attempt_id": "F0-REFRESH-a1",
+        "created_at": "2026-09-21 15:03:30",
+        "event_type": "accepted",
+        "owner_generation": 1,
+        "payload_json": "{\"revision\": \"4ab7212f930982f0ea565ecab549545c0bb6f3959a8083f9dd7e8dc963067b0d\"}",
+        "seq": 51,
+        "task_id": "F0-REFRESH"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 15:03:30",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"F0-REFRESH accepted; contract work unblocked\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 52,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": "F0-REFRESH-a1",
+        "created_at": "2026-09-21 15:04:31",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"F0-REFRESH-v2\"}",
+        "seq": 53,
+        "task_id": "F0-REFRESH"
+      },
+      {
+        "attempt_id": "CO-05-a1",
+        "created_at": "2026-09-21 15:09:32",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"CO-02/03-accepted@state53\", \"from_revision\": 2, \"input_hash\": \"68e034068ad4f71aaaf1a4522625f74698da37f9c22600405f80a7182f94389c\", \"to_revision\": 3}",
+        "seq": 54,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": "CO-05-a1",
+        "created_at": "2026-09-21 15:09:32",
+        "event_type": "attempt_running",
+        "owner_generation": 1,
+        "payload_json": "{\"child_locator\": \"/root/co05_recovery\", \"route_locator\": \"parent-local\"}",
+        "seq": 55,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": "CO-05-a1",
+        "created_at": "2026-09-21 15:09:32",
+        "event_type": "candidate_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"artifact_hash\": \"228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2\", \"artifact_path\": \"artifacts/CO-05-recovery.json\"}",
+        "seq": 56,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": "CO-05-a1",
+        "created_at": "2026-09-21 15:09:32",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"CO-05-v1\"}",
+        "seq": 57,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": "CO-04-a1",
+        "created_at": "2026-09-21 15:11:46",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"CO-03-accepted/native-batch-r2\", \"from_revision\": 2, \"input_hash\": \"a064f2331b90804731c4e3832c0bac85af051c08bed60ba10667040b1992ae76\", \"to_revision\": 3}",
+        "seq": 58,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a1",
+        "created_at": "2026-09-21 15:11:46",
+        "event_type": "attempt_running",
+        "owner_generation": 1,
+        "payload_json": "{\"child_locator\": \"/root/co04_batch+/root/co04_lane1..3\", \"route_locator\": \"unknown-native-route\"}",
+        "seq": 59,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a1",
+        "created_at": "2026-09-21 15:11:46",
+        "event_type": "candidate_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"artifact_hash\": \"8a9d0263cc5df2b9f78ce70d6e87f2a73f17b1a6edee95ab44aeacd6b9f5b0ea\", \"artifact_path\": \"artifacts/CO-04-batch-candidate-r2.json\"}",
+        "seq": 60,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a1",
+        "created_at": "2026-09-21 15:11:46",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"CO-04-v1\"}",
+        "seq": 61,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a1",
+        "created_at": "2026-09-21 15:15:02",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"F0-accepted/F1-C1\", \"from_revision\": 2, \"input_hash\": \"bec2134484fe731c23aa04d7e8ae17b96632c3bff63b213a0dea4dc6861693d1\", \"to_revision\": 3}",
+        "seq": 62,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a1",
+        "created_at": "2026-09-21 15:15:02",
+        "event_type": "attempt_running",
+        "owner_generation": 1,
+        "payload_json": "{\"child_locator\": \"/root/f1_contract\", \"route_locator\": \"unknown-native-route\"}",
+        "seq": 63,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a1",
+        "created_at": "2026-09-21 15:15:02",
+        "event_type": "candidate_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"artifact_hash\": \"c46e631f8239115179962cd1acdfe1e7a50cb32c4e2677559e3568c16b789430\", \"artifact_path\": \"artifacts/F1-contract-corpus-candidate.md\"}",
+        "seq": 64,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a1",
+        "created_at": "2026-09-21 15:15:02",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"F1-CONTRACT-v1\"}",
+        "seq": 65,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": "CO-04-a1",
+        "created_at": "2026-09-21 15:17:37",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"CO-04-r2-review\", \"verdict\": \"fail\"}",
+        "seq": 66,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a1",
+        "created_at": "2026-09-21 15:17:37",
+        "event_type": "attempt_uncertain",
+        "owner_generation": 1,
+        "payload_json": "{\"reason\": \"r2 review failed; superseded by r3 unavailable-lane and accepted-output evidence\"}",
+        "seq": 67,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 15:17:37",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"uncertain\", \"from_revision\": 7, \"reason\": \"r2 blocking findings addressed by deterministic r3 fixture\", \"to\": \"ready\", \"to_revision\": 8}",
+        "seq": 68,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a2",
+        "created_at": "2026-09-21 15:17:37",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"CO-04-r2-review-failed/r3\", \"from_revision\": 8, \"input_hash\": \"2eb4ddde280c788b5b0fbde285bb5fac96588406ed9deec80228399f11cf8d49\", \"to_revision\": 9}",
+        "seq": 69,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a2",
+        "created_at": "2026-09-21 15:17:37",
+        "event_type": "attempt_running",
+        "owner_generation": 1,
+        "payload_json": "{\"child_locator\": \"parent-local\", \"route_locator\": \"unknown-native-route\"}",
+        "seq": 70,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a2",
+        "created_at": "2026-09-21 15:17:37",
+        "event_type": "candidate_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"artifact_hash\": \"489d2ef1bf5bed71de77e164e7012ddd01672d8f2a95cb27c2ccfed417027fcf\", \"artifact_path\": \"artifacts/CO-04-batch-candidate-r3.json\"}",
+        "seq": 71,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a2",
+        "created_at": "2026-09-21 15:17:37",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"CO-04-v2\"}",
+        "seq": 72,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-05-a1",
+        "created_at": "2026-09-21 15:19:37",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"CO-05-r1-review\", \"verdict\": \"fail\"}",
+        "seq": 73,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": "CO-05-a1",
+        "created_at": "2026-09-21 15:19:37",
+        "event_type": "attempt_uncertain",
+        "owner_generation": 1,
+        "payload_json": "{\"reason\": \"r1 review failed; verifier hardened to tolerate legitimate lifecycle state changes\"}",
+        "seq": 74,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 15:19:37",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"uncertain\", \"from_revision\": 7, \"reason\": \"state-tolerant verifier passes against current ledger\", \"to\": \"ready\", \"to_revision\": 8}",
+        "seq": 75,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": "CO-05-a2",
+        "created_at": "2026-09-21 15:19:37",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"CO-05-r1-review-failed/verifier-v2\", \"from_revision\": 8, \"input_hash\": \"d6da2f738cfa68e54f1b62b6db33e3a8027ac0843467e14b2b22cd0f470faf11\", \"to_revision\": 9}",
+        "seq": 76,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": "CO-05-a2",
+        "created_at": "2026-09-21 15:19:37",
+        "event_type": "attempt_running",
+        "owner_generation": 1,
+        "payload_json": "{\"child_locator\": \"parent-local\", \"route_locator\": \"parent-local\"}",
+        "seq": 77,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": "CO-05-a2",
+        "created_at": "2026-09-21 15:19:37",
+        "event_type": "candidate_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"artifact_hash\": \"228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2\", \"artifact_path\": \"artifacts/CO-05-recovery.json\"}",
+        "seq": 78,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": "CO-05-a2",
+        "created_at": "2026-09-21 15:19:37",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"CO-05-v2\"}",
+        "seq": 79,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": "CO-04-a2",
+        "created_at": "2026-09-21 20:35:47",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"CO-04-r3-review\", \"verdict\": \"fail\"}",
+        "seq": 80,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a2",
+        "created_at": "2026-09-21 20:35:47",
+        "event_type": "attempt_uncertain",
+        "owner_generation": 1,
+        "payload_json": "{\"reason\": \"r3 independent review failed; superseded by immutable r4 evidence revision\"}",
+        "seq": 81,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 20:35:47",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"uncertain\", \"from_revision\": 13, \"reason\": \"r3 review findings addressed by new r4 probe/verifier input revision\", \"to\": \"ready\", \"to_revision\": 14}",
+        "seq": 82,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a3",
+        "created_at": "2026-09-21 20:35:47",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"CO-04-r3-review-failed/r4\", \"from_revision\": 14, \"input_hash\": \"426347815770a1b9f5b99adc16eac055b6c252dc27307c26a451b9c6e72d18cd\", \"to_revision\": 15}",
+        "seq": 83,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a3",
+        "created_at": "2026-09-21 20:35:47",
+        "event_type": "attempt_running",
+        "owner_generation": 1,
+        "payload_json": "{\"child_locator\": \"parent-local\", \"route_locator\": \"unknown-native-route\"}",
+        "seq": 84,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a3",
+        "created_at": "2026-09-21 20:35:47",
+        "event_type": "candidate_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"artifact_hash\": \"a374195195cab36ebdfdf69b9e4b57e8038acde3aaa93beea80e5e72e497d324\", \"artifact_path\": \"artifacts/CO-04-batch-candidate-r4.json\"}",
+        "seq": 85,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a3",
+        "created_at": "2026-09-21 20:35:47",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"CO-04-v3\"}",
+        "seq": 86,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-05-a2",
+        "created_at": "2026-09-21 20:37:51",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"CO-05-r2-review\", \"verdict\": \"pass\"}",
+        "seq": 87,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": "CO-05-a2",
+        "created_at": "2026-09-21 20:37:51",
+        "event_type": "integration_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"candidate_hash\": \"228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2\", \"target_base\": \"validation-run-local\"}",
+        "seq": 88,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": "CO-05-a2",
+        "created_at": "2026-09-21 20:37:51",
+        "event_type": "accepted",
+        "owner_generation": 1,
+        "payload_json": "{\"revision\": \"228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2\"}",
+        "seq": 89,
+        "task_id": "CO-05"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a1",
+        "created_at": "2026-09-21 20:39:42",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"F1-CONTRACT-r1-review\", \"verdict\": \"fail\"}",
+        "seq": 90,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a1",
+        "created_at": "2026-09-21 20:39:42",
+        "event_type": "attempt_uncertain",
+        "owner_generation": 1,
+        "payload_json": "{\"reason\": \"F1-C1 independent review failed; superseded by additive F1-C2 contract revision\"}",
+        "seq": 91,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 20:39:42",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"uncertain\", \"from_revision\": 7, \"reason\": \"F1-C1 review findings addressed by frozen F1-C2 delta\", \"to\": \"ready\", \"to_revision\": 8}",
+        "seq": 92,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a2",
+        "created_at": "2026-09-21 20:39:42",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"F1-C1-review-failed/F1-C2\", \"from_revision\": 8, \"input_hash\": \"06233e1850b8339946d8707ffac9108c7adaf2373d757460a9f8ad666342767c\", \"to_revision\": 9}",
+        "seq": 93,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a2",
+        "created_at": "2026-09-21 20:39:42",
+        "event_type": "attempt_running",
+        "owner_generation": 1,
+        "payload_json": "{\"child_locator\": \"parent-local\", \"route_locator\": \"parent-local\"}",
+        "seq": 94,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a2",
+        "created_at": "2026-09-21 20:39:42",
+        "event_type": "candidate_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"artifact_hash\": \"0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902\", \"artifact_path\": \"artifacts/F1-contract-corpus-candidate-r2.md\"}",
+        "seq": 95,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a2",
+        "created_at": "2026-09-21 20:39:42",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"F1-CONTRACT-v2\"}",
+        "seq": 96,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": "CO-04-a3",
+        "created_at": "2026-09-21 20:40:59",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"CO-04-r4-review\", \"verdict\": \"pass\"}",
+        "seq": 97,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a3",
+        "created_at": "2026-09-21 20:40:59",
+        "event_type": "integration_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"candidate_hash\": \"a374195195cab36ebdfdf69b9e4b57e8038acde3aaa93beea80e5e72e497d324\", \"target_base\": \"validation-run-local\"}",
+        "seq": 98,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "CO-04-a3",
+        "created_at": "2026-09-21 20:40:59",
+        "event_type": "accepted",
+        "owner_generation": 1,
+        "payload_json": "{\"revision\": \"a374195195cab36ebdfdf69b9e4b57e8038acde3aaa93beea80e5e72e497d324\"}",
+        "seq": 99,
+        "task_id": "CO-04"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a2",
+        "created_at": "2026-09-21 20:44:50",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"F1-CONTRACT-r2-review\", \"verdict\": \"pass\"}",
+        "seq": 100,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a2",
+        "created_at": "2026-09-21 20:44:50",
+        "event_type": "integration_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"candidate_hash\": \"0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902\", \"target_base\": \"validation-run-local\"}",
+        "seq": 101,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a2",
+        "created_at": "2026-09-21 20:44:50",
+        "event_type": "accepted",
+        "owner_generation": 1,
+        "payload_json": "{\"revision\": \"0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902\"}",
+        "seq": 102,
+        "task_id": "F1-CONTRACT"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 20:44:50",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"F1-C2 accepted; isolated F2/F3 validation unblocked\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 103,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 20:44:50",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"F1-C2 accepted; isolated F2/F3 validation unblocked\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 104,
+        "task_id": "F3-SPIKES"
+      },
+      {
+        "attempt_id": "CO-06-a1",
+        "created_at": "2026-09-21 21:03:28",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"F1-C2/F2-candidate-r2/F3-candidate\", \"from_revision\": 2, \"input_hash\": \"bfb8fb5bd93c2dac459e9d99159c4ec9bab6f758f3de9cde8f2645d6ec7fcaa4\", \"to_revision\": 3}",
+        "seq": 105,
+        "task_id": "CO-06"
+      },
+      {
+        "attempt_id": "CO-06-a1",
+        "created_at": "2026-09-21 21:04:09",
+        "event_type": "attempt_running",
+        "owner_generation": 1,
+        "payload_json": "{\"child_locator\": \"/root/co06_validation\", \"route_locator\": \"unknown-native-route\"}",
+        "seq": 106,
+        "task_id": "CO-06"
+      },
+      {
+        "attempt_id": "CO-06-a1",
+        "created_at": "2026-09-21 21:05:44",
+        "event_type": "attempt_uncertain",
+        "owner_generation": 1,
+        "payload_json": "{\"reason\": \"browser provider cap 5 caused stream disconnect before completion; input also superseded by F2/F3 review failures\"}",
+        "seq": 107,
+        "task_id": "CO-06"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a1",
+        "created_at": "2026-09-21 21:06:56",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"F1-C2/F2-safety-candidate-r2.json/review-fail-r1\", \"from_revision\": 2, \"input_hash\": \"81cc0b4bb71b83f084312cd3857489f53ee98c89f974241a8a4b486be1d285b4\", \"to_revision\": 3}",
+        "seq": 108,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": "F3-SPIKES-a1",
+        "created_at": "2026-09-21 21:06:56",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"F1-C2/F3-spikes-candidate.json/review-fail-r1\", \"from_revision\": 2, \"input_hash\": \"7496e8b799eb71ae4741cc2a2d887a0e9f8fe5ce860a817e61394ad0b0d1eaf9\", \"to_revision\": 3}",
+        "seq": 109,
+        "task_id": "F3-SPIKES"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a1",
+        "created_at": "2026-09-21 21:07:36",
+        "event_type": "attempt_running",
+        "owner_generation": 1,
+        "payload_json": "{\"child_locator\": \"/root/f2_fix_r3\", \"route_locator\": \"unknown-native-route\"}",
+        "seq": 110,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": "F3-SPIKES-a1",
+        "created_at": "2026-09-21 21:07:37",
+        "event_type": "attempt_running",
+        "owner_generation": 1,
+        "payload_json": "{\"child_locator\": \"/root/f3_fix_r2\", \"route_locator\": \"unknown-native-route\"}",
+        "seq": 111,
+        "task_id": "F3-SPIKES"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a1",
+        "created_at": "2026-09-21 21:26:10",
+        "event_type": "candidate_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"artifact_hash\": \"7ebbcd8ba73f84adef7b34d94375ae010f6d88e4a706ca2a329ad376d8cf0863\", \"artifact_path\": \"artifacts/F2-safety-candidate-r3.json\"}",
+        "seq": 112,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a1",
+        "created_at": "2026-09-21 21:26:10",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"F2-SAFETY-v1\"}",
+        "seq": 113,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": "F3-SPIKES-a1",
+        "created_at": "2026-09-21 21:26:10",
+        "event_type": "candidate_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"artifact_hash\": \"d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4\", \"artifact_path\": \"artifacts/F3-spikes-candidate-r2.json\"}",
+        "seq": 114,
+        "task_id": "F3-SPIKES"
+      },
+      {
+        "attempt_id": "F3-SPIKES-a1",
+        "created_at": "2026-09-21 21:26:10",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"F3-SPIKES-v1\"}",
+        "seq": 115,
+        "task_id": "F3-SPIKES"
+      },
+      {
+        "attempt_id": "F3-SPIKES-a1",
+        "created_at": "2026-09-21 21:47:03",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"F3-SPIKES-r2-review\", \"verdict\": \"pass\"}",
+        "seq": 116,
+        "task_id": "F3-SPIKES"
+      },
+      {
+        "attempt_id": "F3-SPIKES-a1",
+        "created_at": "2026-09-21 21:47:03",
+        "event_type": "integration_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"candidate_hash\": \"d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4\", \"target_base\": \"validation-run-local\"}",
+        "seq": 117,
+        "task_id": "F3-SPIKES"
+      },
+      {
+        "attempt_id": "F3-SPIKES-a1",
+        "created_at": "2026-09-21 21:47:03",
+        "event_type": "accepted",
+        "owner_generation": 1,
+        "payload_json": "{\"revision\": \"d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4\"}",
+        "seq": 118,
+        "task_id": "F3-SPIKES"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a1",
+        "created_at": "2026-09-21 21:47:03",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"F2-SAFETY-r3-review\", \"verdict\": \"fail\"}",
+        "seq": 119,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a1",
+        "created_at": "2026-09-21 21:47:03",
+        "event_type": "attempt_uncertain",
+        "owner_generation": 1,
+        "payload_json": "{\"reason\": \"F2 r3 independent review failed; r4 addresses the two remaining blockers\"}",
+        "seq": 120,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 21:47:03",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"uncertain\", \"from_revision\": 7, \"reason\": \"F2 r4 candidate and focused regressions are ready for independent review\", \"to\": \"ready\", \"to_revision\": 8}",
+        "seq": 121,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a2",
+        "created_at": "2026-09-21 21:47:03",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"F2-r3-review-failed/7ebbcd8ba73f84adef7b34d94375ae010f6d88e4a706ca2a329ad376d8cf0863\", \"from_revision\": 8, \"input_hash\": \"270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41\", \"to_revision\": 9}",
+        "seq": 122,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a2",
+        "created_at": "2026-09-21 21:47:03",
+        "event_type": "attempt_running",
+        "owner_generation": 1,
+        "payload_json": "{\"child_locator\": \"parent-local\", \"route_locator\": \"parent-local\"}",
+        "seq": 123,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a2",
+        "created_at": "2026-09-21 21:47:03",
+        "event_type": "candidate_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"artifact_hash\": \"270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41\", \"artifact_path\": \"artifacts/F2-safety-candidate-r4.json\"}",
+        "seq": 124,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a2",
+        "created_at": "2026-09-21 21:47:03",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"F2-SAFETY-v2\"}",
+        "seq": 125,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a2",
+        "created_at": "2026-09-21 22:00:43",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"F2-SAFETY-r4-review\", \"verdict\": \"pass\"}",
+        "seq": 126,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a2",
+        "created_at": "2026-09-21 22:00:43",
+        "event_type": "integration_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"candidate_hash\": \"270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41\", \"target_base\": \"validation-run-local\"}",
+        "seq": 127,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a2",
+        "created_at": "2026-09-21 22:00:43",
+        "event_type": "accepted",
+        "owner_generation": 1,
+        "payload_json": "{\"revision\": \"270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41\"}",
+        "seq": 128,
+        "task_id": "F2-SAFETY"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 22:00:43",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"uncertain\", \"from_revision\": 5, \"reason\": \"resume on accepted F1-C2/F2-r4/F3-r2 revisions; prior browser attempt superseded\", \"to\": \"ready\", \"to_revision\": 6}",
+        "seq": 129,
+        "task_id": "CO-06"
+      },
+      {
+        "attempt_id": "CO-06-a2",
+        "created_at": "2026-09-21 22:00:43",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"F1-C2/0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902/F2-r4/270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41/F3-r2/d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4\", \"from_revision\": 6, \"input_hash\": \"e240aa8b660ad972c6fe2d8e8588aec0590f5f9e3548100af30ad45117b9c657\", \"to_revision\": 7}",
+        "seq": 130,
+        "task_id": "CO-06"
+      },
+      {
+        "attempt_id": "CO-06-a2",
+        "created_at": "2026-09-21 22:00:43",
+        "event_type": "attempt_running",
+        "owner_generation": 1,
+        "payload_json": "{\"child_locator\": \"parent-local\", \"route_locator\": \"parent-local\"}",
+        "seq": 131,
+        "task_id": "CO-06"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-21 23:35:54",
+        "event_type": "task_transition",
+        "owner_generation": 1,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"F2/F3/CO-05 accepted and pinned F5 PATH-2 evidence package is ready for fresh-session review\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 132,
+        "task_id": "F5-PACKAGE"
+      },
+      {
+        "attempt_id": "F5-PACKAGE-a1",
+        "created_at": "2026-09-21 23:35:54",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"base_revision\": \"F1-C2/F2-r4/F3-r2/F5-evidence-set\", \"from_revision\": 2, \"input_hash\": \"b887b453324b226a55961a0617f7a57f5cc8e95bf4545d2c4ae679a6a0a5ec69\", \"to_revision\": 3}",
+        "seq": 133,
+        "task_id": "F5-PACKAGE"
+      },
+      {
+        "attempt_id": "F5-PACKAGE-a1",
+        "created_at": "2026-09-21 23:35:54",
+        "event_type": "attempt_running",
+        "owner_generation": 1,
+        "payload_json": "{\"child_locator\": \"fresh-session-parent\", \"route_locator\": \"fresh-session-parent\"}",
+        "seq": 134,
+        "task_id": "F5-PACKAGE"
+      },
+      {
+        "attempt_id": "F5-PACKAGE-a1",
+        "created_at": "2026-09-21 23:35:54",
+        "event_type": "candidate_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"artifact_hash\": \"b887b453324b226a55961a0617f7a57f5cc8e95bf4545d2c4ae679a6a0a5ec69\", \"artifact_path\": \"artifacts/F5-decision-candidate-r1.md\"}",
+        "seq": 135,
+        "task_id": "F5-PACKAGE"
+      },
+      {
+        "attempt_id": "F5-PACKAGE-a1",
+        "created_at": "2026-09-21 23:35:54",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"F5-PACKAGE-v1\"}",
+        "seq": 136,
+        "task_id": "F5-PACKAGE"
+      },
+      {
+        "attempt_id": "F5-PACKAGE-a1",
+        "created_at": "2026-09-21 23:35:54",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"F5-PACKAGE-r1-fresh-session-review\", \"verdict\": \"pass\"}",
+        "seq": 137,
+        "task_id": "F5-PACKAGE"
+      },
+      {
+        "attempt_id": "F5-PACKAGE-a1",
+        "created_at": "2026-09-21 23:35:54",
+        "event_type": "integration_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"candidate_hash\": \"b887b453324b226a55961a0617f7a57f5cc8e95bf4545d2c4ae679a6a0a5ec69\", \"target_base\": \"foundation-decision/PATH-2\"}",
+        "seq": 138,
+        "task_id": "F5-PACKAGE"
+      },
+      {
+        "attempt_id": "F5-PACKAGE-a1",
+        "created_at": "2026-09-21 23:35:54",
+        "event_type": "accepted",
+        "owner_generation": 1,
+        "payload_json": "{\"revision\": \"b887b453324b226a55961a0617f7a57f5cc8e95bf4545d2c4ae679a6a0a5ec69\"}",
+        "seq": 139,
+        "task_id": "F5-PACKAGE"
+      },
+      {
+        "attempt_id": "CO-06-a2",
+        "created_at": "2026-09-21 23:35:54",
+        "event_type": "candidate_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"artifact_hash\": \"d5994df07586137ba2b07cb1522a0cf5d1331ee96cc9831637ee6fc82c4940df\", \"artifact_path\": \"artifacts/CO-06-synthesis-r1.json\"}",
+        "seq": 140,
+        "task_id": "CO-06"
+      },
+      {
+        "attempt_id": "CO-06-a2",
+        "created_at": "2026-09-21 23:35:54",
+        "event_type": "verification_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"CO-06-v1\"}",
+        "seq": 141,
+        "task_id": "CO-06"
+      },
+      {
+        "attempt_id": "CO-06-a2",
+        "created_at": "2026-09-21 23:35:54",
+        "event_type": "review_recorded",
+        "owner_generation": 1,
+        "payload_json": "{\"review_id\": \"CO-06-r1-fresh-session-review\", \"verdict\": \"pass\"}",
+        "seq": 142,
+        "task_id": "CO-06"
+      },
+      {
+        "attempt_id": "CO-06-a2",
+        "created_at": "2026-09-21 23:35:54",
+        "event_type": "integration_prepared",
+        "owner_generation": 1,
+        "payload_json": "{\"candidate_hash\": \"d5994df07586137ba2b07cb1522a0cf5d1331ee96cc9831637ee6fc82c4940df\", \"target_base\": \"validation-run-local\"}",
+        "seq": 143,
+        "task_id": "CO-06"
+      },
+      {
+        "attempt_id": "CO-06-a2",
+        "created_at": "2026-09-21 23:35:54",
+        "event_type": "accepted",
+        "owner_generation": 1,
+        "payload_json": "{\"revision\": \"d5994df07586137ba2b07cb1522a0cf5d1331ee96cc9831637ee6fc82c4940df\"}",
+        "seq": 144,
+        "task_id": "CO-06"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "owner_takeover",
+        "owner_generation": 2,
+        "payload_json": "{\"confirmed_old_inactive\": true, \"new_locator\": \"codex-native2-coordinator-fh3-20260922\", \"previous_generation\": 1, \"previous_locator\": \"codex-native2-parent\"}",
+        "seq": 145,
+        "task_id": null
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "task_created",
+        "owner_generation": 2,
+        "payload_json": "{\"status\": \"ready\"}",
+        "seq": 146,
+        "task_id": "FH-0"
+      },
+      {
+        "attempt_id": "FH-0-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 2,
+        "payload_json": "{\"base_revision\": \"7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd+dirty-pinned-manifest\", \"from_revision\": 1, \"input_hash\": \"9e89bb328c4aa14f72ba27a4f3e4d2708c8ea87c2cbf77dbbb61ce4355113946\", \"to_revision\": 2}",
+        "seq": 147,
+        "task_id": "FH-0"
+      },
+      {
+        "attempt_id": "FH-0-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "attempt_running",
+        "owner_generation": 2,
+        "payload_json": "{\"child_locator\": \"codex-native2-coordinator-fh3-20260922\", \"route_locator\": \"codex-native2-coordinator-fh3-20260922\"}",
+        "seq": 148,
+        "task_id": "FH-0"
+      },
+      {
+        "attempt_id": "FH-0-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "candidate_recorded",
+        "owner_generation": 2,
+        "payload_json": "{\"artifact_hash\": \"9e89bb328c4aa14f72ba27a4f3e4d2708c8ea87c2cbf77dbbb61ce4355113946\", \"artifact_path\": \"projects/mt5-tradingview-backtester/foundation_v2/evidence/FH0-baseline-r1.json\"}",
+        "seq": 149,
+        "task_id": "FH-0"
+      },
+      {
+        "attempt_id": "FH-0-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "verification_recorded",
+        "owner_generation": 2,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"FH-0-v1\"}",
+        "seq": 150,
+        "task_id": "FH-0"
+      },
+      {
+        "attempt_id": "FH-0-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "review_recorded",
+        "owner_generation": 2,
+        "payload_json": "{\"review_id\": \"FH-0-r1\", \"verdict\": \"pass\"}",
+        "seq": 151,
+        "task_id": "FH-0"
+      },
+      {
+        "attempt_id": "FH-0-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "integration_prepared",
+        "owner_generation": 2,
+        "payload_json": "{\"candidate_hash\": \"9e89bb328c4aa14f72ba27a4f3e4d2708c8ea87c2cbf77dbbb61ce4355113946\", \"target_base\": \"path2-foundation-hardening\"}",
+        "seq": 152,
+        "task_id": "FH-0"
+      },
+      {
+        "attempt_id": "FH-0-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "accepted",
+        "owner_generation": 2,
+        "payload_json": "{\"revision\": \"9e89bb328c4aa14f72ba27a4f3e4d2708c8ea87c2cbf77dbbb61ce4355113946\"}",
+        "seq": 153,
+        "task_id": "FH-0"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "task_created",
+        "owner_generation": 2,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 154,
+        "task_id": "FH-1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "task_transition",
+        "owner_generation": 2,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"dependencies accepted; pinned FH evidence ready for coordinator verification\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 155,
+        "task_id": "FH-1"
+      },
+      {
+        "attempt_id": "FH-1-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 2,
+        "payload_json": "{\"base_revision\": \"7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd+dirty-pinned-manifest\", \"from_revision\": 2, \"input_hash\": \"986feae90621d865831a852d586fe32caf3ad9a008a5569a3b08c8ca197805ce\", \"to_revision\": 3}",
+        "seq": 156,
+        "task_id": "FH-1"
+      },
+      {
+        "attempt_id": "FH-1-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "attempt_running",
+        "owner_generation": 2,
+        "payload_json": "{\"child_locator\": \"codex-native2-coordinator-fh3-20260922\", \"route_locator\": \"codex-native2-coordinator-fh3-20260922\"}",
+        "seq": 157,
+        "task_id": "FH-1"
+      },
+      {
+        "attempt_id": "FH-1-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "candidate_recorded",
+        "owner_generation": 2,
+        "payload_json": "{\"artifact_hash\": \"986feae90621d865831a852d586fe32caf3ad9a008a5569a3b08c8ca197805ce\", \"artifact_path\": \"projects/mt5-tradingview-backtester/foundation_v2/evidence/FH1-job-lifecycle-r1.json\"}",
+        "seq": 158,
+        "task_id": "FH-1"
+      },
+      {
+        "attempt_id": "FH-1-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "verification_recorded",
+        "owner_generation": 2,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"FH-1-v1\"}",
+        "seq": 159,
+        "task_id": "FH-1"
+      },
+      {
+        "attempt_id": "FH-1-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "review_recorded",
+        "owner_generation": 2,
+        "payload_json": "{\"review_id\": \"FH-1-r1\", \"verdict\": \"pass\"}",
+        "seq": 160,
+        "task_id": "FH-1"
+      },
+      {
+        "attempt_id": "FH-1-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "integration_prepared",
+        "owner_generation": 2,
+        "payload_json": "{\"candidate_hash\": \"986feae90621d865831a852d586fe32caf3ad9a008a5569a3b08c8ca197805ce\", \"target_base\": \"path2-foundation-hardening\"}",
+        "seq": 161,
+        "task_id": "FH-1"
+      },
+      {
+        "attempt_id": "FH-1-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "accepted",
+        "owner_generation": 2,
+        "payload_json": "{\"revision\": \"986feae90621d865831a852d586fe32caf3ad9a008a5569a3b08c8ca197805ce\"}",
+        "seq": 162,
+        "task_id": "FH-1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "task_created",
+        "owner_generation": 2,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 163,
+        "task_id": "FH-2"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "task_transition",
+        "owner_generation": 2,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"dependencies accepted; pinned FH evidence ready for coordinator verification\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 164,
+        "task_id": "FH-2"
+      },
+      {
+        "attempt_id": "FH-2-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 2,
+        "payload_json": "{\"base_revision\": \"7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd+dirty-pinned-manifest\", \"from_revision\": 2, \"input_hash\": \"a51bf68a83bf865830b73b4d4cc15140f875d04adb4abe3af4225b5f160fa4ef\", \"to_revision\": 3}",
+        "seq": 165,
+        "task_id": "FH-2"
+      },
+      {
+        "attempt_id": "FH-2-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "attempt_running",
+        "owner_generation": 2,
+        "payload_json": "{\"child_locator\": \"codex-native2-coordinator-fh3-20260922\", \"route_locator\": \"codex-native2-coordinator-fh3-20260922\"}",
+        "seq": 166,
+        "task_id": "FH-2"
+      },
+      {
+        "attempt_id": "FH-2-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "candidate_recorded",
+        "owner_generation": 2,
+        "payload_json": "{\"artifact_hash\": \"a51bf68a83bf865830b73b4d4cc15140f875d04adb4abe3af4225b5f160fa4ef\", \"artifact_path\": \"projects/mt5-tradingview-backtester/foundation_v2/evidence/FH2-workspace-auth-r1.json\"}",
+        "seq": 167,
+        "task_id": "FH-2"
+      },
+      {
+        "attempt_id": "FH-2-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "verification_recorded",
+        "owner_generation": 2,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"FH-2-v1\"}",
+        "seq": 168,
+        "task_id": "FH-2"
+      },
+      {
+        "attempt_id": "FH-2-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "review_recorded",
+        "owner_generation": 2,
+        "payload_json": "{\"review_id\": \"FH-2-r1\", \"verdict\": \"pass\"}",
+        "seq": 169,
+        "task_id": "FH-2"
+      },
+      {
+        "attempt_id": "FH-2-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "integration_prepared",
+        "owner_generation": 2,
+        "payload_json": "{\"candidate_hash\": \"a51bf68a83bf865830b73b4d4cc15140f875d04adb4abe3af4225b5f160fa4ef\", \"target_base\": \"path2-foundation-hardening\"}",
+        "seq": 170,
+        "task_id": "FH-2"
+      },
+      {
+        "attempt_id": "FH-2-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "accepted",
+        "owner_generation": 2,
+        "payload_json": "{\"revision\": \"a51bf68a83bf865830b73b4d4cc15140f875d04adb4abe3af4225b5f160fa4ef\"}",
+        "seq": 171,
+        "task_id": "FH-2"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "task_created",
+        "owner_generation": 2,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 172,
+        "task_id": "FH-3"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "task_transition",
+        "owner_generation": 2,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"dependencies accepted; pinned FH evidence ready for coordinator verification\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 173,
+        "task_id": "FH-3"
+      },
+      {
+        "attempt_id": "FH-3-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 2,
+        "payload_json": "{\"base_revision\": \"7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd+dirty-pinned-manifest\", \"from_revision\": 2, \"input_hash\": \"33993fa4a101d445b996b5a4bb1cd8681f0fa42742d58510b86798cfb4355511\", \"to_revision\": 3}",
+        "seq": 174,
+        "task_id": "FH-3"
+      },
+      {
+        "attempt_id": "FH-3-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "attempt_running",
+        "owner_generation": 2,
+        "payload_json": "{\"child_locator\": \"codex-native2-coordinator-fh3-20260922\", \"route_locator\": \"codex-native2-coordinator-fh3-20260922\"}",
+        "seq": 175,
+        "task_id": "FH-3"
+      },
+      {
+        "attempt_id": "FH-3-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "candidate_recorded",
+        "owner_generation": 2,
+        "payload_json": "{\"artifact_hash\": \"33993fa4a101d445b996b5a4bb1cd8681f0fa42742d58510b86798cfb4355511\", \"artifact_path\": \"projects/mt5-tradingview-backtester/foundation_v2/evidence/FH3-hardening-r1.json\"}",
+        "seq": 176,
+        "task_id": "FH-3"
+      },
+      {
+        "attempt_id": "FH-3-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "verification_recorded",
+        "owner_generation": 2,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"FH-3-v1\"}",
+        "seq": 177,
+        "task_id": "FH-3"
+      },
+      {
+        "attempt_id": "FH-3-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "review_recorded",
+        "owner_generation": 2,
+        "payload_json": "{\"review_id\": \"FH-3-r1\", \"verdict\": \"pass\"}",
+        "seq": 178,
+        "task_id": "FH-3"
+      },
+      {
+        "attempt_id": "FH-3-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "integration_prepared",
+        "owner_generation": 2,
+        "payload_json": "{\"candidate_hash\": \"33993fa4a101d445b996b5a4bb1cd8681f0fa42742d58510b86798cfb4355511\", \"target_base\": \"path2-foundation-hardening\"}",
+        "seq": 179,
+        "task_id": "FH-3"
+      },
+      {
+        "attempt_id": "FH-3-a1",
+        "created_at": "2026-09-22 04:28:34",
+        "event_type": "accepted",
+        "owner_generation": 2,
+        "payload_json": "{\"revision\": \"33993fa4a101d445b996b5a4bb1cd8681f0fa42742d58510b86798cfb4355511\"}",
+        "seq": 180,
+        "task_id": "FH-3"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 06:04:36",
+        "event_type": "owner_takeover",
+        "owner_generation": 3,
+        "payload_json": "{\"confirmed_old_inactive\": true, \"new_locator\": \"codex-native2-coordinator-u2-20260922\", \"previous_generation\": 2, \"previous_locator\": \"codex-native2-coordinator-fh3-20260922\"}",
+        "seq": 181,
+        "task_id": null
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 06:04:36",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 182,
+        "task_id": "U2-PATH2-DATA-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 06:04:36",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"FH-3 accepted and current PATH-2 U2 receipt verified on integrated commit\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 183,
+        "task_id": "U2-PATH2-DATA-r1"
+      },
+      {
+        "attempt_id": "U2-PATH2-DATA-r1-a1",
+        "created_at": "2026-09-22 06:04:36",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"ec24ecc\", \"from_revision\": 2, \"input_hash\": \"b2bf473f8eb42cfaf7c9309b04129aea8203c57f28179d975d22eb9975adbca6\", \"to_revision\": 3}",
+        "seq": 184,
+        "task_id": "U2-PATH2-DATA-r1"
+      },
+      {
+        "attempt_id": "U2-PATH2-DATA-r1-a1",
+        "created_at": "2026-09-22 06:04:36",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"codex-native2-coordinator-u2-20260922\", \"route_locator\": \"codex-native2-coordinator-u2-20260922\"}",
+        "seq": 185,
+        "task_id": "U2-PATH2-DATA-r1"
+      },
+      {
+        "attempt_id": "U2-PATH2-DATA-r1-a1",
+        "created_at": "2026-09-22 06:04:36",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"47d5fbf35614c269eecf8fb1133f5b63db801fd9\", \"artifact_path\": \"git:47d5fbf35614c269eecf8fb1133f5b63db801fd9\"}",
+        "seq": 186,
+        "task_id": "U2-PATH2-DATA-r1"
+      },
+      {
+        "attempt_id": "U2-PATH2-DATA-r1-a1",
+        "created_at": "2026-09-22 06:04:36",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U2-PATH2-DATA-r1-v1\"}",
+        "seq": 187,
+        "task_id": "U2-PATH2-DATA-r1"
+      },
+      {
+        "attempt_id": "U2-PATH2-DATA-r1-a1",
+        "created_at": "2026-09-22 06:04:36",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"U2-PATH2-DATA-r1-r1\", \"verdict\": \"pass\"}",
+        "seq": 188,
+        "task_id": "U2-PATH2-DATA-r1"
+      },
+      {
+        "attempt_id": "U2-PATH2-DATA-r1-a1",
+        "created_at": "2026-09-22 06:04:36",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"47d5fbf35614c269eecf8fb1133f5b63db801fd9\", \"target_base\": \"path2-foundation-v2\"}",
+        "seq": 189,
+        "task_id": "U2-PATH2-DATA-r1"
+      },
+      {
+        "attempt_id": "U2-PATH2-DATA-r1-a1",
+        "created_at": "2026-09-22 06:04:36",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"47d5fbf35614c269eecf8fb1133f5b63db801fd9\"}",
+        "seq": 190,
+        "task_id": "U2-PATH2-DATA-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 10:44:41",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 191,
+        "task_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 10:44:41",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"U2 PATH-2 accepted; U3 backend identity/version contract is ready without U1 visual approval\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 192,
+        "task_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1"
+      },
+      {
+        "attempt_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1-a1",
+        "created_at": "2026-09-22 10:44:41",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"47d5fbf35614c269eecf8fb1133f5b63db801fd9\", \"from_revision\": 2, \"input_hash\": \"be7588e8dd0bdaab2903cc1102c8e970609523a5c8f4bf9e513e323db778ffc7\", \"to_revision\": 3}",
+        "seq": 193,
+        "task_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1"
+      },
+      {
+        "attempt_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1-a1",
+        "created_at": "2026-09-22 10:44:41",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"codex-native2-coordinator-u2-20260922\", \"route_locator\": \"codex-native2-coordinator-u2-20260922\"}",
+        "seq": 194,
+        "task_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1"
+      },
+      {
+        "attempt_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1-a1",
+        "created_at": "2026-09-22 10:44:41",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"86d300055e58e8659c6ad0217c97c15d290c4214\", \"artifact_path\": \"git:86d300055e58e8659c6ad0217c97c15d290c4214\"}",
+        "seq": 195,
+        "task_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1"
+      },
+      {
+        "attempt_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1-a1",
+        "created_at": "2026-09-22 10:44:41",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U3-PATH2-PLAYBOOK-JOURNAL-r1-v1\"}",
+        "seq": 196,
+        "task_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1"
+      },
+      {
+        "attempt_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1-a1",
+        "created_at": "2026-09-22 10:44:41",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"U3-PATH2-PLAYBOOK-JOURNAL-r1-r1\", \"verdict\": \"pass\"}",
+        "seq": 197,
+        "task_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1"
+      },
+      {
+        "attempt_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1-a1",
+        "created_at": "2026-09-22 10:44:41",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"86d300055e58e8659c6ad0217c97c15d290c4214\", \"target_base\": \"path2-foundation-v2\"}",
+        "seq": 198,
+        "task_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1"
+      },
+      {
+        "attempt_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1-a1",
+        "created_at": "2026-09-22 10:44:41",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"86d300055e58e8659c6ad0217c97c15d290c4214\"}",
+        "seq": 199,
+        "task_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 11:45:58",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 200,
+        "task_id": "U5-PATH2-ENGINE-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 11:45:58",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"resume existing uncommitted U5 after U3 acceptance\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 201,
+        "task_id": "U5-PATH2-ENGINE-r1"
+      },
+      {
+        "attempt_id": "U5-PATH2-ENGINE-r1-a1",
+        "created_at": "2026-09-22 11:45:58",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"86d300055e58e8659c6ad0217c97c15d290c4214\", \"from_revision\": 2, \"input_hash\": \"b709c34e7d20471bcdcd89345ae0f92405d23cdce8fc98a053b18a08f0cdb7c9\", \"to_revision\": 3}",
+        "seq": 202,
+        "task_id": "U5-PATH2-ENGINE-r1"
+      },
+      {
+        "attempt_id": "U5-PATH2-ENGINE-r1-a1",
+        "created_at": "2026-09-22 11:45:58",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root\", \"route_locator\": \"unknown\"}",
+        "seq": 203,
+        "task_id": "U5-PATH2-ENGINE-r1"
+      },
+      {
+        "attempt_id": "U5-PATH2-ENGINE-r1-a1",
+        "created_at": "2026-09-22 12:15:12",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"c49dfc2e504d13b54cab6279c9d86625ce14609e\", \"artifact_path\": \"git:c49dfc2e504d13b54cab6279c9d86625ce14609e\"}",
+        "seq": 204,
+        "task_id": "U5-PATH2-ENGINE-r1"
+      },
+      {
+        "attempt_id": "U5-PATH2-ENGINE-r1-a1",
+        "created_at": "2026-09-22 12:15:12",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U5-PATH2-ENGINE-r1-candidate-v1\"}",
+        "seq": 205,
+        "task_id": "U5-PATH2-ENGINE-r1"
+      },
+      {
+        "attempt_id": "U5-PATH2-ENGINE-r1-a1",
+        "created_at": "2026-09-22 12:15:12",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"U5-PATH2-ENGINE-r1-r1\", \"verdict\": \"pass\"}",
+        "seq": 206,
+        "task_id": "U5-PATH2-ENGINE-r1"
+      },
+      {
+        "attempt_id": "U5-PATH2-ENGINE-r1-a1",
+        "created_at": "2026-09-22 12:15:12",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"c49dfc2e504d13b54cab6279c9d86625ce14609e\", \"target_base\": \"Nam:86d300055e58e8659c6ad0217c97c15d290c4214\"}",
+        "seq": 207,
+        "task_id": "U5-PATH2-ENGINE-r1"
+      },
+      {
+        "attempt_id": "U5-PATH2-ENGINE-r1-a1",
+        "created_at": "2026-09-22 12:16:29",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U5-PATH2-ENGINE-r1-integrated-v1\"}",
+        "seq": 208,
+        "task_id": "U5-PATH2-ENGINE-r1"
+      },
+      {
+        "attempt_id": "U5-PATH2-ENGINE-r1-a1",
+        "created_at": "2026-09-22 12:16:29",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"c49dfc2e504d13b54cab6279c9d86625ce14609e\"}",
+        "seq": 209,
+        "task_id": "U5-PATH2-ENGINE-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 12:18:54",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 210,
+        "task_id": "U5-NAUTILUS-ADAPTER-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 12:18:54",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"accepted reference protocol; approved Nautilus adapter is next critical path\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 211,
+        "task_id": "U5-NAUTILUS-ADAPTER-r1"
+      },
+      {
+        "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
+        "created_at": "2026-09-22 12:20:36",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"387a58f4fd96337baa9d4d50cb1763982282f661\", \"from_revision\": 2, \"input_hash\": \"57b7c6bfb6194c04f577d1387c8763d78a85c6a329b91b55375af330d35ff65b\", \"to_revision\": 3}",
+        "seq": 212,
+        "task_id": "U5-NAUTILUS-ADAPTER-r1"
+      },
+      {
+        "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
+        "created_at": "2026-09-22 12:20:36",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root\", \"route_locator\": \"unknown\"}",
+        "seq": 213,
+        "task_id": "U5-NAUTILUS-ADAPTER-r1"
+      },
+      {
+        "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
+        "created_at": "2026-09-22 13:18:15",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"c118f438b493a9e67971a3ac9465c643c64540a9\", \"artifact_path\": \"git:c118f438b493a9e67971a3ac9465c643c64540a9\"}",
+        "seq": 214,
+        "task_id": "U5-NAUTILUS-ADAPTER-r1"
+      },
+      {
+        "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
+        "created_at": "2026-09-22 13:18:15",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U5-NAUTILUS-ADAPTER-r1-candidate-v1\"}",
+        "seq": 215,
+        "task_id": "U5-NAUTILUS-ADAPTER-r1"
+      },
+      {
+        "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
+        "created_at": "2026-09-22 13:18:15",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"U5-NAUTILUS-ADAPTER-r1-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 216,
+        "task_id": "U5-NAUTILUS-ADAPTER-r1"
+      },
+      {
+        "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
+        "created_at": "2026-09-22 13:18:15",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U5-NAUTILUS-ADAPTER-r1-integrated-v1\"}",
+        "seq": 217,
+        "task_id": "U5-NAUTILUS-ADAPTER-r1"
+      },
+      {
+        "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
+        "created_at": "2026-09-22 13:18:15",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"c118f438b493a9e67971a3ac9465c643c64540a9\", \"target_base\": \"Nam:387a58f4fd96337baa9d4d50cb1763982282f661\"}",
+        "seq": 218,
+        "task_id": "U5-NAUTILUS-ADAPTER-r1"
+      },
+      {
+        "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
+        "created_at": "2026-09-22 13:18:15",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"c118f438b493a9e67971a3ac9465c643c64540a9\"}",
+        "seq": 219,
+        "task_id": "U5-NAUTILUS-ADAPTER-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 13:29:30",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 220,
+        "task_id": "U5B-PROTECTIVE-MARGIN-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-22 13:29:30",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"accepted Nautilus adapter; expanded U5b semantics are the next safe critical slice\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 221,
+        "task_id": "U5B-PROTECTIVE-MARGIN-r1"
+      },
+      {
+        "attempt_id": "U5B-PROTECTIVE-MARGIN-r1-a1",
+        "created_at": "2026-09-22 13:29:30",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"f9d8c19cf87655b495de5438297a1596d15f6a0c\", \"from_revision\": 2, \"input_hash\": \"f5dd2539c71fc36e60b17b85f4ad37584b95d588c0f32711df652691a1135881\", \"to_revision\": 3}",
+        "seq": 222,
+        "task_id": "U5B-PROTECTIVE-MARGIN-r1"
+      },
+      {
+        "attempt_id": "U5B-PROTECTIVE-MARGIN-r1-a1",
+        "created_at": "2026-09-22 13:29:30",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root\", \"route_locator\": \"local\"}",
+        "seq": 223,
+        "task_id": "U5B-PROTECTIVE-MARGIN-r1"
+      }
+    ],
+    "integration_intents": [
+      {
+        "attempt_id": "CO-00-a3",
+        "candidate_hash": "73c7754c65e71db142a3c468fd95a70b229b6bbf0a9e9b116b126d59aca823e0",
+        "created_at": "2026-09-21 14:26:51",
+        "promoted_revision": "73c7754c65e71db142a3c468fd95a70b229b6bbf0a9e9b116b126d59aca823e0",
+        "state": "finalized",
+        "target_base": "validation-run/CO-00",
+        "task_id": "CO-00",
+        "updated_at": "2026-09-21 14:26:51"
+      },
+      {
+        "attempt_id": "CO-01-a1",
+        "candidate_hash": "e4068db5f2a48563e23cdc49d19310054b0353435a00b893a33b318d2d8df1b1",
+        "created_at": "2026-09-21 14:35:10",
+        "promoted_revision": "e4068db5f2a48563e23cdc49d19310054b0353435a00b893a33b318d2d8df1b1",
+        "state": "finalized",
+        "target_base": "validation-run-local",
+        "task_id": "CO-01",
+        "updated_at": "2026-09-21 14:35:10"
+      },
+      {
+        "attempt_id": "CO-02-a2",
+        "candidate_hash": "b7a8ba634c7517dd19e43ec09cd494e15ba66355d0b463be2aa6f5c548e0b10f",
+        "created_at": "2026-09-21 14:58:37",
+        "promoted_revision": "b7a8ba634c7517dd19e43ec09cd494e15ba66355d0b463be2aa6f5c548e0b10f",
+        "state": "finalized",
+        "target_base": "validation-run-local",
+        "task_id": "CO-02",
+        "updated_at": "2026-09-21 14:58:37"
+      },
+      {
+        "attempt_id": "CO-03-a1",
+        "candidate_hash": "123d637739f5c2a5a04a0146832804a7e7465bb5f9eb184a5a3b452dd30b2a5a",
+        "created_at": "2026-09-21 14:58:37",
+        "promoted_revision": "123d637739f5c2a5a04a0146832804a7e7465bb5f9eb184a5a3b452dd30b2a5a",
+        "state": "finalized",
+        "target_base": "validation-run-local",
+        "task_id": "CO-03",
+        "updated_at": "2026-09-21 14:58:37"
+      },
+      {
+        "attempt_id": "F0-REFRESH-a1",
+        "candidate_hash": "4ab7212f930982f0ea565ecab549545c0bb6f3959a8083f9dd7e8dc963067b0d",
+        "created_at": "2026-09-21 15:03:30",
+        "promoted_revision": "4ab7212f930982f0ea565ecab549545c0bb6f3959a8083f9dd7e8dc963067b0d",
+        "state": "finalized",
+        "target_base": "validation-run-local",
+        "task_id": "F0-REFRESH",
+        "updated_at": "2026-09-21 15:03:30"
+      },
+      {
+        "attempt_id": "CO-05-a2",
+        "candidate_hash": "228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2",
+        "created_at": "2026-09-21 20:37:51",
+        "promoted_revision": "228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2",
+        "state": "finalized",
+        "target_base": "validation-run-local",
+        "task_id": "CO-05",
+        "updated_at": "2026-09-21 20:37:51"
+      },
+      {
+        "attempt_id": "CO-04-a3",
+        "candidate_hash": "a374195195cab36ebdfdf69b9e4b57e8038acde3aaa93beea80e5e72e497d324",
+        "created_at": "2026-09-21 20:40:59",
+        "promoted_revision": "a374195195cab36ebdfdf69b9e4b57e8038acde3aaa93beea80e5e72e497d324",
+        "state": "finalized",
+        "target_base": "validation-run-local",
+        "task_id": "CO-04",
+        "updated_at": "2026-09-21 20:40:59"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a2",
+        "candidate_hash": "0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902",
+        "created_at": "2026-09-21 20:44:50",
+        "promoted_revision": "0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902",
+        "state": "finalized",
+        "target_base": "validation-run-local",
+        "task_id": "F1-CONTRACT",
+        "updated_at": "2026-09-21 20:44:50"
+      },
+      {
+        "attempt_id": "F3-SPIKES-a1",
+        "candidate_hash": "d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4",
+        "created_at": "2026-09-21 21:47:03",
+        "promoted_revision": "d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4",
+        "state": "finalized",
+        "target_base": "validation-run-local",
+        "task_id": "F3-SPIKES",
+        "updated_at": "2026-09-21 21:47:03"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a2",
+        "candidate_hash": "270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41",
+        "created_at": "2026-09-21 22:00:43",
+        "promoted_revision": "270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41",
+        "state": "finalized",
+        "target_base": "validation-run-local",
+        "task_id": "F2-SAFETY",
+        "updated_at": "2026-09-21 22:00:43"
+      },
+      {
+        "attempt_id": "F5-PACKAGE-a1",
+        "candidate_hash": "b887b453324b226a55961a0617f7a57f5cc8e95bf4545d2c4ae679a6a0a5ec69",
+        "created_at": "2026-09-21 23:35:54",
+        "promoted_revision": "b887b453324b226a55961a0617f7a57f5cc8e95bf4545d2c4ae679a6a0a5ec69",
+        "state": "finalized",
+        "target_base": "foundation-decision/PATH-2",
+        "task_id": "F5-PACKAGE",
+        "updated_at": "2026-09-21 23:35:54"
+      },
+      {
+        "attempt_id": "CO-06-a2",
+        "candidate_hash": "d5994df07586137ba2b07cb1522a0cf5d1331ee96cc9831637ee6fc82c4940df",
+        "created_at": "2026-09-21 23:35:54",
+        "promoted_revision": "d5994df07586137ba2b07cb1522a0cf5d1331ee96cc9831637ee6fc82c4940df",
+        "state": "finalized",
+        "target_base": "validation-run-local",
+        "task_id": "CO-06",
+        "updated_at": "2026-09-21 23:35:54"
+      },
+      {
+        "attempt_id": "FH-0-a1",
+        "candidate_hash": "9e89bb328c4aa14f72ba27a4f3e4d2708c8ea87c2cbf77dbbb61ce4355113946",
+        "created_at": "2026-09-22 04:28:34",
+        "promoted_revision": "9e89bb328c4aa14f72ba27a4f3e4d2708c8ea87c2cbf77dbbb61ce4355113946",
+        "state": "finalized",
+        "target_base": "path2-foundation-hardening",
+        "task_id": "FH-0",
+        "updated_at": "2026-09-22 04:28:34"
+      },
+      {
+        "attempt_id": "FH-1-a1",
+        "candidate_hash": "986feae90621d865831a852d586fe32caf3ad9a008a5569a3b08c8ca197805ce",
+        "created_at": "2026-09-22 04:28:34",
+        "promoted_revision": "986feae90621d865831a852d586fe32caf3ad9a008a5569a3b08c8ca197805ce",
+        "state": "finalized",
+        "target_base": "path2-foundation-hardening",
+        "task_id": "FH-1",
+        "updated_at": "2026-09-22 04:28:34"
+      },
+      {
+        "attempt_id": "FH-2-a1",
+        "candidate_hash": "a51bf68a83bf865830b73b4d4cc15140f875d04adb4abe3af4225b5f160fa4ef",
+        "created_at": "2026-09-22 04:28:34",
+        "promoted_revision": "a51bf68a83bf865830b73b4d4cc15140f875d04adb4abe3af4225b5f160fa4ef",
+        "state": "finalized",
+        "target_base": "path2-foundation-hardening",
+        "task_id": "FH-2",
+        "updated_at": "2026-09-22 04:28:34"
+      },
+      {
+        "attempt_id": "FH-3-a1",
+        "candidate_hash": "33993fa4a101d445b996b5a4bb1cd8681f0fa42742d58510b86798cfb4355511",
+        "created_at": "2026-09-22 04:28:34",
+        "promoted_revision": "33993fa4a101d445b996b5a4bb1cd8681f0fa42742d58510b86798cfb4355511",
+        "state": "finalized",
+        "target_base": "path2-foundation-hardening",
+        "task_id": "FH-3",
+        "updated_at": "2026-09-22 04:28:34"
+      },
+      {
+        "attempt_id": "U2-PATH2-DATA-r1-a1",
+        "candidate_hash": "47d5fbf35614c269eecf8fb1133f5b63db801fd9",
+        "created_at": "2026-09-22 06:04:36",
+        "promoted_revision": "47d5fbf35614c269eecf8fb1133f5b63db801fd9",
+        "state": "finalized",
+        "target_base": "path2-foundation-v2",
+        "task_id": "U2-PATH2-DATA-r1",
+        "updated_at": "2026-09-22 06:04:36"
+      },
+      {
+        "attempt_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1-a1",
+        "candidate_hash": "86d300055e58e8659c6ad0217c97c15d290c4214",
+        "created_at": "2026-09-22 10:44:41",
+        "promoted_revision": "86d300055e58e8659c6ad0217c97c15d290c4214",
+        "state": "finalized",
+        "target_base": "path2-foundation-v2",
+        "task_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1",
+        "updated_at": "2026-09-22 10:44:41"
+      },
+      {
+        "attempt_id": "U5-PATH2-ENGINE-r1-a1",
+        "candidate_hash": "c49dfc2e504d13b54cab6279c9d86625ce14609e",
+        "created_at": "2026-09-22 12:15:12",
+        "promoted_revision": "c49dfc2e504d13b54cab6279c9d86625ce14609e",
+        "state": "finalized",
+        "target_base": "Nam:86d300055e58e8659c6ad0217c97c15d290c4214",
+        "task_id": "U5-PATH2-ENGINE-r1",
+        "updated_at": "2026-09-22 12:16:29"
+      },
+      {
+        "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
+        "candidate_hash": "c118f438b493a9e67971a3ac9465c643c64540a9",
+        "created_at": "2026-09-22 13:18:15",
+        "promoted_revision": "c118f438b493a9e67971a3ac9465c643c64540a9",
+        "state": "finalized",
+        "target_base": "Nam:387a58f4fd96337baa9d4d50cb1763982282f661",
+        "task_id": "U5-NAUTILUS-ADAPTER-r1",
+        "updated_at": "2026-09-22 13:18:15"
+      }
+    ],
+    "meta": [
+      {
+        "key": "schema_version",
+        "value": "1"
+      },
+      {
+        "key": "run_id",
+        "value": "20260921T115933Z-315e8ddd"
+      },
+      {
+        "key": "plan_hash",
+        "value": "1186354d409dc7aacc4035979bffac61504f6d7bcd67d885c53b3db62dbb3273"
+      },
+      {
+        "key": "scope",
+        "value": "VALIDATION_ONLY"
+      }
+    ],
+    "owner": [
+      {
+        "acquired_at": "2026-09-22 06:04:36",
+        "generation": 3,
+        "locator": "codex-native2-coordinator-u2-20260922",
+        "singleton": 1,
+        "state": "active"
+      }
+    ],
+    "reviews": [
+      {
+        "attempt_id": "CO-00-a2",
+        "candidate_hash": "3bbd2f8f3a2965a6c2d489cce3a55a16ee814cfcab75218eea802d5e377d8f99",
+        "created_at": "2026-09-21 14:22:58",
+        "findings_json": "[{\"finding\": \"host slots and pool route metadata not pinned\", \"severity\": \"high\"}, {\"finding\": \"usable/provider headroom semantics were too strong/stale\", \"severity\": \"medium\"}]",
+        "review_id": "CO-00-r2-review",
+        "reviewer_locator": "/root/co00_review",
+        "verdict": "fail"
+      },
+      {
+        "attempt_id": "CO-00-a3",
+        "candidate_hash": "73c7754c65e71db142a3c468fd95a70b229b6bbf0a9e9b116b126d59aca823e0",
+        "created_at": "2026-09-21 14:26:51",
+        "findings_json": "[]",
+        "review_id": "CO-00-r3-review",
+        "reviewer_locator": "/root/co00_review",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "CO-01-a1",
+        "candidate_hash": "e4068db5f2a48563e23cdc49d19310054b0353435a00b893a33b318d2d8df1b1",
+        "created_at": "2026-09-21 14:35:10",
+        "findings_json": "[]",
+        "review_id": "CO-01-r1",
+        "reviewer_locator": "/root/co01_audit",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "CO-02-a1",
+        "candidate_hash": "2a42cc6f710dd07dd164dd9749444c4c374aeeafcd5b0d15d3812af64d77af63",
+        "created_at": "2026-09-21 14:46:53",
+        "findings_json": "[{\"finding\": \"state revision missed authoritative mutations without events\", \"severity\": \"HIGH\"}, {\"finding\": \"add_task did not fence stale owner generation\", \"severity\": \"HIGH\"}]",
+        "review_id": "CO-02-r1",
+        "reviewer_locator": "/root/co02_review",
+        "verdict": "fail"
+      },
+      {
+        "attempt_id": "CO-02-a2",
+        "candidate_hash": "b7a8ba634c7517dd19e43ec09cd494e15ba66355d0b463be2aa6f5c548e0b10f",
+        "created_at": "2026-09-21 14:58:37",
+        "findings_json": "[]",
+        "review_id": "CO-02-r2",
+        "reviewer_locator": "/root/co02_review",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "CO-03-a1",
+        "candidate_hash": "123d637739f5c2a5a04a0146832804a7e7465bb5f9eb184a5a3b452dd30b2a5a",
+        "created_at": "2026-09-21 14:58:37",
+        "findings_json": "[]",
+        "review_id": "CO-03-r1",
+        "reviewer_locator": "/root/co03_review",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "F0-REFRESH-a1",
+        "candidate_hash": "4ab7212f930982f0ea565ecab549545c0bb6f3959a8083f9dd7e8dc963067b0d",
+        "created_at": "2026-09-21 15:03:30",
+        "findings_json": "[]",
+        "review_id": "F0-REFRESH-r1",
+        "reviewer_locator": "/root/history_reconcile",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "CO-04-a1",
+        "candidate_hash": "8a9d0263cc5df2b9f78ce70d6e87f2a73f17b1a6edee95ab44aeacd6b9f5b0ea",
+        "created_at": "2026-09-21 15:17:37",
+        "findings_json": "[{\"finding\": \"missing unavailable/uncertain lane fixture\", \"severity\": \"high\"}, {\"finding\": \"missing accepted-output time and rework accounting\", \"severity\": \"high\"}, {\"finding\": \"multi-instance routing/affinity remains unverified\", \"severity\": \"limit\"}]",
+        "review_id": "CO-04-r2-review",
+        "reviewer_locator": "/root/co02_review",
+        "verdict": "fail"
+      },
+      {
+        "attempt_id": "CO-05-a1",
+        "candidate_hash": "228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2",
+        "created_at": "2026-09-21 15:19:37",
+        "findings_json": "[{\"finding\": \"verifier depended on pre-candidate CO-05 ledger state and was not rerunnable after authoritative recording\", \"severity\": \"high\"}]",
+        "review_id": "CO-05-r1-review",
+        "reviewer_locator": "/root/co03_review",
+        "verdict": "fail"
+      },
+      {
+        "attempt_id": "CO-04-a2",
+        "candidate_hash": "489d2ef1bf5bed71de77e164e7012ddd01672d8f2a95cb27c2ccfed417027fcf",
+        "created_at": "2026-09-21 20:35:47",
+        "findings_json": "[{\"finding\": \"integration receipt hash was computed before the newline actually written\", \"severity\": \"high\"}, {\"finding\": \"accepted-output elapsed time did not include the prior review/rework cycle\", \"severity\": \"high\"}, {\"finding\": \"native multi-instance routing/affinity and capacity 10 remain unverified\", \"severity\": \"limit\"}]",
+        "review_id": "CO-04-r3-review",
+        "reviewer_locator": "/root/review_co04_r3",
+        "verdict": "fail"
+      },
+      {
+        "attempt_id": "CO-05-a2",
+        "candidate_hash": "228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2",
+        "created_at": "2026-09-21 20:37:51",
+        "findings_json": "[{\"finding\": \"historical verifier is tied to the current authoritative owner generation and may not rerun after a future legitimate takeover\", \"severity\": \"low\"}, {\"finding\": \"retained input evidence includes inert SQLite sidecars; no working copy/process leak remains\", \"severity\": \"low\"}, {\"finding\": \"fresh Web GPT root/provider resurrection and same-thread provider compaction remain untested\", \"severity\": \"limit\"}]",
+        "review_id": "CO-05-r2-review",
+        "reviewer_locator": "/root/review_co05_r2",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a1",
+        "candidate_hash": "c46e631f8239115179962cd1acdfe1e7a50cb32c4e2677559e3568c16b789430",
+        "created_at": "2026-09-21 20:39:42",
+        "findings_json": "[{\"finding\": \"retention/expiry semantics were not explicit\", \"severity\": \"high\"}, {\"finding\": \"E-SAFE-02 did not enumerate all commit/send crash windows\", \"severity\": \"high\"}, {\"finding\": \"fresh-environment reconstruction and replay case was missing\", \"severity\": \"medium\"}, {\"finding\": \"compatibility window and migration owner were not frozen normatively\", \"severity\": \"medium\"}]",
+        "review_id": "F1-CONTRACT-r1-review",
+        "reviewer_locator": "/root/review_f1",
+        "verdict": "fail"
+      },
+      {
+        "attempt_id": "CO-04-a3",
+        "candidate_hash": "a374195195cab36ebdfdf69b9e4b57e8038acde3aaa93beea80e5e72e497d324",
+        "created_at": "2026-09-21 20:40:59",
+        "findings_json": "[{\"finding\": \"local fixture overlap is not native Web GPT overlap; multi-instance route attribution and usable capacity 10 remain unverified\", \"severity\": \"limit\"}]",
+        "review_id": "CO-04-r4-review",
+        "reviewer_locator": "/root/review_co04_r4",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a2",
+        "candidate_hash": "0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902",
+        "created_at": "2026-09-21 20:44:50",
+        "findings_json": "[{\"finding\": \"F1-C2 is a contract/protocol acceptance; F2/F3 still must execute the fault and fresh-environment cases\", \"severity\": \"limit\"}, {\"finding\": \"PATH-1/2/3 remains intentionally unselected until downstream evidence exists\", \"severity\": \"limit\"}]",
+        "review_id": "F1-CONTRACT-r2-review",
+        "reviewer_locator": "/root/review_f1_r2",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "F3-SPIKES-a1",
+        "candidate_hash": "d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4",
+        "created_at": "2026-09-21 21:47:03",
+        "findings_json": "[{\"finding\": \"Supplemental r2 latency differs from the immutable reviewed baseline; it remains noise evidence and does not promote the compute-boundary decision.\", \"severity\": \"limit\"}]",
+        "review_id": "F3-SPIKES-r2-review",
+        "reviewer_locator": "/root/review_f3_r2",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a1",
+        "candidate_hash": "7ebbcd8ba73f84adef7b34d94375ae010f6d88e4a706ca2a329ad376d8cf0863",
+        "created_at": "2026-09-21 21:47:03",
+        "findings_json": "[{\"finding\": \"job_id collision could overwrite another tenant's queued job\", \"severity\": \"blocker\"}, {\"finding\": \"cancel/replace lifecycle was grouped by event kind instead of replayed by sequence\", \"severity\": \"high\"}]",
+        "review_id": "F2-SAFETY-r3-review",
+        "reviewer_locator": "/root/review_f2_r3",
+        "verdict": "fail"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a2",
+        "candidate_hash": "270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41",
+        "created_at": "2026-09-21 22:00:43",
+        "findings_json": "[{\"finding\": \"cross-tenant job-id collision fails closed without overwriting original queued job\", \"severity\": \"closed\"}, {\"finding\": \"cancel/replace lifecycle replays by sequence and matches IndependentOracle\", \"severity\": \"closed\"}, {\"finding\": \"fixture uses global job-id namespace; tenant-local namespaces were not claimed\", \"severity\": \"limit\"}]",
+        "review_id": "F2-SAFETY-r4-review",
+        "reviewer_locator": "/root/review_f2_r4",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "F5-PACKAGE-a1",
+        "candidate_hash": "b887b453324b226a55961a0617f7a57f5cc8e95bf4545d2c4ae679a6a0a5ec69",
+        "created_at": "2026-09-21 23:35:54",
+        "findings_json": "[{\"finding\": \"PATH-2 is supported by the pinned target-fit evidence and explicitly rejects PATH-1/PATH-3 with revisit triggers.\", \"severity\": \"closed\"}, {\"finding\": \"Remote/cloud production, broker-real/live execution, complex engine semantics, and W2 saturation remain release gates and are not promoted by F5.\", \"severity\": \"limit\"}, {\"finding\": \"Selective reuse is limited to clean domain modules; any retained module that introduces hidden framework/storage/global-state coupling reopens PATH-3.\", \"severity\": \"limit\"}]",
+        "review_id": "F5-PACKAGE-r1-fresh-session-review",
+        "reviewer_locator": "fresh-session-root-review-2026-09-22",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "CO-06-a2",
+        "candidate_hash": "d5994df07586137ba2b07cb1522a0cf5d1331ee96cc9831637ee6fc82c4940df",
+        "created_at": "2026-09-21 23:35:54",
+        "findings_json": "[{\"finding\": \"CO-06 acceptance scope is limited to validation synthesis through F5 and matches the recorded accepted revisions.\", \"severity\": \"closed\"}]",
+        "review_id": "CO-06-r1-fresh-session-review",
+        "reviewer_locator": "fresh-session-root-review-2026-09-22",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "FH-0-a1",
+        "candidate_hash": "9e89bb328c4aa14f72ba27a4f3e4d2708c8ea87c2cbf77dbbb61ce4355113946",
+        "created_at": "2026-09-22 04:28:34",
+        "findings_json": "[{\"finding\": \"FH-0 remains a historical baseline receipt; later FH source changes do not rewrite it.\", \"severity\": \"closed\"}]",
+        "review_id": "FH-0-r1",
+        "reviewer_locator": "codex-native2-coordinator-fh3-20260922",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "FH-1-a1",
+        "candidate_hash": "986feae90621d865831a852d586fe32caf3ad9a008a5569a3b08c8ca197805ce",
+        "created_at": "2026-09-22 04:28:34",
+        "findings_json": "[{\"finding\": \"Previous liveness, stale-cancel, orphan-candidate, race, and blocking-heartbeat findings are covered by implementation and PostgreSQL tests.\", \"severity\": \"closed\"}, {\"finding\": \"Crash tests use deterministic lease-expiry/restart simulation rather than OS process-kill fault injection.\", \"severity\": \"limit\"}]",
+        "review_id": "FH-1-r1",
+        "reviewer_locator": "codex-native2-coordinator-fh3-20260922",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "FH-2-a1",
+        "candidate_hash": "a51bf68a83bf865830b73b4d4cc15140f875d04adb4abe3af4225b5f160fa4ef",
+        "created_at": "2026-09-22 04:28:34",
+        "findings_json": "[{\"finding\": \"Tenant-facing reads are workspace-scoped and client workspace headers no longer grant membership.\", \"severity\": \"closed\"}, {\"finding\": \"Production IdP/OAuth and database RLS remain explicitly unsupported; this acceptance is local-only.\", \"severity\": \"limit\"}]",
+        "review_id": "FH-2-r1",
+        "reviewer_locator": "codex-native2-coordinator-fh3-20260922",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "FH-3-a1",
+        "candidate_hash": "33993fa4a101d445b996b5a4bb1cd8681f0fa42742d58510b86798cfb4355511",
+        "created_at": "2026-09-22 04:28:34",
+        "findings_json": "[{\"finding\": \"FH-1/FH-2 integrated software path passes with broker execution capability still false.\", \"severity\": \"closed\"}, {\"finding\": \"UX owner approval, real licensed data/empirical validation, broker/demo/live, and public production remain outside this acceptance.\", \"severity\": \"limit\"}, {\"finding\": \"Packaged Playwright Chromium launch still hits Windows spawn UNKNOWN; browser QA used the connected in-app browser fallback.\", \"severity\": \"environment\"}]",
+        "review_id": "FH-3-r1",
+        "reviewer_locator": "codex-native2-coordinator-fh3-20260922",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "U2-PATH2-DATA-r1-a1",
+        "candidate_hash": "47d5fbf35614c269eecf8fb1133f5b63db801fd9",
+        "created_at": "2026-09-22 06:04:36",
+        "findings_json": "[{\"finding\": \"Provider capabilities were narrowed to actual read-only support and provider GET has no workspace-creation side effect.\", \"severity\": \"closed\"}, {\"finding\": \"Per-row DuckDB timestamp indexing regression was replaced by a temporary SQLite index; 20k synthetic benchmark dropped from >123s to ~2.7s while preserving identity and ~2MB Python peak memory.\", \"severity\": \"closed\"}, {\"finding\": \"Full destructive F7 rerun after this slice was blocked before execution by tool safety; focused safe integration checks passed and no full-suite PASS is claimed for the post-slice revision.\", \"severity\": \"limit\"}, {\"finding\": \"Data Desk visual/import UX, real provider/data licensing, empirical validation, broker/demo/live remain outside this acceptance.\", \"severity\": \"gate\"}]",
+        "review_id": "U2-PATH2-DATA-r1-r1",
+        "reviewer_locator": "codex-native2-coordinator-u2-20260922",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1-a1",
+        "candidate_hash": "86d300055e58e8659c6ad0217c97c15d290c4214",
+        "created_at": "2026-09-22 10:44:41",
+        "findings_json": "[{\"finding\": \"Read-only audit found that direct status=frozen creation bypassed draft->freeze; final candidate rejects non-draft creation and focused tests pass.\", \"severity\": \"closed\"}, {\"finding\": \"Tenant-safe Learn bridge and supported U3 UI remain separate work; this receipt does not claim full U3 product acceptance.\", \"severity\": \"scope\"}, {\"finding\": \"Empirical strategy, real data/holdout, broker/demo/live, paid provider/OAuth and deployment gates remain closed.\", \"severity\": \"gate\"}]",
+        "review_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1-r1",
+        "reviewer_locator": "chatgpt-web-high-u3-read-only-audit",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "U5-PATH2-ENGINE-r1-a1",
+        "candidate_hash": "c49dfc2e504d13b54cab6279c9d86625ce14609e",
+        "created_at": "2026-09-22 12:15:12",
+        "findings_json": "[{\"finding\": \"Sub-timeframe bars now require QA review and engine rejects overlap before signal use.\", \"severity\": \"closed\"}, {\"finding\": \"Independent Decimal reconciliation and hand-calculated golden tests cover money, fills, timing and rounding adjustment.\", \"severity\": \"closed\"}, {\"finding\": \"Source closure hash and loaded-source guard reject drift; budget/lease rechecked before publish, late candidates quarantined.\", \"severity\": \"closed\"}, {\"finding\": \"Protective orders, margin, simultaneous events, replay comparison, Nautilus adapter, hard resource isolation, progress/checkpoints and U5c remain open.\", \"severity\": \"scope\"}, {\"finding\": \"No UX, empirical, real licensed data, broker/demo/live, paid provider or deployment acceptance claimed.\", \"severity\": \"gate\"}]",
+        "review_id": "U5-PATH2-ENGINE-r1-r1",
+        "reviewer_locator": "/root/u5_final_review",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
+        "candidate_hash": "c118f438b493a9e67971a3ac9465c643c64540a9",
+        "created_at": "2026-09-22 13:18:15",
+        "findings_json": "[]",
+        "review_id": "U5-NAUTILUS-ADAPTER-r1-review-r1",
+        "reviewer_locator": "/root/u5_nautilus_audit",
+        "verdict": "pass"
+      }
+    ],
+    "tasks": [
+      {
+        "acceptance_json": "[\"runtime/build/scope pinned\", \"capacity evidence refreshed\"]",
+        "accepted_revision": "73c7754c65e71db142a3c468fd95a70b229b6bbf0a9e9b116b126d59aca823e0",
+        "allowed_files_json": "[\"D:\\\\ANNAM\\\\TradingWorkspace\\\\planning\\\\mt5-tradingview-backtester\\\\research\\\\foundation-validation\\\\20260921T115933Z-315e8ddd\"]",
+        "dependencies_json": "[]",
+        "last_reason": "verified promotion observed",
+        "revision": 9,
+        "spec_hash": "2705cb464d91ad90e62da4b1ea1dd0c0f21813376e357a92c6846c2d1de05724",
+        "status": "accepted",
+        "task_id": "CO-00",
+        "updated_at": "2026-09-21 14:26:51"
+      },
+      {
+        "acceptance_json": "[\"SQLite single-writer ledger\", \"CAS/unique/atomicity tests\", \"child cannot own state\"]",
+        "accepted_revision": "e4068db5f2a48563e23cdc49d19310054b0353435a00b893a33b318d2d8df1b1",
+        "allowed_files_json": "[\"D:\\\\ANNAM\\\\TradingWorkspace\\\\planning\\\\mt5-tradingview-backtester\\\\research\\\\foundation-validation\\\\20260921T115933Z-315e8ddd\"]",
+        "dependencies_json": "[\"CO-00\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "bfb1c60c07f978e869b35dead2c869738c392e8805952f396d356b78a1aff78f",
+        "status": "accepted",
+        "task_id": "CO-01",
+        "updated_at": "2026-09-21 14:35:10"
+      },
+      {
+        "acceptance_json": "[\"late/stale/torn/promotion recovery tests\"]",
+        "accepted_revision": "b7a8ba634c7517dd19e43ec09cd494e15ba66355d0b463be2aa6f5c548e0b10f",
+        "allowed_files_json": "[\"D:\\\\ANNAM\\\\TradingWorkspace\\\\planning\\\\mt5-tradingview-backtester\\\\research\\\\foundation-validation\\\\20260921T115933Z-315e8ddd\"]",
+        "dependencies_json": "[\"CO-01\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 14,
+        "spec_hash": "bfc78bfe78867c7c68fc9b0e0850f278c221448ffa9528f93205f5a839776553",
+        "status": "accepted",
+        "task_id": "CO-02",
+        "updated_at": "2026-09-21 14:58:37"
+      },
+      {
+        "acceptance_json": "[\"native one-child artifact loop\", \"independent review\"]",
+        "accepted_revision": "123d637739f5c2a5a04a0146832804a7e7465bb5f9eb184a5a3b452dd30b2a5a",
+        "allowed_files_json": "[\"D:\\\\ANNAM\\\\TradingWorkspace\\\\planning\\\\mt5-tradingview-backtester\\\\research\\\\foundation-validation\\\\20260921T115933Z-315e8ddd\"]",
+        "dependencies_json": "[\"CO-00\", \"CO-01\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "0d1ba9981adb53ca5b117d41bbaed84f95c93a3e8e57ef87fc5e2947f1fc2294",
+        "status": "accepted",
+        "task_id": "CO-03",
+        "updated_at": "2026-09-21 14:58:37"
+      },
+      {
+        "acceptance_json": "[\"bounded overlap/routing/integration batch\"]",
+        "accepted_revision": "a374195195cab36ebdfdf69b9e4b57e8038acde3aaa93beea80e5e72e497d324",
+        "allowed_files_json": "[\"D:\\\\ANNAM\\\\TradingWorkspace\\\\planning\\\\mt5-tradingview-backtester\\\\research\\\\foundation-validation\\\\20260921T115933Z-315e8ddd\"]",
+        "dependencies_json": "[\"CO-00\", \"CO-01\", \"CO-03\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 20,
+        "spec_hash": "5492e6e0cec1aa36d0f5b9a44e13ca8381ef0caab4fdfc6c4a8424e53bbdfb21",
+        "status": "accepted",
+        "task_id": "CO-04",
+        "updated_at": "2026-09-21 20:40:59"
+      },
+      {
+        "acceptance_json": "[\"fresh-root recovery evidence\", \"cleanup\"]",
+        "accepted_revision": "228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2",
+        "allowed_files_json": "[\"D:\\\\ANNAM\\\\TradingWorkspace\\\\planning\\\\mt5-tradingview-backtester\\\\research\\\\foundation-validation\\\\20260921T115933Z-315e8ddd\"]",
+        "dependencies_json": "[\"CO-02\", \"CO-03\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 14,
+        "spec_hash": "5a126e784978675a40907dfe76f34b1cf9112541b3d2590e0e282a614e2058f0",
+        "status": "accepted",
+        "task_id": "CO-05",
+        "updated_at": "2026-09-21 20:37:51"
+      },
+      {
+        "acceptance_json": "[\"F1-F3 validation packets\", \"F5 evidence package\"]",
+        "accepted_revision": "d5994df07586137ba2b07cb1522a0cf5d1331ee96cc9831637ee6fc82c4940df",
+        "allowed_files_json": "[\"D:\\\\ANNAM\\\\TradingWorkspace\\\\planning\\\\mt5-tradingview-backtester\\\\research\\\\foundation-validation\\\\20260921T115933Z-315e8ddd\"]",
+        "dependencies_json": "[\"CO-02\", \"CO-03\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 12,
+        "spec_hash": "3ad07ce7e7d50c1f7523483c64500a21c5945ee05250efbad0cf1e231d292af5",
+        "status": "accepted",
+        "task_id": "CO-06",
+        "updated_at": "2026-09-21 23:35:54"
+      },
+      {
+        "acceptance_json": "[\"knowledge/workload/current source snapshot refreshed\"]",
+        "accepted_revision": "4ab7212f930982f0ea565ecab549545c0bb6f3959a8083f9dd7e8dc963067b0d",
+        "allowed_files_json": "[\"D:\\\\ANNAM\\\\TradingWorkspace\\\\planning\\\\mt5-tradingview-backtester\\\\research\\\\foundation-validation\\\\20260921T115933Z-315e8ddd\"]",
+        "dependencies_json": "[\"CO-00\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "8da3a1f9f9e91c996cddcd9159bcac00eb2017a5679ba228e2911a8bd51cfa06",
+        "status": "accepted",
+        "task_id": "F0-REFRESH",
+        "updated_at": "2026-09-21 15:03:30"
+      },
+      {
+        "acceptance_json": "[\"target contract/corpus gaps made explicit\"]",
+        "accepted_revision": "0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902",
+        "allowed_files_json": "[\"D:\\\\ANNAM\\\\TradingWorkspace\\\\planning\\\\mt5-tradingview-backtester\\\\research\\\\foundation-validation\\\\20260921T115933Z-315e8ddd\"]",
+        "dependencies_json": "[\"F0-REFRESH\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 14,
+        "spec_hash": "46c69d63dfc7cbecb3c3b819b143c18ad16e1ea0c89b0c9485562bbab9d07942",
+        "status": "accepted",
+        "task_id": "F1-CONTRACT",
+        "updated_at": "2026-09-21 20:44:50"
+      },
+      {
+        "acceptance_json": "[\"deterministic fake fault/isolation evidence\"]",
+        "accepted_revision": "270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41",
+        "allowed_files_json": "[\"D:\\\\ANNAM\\\\TradingWorkspace\\\\planning\\\\mt5-tradingview-backtester\\\\research\\\\foundation-validation\\\\20260921T115933Z-315e8ddd\"]",
+        "dependencies_json": "[\"F1-CONTRACT\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 14,
+        "spec_hash": "e93b8455f341d16c4a940033c7ac8d0458c7ede95725c3b0cb9b2aaea05377ad",
+        "status": "accepted",
+        "task_id": "F2-SAFETY",
+        "updated_at": "2026-09-21 22:00:43"
+      },
+      {
+        "acceptance_json": "[\"decision-changing benchmark evidence\"]",
+        "accepted_revision": "d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4",
+        "allowed_files_json": "[\"D:\\\\ANNAM\\\\TradingWorkspace\\\\planning\\\\mt5-tradingview-backtester\\\\research\\\\foundation-validation\\\\20260921T115933Z-315e8ddd\"]",
+        "dependencies_json": "[\"F1-CONTRACT\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "f1371367d6635ee4e64f81106d4fd8fd4fce8b8b17417792187b301e730c24cd",
+        "status": "accepted",
+        "task_id": "F3-SPIKES",
+        "updated_at": "2026-09-21 21:47:03"
+      },
+      {
+        "acceptance_json": "[\"one proposed PATH or RESEARCH OPEN\"]",
+        "accepted_revision": "b887b453324b226a55961a0617f7a57f5cc8e95bf4545d2c4ae679a6a0a5ec69",
+        "allowed_files_json": "[\"D:\\\\ANNAM\\\\TradingWorkspace\\\\planning\\\\mt5-tradingview-backtester\\\\research\\\\foundation-validation\\\\20260921T115933Z-315e8ddd\"]",
+        "dependencies_json": "[\"F2-SAFETY\", \"F3-SPIKES\", \"CO-05\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "4000a3e64d62c3143a365433c574a857ba6b31cea37203bd33036ae453bb63de",
+        "status": "accepted",
+        "task_id": "F5-PACKAGE",
+        "updated_at": "2026-09-21 23:35:54"
+      },
+      {
+        "acceptance_json": "[\"pin exact dirty baseline without rewriting historical accepted evidence\", \"preserve dependency locks, safety gates, and prior F6/F7 receipts\"]",
+        "accepted_revision": "9e89bb328c4aa14f72ba27a4f3e4d2708c8ea87c2cbf77dbbb61ce4355113946",
+        "allowed_files_json": "[\"projects/mt5-tradingview-backtester/foundation_v2/**\", \"planning/mt5-tradingview-backtester/**\"]",
+        "dependencies_json": "[]",
+        "last_reason": "verified promotion observed",
+        "revision": 7,
+        "spec_hash": "2c562104b04775814731819beb9822cdf72832cd3297b451ca33a729edcf826f",
+        "status": "accepted",
+        "task_id": "FH-0",
+        "updated_at": "2026-09-22 04:28:34"
+      },
+      {
+        "acceptance_json": "[\"cancel/complete ordering is serialized\", \"expired attempts recover and stale attempts cannot publish\", \"persistent polling plus lease heartbeat prevent indefinite stuck jobs and unintended reclaim\", \"unpublished result candidates are quarantined\", \"PostgreSQL contention tests pass\"]",
+        "accepted_revision": "986feae90621d865831a852d586fe32caf3ad9a008a5569a3b08c8ca197805ce",
+        "allowed_files_json": "[\"projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/{artifacts,research,store,worker}.py\", \"projects/mt5-tradingview-backtester/foundation_v2/tests/test_fh1_job_lifecycle.py\"]",
+        "dependencies_json": "[\"FH-0\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "b06890a6824063db8f484829de04011cfeda2c518420fe7cc1d5f33e7a93e593",
+        "status": "accepted",
+        "task_id": "FH-1",
+        "updated_at": "2026-09-22 04:28:34"
+      },
+      {
+        "acceptance_json": "[\"trusted identity is server-configured rather than client asserted\", \"workspace membership is authorized server-side\", \"missing identity, revoke, workspace switch, cross-tenant job/artifact/record access are denied\", \"local-only auth and absent production auth/RLS are disclosed accurately\"]",
+        "accepted_revision": "a51bf68a83bf865830b73b4d4cc15140f875d04adb4abe3af4225b5f160fa4ef",
+        "allowed_files_json": "[\"projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/{api,auth,store}.py\", \"projects/mt5-tradingview-backtester/foundation_v2/tests/test_fh2_workspace_auth.py\", \"projects/mt5-tradingview-backtester/foundation_v2/README.md\"]",
+        "dependencies_json": "[\"FH-0\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "c430051e2171a953bba40cdb50b66c177e627e70f089cf3af93e3d073fa869ff",
+        "status": "accepted",
+        "task_id": "FH-2",
+        "updated_at": "2026-09-22 04:28:34"
+      },
+      {
+        "acceptance_json": "[\"FH-1 and FH-2 pass on the same candidate\", \"dataset -> job -> separate worker -> result -> API -> UI passes\", \"desktop/mobile responsive QA retains execution safety lock\", \"Vite production build passes\", \"metadata/artifact restore rehearsal passes\", \"resume evidence records exact acceptance boundaries and remaining gates\"]",
+        "accepted_revision": "33993fa4a101d445b996b5a4bb1cd8681f0fa42742d58510b86798cfb4355511",
+        "allowed_files_json": "[\"projects/mt5-tradingview-backtester/foundation_v2/**\", \"planning/mt5-tradingview-backtester/**\"]",
+        "dependencies_json": "[\"FH-1\", \"FH-2\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "8aa53f22ec737a8065b9f4740de329b1b5746eb782e1ad9147d4ace94dd5c1c8",
+        "status": "accepted",
+        "task_id": "FH-3",
+        "updated_at": "2026-09-22 04:28:34"
+      },
+      {
+        "acceptance_json": "[\"provider boundary is workspace-scoped and does not claim remote/holdout/fresh-quote capability\", \"20k synthetic preview preserves semantic identity and low-memory streaming behavior\", \"U2 ingest/provider/auth/reference/contract focused regressions pass\", \"real provider, UI approval, empirical data, broker and live remain separately gated\"]",
+        "accepted_revision": "47d5fbf35614c269eecf8fb1133f5b63db801fd9",
+        "allowed_files_json": "[\"projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/{api,data_ingest,data_sources}.py\", \"projects/mt5-tradingview-backtester/foundation_v2/tests/test_u2_provider_boundary.py\", \"projects/mt5-tradingview-backtester/foundation_v2/scripts/u2_benchmark.py\", \"projects/mt5-tradingview-backtester/foundation_v2/evidence/U2-data-foundation-r1.json\"]",
+        "dependencies_json": "[\"FH-3\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "c24e44c025202756fd9401b08a46939f47ea6c6436615f4a0e027d7a2a43cec1",
+        "status": "accepted",
+        "task_id": "U2-PATH2-DATA-r1",
+        "updated_at": "2026-09-22 06:04:36"
+      },
+      {
+        "acceptance_json": "[\"new Playbooks start as draft and freeze only through an explicit optimistic-revision transition\", \"frozen Playbooks are immutable and forks preserve server-managed parent record/revision lineage\", \"Journal source context is immutable while review fields retain revision history\", \"tenant scoping and F7 product-slice regressions pass on the final candidate\", \"Learn/UI/U5 empirical/broker/live gates remain explicit and unclaimed\"]",
+        "accepted_revision": "86d300055e58e8659c6ad0217c97c15d290c4214",
+        "allowed_files_json": "[\"projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/{api,contracts,product,store}.py\", \"projects/mt5-tradingview-backtester/foundation_v2/tests/test_{f7_product_slice,u3_playbook_journal}.py\", \"projects/mt5-tradingview-backtester/foundation_v2/{README.md,evidence/U3-playbook-journal-r1.json}\"]",
+        "dependencies_json": "[\"U2-PATH2-DATA-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "92d48ddfddf5cd12ceec9c50ed3105d00fd7475887d05e5f6cc4c078d3a34631",
+        "status": "accepted",
+        "task_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1",
+        "updated_at": "2026-09-22 10:44:41"
+      },
+      {
+        "acceptance_json": "[\"exact frozen tenant-scoped playbook revision and immutable protocol\", \"closed-bar timing, explicit fixed-horizon assumptions, deterministic output\", \"transitive computation source hashes and bounded input/runtime checks\", \"independent golden money/timing fixtures and fail-closed reconciliation\", \"disposable PostgreSQL integrated regressions and independent final review\", \"partial U5a/U5b only; protective orders, margin, U5c, UI and real-data gates remain pending\"]",
+        "accepted_revision": "c49dfc2e504d13b54cab6279c9d86625ce14609e",
+        "allowed_files_json": "[\"foundation_v2/trading_workspace_v2/\", \"foundation_v2/tests/\", \"foundation_v2/evidence/U5-*\", \"foundation_v2/README.md\"]",
+        "dependencies_json": "[\"U2-PATH2-DATA-r1\", \"U3-PATH2-PLAYBOOK-JOURNAL-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "b709c34e7d20471bcdcd89345ae0f92405d23cdce8fc98a053b18a08f0cdb7c9",
+        "status": "accepted",
+        "task_id": "U5-PATH2-ENGINE-r1",
+        "updated_at": "2026-09-22 12:16:29"
+      },
+      {
+        "acceptance_json": "[\"Actual Nautilus 1.231.0 adapter executes the supported strategy; no primary engine reselection\", \"Project-local isolated dependency/runtime manifest preserves control Arrow21 while engine requires Arrow25+\", \"Closed-bar to next-open timing explicitly adapted, not blindly inherited from F5 next-close fixture\", \"Library-generated fills reconcile with independent long/short/no-signal/cost/tick/timing oracles\", \"Immutable protocol pins adapter/runtime/source identity and produces an engine-attributed ledger\", \"Bounded subprocess job lifecycle honors cancel/deadline/crash, without broker or arbitrary code capability\", \"Focused independent review plus integrated regressions before acceptance; remaining full U5b/U5c/data/UX gates explicit\"]",
+        "accepted_revision": "c118f438b493a9e67971a3ac9465c643c64540a9",
+        "allowed_files_json": "[\"foundation_v2/engine_runtime/\", \"foundation_v2/trading_workspace_v2/\", \"foundation_v2/tests/\", \"foundation_v2/evidence/U5-*\", \"foundation_v2/README.md\"]",
+        "dependencies_json": "[\"U5-PATH2-ENGINE-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "57b7c6bfb6194c04f577d1387c8763d78a85c6a329b91b55375af330d35ff65b",
+        "status": "accepted",
+        "task_id": "U5-NAUTILUS-ADAPTER-r1",
+        "updated_at": "2026-09-22 13:18:15"
+      },
+      {
+        "acceptance_json": "[\"Existing fixed-horizon playbooks remain behaviorally compatible by default\", \"Optional protective mode uses explicit stop-loss/take-profit semantics and actual Nautilus contingent orders for supported cases\", \"A bar that can hit both stop and take-profit without lower-timeframe ordering fails closed before result publication; no invented intrabar winner\", \"Gap-through-stop/take-profit behavior is explicit and does not claim perfect trigger fills\", \"Insufficient-margin behavior uses an immutable research leverage/margin assumption and an independent oracle; it is not broker margin evidence\", \"Reference and Nautilus outputs reconcile for independent long/short stop, take-profit, horizon fallback, gap and insufficient-margin fixtures\", \"Native protective fills remain linked to the accepted ledger and existing cancel/deadline/crash isolation stays green\", \"Focused review and integrated regression pass before acceptance; manual/replay comparison, durable progress/checkpoints and U5c remain separate\"]",
+        "accepted_revision": null,
+        "allowed_files_json": "[\"foundation_v2/engine_runtime/\", \"foundation_v2/trading_workspace_v2/\", \"foundation_v2/tests/\", \"foundation_v2/evidence/U5-*\", \"foundation_v2/README.md\"]",
+        "dependencies_json": "[\"U5-NAUTILUS-ADAPTER-r1\"]",
+        "last_reason": "accepted Nautilus adapter; expanded U5b semantics are the next safe critical slice",
+        "revision": 4,
+        "spec_hash": "f5dd2539c71fc36e60b17b85f4ad37584b95d588c0f32711df652691a1135881",
+        "status": "running",
+        "task_id": "U5B-PROTECTIVE-MARGIN-r1",
+        "updated_at": "2026-09-22 13:29:30"
+      }
+    ],
+    "verifications": [
+      {
+        "attempt_id": "CO-00-a1",
+        "candidate_hash": "3A65C1289257611D12CF1F02C0FF6D086EDBDF844F4D86C2CABBC56BCF7E0D52",
+        "created_at": "2026-09-21 12:04:57",
+        "details_json": "{\"instance_health_refreshed\": true, \"json_parsed\": true, \"plan_hashes_captured\": true, \"product_git_read_only\": true, \"source_cap_verified\": 5}",
+        "result": "pass",
+        "verification_id": "CO-00-v1",
+        "verifier": "focused-local-checks",
+        "verifier_version": "1"
+      },
+      {
+        "attempt_id": "CO-00-a2",
+        "candidate_hash": "3bbd2f8f3a2965a6c2d489cce3a55a16ee814cfcab75218eea802d5e377d8f99",
+        "created_at": "2026-09-21 14:08:06",
+        "details_json": "{\"both_instances_healthy\": true, \"native_protocol_requires_child_runtime_proof\": true, \"per_instance_cap_source\": 5, \"product_wip_preserved\": true}",
+        "result": "pass",
+        "verification_id": "CO-00-v2",
+        "verifier": "focused-local-checks",
+        "verifier_version": "2"
+      },
+      {
+        "attempt_id": "CO-00-a3",
+        "candidate_hash": "73c7754c65e71db142a3c468fd95a70b229b6bbf0a9e9b116b126d59aca823e0",
+        "created_at": "2026-09-21 14:22:58",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"CO00_R3_OK\", \"routed capacity remains not verified\"], \"input_hashes\": {\"artifact\": \"73c7754c65e71db142a3c468fd95a70b229b6bbf0a9e9b116b126d59aca823e0\", \"entrypoint\": \"1186354D409DC7AACC4035979BFFAC61504F6D7BCD67D885C53B3DB62DBB3273\"}, \"test_hash\": \"a69895b6e3de7cfb888aecc31acb4be64da4f1f0c88beb923220fe9afd6f5acf\", \"test_scope\": \"plan hashes, scope, capacity semantics, native batch minimum, no routed-capacity overclaim\"}",
+        "result": "pass",
+        "verification_id": "CO-00-v3",
+        "verifier": "verify_co00_r3.py",
+        "verifier_version": "1"
+      },
+      {
+        "attempt_id": "CO-01-a1",
+        "candidate_hash": "e4068db5f2a48563e23cdc49d19310054b0353435a00b893a33b318d2d8df1b1",
+        "created_at": "2026-09-21 14:27:53",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"unique/CAS/dependency gates hold\", \"authoritative state is controller-only\", \"failed evidence blocks integration\", \"forced mid-transaction failure rolls back\"], \"input_hashes\": {\"CO-01-ledger.json\": \"e4068db5f2a48563e23cdc49d19310054b0353435a00b893a33b318d2d8df1b1\", \"controller.py\": \"dd8d70f3dbfafa77f7a812f9f94834c9ca0ad5c33b292bd2cba07ae075445029\"}, \"test_hash\": \"fb34b4e344f50bf0ba31ad144484ba84a3f5df79dd01aa38abb38bd6b4c2c3c0\", \"test_scope\": \"16 focused ledger/state/recovery unit tests\"}",
+        "result": "pass",
+        "verification_id": "CO-01-v1",
+        "verifier": "python unittest",
+        "verifier_version": "stdlib"
+      },
+      {
+        "attempt_id": "CO-02-a1",
+        "candidate_hash": "2a42cc6f710dd07dd164dd9749444c4c374aeeafcd5b0d15d3812af64d77af63",
+        "created_at": "2026-09-21 14:36:23",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"prepared dispatch survives reopen without duplicate\", \"accepted state cannot be downgraded by late result\", \"mid-transaction failure rolls back\", \"torn/stale snapshot rejected\", \"promotion-before-finalize reconciles exact candidate once\", \"takeover requires inactive-owner evidence and fences stale generation\"], \"input_hashes\": {\"CO-02-recovery.json\": \"2a42cc6f710dd07dd164dd9749444c4c374aeeafcd5b0d15d3812af64d77af63\", \"controller.py\": \"dd8d70f3dbfafa77f7a812f9f94834c9ca0ad5c33b292bd2cba07ae075445029\"}, \"test_hash\": \"fb34b4e344f50bf0ba31ad144484ba84a3f5df79dd01aa38abb38bd6b4c2c3c0\", \"test_scope\": \"CO-02 fault/recovery cases within 16 focused controller tests\"}",
+        "result": "pass",
+        "verification_id": "CO-02-v1",
+        "verifier": "verify_co02.py + unittest",
+        "verifier_version": "1"
+      },
+      {
+        "attempt_id": "CO-03-a1",
+        "candidate_hash": "123d637739f5c2a5a04a0146832804a7e7465bb5f9eb184a5a3b452dd30b2a5a",
+        "created_at": "2026-09-21 14:42:24",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"artifact has exact protocol value\", \"author locator matches dispatched child\", \"limits do not overclaim balancing or production readiness\"], \"input_hashes\": {\"CO-03-child.json\": \"123d637739f5c2a5a04a0146832804a7e7465bb5f9eb184a5a3b452dd30b2a5a\"}, \"test_hash\": \"4e4c1d29cec80cb8b3fc1a674470e0876c706a37018377196e08a7f16c8a0a75\", \"test_scope\": \"CO-03 artifact schema/value/author/scope/limits\"}",
+        "result": "pass",
+        "verification_id": "CO-03-v1",
+        "verifier": "verify_co03.py",
+        "verifier_version": "1"
+      },
+      {
+        "attempt_id": "CO-02-a2",
+        "candidate_hash": "b7a8ba634c7517dd19e43ec09cd494e15ba66355d0b463be2aa6f5c548e0b10f",
+        "created_at": "2026-09-21 14:46:53",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"all authoritative mutations advance event revision\", \"stale owner add_task and transitions are fenced\", \"prepared dispatch survives reopen without duplicate\", \"torn/stale snapshots are rejected\", \"promotion-before-finalize reconciles exact candidate once\"], \"input_hashes\": {\"CO-02-recovery-r2.json\": \"b7a8ba634c7517dd19e43ec09cd494e15ba66355d0b463be2aa6f5c548e0b10f\", \"controller.py\": \"75707d0af2b669c0f89f24c14bd32a4d0d8343208fba99428fba51f25265cf43\"}, \"test_hash\": \"a4e5f7199ff0768218792c504196a637df49ac926bde9792b297e0566ad61811\", \"test_scope\": \"CO-02 recovery invariants within 16 focused controller tests\"}",
+        "result": "pass",
+        "verification_id": "CO-02-v2",
+        "verifier": "verify_co02_r2.py + unittest",
+        "verifier_version": "2"
+      },
+      {
+        "attempt_id": "F0-REFRESH-a1",
+        "candidate_hash": "4ab7212f930982f0ea565ecab549545c0bb6f3959a8083f9dd7e8dc963067b0d",
+        "created_at": "2026-09-21 15:03:30",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"artifact hash matches reviewed candidate\", \"K01-K17 and Y01-Y24 coverage present\", \"workload, safe entrypoints and gate are explicit\"], \"input_hashes\": {\"F0-knowledge-candidate.md\": \"4ab7212f930982f0ea565ecab549545c0bb6f3959a8083f9dd7e8dc963067b0d\"}, \"test_hash\": \"fe0ab237f9d2d60850fc43623305bad8cd0a540e4b6effe3e9c4dfee8d2f78ff\", \"test_scope\": \"artifact identity and required F0 coverage markers\"}",
+        "result": "pass",
+        "verification_id": "F0-REFRESH-v1",
+        "verifier": "verify_f0.py",
+        "verifier_version": "1"
+      },
+      {
+        "attempt_id": "F0-REFRESH-a1",
+        "candidate_hash": "4ab7212f930982f0ea565ecab549545c0bb6f3959a8083f9dd7e8dc963067b0d",
+        "created_at": "2026-09-21 15:04:31",
+        "details_json": "{\"correction\": \"supersedes F0-REFRESH-v1 verification metadata recorded after a verifier marker mismatch; candidate and independent review were unchanged\", \"exit_code\": 0, \"expected_outcomes\": [\"artifact hash matches reviewed candidate\", \"K01-K17 and Y01-Y24 coverage present\", \"workload, safe entrypoints and F0 gate checklist are explicit\"], \"input_hashes\": {\"F0-knowledge-candidate.md\": \"4ab7212f930982f0ea565ecab549545c0bb6f3959a8083f9dd7e8dc963067b0d\"}, \"test_hash\": \"7100fc2d3f2069e7ae9076be24a6f69145292a287a634efd8af8ffb253847071\", \"test_scope\": \"artifact identity and required F0 coverage markers\"}",
+        "result": "pass",
+        "verification_id": "F0-REFRESH-v2",
+        "verifier": "verify_f0.py",
+        "verifier_version": "2"
+      },
+      {
+        "attempt_id": "CO-05-a1",
+        "candidate_hash": "228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2",
+        "created_at": "2026-09-21 15:09:32",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"accepted CO-02/03 survive reconstruction\", \"sandbox takeover increments generation and fences stale owner\", \"authoritative ledger remains unchanged\", \"mutable recovery copy and WAL/SHM resources are cleaned\"], \"input_hashes\": {\"CO-05-recovery.json\": \"228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2\", \"co05_recovery_probe.py\": \"68e034068ad4f71aaaf1a4522625f74698da37f9c22600405f80a7182f94389c\"}, \"test_hash\": \"06270d2ebdf1fec767fe04f77f0f5d04cd92f9b4e9baae54b34b9329e2ceed1a\", \"test_scope\": \"fresh process durable-state recovery, stale-owner fencing and cleanup\"}",
+        "result": "pass",
+        "verification_id": "CO-05-v1",
+        "verifier": "verify_co05.py",
+        "verifier_version": "1"
+      },
+      {
+        "attempt_id": "CO-04-a1",
+        "candidate_hash": "8a9d0263cc5df2b9f78ce70d6e87f2a73f17b1a6edee95ab44aeacd6b9f5b0ea",
+        "created_at": "2026-09-21 15:11:46",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"three local fixture lanes overlap and integrate deterministically\", \"three native Web GPT fixture lanes complete without cross-talk\", \"native overlap remains false when timestamps are serialized\", \"two-instance balancing and routed capacity 10 remain unverified\"], \"input_hashes\": {\"CO-04-batch-candidate-r1.json\": \"6b947579fec43a8e857c95ff4c0cf581171f00deb21eddec1a7985e011861776\", \"CO-04-batch-candidate-r2.json\": \"8a9d0263cc5df2b9f78ce70d6e87f2a73f17b1a6edee95ab44aeacd6b9f5b0ea\"}, \"test_hash\": \"ecd7cdead1af5a9e848b60773c633f4c3e8bfbfc74cbc7ba6949ac3582160050\", \"test_scope\": \"local overlap/integration plus native lane completion and truthful routing limits\"}",
+        "result": "pass",
+        "verification_id": "CO-04-v1",
+        "verifier": "verify_co04_r2.py",
+        "verifier_version": "2"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a1",
+        "candidate_hash": "c46e631f8239115179962cd1acdfe1e7a50cb32c4e2677559e3568c16b789430",
+        "created_at": "2026-09-21 15:15:02",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"all D01-D13 are explicit\", \"identity/value/state/data/seams/ownership/observability contracts are present\", \"workload and SLO thresholds are frozen before F2/F3 measurement\", \"acceptance corpus routes cases to F2/F3 without PATH scoring\"], \"input_hashes\": {\"F1-contract-corpus-candidate.md\": \"c46e631f8239115179962cd1acdfe1e7a50cb32c4e2677559e3568c16b789430\"}, \"test_hash\": \"bec2134484fe731c23aa04d7e8ae17b96632c3bff63b213a0dea4dc6861693d1\", \"test_scope\": \"D01-D13 decision matrix, contract layers, thresholds and acceptance corpus\"}",
+        "result": "pass",
+        "verification_id": "F1-CONTRACT-v1",
+        "verifier": "verify_f1.py",
+        "verifier_version": "1"
+      },
+      {
+        "attempt_id": "CO-04-a2",
+        "candidate_hash": "489d2ef1bf5bed71de77e164e7012ddd01672d8f2a95cb27c2ccfed417027fcf",
+        "created_at": "2026-09-21 15:17:37",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"three local fixture workers overlap\", \"one unavailable lane is explicit and not silently promoted\", \"accepted lanes integrate deterministically without cross-talk\", \"time-to-verified-output and review rework are recorded\", \"multi-instance routing and capacity 10 remain unverified\"], \"input_hashes\": {\"CO-04-batch-candidate-r2.json\": \"8a9d0263cc5df2b9f78ce70d6e87f2a73f17b1a6edee95ab44aeacd6b9f5b0ea\", \"CO-04-batch-candidate-r3.json\": \"489d2ef1bf5bed71de77e164e7012ddd01672d8f2a95cb27c2ccfed417027fcf\"}, \"test_hash\": \"71223e292fa94d3018aa66c12fbcd623b64b8043f2933708303b40da7cdc7c54\", \"test_scope\": \"three-way overlap, unavailable lane, uncertainty preservation, rework and accepted-output time\"}",
+        "result": "pass",
+        "verification_id": "CO-04-v2",
+        "verifier": "verify_co04_r3.py",
+        "verifier_version": "3"
+      },
+      {
+        "attempt_id": "CO-05-a2",
+        "candidate_hash": "228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2",
+        "created_at": "2026-09-21 15:19:37",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"fresh process recovery evidence remains immutable and valid\", \"accepted CO-02/03 remain preserved\", \"authoritative owner generation remains unchanged\", \"current CO-05 candidate identity is pinned without assuming pre-dispatch status\", \"fresh Web GPT root/provider resurrection remain unproven limits\"], \"input_hashes\": {\"CO-05-recovery.json\": \"228e8107f3d79fea08dd4bffe259bdb7fe83212ec1d99093d223441429d4fcc2\", \"worker-result.json\": \"7b473f3e4d43330ddddcb99d21e251c53df602ee0b295b6b96d9ed45e31417f8\"}, \"test_hash\": \"d6da2f738cfa68e54f1b62b6db33e3a8027ac0843467e14b2b22cd0f470faf11\", \"test_scope\": \"immutable recovery evidence plus lifecycle-tolerant authoritative-state checks\"}",
+        "result": "pass",
+        "verification_id": "CO-05-v2",
+        "verifier": "verify_co05.py",
+        "verifier_version": "2"
+      },
+      {
+        "attempt_id": "CO-04-a3",
+        "candidate_hash": "a374195195cab36ebdfdf69b9e4b57e8038acde3aaa93beea80e5e72e497d324",
+        "created_at": "2026-09-21 20:35:47",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"three local fixture workers overlap without cross-talk\", \"one unavailable lane remains explicit\", \"integration and lane hashes match exact bytes written\", \"time-to-verified starts at the first CO-04 attempt and includes prior rework\", \"multi-instance routing and capacity 10 remain unverified\"], \"input_hashes\": {\"CO-04-batch-candidate-r3.json\": \"489d2ef1bf5bed71de77e164e7012ddd01672d8f2a95cb27c2ccfed417027fcf\", \"CO-04-batch-candidate-r4.json\": \"a374195195cab36ebdfdf69b9e4b57e8038acde3aaa93beea80e5e72e497d324\"}, \"test_hash\": \"de61dc16a1bfd0129b0d6f152c119507b36335306af3ebc46445f6c99486dc3d\", \"test_scope\": \"three-way overlap, exact written hashes, cross-talk, unavailable lane, prior rework time, truthful routing limits\"}",
+        "result": "pass",
+        "verification_id": "CO-04-v3",
+        "verifier": "verify_co04_r4.py",
+        "verifier_version": "4"
+      },
+      {
+        "attempt_id": "F1-CONTRACT-a2",
+        "candidate_hash": "0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902",
+        "created_at": "2026-09-21 20:39:42",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"idempotency retention and expiry are explicit and fail closed\", \"E-SAFE-02 covers all durable-commit/send ambiguity windows\", \"fresh-environment reconstruction/replay is a distinct acceptance case\", \"N/N-1 compatibility window and migration owner are normative\", \"PATH ranking remains prohibited before F2/F3 evidence\"], \"input_hashes\": {\"F1-contract-corpus-candidate-r2.md\": \"0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902\", \"F1-contract-corpus-candidate.md\": \"c46e631f8239115179962cd1acdfe1e7a50cb32c4e2677559e3568c16b789430\"}, \"test_hash\": \"06233e1850b8339946d8707ffac9108c7adaf2373d757460a9f8ad666342767c\", \"test_scope\": \"review findings: retention/expiry, crash windows, fresh-environment replay, compatibility/migration ownership\"}",
+        "result": "pass",
+        "verification_id": "F1-CONTRACT-v2",
+        "verifier": "verify_f1_r2.py",
+        "verifier_version": "2"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a1",
+        "candidate_hash": "7ebbcd8ba73f84adef7b34d94375ae010f6d88e4a706ca2a329ad376d8cf0863",
+        "created_at": "2026-09-21 21:26:10",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"cross-tenant IDs fail closed under current principal/membership\", \"stale or expired owners cannot increment broker send log\", \"corrupt metadata/lineage/artifact restore fails before write lane opens\", \"replace has observable order/deal/position effect matching independent oracle\", \"threaded duplicate/risk schedules remain atomic across declared seeds\"], \"input_hashes\": {\"candidate\": \"7ebbcd8ba73f84adef7b34d94375ae010f6d88e4a706ca2a329ad376d8cf0863\", \"implementation\": \"1be2e08a14661da120280a532cbe9dc36a584d724bea6546b18a77a94de8dc8b\", \"review_findings\": \"52997a9d0d7759189229a671d8677e29e35a60a7c6aa3d6aab0db9a2bbcec451\", \"runner\": \"22a3fe3c5dfad53c22aac1053d2b42605e584e209ffc05587d23a53b71910942\", \"tests\": \"0af01d3b59c329f49dd39991582def69c054ea23cf592f0450340cde1a6d0bb1\"}, \"test_hash\": \"0af01d3b59c329f49dd39991582def69c054ea23cf592f0450340cde1a6d0bb1\", \"test_scope\": \"18 deterministic offline F2 safety/isolation tests including prior independent review blockers\"}",
+        "result": "pass",
+        "verification_id": "F2-SAFETY-v1",
+        "verifier": "parent unittest rerun + immutable candidate hash check",
+        "verifier_version": "r3-parent-1"
+      },
+      {
+        "attempt_id": "F3-SPIKES-a1",
+        "candidate_hash": "d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4",
+        "created_at": "2026-09-21 21:26:10",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"current E-PERF-02 candidates are rejected/deferred if frozen W1 threshold fails\", \"breaking migration requires data/state mapping\", \"owner-loss fixture compares detection/recovery evidence to the 30s target without OS overclaim\", \"benchmark provenance pins code/tests/verifier/runtime/load/warmup/distributions/effort\", \"PATH-1/2/3 remain unselected and decisive unrun experiments remain explicit\"], \"input_hashes\": {\"candidate\": \"d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4\", \"implementation\": \"9aa25fa31c87feb31b98d5dbcabff460e64e970e08ec818edd161bc172aeb015\", \"raw\": \"f0e62c2bdd30c40b0fcbbf0720e9ec688cdbb921fbc623e7c3e6eb83104675e2\", \"review_findings\": \"9ccc362ce0658eaeb26c2e3113dd1a38565ed7c5d6c5c32ec6b92342610e3e16\", \"tests\": \"20cae614aa4d2c18b4b88f62147d1f6008e4cce8cedd47d238f848b197c90c37\", \"verification_receipt\": \"4855da189fb720991b42dfcd18b257a16139af3840dc9946de3fc5912f609379\", \"verifier\": \"3d40f394699766e804fccfe5e1cd6d5a21c8ecef083387e53d192ae32cbeffe5\"}, \"test_hash\": \"20cae614aa4d2c18b4b88f62147d1f6008e4cce8cedd47d238f848b197c90c37\", \"test_scope\": \"8 semantic tests plus 30 immutable verifier checks for reviewed F3 r2 packet\"}",
+        "result": "pass",
+        "verification_id": "F3-SPIKES-v1",
+        "verifier": "verify_f3_spikes.py + parent unittest rerun",
+        "verifier_version": "r2-parent-1"
+      },
+      {
+        "attempt_id": "F2-SAFETY-a2",
+        "candidate_hash": "270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41",
+        "created_at": "2026-09-21 21:47:03",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"job identifier collision cannot replace another tenant's queued job\", \"cancel/replace lifecycle matches independent oracle in event sequence order\", \"previous owner-fencing restore integrity and threaded concurrency coverage remain green\"], \"input_hashes\": {\"candidate\": \"270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41\", \"implementation\": \"0b63213aca7c09d9c1ea16c4f627570c2331fc653647eb257abfc5f6cc90e7f3\", \"prior_candidate\": \"7ebbcd8ba73f84adef7b34d94375ae010f6d88e4a706ca2a329ad376d8cf0863\", \"runner\": \"7d5f62a1ba8506fbca23be46013f2386f9d27089603ce3b34f6c38ad806d7c2b\", \"tests\": \"72000c03b7721e12dd156fe0ddbfb71a6d1c63c2939f467d4eb03b1f813b8c24\"}, \"test_hash\": \"72000c03b7721e12dd156fe0ddbfb71a6d1c63c2939f467d4eb03b1f813b8c24\", \"test_scope\": \"20 deterministic offline tests including cross-tenant job-id collision and cancel-before-replace sequence regression\"}",
+        "result": "pass",
+        "verification_id": "F2-SAFETY-v2",
+        "verifier": "parent focused regression + full unittest rerun",
+        "verifier_version": "r4-parent-1"
+      },
+      {
+        "attempt_id": "F5-PACKAGE-a1",
+        "candidate_hash": "b887b453324b226a55961a0617f7a57f5cc8e95bf4545d2c4ae679a6a0a5ec69",
+        "created_at": "2026-09-21 23:35:54",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"exactly PATH-2 selected\", \"D01-D13 and E01-E18 present\", \"all pinned evidence bytes unchanged\", \"F2/client/engine/Postgres/fresh/E-PORT/E-CHANGE/E-PATH/runtime decisive checks pass\", \"no F6 authorization\"], \"input_hashes\": {\"artifacts/F1-contract-corpus-candidate-r2.md\": \"0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902\", \"artifacts/F2-safety-candidate-r4.json\": \"270b1f21a43d3d6ee235aeedd0fb755323288df43f0acc27b50b898589e68d41\", \"artifacts/F3-spikes-candidate-r2.json\": \"d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4\", \"artifacts/F5-evidence-r1.json\": \"6e14169d16f57f70d7209ce57d97597d799da4b9c7edf837a5144e1effca18d3\", \"f5-change-path-r2/F5-change-path-r2.json\": \"682aac849e704a0ac6b7b62f232718199102e0d7978dde5b8cccbe5c5ddf5e8f\", \"f5-client-r2/F5-client-r2.json\": \"05bdf29ea2c3be16e4ebfd808efd344fcfcc717633e4749230913f0f016e8e74\", \"f5-engine-r2/evidence/E-PERF-04-engine-r2-20260921T222501Z-bfab36154d0a.json\": \"bfab36154d0a0f6b185bf1e5f7da8157afcc018af32e105743914d055be7de43\", \"f5-fresh-r1/F5-fresh-r1.json\": \"ec582854a4aca6e55c97430d429daff409ee8df493eef218b6f32a44ceafc15e\", \"f5-port-r1/F5-port-r1.json\": \"a2baa3358548624f402413e425e8e1ccae78cde1a8006467f74182caf6636c7e\", \"f5-postgres-r2/F5-postgres-r2.json\": \"e0bd7ffd6cdf1df517384e6884f207e7b141e8003598da37bae0875ffc039632\", \"f5-runtime-r3/F5-runtime-r3.json\": \"c5ce461b367cda1a918049504db048601a3b8aaa2855f419601633fc60416a47\"}, \"test_hash\": \"adff98aaa347b85ec245fc818b29d24c6cc8e0843ac2d2a0df8c575b238361e1\", \"test_scope\": \"F5 decision structure + pinned evidence hashes + decisive evidence booleans + client/runtime measurements\"}",
+        "result": "pass",
+        "verification_id": "F5-PACKAGE-v1",
+        "verifier": "verify_f5_decision_r1.py receipt",
+        "verifier_version": "adff98aaa347b85ec245fc818b29d24c6cc8e0843ac2d2a0df8c575b238361e1"
+      },
+      {
+        "attempt_id": "CO-06-a2",
+        "candidate_hash": "d5994df07586137ba2b07cb1522a0cf5d1331ee96cc9831637ee6fc82c4940df",
+        "created_at": "2026-09-21 23:35:54",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"F1-F3 validation packets remain accepted\", \"F5 PATH-2 package is reviewed and accepted\", \"no broker/live/cloud action is implied by CO-06\"], \"input_hashes\": {\"CO-06-candidate\": \"d5994df07586137ba2b07cb1522a0cf5d1331ee96cc9831637ee6fc82c4940df\", \"F5\": \"b887b453324b226a55961a0617f7a57f5cc8e95bf4545d2c4ae679a6a0a5ec69\", \"F5-verification\": \"beaba5b4964490bf2d8d141c120e57b3e860a67f0541b46b2599621282f50204\"}, \"test_hash\": \"297e326cdea124d54d7f25c888d58ab8bb95be28064386de4e54ff01b0ab68e9\", \"test_scope\": \"accepted F1/F2/F3 state plus reviewed F5 evidence presentation\"}",
+        "result": "pass",
+        "verification_id": "CO-06-v1",
+        "verifier": "fresh-session pinned-state reconciliation",
+        "verifier_version": "co06-r1"
+      },
+      {
+        "attempt_id": "FH-0-a1",
+        "candidate_hash": "9e89bb328c4aa14f72ba27a4f3e4d2708c8ea87c2cbf77dbbb61ce4355113946",
+        "created_at": "2026-09-22 04:28:34",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"pin exact dirty baseline without rewriting historical accepted evidence\", \"preserve dependency locks, safety gates, and prior F6/F7 receipts\"], \"input_hashes\": {\"receipt\": \"9e89bb328c4aa14f72ba27a4f3e4d2708c8ea87c2cbf77dbbb61ce4355113946\"}, \"test_hash\": \"9e89bb328c4aa14f72ba27a4f3e4d2708c8ea87c2cbf77dbbb61ce4355113946\", \"test_scope\": \"historical baseline receipt re-hashed against preserved ledger/dependency evidence\"}",
+        "result": "pass",
+        "verification_id": "FH-0-v1",
+        "verifier": "coordinator local evidence verification",
+        "verifier_version": "fh-hardening-r1"
+      },
+      {
+        "attempt_id": "FH-1-a1",
+        "candidate_hash": "986feae90621d865831a852d586fe32caf3ad9a008a5569a3b08c8ca197805ce",
+        "created_at": "2026-09-22 04:28:34",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"cancel/complete ordering is serialized\", \"expired attempts recover and stale attempts cannot publish\", \"persistent polling plus lease heartbeat prevent indefinite stuck jobs and unintended reclaim\", \"unpublished result candidates are quarantined\", \"PostgreSQL contention tests pass\"], \"input_hashes\": {\"receipt\": \"986feae90621d865831a852d586fe32caf3ad9a008a5569a3b08c8ca197805ce\"}, \"test_hash\": \"986feae90621d865831a852d586fe32caf3ad9a008a5569a3b08c8ca197805ce\", \"test_scope\": \"16 focused FH tests plus 26-test integrated foundation suite on PostgreSQL 17.11\"}",
+        "result": "pass",
+        "verification_id": "FH-1-v1",
+        "verifier": "coordinator local evidence verification",
+        "verifier_version": "fh-hardening-r1"
+      },
+      {
+        "attempt_id": "FH-2-a1",
+        "candidate_hash": "a51bf68a83bf865830b73b4d4cc15140f875d04adb4abe3af4225b5f160fa4ef",
+        "created_at": "2026-09-22 04:28:34",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"trusted identity is server-configured rather than client asserted\", \"workspace membership is authorized server-side\", \"missing identity, revoke, workspace switch, cross-tenant job/artifact/record access are denied\", \"local-only auth and absent production auth/RLS are disclosed accurately\"], \"input_hashes\": {\"receipt\": \"a51bf68a83bf865830b73b4d4cc15140f875d04adb4abe3af4225b5f160fa4ef\"}, \"test_hash\": \"a51bf68a83bf865830b73b4d4cc15140f875d04adb4abe3af4225b5f160fa4ef\", \"test_scope\": \"FH negative authorization tests on PostgreSQL 17.11 plus full foundation regression\"}",
+        "result": "pass",
+        "verification_id": "FH-2-v1",
+        "verifier": "coordinator local evidence verification",
+        "verifier_version": "fh-hardening-r1"
+      },
+      {
+        "attempt_id": "FH-3-a1",
+        "candidate_hash": "33993fa4a101d445b996b5a4bb1cd8681f0fa42742d58510b86798cfb4355511",
+        "created_at": "2026-09-22 04:28:34",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"FH-1 and FH-2 pass on the same candidate\", \"dataset -> job -> separate worker -> result -> API -> UI passes\", \"desktop/mobile responsive QA retains execution safety lock\", \"Vite production build passes\", \"metadata/artifact restore rehearsal passes\", \"resume evidence records exact acceptance boundaries and remaining gates\"], \"input_hashes\": {\"receipt\": \"33993fa4a101d445b996b5a4bb1cd8681f0fa42742d58510b86798cfb4355511\"}, \"test_hash\": \"33993fa4a101d445b996b5a4bb1cd8681f0fa42742d58510b86798cfb4355511\", \"test_scope\": \"26-test foundation suite, fresh-process integration, in-app browser responsive QA, Vite build, restore rehearsal\"}",
+        "result": "pass",
+        "verification_id": "FH-3-v1",
+        "verifier": "coordinator local evidence verification",
+        "verifier_version": "fh-hardening-r1"
+      },
+      {
+        "attempt_id": "U2-PATH2-DATA-r1-a1",
+        "candidate_hash": "47d5fbf35614c269eecf8fb1133f5b63db801fd9",
+        "created_at": "2026-09-22 06:04:36",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"provider boundary is workspace-scoped and does not claim remote/holdout/fresh-quote capability\", \"20k synthetic preview preserves semantic identity and low-memory streaming behavior\", \"U2 ingest/provider/auth/reference/contract focused regressions pass\", \"real provider, UI approval, empirical data, broker and live remain separately gated\"], \"input_hashes\": {\"commit\": \"47d5fbf35614c269eecf8fb1133f5b63db801fd9\", \"receipt\": \"b2bf473f8eb42cfaf7c9309b04129aea8203c57f28179d975d22eb9975adbca6\"}, \"test_hash\": \"b2bf473f8eb42cfaf7c9309b04129aea8203c57f28179d975d22eb9975adbca6\", \"test_scope\": \"5 ingest + 4 provider + 5 FH2 auth + 1 reference + 3 contracts; compileall/diff-check; D12 benchmark\"}",
+        "result": "pass",
+        "verification_id": "U2-PATH2-DATA-r1-v1",
+        "verifier": "coordinator local PostgreSQL/software validation",
+        "verifier_version": "u2-path2-r1"
+      },
+      {
+        "attempt_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1-a1",
+        "candidate_hash": "86d300055e58e8659c6ad0217c97c15d290c4214",
+        "created_at": "2026-09-22 10:44:41",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"new Playbooks start as draft and freeze only through an explicit optimistic-revision transition\", \"frozen Playbooks are immutable and forks preserve server-managed parent record/revision lineage\", \"Journal source context is immutable while review fields retain revision history\", \"tenant scoping and F7 product-slice regressions pass on the final candidate\", \"Learn/UI/U5 empirical/broker/live gates remain explicit and unclaimed\"], \"full_suite_claimed\": false, \"input_hashes\": {\"commit\": \"86d300055e58e8659c6ad0217c97c15d290c4214\", \"receipt\": \"be7588e8dd0bdaab2903cc1102c8e970609523a5c8f4bf9e513e323db778ffc7\"}, \"test_hash\": \"be7588e8dd0bdaab2903cc1102c8e970609523a5c8f4bf9e513e323db778ffc7\", \"test_scope\": \"3 U3 Playbook/Journal + 6 F7 product-slice tests on final candidate; compileall and staged diff-check\"}",
+        "result": "pass",
+        "verification_id": "U3-PATH2-PLAYBOOK-JOURNAL-r1-v1",
+        "verifier": "coordinator disposable PostgreSQL 17.11 fixture validation",
+        "verifier_version": "u3-path2-r1"
+      },
+      {
+        "attempt_id": "U5-PATH2-ENGINE-r1-a1",
+        "candidate_hash": "c49dfc2e504d13b54cab6279c9d86625ce14609e",
+        "created_at": "2026-09-22 12:15:12",
+        "details_json": "{\"acceptance_scope\": \"partial reference protocol slice; not full U5 or production\", \"exit_code\": 0, \"expected_outcomes\": [\"zero skipped tests\", \"no publication on cancel/tamper/budget/holdout\", \"independent monetary oracle\", \"tenant/lease regressions preserved\"], \"input_hashes\": {\"commit\": \"c49dfc2e504d13b54cab6279c9d86625ce14609e\", \"review\": \"a2b474466cfb7776bb26b7effa1eea7626af60028523e809f3bdef74ae2e19e5\", \"validation\": \"a47a272166d8e8dfdf2e165125a12226b219ffd1e9d25e3671629a8b2eeadc81\"}, \"test_hash\": \"a47a272166d8e8dfdf2e165125a12226b219ffd1e9d25e3671629a8b2eeadc81\", \"test_scope\": \"U5 golden/API negative cases plus U2/U3/F7/FH1/FH2/reference/contracts/provider regressions\", \"tests\": 58}",
+        "result": "pass",
+        "verification_id": "U5-PATH2-ENGINE-r1-candidate-v1",
+        "verifier": "scoped fixture runner",
+        "verifier_version": "u5-r1"
+      },
+      {
+        "attempt_id": "U5-PATH2-ENGINE-r1-a1",
+        "candidate_hash": "c49dfc2e504d13b54cab6279c9d86625ce14609e",
+        "created_at": "2026-09-22 12:16:29",
+        "details_json": "{\"acceptance_scope\": \"partial reference protocol slice; not full U5 or production\", \"exit_code\": 0, \"expected_outcomes\": [\"zero skipped tests\", \"no publication on cancel/tamper/budget/holdout\", \"independent monetary oracle\", \"tenant/lease regressions preserved\"], \"input_hashes\": {\"commit\": \"c49dfc2e504d13b54cab6279c9d86625ce14609e\", \"review\": \"984cd70e55dc3aa69ccfc3e2adc0ad9c901f1b4eecb1dba45449fa9b52701dfb\", \"validation\": \"332b926f0cb3868c8d3024d9c4df70a414741f306f1fb0794be635141b972016\"}, \"test_hash\": \"332b926f0cb3868c8d3024d9c4df70a414741f306f1fb0794be635141b972016\", \"test_scope\": \"U5 golden/API negative cases plus U2/U3/F7/FH1/FH2/reference/contracts/provider regressions\", \"tests\": 58}",
+        "result": "pass",
+        "verification_id": "U5-PATH2-ENGINE-r1-integrated-v1",
+        "verifier": "post-integration scoped fixture runner",
+        "verifier_version": "u5-r1"
+      },
+      {
+        "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
+        "candidate_hash": "c118f438b493a9e67971a3ac9465c643c64540a9",
+        "created_at": "2026-09-22 13:18:15",
+        "details_json": "{\"acceptance_scope\": \"U5 Nautilus primary-adapter slice; not full U5 or production\", \"exit_code\": 0, \"expected_outcomes\": [\"zero skipped tests\", \"no result publication on cancel/deadline/tamper\", \"worker crash kills owned engine child\", \"runtime identity and native fills are fail-closed\"], \"input_hashes\": {\"commit\": \"c118f438b493a9e67971a3ac9465c643c64540a9\", \"review\": \"37b2662f184764cc16a8e43421228931db8275d1e5a180e3214b4b53e0de87b1\", \"validation\": \"bf02387cb1875e7eb636387c071c4f9eb220658a431dc3191d59d89cc9e895c6\"}, \"test_hash\": \"bf02387cb1875e7eb636387c071c4f9eb220658a431dc3191d59d89cc9e895c6\", \"test_scope\": \"Nautilus adapter oracles, runtime isolation, cancellation/timeout/crash, raw-fill reconciliation plus U5/U2/U3/F7/FH/reference regressions\", \"tests\": 66}",
+        "result": "pass",
+        "verification_id": "U5-NAUTILUS-ADAPTER-r1-candidate-v1",
+        "verifier": "integrated scoped fixture runner",
+        "verifier_version": "u5-nautilus-r1"
+      },
+      {
+        "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
+        "candidate_hash": "c118f438b493a9e67971a3ac9465c643c64540a9",
+        "created_at": "2026-09-22 13:18:15",
+        "details_json": "{\"acceptance_scope\": \"U5 Nautilus primary-adapter slice; not full U5 or production\", \"exit_code\": 0, \"expected_outcomes\": [\"zero skipped tests\", \"no result publication on cancel/deadline/tamper\", \"worker crash kills owned engine child\", \"runtime identity and native fills are fail-closed\"], \"input_hashes\": {\"commit\": \"c118f438b493a9e67971a3ac9465c643c64540a9\", \"review\": \"37b2662f184764cc16a8e43421228931db8275d1e5a180e3214b4b53e0de87b1\", \"validation\": \"056fcb6f7964e05a4460b1dc7ef3df1a67c7a1a249f8c7db9086aaab28e2e373\"}, \"test_hash\": \"056fcb6f7964e05a4460b1dc7ef3df1a67c7a1a249f8c7db9086aaab28e2e373\", \"test_scope\": \"Nautilus adapter oracles, runtime isolation, cancellation/timeout/crash, raw-fill reconciliation plus U5/U2/U3/F7/FH/reference regressions; post-commit on Nam\", \"tests\": 66}",
+        "result": "pass",
+        "verification_id": "U5-NAUTILUS-ADAPTER-r1-integrated-v1",
+        "verifier": "post-commit integrated fixture runner",
+        "verifier_version": "u5-nautilus-r1"
+      }
+    ]
+  }
+}

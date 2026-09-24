@@ -1,0 +1,9 @@
+{
+  "isError": false,
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n\"run_id\": \"7684646101493876814\",\"generated_bars\": 24, \"generated_ticks\": 123264, \"symbol\": \"EURUSD\", \"initial_deposit\": 10000.00, \"withdrawal\": 0.00, \"profit\": 0.00, \"deals\": 0, \"trades\": 0\n}"
+    }
+  ]
+}

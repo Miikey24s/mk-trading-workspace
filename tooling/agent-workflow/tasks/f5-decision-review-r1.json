@@ -1,0 +1,26 @@
+{
+  "id": "f5-decision-review-r1",
+  "objective": "READ-ONLY independent review of the F5 foundation decision candidate. Inspect the staged candidate and pinned verification/evidence. Decide whether the exact candidate hash is internally supported by the supplied evidence: PATH-2 must mean new foundation plus only clean source-level reuse, PATH-1/PATH-3 rejections and revisit triggers must follow from evidence, D01-D13 and E01-E18 must not overclaim beyond measured scope, and no F6/live/deploy authorization may be implied. Pay special attention to prior F3 open gaps versus the later evidence packets that claim to close them. Do not execute code/tests, edit files, use network, or infer unsupplied evidence. Return PASS, FINDINGS, or BLOCKED with concrete file references and distinguish blocking errors from stated limitations.",
+  "acceptance": [
+    "Review exact F5-decision-candidate-r1.md and F5-verification-r2.json rather than author narrative",
+    "Check PATH-2 selection, PATH-1/PATH-3 rejection logic, D01-D13, E01-E18, stack locks, and release/revisit limitations against supplied evidence",
+    "Flag any claim that exceeds evidence, any unresolved decisive F5 gate, any hash mismatch, or any silent change of frozen acceptance semantics",
+    "Return PASS only if no material finding invalidates the F5 decision candidate; otherwise FINDINGS or BLOCKED with file references"
+  ],
+  "allowed_files": [],
+  "require_changes": false,
+  "inputs": [
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/artifacts/F5-decision-candidate-r1.md", "destination": "review/F5-decision-candidate-r1.md"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/artifacts/F5-verification-r2.json", "destination": "review/F5-verification-r2.json"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/artifacts/F2-safety-candidate-r4.json", "destination": "evidence/F2-safety-candidate-r4.json"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/artifacts/F3-spikes-candidate-r2.json", "destination": "evidence/F3-spikes-candidate-r2.json"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/f5-change-path-r2/F5-change-path-r2.json", "destination": "evidence/F5-change-path-r2.json"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/f5-runtime-r3/F5-runtime-r3.json", "destination": "evidence/F5-runtime-r3.json"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/f5-client-r2/F5-client-r2.json", "destination": "evidence/F5-client-r2.json"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/f5-engine-r2/evidence/E-PERF-04-engine-r2-20260921T222501Z-bfab36154d0a.json", "destination": "evidence/F5-engine-r2.json"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/f5-postgres-r2/F5-postgres-r2.json", "destination": "evidence/F5-postgres-r2.json"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/f5-fresh-r1/F5-fresh-r1.json", "destination": "evidence/F5-fresh-r1.json"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/f5-port-r1/F5-port-r1.json", "destination": "evidence/F5-port-r1.json"},
+    {"root": "roadmap", "source": "planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/artifacts/F5-evidence-r1.json", "destination": "evidence/F5-evidence-r1.json"}
+  ]
+}

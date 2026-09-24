@@ -1,0 +1,99 @@
+{
+  "candidate_sha256": "8358423bc10f481ffc0aae1e5e714965d07933848a4032b8a13e0f36c68f6cc9",
+  "checks": [
+    {
+      "check": "candidate-ready-for-review",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "raw-hash-pinned",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "semantics-before-speed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf02-same-semantics",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf02-crash-cancel-recovery",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf03-transaction-correct",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf03-no-store-winner",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf04-harness-valid",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf04-no-engine-winner",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "port-local-split-rehearsed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "port-not-remote-proof",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "change-rules-pass",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "path-unselected",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "decisive-path-unrun-listed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "actual-postgres-unrun-listed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "actual-parquet-arrow-unrun-listed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "actual-client-chart-unrun-listed",
+      "detail": "",
+      "pass": true
+    }
+  ],
+  "limits": [
+    "Verifier validates the isolated F3 packet only; it does not update ledger/STATE or accept F5/PATH.",
+    "External PostgreSQL/Parquet/Arrow/client/chart/engine-finalist/remote-host experiments remain outside this packet."
+  ],
+  "raw_sha256": "603f9a914383c43200ef56d87c2e36239ebbc90908b5f085f4601e825c315d98",
+  "result": "PASS",
+  "schema": 1,
+  "task": "F3-SPIKES",
+  "verified_at_utc": "2026-09-21T20:55:14.131732+00:00"
+}

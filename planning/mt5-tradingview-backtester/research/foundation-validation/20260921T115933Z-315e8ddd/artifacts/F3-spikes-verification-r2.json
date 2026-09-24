@@ -1,0 +1,165 @@
+{
+  "candidate_sha256": "d9d52ea7662093c8eb1c6a0e75843915aefdfb021774a15ea0920f5be5b177a4",
+  "checks": [
+    {
+      "check": "candidate-ready-for-review",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "raw-hash-pinned",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "semantics-before-speed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf02-same-semantics",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf02-crash-cancel-recovery",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf02-reviewed-both-current-candidates-fail-frozen-w1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf02-reviewed-baseline-artifact-pinned",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf02-compute-boundary-deferred-not-accepted",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf02-decisive-cjob-cperf-gaps-listed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf02-owner-loss-timing-target",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf02-owner-loss-model-limited",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf03-transaction-correct",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf03-no-store-winner",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf04-harness-valid",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "perf04-no-engine-winner",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "port-local-split-rehearsed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "port-not-remote-proof",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "change-rules-pass",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "change-breaking-migration-requires-data-state-mapping",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "benchmark-source-test-verifier-hashes-pinned",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "benchmark-provenance-complete",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "path-unselected",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "decisive-path-unrun-listed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "actual-postgres-unrun-listed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "actual-parquet-arrow-unrun-listed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "actual-client-chart-unrun-listed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "actual-engine-finalists-unrun-listed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "remote-topology-unrun-listed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "product-slice-change-unrun-listed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "epath-unrun-listed",
+      "detail": "",
+      "pass": true
+    }
+  ],
+  "limits": [
+    "Verifier validates the isolated F3 packet only; it does not update ledger/STATE or accept F5/PATH.",
+    "External PostgreSQL/Parquet/Arrow/client/chart/engine-finalist/remote-host experiments remain outside this packet.",
+    "Representative product-slice E-CHANGE-01 rehearsal and E-PATH-01 remain outside this packet."
+  ],
+  "raw_sha256": "f0e62c2bdd30c40b0fcbbf0720e9ec688cdbb921fbc623e7c3e6eb83104675e2",
+  "result": "PASS",
+  "schema": 1,
+  "task": "F3-SPIKES",
+  "verified_at_utc": "2026-09-21T21:16:42.035817+00:00"
+}

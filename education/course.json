@@ -1,0 +1,28 @@
+{
+  "version": "1.1",
+  "built_on": "2026-09-07",
+  "updated_on": "2026-09-08",
+  "title": "Forex từ nền tảng đến thực hành có kiểm chứng",
+  "primary_language": "vi",
+  "english_role": "terminology_support_only",
+  "market": "forex",
+  "instrument": "EUR/USD",
+  "start_lesson": "M01-L01",
+  "sessions_estimate": 24,
+  "practice_is_additional": true,
+  "practice_plan_file": "practice/practice-plan.md",
+  "guided_demo_starts_at": "M01-L01",
+  "early_platform_orientation": "M06-L01",
+  "live_practice_required_for_completion": false,
+  "status": "authored_not_learner_validated",
+  "modules": [
+    {"id": "M01", "file": "modules/01-giao-dich.md", "title": "Cơ chế giao dịch", "gate": "Phiếu lệnh và dòng tiền", "lessons": [{"id": "M01-L01", "title": "Hai giá mua/bán"}, {"id": "M01-L02", "title": "Market, limit, stop, SL và TP"}, {"id": "M01-L03", "title": "Trạng thái tài khoản"}]},
+    {"id": "M02", "file": "modules/02-don-vi-chi-phi.md", "title": "Đơn vị và chi phí", "gate": "P/L Buy/Sell và chi phí có đơn vị đúng", "lessons": [{"id": "M02-L01", "title": "Pip, point và lot"}, {"id": "M02-L02", "title": "Tính tiền lời/lỗ"}, {"id": "M02-L03", "title": "Chi phí thực sự của một lệnh"}]},
+    {"id": "M03", "file": "modules/03-rui-ro.md", "title": "Quản lý rủi ro", "gate": "Kế hoạch rủi ro và cỡ lệnh mô phỏng", "lessons": [{"id": "M03-L01", "title": "Chọn cỡ lệnh từ mức SL"}, {"id": "M03-L02", "title": "Đo kết quả bằng R"}, {"id": "M03-L03", "title": "Drawdown và chuỗi thua"}]},
+    {"id": "M04", "file": "modules/04-doc-thi-truong.md", "title": "Đọc thị trường", "gate": "Ghi chú chart bằng dữ kiện, tách dự báo", "lessons": [{"id": "M04-L01", "title": "Nến và khung thời gian"}, {"id": "M04-L02", "title": "Xu hướng, vùng giá và điều chưa biết"}, {"id": "M04-L03", "title": "Tin tức, phiên và giờ Việt Nam"}]},
+    {"id": "M05", "file": "modules/05-phuong-phap.md", "title": "Phương pháp kiểm tra được", "gate": "Luật đóng băng trước thử nghiệm, báo cáo cả thua và chi phí", "lessons": [{"id": "M05-L01", "title": "Viết một bộ luật rõ ràng"}, {"id": "M05-L02", "title": "Kiểm tra quá khứ không nhìn trước"}, {"id": "M05-L03", "title": "Đọc kết quả và giới hạn mẫu"}]},
+    {"id": "M06", "file": "modules/06-demo.md", "title": "Thực hành demo", "gate": "Phiếu lệnh và nhật ký demo trung thực", "lessons": [{"id": "M06-L01", "title": "Kiểm tra nền tảng mô phỏng"}, {"id": "M06-L02", "title": "Một phiên có quy trình"}, {"id": "M06-L03", "title": "Nhật ký và sửa lỗi thực thi"}]},
+    {"id": "M07", "file": "modules/07-quy-viet-nam.md", "title": "Quỹ và Việt Nam", "gate": "Bảng luật có nguồn, thời điểm, sản phẩm và điều chưa biết", "lessons": [{"id": "M07-L01", "title": "Quỹ cấp vốn thực sự là gì?"}, {"id": "M07-L02", "title": "Giới hạn lỗ và điều kiện trả thưởng"}, {"id": "M07-L03", "title": "Đối tác, hợp đồng và Việt Nam"}]},
+    {"id": "M08", "file": "modules/08-tot-nghiep.md", "title": "Bài cuối khóa", "gate": "Hồ sơ tái kiểm tra được và quyết định có căn cứ", "lessons": [{"id": "M08-L01", "title": "Ghép hồ sơ giao dịch"}, {"id": "M08-L02", "title": "Tự bảo vệ kết luận"}, {"id": "M08-L03", "title": "Quyết định bước tiếp theo"}]}
+  ]
+}

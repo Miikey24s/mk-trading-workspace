@@ -1,0 +1,2 @@
+lane=A
+payload=red green blue

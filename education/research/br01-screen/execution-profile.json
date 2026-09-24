@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "strategy": "BR-01 v0",
+  "scope": "Offline EURUSD H1/USD single-episode development 2018-2020; no orders",
+  "price_exceptions_accepted": true,
+  "price_exception_authority": "User: fix remaining issues except small price-data discrepancies; 2026-09-13",
+  "price_exception_policy": "Retain original prices, no gap filling or feed splicing; report tick gaps on affected trades; absent execution quote stays unresolved",
+  "execution_basis_approved": true,
+  "execution_basis": "Approved research simulation, not exact historical FTMO replication; see RESEARCH-RUN-PROTOCOL.md",
+  "archive_proxy_approved": true,
+  "approval_reference": "User approved implementation after archive/proxy cost explanation on 2026-09-13",
+  "calendar_path": "quality-data/br01-engine/news-archive-proxy-2be1efab804c.json.gz",
+  "calendar_sha256_file": "778a468f0e9a783cd24c1f46fa030e9df88b582a11f7ed16c1f85d0e1af03806",
+  "cost_scenarios": {
+    "conservative": {"commission_per_lot_side": 5, "entry_slippage_points": 2, "market_exit_slippage_points": 3},
+    "stress": {"commission_per_lot_side": 7, "entry_slippage_points": 5, "market_exit_slippage_points": 10}
+  },
+  "execution": {
+    "commission_per_lot_side": 5,
+    "contract": 100000,
+    "min_lot": 0.01,
+    "lot_step": 0.01,
+    "max_lot": 50,
+    "leverage": 30,
+    "stops_points": 0,
+    "entry_slippage_points": 2,
+    "market_exit_slippage_points": 3,
+    "reserve_points": 10,
+    "initial": 10000,
+    "daily_loss": 50,
+    "total_loss": 150
+  },
+  "evidence": {
+    "contract_lot_leverage": "Read-only FTMO demo metadata recorded in QDM-FULL-AUDIT.md; current not historical",
+    "official_symbols_url": "https://ftmo.com/en/symbols/",
+    "official_symbols_observed_20260913": "EUR/USD contract 100000, Swing leverage 1:30, commission 5 USD/LOT. Page did not explicitly resolve per-side versus round-trip in inspected text. Not substituted for historical fee schedule.",
+    "news_candidate": "Existing EPSOFT ForexFactory archive; approved proxy with NY DST assumption and whole-day uncertainty blocks, not a verified pre-session FTMO calendar",
+    "commission_choice": "5 USD/lot each side is a conservative research assumption, not a claim that FTMO actually charges 10 round-trip. Stress is 7 each side. Fixed before P/L."
+  }
+}

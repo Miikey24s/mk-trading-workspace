@@ -1,0 +1,71 @@
+{
+  "artifact_schema": 1,
+  "captured_at_local": "2026-09-21T19:03:43.3054370+07:00",
+  "scope": "VALIDATION_ONLY",
+  "plan_pool_ceiling": 10,
+  "plan_hashes": {
+    "EXECUTION-ENTRYPOINT.md": "1186354D409DC7AACC4035979BFFAC61504F6D7BCD67D885C53B3DB62DBB3273",
+    "PRODUCT-COMPLETION-PLAN.md": "B709097E9FC0C9898E5582644629287FF7240183ECE7E837EB97D324EC84715F",
+    "COORDINATOR-OPERATING-PLAN.md": "2241CCD873D668E02426BC3A1DF3DEB88B0042A4DAE9D9319EDF8745E6678457",
+    "FOUNDATION-RESEARCH-PLAN.md": "ABE0A374EA688CEE7793654574EA4D86FA7B7B0929447EC2D635801A3A02D64A",
+    "FOUNDATION-TARGET-DOSSIER.md": "23C0062F2D4F43188F6BE3E9CE171496D9253BEED2C0192570D11A9BF0C9BB4C"
+  },
+  "product_source": {
+    "path": "D:/ANNAM/TradingWorkspace/projects/mt5-tradingview-backtester",
+    "branch": "Nam",
+    "head": "7c63a2f85a7d211ec2feb51fe045b6aa92d62dcd",
+    "tracked_modified": 19,
+    "untracked": 35,
+    "policy": "read-only; do not modify, revert, stage, commit or run broker/live"
+  },
+  "webgpt_source": {
+    "path": "D:/ANNAM/AI/codex-chatgpt-web-cockpit",
+    "head": "989bea4ee3232020b6d13a7495618f6cf406e611",
+    "clean": true,
+    "concurrency_source_sha256": "A3EEA85BDDAF8CF0D4D44359323E0A76E9671664C8C9BB9A8872308B1641D9B7",
+    "per_instance_browser_cap": 5
+  },
+  "instances": [
+    {
+      "id": "primary",
+      "port": 17841,
+      "enabled": true,
+      "health": "connection_refused",
+      "usable_now": false
+    },
+    {
+      "id": "instance-2",
+      "port": 17842,
+      "enabled": true,
+      "health": "ok",
+      "version": "5.0.8",
+      "accepting_turns": true,
+      "active_http_turns": 0,
+      "active_browser_turns": 1,
+      "usable_now": true
+    }
+  ],
+  "capacity_conclusion": {
+    "configured_if_both_instances_healthy": 10,
+    "verified_healthy_instance_capacity": 5,
+    "conservative_additional_browser_slots_at_capture": 4,
+    "host_multi_agent_capacity": "unknown_until_native_spawn",
+    "routed_two_instance_capacity_10": "not_verified",
+    "admission_rule": "min(plan ceiling, healthy provider capacity, host capacity, local resource budget, ready independent tasks)"
+  },
+  "native_tools": {
+    "discovered": [
+      "multi_agent_v1__spawn_agent",
+      "multi_agent_v1__wait_agent",
+      "multi_agent_v1__send_input",
+      "multi_agent_v1__close_agent",
+      "multi_agent_v1__resume_agent"
+    ],
+    "note": "No model override will be used; children inherit parent route/model."
+  },
+  "limitations": [
+    "Primary instance 17841 was not restarted because restart/config changes are out of scope.",
+    "A healthy registry entry does not prove routed multi-instance balancing or affinity.",
+    "No broker, MT5, holdout, paid provider, credential or product source action was performed."
+  ]
+}

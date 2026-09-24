@@ -1,0 +1,223 @@
+{
+  "conclusions": {
+    "E-CHANGE-01": {
+      "disposition": "KEEP_F1_C2_COMPATIBILITY_AND_NAMED_MIGRATION_OWNERSHIP_RULES",
+      "evidence": {
+        "contract_change_rules_rehearsed": true,
+        "limit": "This proves the version/migration rule is executable in a small fixture only. A representative product-slice change rehearsal is still decisive before D11/F5.",
+        "repo_structure_winner": null
+      },
+      "not_a_winner": "No repo structure or PATH selected."
+    },
+    "E-PERF-02": {
+      "coverage": {
+        "covered_or_partial": {
+          "C-BT-03": "cancel fixture exits without published result",
+          "C-JOB-01": "fixture child termination -> logical lease loss -> fenced requeue/retry/publish; <=30s logical target compared explicitly",
+          "C-JOB-02": "stale fence cannot overwrite newer attempt result"
+        },
+        "decisive_missing_or_failed": {
+          "C-JOB-03": "candidate-hash versus verification-receipt mismatch publication case not exercised by E-PERF-02",
+          "C-PERF-01": "full W0 metadata/query plus enqueue/ack workload not measured",
+          "C-PERF-02": "FAILED measured control-latency <=2x W0 for both candidates; execution/reconcile starvation and explicit backpressure traffic are also not fully exercised",
+          "C-PERF-05": "W2 progressive saturation sweep not run"
+        }
+      },
+      "disposition": "REJECT_CURRENT_SHARED_THREADS_AND_SPLIT_PROCESS_FIXTURES_FOR_W1; DEFER_COMPUTE_BOUNDARY_DECISION",
+      "evidence": {
+        "compute_boundary_accepted": false,
+        "compute_isolation_signal": "split-process control p95 is lower under the same compute semantics",
+        "disposition_basis": "The immutable reviewed baseline has both runtime candidates above frozen C-PERF-02 W1 <=2x. The provenance-complete r2 rerun is supplemental and noisy; it cannot promote the boundary while reviewed failure evidence and decisive C-JOB/C-PERF gaps remain.",
+        "limit": "stdlib Python/GIL CPU fixture only; not a scheduler/framework winner and not production certification",
+        "shared_threads_meets_fixture_w1_control_ratio": false,
+        "split_process_meets_fixture_w1_control_ratio": true,
+        "supplemental_rerun_note": "r2 rerun did not reproduce both failures; this increases uncertainty rather than authorizing acceptance"
+      },
+      "not_a_winner": "Neither measured runtime candidate satisfies frozen W1 C-PERF-02; no compute boundary, scheduler, framework, or runtime product candidate is accepted."
+    },
+    "E-PERF-03": {
+      "disposition": "KEEP_SQLITE_ONLY_AS_LOCAL_PROXY",
+      "evidence": {
+        "canonical_store_winner": null,
+        "limit": "No PostgreSQL candidate, networked transaction semantics, HA, or production-sized dataset was tested; this cannot select D04/D03 storage winners.",
+        "sqlite_proxy_result": "correct on this modest local contention fixture"
+      },
+      "not_a_winner": "No PostgreSQL/SQLite/storage winner selected."
+    },
+    "E-PERF-04": {
+      "disposition": "ADOPT_ORACLE_FIRST_ENGINE_COMPARISON_HARNESS; DEFER_ENGINE_SELECTION",
+      "evidence": {
+        "engine_winner": null,
+        "harness_valid": true,
+        "limit": "This validates oracle-first comparison mechanics only. Actual engine finalists, DST/calendar corpus, large stateful fill models, and W2 memory/runtime remain unrun."
+      },
+      "not_a_winner": "Decimal/integer fixture implementations are not product engine finalists."
+    },
+    "E-PORT-01": {
+      "disposition": "KEEP_VERSIONED_MOVABLE_SEAM_BASELINE; REMOTE_READY_UNPROVEN",
+      "evidence": {
+        "limit": "Both endpoints are on one machine and use a tiny stdlib TCP fixture. Remote host, TLS/auth, locator/object storage, deployment, and network partitions remain untested.",
+        "local_split_seam_rehearsed": true,
+        "remote_or_cloud_ready": false
+      },
+      "not_a_winner": "No transport/framework/cloud topology selected."
+    }
+  },
+  "contract_revision": "F1-C2",
+  "decisive_experiments_unrun": [
+    {
+      "experiment": "E-PERF-02",
+      "missing": "Decisive C-JOB/C-PERF coverage after both current runtime candidates failed the frozen W1 <=2x control-latency threshold",
+      "why_decisive": "C-JOB-03, C-PERF-01 and C-PERF-05 remain unrun, while C-PERF-02 is failed/incomplete; compute boundary must remain deferred"
+    },
+    {
+      "experiment": "E-PERF-01",
+      "missing": "Actual Parquet/Arrow storage layouts and bytes-read/RAM/cold-warm benchmark",
+      "why_decisive": "stdlib environment has no pyarrow; storage/layout winner remains unknown"
+    },
+    {
+      "experiment": "E-PERF-03",
+      "missing": "Actual PostgreSQL transactional candidate under equivalent contention/backup/restore workload",
+      "why_decisive": "SQLite result is only a local proxy and cannot select the canonical transactional store"
+    },
+    {
+      "experiment": "E-PERF-04",
+      "missing": "Actual research/backtest engine finalists with full F1 corpus, DST/calendar, stateful fills/costs and W2 memory/runtime",
+      "why_decisive": "current Decimal/integer harness validates method and oracle ordering, not an engine winner"
+    },
+    {
+      "experiment": "E-CLIENT-01",
+      "missing": "Actual client/chart finalists on 5,000-candle UX fixture plus license/change-effort checks",
+      "why_decisive": "no browser/client/chart dependency is available or authorized in this local stdlib spike"
+    },
+    {
+      "experiment": "E-PORT-01",
+      "missing": "Remote-host topology, object/data locator, auth/TLS and real network partition/reconnect behavior",
+      "why_decisive": "localhost split process is not cloud/remote readiness proof"
+    },
+    {
+      "experiment": "E-CHANGE-01",
+      "missing": "Representative real product-slice broker-fake/client/versioned-contract change with build/test graph",
+      "why_decisive": "fixture module counts are not measured repository change cost"
+    },
+    {
+      "experiment": "E-PATH-01",
+      "missing": "PATH-1/2/3 capability rehearsal after relevant F2/F3 packets are complete",
+      "why_decisive": "explicitly prohibited from selecting/ranking PATH before prerequisite evidence"
+    }
+  ],
+  "environment": {
+    "available_physical_memory_bytes_at_start": 16968024064,
+    "captured_at_utc": "2026-09-21T21:16:00.302298+00:00",
+    "logical_cpu_count": 6,
+    "machine": "AMD64",
+    "os": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+    "python_executable": "C:\\Users\\MIIKEY\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "python_implementation": "CPython",
+    "python_version": "3.12.10",
+    "release": "11",
+    "run_disk_free_bytes_at_start": 254718230528,
+    "sqlite_version": "3.49.1",
+    "stdlib_only": true,
+    "system": "Windows",
+    "total_physical_memory_bytes": 34302349312
+  },
+  "evidence": {
+    "benchmark_provenance": {
+      "dependency_versions": {
+        "external_packages": [],
+        "note": "No third-party benchmark dependency was installed or imported by this F3 fixture.",
+        "stdlib_only": true
+      },
+      "environment_noise_and_current_load": {
+        "after": {
+          "available_physical_memory_bytes": 17501814784,
+          "captured_at_utc": "2026-09-21T21:16:29.214148+00:00",
+          "load_average_1_5_15": null,
+          "notes": [
+            "Interactive Windows workstation; benchmark was not run on an isolated or pinned host.",
+            "Background OS/user activity was not suppressed; reported distributions include that noise.",
+            "Windows stdlib fixture does not provide a trustworthy host CPU utilization counter, so current CPU load is noted as unmeasured rather than inferred."
+          ],
+          "process_working_set_bytes": null,
+          "threading_active_count": 1
+        },
+        "before": {
+          "available_physical_memory_bytes": 16959803392,
+          "captured_at_utc": "2026-09-21T21:16:00.416606+00:00",
+          "load_average_1_5_15": null,
+          "notes": [
+            "Interactive Windows workstation; benchmark was not run on an isolated or pinned host.",
+            "Background OS/user activity was not suppressed; reported distributions include that noise.",
+            "Windows stdlib fixture does not provide a trustworthy host CPU utilization counter, so current CPU load is noted as unmeasured rather than inferred."
+          ],
+          "process_working_set_bytes": null,
+          "threading_active_count": 1
+        },
+        "interpretation": "Results are local evidence with uncontrolled workstation noise; do not extrapolate them to production throughput/SLOs."
+      },
+      "protocol": {
+        "cold_state": "not claimed; process, filesystem cache, and OS scheduler state were not reset between repetitions",
+        "measured_state": "warm after one discarded fixture warmup unless an experiment explicitly states otherwise",
+        "raw_results": "Each measured experiment retains per-run samples plus distributions with min/max range; no fastest-run-only reporting.",
+        "repetitions": 5,
+        "run_order": "fixed deterministic experiment order; E-PERF-02 repetition order is W0 baseline, shared-process-threads, split-process-workers",
+        "warmups": 1
+      },
+      "runtime_versions": {
+        "multiprocessing_start_method_for_workers": "spawn",
+        "python": "3.12.10",
+        "python_implementation": "CPython",
+        "sqlite": "3.49.1"
+      },
+      "source_files": {
+        "source": {
+          "path": "f3_spikes.py",
+          "sha256": "9aa25fa31c87feb31b98d5dbcabff460e64e970e08ec818edd161bc172aeb015"
+        },
+        "tests": {
+          "path": "test_f3_spikes.py",
+          "sha256": "20cae614aa4d2c18b4b88f62147d1f6008e4cce8cedd47d238f848b197c90c37"
+        },
+        "verifier": {
+          "path": "verify_f3_spikes.py",
+          "sha256": "3d40f394699766e804fccfe5e1cd6d5a21c8ecef083387e53d192ae32cbeffe5"
+        }
+      }
+    },
+    "raw_artifact": "F3-spikes-raw-r2.json",
+    "raw_artifact_sha256": "f0e62c2bdd30c40b0fcbbf0720e9ec688cdbb921fbc623e7c3e6eb83104675e2",
+    "reviewed_baseline_raw_sha256": "603f9a914383c43200ef56d87c2e36239ebbc90908b5f085f4601e825c315d98",
+    "semantics_pass_before_speed": true
+  },
+  "generated_at_utc": "2026-09-21T21:16:29.228953+00:00",
+  "inputs": {
+    "f1_c1_sha256": "c46e631f8239115179962cd1acdfe1e7a50cb32c4e2677559e3568c16b789430",
+    "f1_c2_sha256": "0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902",
+    "repetitions": 5,
+    "seed": 315833,
+    "warmups": 1
+  },
+  "limits": [
+    "No external network was used; E-PORT-01 is localhost only.",
+    "No broker, MT5, provider, protected holdout, product repository, plan document, controller ledger, or STATE mutation was used.",
+    "Audited environment lacks duckdb/pyarrow/pandas/fastapi/sqlalchemy; no dependency was installed.",
+    "SQLite is a transactional proxy only; it does not stand in for an actual PostgreSQL comparison.",
+    "No Parquet/Arrow, client/chart, real engine finalist, or E-PATH-01 winner evidence exists in this packet.",
+    "Actual PostgreSQL, Parquet/Arrow, client/chart, real engine finalists, remote topology, representative product-slice change, and E-PATH-01 remain explicitly unrun."
+  ],
+  "path_decision": {
+    "PATH-1": "NOT_SELECTED",
+    "PATH-2": "NOT_SELECTED",
+    "PATH-3": "NOT_SELECTED",
+    "ranked": false,
+    "reason": "E-PATH-01 remains unrun/prohibited until prerequisite F2/F3 evidence exists.",
+    "selected": null
+  },
+  "result": "READY_FOR_REVIEW",
+  "run": "20260921T115933Z-315e8ddd",
+  "schema": 1,
+  "scope": "local-only stdlib F3 decision-changing spikes; no broker/MT5/provider/holdout/external network",
+  "task": "F3-SPIKES"
+}

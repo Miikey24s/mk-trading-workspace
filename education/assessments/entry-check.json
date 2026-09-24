@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "purpose": "Tutor reference: trading foundations with English terminology support, not a language course, IQ test, CEFR test, or trading qualification. D04 is retired; retain its numeric key for historical integrity only.",
+  "delivery": "One exercise at a time. Do not display reference answers before an independent attempt unless the learner requests a solution.",
+  "items": [
+    {
+      "id": "D01",
+      "skills": ["percentage_changes"],
+      "prompt_en": "An account starts with VND 1,000,000. It loses 10%, then gains 10% on its new balance. Ignore fees. What is the final balance? Explain your calculation.",
+      "prompt_vi": "Một tài khoản có 1.000.000 đồng. Tài khoản giảm 10%, rồi tăng 10% tính trên số tiền còn lại. Bỏ qua phí. Cuối cùng còn bao nhiêu tiền? Giải thích cách bạn tính.",
+      "terms": {"balance": "số dư", "lose": "mất/giảm", "gain": "tăng/lãi"},
+      "inputs": {"initial_vnd": 1000000, "loss_pct": 10, "gain_pct": 10},
+      "expected": {"final_balance_vnd": 990000},
+      "reasoning_required": "The two percentages apply to different balances; final amount is below the initial amount.",
+      "common_error": "Cancels +10% and -10% as if their bases were the same.",
+      "hint_1_vi": "Sau lần giảm đầu tiên, số tiền dùng để tính lần tăng là bao nhiêu?",
+      "transfer": {"initial_vnd": 2000000, "loss_pct": 20, "gain_pct": 20, "expected_final_balance_vnd": 1920000}
+    },
+    {
+      "id": "D02",
+      "skills": ["fees_and_net_pnl"],
+      "prompt_en": "In 10 simulated trades, 6 winners earn VND 100,000 each and 4 losers lose VND 200,000 each, before fees. Each completed trade costs VND 10,000 in total fees. What is the net profit or loss? Does winning most trades guarantee a profit?",
+      "prompt_vi": "Có 10 giao dịch giả lập: 6 lệnh lời 100.000 đồng/lệnh và 4 lệnh lỗ 200.000 đồng/lệnh, đều chưa trừ phí. Tổng phí cho mỗi lệnh đã hoàn tất là 10.000 đồng. Kết quả sau phí là lời hay lỗ bao nhiêu? Thắng phần lớn số lệnh có bảo đảm có lời không?",
+      "terms": {"fee": "phí", "net profit": "lợi nhuận sau các chi phí đang xét", "loss": "khoản lỗ"},
+      "inputs": {"wins": 6, "win_vnd": 100000, "losses": 4, "loss_vnd": 200000, "fee_per_trade_vnd": 10000},
+      "expected": {"net_pnl_vnd": -300000},
+      "reasoning_required": "Subtract losses and fees on every completed trade, including winners; win frequency alone is insufficient.",
+      "common_error": "Calls 60% winners profitable or subtracts fees only on losing trades.",
+      "hint_1_vi": "Hãy tách tổng tiền lời, tổng tiền lỗ và tổng phí thành ba khoản.",
+      "transfer": {
+        "id": "D02-T01",
+        "prompt_en": "In a separate example, you complete 5 simulated trades: 2 winners earn VND 300,000 each, and 3 losers lose VND 100,000 each, before fees. Each completed trade costs VND 10,000 in total fees. There are no other costs. What is the net profit or loss? Show your calculation.",
+        "prompt_vi": "Ví dụ mới, độc lập với bài trước: có 5 giao dịch giả lập. 2 lệnh thắng, mỗi lệnh lời 300.000 đồng; 3 lệnh thua, mỗi lệnh lỗ 100.000 đồng, đều trước phí. Mỗi lệnh hoàn tất có tổng phí 10.000 đồng; không có chi phí khác. Kết quả sau phí là lời hay lỗ bao nhiêu? Ghi phép tính.",
+        "inputs": {"wins": 2, "win_vnd": 300000, "losses": 3, "loss_vnd": 100000, "fee_per_trade_vnd": 10000},
+        "expected_net_pnl_vnd": 250000,
+        "reasoning_required": "Multiply each per-trade result by its trade count; subtract fees on all five trades. This is immediate transfer after a worked example, not a delayed retention test."
+      }
+    },
+    {
+      "id": "D03",
+      "skills": ["probability"],
+      "prompt_en": "A fair coin has a 50% chance of heads on each independent toss. After three tails in a row, what is the chance of heads on the next toss? Explain. This is a coin example, not a model of market prices.",
+      "prompt_vi": "Một đồng xu cân bằng có xác suất ra ngửa 50% ở mỗi lần tung; các lần tung độc lập với nhau. Sau ba lần sấp liên tiếp, xác suất lần tiếp theo ra ngửa là bao nhiêu? Giải thích. Đây là ví dụ đồng xu, không phải giả định về giá thị trường.",
+      "terms": {"independent": "độc lập", "probability": "xác suất", "in a row": "liên tiếp"},
+      "expected": {"next_heads_probability": 0.5},
+      "reasoning_required": "Independence means previous outcomes do not alter the specified probability of the next toss; do not generalize independence to market returns.",
+      "common_error": "Thinks heads is due after a losing streak or answers the probability of a four-toss sequence.",
+      "hint_1_vi": "Trong đề này, việc các lần tung độc lập có ý nghĩa gì?",
+      "tutor_note": {
+        "source": "https://arxiv.org/abs/2310.04153",
+        "checked_on": "2026-09-07",
+        "finding": "Study abstract reports 350,757 physical coin flips, probability of landing on the initial side 0.508; with randomized starting side, heads probability 0.500. This concerns coins, not dice, and same-side bias is not an effect of a preceding outcome streak.",
+        "teaching": "Distinguish the stated fair independent mathematical model from empirical tossing mechanics. Explain fair as equal probabilities and independent as previous outcomes not changing the next probability. D03 answer is 50% under its assumptions; do not infer that the learner believes in streak compensation from mentioning physical same-side bias."
+      },
+      "transfer": {
+        "id": "D03-T01",
+        "prompt_en": "In a simulated game, each independent round has a 60% chance of winning. After four losses in a row, what is the chance of winning the next round? Explain.",
+        "prompt_vi": "Trong một trò chơi mô phỏng, mỗi lượt có xác suất thắng 60% và các lượt độc lập. Sau 4 lượt thua liên tiếp, xác suất thắng ở lượt tiếp theo là bao nhiêu? Vì sao?",
+        "given_win_probability": 0.6,
+        "expected_next_win_probability": 0.6,
+        "reasoning_required": "Independence preserves the stipulated 60% probability; it neither forces 50% nor creates compensation after losses. This is a stipulated simulation, not a claim about trading."
+      }
+    },
+    {
+      "id": "D04",
+      "status": "retired_by_user_scope_change",
+      "retired_on": "2026-09-07",
+      "retirement_reason": "User clarified English is terminology support only, not an independent learning or assessment objective. Do not administer this item or penalize its unfinished parts.",
+      "skills": ["english_comprehension", "english_expression", "percentage_changes"],
+      "prompt_en": "The account balance fell from 200 dollars to 180 dollars.",
+      "prompt_vi": "Đọc câu tiếng Anh phía trên: số dư tăng hay giảm, thay đổi bao nhiêu USD và bao nhiêu phần trăm so với ban đầu? Nếu được, viết một câu tiếng Anh ngắn diễn đạt kết quả; phần tiếng Anh được nhận xét riêng.",
+      "translation_policy": "Do not pretranslate the sentence in this English-comprehension item. Translate on request and record language help separately.",
+      "inputs": {"initial_usd": 200, "final_usd": 180},
+      "expected": {"direction": "down", "change_usd": -20, "change_pct": -10},
+      "reasoning_required": "Understands fell as a decrease and uses 200 as the percentage base. English grammar does not determine the numeracy grade.",
+      "common_error": "Understands the math but not 'fell', or divides by the final balance.",
+      "hint_1_vi": "Bạn đang vướng từ tiếng Anh nào, hay vướng phép tính?"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "artifact_schema": 1,
+  "task": "CO-01",
+  "scope": "local fixture controller only",
+  "implementation": {
+    "controller.py_sha256": "DD8D70F3DBFAFA77F7A812F9F94834C9CA0AD5C33B292BD2CBA07AE075445029",
+    "test_controller.py_sha256": "FB34B4E344F50BF0BA31AD144484BA84A3F5DF79DD01AA38ABB38BD6B4C2C3C0",
+    "bootstrap.py_sha256": "0A3AFC780D14A01B9E7A7DE625FECFC27C5666A173BD6F9FB994E9EAB0CAFF21",
+    "database": "SQLite",
+    "journal_mode": "WAL",
+    "synchronous": "FULL",
+    "authority": "single controller role + owner generation"
+  },
+  "state_contract": {
+    "task_states": [
+      "planned",
+      "ready",
+      "dispatch_prepared",
+      "running",
+      "candidate",
+      "verifying",
+      "integration_pending",
+      "accepted",
+      "failed",
+      "blocked",
+      "uncertain",
+      "canceled",
+      "superseded"
+    ],
+    "acceptance_path": "candidate -> passing verification + passing review -> integration intent -> observed candidate revision -> accepted",
+    "direct_acceptance": "rejected",
+    "child_authoritative_mutation": "rejected",
+    "active_duplicate_attempt": "rejected by unique index for task+input",
+    "cas": "task transitions require expected prior state, expected task revision, and current owner generation; authoritative transitions increment revision",
+    "verification_receipt": "requires test_hash, input_hashes, test_scope, expected_outcomes, and exit_code before a verification can be recorded"
+  },
+  "focused_validation": {
+    "command": "python -B -m unittest -v test_controller.py",
+    "result": "16 passed",
+    "compile_check": "python -m py_compile controller.py test_controller.py bootstrap.py record_co00.py record_co00_r2.py reconcile_current.py",
+    "compile_result": "pass",
+    "cases": [
+      "unique task + compare-and-set transition",
+      "child cannot mutate authoritative state",
+      "accepted cannot be seeded or reached by generic transition",
+      "dependency gate enforced at ready promotion and dispatch",
+      "generic control transition cannot skip the state machine",
+      "duplicate active dispatch rejected",
+      "dispatch_prepared task state and event recorded atomically with attempt preparation",
+      "forced mid-transaction dispatch failure rolls back attempt/task/event atomically",
+      "stale task revision rejected even when status matches",
+      "foreign-task candidate cannot be integrated into another task",
+      "failed verification/review blocks integration even when a pass also exists",
+      "late result cannot downgrade accepted task",
+      "promotion-before-ledger-finalize recovery",
+      "torn/modified snapshot rejected by checksum"
+    ]
+  },
+  "known_limits_before_CO-02_CO-05": [
+    "Owner takeover is generation-fenced and requires explicit confirmation that the old owner is inactive; fresh-root runtime proof remains CO-05 work.",
+    "Snapshot export/checksum writes are atomic and stale snapshots can be rejected by event revision; broader recovery scenarios remain CO-02/CO-05 work.",
+    "No native child dispatch is wired into this controller yet; CO-03 owns that proof.",
+    "This is orchestration state for a local validation run, not product trading state."
+  ]
+}

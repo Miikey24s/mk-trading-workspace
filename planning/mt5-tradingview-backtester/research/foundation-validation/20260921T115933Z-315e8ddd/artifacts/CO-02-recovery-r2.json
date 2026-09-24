@@ -1,0 +1,70 @@
+{
+  "artifact_schema": 1,
+  "task": "CO-02",
+  "revision": 2,
+  "scope": "local orchestration fixture recovery only",
+  "implementation": {
+    "controller.py_sha256": "75707D0AF2B669C0F89F24C14BD32A4D0D8343208FBA99428FBA51F25265CF43",
+    "test_controller.py_sha256": "A4E5F7199FF0768218792C504196A637DF49AC926BDE9792B297E0566AD61811"
+  },
+  "fault_cases": [
+    {
+      "case": "dispatch prepared then controller connection closes/reopens",
+      "expected": "attempt/task remain dispatch_prepared and duplicate redispatch is rejected"
+    },
+    {
+      "case": "late uncertainty arrives after acceptance",
+      "expected": "accepted task/attempt cannot be downgraded"
+    },
+    {
+      "case": "forced task update failure after attempt insert",
+      "expected": "transaction rollback leaves no attempt/event and task remains ready"
+    },
+    {
+      "case": "snapshot bytes are modified/torn",
+      "expected": "checksum validation rejects snapshot"
+    },
+    {
+      "case": "snapshot predates a mark_attempt_running mutation",
+      "expected": "authoritative mutation appends an event and minimum revision rejects stale snapshot"
+    },
+    {
+      "case": "promotion observed before ledger finalize",
+      "expected": "wrong revision is rejected; matching candidate revision finalizes once"
+    },
+    {
+      "case": "fresh owner takeover with old owner still attempting writes",
+      "expected": "takeover requires external inactive confirmation; generation increments; stale add_task and transition are fenced"
+    }
+  ],
+  "durability": {
+    "sqlite_transaction": "BEGIN IMMEDIATE + rollback/commit",
+    "sqlite_journal_mode": "WAL",
+    "sqlite_synchronous": "FULL",
+    "snapshot_write": "temp file + flush/fsync + atomic replace",
+    "checksum_sidecar_write": "temp file + flush/fsync + atomic replace",
+    "snapshot_revision": "latest authoritative event sequence; every authoritative mutation appends an event"
+  },
+  "focused_validation": {
+    "suite": "python -B -m unittest -v test_controller.py",
+    "result": "16 passed",
+    "co02_cases_present": [
+      "test_prepared_dispatch_survives_reopen_and_blocks_duplicate_dispatch",
+      "test_late_result_cannot_overwrite_accepted_task",
+      "test_prepare_attempt_rolls_back_if_later_task_update_fails",
+      "test_snapshot_checksum_rejects_torn_or_modified_export",
+      "test_stale_snapshot_rejected_after_attempt_running_mutation",
+      "test_promotion_before_finalize_recovery",
+      "test_takeover_requires_confirmation_and_fences_old_generation"
+    ]
+  },
+  "review_history": {
+    "r1": "failed: state revision missed some mutations; add_task was not generation-fenced",
+    "r2_changes": "authoritative mutations append events; add_task requires caller generation and stale owner is tested"
+  },
+  "limits": [
+    "This proves controller/storage recovery semantics on a local fixture, not provider/browser process resurrection.",
+    "Fresh-root end-to-end recovery from files remains CO-05.",
+    "No broker/execution exactly-once claim is made."
+  ]
+}

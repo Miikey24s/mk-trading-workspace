@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "task": "F2-SAFETY",
+  "candidate_sha256": "884dc6e9522399d9b0ce8ecab9c60e78e36ec8c5f0ba999a0bc217fb287b4cc6",
+  "reviewer_locator": "/root/review_f2",
+  "verdict": "FAIL",
+  "findings": [
+    {
+      "severity": "blocker",
+      "finding": "E-TENANT-01 fixture seams trust workspace_id without current principal/membership authorization; direct read/job submit can cross tenant boundaries."
+    },
+    {
+      "severity": "blocker",
+      "finding": "E-SAFE-04 owner epoch/lease predicate is not coupled to the broker send path; a stale owner can still reach submit/send."
+    },
+    {
+      "severity": "blocker",
+      "finding": "E-RESTORE-01 proof hashes artifact bytes but does not independently validate restored metadata/lineage content and hashes."
+    },
+    {
+      "severity": "high",
+      "finding": "E-SAFE-05 replace/order/position reconciliation is incomplete; replace events do not affect reconciliation output."
+    },
+    {
+      "severity": "medium",
+      "finding": "Retry/risk seeds cover operation ordering but not meaningful concurrent read/check/write interleavings."
+    }
+  ],
+  "required_revision": "new immutable candidate; do not rewrite r2",
+  "limits": [
+    "Reviewer confirmed 15/15 existing tests pass, so the failure is test/oracle coverage and fixture semantics rather than a red test suite.",
+    "Real broker/MT5/provider/OS/fsync behavior remains outside F2."
+  ]
+}

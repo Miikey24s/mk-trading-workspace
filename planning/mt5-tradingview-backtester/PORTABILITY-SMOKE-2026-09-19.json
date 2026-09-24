@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "execution_adapter": "local-simulator",
+    "execution_state_http": 200,
+    "full_product_complete": false,
+    "learn_overview_http": 200,
+    "live_execution_enabled": false,
+    "workspace_status_http": 200
+  },
+  "copied_education_owner": true,
+  "copied_project_layout": "TradingWorkspace/projects/mt5-tradingview-backtester",
+  "isolated_venv": true,
+  "mt5_connection_attempted": false,
+  "platform": "win32",
+  "python": "3.12.10",
+  "requirements_sha256": "6b8626132f0069d124df219cf3d864d36513822673e70758e0ec0e883a0422b3",
+  "schema_version": "portability-smoke-v1"
+}

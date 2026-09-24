@@ -1,0 +1,67 @@
+{
+  "base_sha256": "c46e631f8239115179962cd1acdfe1e7a50cb32c4e2677559e3568c16b789430",
+  "candidate_sha256": "0e0c6d2eab782517a5274e5113f32a4b7980a6604397be73045a06076a2f9902",
+  "checks": [
+    {
+      "check": "base-hash-pinned",
+      "pass": true
+    },
+    {
+      "check": "retention-fields",
+      "pass": true
+    },
+    {
+      "check": "unknown-does-not-expire",
+      "pass": true
+    },
+    {
+      "check": "crash-window-C-EXE-03A",
+      "pass": true
+    },
+    {
+      "check": "crash-window-C-EXE-03B",
+      "pass": true
+    },
+    {
+      "check": "crash-window-C-EXE-03C",
+      "pass": true
+    },
+    {
+      "check": "crash-window-C-EXE-04A",
+      "pass": true
+    },
+    {
+      "check": "crash-window-C-EXE-04B",
+      "pass": true
+    },
+    {
+      "check": "fresh-environment-case",
+      "pass": true
+    },
+    {
+      "check": "compatibility-window",
+      "pass": true
+    },
+    {
+      "check": "migration-owner",
+      "pass": true
+    },
+    {
+      "check": "path-ranking-still-prohibited",
+      "pass": true
+    },
+    {
+      "check": "f2-f3-dependency-explicit",
+      "pass": true
+    }
+  ],
+  "contract_revision": "F1-C2",
+  "limits": [
+    "F1-C2 is an experiment contract, not an F5 PATH decision or production retention policy.",
+    "Broker/live/provider/remote deployment and final vendor choices remain outside this validation contract."
+  ],
+  "result": "PASS",
+  "schema": 1,
+  "task": "F1-CONTRACT",
+  "verified_at": "2026-09-21T20:39:34.491622Z"
+}
