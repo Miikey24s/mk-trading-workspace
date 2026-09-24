@@ -1,0 +1,27 @@
+{
+  "acceptance": [
+    "Replay visible rows exactly match the immutable dataset prefix at the declared cutoff",
+    "Replay dataset identity, future-row flag and research timeframe/range boundary reconcile or fail closed",
+    "Tampered prefixes, missing cutoffs and mismatched dataset/future flags are rejected",
+    "The comparison does not infer future fills or execution outcomes",
+    "Focused cutoff tests and isolated integrated regression pass without broker capability"
+  ],
+  "allowed_files": [
+    "foundation_v2/trading_workspace_v2/research_validation.py",
+    "foundation_v2/tests/test_u5b_replay_compare.py",
+    "foundation_v2/tests/validate_u5_slice.py"
+  ],
+  "base_revision": "a21895abc8300ad99d3dd1a9308d54fe344a38c0",
+  "candidate_revision": "e5522d8b9fae1cdef6f00f88799ed0abcda062e1",
+  "dependencies": [
+    "U5B-PROTECTIVE-MARGIN-r1"
+  ],
+  "residual_scope": [
+    "manual replay versus engine strategy decisions and trade/fill timing parity",
+    "slippage/execution-model comparison on the same segment",
+    "U5c chronological OOS/walk-forward/stress/bounded sweep",
+    "broker/live/production acceptance"
+  ],
+  "safety": "Local synthetic/disposable validation only; no broker, MT5 execution, holdout opening, external provider, paid API, deployment, or secret action.",
+  "task": "U5B-REPLAY-CUTOFF-r1"
+}

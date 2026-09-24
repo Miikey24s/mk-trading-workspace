@@ -1,6 +1,6 @@
 {
   "snapshot_schema": 1,
-  "state_revision": 223,
+  "state_revision": 247,
   "tables": {
     "attempts": [
       {
@@ -419,9 +419,37 @@
         "namespace": "u5b-protective-margin-r1",
         "owner_generation": 3,
         "route_locator": "local",
-        "status": "running",
+        "status": "accepted",
         "task_id": "U5B-PROTECTIVE-MARGIN-r1",
-        "updated_at": "2026-09-22 13:29:30"
+        "updated_at": "2026-09-24 13:05:15"
+      },
+      {
+        "attempt_id": "U5A-CHECKPOINT-ADMISSION-r1-a1",
+        "base_revision": "280263f2d0280c68ad64af801589bec197f4e7cd",
+        "child_locator": "/root/u5a_path2 + /root integration",
+        "created_at": "2026-09-24 14:43:37",
+        "error": null,
+        "input_hash": "51cebd92076496e0cb39c7f36b05d387a69481acaa8f26b828ebb61a6db77214",
+        "namespace": "local-integrated-followup",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "U5A-CHECKPOINT-ADMISSION-r1",
+        "updated_at": "2026-09-24 14:43:37"
+      },
+      {
+        "attempt_id": "U5B-REPLAY-CUTOFF-r1-a1",
+        "base_revision": "a21895abc8300ad99d3dd1a9308d54fe344a38c0",
+        "child_locator": "/root/u5b_replay_compare + /root integration",
+        "created_at": "2026-09-24 14:43:37",
+        "error": null,
+        "input_hash": "21af22e4bb5128c2a9b362621e6d6509cc3f7295a3483ed9a5f7eb3a849e8b2a",
+        "namespace": "local-integrated-followup",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "U5B-REPLAY-CUTOFF-r1",
+        "updated_at": "2026-09-24 14:43:37"
       }
     ],
     "candidates": [
@@ -647,6 +675,30 @@
         "attempt_id": "U5-NAUTILUS-ADAPTER-r1-a1",
         "created_at": "2026-09-22 13:18:15",
         "provenance_json": "{\"commit\": \"c118f438b493a9e67971a3ac9465c643c64540a9\", \"review\": \"37b2662f184764cc16a8e43421228931db8275d1e5a180e3214b4b53e0de87b1\", \"validation\": \"bf02387cb1875e7eb636387c071c4f9eb220658a431dc3191d59d89cc9e895c6\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "fa191a018077848b566bb0a24949601d2f0cb022",
+        "artifact_path": "git:fa191a018077848b566bb0a24949601d2f0cb022",
+        "attempt_id": "U5B-PROTECTIVE-MARGIN-r1-a1",
+        "created_at": "2026-09-24 13:03:18",
+        "provenance_json": "{\"candidate_validation\": \"c550b50c7f2d3a31ef392289793447d1935c6fcc70fd543275f3fbc2c01c460d\", \"review\": \"07fa22f94778a6833f668cb5f336456b5643bfea4d980289d2c27812f770a9c5\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "a21895abc8300ad99d3dd1a9308d54fe344a38c0",
+        "artifact_path": "git:a21895abc8300ad99d3dd1a9308d54fe344a38c0",
+        "attempt_id": "U5A-CHECKPOINT-ADMISSION-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "provenance_json": "{\"reviewer\": \"/root/u5_committed_review\", \"validation_receipt\": \"U5-FOLLOWUP-F6-validation-r1.json\", \"validation_sha256\": \"a6e009a712e5127c7c89438d17ff31fa07aecfc9d47ad18ba337168edff09e84\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "e5522d8b9fae1cdef6f00f88799ed0abcda062e1",
+        "artifact_path": "git:e5522d8b9fae1cdef6f00f88799ed0abcda062e1",
+        "attempt_id": "U5B-REPLAY-CUTOFF-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "provenance_json": "{\"reviewer\": \"/root/u5_committed_review\", \"validation_receipt\": \"U5-FOLLOWUP-F6-validation-r1.json\", \"validation_sha256\": \"a6e009a712e5127c7c89438d17ff31fa07aecfc9d47ad18ba337168edff09e84\"}",
         "schema_version": 1
       }
     ],
@@ -2657,6 +2709,222 @@
         "payload_json": "{\"child_locator\": \"/root\", \"route_locator\": \"local\"}",
         "seq": 223,
         "task_id": "U5B-PROTECTIVE-MARGIN-r1"
+      },
+      {
+        "attempt_id": "U5B-PROTECTIVE-MARGIN-r1-a1",
+        "created_at": "2026-09-24 13:03:18",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"fa191a018077848b566bb0a24949601d2f0cb022\", \"artifact_path\": \"git:fa191a018077848b566bb0a24949601d2f0cb022\"}",
+        "seq": 224,
+        "task_id": "U5B-PROTECTIVE-MARGIN-r1"
+      },
+      {
+        "attempt_id": "U5B-PROTECTIVE-MARGIN-r1-a1",
+        "created_at": "2026-09-24 13:05:15",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U5B-PROTECTIVE-MARGIN-r1-candidate-v1\"}",
+        "seq": 225,
+        "task_id": "U5B-PROTECTIVE-MARGIN-r1"
+      },
+      {
+        "attempt_id": "U5B-PROTECTIVE-MARGIN-r1-a1",
+        "created_at": "2026-09-24 13:05:15",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"U5B-PROTECTIVE-MARGIN-r1-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 226,
+        "task_id": "U5B-PROTECTIVE-MARGIN-r1"
+      },
+      {
+        "attempt_id": "U5B-PROTECTIVE-MARGIN-r1-a1",
+        "created_at": "2026-09-24 13:05:15",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U5B-PROTECTIVE-MARGIN-r1-integrated-v1\"}",
+        "seq": 227,
+        "task_id": "U5B-PROTECTIVE-MARGIN-r1"
+      },
+      {
+        "attempt_id": "U5B-PROTECTIVE-MARGIN-r1-a1",
+        "created_at": "2026-09-24 13:05:15",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"fa191a018077848b566bb0a24949601d2f0cb022\", \"target_base\": \"Nam:f85319e96e043f2ea377752e4d65b7bc773a86d3\"}",
+        "seq": 228,
+        "task_id": "U5B-PROTECTIVE-MARGIN-r1"
+      },
+      {
+        "attempt_id": "U5B-PROTECTIVE-MARGIN-r1-a1",
+        "created_at": "2026-09-24 13:05:15",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"fa191a018077848b566bb0a24949601d2f0cb022\"}",
+        "seq": 229,
+        "task_id": "U5B-PROTECTIVE-MARGIN-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 230,
+        "task_id": "U5A-CHECKPOINT-ADMISSION-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"accepted U5 dependency is present; scoped follow-up implementation and validation are complete\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 231,
+        "task_id": "U5A-CHECKPOINT-ADMISSION-r1"
+      },
+      {
+        "attempt_id": "U5A-CHECKPOINT-ADMISSION-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"280263f2d0280c68ad64af801589bec197f4e7cd\", \"from_revision\": 2, \"input_hash\": \"51cebd92076496e0cb39c7f36b05d387a69481acaa8f26b828ebb61a6db77214\", \"to_revision\": 3}",
+        "seq": 232,
+        "task_id": "U5A-CHECKPOINT-ADMISSION-r1"
+      },
+      {
+        "attempt_id": "U5A-CHECKPOINT-ADMISSION-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root/u5a_path2 + /root integration\", \"route_locator\": \"root/native2\"}",
+        "seq": 233,
+        "task_id": "U5A-CHECKPOINT-ADMISSION-r1"
+      },
+      {
+        "attempt_id": "U5A-CHECKPOINT-ADMISSION-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"a21895abc8300ad99d3dd1a9308d54fe344a38c0\", \"artifact_path\": \"git:a21895abc8300ad99d3dd1a9308d54fe344a38c0\"}",
+        "seq": 234,
+        "task_id": "U5A-CHECKPOINT-ADMISSION-r1"
+      },
+      {
+        "attempt_id": "U5A-CHECKPOINT-ADMISSION-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U5A-CHECKPOINT-ADMISSION-r1-integrated-v1\"}",
+        "seq": 235,
+        "task_id": "U5A-CHECKPOINT-ADMISSION-r1"
+      },
+      {
+        "attempt_id": "U5A-CHECKPOINT-ADMISSION-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"U5A-CHECKPOINT-ADMISSION-r1-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 236,
+        "task_id": "U5A-CHECKPOINT-ADMISSION-r1"
+      },
+      {
+        "attempt_id": "U5A-CHECKPOINT-ADMISSION-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"a21895abc8300ad99d3dd1a9308d54fe344a38c0\", \"target_base\": \"Nam:280263f2d0280c68ad64af801589bec197f4e7cd\"}",
+        "seq": 237,
+        "task_id": "U5A-CHECKPOINT-ADMISSION-r1"
+      },
+      {
+        "attempt_id": "U5A-CHECKPOINT-ADMISSION-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"a21895abc8300ad99d3dd1a9308d54fe344a38c0\"}",
+        "seq": 238,
+        "task_id": "U5A-CHECKPOINT-ADMISSION-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 239,
+        "task_id": "U5B-REPLAY-CUTOFF-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"accepted U5 dependency is present; scoped follow-up implementation and validation are complete\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 240,
+        "task_id": "U5B-REPLAY-CUTOFF-r1"
+      },
+      {
+        "attempt_id": "U5B-REPLAY-CUTOFF-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"a21895abc8300ad99d3dd1a9308d54fe344a38c0\", \"from_revision\": 2, \"input_hash\": \"21af22e4bb5128c2a9b362621e6d6509cc3f7295a3483ed9a5f7eb3a849e8b2a\", \"to_revision\": 3}",
+        "seq": 241,
+        "task_id": "U5B-REPLAY-CUTOFF-r1"
+      },
+      {
+        "attempt_id": "U5B-REPLAY-CUTOFF-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root/u5b_replay_compare + /root integration\", \"route_locator\": \"root/native2\"}",
+        "seq": 242,
+        "task_id": "U5B-REPLAY-CUTOFF-r1"
+      },
+      {
+        "attempt_id": "U5B-REPLAY-CUTOFF-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"e5522d8b9fae1cdef6f00f88799ed0abcda062e1\", \"artifact_path\": \"git:e5522d8b9fae1cdef6f00f88799ed0abcda062e1\"}",
+        "seq": 243,
+        "task_id": "U5B-REPLAY-CUTOFF-r1"
+      },
+      {
+        "attempt_id": "U5B-REPLAY-CUTOFF-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U5B-REPLAY-CUTOFF-r1-integrated-v1\"}",
+        "seq": 244,
+        "task_id": "U5B-REPLAY-CUTOFF-r1"
+      },
+      {
+        "attempt_id": "U5B-REPLAY-CUTOFF-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"U5B-REPLAY-CUTOFF-r1-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 245,
+        "task_id": "U5B-REPLAY-CUTOFF-r1"
+      },
+      {
+        "attempt_id": "U5B-REPLAY-CUTOFF-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"e5522d8b9fae1cdef6f00f88799ed0abcda062e1\", \"target_base\": \"Nam:a21895abc8300ad99d3dd1a9308d54fe344a38c0\"}",
+        "seq": 246,
+        "task_id": "U5B-REPLAY-CUTOFF-r1"
+      },
+      {
+        "attempt_id": "U5B-REPLAY-CUTOFF-r1-a1",
+        "created_at": "2026-09-24 14:43:37",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"e5522d8b9fae1cdef6f00f88799ed0abcda062e1\"}",
+        "seq": 247,
+        "task_id": "U5B-REPLAY-CUTOFF-r1"
       }
     ],
     "integration_intents": [
@@ -2859,6 +3127,36 @@
         "target_base": "Nam:387a58f4fd96337baa9d4d50cb1763982282f661",
         "task_id": "U5-NAUTILUS-ADAPTER-r1",
         "updated_at": "2026-09-22 13:18:15"
+      },
+      {
+        "attempt_id": "U5B-PROTECTIVE-MARGIN-r1-a1",
+        "candidate_hash": "fa191a018077848b566bb0a24949601d2f0cb022",
+        "created_at": "2026-09-24 13:05:15",
+        "promoted_revision": "fa191a018077848b566bb0a24949601d2f0cb022",
+        "state": "finalized",
+        "target_base": "Nam:f85319e96e043f2ea377752e4d65b7bc773a86d3",
+        "task_id": "U5B-PROTECTIVE-MARGIN-r1",
+        "updated_at": "2026-09-24 13:05:15"
+      },
+      {
+        "attempt_id": "U5A-CHECKPOINT-ADMISSION-r1-a1",
+        "candidate_hash": "a21895abc8300ad99d3dd1a9308d54fe344a38c0",
+        "created_at": "2026-09-24 14:43:37",
+        "promoted_revision": "a21895abc8300ad99d3dd1a9308d54fe344a38c0",
+        "state": "finalized",
+        "target_base": "Nam:280263f2d0280c68ad64af801589bec197f4e7cd",
+        "task_id": "U5A-CHECKPOINT-ADMISSION-r1",
+        "updated_at": "2026-09-24 14:43:37"
+      },
+      {
+        "attempt_id": "U5B-REPLAY-CUTOFF-r1-a1",
+        "candidate_hash": "e5522d8b9fae1cdef6f00f88799ed0abcda062e1",
+        "created_at": "2026-09-24 14:43:37",
+        "promoted_revision": "e5522d8b9fae1cdef6f00f88799ed0abcda062e1",
+        "state": "finalized",
+        "target_base": "Nam:a21895abc8300ad99d3dd1a9308d54fe344a38c0",
+        "task_id": "U5B-REPLAY-CUTOFF-r1",
+        "updated_at": "2026-09-24 14:43:37"
       }
     ],
     "meta": [
@@ -3131,6 +3429,33 @@
         "review_id": "U5-NAUTILUS-ADAPTER-r1-review-r1",
         "reviewer_locator": "/root/u5_nautilus_audit",
         "verdict": "pass"
+      },
+      {
+        "attempt_id": "U5B-PROTECTIVE-MARGIN-r1-a1",
+        "candidate_hash": "fa191a018077848b566bb0a24949601d2f0cb022",
+        "created_at": "2026-09-24 13:05:15",
+        "findings_json": "[]",
+        "review_id": "U5B-PROTECTIVE-MARGIN-r1-review-r1",
+        "reviewer_locator": "/root/u5b_review3",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "U5A-CHECKPOINT-ADMISSION-r1-a1",
+        "candidate_hash": "a21895abc8300ad99d3dd1a9308d54fe344a38c0",
+        "created_at": "2026-09-24 14:43:37",
+        "findings_json": "[{\"finding\": \"PASS: lease/attempt fencing and transaction-scoped admission cap are coherent in the final commit.\", \"severity\": \"info\"}, {\"finding\": \"This is durable progress/recovery checkpointing; mid-computation engine cursor/state resume remains open.\", \"severity\": \"residual\"}]",
+        "review_id": "U5A-CHECKPOINT-ADMISSION-r1-review-r1",
+        "reviewer_locator": "/root/u5_committed_review",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "U5B-REPLAY-CUTOFF-r1-a1",
+        "candidate_hash": "e5522d8b9fae1cdef6f00f88799ed0abcda062e1",
+        "created_at": "2026-09-24 14:43:37",
+        "findings_json": "[{\"finding\": \"PASS: immutable source prefix, dataset identity, future-row flag and exact decision boundary fail closed in the final commit.\", \"severity\": \"info\"}, {\"finding\": \"This proves cutoff/source reconciliation only; full manual replay versus engine trade/fill parity remains open.\", \"severity\": \"residual\"}]",
+        "review_id": "U5B-REPLAY-CUTOFF-r1-review-r1",
+        "reviewer_locator": "/root/u5_committed_review",
+        "verdict": "pass"
       }
     ],
     "tasks": [
@@ -3376,15 +3701,39 @@
       },
       {
         "acceptance_json": "[\"Existing fixed-horizon playbooks remain behaviorally compatible by default\", \"Optional protective mode uses explicit stop-loss/take-profit semantics and actual Nautilus contingent orders for supported cases\", \"A bar that can hit both stop and take-profit without lower-timeframe ordering fails closed before result publication; no invented intrabar winner\", \"Gap-through-stop/take-profit behavior is explicit and does not claim perfect trigger fills\", \"Insufficient-margin behavior uses an immutable research leverage/margin assumption and an independent oracle; it is not broker margin evidence\", \"Reference and Nautilus outputs reconcile for independent long/short stop, take-profit, horizon fallback, gap and insufficient-margin fixtures\", \"Native protective fills remain linked to the accepted ledger and existing cancel/deadline/crash isolation stays green\", \"Focused review and integrated regression pass before acceptance; manual/replay comparison, durable progress/checkpoints and U5c remain separate\"]",
-        "accepted_revision": null,
+        "accepted_revision": "fa191a018077848b566bb0a24949601d2f0cb022",
         "allowed_files_json": "[\"foundation_v2/engine_runtime/\", \"foundation_v2/trading_workspace_v2/\", \"foundation_v2/tests/\", \"foundation_v2/evidence/U5-*\", \"foundation_v2/README.md\"]",
         "dependencies_json": "[\"U5-NAUTILUS-ADAPTER-r1\"]",
-        "last_reason": "accepted Nautilus adapter; expanded U5b semantics are the next safe critical slice",
-        "revision": 4,
+        "last_reason": "verified promotion observed",
+        "revision": 8,
         "spec_hash": "f5dd2539c71fc36e60b17b85f4ad37584b95d588c0f32711df652691a1135881",
-        "status": "running",
+        "status": "accepted",
         "task_id": "U5B-PROTECTIVE-MARGIN-r1",
-        "updated_at": "2026-09-22 13:29:30"
+        "updated_at": "2026-09-24 13:05:15"
+      },
+      {
+        "acceptance_json": "[\"Research progress checkpoints persist in the canonical research_jobs authority\", \"Checkpoint writes are fenced by active lease owner/token/attempt and stale attempts cannot overwrite\", \"Expired-lease recovery retains durable checkpoint evidence for the next attempt\", \"Product worker admission uses one transaction-scoped gate and a configurable global active-job cap\", \"Isolated PostgreSQL/worker/browser regression remains passing without broker capability\"]",
+        "accepted_revision": "a21895abc8300ad99d3dd1a9308d54fe344a38c0",
+        "allowed_files_json": "[\"foundation_v2/trading_workspace_v2/store.py\", \"foundation_v2/trading_workspace_v2/research.py\", \"foundation_v2/trading_workspace_v2/worker.py\", \"foundation_v2/tests/test_fh1_job_lifecycle.py\"]",
+        "dependencies_json": "[\"U5-NAUTILUS-ADAPTER-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "51cebd92076496e0cb39c7f36b05d387a69481acaa8f26b828ebb61a6db77214",
+        "status": "accepted",
+        "task_id": "U5A-CHECKPOINT-ADMISSION-r1",
+        "updated_at": "2026-09-24 14:43:37"
+      },
+      {
+        "acceptance_json": "[\"Replay visible rows exactly match the immutable dataset prefix at the declared cutoff\", \"Replay dataset identity, future-row flag and research timeframe/range boundary reconcile or fail closed\", \"Tampered prefixes, missing cutoffs and mismatched dataset/future flags are rejected\", \"The comparison does not infer future fills or execution outcomes\", \"Focused cutoff tests and isolated integrated regression pass without broker capability\"]",
+        "accepted_revision": "e5522d8b9fae1cdef6f00f88799ed0abcda062e1",
+        "allowed_files_json": "[\"foundation_v2/trading_workspace_v2/research_validation.py\", \"foundation_v2/tests/test_u5b_replay_compare.py\", \"foundation_v2/tests/validate_u5_slice.py\"]",
+        "dependencies_json": "[\"U5B-PROTECTIVE-MARGIN-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "21af22e4bb5128c2a9b362621e6d6509cc3f7295a3483ed9a5f7eb3a849e8b2a",
+        "status": "accepted",
+        "task_id": "U5B-REPLAY-CUTOFF-r1",
+        "updated_at": "2026-09-24 14:43:37"
       }
     ],
     "verifications": [
@@ -3697,6 +4046,46 @@
         "verification_id": "U5-NAUTILUS-ADAPTER-r1-integrated-v1",
         "verifier": "post-commit integrated fixture runner",
         "verifier_version": "u5-nautilus-r1"
+      },
+      {
+        "attempt_id": "U5B-PROTECTIVE-MARGIN-r1-a1",
+        "candidate_hash": "fa191a018077848b566bb0a24949601d2f0cb022",
+        "created_at": "2026-09-24 13:05:15",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"zero skipped tests\", \"assumption disclosure tamper fails reconciliation\", \"same-bar dual-hit fails closed\", \"protective close-1ns ordering permits same-close signal then next-open entry\"], \"input_hashes\": {\"commit\": \"fa191a018077848b566bb0a24949601d2f0cb022\", \"review\": \"07fa22f94778a6833f668cb5f336456b5643bfea4d980289d2c27812f770a9c5\", \"validation\": \"c550b50c7f2d3a31ef392289793447d1935c6fcc70fd543275f3fbc2c01c460d\"}, \"review_sha256\": \"07fa22f94778a6833f668cb5f336456b5643bfea4d980289d2c27812f770a9c5\", \"scope\": \"U5b protective/margin local synthetic fixture; no broker/live/production\", \"skipped\": 0, \"test_hash\": \"c550b50c7f2d3a31ef392289793447d1935c6fcc70fd543275f3fbc2c01c460d\", \"test_scope\": \"protective and margin semantics plus integrated U5/U2/U3/F7/FH/reference regressions\", \"tests\": 76, \"validation\": \"foundation_v2/evidence/U5-protective-validation-r6.json\", \"validation_sha256\": \"c550b50c7f2d3a31ef392289793447d1935c6fcc70fd543275f3fbc2c01c460d\"}",
+        "result": "pass",
+        "verification_id": "U5B-PROTECTIVE-MARGIN-r1-candidate-v1",
+        "verifier": "integrated scoped fixture runner",
+        "verifier_version": "u5b-protective-r1"
+      },
+      {
+        "attempt_id": "U5B-PROTECTIVE-MARGIN-r1-a1",
+        "candidate_hash": "fa191a018077848b566bb0a24949601d2f0cb022",
+        "created_at": "2026-09-24 13:05:15",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"zero skipped tests\", \"assumption disclosure tamper fails reconciliation\", \"same-bar dual-hit fails closed\", \"protective close-1ns ordering permits same-close signal then next-open entry\"], \"input_hashes\": {\"commit\": \"fa191a018077848b566bb0a24949601d2f0cb022\", \"review\": \"07fa22f94778a6833f668cb5f336456b5643bfea4d980289d2c27812f770a9c5\", \"validation\": \"d452fada4ee76649ee5cd5caa5ddcf1f0eb4149797b28812d6f17e0e75bf1fdf\"}, \"post_commit\": true, \"review_sha256\": \"07fa22f94778a6833f668cb5f336456b5643bfea4d980289d2c27812f770a9c5\", \"scope\": \"U5b protective/margin local synthetic fixture; no broker/live/production\", \"skipped\": 0, \"test_hash\": \"d452fada4ee76649ee5cd5caa5ddcf1f0eb4149797b28812d6f17e0e75bf1fdf\", \"test_scope\": \"post-commit protective and margin semantics plus integrated U5/U2/U3/F7/FH/reference regressions\", \"tests\": 76, \"validation\": \"foundation_v2/evidence/U5-protective-validation-integrated-r1.json\", \"validation_sha256\": \"d452fada4ee76649ee5cd5caa5ddcf1f0eb4149797b28812d6f17e0e75bf1fdf\"}",
+        "result": "pass",
+        "verification_id": "U5B-PROTECTIVE-MARGIN-r1-integrated-v1",
+        "verifier": "post-commit integrated fixture runner",
+        "verifier_version": "u5b-protective-r1"
+      },
+      {
+        "attempt_id": "U5A-CHECKPOINT-ADMISSION-r1-a1",
+        "candidate_hash": "a21895abc8300ad99d3dd1a9308d54fe344a38c0",
+        "created_at": "2026-09-24 14:43:37",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"Research progress checkpoints persist in the canonical research_jobs authority\", \"Checkpoint writes are fenced by active lease owner/token/attempt and stale attempts cannot overwrite\", \"Expired-lease recovery retains durable checkpoint evidence for the next attempt\", \"Product worker admission uses one transaction-scoped gate and a configurable global active-job cap\", \"Isolated PostgreSQL/worker/browser regression remains passing without broker capability\"], \"input_hashes\": {\"base\": \"280263f2d0280c68ad64af801589bec197f4e7cd\", \"candidate\": \"a21895abc8300ad99d3dd1a9308d54fe344a38c0\", \"validation\": \"a6e009a712e5127c7c89438d17ff31fa07aecfc9d47ad18ba337168edff09e84\"}, \"test_hash\": \"a6e009a712e5127c7c89438d17ff31fa07aecfc9d47ad18ba337168edff09e84\", \"test_scope\": \"durable U5a job progress/recovery checkpoints, stale-writer fencing, atomic admission cap, plus isolated full F6 regression\", \"validation_checks\": {\"broker_execution_capability\": false, \"browser_desktop_mobile_pass\": true, \"immutable_result_read\": true, \"postgres_job_completed\": true, \"python_contract_tests_pass\": true, \"react_vite_build_pass\": true, \"separate_worker_process\": true}, \"validation_receipt\": \"U5-FOLLOWUP-F6-validation-r1.json\"}",
+        "result": "pass",
+        "verification_id": "U5A-CHECKPOINT-ADMISSION-r1-integrated-v1",
+        "verifier": "isolated F6 PostgreSQL/worker/browser regression runner",
+        "verifier_version": "u5-followups-20260924"
+      },
+      {
+        "attempt_id": "U5B-REPLAY-CUTOFF-r1-a1",
+        "candidate_hash": "e5522d8b9fae1cdef6f00f88799ed0abcda062e1",
+        "created_at": "2026-09-24 14:43:37",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"Replay visible rows exactly match the immutable dataset prefix at the declared cutoff\", \"Replay dataset identity, future-row flag and research timeframe/range boundary reconcile or fail closed\", \"Tampered prefixes, missing cutoffs and mismatched dataset/future flags are rejected\", \"The comparison does not infer future fills or execution outcomes\", \"Focused cutoff tests and isolated integrated regression pass without broker capability\"], \"input_hashes\": {\"base\": \"a21895abc8300ad99d3dd1a9308d54fe344a38c0\", \"candidate\": \"e5522d8b9fae1cdef6f00f88799ed0abcda062e1\", \"validation\": \"a6e009a712e5127c7c89438d17ff31fa07aecfc9d47ad18ba337168edff09e84\"}, \"test_hash\": \"a6e009a712e5127c7c89438d17ff31fa07aecfc9d47ad18ba337168edff09e84\", \"test_scope\": \"five replay-cutoff/source reconciliation cases plus isolated full F6 regression\", \"validation_checks\": {\"broker_execution_capability\": false, \"browser_desktop_mobile_pass\": true, \"immutable_result_read\": true, \"postgres_job_completed\": true, \"python_contract_tests_pass\": true, \"react_vite_build_pass\": true, \"separate_worker_process\": true}, \"validation_receipt\": \"U5-FOLLOWUP-F6-validation-r1.json\"}",
+        "result": "pass",
+        "verification_id": "U5B-REPLAY-CUTOFF-r1-integrated-v1",
+        "verifier": "isolated F6 PostgreSQL/worker/browser regression runner",
+        "verifier_version": "u5-followups-20260924"
       }
     ]
   }

@@ -1,0 +1,27 @@
+{
+  "acceptance": [
+    "Research progress checkpoints persist in the canonical research_jobs authority",
+    "Checkpoint writes are fenced by active lease owner/token/attempt and stale attempts cannot overwrite",
+    "Expired-lease recovery retains durable checkpoint evidence for the next attempt",
+    "Product worker admission uses one transaction-scoped gate and a configurable global active-job cap",
+    "Isolated PostgreSQL/worker/browser regression remains passing without broker capability"
+  ],
+  "allowed_files": [
+    "foundation_v2/trading_workspace_v2/store.py",
+    "foundation_v2/trading_workspace_v2/research.py",
+    "foundation_v2/trading_workspace_v2/worker.py",
+    "foundation_v2/tests/test_fh1_job_lifecycle.py"
+  ],
+  "base_revision": "280263f2d0280c68ad64af801589bec197f4e7cd",
+  "candidate_revision": "a21895abc8300ad99d3dd1a9308d54fe344a38c0",
+  "dependencies": [
+    "U5-NAUTILUS-ADAPTER-r1"
+  ],
+  "residual_scope": [
+    "true mid-computation resume from an internal engine cursor/state",
+    "multi-instance capacity validation beyond the scoped admission invariant",
+    "broker/live/production acceptance"
+  ],
+  "safety": "Local synthetic/disposable validation only; no broker, MT5 execution, holdout opening, external provider, paid API, deployment, or secret action.",
+  "task": "U5A-CHECKPOINT-ADMISSION-r1"
+}

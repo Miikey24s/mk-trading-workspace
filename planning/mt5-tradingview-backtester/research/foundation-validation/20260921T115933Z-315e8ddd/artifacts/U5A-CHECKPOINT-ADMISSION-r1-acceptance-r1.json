@@ -1,0 +1,33 @@
+{
+  "base": "280263f2d0280c68ad64af801589bec197f4e7cd",
+  "commit": "a21895abc8300ad99d3dd1a9308d54fe344a38c0",
+  "residual_scope": [
+    "true mid-computation resume from an internal engine cursor/state",
+    "multi-instance capacity validation beyond the scoped admission invariant",
+    "broker/live/production acceptance"
+  ],
+  "result": "PASS",
+  "review_findings": [
+    {
+      "finding": "PASS: lease/attempt fencing and transaction-scoped admission cap are coherent in the final commit.",
+      "severity": "info"
+    },
+    {
+      "finding": "This is durable progress/recovery checkpointing; mid-computation engine cursor/state resume remains open.",
+      "severity": "residual"
+    }
+  ],
+  "reviewer": "/root/u5_committed_review",
+  "task": "U5A-CHECKPOINT-ADMISSION-r1",
+  "validation": "U5-FOLLOWUP-F6-validation-r1.json",
+  "validation_checks": {
+    "broker_execution_capability": false,
+    "browser_desktop_mobile_pass": true,
+    "immutable_result_read": true,
+    "postgres_job_completed": true,
+    "python_contract_tests_pass": true,
+    "react_vite_build_pass": true,
+    "separate_worker_process": true
+  },
+  "validation_sha256": "a6e009a712e5127c7c89438d17ff31fa07aecfc9d47ad18ba337168edff09e84"
+}

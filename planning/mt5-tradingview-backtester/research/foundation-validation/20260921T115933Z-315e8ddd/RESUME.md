@@ -1,15 +1,17 @@
 # Execution Resume
 
-Updated 2026-09-22. Operational task state belongs to `ledger.sqlite3` and its
+Updated 2026-09-24. Operational task state belongs to `ledger.sqlite3` and its
 controller-generated `STATE.json`, not to the historical master-plan snapshots.
 
-Current STATE revision **219**: `U5-PATH2-ENGINE-r1` and
-`U5-NAUTILUS-ADAPTER-r1` are accepted. The Nautilus packet is
-`artifacts/U5-NAUTILUS-ADAPTER-packet-r1.json`; acceptance receipt is
-`artifacts/U5-NAUTILUS-ADAPTER-acceptance-r1.json`. Next code baseline is
-`f9d8c19` (`c118f43` implementation plus acceptance-evidence checkpoint).
+Current STATE revision **247**. In addition to the accepted reference engine and
+Nautilus adapter, `U5B-PROTECTIVE-MARGIN-r1`,
+`U5A-CHECKPOINT-ADMISSION-r1`, and `U5B-REPLAY-CUTOFF-r1` are accepted at their
+explicit scoped boundaries. Current product HEAD is
+`e5522d8b9fae1cdef6f00f88799ed0abcda062e1` on `Nam`; preceding U5a checkpoint
+commit is `a21895abc8300ad99d3dd1a9308d54fe344a38c0`.
 Goal remains active for the full product plan; this checkpoint is not completion.
-All Nautilus review/oracle children have finished; no U5 command session remains active.
+All U5 follow-up implementation/review children have finished; no validation
+PostgreSQL/API/web process from the 2026-09-24 acceptance run remains active.
 
 ## Verified Baseline
 
@@ -98,22 +100,59 @@ stable source hashes. Evidence:
 `foundation_v2/evidence/U5-nautilus-validation-integrated-r1.json`, and
 `foundation_v2/evidence/U5-nautilus-review-r1.json`.
 
-Next critical path is **expanded U5b baseline semantics**, starting with a bounded
-protective-order/margin/simultaneous-event feature corpus and then manual/replay
-comparison. Durable progress/restart checkpointing and concurrency admission remain
-separate U5a hardening; U5c chronology/stress/sweep follows after the baseline is sound.
+The subsequent protective/margin slice is accepted separately at STATE revision
+229 (`U5B-PROTECTIVE-MARGIN-r1`, implementation `fa191a0...`). It covers local
+synthetic protective-order, margin and simultaneous-event semantics only; it does
+not imply broker/live/production behavior.
+
+## Accepted U5a Checkpoint/Admission Slice
+
+`U5A-CHECKPOINT-ADMISSION-r1` is accepted at STATE revision 247, commit
+`a21895abc8300ad99d3dd1a9308d54fe344a38c0`. The canonical `research_jobs`
+authority now persists checkpoint/progress JSON. Writes are fenced by the current
+attempt, lease owner/token and non-expired lease, so stale attempts cannot overwrite
+newer state. The product worker has an explicit global active-job admission cap,
+serialized by a transaction-scoped PostgreSQL advisory lock; CLI/env default is 1.
+
+This is durable **progress/recovery** checkpointing, not mid-computation resume.
+After a crash/lease expiry the next attempt can inspect durable progress but engine
+calculation still restarts from the beginning. Acceptance receipt:
+`artifacts/U5A-CHECKPOINT-ADMISSION-r1-acceptance-r1.json`.
+
+## Accepted U5b Replay-Cutoff Slice
+
+`U5B-REPLAY-CUTOFF-r1` is accepted at STATE revision 247, commit
+`e5522d8b9fae1cdef6f00f88799ed0abcda062e1`. The reconciliation oracle requires
+the replay-visible rows to equal the immutable dataset prefix at the cutoff, binds
+the replay dataset hash to the research protocol, validates the future-row flag,
+and requires the research range to end exactly at the same decision boundary.
+Tampering/missing cutoff/mismatched identity fails closed; no future fill or
+execution outcome is inferred.
+
+This is cutoff/source reconciliation only, not full manual-replay-versus-engine
+trade/fill parity. Acceptance receipt:
+`artifacts/U5B-REPLAY-CUTOFF-r1-acceptance-r1.json`. Shared isolated validation is
+`artifacts/U5-FOLLOWUP-F6-validation-r1.json` (PostgreSQL + worker + Python suite +
+desktop/mobile browser fixture + Vite build; broker capability remained false).
 
 ## Still Open
 
-- Remaining U5a: durable progress/restart checkpoints and explicit concurrency
-  admission. Memory/process ceilings and worker-death cleanup are now verified;
-  runtime duration is still supervised rather than an OS CPU-time cap.
-- Full U5b: protective orders, margin, simultaneous-event semantics, shared
-  replay/manual comparison. Current model is explicit fixed-horizon only.
+- Remaining U5a: true mid-computation resume from an internal engine cursor/state;
+  broader multi-instance capacity validation. Runtime duration is still supervised
+  rather than an OS CPU-time cap.
+- Remaining U5b: full manual replay versus engine decision/trade/fill parity on
+  the same segment, including execution-model/slippage differences. Protective,
+  margin and cutoff/source slices are accepted only at their recorded local scope.
 - U5c: chronological OOS/walk-forward, purge/embargo, stress and bounded sweep.
-- U3c tenant-safe Learn bridge; U4 replay/renderer work; U6+ dependent work.
-- U1 visual approval, real licensed data, empirical validation, AI provider,
-  broker/demo/live, remote deployment and Miro gates remain separate and closed.
+- U3c tenant-safe Learn bridge; broader U4 replay/renderer acceptance; U6+ dependent work.
+- Replay viewer controlled-fixture Playwright acceptance passed on 2026-09-24 for
+  no-future-leak, broker lock, revision conflict reload, branch lineage, persisted
+  resume and responsive 1440/768/360. This is not real-data/full-U4/Figma acceptance.
+- Y25 Prop Firm Session remains requested but unimplemented end-to-end. Y26 Figma
+  Make round-trip has no verified capability/diff evidence yet.
+- U1 whole-product visual acceptance, real licensed data, empirical validation,
+  AI provider, broker/demo/live, remote deployment and Miro gates remain separate
+  and closed.
 - Unrelated dirty legacy files are preserved. Retained pure modules still
   include pre-existing untracked files; hashes must be pinned, and U9 clean-clone
   packaging is not complete.

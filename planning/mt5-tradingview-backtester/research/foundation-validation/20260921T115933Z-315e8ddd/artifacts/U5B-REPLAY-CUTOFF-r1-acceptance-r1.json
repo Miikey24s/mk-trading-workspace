@@ -1,0 +1,34 @@
+{
+  "base": "a21895abc8300ad99d3dd1a9308d54fe344a38c0",
+  "commit": "e5522d8b9fae1cdef6f00f88799ed0abcda062e1",
+  "residual_scope": [
+    "manual replay versus engine strategy decisions and trade/fill timing parity",
+    "slippage/execution-model comparison on the same segment",
+    "U5c chronological OOS/walk-forward/stress/bounded sweep",
+    "broker/live/production acceptance"
+  ],
+  "result": "PASS",
+  "review_findings": [
+    {
+      "finding": "PASS: immutable source prefix, dataset identity, future-row flag and exact decision boundary fail closed in the final commit.",
+      "severity": "info"
+    },
+    {
+      "finding": "This proves cutoff/source reconciliation only; full manual replay versus engine trade/fill parity remains open.",
+      "severity": "residual"
+    }
+  ],
+  "reviewer": "/root/u5_committed_review",
+  "task": "U5B-REPLAY-CUTOFF-r1",
+  "validation": "U5-FOLLOWUP-F6-validation-r1.json",
+  "validation_checks": {
+    "broker_execution_capability": false,
+    "browser_desktop_mobile_pass": true,
+    "immutable_result_read": true,
+    "postgres_job_completed": true,
+    "python_contract_tests_pass": true,
+    "react_vite_build_pass": true,
+    "separate_worker_process": true
+  },
+  "validation_sha256": "a6e009a712e5127c7c89438d17ff31fa07aecfc9d47ad18ba337168edff09e84"
+}

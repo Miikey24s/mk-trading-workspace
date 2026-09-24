@@ -1,0 +1,48 @@
+{
+  "artifact_hashes": {
+    "desktop_screenshot": "571c413daa7cd975c9766131a4cef92af062719525f4fdf77af6697e98774e33",
+    "mobile_screenshot": "c451ddb3edd50e61c518d580be877faaa11017546ab64c51f38326858fdc501b",
+    "web_package_lock": "8a6c8e897d5294678bb0960aa6114707f5fcc67d0e86ef71f249ed34b8c298c6"
+  },
+  "checks": {
+    "broker_execution_capability": false,
+    "browser_desktop_mobile_pass": true,
+    "immutable_result_read": true,
+    "postgres_job_completed": true,
+    "python_contract_tests_pass": true,
+    "react_vite_build_pass": true,
+    "separate_worker_process": true
+  },
+  "fixture": {
+    "dataset_sha256": "8e3d1b66112a44bef1e34a5aa3edb895534c7743d0a743e44d5a818c2515d8af",
+    "job_id": "1a2362952b0c49b08ff4943b7738fc55",
+    "metrics_schema_version": "metrics-v2",
+    "workspace_id": "tenant-ui"
+  },
+  "result": "PASS",
+  "schema": "F6-ACCEPTANCE-r1",
+  "scope": "PATH-2 local reference slice; synthetic QA data only; no broker/live/cloud/holdout action",
+  "ui": {
+    "pass": true,
+    "results": [
+      {
+        "canvasCount": 7,
+        "chartHeight": 220,
+        "chartWidth": 1025,
+        "fixture": "desktop",
+        "overflow": false,
+        "safety": "Khong co quyen gui lenh broker",
+        "screenshot": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\.runtime\\u5a-u5b-validation-20260924\\f6-desktop.png"
+      },
+      {
+        "canvasCount": 7,
+        "chartHeight": 220,
+        "chartWidth": 362,
+        "fixture": "mobile",
+        "overflow": false,
+        "safety": "Khong co quyen gui lenh broker",
+        "screenshot": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\.runtime\\u5a-u5b-validation-20260924\\f6-mobile.png"
+      }
+    ]
+  }
+}
