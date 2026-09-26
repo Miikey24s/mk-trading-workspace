@@ -47,3 +47,10 @@ Toàn bộ các dự án/repo được gom gọn trong thư mục `projects/`. M
    - Môi trường: `uv` (`uv run vi-dubber doctor`, `.\start-web.ps1`).
    - Đọc `projects/vi-dubber/README.md`.
 
+## Reverse Engineering & Security Tooling (`tooling/reverse-skill/`)
+
+Khi người dùng yêu cầu dịch ngược mã máy, mổ xẻ robot/chỉ báo MT5 (EX4/EX5/DLL), phân tích giải mã API sàn, bắt gói WebSocket hoặc kiểm tra an toàn thư viện:
+- **Tài liệu & Kịch bản:** Nằm tại `tooling/reverse-skill/skills/`.
+- **Định tuyến tự động:** Chạy `powershell -File tooling/reverse-skill/skills/scripts/master-route.ps1 -Hint "<nội dung>"`.
+- **Không gian làm việc đã mở khóa sẵn:** Dùng thư mục `tooling/reverse-skill/work/mk-open/`.
+
