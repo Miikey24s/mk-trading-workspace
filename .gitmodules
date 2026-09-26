@@ -14,3 +14,6 @@
 	path = projects/TradingAgents
 	url = https://github.com/Miikey24s/mk-trading-agents.git
 	branch = main
+[submodule "tooling/reverse-skill"]
+	path = tooling/reverse-skill
+	url = https://github.com/zhaoxuya520/reverse-skill.git
