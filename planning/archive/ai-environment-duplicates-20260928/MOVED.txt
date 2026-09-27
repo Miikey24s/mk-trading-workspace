@@ -1,0 +1,5 @@
+projects/_ps02b_accept_8e939fd/.agents/skills/trading-ui-qa -> planning\archive\ai-environment-duplicates-20260928\projects___ps02b_accept_8e939fd__.agents__skills__trading-ui-qa
+projects/_ps02c1_accept_9ff840b/.agents/skills/trading-ui-qa -> planning\archive\ai-environment-duplicates-20260928\projects___ps02c1_accept_9ff840b__.agents__skills__trading-ui-qa
+projects/_ps02c2_accept_5f6ef7e_r2/.agents/skills/trading-ui-qa -> planning\archive\ai-environment-duplicates-20260928\projects___ps02c2_accept_5f6ef7e_r2__.agents__skills__trading-ui-qa
+projects/_ps02c3_accept_95fd6db/.agents/skills/trading-ui-qa -> planning\archive\ai-environment-duplicates-20260928\projects___ps02c3_accept_95fd6db__.agents__skills__trading-ui-qa
+.worktrees/vi-dubber-p23-separation-progress/.agents/skills/vidubber-ui-qa -> planning\archive\ai-environment-duplicates-20260928\.worktrees__vi-dubber-p23-separation-progress__.agents__skills__vidubber-ui-qa
