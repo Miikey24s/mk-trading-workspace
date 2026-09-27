@@ -16,7 +16,7 @@
       "path": "planning/checkpoints/workspace-next-stage/RESUME.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\RESUME.md",
       "exists": true,
-      "sha256": "88afddb5acccc5b8ae1ecaea17f4389179bda464dff39ef95f0eb0402b6b2056",
+      "sha256": "7a5b5f092617975ad3fb3c302b33af27c0f08da4d8719a013e07b6a4969f42cb",
       "bytes": 24184
     },
     {
@@ -170,7 +170,7 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "2e56363aa34625132e22f6acb061d2183ad8cb10b211fde83f1b621af2ae6dcd",
+      "sha256": "679d5f5530c864c3316241644a6ab987bc45b17ef06d4cf1bc8fb7a787461c04",
       "bytes": 54575
     },
     {
@@ -877,7 +877,7 @@
       "path": "planning/CURRENT-CONTEXT.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\CURRENT-CONTEXT.md",
       "exists": true,
-      "sha256": "030eb429d7a64d7ef6601b03e6bc080ebc797d31c7c8e364b7ff78139c8ce217",
+      "sha256": "312c7051804d0604dc4cb68acafc52bccc37c83d1fbaab5efd58d8408da5b36b",
       "bytes": 12029
     },
     {
@@ -1015,6 +1015,6 @@
     }
   ],
   "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
-  "snapshot_root_commit": "c1da8eef734659552b78b04451a0b90eee057451",
+  "snapshot_root_commit": "aa7c5aea4520ffd9a231e2d6214e5da6afb98ecc",
   "frozen_authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
 }

@@ -2,7 +2,7 @@
 
 ## Refresh execution 2026-09-28
 
-- **Current routing snapshot (docs/evidence only):** root `c1da8ee` with environment audit **OK**; MT5 `89be935` (equal-low chart parity fixture and MQL/Pine time-boundary adapter); VI latest `8695129` (M6 I1 typed Learn reference, 43 focused tests; M5 startup/recovery remains PREP_ONLY); Quant `93f6a81` (PSI/OOD plus offline model-governance gate; **147 passed**); TradingAgents `f3b357f` (owner-reported **952 tests**).
+- **Current routing snapshot (docs/evidence only):** root `aa7c5ae` with environment audit **OK**; MT5 `89be935` (equal-low chart parity fixture and MQL/Pine time-boundary adapter); VI latest `8695129` (M6 I1 typed Learn reference, 43 focused tests; M5 startup/recovery remains PREP_ONLY); Quant `93f6a81` (PSI/OOD plus offline model-governance gate; **147 passed**); TradingAgents `f3b357f` (owner-reported **952 tests**).
 - **Shared UI:** `annam-productivity@1.1.0` has a complete snapshot/hash receipt, but remains `PREP_ONLY_CANDIDATE`; no consumer migration or runtime release is claimed.
 - **Job12:** same retained PID chain, `run.lock` PID `27804`, currently `running/pending`; M5 process-startup smoke remains PREP_ONLY; state/events/metrics: `projects/vi-dubber/work/job-8dc51f8a892aba21/{state.json,events.jsonl,metrics.json}`; detached stdout/stderr: `projects/vi-dubber/work/logs/job12-resume-20260928-chunked.{stdout,stderr}.log`. Preserve the job and do not start a duplicate worker; no whole-pipeline acceptance is claimed.
 - **Gates:** M5, M6 and M7 remain `PREP_ONLY`; M6 capability and M5 recovery receipts are software-only/offline evidence.
