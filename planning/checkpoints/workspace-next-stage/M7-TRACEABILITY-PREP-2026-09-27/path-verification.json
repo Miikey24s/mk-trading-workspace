@@ -16,8 +16,8 @@
       "path": "planning/checkpoints/workspace-next-stage/RESUME.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\RESUME.md",
       "exists": true,
-      "sha256": "663f3c03154e79c6f4e25396cc45c7088845cdcb2649186c9edf4bebd2efbbc8",
-      "bytes": 25119
+      "sha256": "2dfa3b1d73d373565b8a3480603536a41fa3261326feb1f8af38cd0c8e70e38e",
+      "bytes": 25237
     },
     {
       "path": "planning/checkpoints/workspace-next-stage/M3-M4-SHARED-UI-2026-09-26/CLOSEOUT.md",
@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "4679db55fdd58754f5e17c17fb49845a1d0d2262a84ef3b526701df45a000518",
-      "bytes": 56571
+      "sha256": "fcb9780235dd08f170a6adffb3610a385d67fbaa44dc351407dde2d78152592d",
+      "bytes": 56977
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -877,8 +877,8 @@
       "path": "planning/CURRENT-CONTEXT.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\CURRENT-CONTEXT.md",
       "exists": true,
-      "sha256": "86c3a31fb4b54eac507199a239af397d75db34dfe48dbb7a917308def01f90f3",
-      "bytes": 12667
+      "sha256": "7472125d6df6f8bcad9fcafb735ee1e5e6528d26a07390290ddc067696cb9ca5",
+      "bytes": 12780
     },
     {
       "path": "projects/vi-dubber/scripts/verify_m5_process_startup.py",

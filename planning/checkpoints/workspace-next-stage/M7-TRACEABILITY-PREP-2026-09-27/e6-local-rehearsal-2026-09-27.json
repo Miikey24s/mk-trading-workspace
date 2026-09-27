@@ -982,7 +982,14 @@
       "archive_manifest": "planning/archive/ai-environment-duplicates-20260928/MOVED.txt"
     },
     "quant_feature_provenance_commit": "eb0bdde",
-    "job12_live_status_observed": true
+    "job12_live_status_observed": true,
+    "tradingagents_full_validation": {
+      "command": ".venv\\Scripts\\python.exe -m pytest -q",
+      "result": "952 passed, 5 skipped, 22 warnings, 88 subtests in 14.45s",
+      "external_side_effects": "none",
+      "uv_trampoline_note": "uv trampoline failed to canonicalize script path; direct venv validation passed",
+      "passed": true
+    }
   },
   "checks": {
     "recovery_dependencies": [
@@ -1084,7 +1091,8 @@
     "vi_full_test_count": 580,
     "mt5_execution_intent_expiry_ref_present": true,
     "ai_environment_audit_ok": true,
-    "ai_environment_duplicate_skill_cleanup_recorded": true
+    "ai_environment_duplicate_skill_cleanup_recorded": true,
+    "tradingagents_full_validation_recorded": true
   },
   "interpretation": {
     "recovery_rehearsal": "PASS_LOCAL_FIXTURE",
