@@ -29,7 +29,7 @@
       {
         "scope": "vi",
         "branch": "main",
-        "head": "3e2c5310fa792adacb5f87c4966b5984cf1f028a",
+        "head": "4b2991bbf84fb24cea7c9ec4041e32b9a4d97cfe",
         "dirty_count": 2,
         "dirty_preview": "?? work/checkpoints/P23-real-media-final-assembly-6h-2026-09-26.json;  ?? work/checkpoints/P23-real-media-process-gpu-smoke-2026-09-26.json"
       },
@@ -216,6 +216,34 @@
         "mode": "PREP_ONLY",
         "validation": "offline two-sided CUSUM diagnostic; focused 15 passed; current Quant full 102 passed; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI job12 retained real-media checkpoint",
+        "path": "projects/vi-dubber/work/checkpoints/P23-real-media-12h-resumable-job-2026-09-27.md",
+        "mode": "PREP_ONLY",
+        "validation": "retained source/extract hashes and supported resume path; job12 running/pending; no whole-pipeline acceptance",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI oversized-separation FLAC hardening",
+        "path": "projects/vi-dubber/src/vi_dubber/separation.py",
+        "mode": "PREP_ONLY",
+        "validation": "4b2991b; focused hardening suite 44 passed; compileall PASS; avoids RIFF/WAV 4 GiB truncation; no job12 acceptance",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI pipeline separation policy fingerprint",
+        "path": "projects/vi-dubber/src/vi_dubber/pipeline.py",
+        "mode": "PREP_ONLY",
+        "validation": "4b2991b; separation policy version bump and focused hardening suite 44 passed; compileall PASS; no whole-pipeline acceptance",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI FLAC oversized-input regression test",
+        "path": "projects/vi-dubber/tests/test_p13_runtime_fallbacks.py",
+        "mode": "PREP_ONLY",
+        "validation": "focused P13 10 passed; owner hardening suite 44 passed; compileall PASS; no job12 acceptance",
+        "acceptance": "NOT_CLAIMED"
       }
     ],
     "mt5_dst_policy_commit": "125dbdd711da7d1561f19d4355c2f719e1faa4ef",
@@ -237,7 +265,10 @@
     "quant_documentation_commit": "308b911",
     "quant_robust_risk_commit": "cd74afc",
     "quant_cusum_commit": "ed20c34",
-    "quant_extreme_risk_test_commit": "2c07795"
+    "quant_extreme_risk_test_commit": "2c07795",
+    "vi_flac_hardening_commit": "4b2991bbf84fb24cea7c9ec4041e32b9a4d97cfe",
+    "vi_hardening_focused_test_count": 44,
+    "vi_job12_status": "running / pending; whole-pipeline acceptance not claimed"
   },
   "checks": {
     "recovery_dependencies": [
@@ -281,9 +312,11 @@
     "archive_hash_stable": true,
     "no_external_operations": true,
     "chart_evidence_refs_present": true,
-    "path_manifest_reference_count": 48,
+    "path_manifest_reference_count": 52,
     "chart_followup_refs_present": true,
-    "theory_p0_receipt_refs_present": true
+    "theory_p0_receipt_refs_present": true,
+    "vi_flac_hardening_ref_present": true,
+    "job12_pending_known_gap": true
   },
   "interpretation": {
     "recovery_rehearsal": "PASS_LOCAL_FIXTURE",

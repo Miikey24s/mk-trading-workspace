@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "5955ef50db800a3d63b695bc4b29494ecde41f0399550c99c99c78d30235c39e",
-      "bytes": 15261
+      "sha256": "083aa879bca82b9e12077c1c63ba2be39172c6008506d06aac1fa8a02f872c9b",
+      "bytes": 16994
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -340,6 +340,34 @@
       "exists": true,
       "sha256": "1788fdf6945027d9740afd58f921911f44d4e9e9faa35ee75e7d88e7590fbe57",
       "bytes": 3602
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/P23-real-media-12h-resumable-job-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\P23-real-media-12h-resumable-job-2026-09-27.md",
+      "exists": true,
+      "sha256": "39cfa80cca9d495327474e96f4fead4a243b8fae321e0412d7107b02b4dfbbfd",
+      "bytes": 4184
+    },
+    {
+      "path": "projects/vi-dubber/src/vi_dubber/separation.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\src\\vi_dubber\\separation.py",
+      "exists": true,
+      "sha256": "032a3ef62f68e8a01090dab02259875ae8765d901eb8a86ef27d78573e594de2",
+      "bytes": 5690
+    },
+    {
+      "path": "projects/vi-dubber/src/vi_dubber/pipeline.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\src\\vi_dubber\\pipeline.py",
+      "exists": true,
+      "sha256": "dbdf6158a661216e5c661b9bff815e9c7e131a01f8faa306ae1afcbbd3fcb189",
+      "bytes": 132924
+    },
+    {
+      "path": "projects/vi-dubber/tests/test_p13_runtime_fallbacks.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\tests\\test_p13_runtime_fallbacks.py",
+      "exists": true,
+      "sha256": "7b4a973e3ca976f17062e53896a3541b87661a3a89c1d2ef9768b35d865d976e",
+      "bytes": 10923
     }
   ],
   "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
