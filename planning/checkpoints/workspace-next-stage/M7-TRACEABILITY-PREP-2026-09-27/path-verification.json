@@ -16,8 +16,8 @@
       "path": "planning/checkpoints/workspace-next-stage/RESUME.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\RESUME.md",
       "exists": true,
-      "sha256": "339e056d641dc6efe38d50de24c81474f3f3f21bacaa5651a2785aa2adda1a55",
-      "bytes": 23692
+      "sha256": "3aeddeab86d5f94bc242fb44d2cb5e10458ac0548cad72977e95f9b89ab69d4e",
+      "bytes": 23843
     },
     {
       "path": "planning/checkpoints/workspace-next-stage/M3-M4-SHARED-UI-2026-09-26/CLOSEOUT.md",
@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "ea46994dad7102c2a73f3104c5b17b63ce04d21d7b609022042223e96018df14",
-      "bytes": 51191
+      "sha256": "6ed75597b9a0129ac7a21ada2e5ab2c51e07a5e189b167508fd9f762a65849f8",
+      "bytes": 54784
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -877,8 +877,57 @@
       "path": "planning/CURRENT-CONTEXT.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\CURRENT-CONTEXT.md",
       "exists": true,
-      "sha256": "158d97cbf4222e48e4a19c2b982f9ffaaf5eab742a817985119a908bda7287d6",
-      "bytes": 11586
+      "sha256": "221de7da091f8c412fd6564e07ea18332cbce38be33d2370eb893b1d0de731e4",
+      "bytes": 11698
+    },
+    {
+      "path": "projects/vi-dubber/scripts/verify_m5_process_startup.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\scripts\\verify_m5_process_startup.py",
+      "exists": true,
+      "sha256": "ae7af4334fe60a500d49324b2f4d37205e7010e436bd1278d9f579182f15dac0",
+      "bytes": 12006
+    },
+    {
+      "path": "projects/vi-dubber/tests/test_m5_process_startup.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\tests\\test_m5_process_startup.py",
+      "exists": true,
+      "sha256": "a1217acce0de2bed6e90147722024881c09adb225cb8cecaf4486347157d1350",
+      "bytes": 1398
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/M5-process-startup-receipt-2026-09-28.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M5-process-startup-receipt-2026-09-28.json",
+      "exists": true,
+      "sha256": "20074ec1170e906ee5567fe919412532de24a28ad5bd5a389767994874334786",
+      "bytes": 987
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/M5-process-startup-smoke-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M5-process-startup-smoke-2026-09-28.md",
+      "exists": true,
+      "sha256": "b9b6b864369155c200c827b516e94229db29f80d4fa52e69963b17c0cb35f06f",
+      "bytes": 2025
+    },
+    {
+      "path": "projects/quant-trading/docs/research/distribution-drift-pilot-r1-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\distribution-drift-pilot-r1-2026-09-28.md",
+      "exists": true,
+      "sha256": "a35c1728065d495191c8ace621bba9848559c9b575922fe214c7eeac897f7a77",
+      "bytes": 3031
+    },
+    {
+      "path": "projects/quant-trading/src/quant_trading/distribution_drift.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\src\\quant_trading\\distribution_drift.py",
+      "exists": true,
+      "sha256": "17055ba21d6be529200a42186833db00382bf4b1a58de8a4b6e71193b0c476b7",
+      "bytes": 14185
+    },
+    {
+      "path": "projects/quant-trading/tests/quant_trading/test_distribution_drift.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\tests\\quant_trading\\test_distribution_drift.py",
+      "exists": true,
+      "sha256": "71e4d52d0d9dc7ab5102679e83af0f7ccd5fbda7fcdbc98db3a68e17de1cdf68",
+      "bytes": 3358
     }
   ],
   "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",

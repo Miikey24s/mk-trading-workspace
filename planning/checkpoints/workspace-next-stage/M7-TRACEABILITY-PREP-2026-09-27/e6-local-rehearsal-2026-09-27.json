@@ -10,7 +10,7 @@
     "plan_present": true,
     "resume_present": true,
     "plan_sha256": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
-    "resume_sha256_current": "339e056d641dc6efe38d50de24c81474f3f3f21bacaa5651a2785aa2adda1a55",
+    "resume_sha256_current": "3aeddeab86d5f94bc242fb44d2cb5e10458ac0548cad72977e95f9b89ab69d4e",
     "repo_snapshots": [
       {
         "scope": "workspace",
@@ -29,16 +29,16 @@
       {
         "scope": "vi",
         "branch": "main",
-        "head": "f76b3ecbd8bd4949021ba1951ecb2a01d27729be",
+        "head": "f847eb0669fa25532f0fc0b89ca9347faa15441d",
         "dirty_count": 2,
         "dirty_preview": "?? work/checkpoints/P23-real-media-final-assembly-6h-2026-09-26.json;  ?? work/checkpoints/P23-real-media-process-gpu-smoke-2026-09-26.json"
       },
       {
         "scope": "quant",
         "branch": "master",
-        "head": "c4265d977cce74ed7a545f29d457b5870eb46118",
-        "dirty_count": 1,
-        "dirty_preview": "?? uv.lock"
+        "head": "dade64782ab35b4581b32aa300536456c5080df6",
+        "dirty_count": 0,
+        "dirty_preview": ""
       },
       {
         "scope": "tradingagents",
@@ -49,7 +49,7 @@
       }
     ],
     "authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
-    "current_context_sha256": "158d97cbf4222e48e4a19c2b982f9ffaaf5eab742a817985119a908bda7287d6",
+    "current_context_sha256": "221de7da091f8c412fd6564e07ea18332cbce38be33d2370eb893b1d0de731e4",
     "research_root_commit": "a30c5e19a037dce29521a8565343dfa77f7b8b2c",
     "mt5_stress_commit": "56333618d437e9032558be2b54a4baa1803410da",
     "mt5_renderer_commit": "3c55c1288b63ebd7902753a7e3fc40b6171f9fcc",
@@ -151,84 +151,84 @@
         "scope": "Quant event-kernel/onchain P0 pilot",
         "path": "projects/quant-trading/docs/research/event-kernel-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 6; current Quant full 132 passed (pilot receipt records prior 46); ruff/compileall/diff pass; no network/execution",
+        "validation": "focused 6; current Quant full 140 passed (pilot receipt records prior 46); ruff/compileall/diff pass; no network/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant discrete optimizer P0 pilot",
         "path": "projects/quant-trading/docs/research/discrete-optimizer-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 4; current Quant full 132 passed; ruff/compileall/diff pass; no edge/production claim",
+        "validation": "focused 4; current Quant full 140 passed; ruff/compileall/diff pass; no edge/production claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant theory hypothesis receipt contract",
         "path": "projects/quant-trading/src/quant_trading/theory_receipts.py",
         "mode": "PREP_ONLY",
-        "validation": "focused 10; current Quant full 132 passed; deterministic hash/cutoff/deny-only contract; no provider/broker/execution",
+        "validation": "focused 10; current Quant full 140 passed; deterministic hash/cutoff/deny-only contract; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant theory hypothesis receipt tests",
         "path": "projects/quant-trading/tests/test_theory_receipts.py",
         "mode": "PREP_ONLY",
-        "validation": "focused 10; current Quant full 132 passed; tamper, finite-number, causal cutoff and execution-deny tests",
+        "validation": "focused 10; current Quant full 140 passed; tamper, finite-number, causal cutoff and execution-deny tests",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant causal state primitives pilot",
         "path": "projects/quant-trading/docs/research/state-primitives-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "focused 6; current Quant full 132 passed; causal Kalman/entropy/Beta primitives; no alpha/execution claim",
+        "validation": "focused 6; current Quant full 140 passed; causal Kalman/entropy/Beta primitives; no alpha/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant conformal interval pilot receipt",
         "path": "projects/quant-trading/docs/research/conformal-interval-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 9; current Quant full 132 passed; split-conformal causal cutoff receipt; no edge/execution claim",
+        "validation": "focused 9; current Quant full 140 passed; split-conformal causal cutoff receipt; no edge/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant conformal interval pilot narrative",
         "path": "projects/quant-trading/docs/research/conformal-interval-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "offline split-conformal interval pilot; focused 9; current Quant full 132 passed; no provider/broker/execution",
+        "validation": "offline split-conformal interval pilot; focused 9; current Quant full 140 passed; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant robust risk metrics pilot receipt",
         "path": "projects/quant-trading/docs/research/risk-metrics-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "current focused 14 passed (receipt records prior 13); current Quant full 132 passed; finite extreme-tail handling; no alpha/execution claim",
+        "validation": "current focused 14 passed (receipt records prior 13); current Quant full 140 passed; finite extreme-tail handling; no alpha/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant robust risk metrics pilot narrative",
         "path": "projects/quant-trading/docs/research/risk-metrics-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "offline lower-tail expected-shortfall/Sortino metrics; focused 14 passed (receipt records prior 13); current Quant full 132 passed; no provider/broker/execution",
+        "validation": "offline lower-tail expected-shortfall/Sortino metrics; focused 14 passed (receipt records prior 13); current Quant full 140 passed; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant CUSUM change-detection pilot receipt",
         "path": "projects/quant-trading/docs/research/cusum-change-detection-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 15 passed; current Quant full 132 passed; forward-only causal cutoff and diagnostic-only receipt; no signal/execution claim",
+        "validation": "focused 15 passed; current Quant full 140 passed; forward-only causal cutoff and diagnostic-only receipt; no signal/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant CUSUM change-detection pilot narrative",
         "path": "projects/quant-trading/docs/research/cusum-change-detection-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "offline two-sided CUSUM diagnostic; focused 15 passed; current Quant full 132 passed; no provider/broker/execution",
+        "validation": "offline two-sided CUSUM diagnostic; focused 15 passed; current Quant full 140 passed; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "VI job12 retained real-media checkpoint",
         "path": "projects/vi-dubber/work/checkpoints/P23-real-media-12h-resumable-job-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "retained source/extract hashes and supported resume path; same PID chain running/pending at separation chunk-0011/29 displayed 11%; prior OOM remains a known gap; no whole-pipeline acceptance",
+        "validation": "retained source/extract hashes and supported resume path; same PID chain running/pending at separation chunk-0011/29 displayed 12%; prior OOM remains a known gap; no whole-pipeline acceptance",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -326,7 +326,7 @@
         "scope": "Quant Ornstein-Uhlenbeck pilot receipt",
         "path": "projects/quant-trading/docs/research/ou-process-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 5 passed; current Quant full 132 passed; stationarity/cutoff guards; PREP_ONLY, no alpha/execution claim",
+        "validation": "focused 5 passed; current Quant full 140 passed; stationarity/cutoff guards; PREP_ONLY, no alpha/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -340,21 +340,21 @@
         "scope": "Quant Ornstein-Uhlenbeck source",
         "path": "projects/quant-trading/src/quant_trading/ou_process.py",
         "mode": "PREP_ONLY",
-        "validation": "223eeca exposes stationarity diagnostics; causal offline primitive only; current Quant full 132 passed",
+        "validation": "223eeca exposes stationarity diagnostics; causal offline primitive only; current Quant full 140 passed",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant Ornstein-Uhlenbeck focused tests",
         "path": "projects/quant-trading/tests/quant_trading/test_ou_process.py",
         "mode": "PREP_ONLY",
-        "validation": "focused OU suite 6 passed; current Quant full 132 passed",
+        "validation": "focused OU suite 6 passed; current Quant full 140 passed",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant permutation entropy pilot narrative",
         "path": "projects/quant-trading/docs/research/permutation-entropy-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "offline ordinal-complexity diagnostic; focused state-primitives command; current Quant full 132 passed; no signal/execution claim",
+        "validation": "offline ordinal-complexity diagnostic; focused state-primitives command; current Quant full 140 passed; no signal/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -368,7 +368,7 @@
         "scope": "Quant state primitives focused tests",
         "path": "projects/quant-trading/tests/quant_trading/test_state_primitives.py",
         "mode": "PREP_ONLY",
-        "validation": "focused permutation-entropy/state primitive coverage; current Quant full 132 passed; no alpha claim",
+        "validation": "focused permutation-entropy/state primitive coverage; current Quant full 140 passed; no alpha claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -550,7 +550,7 @@
         "scope": "Quant causal effect research gate",
         "path": "projects/quant-trading/docs/research/causal-effect-diagnostic-r1-2026-09-28.md",
         "mode": "PREP_ONLY",
-        "validation": "c4265d9 causal-effect pilot narrative; synthetic mechanics only; no market edge, provider, broker or execution claim",
+        "validation": "c4265d9 causal-effect pilot narrative; synthetic mechanics only; no market edge, provider, broker or execution claim; current Quant full 140 passed",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -762,6 +762,55 @@
         "mode": "PREP_ONLY",
         "validation": "Refresh execution 2026-09-28; current routing/status only; historical baseline below preserved",
         "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M5 process-startup verifier",
+        "path": "projects/vi-dubber/scripts/verify_m5_process_startup.py",
+        "mode": "PREP_ONLY",
+        "validation": "f847eb0; three fresh Python processes with synthetic catalog/restart/lineage smoke; PREP_ONLY",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M5 process-startup tests",
+        "path": "projects/vi-dubber/tests/test_m5_process_startup.py",
+        "mode": "PREP_ONLY",
+        "validation": "f847eb0; focused process-startup/restart smoke 1 passed; no real media/provider/Job12 acceptance",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M5 process-startup receipt",
+        "path": "projects/vi-dubber/work/checkpoints/M5-process-startup-receipt-2026-09-28.json",
+        "mode": "PREP_ONLY",
+        "validation": "f847eb0; 3 fresh processes, local /api/health 200, restart state/lineage checks; PREP_ONLY",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M5 process-startup narrative",
+        "path": "projects/vi-dubber/work/checkpoints/M5-process-startup-smoke-2026-09-28.md",
+        "mode": "PREP_ONLY",
+        "validation": "f847eb0; compileall/diff-check pass; no listener/provider/real media/Job12 or product SLO claim",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant PSI distribution-drift narrative",
+        "path": "projects/quant-trading/docs/research/distribution-drift-pilot-r1-2026-09-28.md",
+        "mode": "PREP_ONLY",
+        "validation": "48cd3a6/dade647; causal PSI/OOD diagnostic with fixed bins and cutoff; no edge/signal/execution claim",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant PSI distribution-drift source",
+        "path": "projects/quant-trading/src/quant_trading/distribution_drift.py",
+        "mode": "PREP_ONLY",
+        "validation": "dade647; finite/causal PSI receipt primitive; focused 8 passed; no provider/broker/execution",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant PSI distribution-drift tests",
+        "path": "projects/quant-trading/tests/quant_trading/test_distribution_drift.py",
+        "mode": "PREP_ONLY",
+        "validation": "48cd3a6; focused 8 passed; cutoff/duplicate/tail/finite guards",
+        "acceptance": "NOT_CLAIMED"
       }
     ],
     "mt5_dst_policy_commit": "125dbdd711da7d1561f19d4355c2f719e1faa4ef",
@@ -775,8 +824,8 @@
     "quant_event_kernel_commit": "9f61de70d6f3fb2aacb63989a930c7ab07e32448",
     "quant_optimizer_commit": "7f2cedb17e3eb04e1b1fa708469d5c38b8955ea2",
     "quant_optimizer_hardening_commit": "e82c7cf",
-    "quant_receipt_commit": "c4265d977cce74ed7a545f29d457b5870eb46118",
-    "quant_current_full_test_count": 132,
+    "quant_receipt_commit": "dade64782ab35b4581b32aa300536456c5080df6",
+    "quant_current_full_test_count": 140,
     "quant_theory_receipt_commit": "b67f398c8d6a88617f2f3bc23c3fa7ab3bb410a4",
     "quant_state_primitives_commit": "ec6e7f24f151e126618bda86b76a49668399cf21",
     "quant_conformal_commit": "ce225a5f0ceacdf25226bbc2519191c813b58dc9",
@@ -786,7 +835,7 @@
     "quant_extreme_risk_test_commit": "2c07795",
     "vi_flac_hardening_commit": "9a15bfaaac19a722f6cd2dc3b1050b2cb5cb7ccf",
     "vi_hardening_focused_test_count": 44,
-    "vi_job12_status": "running / pending; same retained PID chain (run.lock PID 27804); separation chunk-0011 of 29 / displayed 11%; no final output; whole-pipeline acceptance not claimed",
+    "vi_job12_status": "running / pending; same retained PID chain (run.lock PID 27804); separation chunk-0011 of 29 / displayed 12%; no final output; whole-pipeline acceptance not claimed",
     "mt5_mql_parity_commit": "e1377eee561a500ad6858ca195519da1f8723e4a",
     "mt5_renderer_metadata_commit": "79cc8beba1779998e64a613c7010067753b3ccc2",
     "mt5_zone_lifecycle_commit": "a2d8fd3209de3b4384031e7840cdbcec0d911974",
@@ -804,7 +853,7 @@
     "quant_ou_diagnostics_commit": "223eeca67c5a5704de494fd9831d7d962c77417e",
     "quant_full_validation": {
       "command": "uv run pytest -q",
-      "result": "132 passed in 7.21s",
+      "result": "140 passed in 7.09s",
       "external_side_effects": "none",
       "passed": true
     },
@@ -878,16 +927,33 @@
     "vi_job12_observation": {
       "status": "running",
       "stage": "separation",
-      "progress_display": "11%",
+      "progress_display": "12%",
       "completed_chunks": 11,
       "current_chunk": "chunk_0011",
       "total_chunks": 29,
       "pid": 27804,
       "source": "projects/vi-dubber/work/job-8dc51f8a892aba21/state.json and run.lock",
       "acceptance": "NOT_CLAIMED",
-      "progress_fraction": 0.10938227241615332,
+      "progress_fraction": 0.1156690622861054,
       "observed_at": "2026-09-28"
-    }
+    },
+    "vi_m5_process_startup_commit": "f847eb0669fa25532f0fc0b89ca9347faa15441d",
+    "vi_m5_process_startup_focused_test_count": 1,
+    "vi_m5_catalog_m6_combined_focused_test_count": 29,
+    "vi_m5_process_startup_validation": {
+      "command": "uv run pytest -q tests/test_m5_process_startup.py",
+      "result": "1 passed",
+      "combined_command": "uv run pytest -q tests/test_m5_process_startup.py tests/test_m5_catalog_recovery.py tests/test_m6_integration_contract.py",
+      "combined_result": "29 passed in 2.12s",
+      "compileall": "PASS",
+      "git_diff_check": "PASS",
+      "external_side_effects": "none",
+      "passed": true
+    },
+    "quant_distribution_drift_commit": "dade64782ab35b4581b32aa300536456c5080df6",
+    "quant_distribution_drift_base_commit": "48cd3a6478ce69fdf1928748299fce3760bf796a",
+    "quant_distribution_drift_focused_test_count": 8,
+    "quant_distribution_drift_status": "synthetic causal PSI/OOD diagnostic; market_edge_claim=false; PREP_ONLY"
   },
   "checks": {
     "recovery_dependencies": [
@@ -931,7 +997,7 @@
     "archive_hash_stable": true,
     "no_external_operations": true,
     "chart_evidence_refs_present": true,
-    "path_manifest_reference_count": 125,
+    "path_manifest_reference_count": 132,
     "chart_followup_refs_present": true,
     "theory_p0_receipt_refs_present": true,
     "vi_flac_hardening_ref_present": true,
@@ -942,7 +1008,7 @@
     "vi_ui_validation_ref_present": true,
     "tradingagents_route_ref_present": true,
     "tradingagents_full_test_count": 952,
-    "quant_full_test_count": 132,
+    "quant_full_test_count": 140,
     "latest_nested_heads_recorded": true,
     "research_root_commit_tracked": true,
     "quant_full_validation_recorded": true,
@@ -966,13 +1032,16 @@
     "quant_causal_effect_pilot_refs_present": true,
     "quant_causal_effect_focused_test_count": 10,
     "context_refresh_recorded": true,
-    "job12_live_status_observed": true
+    "job12_live_status_observed": true,
+    "vi_m5_process_startup_refs_present": true,
+    "vi_m5_process_startup_focused_test_count": 1,
+    "vi_m5_catalog_m6_combined_focused_test_count": 29
   },
   "interpretation": {
     "recovery_rehearsal": "PASS_LOCAL_FIXTURE",
     "no_duplicate_semantics": "PASS_VI_TARGETED_TESTS_PLUS_MT5_RECEIPT_CONSISTENCY",
     "archive_hash": "PASS_FINAL_AUTHORITY_SNAPSHOT",
     "m7_acceptance": "NOT_CLAIMED",
-    "next_safe_action": "Keep M5/M6/M7 and shared UI candidate PREP_ONLY; do not duplicate Job12 while the retained PID chain is running; reconcile M5/M6/UI/causal promotion gates and the pending long-media result before any acceptance decision."
+    "next_safe_action": "Keep M5/M6/M7, shared UI candidate and Quant PSI/OOD diagnostic PREP_ONLY; do not duplicate Job12 while the retained PID chain is running; reconcile promotion gates and pending long-media evidence before acceptance."
   }
 }
