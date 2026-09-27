@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "8e92dcac5c98768c846acd1d666da206ede15909170f3fb2a8ee767eaca81044",
-      "bytes": 9331
+      "sha256": "62775bc70bafdfc30d5de6798168c187d8cd86cca4f795bea2516f133f77a88d",
+      "bytes": 10316
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -219,8 +219,8 @@
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-script-parity-audit-r1-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\chart-script-parity-audit-r1-2026-09-27.json",
       "exists": true,
-      "sha256": "d8095f70c9605b9f92149a3b9956c7dc0807d618541b29cc91cba42f405f14f2",
-      "bytes": 5485
+      "sha256": "99a7123065fdde008a0ba6ee88887c595fec1e407d02e9c98f14c3befcf2afc1",
+      "bytes": 6787
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-alert-c6-r2-2026-09-27.json",
@@ -249,6 +249,20 @@
       "exists": true,
       "sha256": "b1ef8a2c7f9c7f6f7a42a338dd07e900cd55522e00e4648681117283b7349b8b",
       "bytes": 11183
+    },
+    {
+      "path": "projects/quant-trading/docs/research/chart-edge-evaluation-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\chart-edge-evaluation-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "4263b9f21554e40077eb32a65bb6b06afd6746718edf53f29dcb7c06249d7512",
+      "bytes": 1041
+    },
+    {
+      "path": "projects/quant-trading/docs/research/chart-edge-evaluation-r1-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\chart-edge-evaluation-r1-2026-09-27.md",
+      "exists": true,
+      "sha256": "455b8336f54621c4a81a14da8259cfa828d55bf1fd7989ce187964277d4ae878",
+      "bytes": 2273
     }
   ],
   "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
