@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "e2189f830b31d112878a94472bea5968dce69e8d872443b6d6c9d638c0fa0ac8",
-      "bytes": 11182
+      "sha256": "2e927fd5a1d009b84d29ebcc805cda436cc1482d8581becb129f05c526e6474d",
+      "bytes": 13508
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -277,6 +277,41 @@
       "exists": true,
       "sha256": "e90bbba10629b75c08e00f387fd4373969e7ff69c5ddb68f42ac4814f8a652da",
       "bytes": 1241
+    },
+    {
+      "path": "projects/quant-trading/src/quant_trading/theory_receipts.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\src\\quant_trading\\theory_receipts.py",
+      "exists": true,
+      "sha256": "b50dfe0b1caee364c4e9f404aac877d5690bc36392f2a6c6b2c36a5c531ecdf0",
+      "bytes": 9156
+    },
+    {
+      "path": "projects/quant-trading/tests/test_theory_receipts.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\tests\\test_theory_receipts.py",
+      "exists": true,
+      "sha256": "8416438090a5e2074c9ce68ca3aa1dd8b0f3b2339b0b41faeee9afccb05ec211",
+      "bytes": 2653
+    },
+    {
+      "path": "projects/quant-trading/docs/research/state-primitives-pilot-r1-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\state-primitives-pilot-r1-2026-09-27.md",
+      "exists": true,
+      "sha256": "c5af7f54f99313704727b776f05dd72c76891103f7a14f9432aaed0526a363ed",
+      "bytes": 2853
+    },
+    {
+      "path": "projects/quant-trading/docs/research/conformal-interval-pilot-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\conformal-interval-pilot-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "eb2ca540526965b406a01b7f6af2f7226d57b65c15778003e160e14cc1e1608d",
+      "bytes": 805
+    },
+    {
+      "path": "projects/quant-trading/docs/research/conformal-interval-pilot-r1-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\conformal-interval-pilot-r1-2026-09-27.md",
+      "exists": true,
+      "sha256": "c0fb56f3f0d89729069f5123d4f270999f3bf0bc24ce48c4c2203d56aa9ad7aa",
+      "bytes": 2303
     }
   ],
   "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
