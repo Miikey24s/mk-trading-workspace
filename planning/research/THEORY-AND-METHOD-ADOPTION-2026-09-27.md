@@ -93,6 +93,11 @@ cutoff, seed, baseline, metrics, rollback ref và khóa cứng
   Shannon entropy có Miller–Madow explicit và Beta–Bernoulli update.
 - `conformal`: split-conformal interval với calibration/validation/test cutoff
   theo thời gian, coverage evaluation-only.
+- `change_detection`: CUSUM hai phía với baseline, drift, threshold và reset
+  policy explicit; chỉ là chẩn đoán regime/change-point.
+- `risk_metrics`: empirical VaR/CVaR theo fractional tail mass, downside
+  deviation và Sortino có cờ `sortino_defined`, theo train/validation/test
+  window.
 - `event_envelope`/`onchain_events` và `discrete_optimizer`: event provenance
   cùng bounded quantum-inspired search vẫn giữ offline/provider/broker deny-only.
 
