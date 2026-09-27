@@ -1,0 +1,90 @@
+{
+  "schema": "m7-local-e6-rehearsal-v1",
+  "status": "PREP_ONLY",
+  "scope": "Local fixture/hash/recovery/no-duplicate rehearsal only; no external/OAuth/live/provider/broker/DB service",
+  "generated_at": "2026-09-27",
+  "authority": "M7 packet only; no RESUME/STATE/ledger mutation",
+  "fresh_root": {
+    "plan_path": "planning/WORKSPACE-NEXT-STAGE-PLAN.md",
+    "resume_path": "planning/checkpoints/workspace-next-stage/RESUME.md",
+    "plan_present": true,
+    "resume_present": true,
+    "plan_sha256": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
+    "resume_sha256_current": "23287378558504ae31e871fbba862b88e042cda901a02d727a8d7e54368e3c91",
+    "repo_snapshots": [
+      {
+        "scope": "vi",
+        "branch": "main",
+        "head": "ae7683e626263338dcbb2696afe6fb204e0ca73b",
+        "dirty_count": 2
+      },
+      {
+        "scope": "mt5",
+        "branch": "Nam",
+        "head": "a5397469a2296a997111a6a87d0a7e2401c4fa75",
+        "dirty_count": 13
+      },
+      {
+        "scope": "workspace",
+        "branch": "main",
+        "head": "ff452312934dcd837dec88fbc7c4778410d4e3bc",
+        "dirty_count": 78
+      }
+    ]
+  },
+  "checks": {
+    "recovery_dependencies": [
+      {
+        "task_id": "p01",
+        "path": "fixtures/work/p01-output.txt",
+        "expected": "3d57633b12cfae7915b3b71eac881128d2e4db66fc619decc76c7fee347ffc3a",
+        "observed": "3d57633b12cfae7915b3b71eac881128d2e4db66fc619decc76c7fee347ffc3a",
+        "match": true
+      },
+      {
+        "task_id": "p03-good",
+        "path": "fixtures/work/p03-good.txt",
+        "expected": "7d14d40515651e5c80dbe84f36774b7ddd25ad210db876ec2476a7b85005764c",
+        "observed": "7d14d40515651e5c80dbe84f36774b7ddd25ad210db876ec2476a7b85005764c",
+        "match": true
+      }
+    ],
+    "recovery_dependencies_all_match": true,
+    "recovery_output_hash": "41dd4e2a31e38e9becd0efa0c8071eba8bc91352dfef9510f2864e54bf4681be",
+    "recovery_output_hash_match": true,
+    "uncertain_task_untouched": true,
+    "vi_resume_no_duplicate_suite": {
+      "command": "uv run pytest -q tests/test_jobs.py tests/test_longform_state.py tests/test_p23_superlong_acceptance.py",
+      "result": "20 passed in 1.31s",
+      "external_side_effects": "none",
+      "passed": true
+    },
+    "catalog_restore_digest_match": true,
+    "catalog_fixture_shape": true,
+    "mt5_restore_receipt_replayed": {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/F7-restore-rehearsal-r1.json",
+      "result": "PASS",
+      "all_checks_true": true,
+      "source_target_counts_equal": true,
+      "replayed_not_rerun": true
+    },
+    "packet_ids_unique": true,
+    "path_manifest_missing": 0,
+    "path_manifest_hash_drift": [
+      {
+        "path": "planning/checkpoints/workspace-next-stage/RESUME.md",
+        "expected": "16349adfb2906728cfdab33526dcd7316abd87c74564d2e3404f141fbce537ca",
+        "observed": "23287378558504ae31e871fbba862b88e042cda901a02d727a8d7e54368e3c91"
+      }
+    ],
+    "archive_hash_stable": false,
+    "no_external_operations": true
+  },
+  "interpretation": {
+    "recovery_rehearsal": "PASS_LOCAL_FIXTURE",
+    "no_duplicate_semantics": "PASS_VI_TARGETED_TESTS_PLUS_MT5_RECEIPT_CONSISTENCY",
+    "archive_hash": "BLOCKED_BY_CONCURRENT_RESUME_DRIFT",
+    "m7_acceptance": "NOT_CLAIMED",
+    "next_safe_action": "Refresh path-verification and packet snapshot only after authoritative RESUME/HEAD edits settle, then run fresh-root rehearsal again."
+  }
+}
