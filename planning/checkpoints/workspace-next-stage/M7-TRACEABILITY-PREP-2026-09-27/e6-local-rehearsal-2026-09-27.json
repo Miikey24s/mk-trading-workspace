@@ -10,19 +10,19 @@
     "plan_present": true,
     "resume_present": true,
     "plan_sha256": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
-    "resume_sha256_current": "f8c788a30dc5b90fcb342e5376ffbe954219982ed4d9b2384fd6abcfffb572ee",
+    "resume_sha256_current": "d68966ae966f71b5c788ecabb7dfcf7d7122337aa0e6cb8eadad512909698972",
     "repo_snapshots": [
       {
         "scope": "workspace",
         "branch": "main",
-        "head": "de71ed13d2b0d268bb3b180a9d6956d671d4a33d",
+        "head": "13e72e70aa553a669f9630de6cabca0d382e3838",
         "dirty_count": 72,
         "dirty_preview": " M AGENTS.md;   M planning/mt5-tradingview-backtester/POST-COMPLETION-ROADMAP-DRAFT.md;   M planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/RESUME.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json.sha256;   M planning/ui-platform/MASTER-UI-PLATFORM-PLAN.md;   M projects/TradingAgents"
       },
       {
         "scope": "mt5",
         "branch": "Nam",
-        "head": "636282c510e7dcc38ed4d6a4c6a332bbfed436af",
+        "head": "33aa7b8fe3bbd665677fac830d478cef04944e4c",
         "dirty_count": 13,
         "dirty_preview": " M ai_service.py;   M foundation_v2/evidence/replay-ui-1440.png;   M foundation_v2/evidence/replay-ui-360.png;   M foundation_v2/evidence/replay-ui-768.png;   M tests/test_ai_foundation.py;  ?? foundation_v2/evidence/U5-protective-validation-r4.json;  ?? foundation_v2/evidence/U5-protective-validation-r5.json;  ?? foundation_v2/evidence/ps02-lifecycle-wip-r2/"
       },
@@ -32,12 +32,45 @@
         "head": "3e2c5310fa792adacb5f87c4966b5984cf1f028a",
         "dirty_count": 2,
         "dirty_preview": "?? work/checkpoints/P23-real-media-final-assembly-6h-2026-09-26.json;  ?? work/checkpoints/P23-real-media-process-gpu-smoke-2026-09-26.json"
+      },
+      {
+        "scope": "quant",
+        "branch": "master",
+        "head": "3e0235c16fc6d97792201067343927cbfb0c3c6d",
+        "dirty_count": 0,
+        "dirty_preview": ""
       }
     ],
-    "authority_commit": "de71ed13d2b0d268bb3b180a9d6956d671d4a33d",
-    "current_context_sha256": "33c8fa9e2390de2d32f1a830ca4d931e11f45c6cb6fa5bc5f933a537dfe360a5",
+    "authority_commit": "13e72e70aa553a669f9630de6cabca0d382e3838",
+    "current_context_sha256": "67b9ab3508eebb7f15e5e1353b1d0f03c613474929ac040a47b7ff4be8c5c3ce",
     "research_root_commit": "2ccf96b3fd0a4d07a665159bbe269fa8d3c2dfa4",
-    "mt5_stress_commit": "56333618d437e9032558be2b54a4baa1803410da"
+    "mt5_stress_commit": "56333618d437e9032558be2b54a4baa1803410da",
+    "mt5_renderer_commit": "3c55c1288b63ebd7902753a7e3fc40b6171f9fcc",
+    "mt5_ai_commit": "c1dfff448525fdaa73f3baff49ddb0601ea1de04",
+    "quant_chart_commit": "3e0235c16fc6d97792201067343927cbfb0c3c6d",
+    "chart_evidence_refs": [
+      {
+        "scope": "MT5 C3 renderer",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "37 passed; compileall PASS; diff_check PASS",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 C5 chart AI advisory",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-ai-advisory-c5-r1-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "focused 10 passed; chart regression 42 passed; compileall PASS; diff_check PASS",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant chart feature contract",
+        "path": "projects/quant-trading/docs/research/chart-feature-contract-r1-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "focused 9; full Quant 33; compileall/ruff pass",
+        "acceptance": "NOT_CLAIMED"
+      }
+    ]
   },
   "checks": {
     "recovery_dependencies": [
@@ -79,7 +112,9 @@
     "path_manifest_missing": 0,
     "path_manifest_hash_drift": [],
     "archive_hash_stable": true,
-    "no_external_operations": true
+    "no_external_operations": true,
+    "chart_evidence_refs_present": true,
+    "path_manifest_reference_count": 27
   },
   "interpretation": {
     "recovery_rehearsal": "PASS_LOCAL_FIXTURE",

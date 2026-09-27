@@ -16,8 +16,8 @@
       "path": "planning/checkpoints/workspace-next-stage/RESUME.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\RESUME.md",
       "exists": true,
-      "sha256": "f8c788a30dc5b90fcb342e5376ffbe954219982ed4d9b2384fd6abcfffb572ee",
-      "bytes": 20321
+      "sha256": "d68966ae966f71b5c788ecabb7dfcf7d7122337aa0e6cb8eadad512909698972",
+      "bytes": 20984
     },
     {
       "path": "planning/checkpoints/workspace-next-stage/M3-M4-SHARED-UI-2026-09-26/CLOSEOUT.md",
@@ -170,9 +170,30 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "46749cbe7fdc3fa4193392551327cf7ecd78a3c3183d2486f03d3abd5a18495a",
-      "bytes": 4778
+      "sha256": "543c9da5dcdfc8bbf1a220f077b3d3cab7e0732663b399e4d569f8a3be6bc115",
+      "bytes": 6274
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\chart-renderer-c3-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "098418781b345f8c05b4917de6041860a96f37a758f35e71754c359dfa0a67f8",
+      "bytes": 1478
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-ai-advisory-c5-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\chart-ai-advisory-c5-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "a1fe569e3330258c36c5d615c2b0953530ed087e34c986b04e669fb5ce725a05",
+      "bytes": 1808
+    },
+    {
+      "path": "projects/quant-trading/docs/research/chart-feature-contract-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\chart-feature-contract-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "63f98d63e69e8d1652874b094c6272580c4a1106bc721b332c8f0f90e6341cc3",
+      "bytes": 574
     }
   ],
-  "verified_against_commit": "de71ed13d2b0d268bb3b180a9d6956d671d4a33d"
+  "verified_against_commit": "13e72e70aa553a669f9630de6cabca0d382e3838"
 }
