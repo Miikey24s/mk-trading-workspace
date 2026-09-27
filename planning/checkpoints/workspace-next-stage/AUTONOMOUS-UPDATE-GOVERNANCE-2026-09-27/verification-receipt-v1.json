@@ -4,7 +4,7 @@
   "status": "PASS_SCOPED",
   "scope": "PREP_ONLY_OFFLINE",
   "command": "python verify_autonomous_update_contract.py",
-  "checker_sha256": "5e5cc5d4f7ae5715003398728b0dda07eea91f631548dec8055c43369b193e8c",
+  "checker_sha256": "bac80e215d9f93e193be25d0589b885540a44090a4304732598d01d941fe20bc",
   "fixture_sha256": "fd3570ed04ff3d8cad231fcff8df4c6572d66866998c34d4448be7fcdb7353ca",
   "dry_run": {
     "network_requests": 0,
@@ -12,7 +12,7 @@
     "filesystem_mutations": 0,
     "broker_actions": 0
   },
-  "negative_mutations_rejected": 11,
+  "negative_mutations_rejected": 12,
   "verified": [
     "canonical manifest digest binding",
     "exact version and immutable source commit shape",
@@ -21,7 +21,8 @@
     "read-only builtin health-check references",
     "atomic promotion and one-shot previous-known-good rollback policy",
     "local-only scheduler lock, timeout, bounded backoff and resume policy",
-    "malformed contract shapes fail closed without an exception"
+    "malformed contract shapes fail closed without an exception",
+    "production signature requires real 64-byte base64 payload"
   ],
   "not_run": [
     "real Ed25519 cryptographic verification against a trust store",

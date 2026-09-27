@@ -8,6 +8,7 @@ package manager, broker, or process execution is reachable from this file.
 from __future__ import annotations
 
 import copy
+import base64
 import datetime as dt
 import hashlib
 import json
@@ -75,6 +76,9 @@ def errors(contract: dict[str, Any]) -> list[str]:
         problems.append("network_code_execution")
     if policy.get("allowed_network_hosts") != []:
         problems.append("allowed_network_hosts")
+    allowed_keys = policy.get("allowed_key_ids")
+    if not isinstance(allowed_keys, list) or not allowed_keys or any(not isinstance(key, str) or not key for key in allowed_keys):
+        problems.append("allowed_key_ids_shape")
     if policy.get("allowed_install_roots") != ["releases/"]:
         problems.append("allowed_install_roots")
     forbidden = set(policy.get("forbidden_operations", []))
@@ -99,6 +103,8 @@ def errors(contract: dict[str, Any]) -> list[str]:
         problems.append("artifact_id")
     if not VERSION.fullmatch(str(artifact.get("version", ""))):
         problems.append("version")
+    if artifact.get("channel") not in {"canary", "stable"}:
+        problems.append("channel")
     if not SHA1.fullmatch(str(artifact.get("source_commit", ""))):
         problems.append("source_commit")
     created_at = parse_utc(artifact.get("created_at"))
@@ -151,6 +157,14 @@ def errors(contract: dict[str, Any]) -> list[str]:
         problems.append("signature_key_id")
     if signature.get("status") not in {"prep_only_unverified", "verified"}:
         problems.append("signature_status")
+    signature_b64 = signature.get("signature_b64")
+    if contract.get("scope") == "PRODUCTION":
+        try:
+            decoded_signature = base64.b64decode(signature_b64, validate=True)
+        except (ValueError, TypeError):
+            decoded_signature = b""
+        if len(decoded_signature) != 64:
+            problems.append("signature_bytes")
     required_signed_fields = {
         "artifact_id",
         "version",
@@ -180,6 +194,7 @@ def errors(contract: dict[str, Any]) -> list[str]:
         problems.append("health_checks_count")
         health_checks = []
     check_ids: set[str] = set()
+    check_refs: set[str] = set()
     for check in health_checks:
         if not isinstance(check, dict):
             problems.append("health_check_shape")
@@ -194,19 +209,33 @@ def errors(contract: dict[str, Any]) -> list[str]:
             problems.append("health_check_safety")
         if not isinstance(ref, str) or not ref.startswith("builtin://") or ref.startswith(FORBIDDEN_REF_PREFIXES):
             problems.append("health_check_ref")
+        elif ref in check_refs:
+            problems.append("health_check_ref_duplicate")
+        else:
+            check_refs.add(ref)
         if not isinstance(check.get("timeout_seconds"), int) or isinstance(check.get("timeout_seconds"), bool) or check["timeout_seconds"] <= 0:
             problems.append("health_check_timeout")
     promotion = rollout.get("promotion", {})
     if not isinstance(promotion, dict):
         problems.append("promotion_shape")
         promotion = {}
-    if not all(promotion.get(key) is True for key in ("requires_all_health_checks", "requires_exact_manifest_match", "atomic_pointer_switch")):
+    if not all(promotion.get(key) is True for key in ("requires_all_health_checks", "requires_exact_manifest_match", "atomic_pointer_switch", "operator_approval_required_for_live")):
         problems.append("promotion_guards")
     rollback = rollout.get("rollback", {})
     if not isinstance(rollback, dict):
         problems.append("rollback_shape")
         rollback = {}
-    if rollback.get("target") != "previous_known_good" or rollback.get("max_attempts") != 1 or rollback.get("preserve_previous") is not True:
+    journal_ref = rollback.get("journal_ref")
+    journal_parts = PurePosixPath(journal_ref).parts if isinstance(journal_ref, str) else ()
+    if (
+        rollback.get("automatic") is not True
+        or rollback.get("target") != "previous_known_good"
+        or rollback.get("max_attempts") != 1
+        or rollback.get("preserve_previous") is not True
+        or len(journal_parts) < 2
+        or journal_parts[0] != "state"
+        or any(part in {"", ".", ".."} for part in journal_parts)
+    ):
         problems.append("rollback_guards")
 
     scheduler = contract.get("scheduler", {})
@@ -217,7 +246,9 @@ def errors(contract: dict[str, Any]) -> list[str]:
         problems.append("scheduler_scope")
     if not isinstance(scheduler.get("schedule_ref"), str) or not scheduler["schedule_ref"].startswith("local://"):
         problems.append("schedule_ref")
-    if not isinstance(scheduler.get("lock_ref"), str) or not scheduler["lock_ref"].startswith("state/"):
+    lock_ref = scheduler.get("lock_ref")
+    lock_parts = PurePosixPath(lock_ref).parts if isinstance(lock_ref, str) else ()
+    if not isinstance(lock_ref, str) or not lock_ref.startswith("state/") or len(lock_parts) < 2 or any(part in {"", ".", ".."} for part in lock_parts):
         problems.append("lock_ref")
     if not isinstance(scheduler.get("max_runtime_seconds"), int) or isinstance(scheduler.get("max_runtime_seconds"), bool) or scheduler["max_runtime_seconds"] <= 0 or scheduler.get("resume_after_reboot") is not True:
         problems.append("scheduler_bounds")
@@ -289,13 +320,14 @@ def main() -> int:
         "malformed_policy": lambda c: c.update(policy=None),
         "malformed_artifact": lambda c: c.update(artifact=None),
         "malformed_health_checks": lambda c: c["rollout"].update(health_checks=None),
+        "production_placeholder_signature": lambda c: (c.update(scope="PRODUCTION"), c["artifact"]["signature"].update(status="verified")),
     }
     for name, mutate in cases.items():
         candidate = copy.deepcopy(contract)
         mutate(candidate)
         assert errors(candidate), name
 
-    print("PASS: autonomous update contract; dry-run has zero side effects; 11 dangerous mutations rejected; PREP_ONLY remains unverified")
+    print("PASS: autonomous update contract; dry-run has zero side effects; 12 dangerous mutations rejected; PREP_ONLY remains unverified")
     return 0
 
 
