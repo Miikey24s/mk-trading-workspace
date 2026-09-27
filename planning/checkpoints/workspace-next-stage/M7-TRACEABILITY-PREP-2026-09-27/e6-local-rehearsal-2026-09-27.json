@@ -36,7 +36,7 @@
       {
         "scope": "quant",
         "branch": "master",
-        "head": "9be1d530556d6bffcbd4238a41791c185215d669",
+        "head": "7c4a74e3f5dbf21aa739a3ee3f0980ffb3c62511",
         "dirty_count": 0,
         "dirty_preview": ""
       }
@@ -47,7 +47,7 @@
     "mt5_stress_commit": "56333618d437e9032558be2b54a4baa1803410da",
     "mt5_renderer_commit": "3c55c1288b63ebd7902753a7e3fc40b6171f9fcc",
     "mt5_ai_commit": "c1dfff448525fdaa73f3baff49ddb0601ea1de04",
-    "quant_chart_commit": "9be1d530556d6bffcbd4238a41791c185215d669",
+    "quant_chart_commit": "7c4a74e3f5dbf21aa739a3ee3f0980ffb3c62511",
     "chart_evidence_refs": [
       {
         "scope": "MT5 C3 renderer",
@@ -144,14 +144,14 @@
         "scope": "Quant event-kernel/onchain P0 pilot",
         "path": "projects/quant-trading/docs/research/event-kernel-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 6; full Quant 46; ruff/compileall/diff pass; no network/execution",
+        "validation": "focused 6; current Quant full 48 passed (pilot receipt records prior 46); ruff/compileall/diff pass; no network/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant discrete optimizer P0 pilot",
         "path": "projects/quant-trading/docs/research/discrete-optimizer-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 4; full Quant 46; ruff/compileall/diff pass; no edge/production claim",
+        "validation": "focused 4; current Quant full 48 passed; ruff/compileall/diff pass; no edge/production claim",
         "acceptance": "NOT_CLAIMED"
       }
     ],
@@ -165,8 +165,9 @@
     "quant_edge_commit": "3be960486c4bcfa763b112ff967f25fd0b414850",
     "quant_event_kernel_commit": "9f61de70d6f3fb2aacb63989a930c7ab07e32448",
     "quant_optimizer_commit": "7f2cedb17e3eb04e1b1fa708469d5c38b8955ea2",
-    "quant_receipt_commit": "9be1d530556d6bffcbd4238a41791c185215d669",
-    "quant_current_full_test_count": 46
+    "quant_optimizer_hardening_commit": "e82c7cf",
+    "quant_receipt_commit": "7c4a74e3f5dbf21aa739a3ee3f0980ffb3c62511",
+    "quant_current_full_test_count": 48
   },
   "checks": {
     "recovery_dependencies": [

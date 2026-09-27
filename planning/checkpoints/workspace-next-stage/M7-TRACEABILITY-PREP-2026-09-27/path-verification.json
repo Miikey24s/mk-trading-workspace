@@ -170,7 +170,7 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "90946c4f492d30b4a7849b541d3515977208942718d1892851c394c0cf21af7a",
+      "sha256": "e2189f830b31d112878a94472bea5968dce69e8d872443b6d6c9d638c0fa0ac8",
       "bytes": 11182
     },
     {
@@ -275,7 +275,7 @@
       "path": "projects/quant-trading/docs/research/discrete-optimizer-pilot-r1-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\discrete-optimizer-pilot-r1-2026-09-27.json",
       "exists": true,
-      "sha256": "e02f4560b46e5005e17b57ab266b3de38acec55da358332053caec60d893e603",
+      "sha256": "e90bbba10629b75c08e00f387fd4373969e7ff69c5ddb68f42ac4814f8a652da",
       "bytes": 1241
     }
   ],
