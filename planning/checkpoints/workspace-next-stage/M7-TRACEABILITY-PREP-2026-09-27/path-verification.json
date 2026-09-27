@@ -16,8 +16,8 @@
       "path": "planning/checkpoints/workspace-next-stage/RESUME.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\RESUME.md",
       "exists": true,
-      "sha256": "747b51d57ccbff09493df9fef5c2e1432318bf85e5ced280d243a4d88cc80025",
-      "bytes": 21624
+      "sha256": "519b0397a34dea63d7e1aa6884adafdc9f45a5e9c9a5fa56bcbee3fcf681af5b",
+      "bytes": 22419
     },
     {
       "path": "planning/checkpoints/workspace-next-stage/M3-M4-SHARED-UI-2026-09-26/CLOSEOUT.md",
@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "c502545370872cca0fbd482f929ae062392b06abccfdcd47dd51bd82689d3e37",
-      "bytes": 7445
+      "sha256": "8e92dcac5c98768c846acd1d666da206ede15909170f3fb2a8ee767eaca81044",
+      "bytes": 9331
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -214,7 +214,42 @@
       "exists": true,
       "sha256": "26ec51da639987ceb531dc3ee985c047528a1b8a1c5a6a325a2b6a51ffd569eb",
       "bytes": 1091
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-script-parity-audit-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\chart-script-parity-audit-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "d8095f70c9605b9f92149a3b9956c7dc0807d618541b29cc91cba42f405f14f2",
+      "bytes": 5485
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-alert-c6-r2-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\chart-alert-c6-r2-2026-09-27.json",
+      "exists": true,
+      "sha256": "6aeafb96b20f913c37b58d198b1ba77c0366a39c50342075a7fc8205bbd9f135",
+      "bytes": 1817
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-ui-view-model-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\chart-ui-view-model-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "d7092e1d7c7feca8a85fbeb7594f6e70001e2c54ccc6f4efbf17b616350080fd",
+      "bytes": 1309
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-visible-range-adapter-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\chart-visible-range-adapter-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "56129e7dccb8c8a2576be50dc08a27150643f4f5ae66588ea6b88687d2de0a06",
+      "bytes": 1367
+    },
+    {
+      "path": "planning/checkpoints/workspace-next-stage/MODEL-PORTABILITY-FALLBACK-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\MODEL-PORTABILITY-FALLBACK-2026-09-27.md",
+      "exists": true,
+      "sha256": "b1ef8a2c7f9c7f6f7a42a338dd07e900cd55522e00e4648681117283b7349b8b",
+      "bytes": 11183
     }
   ],
-  "verified_against_commit": "dd9298fb1a39d5b6ad997b54ac9f0c4a9d6139e7"
+  "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
 }

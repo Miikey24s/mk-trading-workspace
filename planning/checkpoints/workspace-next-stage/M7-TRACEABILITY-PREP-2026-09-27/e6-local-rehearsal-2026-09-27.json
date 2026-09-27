@@ -10,19 +10,19 @@
     "plan_present": true,
     "resume_present": true,
     "plan_sha256": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
-    "resume_sha256_current": "747b51d57ccbff09493df9fef5c2e1432318bf85e5ced280d243a4d88cc80025",
+    "resume_sha256_current": "519b0397a34dea63d7e1aa6884adafdc9f45a5e9c9a5fa56bcbee3fcf681af5b",
     "repo_snapshots": [
       {
         "scope": "workspace",
         "branch": "main",
-        "head": "dd9298fb1a39d5b6ad997b54ac9f0c4a9d6139e7",
+        "head": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
         "dirty_count": 72,
         "dirty_preview": " M AGENTS.md;   M planning/mt5-tradingview-backtester/POST-COMPLETION-ROADMAP-DRAFT.md;   M planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/RESUME.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json.sha256;   M planning/ui-platform/MASTER-UI-PLATFORM-PLAN.md;   M projects/TradingAgents"
       },
       {
         "scope": "mt5",
         "branch": "Nam",
-        "head": "db546366803b5276322ae289e8085731c5f4f5c9",
+        "head": "8177c68db26fb81a2ca93c3faf9d274815c66aae",
         "dirty_count": 13,
         "dirty_preview": " M ai_service.py;   M foundation_v2/evidence/replay-ui-1440.png;   M foundation_v2/evidence/replay-ui-360.png;   M foundation_v2/evidence/replay-ui-768.png;   M tests/test_ai_foundation.py;  ?? foundation_v2/evidence/U5-protective-validation-r4.json;  ?? foundation_v2/evidence/U5-protective-validation-r5.json;  ?? foundation_v2/evidence/ps02-lifecycle-wip-r2/"
       },
@@ -41,8 +41,8 @@
         "dirty_preview": ""
       }
     ],
-    "authority_commit": "dd9298fb1a39d5b6ad997b54ac9f0c4a9d6139e7",
-    "current_context_sha256": "8ffbe9e8c8f920e98eb5aacea1a21b2074e5766d7b683788c944bb03977f199d",
+    "authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
+    "current_context_sha256": "13ba21689a3a6adc37487822d8d157719be77402696d8f4c030b86687d703297",
     "research_root_commit": "2ccf96b3fd0a4d07a665159bbe269fa8d3c2dfa4",
     "mt5_stress_commit": "56333618d437e9032558be2b54a4baa1803410da",
     "mt5_renderer_commit": "3c55c1288b63ebd7902753a7e3fc40b6171f9fcc",
@@ -85,16 +85,53 @@
         "acceptance": "NOT_CLAIMED"
       },
       {
-        "scope": "MT5 C6 alert advisory",
+        "scope": "MT5 C6 alert advisory r1",
         "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-alert-c6-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
         "validation": "13 focused tests passed; offline advisory only",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 Pine/MQL parity audit",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-script-parity-audit-r1-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "focused chart 78; renderer/overlay/intelligence 32; compileall PASS; findings remain open",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 C6 alert advisory r2",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-alert-c6-r2-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "focused 14 passed; combined chart 84 passed/3 failed outside C6",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 chart UI view-model",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-ui-view-model-r1-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "focused 4 passed; compileall PASS; diff_check PASS",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 visible-range adapter",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-visible-range-adapter-r1-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "focused 6 passed; compileall PASS; diff_check PASS",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Model portability fallback",
+        "path": "planning/checkpoints/workspace-next-stage/MODEL-PORTABILITY-FALLBACK-2026-09-27.md",
+        "mode": "PREP_ONLY",
+        "validation": "contract/read-only planning artifact; no provider, quota, auth or global config change",
         "acceptance": "NOT_CLAIMED"
       }
     ],
     "mt5_dst_policy_commit": "125dbdd711da7d1561f19d4355c2f719e1faa4ef",
     "mt5_explainability_commit": "ed3d539a2fdaa0a8c1c22bb36bea5513b20349c9",
-    "mt5_alert_commit": "db546366803b5276322ae289e8085731c5f4f5c9"
+    "mt5_alert_commit": "db546366803b5276322ae289e8085731c5f4f5c9",
+    "mt5_ui_view_model_commit": "44ef2b0ca5ea799940019ed161d6e291eab2d49d",
+    "mt5_visible_range_commit": "2130904"
   },
   "checks": {
     "recovery_dependencies": [
@@ -138,7 +175,8 @@
     "archive_hash_stable": true,
     "no_external_operations": true,
     "chart_evidence_refs_present": true,
-    "path_manifest_reference_count": 30
+    "path_manifest_reference_count": 35,
+    "chart_followup_refs_present": true
   },
   "interpretation": {
     "recovery_rehearsal": "PASS_LOCAL_FIXTURE",

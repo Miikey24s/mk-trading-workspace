@@ -14,9 +14,9 @@ The path verification companion records the existence, absolute path, byte size,
 
 | Scope | Snapshot | WIP/meaning |
 |---|---|---|
-| Workspace root | `dd9298fb1a39d5b6ad997b54ac9f0c4a9d6139e7` | Planning root is dirty with existing user/worker changes; this packet does not stage or reset them. |
+| Workspace root | `45eb6ddca56ed4721a5bf1943e16cd68f5c379fb` | Planning root is dirty with existing user/worker changes; this packet does not stage or reset them. |
 | VI Dubber | `3e2c5310fa792adacb5f87c4966b5984cf1f028a` (`main`, ahead of `origin/main`) | Two historical P23 JSON receipts remain untracked intentionally; they are not promoted by this packet. |
-| MT5 TradingView Backtester | `db546366803b5276322ae289e8085731c5f4f5c9` (`Nam`, ahead of `origin/Nam`) | Replay/UI/U5, chart C1/C2/stress/C3/C4/C5/C6/DST and PS02 WIP are preserved; no whole-tree staging/reset was performed. |
+| MT5 TradingView Backtester | `8177c68db26fb81a2ca93c3faf9d274815c66aae` (`Nam`, ahead of `origin/Nam`) | Replay/UI/U5, chart C1/C2/stress/renderer/DST/C4/C5/C6/parity/view-model/visible-range and PS02 WIP are preserved; no whole-tree staging/reset was performed. |
 | Quant Lab | `3e0235c16fc6d97792201067343927cbfb0c3c6d` (`main`) | Offline chart-feature contract is receipt-only; no edge, broker, provider or production claim is promoted. |
 | UI-Systems | Source paths under `D:\ANNAM\UI-Systems` | No Git repository was detected at that path; M4 source/hash pins are taken from the scoped closeout, not inferred as a new release. |
 
@@ -95,7 +95,7 @@ Until those criteria are recorded by the authoritative owner, this packet remain
 
 A fresh-root-style local rehearsal was run from the current workspace without starting a provider, broker, OAuth flow, PostgreSQL service, production service, or external network operation. It read the current master PLAN and `RESUME.md`, captured current root/VI/MT5 HEAD and dirty-tree metadata, and used only existing isolated fixtures plus a focused VI test command.
 
-Final nested-head snapshot: workspace/root dd9298fb1a39d5b6ad997b54ac9f0c4a9d6139e7; MT5 db546366803b5276322ae289e8085731c5f4f5c9; VI 3e2c5310fa792adacb5f87c4966b5984cf1f028a; Quant 3e0235c16fc6d97792201067343927cbfb0c3c6d after the causal chart C1/C2/stress/renderer/DST/C4/AI/C6 slices and offline Quant chart-feature contract. Existing dirty WIP and historical receipt artifacts remain preserved and are not promoted.
+Final nested-head snapshot: workspace/root 45eb6ddca56ed4721a5bf1943e16cd68f5c379fb; MT5 8177c68db26fb81a2ca93c3faf9d274815c66aae; VI 3e2c5310fa792adacb5f87c4966b5984cf1f028a; Quant 3e0235c16fc6d97792201067343927cbfb0c3c6d after chart parity, C6 r2, UI view-model, visible-range adapter and model-fallback slices. Existing dirty WIP and historical receipt artifacts remain preserved and are not promoted.
 
 | Check | Result | Evidence and limit |
 |---|---|---|
@@ -104,7 +104,7 @@ Final nested-head snapshot: workspace/root dd9298fb1a39d5b6ad997b54ac9f0c4a9d613
 | M5 catalog backup/rebuild control | **PASS / PREP_ONLY** | Existing M5 receipt has equal metadata backup/restored digests and the 1,000-item/100,000-segment fixture shape. The receipt explicitly does not prove SQLite migration/transaction acceptance, real relink/availability, UI p95, or blob backup. |
 | MT5 restore/hash control | **PASS / receipt replay** | Existing `F7-restore-rehearsal-r1.json` has all checks true and equal source/target metadata counts. This was read-only receipt consistency verification, not a new PostgreSQL restore run. |
 | Packet traceability IDs | **PASS** | All `M7-01`…`M7-16` IDs in this packet are unique. |
-| Chart C3/C4/C5/C6, DST, and Quant receipt links | **PASS / PREP_ONLY** | Renderer C3, DST-fold policy, explainability C4, typed AI C5, confirmed-only alert C6, and Quant `chart-feature-contract-r1` receipts are present in the 30-reference manifest. Their receipts report offline/typed validation only; they do not claim visual/browser acceptance, provider quality, edge, broker, external alert delivery, or live execution. |
-| Archive/hash stability | **PASS / final frozen authority snapshot** | The refreshed 30-reference manifest has zero missing paths and zero hash drift against the final frozen authority snapshot at root commit `dd9298fb1a39d5b6ad997b54ac9f0c4a9d6139e7`. Current `RESUME.md` SHA-256 is `747b51d57ccbff09493df9fef5c2e1432318bf85e5ced280d243a4d88cc80025`; two consecutive reads matched. This is a hash-stability PASS for the packet snapshot, not integrated M7 acceptance. |
+| Chart and portability receipt links | **PASS / PREP_ONLY** | The 35-reference manifest includes renderer C3, DST-fold, explainability C4, typed AI C5, alert C6 r1/r2, Pine/MQL parity, UI view-model, visible-range adapter, Quant chart-feature, and model-portability fallback receipts. Findings and combined-suite failures remain explicitly scoped; no visual/browser, provider, edge, broker, external alert delivery, live execution, or model acceptance is claimed. |
+| Archive/hash stability | **PASS / final frozen authority snapshot** | The refreshed 35-reference manifest has zero missing paths and zero hash drift against the final frozen authority snapshot at root commit `45eb6ddca56ed4721a5bf1943e16cd68f5c379fb`. Current `RESUME.md` SHA-256 is `519b0397a34dea63d7e1aa6884adafdc9f45a5e9c9a5fa56bcbee3fcf681af5b`; two consecutive reads matched. This is a hash-stability PASS for the packet snapshot, not integrated M7 acceptance. |
 
 The machine-readable receipt is [e6-local-rehearsal-2026-09-27.json](e6-local-rehearsal-2026-09-27.json). The rehearsal demonstrates local recovery and no-duplicate controls; the refreshed archive/hash step passes against the frozen authority snapshot. It does not close M7, M0, M5, M6, P23 whole-pipeline, or any permission gate.
