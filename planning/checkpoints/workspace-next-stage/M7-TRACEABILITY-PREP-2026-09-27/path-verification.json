@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "bcbc59d7662e7189fde6e260eeffba51991a49a78e29a0e4b9d7ff56a25d368b",
-      "bytes": 27834
+      "sha256": "406cf19bda3757e81b1c93d52b6d1c7170f6f86ddbcd3f23b3756b51152fd657",
+      "bytes": 29961
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -429,8 +429,8 @@
       "path": "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/zone_lifecycle.py",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\trading_workspace_v2\\zone_lifecycle.py",
       "exists": true,
-      "sha256": "f511da22fe7999c67691006e64969068b753b6297f485df3238d42ca4a700dd6",
-      "bytes": 49506
+      "sha256": "92c9e3cef8c89b594dc575e33b1186b3f65229244a935e74c8565eef4e4213f0",
+      "bytes": 50167
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_zone_lifecycle.py",
@@ -543,6 +543,41 @@
       "exists": true,
       "sha256": "53152490dcb6cfb9ec154a8e7a6a914aa09826c7b3ec1e1478c2bce1dbdf8a9a",
       "bytes": 32902
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-zone-integration-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\chart-zone-integration-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "2f06173aef991383c0edab5b90ac14c02d13cced1d4e0cd0a72f7b174438ec11",
+      "bytes": 1566
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-zone-integration-r1-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\chart-zone-integration-r1-2026-09-27.md",
+      "exists": true,
+      "sha256": "84f17b09f95f90d664d69058616337e7be120c49b2ffbf50da678f60832bf335",
+      "bytes": 2939
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/chart_overlay_contract.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\trading_workspace_v2\\chart_overlay_contract.py",
+      "exists": true,
+      "sha256": "9a09941ae280e8fdbcc57a18ca2cf251a9aa22ef27c975b67e5c63eeb8db8405",
+      "bytes": 24350
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_chart_overlay_contract.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\tests\\test_chart_overlay_contract.py",
+      "exists": true,
+      "sha256": "5f9b5bb2edd276817a1aefe7221efbaa8f287f9dd50f2ee059be33451c2541a6",
+      "bytes": 9316
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_zone_integration.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\tests\\test_zone_integration.py",
+      "exists": true,
+      "sha256": "6fcd0f9163afff38ba30493b64060dfe58fb750809f7f1c6b907777d84667e59",
+      "bytes": 5869
     }
   ],
   "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"

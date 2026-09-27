@@ -22,7 +22,7 @@
       {
         "scope": "mt5",
         "branch": "Nam",
-        "head": "ce8a08e8579bf1668984d44ba6118ddeec85c42b",
+        "head": "a2d8fd3209de3b4384031e7840cdbcec0d911974",
         "dirty_count": 13,
         "dirty_preview": " M ai_service.py;   M foundation_v2/evidence/replay-ui-1440.png;   M foundation_v2/evidence/replay-ui-360.png;   M foundation_v2/evidence/replay-ui-768.png;   M tests/test_ai_foundation.py;  ?? foundation_v2/evidence/U5-protective-validation-r4.json;  ?? foundation_v2/evidence/U5-protective-validation-r5.json;  ?? foundation_v2/evidence/ps02-lifecycle-wip-r2/"
       },
@@ -426,6 +426,41 @@
         "mode": "PREP_ONLY",
         "validation": "ebdd89e opaque LLM-route fingerprint binding; provider authority remains external and unclaimed",
         "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 OB/OTE zone integration receipt",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-zone-integration-r1-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "28 passed (5 integration, 7 lifecycle, 16 overlay); compileall PASS; git diff --check PASS; ephemeral tzdata only; PREP_ONLY",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 OB/OTE zone integration narrative",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-zone-integration-r1-2026-09-27.md",
+        "mode": "PREP_ONLY",
+        "validation": "Additive offline detector→zone→renderer/alert seam; 28 focused passes; browser/TradingView renderer and OTE ambiguity remain open",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 zone overlay contract source",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/chart_overlay_contract.py",
+        "mode": "PREP_ONLY",
+        "validation": "a2d8fd3 zone integration adapter; causal packet boundary only; no provider/broker/order/fill/live capability",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 zone overlay contract tests",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_chart_overlay_contract.py",
+        "mode": "PREP_ONLY",
+        "validation": "a2d8fd3 overlay contract coverage; included in 28-pass integration receipt",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 zone integration focused tests",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_zone_integration.py",
+        "mode": "PREP_ONLY",
+        "validation": "a2d8fd3 integration tests; 5 focused integration passes; no live execution",
+        "acceptance": "NOT_CLAIMED"
       }
     ],
     "mt5_dst_policy_commit": "125dbdd711da7d1561f19d4355c2f719e1faa4ef",
@@ -453,7 +488,7 @@
     "vi_job12_status": "running / pending; whole-pipeline acceptance not claimed",
     "mt5_mql_parity_commit": "e1377eee561a500ad6858ca195519da1f8723e4a",
     "mt5_renderer_metadata_commit": "79cc8beba1779998e64a613c7010067753b3ccc2",
-    "mt5_zone_lifecycle_commit": "ce8a08e8579bf1668984d44ba6118ddeec85c42b",
+    "mt5_zone_lifecycle_commit": "a2d8fd3209de3b4384031e7840cdbcec0d911974",
     "quant_ou_commit": "90c16e718044d2b6dbae9850f915b71907b89f60",
     "quant_ou_gap_guard_commit": "844a3621617829e5f4fb6b3145ec008845a515d8",
     "quant_entropy_commit": "ec6e7f24f151e126618bda86b76a49668399cf21",
@@ -471,7 +506,9 @@
       "result": "110 passed in 7.05s",
       "external_side_effects": "none",
       "passed": true
-    }
+    },
+    "mt5_zone_contract_commit": "ce8a08e8579bf1668984d44ba6118ddeec85c42b",
+    "mt5_zone_integration_commit": "a2d8fd3209de3b4384031e7840cdbcec0d911974"
   },
   "checks": {
     "recovery_dependencies": [
@@ -515,7 +552,7 @@
     "archive_hash_stable": true,
     "no_external_operations": true,
     "chart_evidence_refs_present": true,
-    "path_manifest_reference_count": 77,
+    "path_manifest_reference_count": 82,
     "chart_followup_refs_present": true,
     "theory_p0_receipt_refs_present": true,
     "vi_flac_hardening_ref_present": true,
@@ -529,7 +566,8 @@
     "quant_full_test_count": 110,
     "latest_nested_heads_recorded": true,
     "research_root_commit_tracked": true,
-    "quant_full_validation_recorded": true
+    "quant_full_validation_recorded": true,
+    "mt5_zone_integration_refs_present": true
   },
   "interpretation": {
     "recovery_rehearsal": "PASS_LOCAL_FIXTURE",
