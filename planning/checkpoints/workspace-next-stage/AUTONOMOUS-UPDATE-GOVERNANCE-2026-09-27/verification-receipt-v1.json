@@ -1,0 +1,32 @@
+{
+  "receipt_schema_version": "autonomous-update-governance-receipt-v1",
+  "generated_at_utc": "2026-09-27T06:11:21Z",
+  "status": "PASS_SCOPED",
+  "scope": "PREP_ONLY_OFFLINE",
+  "command": "python verify_autonomous_update_contract.py",
+  "checker_sha256": "186a6b352fa241bfeedab6a51d2a20dfd37ba4d945f8b7141d7d217f1901cace",
+  "fixture_sha256": "fd3570ed04ff3d8cad231fcff8df4c6572d66866998c34d4448be7fcdb7353ca",
+  "dry_run": {
+    "network_requests": 0,
+    "process_launches": 0,
+    "filesystem_mutations": 0,
+    "broker_actions": 0
+  },
+  "negative_mutations_rejected": 8,
+  "verified": [
+    "canonical manifest digest binding",
+    "exact version and immutable source commit shape",
+    "release-root path containment and traversal rejection",
+    "signature key/algorithm/status gate",
+    "read-only builtin health-check references",
+    "atomic promotion and one-shot previous-known-good rollback policy",
+    "local-only scheduler lock, timeout, bounded backoff and resume policy"
+  ],
+  "not_run": [
+    "real Ed25519 cryptographic verification against a trust store",
+    "network fetch or repository resolution",
+    "package installation, service registration or scheduler mutation",
+    "canary process, restart, rollback or live trading/provider action"
+  ],
+  "rollback": "Delete this PREP_ONLY receipt/fixture from the planning checkpoint; no product state was changed."
+}
