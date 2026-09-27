@@ -81,7 +81,11 @@ def errors(contract: dict[str, Any]) -> list[str]:
         problems.append("allowed_key_ids_shape")
     if policy.get("allowed_install_roots") != ["releases/"]:
         problems.append("allowed_install_roots")
-    forbidden = set(policy.get("forbidden_operations", []))
+    forbidden_values = policy.get("forbidden_operations", [])
+    if not isinstance(forbidden_values, list) or any(not isinstance(value, str) or not value for value in forbidden_values):
+        problems.append("forbidden_operations_shape")
+        forbidden_values = []
+    forbidden = set(forbidden_values)
     required_forbidden = {
         "arbitrary_shell",
         "package_install",
@@ -135,11 +139,17 @@ def errors(contract: dict[str, Any]) -> list[str]:
             path in seen
             or path.startswith("/")
             or "\\" in path
+            or any(char in {":", "*", "?", "<", ">", "|"} for char in path)
             or any(ord(char) < 32 for char in path)
         ):
             problems.append("file_path_safety")
         parts = PurePosixPath(path).parts
-        if len(parts) < 2 or parts[0] != "releases" or any(part in {"", ".", ".."} for part in parts):
+        if (
+            len(parts) < 2
+            or parts[0] != "releases"
+            or any(part in {"", ".", ".."} for part in parts)
+            or any(part.endswith((".", " ")) for part in parts)
+        ):
             problems.append("file_path_segments")
         seen.add(path)
         if not isinstance(item.get("size"), int) or item["size"] < 0:
@@ -174,7 +184,8 @@ def errors(contract: dict[str, Any]) -> list[str]:
         "expires_at",
         "files",
     }
-    if set(signature.get("signed_fields", [])) != required_signed_fields:
+    signed_fields = signature.get("signed_fields", [])
+    if not isinstance(signed_fields, list) or set(signed_fields) != required_signed_fields:
         problems.append("signed_fields")
 
     rollout = contract.get("rollout", {})
@@ -244,7 +255,13 @@ def errors(contract: dict[str, Any]) -> list[str]:
         scheduler = {}
     if scheduler.get("mode") != "local_only" or scheduler.get("requires_network") is not False:
         problems.append("scheduler_scope")
-    if not isinstance(scheduler.get("schedule_ref"), str) or not scheduler["schedule_ref"].startswith("local://"):
+    schedule_ref = scheduler.get("schedule_ref")
+    if (
+        not isinstance(schedule_ref, str)
+        or not schedule_ref.startswith("local://")
+        or "\\" in schedule_ref
+        or "/../" in f"/{schedule_ref}/"
+    ):
         problems.append("schedule_ref")
     lock_ref = scheduler.get("lock_ref")
     lock_parts = PurePosixPath(lock_ref).parts if isinstance(lock_ref, str) else ()
@@ -321,13 +338,16 @@ def main() -> int:
         "malformed_artifact": lambda c: c.update(artifact=None),
         "malformed_health_checks": lambda c: c["rollout"].update(health_checks=None),
         "production_placeholder_signature": lambda c: (c.update(scope="PRODUCTION"), c["artifact"]["signature"].update(status="verified")),
+        "forbidden_shape": lambda c: c["policy"].update(forbidden_operations=None),
+        "signature_fields_shape": lambda c: c["artifact"]["signature"].update(signed_fields=None),
+        "windows_ads_path": lambda c: c["artifact"]["files"][0].update(path="releases/workspace:engine.bin"),
     }
     for name, mutate in cases.items():
         candidate = copy.deepcopy(contract)
         mutate(candidate)
         assert errors(candidate), name
 
-    print("PASS: autonomous update contract; dry-run has zero side effects; 12 dangerous mutations rejected; PREP_ONLY remains unverified")
+    print("PASS: autonomous update contract; dry-run has zero side effects; 15 dangerous mutations rejected; PREP_ONLY remains unverified")
     return 0
 
 

@@ -18,7 +18,7 @@ The workspace may eventually run research, media, and agent workloads while the 
 
 The machine-readable fixture is [autonomous-update-contract-v1.json](autonomous-update-contract-v1.json). The checker is [verify_autonomous_update_contract.py](verify_autonomous_update_contract.py).
 
-The current offline receipt is [verification-receipt-v1.json](verification-receipt-v1.json). It records the checker and fixture hashes, a dry-run with zero network/process/filesystem/broker side effects, and twelve fail-closed mutation cases, including malformed policy/artifact/health-check shapes and a production placeholder signature. It is scoped evidence for the contract only; it is not a production release or scheduler acceptance.
+The current offline receipt is [verification-receipt-v1.json](verification-receipt-v1.json). It records the checker and fixture hashes, a dry-run with zero network/process/filesystem/broker side effects, and fifteen fail-closed mutation cases, including malformed policy/artifact/health-check shapes, Windows path hazards, and a production placeholder signature. It is scoped evidence for the contract only; it is not a production release or scheduler acceptance.
 
 ## Safety boundary
 

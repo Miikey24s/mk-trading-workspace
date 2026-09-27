@@ -4,7 +4,7 @@
   "status": "PASS_SCOPED",
   "scope": "PREP_ONLY_OFFLINE",
   "command": "python verify_autonomous_update_contract.py",
-  "checker_sha256": "bac80e215d9f93e193be25d0589b885540a44090a4304732598d01d941fe20bc",
+  "checker_sha256": "44c5559c4a971eacc6b1034166951f7483ba27470341cca4c2e4917b8e889a4c",
   "fixture_sha256": "fd3570ed04ff3d8cad231fcff8df4c6572d66866998c34d4448be7fcdb7353ca",
   "dry_run": {
     "network_requests": 0,
@@ -12,7 +12,7 @@
     "filesystem_mutations": 0,
     "broker_actions": 0
   },
-  "negative_mutations_rejected": 12,
+  "negative_mutations_rejected": 15,
   "verified": [
     "canonical manifest digest binding",
     "exact version and immutable source commit shape",
@@ -22,7 +22,9 @@
     "atomic promotion and one-shot previous-known-good rollback policy",
     "local-only scheduler lock, timeout, bounded backoff and resume policy",
     "malformed contract shapes fail closed without an exception",
-    "production signature requires real 64-byte base64 payload"
+    "production signature requires real 64-byte base64 payload",
+    "Windows path characters/ADS and trailing dot/space are rejected",
+    "scheduler schedule refs cannot escape local-only scope"
   ],
   "not_run": [
     "real Ed25519 cryptographic verification against a trust store",
