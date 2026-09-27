@@ -10,7 +10,7 @@
     "plan_present": true,
     "resume_present": true,
     "plan_sha256": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
-    "resume_sha256_current": "23287378558504ae31e871fbba862b88e042cda901a02d727a8d7e54368e3c91",
+    "resume_sha256_current": "913b1b064e2a44cd82474040eb148fc4830def1cccd8de369d98cc0b75b3bda7",
     "repo_snapshots": [
       {
         "scope": "vi",
@@ -30,7 +30,8 @@
         "head": "ff452312934dcd837dec88fbc7c4778410d4e3bc",
         "dirty_count": 78
       }
-    ]
+    ],
+    "authority_commit": "06e6b678cc7cbae94a99fb2f8551799352242200"
   },
   "checks": {
     "recovery_dependencies": [
@@ -70,21 +71,15 @@
     },
     "packet_ids_unique": true,
     "path_manifest_missing": 0,
-    "path_manifest_hash_drift": [
-      {
-        "path": "planning/checkpoints/workspace-next-stage/RESUME.md",
-        "expected": "16349adfb2906728cfdab33526dcd7316abd87c74564d2e3404f141fbce537ca",
-        "observed": "23287378558504ae31e871fbba862b88e042cda901a02d727a8d7e54368e3c91"
-      }
-    ],
-    "archive_hash_stable": false,
+    "path_manifest_hash_drift": [],
+    "archive_hash_stable": true,
     "no_external_operations": true
   },
   "interpretation": {
     "recovery_rehearsal": "PASS_LOCAL_FIXTURE",
     "no_duplicate_semantics": "PASS_VI_TARGETED_TESTS_PLUS_MT5_RECEIPT_CONSISTENCY",
-    "archive_hash": "BLOCKED_BY_CONCURRENT_RESUME_DRIFT",
+    "archive_hash": "PASS_FINAL_AUTHORITY_SNAPSHOT",
     "m7_acceptance": "NOT_CLAIMED",
-    "next_safe_action": "Refresh path-verification and packet snapshot only after authoritative RESUME/HEAD edits settle, then run fresh-root rehearsal again."
+    "next_safe_action": "No further hash refresh is required for the frozen authority snapshot; M7 acceptance remains governed by unresolved M0/M5/M6 gates."
   }
 }
