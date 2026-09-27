@@ -16,8 +16,8 @@
       "path": "planning/checkpoints/workspace-next-stage/RESUME.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\RESUME.md",
       "exists": true,
-      "sha256": "3aeddeab86d5f94bc242fb44d2cb5e10458ac0548cad72977e95f9b89ab69d4e",
-      "bytes": 23843
+      "sha256": "88afddb5acccc5b8ae1ecaea17f4389179bda464dff39ef95f0eb0402b6b2056",
+      "bytes": 24184
     },
     {
       "path": "planning/checkpoints/workspace-next-stage/M3-M4-SHARED-UI-2026-09-26/CLOSEOUT.md",
@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "6ed75597b9a0129ac7a21ada2e5ab2c51e07a5e189b167508fd9f762a65849f8",
-      "bytes": 54784
+      "sha256": "2e56363aa34625132e22f6acb061d2183ad8cb10b211fde83f1b621af2ae6dcd",
+      "bytes": 54575
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -877,8 +877,8 @@
       "path": "planning/CURRENT-CONTEXT.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\CURRENT-CONTEXT.md",
       "exists": true,
-      "sha256": "221de7da091f8c412fd6564e07ea18332cbce38be33d2370eb893b1d0de731e4",
-      "bytes": 11698
+      "sha256": "030eb429d7a64d7ef6601b03e6bc080ebc797d31c7c8e364b7ff78139c8ce217",
+      "bytes": 12029
     },
     {
       "path": "projects/vi-dubber/scripts/verify_m5_process_startup.py",
@@ -928,9 +928,93 @@
       "exists": true,
       "sha256": "71e4d52d0d9dc7ab5102679e83af0f7ccd5fbda7fcdbc98db3a68e17de1cdf68",
       "bytes": 3358
+    },
+    {
+      "path": "planning/research/FRONTIER-EVIDENCE-APPLICATION-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\research\\FRONTIER-EVIDENCE-APPLICATION-2026-09-28.md",
+      "exists": true,
+      "sha256": "a0099d91ffdffcd169654f51c83579158dfe176dc35f168cc77463992a266f80",
+      "bytes": 25633
+    },
+    {
+      "path": "planning/checkpoints/workspace-next-stage/PLAN-COMPLETION-AUDIT-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\PLAN-COMPLETION-AUDIT-2026-09-28.md",
+      "exists": true,
+      "sha256": "cc7f7dc0c074862d8148ed469d77bf61e49a3bef9d952d32e53207b671a96379",
+      "bytes": 12690
+    },
+    {
+      "path": "projects/vi-dubber/scripts/verify_m6_i1_reference.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\scripts\\verify_m6_i1_reference.py",
+      "exists": true,
+      "sha256": "366afbfdf8f818ae27881c3e13d6d69de34b797c09a8fb1680c5949114a78b50",
+      "bytes": 5691
+    },
+    {
+      "path": "projects/vi-dubber/src/vi_dubber/learn_reference.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\src\\vi_dubber\\learn_reference.py",
+      "exists": true,
+      "sha256": "b240e87f7c9caea0d2b05feb711ad7aff56253542aa7e801ac471bf04518d29f",
+      "bytes": 14240
+    },
+    {
+      "path": "projects/vi-dubber/tests/test_learn_reference.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\tests\\test_learn_reference.py",
+      "exists": true,
+      "sha256": "0abdb4e57cd6dc4c91cf4c0975e922e62f963eabe0fdf94348692e35da5b3758",
+      "bytes": 5448
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/M6-I1-reference-contract-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M6-I1-reference-contract-2026-09-28.md",
+      "exists": true,
+      "sha256": "4aa09d2742dddb313475026ca9fa97652a23d997638290d849766e0434d488d5",
+      "bytes": 2012
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/M6-I1-reference-contract-receipt-2026-09-28.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M6-I1-reference-contract-receipt-2026-09-28.json",
+      "exists": true,
+      "sha256": "a1069bfa8787748902c04425ed89064de830e281ebf7b5c49e28380041a3f358",
+      "bytes": 2839
+    },
+    {
+      "path": "projects/quant-trading/README.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\README.md",
+      "exists": true,
+      "sha256": "e4ccedf0b9332e279038046afb90d4e861ffca25fbbfd2bc153f595068b3adc2",
+      "bytes": 5440
+    },
+    {
+      "path": "projects/quant-trading/docs/research/model-governance-pilot-r1-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\model-governance-pilot-r1-2026-09-28.md",
+      "exists": true,
+      "sha256": "0e81c732850efe5b867b9e07dd4ba4f4191e427110298f109f568b4c583d2c9e",
+      "bytes": 3647
+    },
+    {
+      "path": "projects/quant-trading/src/quant_trading/model_governance.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\src\\quant_trading\\model_governance.py",
+      "exists": true,
+      "sha256": "5041ae0bbb3e24e36eaa4301912d78919e22aa1d283f7e9792b24f17a33b71bd",
+      "bytes": 18283
+    },
+    {
+      "path": "projects/quant-trading/tests/quant_trading/test_model_governance.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\tests\\quant_trading\\test_model_governance.py",
+      "exists": true,
+      "sha256": "ad80b9e59c553faed9dacfdfc7667d93e807b06f6b03c3ea369e3339eb42a3b1",
+      "bytes": 6446
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_chart_script_parity.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\tests\\test_chart_script_parity.py",
+      "exists": true,
+      "sha256": "58609412501ab0b15d2c15fde29247ead45b69195c1c730fae6d312d556d0609",
+      "bytes": 7226
     }
   ],
   "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
-  "snapshot_root_commit": "1820ac197b23dda2df42db5614fc221958426829",
+  "snapshot_root_commit": "c1da8eef734659552b78b04451a0b90eee057451",
   "frozen_authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
 }

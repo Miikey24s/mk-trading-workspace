@@ -10,33 +10,33 @@
     "plan_present": true,
     "resume_present": true,
     "plan_sha256": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
-    "resume_sha256_current": "3aeddeab86d5f94bc242fb44d2cb5e10458ac0548cad72977e95f9b89ab69d4e",
+    "resume_sha256_current": "88afddb5acccc5b8ae1ecaea17f4389179bda464dff39ef95f0eb0402b6b2056",
     "repo_snapshots": [
       {
         "scope": "workspace",
         "branch": "main",
-        "head": "1820ac197b23dda2df42db5614fc221958426829",
+        "head": "c1da8eef734659552b78b04451a0b90eee057451",
         "dirty_count": 73,
         "dirty_preview": " M planning/CURRENT-CONTEXT.md;   M planning/checkpoints/workspace-next-stage/RESUME.md;   M planning/mt5-tradingview-backtester/POST-COMPLETION-ROADMAP-DRAFT.md;   M planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/RESUME.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json.sha256;   M planning/ui-platform/MASTER-UI-PLATFORM-PLAN.md"
       },
       {
         "scope": "mt5",
         "branch": "Nam",
-        "head": "4876dbf0f139005a467be3cee6101b13b7efcf83",
+        "head": "89be93554d0933bebdaeba5f77d29ef40e6911f1",
         "dirty_count": 13,
         "dirty_preview": " M ai_service.py;   M foundation_v2/evidence/replay-ui-1440.png;   M foundation_v2/evidence/replay-ui-360.png;   M foundation_v2/evidence/replay-ui-768.png;   M tests/test_ai_foundation.py;  ?? foundation_v2/evidence/U5-protective-validation-r4.json;  ?? foundation_v2/evidence/U5-protective-validation-r5.json;  ?? foundation_v2/evidence/ps02-lifecycle-wip-r2/"
       },
       {
         "scope": "vi",
         "branch": "main",
-        "head": "f847eb0669fa25532f0fc0b89ca9347faa15441d",
+        "head": "86951298d0210cf5f98a56a3e3e576f7d7e2d2d9",
         "dirty_count": 2,
         "dirty_preview": "?? work/checkpoints/P23-real-media-final-assembly-6h-2026-09-26.json;  ?? work/checkpoints/P23-real-media-process-gpu-smoke-2026-09-26.json"
       },
       {
         "scope": "quant",
         "branch": "master",
-        "head": "dade64782ab35b4581b32aa300536456c5080df6",
+        "head": "93f6a816994d96074b5ef6d8580ca92b1b58b86b",
         "dirty_count": 0,
         "dirty_preview": ""
       },
@@ -49,7 +49,7 @@
       }
     ],
     "authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
-    "current_context_sha256": "221de7da091f8c412fd6564e07ea18332cbce38be33d2370eb893b1d0de731e4",
+    "current_context_sha256": "030eb429d7a64d7ef6601b03e6bc080ebc797d31c7c8e364b7ff78139c8ce217",
     "research_root_commit": "a30c5e19a037dce29521a8565343dfa77f7b8b2c",
     "mt5_stress_commit": "56333618d437e9032558be2b54a4baa1803410da",
     "mt5_renderer_commit": "3c55c1288b63ebd7902753a7e3fc40b6171f9fcc",
@@ -824,8 +824,8 @@
     "quant_event_kernel_commit": "9f61de70d6f3fb2aacb63989a930c7ab07e32448",
     "quant_optimizer_commit": "7f2cedb17e3eb04e1b1fa708469d5c38b8955ea2",
     "quant_optimizer_hardening_commit": "e82c7cf",
-    "quant_receipt_commit": "dade64782ab35b4581b32aa300536456c5080df6",
-    "quant_current_full_test_count": 140,
+    "quant_receipt_commit": "93f6a816994d96074b5ef6d8580ca92b1b58b86b",
+    "quant_current_full_test_count": 147,
     "quant_theory_receipt_commit": "b67f398c8d6a88617f2f3bc23c3fa7ab3bb410a4",
     "quant_state_primitives_commit": "ec6e7f24f151e126618bda86b76a49668399cf21",
     "quant_conformal_commit": "ce225a5f0ceacdf25226bbc2519191c813b58dc9",
@@ -853,7 +853,7 @@
     "quant_ou_diagnostics_commit": "223eeca67c5a5704de494fd9831d7d962c77417e",
     "quant_full_validation": {
       "command": "uv run pytest -q",
-      "result": "140 passed in 7.09s",
+      "result": "147 passed in 7.54s",
       "external_side_effects": "none",
       "passed": true
     },
@@ -886,7 +886,7 @@
     "quant_bocpd_focused_test_count": 12,
     "quant_causal_effect_commit": "c4265d977cce74ed7a545f29d457b5870eb46118",
     "tradingagents_provenance_commit": "f3b357f945b253fffbcf66f9a219c7ffc264da85",
-    "current_workspace_commit": "1820ac197b23dda2df42db5614fc221958426829",
+    "current_workspace_commit": "c1da8eef734659552b78b04451a0b90eee057451",
     "frozen_authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
     "shared_ui_presentation_state_commit": "681ffc59658b71fa812b657377022011a2e01a38",
     "shared_ui_complete_token_snapshot_commit": "92311f4dc6163760c342df81933b8da3a5a7490c",
@@ -953,7 +953,14 @@
     "quant_distribution_drift_commit": "dade64782ab35b4581b32aa300536456c5080df6",
     "quant_distribution_drift_base_commit": "48cd3a6478ce69fdf1928748299fce3760bf796a",
     "quant_distribution_drift_focused_test_count": 8,
-    "quant_distribution_drift_status": "synthetic causal PSI/OOD diagnostic; market_edge_claim=false; PREP_ONLY"
+    "quant_distribution_drift_status": "synthetic causal PSI/OOD diagnostic; market_edge_claim=false; PREP_ONLY",
+    "quant_model_governance_commit": "93f6a816994d96074b5ef6d8580ca92b1b58b86b",
+    "quant_model_governance_focused_test_count": 7,
+    "vi_m6_i1_commit": "86951298d0210cf5f98a56a3e3e576f7d7e2d2d9",
+    "vi_m6_i1_focused_test_count": 43,
+    "mt5_chart_parity_fixture_commit": "89be93554d0933bebdaeba5f77d29ef40e6911f1",
+    "vi_m6_i1_status": "typed offline Learn reference contract; actual connector/OAuth/Learn acceptance not run; PREP_ONLY",
+    "quant_model_governance_status": "offline challenger governance recommendation; market_edge_claim=false; PREP_ONLY"
   },
   "checks": {
     "recovery_dependencies": [
@@ -997,7 +1004,7 @@
     "archive_hash_stable": true,
     "no_external_operations": true,
     "chart_evidence_refs_present": true,
-    "path_manifest_reference_count": 132,
+    "path_manifest_reference_count": 144,
     "chart_followup_refs_present": true,
     "theory_p0_receipt_refs_present": true,
     "vi_flac_hardening_ref_present": true,
@@ -1008,7 +1015,7 @@
     "vi_ui_validation_ref_present": true,
     "tradingagents_route_ref_present": true,
     "tradingagents_full_test_count": 952,
-    "quant_full_test_count": 140,
+    "quant_full_test_count": 147,
     "latest_nested_heads_recorded": true,
     "research_root_commit_tracked": true,
     "quant_full_validation_recorded": true,
@@ -1035,7 +1042,13 @@
     "job12_live_status_observed": true,
     "vi_m5_process_startup_refs_present": true,
     "vi_m5_process_startup_focused_test_count": 1,
-    "vi_m5_catalog_m6_combined_focused_test_count": 29
+    "vi_m5_catalog_m6_combined_focused_test_count": 29,
+    "quant_model_governance_refs_present": true,
+    "quant_model_governance_focused_test_count": 7,
+    "vi_m6_i1_refs_present": true,
+    "vi_m6_i1_focused_test_count": 43,
+    "research_frontier_memo_ref_present": true,
+    "plan_completion_audit_ref_present": true
   },
   "interpretation": {
     "recovery_rehearsal": "PASS_LOCAL_FIXTURE",
