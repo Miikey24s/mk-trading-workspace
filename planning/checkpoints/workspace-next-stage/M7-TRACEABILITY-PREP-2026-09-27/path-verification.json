@@ -3,7 +3,7 @@
   "status": "PREP_ONLY",
   "generated_at": "2026-09-27",
   "authority": "planning/WORKSPACE-NEXT-STAGE-PLAN.md v1.3 plus domain owner receipts",
-  "claims": "Path existence and hash snapshot for the frozen authority docs; not M7 acceptance",
+  "claims": "Path existence and hash snapshot for the final frozen authority docs; not M7 acceptance",
   "references": [
     {
       "path": "planning/WORKSPACE-NEXT-STAGE-PLAN.md",
@@ -16,8 +16,8 @@
       "path": "planning/checkpoints/workspace-next-stage/RESUME.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\RESUME.md",
       "exists": true,
-      "sha256": "913b1b064e2a44cd82474040eb148fc4830def1cccd8de369d98cc0b75b3bda7",
-      "bytes": 17677
+      "sha256": "77c80a9d455858fb64574e6c1ce3ae95a0f25f898e8ab4fb4dfffaabaff53d98",
+      "bytes": 18066
     },
     {
       "path": "planning/checkpoints/workspace-next-stage/M3-M4-SHARED-UI-2026-09-26/CLOSEOUT.md",
@@ -170,9 +170,9 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "d5e4c789706c1ec624f3d74c6030fc0e49bf4c14d114c9c61e4899419f3d73d1",
-      "bytes": 3378
+      "sha256": "a58d3b3fbf39933c8755bde4514a4665b8cd9a05880ac4189fc16c0245c5aecf",
+      "bytes": 4668
     }
   ],
-  "verified_against_commit": "06e6b678cc7cbae94a99fb2f8551799352242200"
+  "verified_against_commit": "8a0d30458138c966e360c4c260ad6f22680b4dec"
 }

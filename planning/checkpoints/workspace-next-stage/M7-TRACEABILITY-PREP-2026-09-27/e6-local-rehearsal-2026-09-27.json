@@ -10,28 +10,32 @@
     "plan_present": true,
     "resume_present": true,
     "plan_sha256": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
-    "resume_sha256_current": "913b1b064e2a44cd82474040eb148fc4830def1cccd8de369d98cc0b75b3bda7",
+    "resume_sha256_current": "77c80a9d455858fb64574e6c1ce3ae95a0f25f898e8ab4fb4dfffaabaff53d98",
     "repo_snapshots": [
       {
-        "scope": "vi",
+        "scope": "workspace",
         "branch": "main",
-        "head": "ae7683e626263338dcbb2696afe6fb204e0ca73b",
-        "dirty_count": 2
+        "head": "8a0d30458138c966e360c4c260ad6f22680b4dec",
+        "dirty_count": 74,
+        "dirty_preview": " M AGENTS.md;   M planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-PREP.md;   M planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json;   M planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/path-verification.json;   M planning/mt5-tradingview-backtester/POST-COMPLETION-ROADMAP-DRAFT.md;   M planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/RESUME.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json"
       },
       {
         "scope": "mt5",
         "branch": "Nam",
-        "head": "a5397469a2296a997111a6a87d0a7e2401c4fa75",
-        "dirty_count": 13
+        "head": "58eb7b2f41c169724a00782d0fe996cde82f2cb6",
+        "dirty_count": 13,
+        "dirty_preview": " M ai_service.py;   M foundation_v2/evidence/replay-ui-1440.png;   M foundation_v2/evidence/replay-ui-360.png;   M foundation_v2/evidence/replay-ui-768.png;   M tests/test_ai_foundation.py;  ?? foundation_v2/evidence/U5-protective-validation-r4.json;  ?? foundation_v2/evidence/U5-protective-validation-r5.json;  ?? foundation_v2/evidence/ps02-lifecycle-wip-r2/"
       },
       {
-        "scope": "workspace",
+        "scope": "vi",
         "branch": "main",
-        "head": "ff452312934dcd837dec88fbc7c4778410d4e3bc",
-        "dirty_count": 78
+        "head": "7b497807e5635f33b3af46d366a464b4fd0a4510",
+        "dirty_count": 2,
+        "dirty_preview": "?? work/checkpoints/P23-real-media-final-assembly-6h-2026-09-26.json;  ?? work/checkpoints/P23-real-media-process-gpu-smoke-2026-09-26.json"
       }
     ],
-    "authority_commit": "06e6b678cc7cbae94a99fb2f8551799352242200"
+    "authority_commit": "8a0d30458138c966e360c4c260ad6f22680b4dec",
+    "current_context_sha256": "e65e5f7165753ef5b28e8ec76978fe0e45f115f03732886c920085d06f39426d"
   },
   "checks": {
     "recovery_dependencies": [
