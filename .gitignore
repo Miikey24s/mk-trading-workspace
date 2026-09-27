@@ -22,6 +22,8 @@ tmp/
 .uv-cache/
 .artifacts/
 .codex/
+.runtime/
+.worktrees/
 **/pg-dist/
 **/pg-dist/**
 co05_sandbox/
