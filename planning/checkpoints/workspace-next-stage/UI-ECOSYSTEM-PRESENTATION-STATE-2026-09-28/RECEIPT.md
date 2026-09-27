@@ -29,6 +29,9 @@ repository and has no `.git` metadata:
 `annam-productivity@1.0.0` and every existing consumer snapshot remain
 unchanged. The new `1.1.0` version is explicitly `candidate`; consumers must
 opt in through a pinned migration after focused UI/state QA.
+The generated 1.1.0 snapshot is a complete replacement candidate: it retains
+all 1.0.0 CSS variables and the 1.0.0 button contract/style, then adds the new
+state roles. It is not a partial override file.
 
 ## Contract decisions
 
@@ -60,8 +63,11 @@ python inline contract check:
 node tooling/tokens/export-css.mjs \
   core/tokens/productivity/1.1.0/manifest.json \
   --out core/tokens/productivity/1.1.0/ui-system.snapshot.css
-  generated deterministic snapshot; source-sha256:
-  5ae5aff098c9245b295c0060439bbe472306250cd88fa29b1456f34f1ada4485
+  generated complete deterministic snapshot; source-sha256:
+  cd08c95b362eae674743b7a97785909e6159444d18ae54554555de2713f7459a
+
+python compatibility check:
+  every 1.0.0 manifest CSS variable/component entry is retained: PASS
 ```
 
 The optional `jsonschema` Python package was not installed in the environment;

@@ -21,7 +21,10 @@
     "name": "annam-productivity",
     "candidateVersion": "1.1.0",
     "baseVersion": "1.0.0",
-    "sourceSha256": "5ae5aff098c9245b295c0060439bbe472306250cd88fa29b1456f34f1ada4485"
+    "sourceSha256": "cd08c95b362eae674743b7a97785909e6159444d18ae54554555de2713f7459a",
+    "completeSnapshot": true,
+    "retainsBaseManifestVariables": true,
+    "retainsBaseButtonContract": true
   },
   "validation": {
     "jsonParse": "PASS",
@@ -29,6 +32,7 @@
     "contractBehavior": "PASS",
     "contrastSanity": "PASS",
     "cssGeneration": "PASS",
+    "snapshotCompatibility": "PASS",
     "jsonschemaPackage": "NOT_INSTALLED"
   },
   "promotionGates": [
