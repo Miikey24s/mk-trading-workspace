@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "2e927fd5a1d009b84d29ebcc805cda436cc1482d8581becb129f05c526e6474d",
-      "bytes": 13508
+      "sha256": "5955ef50db800a3d63b695bc4b29494ecde41f0399550c99c99c78d30235c39e",
+      "bytes": 15261
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -312,6 +312,34 @@
       "exists": true,
       "sha256": "c0fb56f3f0d89729069f5123d4f270999f3bf0bc24ce48c4c2203d56aa9ad7aa",
       "bytes": 2303
+    },
+    {
+      "path": "projects/quant-trading/docs/research/risk-metrics-pilot-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\risk-metrics-pilot-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "1332f255abe6ba357731d9dc335ca65cd8c27384d708604d5f96df4b078b15f5",
+      "bytes": 1405
+    },
+    {
+      "path": "projects/quant-trading/docs/research/risk-metrics-pilot-r1-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\risk-metrics-pilot-r1-2026-09-27.md",
+      "exists": true,
+      "sha256": "b94e8c9f07f358b3cc6175ce2686e046ccb85ca3ee4c7382a76b564aaabb63eb",
+      "bytes": 3048
+    },
+    {
+      "path": "projects/quant-trading/docs/research/cusum-change-detection-pilot-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\cusum-change-detection-pilot-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "bd791da446d15569e7b2fc151f27a1a03548e528969480e4da14569f794bb184",
+      "bytes": 1439
+    },
+    {
+      "path": "projects/quant-trading/docs/research/cusum-change-detection-pilot-r1-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\cusum-change-detection-pilot-r1-2026-09-27.md",
+      "exists": true,
+      "sha256": "1788fdf6945027d9740afd58f921911f44d4e9e9faa35ee75e7d88e7590fbe57",
+      "bytes": 3602
     }
   ],
   "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"

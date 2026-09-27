@@ -36,7 +36,7 @@
       {
         "scope": "quant",
         "branch": "master",
-        "head": "7c6a2867d0e722f6223e83dbc44eac2e9ac81fc2",
+        "head": "2c07795f835e3e01e02d09bc5f47453c7dc4b109",
         "dirty_count": 0,
         "dirty_preview": ""
       }
@@ -47,7 +47,7 @@
     "mt5_stress_commit": "56333618d437e9032558be2b54a4baa1803410da",
     "mt5_renderer_commit": "3c55c1288b63ebd7902753a7e3fc40b6171f9fcc",
     "mt5_ai_commit": "c1dfff448525fdaa73f3baff49ddb0601ea1de04",
-    "quant_chart_commit": "7c6a2867d0e722f6223e83dbc44eac2e9ac81fc2",
+    "quant_chart_commit": "2c07795f835e3e01e02d09bc5f47453c7dc4b109",
     "chart_evidence_refs": [
       {
         "scope": "MT5 C3 renderer",
@@ -144,49 +144,77 @@
         "scope": "Quant event-kernel/onchain P0 pilot",
         "path": "projects/quant-trading/docs/research/event-kernel-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 6; current Quant full 73 passed (pilot receipt records prior 46); ruff/compileall/diff pass; no network/execution",
+        "validation": "focused 6; current Quant full 102 passed (pilot receipt records prior 46); ruff/compileall/diff pass; no network/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant discrete optimizer P0 pilot",
         "path": "projects/quant-trading/docs/research/discrete-optimizer-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 4; current Quant full 73 passed; ruff/compileall/diff pass; no edge/production claim",
+        "validation": "focused 4; current Quant full 102 passed; ruff/compileall/diff pass; no edge/production claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant theory hypothesis receipt contract",
         "path": "projects/quant-trading/src/quant_trading/theory_receipts.py",
         "mode": "PREP_ONLY",
-        "validation": "focused 10; current Quant full 73 passed; deterministic hash/cutoff/deny-only contract; no provider/broker/execution",
+        "validation": "focused 10; current Quant full 102 passed; deterministic hash/cutoff/deny-only contract; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant theory hypothesis receipt tests",
         "path": "projects/quant-trading/tests/test_theory_receipts.py",
         "mode": "PREP_ONLY",
-        "validation": "focused 10; current Quant full 73 passed; tamper, finite-number, causal cutoff and execution-deny tests",
+        "validation": "focused 10; current Quant full 102 passed; tamper, finite-number, causal cutoff and execution-deny tests",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant causal state primitives pilot",
         "path": "projects/quant-trading/docs/research/state-primitives-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "focused 6; current Quant full 73 passed; causal Kalman/entropy/Beta primitives; no alpha/execution claim",
+        "validation": "focused 6; current Quant full 102 passed; causal Kalman/entropy/Beta primitives; no alpha/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant conformal interval pilot receipt",
         "path": "projects/quant-trading/docs/research/conformal-interval-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 9; current Quant full 73 passed; split-conformal causal cutoff receipt; no edge/execution claim",
+        "validation": "focused 9; current Quant full 102 passed; split-conformal causal cutoff receipt; no edge/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant conformal interval pilot narrative",
         "path": "projects/quant-trading/docs/research/conformal-interval-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "offline split-conformal interval pilot; focused 9; current Quant full 73 passed; no provider/broker/execution",
+        "validation": "offline split-conformal interval pilot; focused 9; current Quant full 102 passed; no provider/broker/execution",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant robust risk metrics pilot receipt",
+        "path": "projects/quant-trading/docs/research/risk-metrics-pilot-r1-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "current focused 14 passed (receipt records prior 13); current Quant full 102 passed; finite extreme-tail handling; no alpha/execution claim",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant robust risk metrics pilot narrative",
+        "path": "projects/quant-trading/docs/research/risk-metrics-pilot-r1-2026-09-27.md",
+        "mode": "PREP_ONLY",
+        "validation": "offline lower-tail expected-shortfall/Sortino metrics; focused 14 passed (receipt records prior 13); current Quant full 102 passed; no provider/broker/execution",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant CUSUM change-detection pilot receipt",
+        "path": "projects/quant-trading/docs/research/cusum-change-detection-pilot-r1-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "focused 15 passed; current Quant full 102 passed; forward-only causal cutoff and diagnostic-only receipt; no signal/execution claim",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant CUSUM change-detection pilot narrative",
+        "path": "projects/quant-trading/docs/research/cusum-change-detection-pilot-r1-2026-09-27.md",
+        "mode": "PREP_ONLY",
+        "validation": "offline two-sided CUSUM diagnostic; focused 15 passed; current Quant full 102 passed; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
       }
     ],
@@ -201,12 +229,15 @@
     "quant_event_kernel_commit": "9f61de70d6f3fb2aacb63989a930c7ab07e32448",
     "quant_optimizer_commit": "7f2cedb17e3eb04e1b1fa708469d5c38b8955ea2",
     "quant_optimizer_hardening_commit": "e82c7cf",
-    "quant_receipt_commit": "7c6a2867d0e722f6223e83dbc44eac2e9ac81fc2",
-    "quant_current_full_test_count": 73,
+    "quant_receipt_commit": "2c07795f835e3e01e02d09bc5f47453c7dc4b109",
+    "quant_current_full_test_count": 102,
     "quant_theory_receipt_commit": "b67f398c8d6a88617f2f3bc23c3fa7ab3bb410a4",
     "quant_state_primitives_commit": "ba3295e9e30fecb06be6e534d1a56045f4aff9d7",
     "quant_conformal_commit": "ce225a5f0ceacdf25226bbc2519191c813b58dc9",
-    "quant_documentation_commit": "7c6a2867d0e722f6223e83dbc44eac2e9ac81fc2"
+    "quant_documentation_commit": "308b911",
+    "quant_robust_risk_commit": "cd74afc",
+    "quant_cusum_commit": "ed20c34",
+    "quant_extreme_risk_test_commit": "2c07795"
   },
   "checks": {
     "recovery_dependencies": [
@@ -250,7 +281,7 @@
     "archive_hash_stable": true,
     "no_external_operations": true,
     "chart_evidence_refs_present": true,
-    "path_manifest_reference_count": 44,
+    "path_manifest_reference_count": 48,
     "chart_followup_refs_present": true,
     "theory_p0_receipt_refs_present": true
   },
