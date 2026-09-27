@@ -10,19 +10,19 @@
     "plan_present": true,
     "resume_present": true,
     "plan_sha256": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
-    "resume_sha256_current": "e9ac543bcda828572d4b15b56c1432fdc59d4f5bc3f21e36b6c48b5768900e91",
+    "resume_sha256_current": "461a5e81b67bed2a0efe09c9d428fb3cb693ae2daea17c18797373c3fafbb900",
     "repo_snapshots": [
       {
         "scope": "workspace",
         "branch": "main",
-        "head": "ed3a808c618bfe53eba4aab8ed8c29d0018922eb",
+        "head": "3c77f3e5f2461639ab3b040e782fabe7a79e1871",
         "dirty_count": 72,
         "dirty_preview": " M AGENTS.md;   M planning/mt5-tradingview-backtester/POST-COMPLETION-ROADMAP-DRAFT.md;   M planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/RESUME.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json.sha256;   M planning/ui-platform/MASTER-UI-PLATFORM-PLAN.md;   M projects/TradingAgents"
       },
       {
         "scope": "mt5",
         "branch": "Nam",
-        "head": "8b760d6095dd1ac9e6c0c79970771a641eb7b919",
+        "head": "2efc25cd592d8f6c05dde8bcc9e5f78cb2985971",
         "dirty_count": 13,
         "dirty_preview": " M ai_service.py;   M foundation_v2/evidence/replay-ui-1440.png;   M foundation_v2/evidence/replay-ui-360.png;   M foundation_v2/evidence/replay-ui-768.png;   M tests/test_ai_foundation.py;  ?? foundation_v2/evidence/U5-protective-validation-r4.json;  ?? foundation_v2/evidence/U5-protective-validation-r5.json;  ?? foundation_v2/evidence/ps02-lifecycle-wip-r2/"
       },
@@ -34,8 +34,8 @@
         "dirty_preview": "?? work/checkpoints/P23-real-media-final-assembly-6h-2026-09-26.json;  ?? work/checkpoints/P23-real-media-process-gpu-smoke-2026-09-26.json"
       }
     ],
-    "authority_commit": "ed3a808c618bfe53eba4aab8ed8c29d0018922eb",
-    "current_context_sha256": "908f074a509ea9a9a8b9da6f823d9f2e92a6c78d26edfc8635f749a5e1019d59"
+    "authority_commit": "3c77f3e5f2461639ab3b040e782fabe7a79e1871",
+    "current_context_sha256": "cd52a3d50e7e806ba5cfd5bbea743e7f64d5af617fef1101e0b494410cc9fa9a"
   },
   "checks": {
     "recovery_dependencies": [
