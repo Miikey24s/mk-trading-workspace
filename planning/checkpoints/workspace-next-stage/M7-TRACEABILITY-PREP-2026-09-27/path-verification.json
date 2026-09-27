@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "083aa879bca82b9e12077c1c63ba2be39172c6008506d06aac1fa8a02f872c9b",
-      "bytes": 16994
+      "sha256": "bcbc59d7662e7189fde6e260eeffba51991a49a78e29a0e4b9d7ff56a25d368b",
+      "bytes": 27834
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -429,8 +429,8 @@
       "path": "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/zone_lifecycle.py",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\trading_workspace_v2\\zone_lifecycle.py",
       "exists": true,
-      "sha256": "6ecc939e2dc4f4c1fec19b76e40bb97a9283a609256e171ea61ec01de74923f6",
-      "bytes": 35416
+      "sha256": "f511da22fe7999c67691006e64969068b753b6297f485df3238d42ca4a700dd6",
+      "bytes": 49506
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_zone_lifecycle.py",
