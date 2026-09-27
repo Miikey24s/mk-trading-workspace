@@ -1,8 +1,8 @@
 # Theory application matrix — evidence-first routing r2
 
-**Ngày:** 2026-09-28  
-**Trạng thái:** `RESEARCH / PREP-ONLY`  
-**Phạm vi:** Quant Lab, MT5 chart/replay, TradingAgents và các adapter offline của TradingWorkspace.  
+**Ngày:** 2026-09-28
+**Trạng thái:** `RESEARCH / PREP-ONLY`
+**Phạm vi:** Quant Lab, MT5 chart/replay, TradingAgents và các adapter offline của TradingWorkspace.
 **Không phải:** trading signal, lời hứa lợi nhuận, khuyến nghị đầu tư, broker/live authority, wallet/custody, hay quyền tự cập nhật chiến lược.
 
 Memo này là bảng áp dụng thực dụng cho nhóm lý thuyết mà owner nêu. Nó bổ sung lớp **observable → engine hiện có → thí nghiệm → promotion gate**, không tạo một source of truth thứ ba. Các nguyên tắc chung, nguồn và frontier technology vẫn nằm trong [FRONTIER-EVIDENCE-APPLICATION-2026-09-28.md](./FRONTIER-EVIDENCE-APPLICATION-2026-09-28.md); các pilot đã chạy được ghi trong [THEORY-APPLICATION-ROUTING-2026-09-28.md](./THEORY-APPLICATION-ROUTING-2026-09-28.md) và `projects/quant-trading/docs/research/`.
