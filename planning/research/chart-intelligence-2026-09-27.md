@@ -102,6 +102,30 @@ Một event không chỉ là `BUY`/`SELL`. Canonical record nên có dạng (fie
 - **MQL5:** indicator buffers cho levels/state; object registry prefix cho boxes/text/lines; reconcile pass xóa object stale và giữ caps; `ChartRedraw()` chỉ sau batch. Không dựa vào thứ tự async của object queue để quyết định state.
 - **Replay:** `known_at_utc <= replay_cutoff` là điều kiện render. Sự kiện tương lai không được render chỉ vì full dataset đã load.
 
+### 2A. Checklist riêng cho Pine Script và MQL5
+
+Đây là các bẫy adapter dễ làm cho một indicator nhìn đúng trên chart nhưng sai khi replay hoặc backtest. Canonical engine vẫn là nguồn sự thật; script chỉ được xem là một phép chiếu có kiểm chứng.
+
+| Concern | TradingView Pine | MQL5 | Quy tắc canonical |
+|---|---|---|---|
+| Realtime/rollback | Indicator được tính lại trên các update của realtime bar và giá trị chưa đóng có thể bị rollback. `barstate.isconfirmed` chỉ cho phép phát hành confirmed event ở closing update. `varip` giữ trạng thái qua tick nên không được dùng để tạo output lịch sử deterministic. | `OnCalculate()` có thể được gọi lại khi history thay đổi; `prev_calculated=0` phải buộc full rebuild. Không giả định hướng index của mảng: chuẩn hóa `time/open/high/low/close` trước khi tính. | Event confirmed chỉ sinh từ bar đã đóng; preview intrabar phải có `provisional=true` và bị loại khỏi backtest/alert/AI action. |
+| HTF mapping | Mẫu chống repaint phải lấy giá trị HTF đã đóng, thường là `request.security(..., expression[1], lookahead=barmerge.lookahead_on)`. `lookahead_off` một mình không biến giá trị HTF realtime đang phát triển thành confirmed. `request.security_lower_tf()` trả các intrabar theo từng chart bar và phải bỏ phần chưa đóng. | Khi map bar giữa timeframe, dùng timestamp/open-time đã chuẩn hóa; `iBarShift(..., exact=true)` để gặp gap thì trả `-1`, không âm thầm lấy bar gần nhất. `CopyRates()` đặt phần tử cũ nhất ở đầu physical memory dù target array có `as_series` thế nào, nên phải test thứ tự sau khi copy. | Mỗi HTF event ghi source timeframe + source close time + mapping policy; không nội suy/nearest-fill khi thiếu bar. Prefix replay phải giữ cùng event ID và `known_at`. |
+| Signal vs strategy | `indicator()`/`alertcondition()` chỉ mô tả tín hiệu; `strategy()` có broker-emulator/fill assumptions và `calc_on_every_tick` khác với indicator. Kết quả strategy không được dùng thay cho detector contract. Alert nên guard confirmed state và dùng `alert.freq_once_per_bar_close`. | Buffer indicator và object chart không phải execution receipt. `EMPTY_VALUE` biểu diễn “không có level”; giá trị 0 không được dùng làm sentinel cho giá. | Detector, renderer, alert receipt và execution là bốn lớp riêng; receipt không chứng minh fill. |
+| Visual/resource limits | Drawing IDs có giới hạn (line/box/label tối đa 500, polyline 100; plot count tối đa 64); mỗi bar có giới hạn thời gian loop và toàn script có giới hạn request unique (40, hoặc 64 trên Ultimate). Xóa thuộc tính về `na` vẫn giữ ID. | Object create/delete đi qua chart event queue; return thành công chưa chứng minh đã vẽ. Dùng registry prefix, reconcile stale objects và `ChartRedraw()` sau batch. | Event store không phụ thuộc số object; renderer có cap/TTL/eviction có thể quan sát, và phải báo `dropped/evicted` thay vì im lặng mất tín hiệu. |
+
+Mẫu HTF trên chỉ được dùng khi timeframe yêu cầu thật sự lớn hơn chart timeframe; với cùng timeframe hoặc LTF phải có policy riêng và fixture riêng. Mọi adapter phải có parity fixture với canonical engine, sai khác chỉ được phép trong tolerance giá/timestamp đã định trước.
+
+### 2B. Quy tắc semantic cho SMC/ICT khi viết script
+
+- **BOS/CHoCH/MSS:** giữ state machine `trend -> protected swing -> break`; `CHoCH`/`MSS` không được trở thành hai nhãn cho cùng transition nếu không khai báo khác nhau. Break bằng close hay wick phải là một parameter của rule, không đổi ngầm theo adapter.
+- **Liquidity/sweep:** level phải tham chiếu được (EQH/EQL, PDH/PDL, session high/low hoặc internal/external), có tolerance theo tick/ATR và expiry. Sweep chỉ confirmed khi wick xuyên rồi close-back trong quy tắc đã khai báo; không đánh dấu sweep chỉ vì chạm level.
+- **FVG:** dùng đúng thứ tự ba nến và timezone/index convention của adapter; tạo event khi nến thứ ba đóng. Ghi minimum gap, CE/fill, partial/full mitigation và invalidation, không dùng một box kéo dài vô hạn.
+- **Order block:** chỉ publish sau displacement/BOS đã confirmed; lưu candle origin và chọn body/wick range theo version rule. Nếu detector thay lại origin sau khi đã render, event ID phải chuyển lifecycle rõ ràng chứ không sửa âm thầm.
+- **OTE:** là vùng đo retracement trên một leg đã biết, không phải entry signal độc lập. Thiếu endpoint hoặc leg chưa confirmed thì trạng thái là `unknown`, không tự coi là 0%/100%.
+- **Session/killzone:** resolve bằng IANA timezone và serialize UTC; fixture phải bao gồm DST, session qua nửa đêm, ngày nghỉ và missing bars. Không dùng broker offset tĩnh làm source of truth cho mọi symbol.
+
+Các rule trên mô tả hành vi có thể kiểm thử, không xác nhận “smart money” hay lợi thế lợi nhuận. Mỗi rule version cần ít nhất một positive fixture, một negative fixture và một case boundary/invalidated.
+
 ### 3. AI-on-chart contract
 
 AI request chỉ nhận:
@@ -170,6 +194,7 @@ Không cho AI trả trực tiếp `order`, `lots`, `broker_request` vào chart p
 - Pin source commit, URL, license and hash for every imported script/reference. Keep source in a quarantined research directory until review.
 - Do not run opaque `.ex5`, downloaded Pine bundles, or package install scripts as part of a chart feature without an explicit scope and rollback path.
 - For MPL-2.0 source, preserve notices and satisfy source/derivative distribution conditions. MIT source still needs copyright/license retention. Missing license means no code reuse.
+- A Pine script being visible as “open source” on TradingView is not, by itself, a redistribution license. Record the author-provided license (if any), platform terms, exact revision and whether the intended use is private or distributed before copying source or publishing a derivative.
 - TradingView protected/invite-only scripts are not inspectable source. A screenshot or signal output is not permission to port logic.
 - No community detector becomes production strategy until it passes the canonical no-lookahead, prefix replay, OOS and cost tests using workspace data contracts.
 
@@ -186,11 +211,15 @@ Không cho AI trả trực tiếp `order`, `lots`, `broker_request` vào chart p
 - TradingView MTF data: <https://www.tradingview.com/pine-script-docs/concepts/other-timeframes-and-data/>
 - TradingView drawings: <https://www.tradingview.com/pine-script-docs/visuals/lines-and-boxes/>
 - TradingView text/shapes: <https://www.tradingview.com/pine-script-docs/visuals/text-and-shapes/>
+- TradingView script limitations: <https://www.tradingview.com/pine-script-docs/writing/limitations/>
+- TradingView strategies: <https://www.tradingview.com/pine-script-docs/concepts/strategies/>
 - TradingView alerts: <https://www.tradingview.com/pine-script-docs/concepts/alerts/>
 - Advanced Charts custom studies: <https://www.tradingview.com/charting-library-docs/latest/custom_studies/Custom-Studies-Examples/>
 - Advanced Charts marks: <https://www.tradingview.com/charting-library-docs/latest/ui_elements/Marks/>
 - MQL5 custom indicators: <https://www.mql5.com/en/docs/customind>
 - MQL5 `OnCalculate`: <https://www.mql5.com/en/docs/event_handlers/oncalculate>
+- MQL5 `CopyRates`: <https://www.mql5.com/en/docs/series/copyrates>
+- MQL5 `iBarShift` exact/nearest mapping: <https://www.mql5.com/en/docs/series/ibarshift>
 - MQL5 object properties/queue behavior: <https://www.mql5.com/en/docs/constants/objectconstants/enum_object_property>
 - Community reference — ICT indicator (MIT): <https://github.com/khalegh2131/ICT_indicator/tree/55508cd>
 - Community reference — PHASE404 (MIT): <https://github.com/Musyimi97/phase404/tree/9a72494>
