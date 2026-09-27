@@ -1,9 +1,9 @@
 {
   "schema": "m7-traceability-path-verification-v1",
   "status": "PREP_ONLY",
-  "generated_at": "2026-09-27",
+  "generated_at": "2026-09-28",
   "authority": "planning/WORKSPACE-NEXT-STAGE-PLAN.md v1.3 plus domain owner receipts",
-  "claims": "Path existence and SHA-256 snapshot for packet evidence at the recorded nested heads; root authority docs remain frozen; not M7 acceptance",
+  "claims": "Path existence and SHA-256 snapshot for packet evidence at the current recorded nested heads; verified_against_commit identifies the frozen M7 authority baseline only; not M7 acceptance",
   "references": [
     {
       "path": "planning/WORKSPACE-NEXT-STAGE-PLAN.md",
@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "d0bdab1decb105ebfd59349384365dec78c39ae8dc4f33abed0b0be920c6ffac",
-      "bytes": 31395
+      "sha256": "b9824271d7e0029c658dad6a0248a715eec97eacc778bf0d09392c3bc860ab7a",
+      "bytes": 38601
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -296,8 +296,8 @@
       "path": "projects/quant-trading/docs/research/state-primitives-pilot-r1-2026-09-27.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\state-primitives-pilot-r1-2026-09-27.md",
       "exists": true,
-      "sha256": "c5af7f54f99313704727b776f05dd72c76891103f7a14f9432aaed0526a363ed",
-      "bytes": 2853
+      "sha256": "eb4c8d7e57ac693f5b1866bf2782e9b4b93a8ba8b5a3382c2a86feeb1b23b751",
+      "bytes": 2973
     },
     {
       "path": "projects/quant-trading/docs/research/conformal-interval-pilot-r1-2026-09-27.json",
@@ -338,8 +338,8 @@
       "path": "projects/quant-trading/docs/research/cusum-change-detection-pilot-r1-2026-09-27.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\cusum-change-detection-pilot-r1-2026-09-27.md",
       "exists": true,
-      "sha256": "1788fdf6945027d9740afd58f921911f44d4e9e9faa35ee75e7d88e7590fbe57",
-      "bytes": 3602
+      "sha256": "969fc5889a6bf9875dbc9ebbbb9a766d5fbca37cf03825ba107e40cfc580cff1",
+      "bytes": 3751
     },
     {
       "path": "projects/vi-dubber/work/checkpoints/P23-real-media-12h-resumable-job-2026-09-27.md",
@@ -352,22 +352,22 @@
       "path": "projects/vi-dubber/src/vi_dubber/separation.py",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\src\\vi_dubber\\separation.py",
       "exists": true,
-      "sha256": "032a3ef62f68e8a01090dab02259875ae8765d901eb8a86ef27d78573e594de2",
-      "bytes": 5690
+      "sha256": "e7f89e3fce7ac5741684595effb17958d69bac13adf98317c923cdd84a44a635",
+      "bytes": 12681
     },
     {
       "path": "projects/vi-dubber/src/vi_dubber/pipeline.py",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\src\\vi_dubber\\pipeline.py",
       "exists": true,
-      "sha256": "dbdf6158a661216e5c661b9bff815e9c7e131a01f8faa306ae1afcbbd3fcb189",
-      "bytes": 132924
+      "sha256": "0131129928b5e64c282038f4450db3a5c5c4da2fa62df611b9366f8e954d9985",
+      "bytes": 134513
     },
     {
       "path": "projects/vi-dubber/tests/test_p13_runtime_fallbacks.py",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\tests\\test_p13_runtime_fallbacks.py",
       "exists": true,
-      "sha256": "7b4a973e3ca976f17062e53896a3541b87661a3a89c1d2ef9768b35d865d976e",
-      "bytes": 10923
+      "sha256": "3d4fbb83763abf4997e53970a628f377887575630ac613c25c542f118942b929",
+      "bytes": 17705
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-script-parity-mql-time-boundary-r1-2026-09-27.json",
@@ -527,8 +527,8 @@
       "path": "projects/TradingAgents/README.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\TradingAgents\\README.md",
       "exists": true,
-      "sha256": "3be785a2817bd579373d96859a04c219faecd431a7b9863819523b2647e5c271",
-      "bytes": 22505
+      "sha256": "9f1c691be7a200cf5cf0fcc1c756ee4937929c980fd783589140bc6828df35a1",
+      "bytes": 22920
     },
     {
       "path": "projects/TradingAgents/tests/test_checkpoint_resume.py",
@@ -541,8 +541,8 @@
       "path": "projects/TradingAgents/tradingagents/graph/trading_graph.py",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\TradingAgents\\tradingagents\\graph\\trading_graph.py",
       "exists": true,
-      "sha256": "53152490dcb6cfb9ec154a8e7a6a914aa09826c7b3ec1e1478c2bce1dbdf8a9a",
-      "bytes": 32902
+      "sha256": "5ec24ede2545e11078b81af75c4ff6da4d4a22f9cdf5f1f54d6553b5b6f473e6",
+      "bytes": 33704
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-zone-integration-r1-2026-09-27.json",
@@ -592,7 +592,114 @@
       "exists": true,
       "sha256": "35f5ada85ffac59943c7358b79965a7e1443b82c9bcc8251c7f428c720ad254c",
       "bytes": 1507
+    },
+    {
+      "path": "AGENTS.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\AGENTS.md",
+      "exists": true,
+      "sha256": "a295cf855b31df5b3f4e3ed8c5a5b5dd2102af66ab83d06e08b51bb01009b9fc",
+      "bytes": 7655
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/P13-long-separation-chunking-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\P13-long-separation-chunking-2026-09-28.md",
+      "exists": true,
+      "sha256": "955a8581f049f2a89e71bc652051069c1e95878ec5241212f289587cef2c846f",
+      "bytes": 1703
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/P13-long-separation-chunking-receipt-2026-09-28.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\P13-long-separation-chunking-receipt-2026-09-28.json",
+      "exists": true,
+      "sha256": "6c6cc5985334072518937e0f3ecb65126379411843bd1bb83d2d599682a934ab",
+      "bytes": 622
+    },
+    {
+      "path": "projects/vi-dubber/src/vi_dubber/media.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\src\\vi_dubber\\media.py",
+      "exists": true,
+      "sha256": "fb230175afbe1799db828500d38724c037d1b54db878349e20bd45db328ef207",
+      "bytes": 32624
+    },
+    {
+      "path": "projects/vi-dubber/src/vi_dubber/web.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\src\\vi_dubber\\web.py",
+      "exists": true,
+      "sha256": "da9f366fbcccad03644c403247c06d961fe6934d3c34e20a2d8f000a8387fb88",
+      "bytes": 114373
+    },
+    {
+      "path": "projects/vi-dubber/tests/test_web_review.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\tests\\test_web_review.py",
+      "exists": true,
+      "sha256": "ca834ef7b07f5cb2fd9fd09db824129d7e8a7dbf5d907e885bce7eb8c52f90cc",
+      "bytes": 31234
+    },
+    {
+      "path": "projects/quant-trading/docs/research/bayesian-change-point-pilot-r1-2026-09-28.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\bayesian-change-point-pilot-r1-2026-09-28.json",
+      "exists": true,
+      "sha256": "1175091f47afad3e2eeb29eb57904c7f1b5eada7fd214fbef7623a75af9f9ff3",
+      "bytes": 1475
+    },
+    {
+      "path": "projects/quant-trading/docs/research/bayesian-change-point-pilot-r1-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\bayesian-change-point-pilot-r1-2026-09-28.md",
+      "exists": true,
+      "sha256": "4e422df9b77bd02b278533965c7f253e0e3282bc5f30878ccf1cf76fbcb2f744",
+      "bytes": 3881
+    },
+    {
+      "path": "projects/quant-trading/src/quant_trading/bayesian_change_point.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\src\\quant_trading\\bayesian_change_point.py",
+      "exists": true,
+      "sha256": "9931a812c01e8fa0ac5556ff357f62d1e7cdc145228b5e9752b4467ed7aca2e9",
+      "bytes": 22711
+    },
+    {
+      "path": "projects/quant-trading/tests/quant_trading/test_bayesian_change_point.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\tests\\quant_trading\\test_bayesian_change_point.py",
+      "exists": true,
+      "sha256": "d12569c40d50cb3a7e1b21ac9029a3e22292498f5a06de03a5514e7a27a3454c",
+      "bytes": 3936
+    },
+    {
+      "path": "projects/quant-trading/docs/research/causal-effect-diagnostic-r1-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\causal-effect-diagnostic-r1-2026-09-28.md",
+      "exists": true,
+      "sha256": "a1c50b2204f07bdc3c72fcad1ab3c624563a609ae991430f05ce1c5d594d7499",
+      "bytes": 5311
+    },
+    {
+      "path": "projects/TradingAgents/tradingagents/reporting.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\TradingAgents\\tradingagents\\reporting.py",
+      "exists": true,
+      "sha256": "a177168cee56b95bbc0620e299b635da1eb1d6ebb08a38e9398ffc2feae014bf",
+      "bytes": 5922
+    },
+    {
+      "path": "projects/TradingAgents/tradingagents/run_provenance.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\TradingAgents\\tradingagents\\run_provenance.py",
+      "exists": true,
+      "sha256": "84359f9f7e0e8199a9a18dee908d304f30d4fe565567b8cc4c353ec50224c857",
+      "bytes": 2467
+    },
+    {
+      "path": "projects/TradingAgents/tests/test_reporting.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\TradingAgents\\tests\\test_reporting.py",
+      "exists": true,
+      "sha256": "dbb85287484e4cc02cc5226794e72c18632da6910779a327641909c67ff61e4d",
+      "bytes": 2601
+    },
+    {
+      "path": "projects/TradingAgents/tests/test_run_provenance.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\TradingAgents\\tests\\test_run_provenance.py",
+      "exists": true,
+      "sha256": "cdcefe0dda7afb5822595eba56eaa72a7221ce4e023c46043950cb605c143600",
+      "bytes": 1381
     }
   ],
-  "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
+  "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
+  "snapshot_root_commit": "23275520297fd7c626f55065b11f7c30730d59b6",
+  "frozen_authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
 }
