@@ -82,6 +82,26 @@ Delay-embedded returns/vol/OFI → Vietoris–Rips persistence → Betti curves/
 - **Copula/vine và Almgren–Chriss:** phụ thuộc tail/scenario và impact/execution-cost model, không phải signal độc lập.
 - **Differentiable backtest:** chỉ surrogate cho optimizer; P&L authority vẫn là discrete event engine với fill/slippage thật.
 
+## P0 đã chuyển thành artifact offline
+
+Quant Lab đã có một seam dùng chung cho các theory/diagnostic receipt:
+`TheoryHypothesisReceiptV1` ghi hypothesis, source/data/model hash, `known_at`,
+cutoff, seed, baseline, metrics, rollback ref và khóa cứng
+`execution_capability=false`. Ba primitive đầu tiên đã có code và test riêng:
+
+- `state_primitives`: Kalman scalar forward-only với Joseph covariance,
+  Shannon entropy có Miller–Madow explicit và Beta–Bernoulli update.
+- `conformal`: split-conformal interval với calibration/validation/test cutoff
+  theo thời gian, coverage evaluation-only.
+- `event_envelope`/`onchain_events` và `discrete_optimizer`: event provenance
+  cùng bounded quantum-inspired search vẫn giữ offline/provider/broker deny-only.
+
+Receipt và test nằm trong `projects/quant-trading/docs/research/`; đây là
+research infrastructure, chưa phải signal, alpha claim, paper/live authority.
+BOCPD/change-point, regime classifier, ABM, Nash/game simulator,
+reflexivity/GA/chaos/SOC/TDA implementation tiếp theo phải reuse seam này thay
+vì tạo schema thứ hai.
+
 ## Gate chống “ảo edge”
 
 Mỗi candidate chạy cùng fixture/fold/cutoff và phải có:
