@@ -22,28 +22,35 @@
       {
         "scope": "mt5",
         "branch": "Nam",
-        "head": "8b1310e1589b9635a27bf4423fdfc6d1c7163ff7",
+        "head": "ce8a08e8579bf1668984d44ba6118ddeec85c42b",
         "dirty_count": 13,
         "dirty_preview": " M ai_service.py;   M foundation_v2/evidence/replay-ui-1440.png;   M foundation_v2/evidence/replay-ui-360.png;   M foundation_v2/evidence/replay-ui-768.png;   M tests/test_ai_foundation.py;  ?? foundation_v2/evidence/U5-protective-validation-r4.json;  ?? foundation_v2/evidence/U5-protective-validation-r5.json;  ?? foundation_v2/evidence/ps02-lifecycle-wip-r2/"
       },
       {
         "scope": "vi",
         "branch": "main",
-        "head": "4b2991bbf84fb24cea7c9ec4041e32b9a4d97cfe",
+        "head": "867dd4c2eec5d90e8e900e78be0a263d418ec280",
         "dirty_count": 2,
         "dirty_preview": "?? work/checkpoints/P23-real-media-final-assembly-6h-2026-09-26.json;  ?? work/checkpoints/P23-real-media-process-gpu-smoke-2026-09-26.json"
       },
       {
         "scope": "quant",
         "branch": "master",
-        "head": "2c07795f835e3e01e02d09bc5f47453c7dc4b109",
+        "head": "223eeca67c5a5704de494fd9831d7d962c77417e",
+        "dirty_count": 0,
+        "dirty_preview": ""
+      },
+      {
+        "scope": "tradingagents",
+        "branch": "main",
+        "head": "ebdd89ebfbb7ad6c7de3e45c558da06585865394",
         "dirty_count": 0,
         "dirty_preview": ""
       }
     ],
     "authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
     "current_context_sha256": "13ba21689a3a6adc37487822d8d157719be77402696d8f4c030b86687d703297",
-    "research_root_commit": "2ccf96b3fd0a4d07a665159bbe269fa8d3c2dfa4",
+    "research_root_commit": "dc1a71cef60609367cc3b02286762cdb98da9356",
     "mt5_stress_commit": "56333618d437e9032558be2b54a4baa1803410da",
     "mt5_renderer_commit": "3c55c1288b63ebd7902753a7e3fc40b6171f9fcc",
     "mt5_ai_commit": "c1dfff448525fdaa73f3baff49ddb0601ea1de04",
@@ -144,77 +151,77 @@
         "scope": "Quant event-kernel/onchain P0 pilot",
         "path": "projects/quant-trading/docs/research/event-kernel-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 6; current Quant full 102 passed (pilot receipt records prior 46); ruff/compileall/diff pass; no network/execution",
+        "validation": "focused 6; current Quant full 110 passed (pilot receipt records prior 46); ruff/compileall/diff pass; no network/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant discrete optimizer P0 pilot",
         "path": "projects/quant-trading/docs/research/discrete-optimizer-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 4; current Quant full 102 passed; ruff/compileall/diff pass; no edge/production claim",
+        "validation": "focused 4; current Quant full 110 passed; ruff/compileall/diff pass; no edge/production claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant theory hypothesis receipt contract",
         "path": "projects/quant-trading/src/quant_trading/theory_receipts.py",
         "mode": "PREP_ONLY",
-        "validation": "focused 10; current Quant full 102 passed; deterministic hash/cutoff/deny-only contract; no provider/broker/execution",
+        "validation": "focused 10; current Quant full 110 passed; deterministic hash/cutoff/deny-only contract; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant theory hypothesis receipt tests",
         "path": "projects/quant-trading/tests/test_theory_receipts.py",
         "mode": "PREP_ONLY",
-        "validation": "focused 10; current Quant full 102 passed; tamper, finite-number, causal cutoff and execution-deny tests",
+        "validation": "focused 10; current Quant full 110 passed; tamper, finite-number, causal cutoff and execution-deny tests",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant causal state primitives pilot",
         "path": "projects/quant-trading/docs/research/state-primitives-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "focused 6; current Quant full 102 passed; causal Kalman/entropy/Beta primitives; no alpha/execution claim",
+        "validation": "focused 6; current Quant full 110 passed; causal Kalman/entropy/Beta primitives; no alpha/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant conformal interval pilot receipt",
         "path": "projects/quant-trading/docs/research/conformal-interval-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 9; current Quant full 102 passed; split-conformal causal cutoff receipt; no edge/execution claim",
+        "validation": "focused 9; current Quant full 110 passed; split-conformal causal cutoff receipt; no edge/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant conformal interval pilot narrative",
         "path": "projects/quant-trading/docs/research/conformal-interval-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "offline split-conformal interval pilot; focused 9; current Quant full 102 passed; no provider/broker/execution",
+        "validation": "offline split-conformal interval pilot; focused 9; current Quant full 110 passed; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant robust risk metrics pilot receipt",
         "path": "projects/quant-trading/docs/research/risk-metrics-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "current focused 14 passed (receipt records prior 13); current Quant full 102 passed; finite extreme-tail handling; no alpha/execution claim",
+        "validation": "current focused 14 passed (receipt records prior 13); current Quant full 110 passed; finite extreme-tail handling; no alpha/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant robust risk metrics pilot narrative",
         "path": "projects/quant-trading/docs/research/risk-metrics-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "offline lower-tail expected-shortfall/Sortino metrics; focused 14 passed (receipt records prior 13); current Quant full 102 passed; no provider/broker/execution",
+        "validation": "offline lower-tail expected-shortfall/Sortino metrics; focused 14 passed (receipt records prior 13); current Quant full 110 passed; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant CUSUM change-detection pilot receipt",
         "path": "projects/quant-trading/docs/research/cusum-change-detection-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 15 passed; current Quant full 102 passed; forward-only causal cutoff and diagnostic-only receipt; no signal/execution claim",
+        "validation": "focused 15 passed; current Quant full 110 passed; forward-only causal cutoff and diagnostic-only receipt; no signal/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant CUSUM change-detection pilot narrative",
         "path": "projects/quant-trading/docs/research/cusum-change-detection-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "offline two-sided CUSUM diagnostic; focused 15 passed; current Quant full 102 passed; no provider/broker/execution",
+        "validation": "offline two-sided CUSUM diagnostic; focused 15 passed; current Quant full 110 passed; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -244,6 +251,181 @@
         "mode": "PREP_ONLY",
         "validation": "focused P13 10 passed; owner hardening suite 44 passed; compileall PASS; no job12 acceptance",
         "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 MQL/Pine time-boundary parity receipt",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-script-parity-mql-time-boundary-r1-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "28 passed; compileall PASS; diff_check PASS; offline boundary only; no provider/broker/live/edge claim",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 MQL/Pine time-boundary parity narrative",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-script-parity-mql-time-boundary-r1-2026-09-27.md",
+        "mode": "PREP_ONLY",
+        "validation": "PREP_ONLY boundary narrative; open gateway/renderer/license gaps remain; no live execution claim",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 MQL parity adapter source",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/mql_parity.py",
+        "mode": "PREP_ONLY",
+        "validation": "e1377ee source; covered by the 28-pass offline parity receipt; direct gateway parity remains open",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 MQL parity focused tests",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_mql_parity.py",
+        "mode": "PREP_ONLY",
+        "validation": "e1377ee focused parity tests; no broker/provider/live execution",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 renderer causal metadata source",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/chart_renderer_contract.py",
+        "mode": "PREP_ONLY",
+        "validation": "79cc8be causal metadata hardening; offline contract only; renderer production acceptance not claimed",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 renderer causal metadata tests",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_chart_renderer_contract.py",
+        "mode": "PREP_ONLY",
+        "validation": "79cc8be focused contract coverage; no production renderer acceptance",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 OB/OTE zone lifecycle receipt",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-zone-lifecycle-r1-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "12 passed; compileall PASS; deterministic synthetic OB/OTE lifecycle; PREP_ONLY",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 OB/OTE zone lifecycle narrative",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-zone-lifecycle-r1-2026-09-27.md",
+        "mode": "PREP_ONLY",
+        "validation": "Causal confirmed/mitigated/invalidated/expired transitions; not alert/fill/renderer or profitability acceptance",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 OB/OTE zone lifecycle source",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/zone_lifecycle.py",
+        "mode": "PREP_ONLY",
+        "validation": "ce8a08e offline zone lifecycle source; no execution capability",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 OB/OTE zone lifecycle tests",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_zone_lifecycle.py",
+        "mode": "PREP_ONLY",
+        "validation": "ce8a08e focused zone lifecycle tests; no Pine/MQL parity or live claim",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant Ornstein-Uhlenbeck pilot receipt",
+        "path": "projects/quant-trading/docs/research/ou-process-pilot-r1-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "focused 5 passed; current Quant full 110 passed; stationarity/cutoff guards; PREP_ONLY, no alpha/execution claim",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant Ornstein-Uhlenbeck pilot narrative",
+        "path": "projects/quant-trading/docs/research/ou-process-pilot-r1-2026-09-27.md",
+        "mode": "PREP_ONLY",
+        "validation": "offline irregular-time OU diagnostic; raw price rejected; no provider/broker/execution",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant Ornstein-Uhlenbeck source",
+        "path": "projects/quant-trading/src/quant_trading/ou_process.py",
+        "mode": "PREP_ONLY",
+        "validation": "223eeca exposes stationarity diagnostics; causal offline primitive only",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant Ornstein-Uhlenbeck focused tests",
+        "path": "projects/quant-trading/tests/quant_trading/test_ou_process.py",
+        "mode": "PREP_ONLY",
+        "validation": "focused OU suite 5 passed; current Quant full 110 passed",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant permutation entropy pilot narrative",
+        "path": "projects/quant-trading/docs/research/permutation-entropy-pilot-r1-2026-09-27.md",
+        "mode": "PREP_ONLY",
+        "validation": "offline ordinal-complexity diagnostic; focused state-primitives command; current Quant full 110 passed; no signal/execution claim",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant state primitives source",
+        "path": "projects/quant-trading/src/quant_trading/state_primitives.py",
+        "mode": "PREP_ONLY",
+        "validation": "ec6e7f2 permutation-entropy primitive plus existing causal state helpers; offline only",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant state primitives focused tests",
+        "path": "projects/quant-trading/tests/quant_trading/test_state_primitives.py",
+        "mode": "PREP_ONLY",
+        "validation": "focused permutation-entropy/state primitive coverage; current Quant full 110 passed; no alpha claim",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M5 local catalog foundation receipt",
+        "path": "projects/vi-dubber/work/checkpoints/M5-catalog-local-foundation-2026-09-27.md",
+        "mode": "PREP_ONLY",
+        "validation": "23 focused tests; local foundation only; M5 persistence/restart/real-media/UI acceptance remains open",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M5 catalog revision integrity receipt",
+        "path": "projects/vi-dubber/work/checkpoints/M5-catalog-revision-integrity-2026-09-27.md",
+        "mode": "PREP_ONLY",
+        "validation": "20 focused tests; fail-closed revision/tamper/rebuild guards; M5 remains PREP_ONLY",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI catalog store source",
+        "path": "projects/vi-dubber/src/vi_dubber/catalog_store.py",
+        "mode": "PREP_ONLY",
+        "validation": "Catalog revision and user-state integrity implementation; covered by local M5 receipts; no media/provider acceptance",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI catalog store focused tests",
+        "path": "projects/vi-dubber/tests/test_catalog_store.py",
+        "mode": "PREP_ONLY",
+        "validation": "Catalog transaction/revision/restore coverage; owner snapshot reports 22 focused catalog validations; M5 not accepted",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI SystemBar light-mode contrast UI",
+        "path": "projects/vi-dubber/frontend/src/components/header/SystemBar.tsx",
+        "mode": "PREP_ONLY",
+        "validation": "b907649 UI contrast hardening; UI validation PASS; no M5 or provider acceptance",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "TradingAgents route-fingerprint README",
+        "path": "projects/TradingAgents/README.md",
+        "mode": "PREP_ONLY",
+        "validation": "ebdd89e checkpoint route-fingerprint hardening; owner full suite 949 passed; no provider/live claim",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "TradingAgents checkpoint-resume tests",
+        "path": "projects/TradingAgents/tests/test_checkpoint_resume.py",
+        "mode": "PREP_ONLY",
+        "validation": "ebdd89e route-bound resume tests; owner full suite 949 passed; no live execution",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "TradingAgents trading graph route binding",
+        "path": "projects/TradingAgents/tradingagents/graph/trading_graph.py",
+        "mode": "PREP_ONLY",
+        "validation": "ebdd89e opaque LLM-route fingerprint binding; provider authority remains external and unclaimed",
+        "acceptance": "NOT_CLAIMED"
       }
     ],
     "mt5_dst_policy_commit": "125dbdd711da7d1561f19d4355c2f719e1faa4ef",
@@ -251,16 +433,16 @@
     "mt5_alert_commit": "db546366803b5276322ae289e8085731c5f4f5c9",
     "mt5_ui_view_model_commit": "44ef2b0ca5ea799940019ed161d6e291eab2d49d",
     "mt5_visible_range_commit": "2130904",
-    "mt5_parity_code_commit": "f1aafbd8f65fc73ed49d319c92307fbf034a9500",
-    "mt5_parity_receipt_commit": "8b1310e1589b9635a27bf4423fdfc6d1c7163ff7",
+    "mt5_parity_code_commit": "e1377eee561a500ad6858ca195519da1f8723e4a",
+    "mt5_parity_receipt_commit": "e1377eee561a500ad6858ca195519da1f8723e4a",
     "quant_edge_commit": "3be960486c4bcfa763b112ff967f25fd0b414850",
     "quant_event_kernel_commit": "9f61de70d6f3fb2aacb63989a930c7ab07e32448",
     "quant_optimizer_commit": "7f2cedb17e3eb04e1b1fa708469d5c38b8955ea2",
     "quant_optimizer_hardening_commit": "e82c7cf",
-    "quant_receipt_commit": "2c07795f835e3e01e02d09bc5f47453c7dc4b109",
-    "quant_current_full_test_count": 102,
+    "quant_receipt_commit": "223eeca67c5a5704de494fd9831d7d962c77417e",
+    "quant_current_full_test_count": 110,
     "quant_theory_receipt_commit": "b67f398c8d6a88617f2f3bc23c3fa7ab3bb410a4",
-    "quant_state_primitives_commit": "ba3295e9e30fecb06be6e534d1a56045f4aff9d7",
+    "quant_state_primitives_commit": "ec6e7f24f151e126618bda86b76a49668399cf21",
     "quant_conformal_commit": "ce225a5f0ceacdf25226bbc2519191c813b58dc9",
     "quant_documentation_commit": "308b911",
     "quant_robust_risk_commit": "cd74afc",
@@ -268,7 +450,28 @@
     "quant_extreme_risk_test_commit": "2c07795",
     "vi_flac_hardening_commit": "4b2991bbf84fb24cea7c9ec4041e32b9a4d97cfe",
     "vi_hardening_focused_test_count": 44,
-    "vi_job12_status": "running / pending; whole-pipeline acceptance not claimed"
+    "vi_job12_status": "running / pending; whole-pipeline acceptance not claimed",
+    "mt5_mql_parity_commit": "e1377eee561a500ad6858ca195519da1f8723e4a",
+    "mt5_renderer_metadata_commit": "79cc8beba1779998e64a613c7010067753b3ccc2",
+    "mt5_zone_lifecycle_commit": "ce8a08e8579bf1668984d44ba6118ddeec85c42b",
+    "quant_ou_commit": "90c16e718044d2b6dbae9850f915b71907b89f60",
+    "quant_ou_gap_guard_commit": "844a3621617829e5f4fb6b3145ec008845a515d8",
+    "quant_entropy_commit": "ec6e7f24f151e126618bda86b76a49668399cf21",
+    "quant_causal_state_commit": "ba3295e9e30fecb06be6e534d1a56045f4aff9d7",
+    "vi_catalog_revision_commit": "4b39e0d6a10ba6ffcbaa139f7fba94e837b954e5",
+    "vi_catalog_orphan_guard_commit": "df4866f69954bfdebb5006eeef7d879258793d15",
+    "vi_catalog_rebuild_guard_commit": "23ced18f25e75fa5a3e3d88236fae34e16c94916",
+    "vi_catalog_integrity_receipt_commit": "867dd4c2eec5d90e8e900e78be0a263d418ec280",
+    "vi_ui_contrast_commit": "b907649c6d7ac75ed00808f226951b3a3b063f4c",
+    "tradingagents_route_fingerprint_commit": "ebdd89ebfbb7ad6c7de3e45c558da06585865394",
+    "tradingagents_current_full_test_count": 949,
+    "quant_ou_diagnostics_commit": "223eeca67c5a5704de494fd9831d7d962c77417e",
+    "quant_full_validation": {
+      "command": "uv run pytest -q",
+      "result": "110 passed in 7.05s",
+      "external_side_effects": "none",
+      "passed": true
+    }
   },
   "checks": {
     "recovery_dependencies": [
@@ -312,11 +515,21 @@
     "archive_hash_stable": true,
     "no_external_operations": true,
     "chart_evidence_refs_present": true,
-    "path_manifest_reference_count": 52,
+    "path_manifest_reference_count": 77,
     "chart_followup_refs_present": true,
     "theory_p0_receipt_refs_present": true,
     "vi_flac_hardening_ref_present": true,
-    "job12_pending_known_gap": true
+    "job12_pending_known_gap": true,
+    "quant_frontier_refs_present": true,
+    "mt5_followup_refs_present": true,
+    "vi_catalog_refs_present": true,
+    "vi_ui_validation_ref_present": true,
+    "tradingagents_route_ref_present": true,
+    "tradingagents_full_test_count": 949,
+    "quant_full_test_count": 110,
+    "latest_nested_heads_recorded": true,
+    "research_root_commit_tracked": true,
+    "quant_full_validation_recorded": true
   },
   "interpretation": {
     "recovery_rehearsal": "PASS_LOCAL_FIXTURE",

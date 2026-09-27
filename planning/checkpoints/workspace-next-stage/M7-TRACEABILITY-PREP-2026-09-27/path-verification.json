@@ -3,7 +3,7 @@
   "status": "PREP_ONLY",
   "generated_at": "2026-09-27",
   "authority": "planning/WORKSPACE-NEXT-STAGE-PLAN.md v1.3 plus domain owner receipts",
-  "claims": "Path existence and hash snapshot for the final frozen authority docs; not M7 acceptance",
+  "claims": "Path existence and SHA-256 snapshot for packet evidence at the recorded nested heads; root authority docs remain frozen; not M7 acceptance",
   "references": [
     {
       "path": "planning/WORKSPACE-NEXT-STAGE-PLAN.md",
@@ -368,6 +368,181 @@
       "exists": true,
       "sha256": "7b4a973e3ca976f17062e53896a3541b87661a3a89c1d2ef9768b35d865d976e",
       "bytes": 10923
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-script-parity-mql-time-boundary-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\chart-script-parity-mql-time-boundary-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "31671c06d4f72b203a441ca054ebdddb938fb972949f9a291323d21a0720d982",
+      "bytes": 1863
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-script-parity-mql-time-boundary-r1-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\chart-script-parity-mql-time-boundary-r1-2026-09-27.md",
+      "exists": true,
+      "sha256": "83f286b7551481230cc53f69fa694709939f315325c0f82953b2b8a87786b5cb",
+      "bytes": 2407
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/mql_parity.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\trading_workspace_v2\\mql_parity.py",
+      "exists": true,
+      "sha256": "e7945c0d649d876b970eb278e4dbca1c8438eaa972d676108ef337488208ea33",
+      "bytes": 18113
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_mql_parity.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\tests\\test_mql_parity.py",
+      "exists": true,
+      "sha256": "899751d64fd08dd8282d2b59fe1422ec5e8bece757532c619503daa5499688e0",
+      "bytes": 7381
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/chart_renderer_contract.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\trading_workspace_v2\\chart_renderer_contract.py",
+      "exists": true,
+      "sha256": "6bfb0c4cc862937ba266f1547e983d965ba1c553c9874683360bb9d6ae200d69",
+      "bytes": 26229
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_chart_renderer_contract.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\tests\\test_chart_renderer_contract.py",
+      "exists": true,
+      "sha256": "a7c88f6d9ce66f829d9fd3e6db380a0109a0c39168701175611ae8d0807cd6fb",
+      "bytes": 9121
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-zone-lifecycle-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\chart-zone-lifecycle-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "e912860f972560119188da8212dbf1c4b752fe90c4eae84d94d8653f3ac9d1bf",
+      "bytes": 798
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-zone-lifecycle-r1-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\chart-zone-lifecycle-r1-2026-09-27.md",
+      "exists": true,
+      "sha256": "4385c6d9c5d8449268dc4b9c5917912ca0f7548be5126850ecd56017723ceb5a",
+      "bytes": 1907
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/zone_lifecycle.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\trading_workspace_v2\\zone_lifecycle.py",
+      "exists": true,
+      "sha256": "6ecc939e2dc4f4c1fec19b76e40bb97a9283a609256e171ea61ec01de74923f6",
+      "bytes": 35416
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_zone_lifecycle.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\tests\\test_zone_lifecycle.py",
+      "exists": true,
+      "sha256": "ceb8caefd1f3d16f28683120d69cd5352227b3ad874760f13792ce7ef910d5db",
+      "bytes": 9584
+    },
+    {
+      "path": "projects/quant-trading/docs/research/ou-process-pilot-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\ou-process-pilot-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "cac800b65f74f9e23a11d330e5058bcfd54f181bc2f01806513ecc54855e81bd",
+      "bytes": 1537
+    },
+    {
+      "path": "projects/quant-trading/docs/research/ou-process-pilot-r1-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\ou-process-pilot-r1-2026-09-27.md",
+      "exists": true,
+      "sha256": "27b851460735d456fb6e0466b8bccadcb4322be158074a40d828412e3ad99f1c",
+      "bytes": 3586
+    },
+    {
+      "path": "projects/quant-trading/src/quant_trading/ou_process.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\src\\quant_trading\\ou_process.py",
+      "exists": true,
+      "sha256": "3218fc7577d0f2db809824c8beda35929842241d6007d06dfd24572472b0e826",
+      "bytes": 24457
+    },
+    {
+      "path": "projects/quant-trading/tests/quant_trading/test_ou_process.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\tests\\quant_trading\\test_ou_process.py",
+      "exists": true,
+      "sha256": "0477328dc31f9f09a0d132523bb9bdd91b1893b4567dad8234abe25039a83c30",
+      "bytes": 5426
+    },
+    {
+      "path": "projects/quant-trading/docs/research/permutation-entropy-pilot-r1-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\permutation-entropy-pilot-r1-2026-09-27.md",
+      "exists": true,
+      "sha256": "fb2464956f8a881182abb6d2f97886071b7348e936d6096160245ad7e54e880d",
+      "bytes": 2673
+    },
+    {
+      "path": "projects/quant-trading/src/quant_trading/state_primitives.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\src\\quant_trading\\state_primitives.py",
+      "exists": true,
+      "sha256": "884af2f2a5095ec71066b69152184a98092e13996129a6e2eb54411828ef7c0d",
+      "bytes": 33490
+    },
+    {
+      "path": "projects/quant-trading/tests/quant_trading/test_state_primitives.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\tests\\quant_trading\\test_state_primitives.py",
+      "exists": true,
+      "sha256": "aa53ff5ad90cd56aaf24abbe56552788a77f3ae6c679b4b0e181e052a9ee112f",
+      "bytes": 5811
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/M5-catalog-local-foundation-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M5-catalog-local-foundation-2026-09-27.md",
+      "exists": true,
+      "sha256": "c0cc055c98319aa84bff235e1d436d6275e2e035312b9bb7decc40c083b003d7",
+      "bytes": 2737
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/M5-catalog-revision-integrity-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M5-catalog-revision-integrity-2026-09-27.md",
+      "exists": true,
+      "sha256": "557e408d7c03cfd0b6faf1ae6351977333171457f5668ec1e59ae6bb647cafa7",
+      "bytes": 1722
+    },
+    {
+      "path": "projects/vi-dubber/src/vi_dubber/catalog_store.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\src\\vi_dubber\\catalog_store.py",
+      "exists": true,
+      "sha256": "80dc512dd287ba44f2ac3073f88f8c70a2d2b952986c056e09bf08c8d6c49121",
+      "bytes": 32854
+    },
+    {
+      "path": "projects/vi-dubber/tests/test_catalog_store.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\tests\\test_catalog_store.py",
+      "exists": true,
+      "sha256": "eac13e4d191dc42640dc8d2d2c3892f01adc839f8a910240b0f09395d76db218",
+      "bytes": 11347
+    },
+    {
+      "path": "projects/vi-dubber/frontend/src/components/header/SystemBar.tsx",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\frontend\\src\\components\\header\\SystemBar.tsx",
+      "exists": true,
+      "sha256": "882a92f3ae1efdc6710cdbba9a3a56adf9bb6ef57524e0cbad92c5ffdcfa724a",
+      "bytes": 8328
+    },
+    {
+      "path": "projects/TradingAgents/README.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\TradingAgents\\README.md",
+      "exists": true,
+      "sha256": "3be785a2817bd579373d96859a04c219faecd431a7b9863819523b2647e5c271",
+      "bytes": 22505
+    },
+    {
+      "path": "projects/TradingAgents/tests/test_checkpoint_resume.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\TradingAgents\\tests\\test_checkpoint_resume.py",
+      "exists": true,
+      "sha256": "a53410706f90ef4a9eeb7408a622a6e04378afd8d98b43a4d029e13b9acc9e29",
+      "bytes": 10667
+    },
+    {
+      "path": "projects/TradingAgents/tradingagents/graph/trading_graph.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\TradingAgents\\tradingagents\\graph\\trading_graph.py",
+      "exists": true,
+      "sha256": "53152490dcb6cfb9ec154a8e7a6a914aa09826c7b3ec1e1478c2bce1dbdf8a9a",
+      "bytes": 32902
     }
   ],
   "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
