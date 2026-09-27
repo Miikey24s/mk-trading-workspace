@@ -16,8 +16,8 @@
       "path": "planning/checkpoints/workspace-next-stage/RESUME.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\RESUME.md",
       "exists": true,
-      "sha256": "7a5b5f092617975ad3fb3c302b33af27c0f08da4d8719a013e07b6a4969f42cb",
-      "bytes": 24184
+      "sha256": "e27f8b6e572f0d9be76904575dba3e8e2291c03afbe97d0f702b4079bf3a3dcc",
+      "bytes": 24504
     },
     {
       "path": "planning/checkpoints/workspace-next-stage/M3-M4-SHARED-UI-2026-09-26/CLOSEOUT.md",
@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "679d5f5530c864c3316241644a6ab987bc45b17ef06d4cf1bc8fb7a787461c04",
-      "bytes": 54575
+      "sha256": "9d1d796262acd994dc17c0827ce262ddcaa3ff5c4dea0c68a7466d66a39df8ff",
+      "bytes": 55404
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -877,8 +877,8 @@
       "path": "planning/CURRENT-CONTEXT.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\CURRENT-CONTEXT.md",
       "exists": true,
-      "sha256": "312c7051804d0604dc4cb68acafc52bccc37c83d1fbaab5efd58d8408da5b36b",
-      "bytes": 12029
+      "sha256": "601b11b0ac5183146346ecbbd812cefbc69ac47516e0bcc5bd9c34fae3ed8cf2",
+      "bytes": 12160
     },
     {
       "path": "projects/vi-dubber/scripts/verify_m5_process_startup.py",
@@ -982,8 +982,8 @@
       "path": "projects/quant-trading/README.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\README.md",
       "exists": true,
-      "sha256": "e4ccedf0b9332e279038046afb90d4e861ffca25fbbfd2bc153f595068b3adc2",
-      "bytes": 5440
+      "sha256": "ca7bccd139408a39b34e2dda5ccf20fee791d1a5b0ee8d77d58634b003246a1b",
+      "bytes": 5652
     },
     {
       "path": "projects/quant-trading/docs/research/model-governance-pilot-r1-2026-09-28.md",
@@ -1012,9 +1012,65 @@
       "exists": true,
       "sha256": "58609412501ab0b15d2c15fde29247ead45b69195c1c730fae6d312d556d0609",
       "bytes": 7226
+    },
+    {
+      "path": "planning/checkpoints/workspace-next-stage/UI-ECOSYSTEM-CONSISTENCY-AUDIT-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\UI-ECOSYSTEM-CONSISTENCY-AUDIT-2026-09-28.md",
+      "exists": true,
+      "sha256": "cfdc7a686d301fbcd36513e12ea7553dd7022b964fc8117a1e80263c55b5c7a8",
+      "bytes": 6748
+    },
+    {
+      "path": "projects/quant-trading/docs/research/selective-abstention-pilot-r1-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\selective-abstention-pilot-r1-2026-09-28.md",
+      "exists": true,
+      "sha256": "d56781824193cd46460ded35b4833fe4e87de96ade31c35234ca1a8e4b1702f8",
+      "bytes": 2535
+    },
+    {
+      "path": "projects/quant-trading/docs/research/selective-abstention-pilot-r1-2026-09-28.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\selective-abstention-pilot-r1-2026-09-28.json",
+      "exists": true,
+      "sha256": "beec0653a6b49bb558c9e95f96102993172c87e14785cc77383550169f92a5d3",
+      "bytes": 2043
+    },
+    {
+      "path": "projects/quant-trading/src/quant_trading/selective_prediction.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\src\\quant_trading\\selective_prediction.py",
+      "exists": true,
+      "sha256": "9578b2ea76761f74b2b1f08b56d5a338894329ccb8f73f00c11c61df9394312c",
+      "bytes": 23535
+    },
+    {
+      "path": "projects/quant-trading/tests/quant_trading/test_selective_prediction.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\tests\\quant_trading\\test_selective_prediction.py",
+      "exists": true,
+      "sha256": "a1d02dc78168e0586a4be0019350321e1b0aaff6b5e04f890de770a01de1ea88",
+      "bytes": 5524
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/execution_intent_contract.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\trading_workspace_v2\\execution_intent_contract.py",
+      "exists": true,
+      "sha256": "9992fe41cd2a959e6c30179708ace32c02d84755aa159c7ad3e6b03a3c153c5e",
+      "bytes": 18596
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_execution_intent_contract.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\tests\\test_execution_intent_contract.py",
+      "exists": true,
+      "sha256": "46fe145c9d31bc0b62afa461626dc01e649405a468217a81cd1c4589ac01b844",
+      "bytes": 10189
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/__init__.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\trading_workspace_v2\\__init__.py",
+      "exists": true,
+      "sha256": "6b451f382be8521e521469746fd19dbabf4a0c0c640a82fcda64306ed54feb4b",
+      "bytes": 484
     }
   ],
   "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
-  "snapshot_root_commit": "aa7c5aea4520ffd9a231e2d6214e5da6afb98ecc",
+  "snapshot_root_commit": "0cb5259cd3428678d2a88f9281d1ad61b046612d",
   "frozen_authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
 }
