@@ -18,6 +18,8 @@ The workspace may eventually run research, media, and agent workloads while the 
 
 The machine-readable fixture is [autonomous-update-contract-v1.json](autonomous-update-contract-v1.json). The checker is [verify_autonomous_update_contract.py](verify_autonomous_update_contract.py).
 
+The current offline receipt is [verification-receipt-v1.json](verification-receipt-v1.json). It records the checker and fixture hashes, a dry-run with zero network/process/filesystem/broker side effects, and eight fail-closed mutation cases. It is scoped evidence for the contract only; it is not a production release or scheduler acceptance.
+
 ## Safety boundary
 
 `scope=PREP_ONLY_OFFLINE` is intentional. The fixture proves that the contract is internally consistent and that dangerous mutations are rejected. It does not verify a real Ed25519 signature, fetch a release, install a package, run a canary, or claim production readiness. A future production adapter must perform cryptographic verification against a pinned trust store before it can move from `prep_only_unverified` to `verified`.
