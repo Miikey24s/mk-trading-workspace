@@ -16,8 +16,8 @@
       "path": "planning/checkpoints/workspace-next-stage/RESUME.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\RESUME.md",
       "exists": true,
-      "sha256": "e27f8b6e572f0d9be76904575dba3e8e2291c03afbe97d0f702b4079bf3a3dcc",
-      "bytes": 24504
+      "sha256": "663f3c03154e79c6f4e25396cc45c7088845cdcb2649186c9edf4bebd2efbbc8",
+      "bytes": 25119
     },
     {
       "path": "planning/checkpoints/workspace-next-stage/M3-M4-SHARED-UI-2026-09-26/CLOSEOUT.md",
@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "9d1d796262acd994dc17c0827ce262ddcaa3ff5c4dea0c68a7466d66a39df8ff",
-      "bytes": 55404
+      "sha256": "4679db55fdd58754f5e17c17fb49845a1d0d2262a84ef3b526701df45a000518",
+      "bytes": 56571
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -506,8 +506,8 @@
       "path": "projects/vi-dubber/src/vi_dubber/catalog_store.py",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\src\\vi_dubber\\catalog_store.py",
       "exists": true,
-      "sha256": "b36226f4b639ab98439922d4f9779f3af5d134d4af77528e767d55c047805b85",
-      "bytes": 35080
+      "sha256": "e90624fcc14ed346672b6d478dd5a3cb65b8a8bf053fa094d56aeeded6e698d4",
+      "bytes": 36166
     },
     {
       "path": "projects/vi-dubber/tests/test_catalog_store.py",
@@ -877,8 +877,8 @@
       "path": "planning/CURRENT-CONTEXT.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\CURRENT-CONTEXT.md",
       "exists": true,
-      "sha256": "601b11b0ac5183146346ecbbd812cefbc69ac47516e0bcc5bd9c34fae3ed8cf2",
-      "bytes": 12160
+      "sha256": "86c3a31fb4b54eac507199a239af397d75db34dfe48dbb7a917308def01f90f3",
+      "bytes": 12667
     },
     {
       "path": "projects/vi-dubber/scripts/verify_m5_process_startup.py",
@@ -982,8 +982,8 @@
       "path": "projects/quant-trading/README.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\README.md",
       "exists": true,
-      "sha256": "ca7bccd139408a39b34e2dda5ccf20fee791d1a5b0ee8d77d58634b003246a1b",
-      "bytes": 5652
+      "sha256": "ed0e58b7181e02886b37019dce5b8fa3d87a20005d134b80164cd14e3f60c3cd",
+      "bytes": 6008
     },
     {
       "path": "projects/quant-trading/docs/research/model-governance-pilot-r1-2026-09-28.md",
@@ -1052,15 +1052,15 @@
       "path": "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/execution_intent_contract.py",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\trading_workspace_v2\\execution_intent_contract.py",
       "exists": true,
-      "sha256": "9992fe41cd2a959e6c30179708ace32c02d84755aa159c7ad3e6b03a3c153c5e",
-      "bytes": 18596
+      "sha256": "e25f2bad0d7fe57477068b55de765cbfbaf3c0c13971c77d1eb3e3c75fd8db82",
+      "bytes": 18911
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/tests/test_execution_intent_contract.py",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\tests\\test_execution_intent_contract.py",
       "exists": true,
-      "sha256": "46fe145c9d31bc0b62afa461626dc01e649405a468217a81cd1c4589ac01b844",
-      "bytes": 10189
+      "sha256": "9484b5a64dcd5527af90c778ef50d5224f88548f3a74367769d5668f2b6d93f8",
+      "bytes": 10605
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/__init__.py",
@@ -1068,9 +1068,107 @@
       "exists": true,
       "sha256": "6b451f382be8521e521469746fd19dbabf4a0c0c640a82fcda64306ed54feb4b",
       "bytes": 484
+    },
+    {
+      "path": "planning/archive/ai-environment-duplicates-20260928/MOVED.txt",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\archive\\ai-environment-duplicates-20260928\\MOVED.txt",
+      "exists": true,
+      "sha256": "f86fd672e3f866d5466819888b9babcdfe16f10cd30505fc348a49e6697f51ee",
+      "bytes": 942
+    },
+    {
+      "path": "planning/research/THEORY-APPLICATION-MATRIX-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\research\\THEORY-APPLICATION-MATRIX-2026-09-28.md",
+      "exists": true,
+      "sha256": "f5630ba1eed8c5c286a8a93dc27753c1b7b5e69e309fd0236f0962bc59d78177",
+      "bytes": 19300
+    },
+    {
+      "path": "projects/quant-trading/docs/research/feature-provenance-registry-pilot-r1-2026-09-28.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\feature-provenance-registry-pilot-r1-2026-09-28.json",
+      "exists": true,
+      "sha256": "b8c9dc0d158fc9d1c46b754692ed734bd230d4e4865cfd2a6673ab5e3495d244",
+      "bytes": 1260
+    },
+    {
+      "path": "projects/quant-trading/docs/research/feature-provenance-registry-pilot-r1-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\feature-provenance-registry-pilot-r1-2026-09-28.md",
+      "exists": true,
+      "sha256": "4cda242dd14fad4aa91d94d7f41fca50b55f96b1d66e1a08a8a7caefb8f1c8d9",
+      "bytes": 2290
+    },
+    {
+      "path": "projects/quant-trading/src/quant_trading/feature_registry.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\src\\quant_trading\\feature_registry.py",
+      "exists": true,
+      "sha256": "3a5e4e19e51e347b53cb7c897ea1804272222593535a5b90cb3e83675796002b",
+      "bytes": 22438
+    },
+    {
+      "path": "projects/quant-trading/tests/quant_trading/test_feature_registry.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\tests\\quant_trading\\test_feature_registry.py",
+      "exists": true,
+      "sha256": "022df2c95b4f82ce113382ea1bf70f2c97a7127012e480ec9ccdddbf6c53ec31",
+      "bytes": 6849
+    },
+    {
+      "path": "projects/vi-dubber/scripts/verify_m5_catalog_view_contract.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\scripts\\verify_m5_catalog_view_contract.py",
+      "exists": true,
+      "sha256": "f21ad34ae55118f1c0faedbbacc0814ef40bca0779b2b63274e9964d09898ba7",
+      "bytes": 7939
+    },
+    {
+      "path": "projects/vi-dubber/src/vi_dubber/catalog_projection.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\src\\vi_dubber\\catalog_projection.py",
+      "exists": true,
+      "sha256": "877ffbadb9beb3097f2ff6a3aeff34f27d414dc4caebc5532c6a634b6cb14f0b",
+      "bytes": 11213
+    },
+    {
+      "path": "projects/vi-dubber/src/vi_dubber/catalog_view.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\src\\vi_dubber\\catalog_view.py",
+      "exists": true,
+      "sha256": "dfc60b52640f585666373e5679a4d6b2207274c9aa2deae14c8f97a52d72c2fe",
+      "bytes": 7266
+    },
+    {
+      "path": "projects/vi-dubber/tests/test_catalog_projection.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\tests\\test_catalog_projection.py",
+      "exists": true,
+      "sha256": "76083e2c105049fac2215fe1428454e65187a3643eb53de683d00e4d84810673",
+      "bytes": 9770
+    },
+    {
+      "path": "projects/vi-dubber/tests/test_catalog_view.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\tests\\test_catalog_view.py",
+      "exists": true,
+      "sha256": "bdbf1384703f9139fc4f109ce215b5b966ddcca4a37da922b18e371074b752fc",
+      "bytes": 4491
+    },
+    {
+      "path": "projects/vi-dubber/tests/test_m5_catalog_view_contract.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\tests\\test_m5_catalog_view_contract.py",
+      "exists": true,
+      "sha256": "7e4a7dd0cf5522f4b93fa713a69f5df65658063cbfad8bab4388fa9b4ad7d552",
+      "bytes": 1133
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/M5-catalog-view-contract-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M5-catalog-view-contract-2026-09-28.md",
+      "exists": true,
+      "sha256": "ef2bec00154481e5ea094a2d6e17f52d77e61fc5fa21e86121c2843ddb468c09",
+      "bytes": 3182
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/M5-catalog-view-contract-receipt-2026-09-28.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M5-catalog-view-contract-receipt-2026-09-28.json",
+      "exists": true,
+      "sha256": "7d8c85b2b9345c1e87f0871e03f75a23f4619878cb60a91fc7b1de99f7ac70d2",
+      "bytes": 1015
     }
   ],
   "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
-  "snapshot_root_commit": "0cb5259cd3428678d2a88f9281d1ad61b046612d",
+  "snapshot_root_commit": "85cf85b9a8e51ec63f78e87ed2f602f4eabad279",
   "frozen_authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
 }

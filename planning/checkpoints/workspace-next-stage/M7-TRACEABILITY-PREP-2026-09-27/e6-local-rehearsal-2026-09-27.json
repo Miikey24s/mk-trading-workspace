@@ -10,33 +10,33 @@
     "plan_present": true,
     "resume_present": true,
     "plan_sha256": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
-    "resume_sha256_current": "e27f8b6e572f0d9be76904575dba3e8e2291c03afbe97d0f702b4079bf3a3dcc",
+    "resume_sha256_current": "663f3c03154e79c6f4e25396cc45c7088845cdcb2649186c9edf4bebd2efbbc8",
     "repo_snapshots": [
       {
         "scope": "workspace",
         "branch": "main",
-        "head": "0cb5259cd3428678d2a88f9281d1ad61b046612d",
-        "dirty_count": 73,
-        "dirty_preview": " M planning/CURRENT-CONTEXT.md;   M planning/checkpoints/workspace-next-stage/RESUME.md;   M planning/mt5-tradingview-backtester/POST-COMPLETION-ROADMAP-DRAFT.md;   M planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/RESUME.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json.sha256;   M planning/ui-platform/MASTER-UI-PLATFORM-PLAN.md"
+        "head": "85cf85b9a8e51ec63f78e87ed2f602f4eabad279",
+        "dirty_count": 76,
+        "dirty_preview": "M planning/CURRENT-CONTEXT.md;  M planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-PREP.md;  M planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json;  M planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/path-verification.json;  M planning/checkpoints/workspace-next-stage/RESUME.md;  M planning/mt5-tradingview-backtester/POST-COMPLETION-ROADMAP-DRAFT.md;  M planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md;  M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/RESUME.md;  M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json;  M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json.sha256"
       },
       {
         "scope": "mt5",
         "branch": "Nam",
-        "head": "b598734407d24626ef29dbcbbce39f516c1f4cfc",
+        "head": "2324bb04faa9240c9bcce2fe283546a642c5279b",
         "dirty_count": 13,
-        "dirty_preview": " M ai_service.py;   M foundation_v2/evidence/replay-ui-1440.png;   M foundation_v2/evidence/replay-ui-360.png;   M foundation_v2/evidence/replay-ui-768.png;   M tests/test_ai_foundation.py;  ?? foundation_v2/evidence/U5-protective-validation-r4.json;  ?? foundation_v2/evidence/U5-protective-validation-r5.json;  ?? foundation_v2/evidence/ps02-lifecycle-wip-r2/"
+        "dirty_preview": "M ai_service.py;  M foundation_v2/evidence/replay-ui-1440.png;  M foundation_v2/evidence/replay-ui-360.png;  M foundation_v2/evidence/replay-ui-768.png;  M tests/test_ai_foundation.py; ?? foundation_v2/evidence/U5-protective-validation-r4.json; ?? foundation_v2/evidence/U5-protective-validation-r5.json; ?? foundation_v2/evidence/ps02-lifecycle-wip-r2/; ?? foundation_v2/evidence/ps02-lifecycle-wip-r3/; ?? foundation_v2/evidence/ps02-lifecycle-wip-r4/"
       },
       {
         "scope": "vi",
         "branch": "main",
-        "head": "86951298d0210cf5f98a56a3e3e576f7d7e2d2d9",
+        "head": "4b70bec1e7e8abfe4a8a7d09b09f8db2702db35e",
         "dirty_count": 2,
-        "dirty_preview": "?? work/checkpoints/P23-real-media-final-assembly-6h-2026-09-26.json;  ?? work/checkpoints/P23-real-media-process-gpu-smoke-2026-09-26.json"
+        "dirty_preview": "?? work/checkpoints/P23-real-media-final-assembly-6h-2026-09-26.json; ?? work/checkpoints/P23-real-media-process-gpu-smoke-2026-09-26.json"
       },
       {
         "scope": "quant",
         "branch": "master",
-        "head": "417dd5f1805a452f7f9fd2b94fc4600c18ab9639",
+        "head": "eb0bdde465492a3b3122ce4dd780723419986503",
         "dirty_count": 0,
         "dirty_preview": ""
       },
@@ -44,13 +44,13 @@
         "scope": "tradingagents",
         "branch": "main",
         "head": "f3b357f945b253fffbcf66f9a219c7ffc264da85",
-        "dirty_count": 0,
-        "dirty_preview": ""
+        "dirty_count": 1,
+        "dirty_preview": "?? uv.lock"
       }
     ],
     "authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
-    "current_context_sha256": "601b11b0ac5183146346ecbbd812cefbc69ac47516e0bcc5bd9c34fae3ed8cf2",
-    "research_root_commit": "a30c5e19a037dce29521a8565343dfa77f7b8b2c",
+    "current_context_sha256": "86c3a31fb4b54eac507199a239af397d75db34dfe48dbb7a917308def01f90f3",
+    "research_root_commit": "3855765",
     "mt5_stress_commit": "56333618d437e9032558be2b54a4baa1803410da",
     "mt5_renderer_commit": "3c55c1288b63ebd7902753a7e3fc40b6171f9fcc",
     "mt5_ai_commit": "c1dfff448525fdaa73f3baff49ddb0601ea1de04",
@@ -824,8 +824,8 @@
     "quant_event_kernel_commit": "9f61de70d6f3fb2aacb63989a930c7ab07e32448",
     "quant_optimizer_commit": "7f2cedb17e3eb04e1b1fa708469d5c38b8955ea2",
     "quant_optimizer_hardening_commit": "e82c7cf",
-    "quant_receipt_commit": "417dd5f1805a452f7f9fd2b94fc4600c18ab9639",
-    "quant_current_full_test_count": 159,
+    "quant_receipt_commit": "eb0bdde",
+    "quant_current_full_test_count": 167,
     "quant_theory_receipt_commit": "b67f398c8d6a88617f2f3bc23c3fa7ab3bb410a4",
     "quant_state_primitives_commit": "ec6e7f24f151e126618bda86b76a49668399cf21",
     "quant_conformal_commit": "ce225a5f0ceacdf25226bbc2519191c813b58dc9",
@@ -853,7 +853,7 @@
     "quant_ou_diagnostics_commit": "223eeca67c5a5704de494fd9831d7d962c77417e",
     "quant_full_validation": {
       "command": "uv run pytest -q",
-      "result": "159 passed in 7.24s",
+      "result": "167 passed in 7.13s",
       "external_side_effects": "none",
       "passed": true
     },
@@ -886,7 +886,7 @@
     "quant_bocpd_focused_test_count": 12,
     "quant_causal_effect_commit": "c4265d977cce74ed7a545f29d457b5870eb46118",
     "tradingagents_provenance_commit": "f3b357f945b253fffbcf66f9a219c7ffc264da85",
-    "current_workspace_commit": "0cb5259cd3428678d2a88f9281d1ad61b046612d",
+    "current_workspace_commit": "85cf85b9a8e51ec63f78e87ed2f602f4eabad279",
     "frozen_authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
     "shared_ui_presentation_state_commit": "681ffc59658b71fa812b657377022011a2e01a38",
     "shared_ui_complete_token_snapshot_commit": "92311f4dc6163760c342df81933b8da3a5a7490c",
@@ -927,14 +927,14 @@
     "vi_job12_observation": {
       "status": "running",
       "stage": "separation",
-      "progress_display": "12%",
+      "progress_display": "14.04%",
       "completed_chunks": 11,
       "current_chunk": "chunk_0011",
       "total_chunks": 29,
       "pid": 27804,
       "source": "projects/vi-dubber/work/job-8dc51f8a892aba21/state.json and run.lock",
       "acceptance": "NOT_CLAIMED",
-      "progress_fraction": 0.1156690622861054,
+      "progress_fraction": 0.1404068275154,
       "observed_at": "2026-09-28"
     },
     "vi_m5_process_startup_commit": "f847eb0669fa25532f0fc0b89ca9347faa15441d",
@@ -956,18 +956,33 @@
     "quant_distribution_drift_status": "synthetic causal PSI/OOD diagnostic; market_edge_claim=false; PREP_ONLY",
     "quant_model_governance_commit": "93f6a816994d96074b5ef6d8580ca92b1b58b86b",
     "quant_model_governance_focused_test_count": 7,
-    "vi_m6_i1_commit": "86951298d0210cf5f98a56a3e3e576f7d7e2d2d9",
+    "vi_m6_i1_commit": "8695129",
     "vi_m6_i1_focused_test_count": 43,
     "mt5_chart_parity_fixture_commit": "89be93554d0933bebdaeba5f77d29ef40e6911f1",
     "vi_m6_i1_status": "typed offline Learn reference contract; actual connector/OAuth/Learn acceptance not run; PREP_ONLY",
     "quant_model_governance_status": "offline challenger governance recommendation; market_edge_claim=false; PREP_ONLY",
     "quant_selective_abstention_commit": "417dd5f1805a452f7f9fd2b94fc4600c18ab9639",
     "quant_selective_abstention_focused_test_count": 12,
-    "mt5_execution_intent_commit": "b598734407d24626ef29dbcbbce39f516c1f4cfc",
-    "mt5_execution_intent_focused_test_count": 7,
+    "mt5_execution_intent_commit": "2324bb0",
+    "mt5_execution_intent_focused_test_count": 9,
     "mt5_execution_intent_status": "offline immutable intent/reconciliation/quarantine contract; no broker/provider/live authority; PREP_ONLY",
-    "vi_current_full_test_count": 570,
-    "ui_consistency_audit_ref": "planning/checkpoints/workspace-next-stage/UI-ECOSYSTEM-CONSISTENCY-AUDIT-2026-09-28.md"
+    "vi_current_full_test_count": 580,
+    "ui_consistency_audit_ref": "planning/checkpoints/workspace-next-stage/UI-ECOSYSTEM-CONSISTENCY-AUDIT-2026-09-28.md",
+    "vi_m5_catalog_view_commit": "4b70bec",
+    "vi_m5_catalog_view_focused_test_count": 36,
+    "ai_environment_audit": {
+      "status": "ok",
+      "global_bytes": 11857,
+      "active_bytes": 19512,
+      "runtime_limit": 65536,
+      "reserve_bytes": 46024,
+      "skills": 11,
+      "errors": 0,
+      "warnings": 0,
+      "archive_manifest": "planning/archive/ai-environment-duplicates-20260928/MOVED.txt"
+    },
+    "quant_feature_provenance_commit": "eb0bdde",
+    "job12_live_status_observed": true
   },
   "checks": {
     "recovery_dependencies": [
@@ -1011,7 +1026,7 @@
     "archive_hash_stable": true,
     "no_external_operations": true,
     "chart_evidence_refs_present": true,
-    "path_manifest_reference_count": 152,
+    "path_manifest_reference_count": 166,
     "chart_followup_refs_present": true,
     "theory_p0_receipt_refs_present": true,
     "vi_flac_hardening_ref_present": true,
@@ -1022,7 +1037,7 @@
     "vi_ui_validation_ref_present": true,
     "tradingagents_route_ref_present": true,
     "tradingagents_full_test_count": 952,
-    "quant_full_test_count": 159,
+    "quant_full_test_count": 167,
     "latest_nested_heads_recorded": true,
     "research_root_commit_tracked": true,
     "quant_full_validation_recorded": true,
@@ -1059,8 +1074,17 @@
     "quant_selective_abstention_refs_present": true,
     "quant_selective_abstention_focused_test_count": 12,
     "mt5_execution_intent_refs_present": true,
-    "mt5_execution_intent_focused_test_count": 7,
-    "ui_consistency_audit_ref_present": true
+    "mt5_execution_intent_focused_test_count": 9,
+    "ui_consistency_audit_ref_present": true,
+    "theory_application_matrix_ref_present": true,
+    "quant_feature_provenance_refs_present": true,
+    "quant_feature_provenance_focused_test_count": 8,
+    "vi_m5_catalog_view_refs_present": true,
+    "vi_m5_catalog_view_focused_test_count": 36,
+    "vi_full_test_count": 580,
+    "mt5_execution_intent_expiry_ref_present": true,
+    "ai_environment_audit_ok": true,
+    "ai_environment_duplicate_skill_cleanup_recorded": true
   },
   "interpretation": {
     "recovery_rehearsal": "PASS_LOCAL_FIXTURE",
