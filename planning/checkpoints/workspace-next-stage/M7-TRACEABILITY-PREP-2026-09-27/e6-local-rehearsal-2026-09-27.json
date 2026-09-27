@@ -29,7 +29,7 @@
       {
         "scope": "vi",
         "branch": "main",
-        "head": "867dd4c2eec5d90e8e900e78be0a263d418ec280",
+        "head": "4992f8673c1e2e060703c8f1e59c2186e1e6d188",
         "dirty_count": 2,
         "dirty_preview": "?? work/checkpoints/P23-real-media-final-assembly-6h-2026-09-26.json;  ?? work/checkpoints/P23-real-media-process-gpu-smoke-2026-09-26.json"
       },
@@ -382,21 +382,21 @@
         "scope": "VI M5 catalog revision integrity receipt",
         "path": "projects/vi-dubber/work/checkpoints/M5-catalog-revision-integrity-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "22 focused tests; fail-closed revision/tamper/rebuild guards; M5 remains PREP_ONLY",
+        "validation": "24 focused tests; fail-closed revision/tamper/rebuild guards; M5 remains PREP_ONLY",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "VI catalog store source",
         "path": "projects/vi-dubber/src/vi_dubber/catalog_store.py",
         "mode": "PREP_ONLY",
-        "validation": "Catalog revision and user-state integrity implementation; covered by local M5 receipts; no media/provider acceptance",
+        "validation": "Catalog revision, user-state and bounded file-backup integrity implementation; latest file-backup suite 24 passed; no media/provider acceptance",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "VI catalog store focused tests",
         "path": "projects/vi-dubber/tests/test_catalog_store.py",
         "mode": "PREP_ONLY",
-        "validation": "Catalog transaction/revision/restore coverage; owner snapshot reports 22 focused catalog validations; M5 not accepted",
+        "validation": "Catalog transaction/revision/file-backup/restore coverage; latest focused suite 24 passed; M5 not accepted",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -461,6 +461,20 @@
         "mode": "PREP_ONLY",
         "validation": "a2d8fd3 integration tests; 5 focused integration passes; no live execution",
         "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M5 catalog file-backup receipt",
+        "path": "projects/vi-dubber/work/checkpoints/M5-catalog-file-backup-receipt-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "24 focused tests; compileall PASS; diff_check PASS; bounded metadata-only file backup/restore; M5 PREP_ONLY",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M5 catalog file-backup narrative",
+        "path": "projects/vi-dubber/work/checkpoints/M5-catalog-file-backup-2026-09-27.md",
+        "mode": "PREP_ONLY",
+        "validation": "24 focused tests; oversized/malformed file rejection and no-mutation restore guard; M5 startup/restart/real-media gates remain open",
+        "acceptance": "NOT_CLAIMED"
       }
     ],
     "mt5_dst_policy_commit": "125dbdd711da7d1561f19d4355c2f719e1faa4ef",
@@ -508,7 +522,17 @@
       "passed": true
     },
     "mt5_zone_contract_commit": "ce8a08e8579bf1668984d44ba6118ddeec85c42b",
-    "mt5_zone_integration_commit": "a2d8fd3209de3b4384031e7840cdbcec0d911974"
+    "mt5_zone_integration_commit": "a2d8fd3209de3b4384031e7840cdbcec0d911974",
+    "vi_catalog_file_backup_commit": "4992f8673c1e2e060703c8f1e59c2186e1e6d188",
+    "vi_catalog_focused_test_count": 24,
+    "vi_catalog_validation": {
+      "command": "uv run pytest -q tests/test_catalog_store.py tests/test_catalog_projection.py tests/test_m5_catalog_contract.py tests/test_m5_e3_benchmark.py",
+      "result": "24 passed in 2.14s",
+      "compileall": "PASS (receipt)",
+      "git_diff_check": "PASS (receipt)",
+      "external_side_effects": "none",
+      "passed": true
+    }
   },
   "checks": {
     "recovery_dependencies": [
@@ -552,7 +576,7 @@
     "archive_hash_stable": true,
     "no_external_operations": true,
     "chart_evidence_refs_present": true,
-    "path_manifest_reference_count": 82,
+    "path_manifest_reference_count": 84,
     "chart_followup_refs_present": true,
     "theory_p0_receipt_refs_present": true,
     "vi_flac_hardening_ref_present": true,
@@ -567,7 +591,10 @@
     "latest_nested_heads_recorded": true,
     "research_root_commit_tracked": true,
     "quant_full_validation_recorded": true,
-    "mt5_zone_integration_refs_present": true
+    "mt5_zone_integration_refs_present": true,
+    "vi_catalog_file_backup_ref_present": true,
+    "vi_catalog_focused_test_count": 24,
+    "vi_catalog_validation_recorded": true
   },
   "interpretation": {
     "recovery_rehearsal": "PASS_LOCAL_FIXTURE",

@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "406cf19bda3757e81b1c93d52b6d1c7170f6f86ddbcd3f23b3756b51152fd657",
-      "bytes": 29961
+      "sha256": "d0bdab1decb105ebfd59349384365dec78c39ae8dc4f33abed0b0be920c6ffac",
+      "bytes": 31395
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -499,22 +499,22 @@
       "path": "projects/vi-dubber/work/checkpoints/M5-catalog-revision-integrity-2026-09-27.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M5-catalog-revision-integrity-2026-09-27.md",
       "exists": true,
-      "sha256": "557e408d7c03cfd0b6faf1ae6351977333171457f5668ec1e59ae6bb647cafa7",
+      "sha256": "f811b72187b5e286b4397d13e2cacf3a547f7edba28e5aeb98bf8eeacaa68770",
       "bytes": 1722
     },
     {
       "path": "projects/vi-dubber/src/vi_dubber/catalog_store.py",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\src\\vi_dubber\\catalog_store.py",
       "exists": true,
-      "sha256": "80dc512dd287ba44f2ac3073f88f8c70a2d2b952986c056e09bf08c8d6c49121",
-      "bytes": 32854
+      "sha256": "3cfa7a4c9c6471f946ebe4cec7351b27bc2b1d288e12603185cebcd81be60fcd",
+      "bytes": 34016
     },
     {
       "path": "projects/vi-dubber/tests/test_catalog_store.py",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\tests\\test_catalog_store.py",
       "exists": true,
-      "sha256": "eac13e4d191dc42640dc8d2d2c3892f01adc839f8a910240b0f09395d76db218",
-      "bytes": 11347
+      "sha256": "3ca2a13142ba913f13d4d60dee0b7ee6d709b6f9862f65bdea727d43d09a6d3f",
+      "bytes": 12636
     },
     {
       "path": "projects/vi-dubber/frontend/src/components/header/SystemBar.tsx",
@@ -578,6 +578,20 @@
       "exists": true,
       "sha256": "6fcd0f9163afff38ba30493b64060dfe58fb750809f7f1c6b907777d84667e59",
       "bytes": 5869
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/M5-catalog-file-backup-receipt-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M5-catalog-file-backup-receipt-2026-09-27.json",
+      "exists": true,
+      "sha256": "ecb8c0309d0377b360e92fce8271173359ae62ab2da777dc9d50346638481fb0",
+      "bytes": 1210
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/M5-catalog-file-backup-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M5-catalog-file-backup-2026-09-27.md",
+      "exists": true,
+      "sha256": "35f5ada85ffac59943c7358b79965a7e1443b82c9bcc8251c7f428c720ad254c",
+      "bytes": 1507
     }
   ],
   "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
