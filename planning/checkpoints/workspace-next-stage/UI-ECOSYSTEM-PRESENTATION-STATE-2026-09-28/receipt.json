@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "status": "PREP_ONLY_CANDIDATE",
+  "scope": "offline shared UI presentation-state contract and additive token candidate",
+  "sourceRoot": "D:/ANNAM/UI-Systems",
+  "consumerMigration": false,
+  "externalSideEffects": false,
+  "executionCapability": false,
+  "providerAccess": false,
+  "brokerAccess": false,
+  "contract": {
+    "id": "annam.presentation-state",
+    "version": "1.0.0",
+    "axes": {
+      "availability": ["loading", "ready", "empty", "unavailable", "error", "denied"],
+      "freshness": ["current", "stale", "partial", "unknown"],
+      "certainty": ["known", "uncertain", "unknown"]
+    }
+  },
+  "tokens": {
+    "name": "annam-productivity",
+    "candidateVersion": "1.1.0",
+    "baseVersion": "1.0.0",
+    "sourceSha256": "5ae5aff098c9245b295c0060439bbe472306250cd88fa29b1456f34f1ada4485"
+  },
+  "validation": {
+    "jsonParse": "PASS",
+    "tokenCompleteness": "PASS",
+    "contractBehavior": "PASS",
+    "contrastSanity": "PASS",
+    "cssGeneration": "PASS",
+    "jsonschemaPackage": "NOT_INSTALLED"
+  },
+  "promotionGates": [
+    "consumer pin and compatibility receipt",
+    "light/dark and supported viewport QA",
+    "keyboard/focus and accessible label QA",
+    "state transition regression tests"
+  ],
+  "rollback": "Keep consumers pinned to productivity 1.0.0; remove only the candidate opt-in."
+}
