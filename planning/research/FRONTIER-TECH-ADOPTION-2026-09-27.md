@@ -41,6 +41,20 @@ Canonical source of truth vẫn là event/contract hiện có. AI, quantum, bloc
 | PQC (ML-KEM/ML-DSA/SLH-DSA) | Bảo vệ transport và manifest dài hạn khi có remote archive/collaboration | **PREPARE SEAM** | Hybrid key envelope; hiện ưu tiên DPAPI/OS keyring + AES-GCM/TLS; không tự hand-roll PQC |
 | C2PA Content Credentials | Provenance source/model/license/consent/human review cho video/audio | **PREPARE NOW ở sidecar** | Receipt ký/hash trước; embed sau khi transcode path ổn định |
 
+## Bridge với theory/method adoption map
+
+Chi tiết giả thuyết, artifact contract và gate của các lý thuyết nằm trong [Theory and method adoption map](./THEORY-AND-METHOD-ADOPTION-2026-09-27.md). Bảng này chỉ giữ routing giữa taxonomy chung và quyết định tích hợp; `ADOPT NOW` luôn có nghĩa là research/offline, không phải production hay live authority.
+
+| Taxonomy chung | Lý thuyết / phương pháp | Vai trò và boundary | Routing |
+|---|---|---|---|
+| Uncertainty | Kalman/state-space, Bayesian updating, Shannon entropy | Filtered state, posterior và uncertainty/abstention; không smoother hoặc future access | **P0 research** |
+| Risk | Ornstein–Uhlenbeck, Prospect Theory | OU chỉ trên spread/residual đã kiểm tra; Prospect là owner utility/risk profile, không cấp lot/order | **P0 research** |
+| Regime | Adaptive Markets, chaos/fractal, SOC/sandpile | Decay/challenger và nonlinear/criticality diagnostics; không gọi Hurst/Lyapunov/power-law là alpha | **P0/P1 diagnostic** |
+| Search | Genetic/evolutionary computation | Candidate generator có purged WFO, PBO/DSR và reality-check; không chọn theo in-sample Sharpe | **P0 research** |
+| Microstructure | Fluid-derived OFI/depth/impact, Game Theory/Nash | Đo flow/impact và adversarial scenarios khi có tick/L2; Nash không phải price predictor | **P0 khi có tick/L2; P1 scenario** |
+| Simulator | ABM, Soros reflexivity | Stress micro→macro, feedback và unseen-agent scenarios; tách simulator hash khỏi real-data evaluation | **P1 sandbox** |
+| Shape | TDA/persistence landscapes | Risk/regime overlay sau benchmark volatility/drawdown và fixed alarm budget | **P2** |
+
 ## Thứ tự triển khai
 
 ### P0 — làm ngay, local/offline
