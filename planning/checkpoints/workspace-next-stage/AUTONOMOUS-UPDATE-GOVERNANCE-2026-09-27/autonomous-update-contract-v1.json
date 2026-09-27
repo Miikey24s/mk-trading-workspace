@@ -1,0 +1,128 @@
+{
+  "schema_version": "autonomous-update-contract-v1",
+  "scope": "PREP_ONLY_OFFLINE",
+  "policy": {
+    "artifact_verification": "signature_and_manifest_required",
+    "signature_algorithms": [
+      "ed25519"
+    ],
+    "allowed_key_ids": [
+      "workspace-release-key-v1"
+    ],
+    "exact_version_pin": true,
+    "immutable_source_commit_required": true,
+    "network_code_execution": false,
+    "allowed_network_hosts": [],
+    "allowed_install_roots": [
+      "releases/"
+    ],
+    "forbidden_operations": [
+      "arbitrary_shell",
+      "package_install",
+      "postinstall_script",
+      "secret_read",
+      "broker_order",
+      "enable_live_mode",
+      "holdout_read",
+      "provider_escalation"
+    ]
+  },
+  "artifact": {
+    "artifact_id": "workspace-engine",
+    "version": "0.1.0-prep.1",
+    "channel": "canary",
+    "source_commit": "0123456789abcdef0123456789abcdef01234567",
+    "created_at": "2026-09-27T00:00:00Z",
+    "expires_at": "2026-10-27T00:00:00Z",
+    "manifest_sha256": "a53bb1391e48f77c072b0842295773b86a5c024be6caf874d0c411ea396d28db",
+    "files": [
+      {
+        "path": "releases/workspace-engine/0.1.0-prep.1/manifest.json",
+        "size": 2048,
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      {
+        "path": "releases/workspace-engine/0.1.0-prep.1/engine.bin",
+        "size": 8192,
+        "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      }
+    ],
+    "signature": {
+      "algorithm": "ed25519",
+      "key_id": "workspace-release-key-v1",
+      "signature_b64": "PREP_ONLY_NO_REAL_SIGNATURE",
+      "signed_fields": [
+        "artifact_id",
+        "version",
+        "channel",
+        "source_commit",
+        "created_at",
+        "expires_at",
+        "files"
+      ],
+      "status": "prep_only_unverified",
+      "verification_method": "external_pinned_trust_store_required"
+    }
+  },
+  "rollout": {
+    "active_slot": "stable",
+    "previous_known_good_slot": "stable",
+    "canary": {
+      "required": true,
+      "cohort_size": 1,
+      "max_duration_seconds": 300,
+      "promote_after_health_checks": 3
+    },
+    "health_checks": [
+      {
+        "id": "manifest_integrity",
+        "check_ref": "builtin://manifest-integrity",
+        "read_only": true,
+        "network": false,
+        "timeout_seconds": 10
+      },
+      {
+        "id": "process_ready",
+        "check_ref": "builtin://process-ready",
+        "read_only": true,
+        "network": false,
+        "timeout_seconds": 30
+      },
+      {
+        "id": "state_round_trip",
+        "check_ref": "builtin://state-round-trip",
+        "read_only": true,
+        "network": false,
+        "timeout_seconds": 30
+      }
+    ],
+    "promotion": {
+      "requires_all_health_checks": true,
+      "requires_exact_manifest_match": true,
+      "atomic_pointer_switch": true,
+      "operator_approval_required_for_live": true
+    },
+    "rollback": {
+      "automatic": true,
+      "target": "previous_known_good",
+      "max_attempts": 1,
+      "preserve_previous": true,
+      "journal_ref": "state/update-journal.jsonl"
+    }
+  },
+  "scheduler": {
+    "mode": "local_only",
+    "schedule_ref": "local://workspace-update-window",
+    "requires_network": false,
+    "lock_ref": "state/update.lock",
+    "max_runtime_seconds": 900,
+    "resume_after_reboot": true,
+    "missed_run": "skip_if_locked_or_expired",
+    "backoff_seconds": [
+      60,
+      300,
+      900
+    ]
+  }
+}
+
