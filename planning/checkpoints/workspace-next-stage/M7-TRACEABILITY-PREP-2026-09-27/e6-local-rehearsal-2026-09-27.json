@@ -347,7 +347,7 @@
         "scope": "Quant Ornstein-Uhlenbeck focused tests",
         "path": "projects/quant-trading/tests/quant_trading/test_ou_process.py",
         "mode": "PREP_ONLY",
-        "validation": "focused OU suite 5 passed; current Quant full 110 passed",
+        "validation": "focused OU suite 6 passed; current Quant full 110 passed",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -382,7 +382,7 @@
         "scope": "VI M5 catalog revision integrity receipt",
         "path": "projects/vi-dubber/work/checkpoints/M5-catalog-revision-integrity-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "20 focused tests; fail-closed revision/tamper/rebuild guards; M5 remains PREP_ONLY",
+        "validation": "22 focused tests; fail-closed revision/tamper/rebuild guards; M5 remains PREP_ONLY",
         "acceptance": "NOT_CLAIMED"
       },
       {
