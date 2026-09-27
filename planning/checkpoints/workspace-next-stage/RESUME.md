@@ -1,5 +1,15 @@
 # Workspace next stage — execution resume
 
+## Refresh execution 2026-09-28
+
+- **Current routing snapshot (docs/evidence only):** root `1820ac1` with environment audit **OK**; MT5 `4876dbf`; VI latest `f76b3ec` (M6 capability `8dff27e`, M5 connection/recovery `d86d965`/`4896e75`, P13 chunking `9a15bfa`); Quant `c4265d9` (**132 passed**); TradingAgents `f3b357f` (owner-reported **952 tests**).
+- **Shared UI:** `annam-productivity@1.1.0` has a complete snapshot/hash receipt, but remains `PREP_ONLY_CANDIDATE`; no consumer migration or runtime release is claimed.
+- **Job12:** same retained PID chain, `run.lock` PID `27804`, currently `running/pending`; state/events/metrics: `projects/vi-dubber/work/job-8dc51f8a892aba21/{state.json,events.jsonl,metrics.json}`; detached stdout/stderr: `projects/vi-dubber/work/logs/job12-resume-20260928-chunked.{stdout,stderr}.log`. Preserve the job and do not start a duplicate worker; no whole-pipeline acceptance is claimed.
+- **Gates:** M5, M6 and M7 remain `PREP_ONLY`; M6 capability and M5 recovery receipts are software-only/offline evidence.
+
+**Historical-baseline note:** all baseline/HEAD descriptions below are retained as historical receipts. This refresh does not rewrite WIP, replace domain ledgers, or convert a pending/deferred gate into acceptance.
+
+
 **Run started:** 2026-09-26 · coordinator: GPT-6 Astra runtime (`ch/linxaq`) · source plan: `planning/WORKSPACE-NEXT-STAGE-PLAN.md` v1.3.
 
 **Status:** M0 MT5 ACCEPTED / VI PARTIAL · M1 CONTRACT FREEZE COMPLETE · **M2 UI SKELETON COMPLETE / FIGMA MAKE QA COMPLETE (owner approved lan4)** · **M3 PRODUCT INTEGRATION COMPLETE / ACCEPTED-SCOPED** · **M4 SHARED RELEASE COMPLETE / ACCEPTED-SCOPED** · M5–M7 NOT ACCEPTED.

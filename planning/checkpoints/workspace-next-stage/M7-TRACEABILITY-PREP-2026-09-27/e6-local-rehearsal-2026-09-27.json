@@ -3,42 +3,42 @@
   "status": "PREP_ONLY",
   "scope": "Local fixture/hash/recovery/no-duplicate rehearsal only; no external/OAuth/live/provider/broker/DB service",
   "generated_at": "2026-09-28",
-  "authority": "M7 packet only; current refs are on-disk snapshot metadata; authority/manifest baseline remains frozen at 45eb6dd; no RESUME/STATE/ledger mutation",
+  "authority": "M7 packet only; current refs are on-disk snapshot metadata; authority/manifest baseline remains frozen at 45eb6dd; Refresh execution 2026-09-28 is routing/evidence only; no product acceptance or ledger mutation",
   "fresh_root": {
     "plan_path": "planning/WORKSPACE-NEXT-STAGE-PLAN.md",
     "resume_path": "planning/checkpoints/workspace-next-stage/RESUME.md",
     "plan_present": true,
     "resume_present": true,
     "plan_sha256": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
-    "resume_sha256_current": "519b0397a34dea63d7e1aa6884adafdc9f45a5e9c9a5fa56bcbee3fcf681af5b",
+    "resume_sha256_current": "339e056d641dc6efe38d50de24c81474f3f3f21bacaa5651a2785aa2adda1a55",
     "repo_snapshots": [
       {
         "scope": "workspace",
         "branch": "main",
-        "head": "23275520297fd7c626f55065b11f7c30730d59b6",
-        "dirty_count": 71,
-        "dirty_preview": " M planning/mt5-tradingview-backtester/POST-COMPLETION-ROADMAP-DRAFT.md;   M planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/RESUME.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json.sha256;   M planning/ui-platform/MASTER-UI-PLATFORM-PLAN.md;   M projects/TradingAgents"
+        "head": "1820ac197b23dda2df42db5614fc221958426829",
+        "dirty_count": 73,
+        "dirty_preview": " M planning/CURRENT-CONTEXT.md;   M planning/checkpoints/workspace-next-stage/RESUME.md;   M planning/mt5-tradingview-backtester/POST-COMPLETION-ROADMAP-DRAFT.md;   M planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/RESUME.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json.sha256;   M planning/ui-platform/MASTER-UI-PLATFORM-PLAN.md"
       },
       {
         "scope": "mt5",
         "branch": "Nam",
-        "head": "a2d8fd3209de3b4384031e7840cdbcec0d911974",
+        "head": "4876dbf0f139005a467be3cee6101b13b7efcf83",
         "dirty_count": 13,
         "dirty_preview": " M ai_service.py;   M foundation_v2/evidence/replay-ui-1440.png;   M foundation_v2/evidence/replay-ui-360.png;   M foundation_v2/evidence/replay-ui-768.png;   M tests/test_ai_foundation.py;  ?? foundation_v2/evidence/U5-protective-validation-r4.json;  ?? foundation_v2/evidence/U5-protective-validation-r5.json;  ?? foundation_v2/evidence/ps02-lifecycle-wip-r2/"
       },
       {
         "scope": "vi",
         "branch": "main",
-        "head": "9a15bfaaac19a722f6cd2dc3b1050b2cb5cb7ccf",
+        "head": "f76b3ecbd8bd4949021ba1951ecb2a01d27729be",
         "dirty_count": 2,
         "dirty_preview": "?? work/checkpoints/P23-real-media-final-assembly-6h-2026-09-26.json;  ?? work/checkpoints/P23-real-media-process-gpu-smoke-2026-09-26.json"
       },
       {
         "scope": "quant",
         "branch": "master",
-        "head": "c373333f7648c04d4f406f486cee9115145901a1",
-        "dirty_count": 0,
-        "dirty_preview": ""
+        "head": "c4265d977cce74ed7a545f29d457b5870eb46118",
+        "dirty_count": 1,
+        "dirty_preview": "?? uv.lock"
       },
       {
         "scope": "tradingagents",
@@ -49,7 +49,7 @@
       }
     ],
     "authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
-    "current_context_sha256": "13ba21689a3a6adc37487822d8d157719be77402696d8f4c030b86687d703297",
+    "current_context_sha256": "158d97cbf4222e48e4a19c2b982f9ffaaf5eab742a817985119a908bda7287d6",
     "research_root_commit": "a30c5e19a037dce29521a8565343dfa77f7b8b2c",
     "mt5_stress_commit": "56333618d437e9032558be2b54a4baa1803410da",
     "mt5_renderer_commit": "3c55c1288b63ebd7902753a7e3fc40b6171f9fcc",
@@ -151,84 +151,84 @@
         "scope": "Quant event-kernel/onchain P0 pilot",
         "path": "projects/quant-trading/docs/research/event-kernel-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 6; current Quant full 122 passed (pilot receipt records prior 46); ruff/compileall/diff pass; no network/execution",
+        "validation": "focused 6; current Quant full 132 passed (pilot receipt records prior 46); ruff/compileall/diff pass; no network/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant discrete optimizer P0 pilot",
         "path": "projects/quant-trading/docs/research/discrete-optimizer-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 4; current Quant full 122 passed; ruff/compileall/diff pass; no edge/production claim",
+        "validation": "focused 4; current Quant full 132 passed; ruff/compileall/diff pass; no edge/production claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant theory hypothesis receipt contract",
         "path": "projects/quant-trading/src/quant_trading/theory_receipts.py",
         "mode": "PREP_ONLY",
-        "validation": "focused 10; current Quant full 122 passed; deterministic hash/cutoff/deny-only contract; no provider/broker/execution",
+        "validation": "focused 10; current Quant full 132 passed; deterministic hash/cutoff/deny-only contract; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant theory hypothesis receipt tests",
         "path": "projects/quant-trading/tests/test_theory_receipts.py",
         "mode": "PREP_ONLY",
-        "validation": "focused 10; current Quant full 122 passed; tamper, finite-number, causal cutoff and execution-deny tests",
+        "validation": "focused 10; current Quant full 132 passed; tamper, finite-number, causal cutoff and execution-deny tests",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant causal state primitives pilot",
         "path": "projects/quant-trading/docs/research/state-primitives-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "focused 6; current Quant full 122 passed; causal Kalman/entropy/Beta primitives; no alpha/execution claim",
+        "validation": "focused 6; current Quant full 132 passed; causal Kalman/entropy/Beta primitives; no alpha/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant conformal interval pilot receipt",
         "path": "projects/quant-trading/docs/research/conformal-interval-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 9; current Quant full 122 passed; split-conformal causal cutoff receipt; no edge/execution claim",
+        "validation": "focused 9; current Quant full 132 passed; split-conformal causal cutoff receipt; no edge/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant conformal interval pilot narrative",
         "path": "projects/quant-trading/docs/research/conformal-interval-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "offline split-conformal interval pilot; focused 9; current Quant full 122 passed; no provider/broker/execution",
+        "validation": "offline split-conformal interval pilot; focused 9; current Quant full 132 passed; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant robust risk metrics pilot receipt",
         "path": "projects/quant-trading/docs/research/risk-metrics-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "current focused 14 passed (receipt records prior 13); current Quant full 122 passed; finite extreme-tail handling; no alpha/execution claim",
+        "validation": "current focused 14 passed (receipt records prior 13); current Quant full 132 passed; finite extreme-tail handling; no alpha/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant robust risk metrics pilot narrative",
         "path": "projects/quant-trading/docs/research/risk-metrics-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "offline lower-tail expected-shortfall/Sortino metrics; focused 14 passed (receipt records prior 13); current Quant full 122 passed; no provider/broker/execution",
+        "validation": "offline lower-tail expected-shortfall/Sortino metrics; focused 14 passed (receipt records prior 13); current Quant full 132 passed; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant CUSUM change-detection pilot receipt",
         "path": "projects/quant-trading/docs/research/cusum-change-detection-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 15 passed; current Quant full 122 passed; forward-only causal cutoff and diagnostic-only receipt; no signal/execution claim",
+        "validation": "focused 15 passed; current Quant full 132 passed; forward-only causal cutoff and diagnostic-only receipt; no signal/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant CUSUM change-detection pilot narrative",
         "path": "projects/quant-trading/docs/research/cusum-change-detection-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "offline two-sided CUSUM diagnostic; focused 15 passed; current Quant full 122 passed; no provider/broker/execution",
+        "validation": "offline two-sided CUSUM diagnostic; focused 15 passed; current Quant full 132 passed; no provider/broker/execution",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "VI job12 retained real-media checkpoint",
         "path": "projects/vi-dubber/work/checkpoints/P23-real-media-12h-resumable-job-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "retained source/extract hashes and supported resume path; resumed after 9a15bfa; running separation chunk-00000 at displayed 9%; prior OOM remains a known gap; no whole-pipeline acceptance",
+        "validation": "retained source/extract hashes and supported resume path; same PID chain running/pending at separation chunk-0011/29 displayed 11%; prior OOM remains a known gap; no whole-pipeline acceptance",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -326,7 +326,7 @@
         "scope": "Quant Ornstein-Uhlenbeck pilot receipt",
         "path": "projects/quant-trading/docs/research/ou-process-pilot-r1-2026-09-27.json",
         "mode": "PREP_ONLY",
-        "validation": "focused 5 passed; current Quant full 122 passed; stationarity/cutoff guards; PREP_ONLY, no alpha/execution claim",
+        "validation": "focused 5 passed; current Quant full 132 passed; stationarity/cutoff guards; PREP_ONLY, no alpha/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -340,21 +340,21 @@
         "scope": "Quant Ornstein-Uhlenbeck source",
         "path": "projects/quant-trading/src/quant_trading/ou_process.py",
         "mode": "PREP_ONLY",
-        "validation": "223eeca exposes stationarity diagnostics; causal offline primitive only; current Quant full 122 passed",
+        "validation": "223eeca exposes stationarity diagnostics; causal offline primitive only; current Quant full 132 passed",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant Ornstein-Uhlenbeck focused tests",
         "path": "projects/quant-trading/tests/quant_trading/test_ou_process.py",
         "mode": "PREP_ONLY",
-        "validation": "focused OU suite 6 passed; current Quant full 122 passed",
+        "validation": "focused OU suite 6 passed; current Quant full 132 passed",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "Quant permutation entropy pilot narrative",
         "path": "projects/quant-trading/docs/research/permutation-entropy-pilot-r1-2026-09-27.md",
         "mode": "PREP_ONLY",
-        "validation": "offline ordinal-complexity diagnostic; focused state-primitives command; current Quant full 122 passed; no signal/execution claim",
+        "validation": "offline ordinal-complexity diagnostic; focused state-primitives command; current Quant full 132 passed; no signal/execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -368,7 +368,7 @@
         "scope": "Quant state primitives focused tests",
         "path": "projects/quant-trading/tests/quant_trading/test_state_primitives.py",
         "mode": "PREP_ONLY",
-        "validation": "focused permutation-entropy/state primitive coverage; current Quant full 122 passed; no alpha claim",
+        "validation": "focused permutation-entropy/state primitive coverage; current Quant full 132 passed; no alpha claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -389,14 +389,14 @@
         "scope": "VI catalog store source",
         "path": "projects/vi-dubber/src/vi_dubber/catalog_store.py",
         "mode": "PREP_ONLY",
-        "validation": "Catalog revision, user-state and bounded file-backup integrity implementation; latest file-backup suite 24 passed; no media/provider acceptance",
+        "validation": "d86d965/4896e75 recovery-safe connection lifetime and bounded catalog recovery; M5 focused recovery 25 passed; M5 remains PREP_ONLY",
         "acceptance": "NOT_CLAIMED"
       },
       {
         "scope": "VI catalog store focused tests",
         "path": "projects/vi-dubber/tests/test_catalog_store.py",
         "mode": "PREP_ONLY",
-        "validation": "Catalog transaction/revision/file-backup/restore coverage; latest focused suite 24 passed; M5 not accepted",
+        "validation": "catalog transaction/revision/file-backup/restore coverage plus recovery path; M5 focused recovery 25 passed; M5 not accepted",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -410,7 +410,7 @@
         "scope": "TradingAgents route-fingerprint README",
         "path": "projects/TradingAgents/README.md",
         "mode": "PREP_ONLY",
-        "validation": "f3b357f checkpoint route-fingerprint hardening; owner full suite 952 passed; no provider/live claim",
+        "validation": "f3b357f checkpoint route-fingerprint plus safe provenance; owner full suite 952 passed; no provider/live claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -550,7 +550,7 @@
         "scope": "Quant causal effect research gate",
         "path": "projects/quant-trading/docs/research/causal-effect-diagnostic-r1-2026-09-28.md",
         "mode": "PREP_ONLY",
-        "validation": "c373333 research-only gate; implementation pending treatment/outcome fixture; no ATE result, provider, broker or execution claim",
+        "validation": "c4265d9 causal-effect pilot narrative; synthetic mechanics only; no market edge, provider, broker or execution claim",
         "acceptance": "NOT_CLAIMED"
       },
       {
@@ -580,6 +580,188 @@
         "mode": "PREP_ONLY",
         "validation": "f3b357f provenance tamper/cutoff/deny-only coverage; owner full suite 952 passed; no provider/live execution",
         "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Root shared UI presentation-state receipt",
+        "path": "planning/checkpoints/workspace-next-stage/UI-ECOSYSTEM-PRESENTATION-STATE-2026-09-28/receipt.json",
+        "mode": "PREP_ONLY",
+        "validation": "1820ac1; complete candidate snapshot/hash receipt; PREP_ONLY_CANDIDATE; no consumer migration",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Root shared UI presentation-state narrative",
+        "path": "planning/checkpoints/workspace-next-stage/UI-ECOSYSTEM-PRESENTATION-STATE-2026-09-28/RECEIPT.md",
+        "mode": "PREP_ONLY",
+        "validation": "681ffc5/92311f4/1820ac1; complete 1.1.0 candidate and promotion/rollback gates; no runtime release",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Shared UI presentation-state contract",
+        "path": "D:/ANNAM/UI-Systems/core/contracts/presentation-state/1.0.0/CONTRACT.md",
+        "mode": "PREP_ONLY",
+        "validation": "receipt source hash pinned; contract behavior PASS; external UI source, no consumer acceptance",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Shared UI presentation-state schema",
+        "path": "D:/ANNAM/UI-Systems/core/contracts/presentation-state/1.0.0/schema.json",
+        "mode": "PREP_ONLY",
+        "validation": "receipt source hash pinned; JSON/schema behavior checked with stdlib rules; no consumer acceptance",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Shared UI productivity 1.1.0 light tokens",
+        "path": "D:/ANNAM/UI-Systems/core/tokens/productivity/1.1.0/light.tokens.json",
+        "mode": "PREP_ONLY",
+        "validation": "receipt source hash pinned; token completeness/contrast PASS; candidate only",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Shared UI productivity 1.1.0 dark tokens",
+        "path": "D:/ANNAM/UI-Systems/core/tokens/productivity/1.1.0/dark.tokens.json",
+        "mode": "PREP_ONLY",
+        "validation": "receipt source hash pinned; token completeness/contrast PASS; candidate only",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Shared UI productivity 1.1.0 manifest",
+        "path": "D:/ANNAM/UI-Systems/core/tokens/productivity/1.1.0/manifest.json",
+        "mode": "PREP_ONLY",
+        "validation": "complete snapshot manifest; retains 1.0.0 variables/button contract; migration not claimed",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Shared UI productivity 1.1.0 CSS snapshot",
+        "path": "D:/ANNAM/UI-Systems/core/tokens/productivity/1.1.0/ui-system.snapshot.css",
+        "mode": "PREP_ONLY",
+        "validation": "deterministic CSS export and compatibility PASS; candidate only",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 Learn unavailable-state receipt",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/learn-ui-state-distinction-r1-2026-09-28.json",
+        "mode": "PREP_ONLY",
+        "validation": "4876dbf; focused test/build/diff PASS; unavailable remains distinct from empty; PREP_ONLY",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 Learn unavailable-state narrative",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/learn-ui-state-distinction-r1-2026-09-28.md",
+        "mode": "PREP_ONLY",
+        "validation": "57631b5 consumer change; focused Learn UI and build PASS; no whole-product/provider/broker claim",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 Learn workspace unavailable-state source",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/web/src/LearnWorkspace.jsx",
+        "mode": "PREP_ONLY",
+        "validation": "57631b5 source; unavailable/empty state distinction; no provider/broker/execution capability",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 Learn workspace state styles",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/web/src/styles.css",
+        "mode": "PREP_ONLY",
+        "validation": "57631b5 source; unavailable visual state remains labelled; UI integration PREP_ONLY",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "MT5 Learn UI acceptance runner",
+        "path": "projects/mt5-tradingview-backtester/foundation_v2/web/run_learn_ui_acceptance.mjs",
+        "mode": "PREP_ONLY",
+        "validation": "57631b5 runner; focused test/build receipt; no external network or provider",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M6 integration capability benchmark",
+        "path": "projects/vi-dubber/scripts/benchmark_m6_integration_contract.py",
+        "mode": "PREP_ONLY",
+        "validation": "8dff27e/f76b3ec; exact active capability epoch boundary, 27 focused tests; offline PREP_ONLY",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M6 integration capability fixture",
+        "path": "projects/vi-dubber/tests/fixtures/m6_integration_contract.json",
+        "mode": "PREP_ONLY",
+        "validation": "8dff27e; URI/identity/destination/capability/revoke/reconcile fixtures; no external I/O",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M6 integration capability tests",
+        "path": "projects/vi-dubber/tests/test_m6_integration_contract.py",
+        "mode": "PREP_ONLY",
+        "validation": "8dff27e; M6 contract hardening coverage; no OAuth/account/cloud/broker execution",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M6 integration capability receipt",
+        "path": "projects/vi-dubber/work/checkpoints/M6-integration-contract-prep-2026-09-27.json",
+        "mode": "PREP_ONLY",
+        "validation": "8dff27e; hardening receipt 27 focused tests; exact active epoch only; PREP_ONLY",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M6 integration capability narrative",
+        "path": "projects/vi-dubber/work/checkpoints/M6-integration-contract-prep-2026-09-27.md",
+        "mode": "PREP_ONLY",
+        "validation": "f76b3ec; clarifies active epoch boundary and revoke fencing; no monotonic-persistence or connector claim",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M5 catalog recovery verifier",
+        "path": "projects/vi-dubber/scripts/verify_m5_catalog_recovery.py",
+        "mode": "PREP_ONLY",
+        "validation": "4896e75; startup/restart/backup/restore synthetic rehearsal; 25 focused tests; PREP_ONLY",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M5 catalog recovery tests",
+        "path": "projects/vi-dubber/tests/test_m5_catalog_recovery.py",
+        "mode": "PREP_ONLY",
+        "validation": "4896e75; handle-close/restart/lineage invalidation coverage; 25 focused tests; no product acceptance",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M5 catalog startup recovery receipt",
+        "path": "projects/vi-dubber/work/checkpoints/M5-catalog-startup-recovery-receipt-2026-09-28.json",
+        "mode": "PREP_ONLY",
+        "validation": "4896e75; synthetic metadata-only recovery, backup round-trip and lineage invalidation; PREP_ONLY",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "VI M5 catalog startup recovery narrative",
+        "path": "projects/vi-dubber/work/checkpoints/M5-catalog-startup-recovery-2026-09-28.md",
+        "mode": "PREP_ONLY",
+        "validation": "4896e75/d86d965; Windows-safe SQLite handle close; 25 focused tests; no Job12/provider/UI acceptance",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant causal effect pilot receipt",
+        "path": "projects/quant-trading/docs/research/causal-effect-pilot-r1-2026-09-28.json",
+        "mode": "PREP_ONLY",
+        "validation": "c4265d9; synthetic mechanics receipt, market_edge_claim=false, execution/provider/broker false; PREP_ONLY",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant causal effect pilot source",
+        "path": "projects/quant-trading/src/quant_trading/causal_effects.py",
+        "mode": "PREP_ONLY",
+        "validation": "c4265d9; bounded temporal AIPW diagnostic; focused 10 passed; no market signal or execution",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Quant causal effect pilot tests",
+        "path": "projects/quant-trading/tests/quant_trading/test_causal_effects.py",
+        "mode": "PREP_ONLY",
+        "validation": "c4265d9; focused 10 passed; PIT/cutoff/finite/deny-only guards",
+        "acceptance": "NOT_CLAIMED"
+      },
+      {
+        "scope": "Workspace current-context refresh",
+        "path": "planning/CURRENT-CONTEXT.md",
+        "mode": "PREP_ONLY",
+        "validation": "Refresh execution 2026-09-28; current routing/status only; historical baseline below preserved",
+        "acceptance": "NOT_CLAIMED"
       }
     ],
     "mt5_dst_policy_commit": "125dbdd711da7d1561f19d4355c2f719e1faa4ef",
@@ -593,8 +775,8 @@
     "quant_event_kernel_commit": "9f61de70d6f3fb2aacb63989a930c7ab07e32448",
     "quant_optimizer_commit": "7f2cedb17e3eb04e1b1fa708469d5c38b8955ea2",
     "quant_optimizer_hardening_commit": "e82c7cf",
-    "quant_receipt_commit": "c373333f7648c04d4f406f486cee9115145901a1",
-    "quant_current_full_test_count": 122,
+    "quant_receipt_commit": "c4265d977cce74ed7a545f29d457b5870eb46118",
+    "quant_current_full_test_count": 132,
     "quant_theory_receipt_commit": "b67f398c8d6a88617f2f3bc23c3fa7ab3bb410a4",
     "quant_state_primitives_commit": "ec6e7f24f151e126618bda86b76a49668399cf21",
     "quant_conformal_commit": "ce225a5f0ceacdf25226bbc2519191c813b58dc9",
@@ -604,7 +786,7 @@
     "quant_extreme_risk_test_commit": "2c07795",
     "vi_flac_hardening_commit": "9a15bfaaac19a722f6cd2dc3b1050b2cb5cb7ccf",
     "vi_hardening_focused_test_count": 44,
-    "vi_job12_status": "running / pending after 9a15bfa chunk-fix resume; separation chunk-00000 at displayed 9%; prior attempt failed at separation 8% with a 32.9 GB allocation OOM; whole-pipeline acceptance not claimed",
+    "vi_job12_status": "running / pending; same retained PID chain (run.lock PID 27804); separation chunk-0011 of 29 / displayed 11%; no final output; whole-pipeline acceptance not claimed",
     "mt5_mql_parity_commit": "e1377eee561a500ad6858ca195519da1f8723e4a",
     "mt5_renderer_metadata_commit": "79cc8beba1779998e64a613c7010067753b3ccc2",
     "mt5_zone_lifecycle_commit": "a2d8fd3209de3b4384031e7840cdbcec0d911974",
@@ -622,7 +804,7 @@
     "quant_ou_diagnostics_commit": "223eeca67c5a5704de494fd9831d7d962c77417e",
     "quant_full_validation": {
       "command": "uv run pytest -q",
-      "result": "122 passed in 6.77s (validated at e70440d; c373333 docs-only follow-up)",
+      "result": "132 passed in 7.21s",
       "external_side_effects": "none",
       "passed": true
     },
@@ -653,10 +835,59 @@
     "vi_chunking_fault_audio_longform_test_count": 58,
     "quant_bocpd_commit": "16a6ce9f717e8bb5732c4432daaae866ae23c2b2",
     "quant_bocpd_focused_test_count": 12,
-    "quant_causal_effect_commit": "c373333f7648c04d4f406f486cee9115145901a1",
+    "quant_causal_effect_commit": "c4265d977cce74ed7a545f29d457b5870eb46118",
     "tradingagents_provenance_commit": "f3b357f945b253fffbcf66f9a219c7ffc264da85",
-    "current_workspace_commit": "23275520297fd7c626f55065b11f7c30730d59b6",
-    "frozen_authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
+    "current_workspace_commit": "1820ac197b23dda2df42db5614fc221958426829",
+    "frozen_authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
+    "shared_ui_presentation_state_commit": "681ffc59658b71fa812b657377022011a2e01a38",
+    "shared_ui_complete_token_snapshot_commit": "92311f4dc6163760c342df81933b8da3a5a7490c",
+    "shared_ui_presentation_receipt_commit": "1820ac197b23dda2df42db5614fc221958426829",
+    "shared_ui_candidate_version": "1.1.0",
+    "shared_ui_source_sha256": "cd08c95b362eae674743b7a97785909e6159444d18ae54554555de2713f7459a",
+    "shared_ui_complete_snapshot": true,
+    "shared_ui_consumer_migration": false,
+    "shared_ui_status": "PREP_ONLY_CANDIDATE",
+    "mt5_ui_unavailable_receipt_commit": "4876dbf0f139005a467be3cee6101b13b7efcf83",
+    "mt5_learn_ui_commit": "57631b56d891787e41fb9aadbbfdfe6705d12bb9",
+    "mt5_ui_unavailable_receipt_path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/learn-ui-state-distinction-r1-2026-09-28.json",
+    "vi_m6_capability_commit": "8dff27e4b159ac300c7b0ae0f7ba152a1df643e1",
+    "vi_m6_epoch_boundary_docs_commit": "f76b3ecbd8bd4949021ba1951ecb2a01d27729be",
+    "vi_m6_focused_test_count": 27,
+    "vi_m5_catalog_connection_context_commit": "d86d96551faf2ca6adbc87ebd282542f38137837",
+    "vi_m5_catalog_recovery_commit": "4896e75c7837cc9988dfdcbbb6ff34a6ef379309",
+    "vi_m5_catalog_recovery_focused_test_count": 25,
+    "vi_m5_catalog_recovery_validation": {
+      "command": "uv run pytest -q tests/test_m5_catalog_recovery.py tests/test_catalog_projection.py tests/test_catalog_store.py tests/test_m5_catalog_contract.py tests/test_m5_e3_benchmark.py",
+      "result": "25 passed",
+      "compileall": "PASS",
+      "git_diff_check": "PASS",
+      "external_side_effects": "none",
+      "passed": true
+    },
+    "quant_causal_effect_pilot_commit": "c4265d977cce74ed7a545f29d457b5870eb46118",
+    "quant_causal_effect_focused_test_count": 10,
+    "quant_causal_effect_status": "synthetic_mechanics_verified; market_edge_claim=false; PREP_ONLY",
+    "vi_job12_pid": 27804,
+    "vi_job12_log_paths": [
+      "projects/vi-dubber/work/job-8dc51f8a892aba21/state.json",
+      "projects/vi-dubber/work/job-8dc51f8a892aba21/events.jsonl",
+      "projects/vi-dubber/work/job-8dc51f8a892aba21/metrics.json",
+      "projects/vi-dubber/work/logs/job12-resume-20260928-chunked.stdout.log",
+      "projects/vi-dubber/work/logs/job12-resume-20260928-chunked.stderr.log"
+    ],
+    "vi_job12_observation": {
+      "status": "running",
+      "stage": "separation",
+      "progress_display": "11%",
+      "completed_chunks": 11,
+      "current_chunk": "chunk_0011",
+      "total_chunks": 29,
+      "pid": 27804,
+      "source": "projects/vi-dubber/work/job-8dc51f8a892aba21/state.json and run.lock",
+      "acceptance": "NOT_CLAIMED",
+      "progress_fraction": 0.10938227241615332,
+      "observed_at": "2026-09-28"
+    }
   },
   "checks": {
     "recovery_dependencies": [
@@ -700,7 +931,7 @@
     "archive_hash_stable": true,
     "no_external_operations": true,
     "chart_evidence_refs_present": true,
-    "path_manifest_reference_count": 99,
+    "path_manifest_reference_count": 125,
     "chart_followup_refs_present": true,
     "theory_p0_receipt_refs_present": true,
     "vi_flac_hardening_ref_present": true,
@@ -711,7 +942,7 @@
     "vi_ui_validation_ref_present": true,
     "tradingagents_route_ref_present": true,
     "tradingagents_full_test_count": 952,
-    "quant_full_test_count": 122,
+    "quant_full_test_count": 132,
     "latest_nested_heads_recorded": true,
     "research_root_commit_tracked": true,
     "quant_full_validation_recorded": true,
@@ -724,13 +955,24 @@
     "vi_job12_resume_truthful": true,
     "quant_bocpd_refs_present": true,
     "quant_causal_effect_ref_present": true,
-    "tradingagents_provenance_ref_present": true
+    "tradingagents_provenance_ref_present": true,
+    "shared_ui_receipt_refs_present": true,
+    "shared_ui_complete_snapshot_verified": true,
+    "mt5_unavailable_ui_refs_present": true,
+    "vi_m6_capability_refs_present": true,
+    "vi_m5_recovery_refs_present": true,
+    "vi_m5_recovery_focused_test_count": 25,
+    "vi_m6_focused_test_count": 27,
+    "quant_causal_effect_pilot_refs_present": true,
+    "quant_causal_effect_focused_test_count": 10,
+    "context_refresh_recorded": true,
+    "job12_live_status_observed": true
   },
   "interpretation": {
     "recovery_rehearsal": "PASS_LOCAL_FIXTURE",
     "no_duplicate_semantics": "PASS_VI_TARGETED_TESTS_PLUS_MT5_RECEIPT_CONSISTENCY",
     "archive_hash": "PASS_FINAL_AUTHORITY_SNAPSHOT",
     "m7_acceptance": "NOT_CLAIMED",
-    "next_safe_action": "Do not duplicate or restart Job12 while the chunked resume is running; keep M7 PREP_ONLY and reconcile the pending long-media result before any acceptance decision."
+    "next_safe_action": "Keep M5/M6/M7 and shared UI candidate PREP_ONLY; do not duplicate Job12 while the retained PID chain is running; reconcile M5/M6/UI/causal promotion gates and the pending long-media result before any acceptance decision."
   }
 }

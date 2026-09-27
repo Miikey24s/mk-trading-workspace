@@ -16,8 +16,8 @@
       "path": "planning/checkpoints/workspace-next-stage/RESUME.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\RESUME.md",
       "exists": true,
-      "sha256": "519b0397a34dea63d7e1aa6884adafdc9f45a5e9c9a5fa56bcbee3fcf681af5b",
-      "bytes": 22419
+      "sha256": "339e056d641dc6efe38d50de24c81474f3f3f21bacaa5651a2785aa2adda1a55",
+      "bytes": 23692
     },
     {
       "path": "planning/checkpoints/workspace-next-stage/M3-M4-SHARED-UI-2026-09-26/CLOSEOUT.md",
@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "b9824271d7e0029c658dad6a0248a715eec97eacc778bf0d09392c3bc860ab7a",
-      "bytes": 38601
+      "sha256": "ea46994dad7102c2a73f3104c5b17b63ce04d21d7b609022042223e96018df14",
+      "bytes": 51191
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -506,8 +506,8 @@
       "path": "projects/vi-dubber/src/vi_dubber/catalog_store.py",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\src\\vi_dubber\\catalog_store.py",
       "exists": true,
-      "sha256": "3cfa7a4c9c6471f946ebe4cec7351b27bc2b1d288e12603185cebcd81be60fcd",
-      "bytes": 34016
+      "sha256": "b36226f4b639ab98439922d4f9779f3af5d134d4af77528e767d55c047805b85",
+      "bytes": 35080
     },
     {
       "path": "projects/vi-dubber/tests/test_catalog_store.py",
@@ -667,8 +667,8 @@
       "path": "projects/quant-trading/docs/research/causal-effect-diagnostic-r1-2026-09-28.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\causal-effect-diagnostic-r1-2026-09-28.md",
       "exists": true,
-      "sha256": "a1c50b2204f07bdc3c72fcad1ab3c624563a609ae991430f05ce1c5d594d7499",
-      "bytes": 5311
+      "sha256": "dff6bfe91ebc02b14e59f1984bff96cefd40b7bfcdb5e20fe43daf1d66513c98",
+      "bytes": 6119
     },
     {
       "path": "projects/TradingAgents/tradingagents/reporting.py",
@@ -697,9 +697,191 @@
       "exists": true,
       "sha256": "cdcefe0dda7afb5822595eba56eaa72a7221ce4e023c46043950cb605c143600",
       "bytes": 1381
+    },
+    {
+      "path": "planning/checkpoints/workspace-next-stage/UI-ECOSYSTEM-PRESENTATION-STATE-2026-09-28/receipt.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\UI-ECOSYSTEM-PRESENTATION-STATE-2026-09-28\\receipt.json",
+      "exists": true,
+      "sha256": "eb748573a66bece2d6a5784ab2d30a1aa3677f46b563a4187e9577cdd1205ddb",
+      "bytes": 2289
+    },
+    {
+      "path": "planning/checkpoints/workspace-next-stage/UI-ECOSYSTEM-PRESENTATION-STATE-2026-09-28/RECEIPT.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\UI-ECOSYSTEM-PRESENTATION-STATE-2026-09-28\\RECEIPT.md",
+      "exists": true,
+      "sha256": "18c33d63d51896ba44d79b175d248a801e9f7093f68d14ccbbdbe2ced1158516",
+      "bytes": 3830
+    },
+    {
+      "path": "D:/ANNAM/UI-Systems/core/contracts/presentation-state/1.0.0/CONTRACT.md",
+      "absolute_path": "D:\\ANNAM\\UI-Systems\\core\\contracts\\presentation-state\\1.0.0\\CONTRACT.md",
+      "exists": true,
+      "sha256": "35114a8cddfa83dbdf1105d904a8e872b25c2d654fac4ae163d0f90f71c5a864",
+      "bytes": 3276
+    },
+    {
+      "path": "D:/ANNAM/UI-Systems/core/contracts/presentation-state/1.0.0/schema.json",
+      "absolute_path": "D:\\ANNAM\\UI-Systems\\core\\contracts\\presentation-state\\1.0.0\\schema.json",
+      "exists": true,
+      "sha256": "a479b94111be644d3c51de68fff2901560e0ba2d5c41a420f25232e250e08119",
+      "bytes": 1763
+    },
+    {
+      "path": "D:/ANNAM/UI-Systems/core/tokens/productivity/1.1.0/light.tokens.json",
+      "absolute_path": "D:\\ANNAM\\UI-Systems\\core\\tokens\\productivity\\1.1.0\\light.tokens.json",
+      "exists": true,
+      "sha256": "d602cbd96e295fc3292fd7246d274b27b4b1e580f14b97ffa14e0ccc780f54d6",
+      "bytes": 1517
+    },
+    {
+      "path": "D:/ANNAM/UI-Systems/core/tokens/productivity/1.1.0/dark.tokens.json",
+      "absolute_path": "D:\\ANNAM\\UI-Systems\\core\\tokens\\productivity\\1.1.0\\dark.tokens.json",
+      "exists": true,
+      "sha256": "444a11bbe74f21e8997bfd21f100b8ce8165c23233af07e9119f161d0ad83098",
+      "bytes": 1517
+    },
+    {
+      "path": "D:/ANNAM/UI-Systems/core/tokens/productivity/1.1.0/manifest.json",
+      "absolute_path": "D:\\ANNAM\\UI-Systems\\core\\tokens\\productivity\\1.1.0\\manifest.json",
+      "exists": true,
+      "sha256": "ace7ddc864eb1e5c38dd407364bd6601fa14f36eaa3396f308922be2dc87e915",
+      "bytes": 2335
+    },
+    {
+      "path": "D:/ANNAM/UI-Systems/core/tokens/productivity/1.1.0/ui-system.snapshot.css",
+      "absolute_path": "D:\\ANNAM\\UI-Systems\\core\\tokens\\productivity\\1.1.0\\ui-system.snapshot.css",
+      "exists": true,
+      "sha256": "3ed7871cc7ae5698664550d9b0e709bd0a7762dc2e51bebc5ba1430060364cfa",
+      "bytes": 2583
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/learn-ui-state-distinction-r1-2026-09-28.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\learn-ui-state-distinction-r1-2026-09-28.json",
+      "exists": true,
+      "sha256": "7e906ccf6d94da23924c9eedccf6ff5d9f3c02bfaf8b6390b1aaaa52781ee45a",
+      "bytes": 1027
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/learn-ui-state-distinction-r1-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\evidence\\learn-ui-state-distinction-r1-2026-09-28.md",
+      "exists": true,
+      "sha256": "f536b0c438aabdc03d3bc85bf02a201b9f3a79b980f7a3f991a2cd618e9f2610",
+      "bytes": 1366
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/web/src/LearnWorkspace.jsx",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\web\\src\\LearnWorkspace.jsx",
+      "exists": true,
+      "sha256": "b1e30dff75c4287996b1c5343ec2d5aa30ccd3d3e76477972c04e0174c594809",
+      "bytes": 15954
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/web/src/styles.css",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\web\\src\\styles.css",
+      "exists": true,
+      "sha256": "787ff6b7425a9affe95e813fd70654fafa5640b08b9b383e6af90e85e2050d91",
+      "bytes": 27731
+    },
+    {
+      "path": "projects/mt5-tradingview-backtester/foundation_v2/web/run_learn_ui_acceptance.mjs",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\mt5-tradingview-backtester\\foundation_v2\\web\\run_learn_ui_acceptance.mjs",
+      "exists": true,
+      "sha256": "8b50673444f03457afaabebd65c48f3aa5f02a898fb723696bb451d907f742bf",
+      "bytes": 13081
+    },
+    {
+      "path": "projects/vi-dubber/scripts/benchmark_m6_integration_contract.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\scripts\\benchmark_m6_integration_contract.py",
+      "exists": true,
+      "sha256": "b6e6caf7dee12d355a3244a541465835cddff55c39fe8459b23d155bbb8b39a1",
+      "bytes": 36128
+    },
+    {
+      "path": "projects/vi-dubber/tests/fixtures/m6_integration_contract.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\tests\\fixtures\\m6_integration_contract.json",
+      "exists": true,
+      "sha256": "ae0bca6a555917f9b977d60a2b39dea978ba64f2718c285e338baf800b065e4b",
+      "bytes": 4770
+    },
+    {
+      "path": "projects/vi-dubber/tests/test_m6_integration_contract.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\tests\\test_m6_integration_contract.py",
+      "exists": true,
+      "sha256": "0bc537c3e7e7084902722cbe1552e4138efe069f9c8486ff91f96de92858fc50",
+      "bytes": 12235
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/M6-integration-contract-prep-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M6-integration-contract-prep-2026-09-27.json",
+      "exists": true,
+      "sha256": "5d12f00c6f0f030e0d130ad177135bc0e20825f75d746c15bec62989b0247c54",
+      "bytes": 11001
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/M6-integration-contract-prep-2026-09-27.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M6-integration-contract-prep-2026-09-27.md",
+      "exists": true,
+      "sha256": "79be5cbcd7325469b9bd4cb004f10733e70582f5e49a5ad1477a0bccef6058d2",
+      "bytes": 4159
+    },
+    {
+      "path": "projects/vi-dubber/scripts/verify_m5_catalog_recovery.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\scripts\\verify_m5_catalog_recovery.py",
+      "exists": true,
+      "sha256": "21438ec298ad67cf01c1a8308eca52abfb4a27a773a508bd3e6b89e2505ef474",
+      "bytes": 8628
+    },
+    {
+      "path": "projects/vi-dubber/tests/test_m5_catalog_recovery.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\tests\\test_m5_catalog_recovery.py",
+      "exists": true,
+      "sha256": "3cc11eaf3183d497cd861b4af289613ce596426dd56a434a7ea936e03244c517",
+      "bytes": 1463
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/M5-catalog-startup-recovery-receipt-2026-09-28.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M5-catalog-startup-recovery-receipt-2026-09-28.json",
+      "exists": true,
+      "sha256": "4d2793305b8741f90c3ea66b9fe2eb6a737aee60f30cf856376f3d2835d6102f",
+      "bytes": 987
+    },
+    {
+      "path": "projects/vi-dubber/work/checkpoints/M5-catalog-startup-recovery-2026-09-28.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\vi-dubber\\work\\checkpoints\\M5-catalog-startup-recovery-2026-09-28.md",
+      "exists": true,
+      "sha256": "edffbbd10aa8442dc2042e4b4c6e8bcda8cc5a5c53086833a903a12007c08cd1",
+      "bytes": 2225
+    },
+    {
+      "path": "projects/quant-trading/docs/research/causal-effect-pilot-r1-2026-09-28.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\causal-effect-pilot-r1-2026-09-28.json",
+      "exists": true,
+      "sha256": "7441373b8a2df783de8f06e185056a41a5fd9c2f1c05d4152cc882ed92f65805",
+      "bytes": 1202
+    },
+    {
+      "path": "projects/quant-trading/src/quant_trading/causal_effects.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\src\\quant_trading\\causal_effects.py",
+      "exists": true,
+      "sha256": "0afcf0d79d2c327be97a23cda5afc80a032397c403d8ffec2d10c1cb5cdbb1ea",
+      "bytes": 32235
+    },
+    {
+      "path": "projects/quant-trading/tests/quant_trading/test_causal_effects.py",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\tests\\quant_trading\\test_causal_effects.py",
+      "exists": true,
+      "sha256": "1f33dc18346f04d0273c137676623b6c6d38f9fb118c5df1273d7eb1c09c27ae",
+      "bytes": 7118
+    },
+    {
+      "path": "planning/CURRENT-CONTEXT.md",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\CURRENT-CONTEXT.md",
+      "exists": true,
+      "sha256": "158d97cbf4222e48e4a19c2b982f9ffaaf5eab742a817985119a908bda7287d6",
+      "bytes": 11586
     }
   ],
   "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb",
-  "snapshot_root_commit": "23275520297fd7c626f55065b11f7c30730d59b6",
+  "snapshot_root_commit": "1820ac197b23dda2df42db5614fc221958426829",
   "frozen_authority_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
 }

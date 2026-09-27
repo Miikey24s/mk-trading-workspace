@@ -1,5 +1,10 @@
 # Current context — đọc đầu tiên khi lập kế hoạch liên project
 
+## Refresh execution 2026-09-28
+
+Snapshot điều phối hiện tại (routing/evidence, không thay acceptance ledger): root `1820ac1` với environment audit **OK**; MT5 `4876dbf`; VI latest `f76b3ec` với M6 capability `8dff27e`, M5 connection/recovery `d86d965`/`4896e75`, P13 chunking `9a15bfa`; Quant `c4265d9` với full suite **132 passed**; TradingAgents `f3b357f` với owner-reported **952 tests**. Shared UI candidate `annam-productivity@1.1.0` có complete snapshot/hash receipt nhưng vẫn `PREP_ONLY_CANDIDATE`, chưa migrate consumer. Job12 giữ cùng PID chain (`run.lock` PID `27804`) ở trạng thái `running/pending`, log và state tại `projects/vi-dubber/work/job-8dc51f8a892aba21/{state.json,events.jsonl,metrics.json}` và `projects/vi-dubber/work/logs/job12-resume-20260928-chunked.{stdout,stderr}.log`; không claim whole-pipeline. M5/M6/M7 vẫn `PREP_ONLY`. Các baseline/HEAD mô tả bên dưới là historical snapshot, không ghi đè trạng thái hiện tại và không rewrite WIP.
+
+
 **26/09/2026 · routing/context, không là acceptance ledger.** Workspace `D:/ANNAM/TradingWorkspace` là planning root; từng project có owner/runtime riêng. Refresh khi chốt QA Make đã thấy Git metadata ở root; không tự init hoặc stage WIP ngoài task. `D:/ANNAM/RoadMap` là cwd cũ, không mặc định còn đúng.
 
 ## Lối đọc ngắn
