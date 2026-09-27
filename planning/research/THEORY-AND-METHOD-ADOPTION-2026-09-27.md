@@ -29,7 +29,7 @@ Artifact `state-estimate-v1` gồm instrument/timeframe, event/known/cutoff, inp
 
 ### Ornstein–Uhlenbeck
 
-Chỉ dùng cho spread/residual đã kiểm tra stationarity, không áp trực tiếp vào raw BTC/log-price. Discrete fit phải có `0 < rho < 1`, kappa dương, half-life ổn định, sample đủ và break diagnostics. Khi `kappa → 0`, dùng giới hạn `sqrt(Δt)` để tránh cancellation. Artifact `mean-reversion-state-v1` giữ theta/kappa/sigma/half-life/rho, fit/data hash, stationarity và quality; downstream chỉ được làm feature/risk gate.
+Chỉ dùng cho spread/residual đã kiểm tra stationarity, không áp trực tiếp vào raw BTC/log-price. Discrete fit phải có `0 < rho < 1`, kappa dương, half-life ổn định, sample đủ và break diagnostics. Khi `kappa → 0`, dùng giới hạn `sqrt(Δt)` để tránh cancellation. Artifact concept `mean-reversion-state-v1` giữ theta/kappa/sigma/half-life/rho, fit/data hash, stationarity và quality; pilot hiện thực hóa contract này dưới schema `ou-spread-residual-v1` trong Quant Lab, rồi downstream chỉ được làm feature/risk gate.
 
 ### Bayesian updating và entropy
 
