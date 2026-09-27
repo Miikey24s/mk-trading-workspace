@@ -170,8 +170,8 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "62775bc70bafdfc30d5de6798168c187d8cd86cca4f795bea2516f133f77a88d",
-      "bytes": 10316
+      "sha256": "90946c4f492d30b4a7849b541d3515977208942718d1892851c394c0cf21af7a",
+      "bytes": 11182
     },
     {
       "path": "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-renderer-c3-r1-2026-09-27.json",
@@ -263,6 +263,20 @@
       "exists": true,
       "sha256": "455b8336f54621c4a81a14da8259cfa828d55bf1fd7989ce187964277d4ae878",
       "bytes": 2273
+    },
+    {
+      "path": "projects/quant-trading/docs/research/event-kernel-pilot-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\event-kernel-pilot-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "e1b57873c00d4a9d9f955ba3a7428419cf0019d3f9d68f73f263fa4883ce0c07",
+      "bytes": 1607
+    },
+    {
+      "path": "projects/quant-trading/docs/research/discrete-optimizer-pilot-r1-2026-09-27.json",
+      "absolute_path": "D:\\ANNAM\\TradingWorkspace\\projects\\quant-trading\\docs\\research\\discrete-optimizer-pilot-r1-2026-09-27.json",
+      "exists": true,
+      "sha256": "e02f4560b46e5005e17b57ab266b3de38acec55da358332053caec60d893e603",
+      "bytes": 1241
     }
   ],
   "verified_against_commit": "45eb6ddca56ed4721a5bf1943e16cd68f5c379fb"
