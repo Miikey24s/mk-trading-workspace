@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parent
 FIXTURE_PATH = ROOT / "autonomous-update-contract-v1.json"
 HEX64 = re.compile(r"^[0-9a-f]{64}$")
 SHA1 = re.compile(r"^[0-9a-f]{40}$")
-VERSION = re.compile(r"^[0-9]+[.][0-9]+[.][0-9]+(?:-[0-9A-Za-z.-]+)?$")
+VERSION = re.compile(r"^[0-9]+[.][0-9]+[.][0-9]+(?:-[0-9A-Za-z]+(?:[.-][0-9A-Za-z]+)*)?$")
 FORBIDDEN_REF_PREFIXES = ("shell://", "powershell://", "cmd://", "exec://", "http://", "https://")
 
 
@@ -52,12 +52,17 @@ def parse_utc(value: Any) -> dt.datetime | None:
 
 def errors(contract: dict[str, Any]) -> list[str]:
     problems: list[str] = []
+    if not isinstance(contract, dict):
+        return ["contract_shape"]
     if contract.get("schema_version") != "autonomous-update-contract-v1":
         problems.append("schema_version")
     if contract.get("scope") not in {"PREP_ONLY_OFFLINE", "PRODUCTION"}:
         problems.append("scope")
 
     policy = contract.get("policy", {})
+    if not isinstance(policy, dict):
+        problems.append("policy_shape")
+        policy = {}
     if policy.get("artifact_verification") != "signature_and_manifest_required":
         problems.append("artifact_verification")
     if policy.get("signature_algorithms") != ["ed25519"]:
@@ -87,6 +92,9 @@ def errors(contract: dict[str, Any]) -> list[str]:
         problems.append("forbidden_operations")
 
     artifact = contract.get("artifact", {})
+    if not isinstance(artifact, dict):
+        problems.append("artifact_shape")
+        artifact = {}
     if not isinstance(artifact.get("artifact_id"), str) or not artifact["artifact_id"]:
         problems.append("artifact_id")
     if not VERSION.fullmatch(str(artifact.get("version", ""))):
@@ -105,10 +113,14 @@ def errors(contract: dict[str, Any]) -> list[str]:
             problems.append("manifest_sha256_binding")
 
     files = artifact.get("files", [])
-    if not files:
+    if not isinstance(files, list) or not files:
         problems.append("files_empty")
+        files = []
     seen: set[str] = set()
     for item in files:
+        if not isinstance(item, dict):
+            problems.append("file_shape")
+            continue
         path = item.get("path")
         if not isinstance(path, str) or not path.startswith("releases/"):
             problems.append("file_path_root")
@@ -121,7 +133,7 @@ def errors(contract: dict[str, Any]) -> list[str]:
         ):
             problems.append("file_path_safety")
         parts = PurePosixPath(path).parts
-        if not parts or parts[0] != "releases" or any(part in {"", ".", ".."} for part in parts):
+        if len(parts) < 2 or parts[0] != "releases" or any(part in {"", ".", ".."} for part in parts):
             problems.append("file_path_segments")
         seen.add(path)
         if not isinstance(item.get("size"), int) or item["size"] < 0:
@@ -130,6 +142,9 @@ def errors(contract: dict[str, Any]) -> list[str]:
             problems.append("file_sha256")
 
     signature = artifact.get("signature", {})
+    if not isinstance(signature, dict):
+        problems.append("signature_shape")
+        signature = {}
     if signature.get("algorithm") != "ed25519":
         problems.append("signature_algorithm")
     if signature.get("key_id") not in policy.get("allowed_key_ids", []):
@@ -149,42 +164,62 @@ def errors(contract: dict[str, Any]) -> list[str]:
         problems.append("signed_fields")
 
     rollout = contract.get("rollout", {})
+    if not isinstance(rollout, dict):
+        problems.append("rollout_shape")
+        rollout = {}
     canary = rollout.get("canary", {})
-    if canary.get("required") is not True or canary.get("cohort_size", 0) < 1:
+    if not isinstance(canary, dict):
+        problems.append("canary_shape")
+        canary = {}
+    if canary.get("required") is not True or not isinstance(canary.get("cohort_size"), int) or isinstance(canary.get("cohort_size"), bool) or canary["cohort_size"] < 1:
         problems.append("canary_required")
-    if canary.get("max_duration_seconds", 0) <= 0:
+    if not isinstance(canary.get("max_duration_seconds"), int) or isinstance(canary.get("max_duration_seconds"), bool) or canary["max_duration_seconds"] <= 0:
         problems.append("canary_timeout")
     health_checks = rollout.get("health_checks", [])
-    if len(health_checks) < 3:
+    if not isinstance(health_checks, list) or len(health_checks) < 3:
         problems.append("health_checks_count")
+        health_checks = []
     check_ids: set[str] = set()
     for check in health_checks:
+        if not isinstance(check, dict):
+            problems.append("health_check_shape")
+            continue
         ref = check.get("check_ref", "")
         check_id = check.get("id")
         if not isinstance(check_id, str) or not check_id or check_id in check_ids:
             problems.append("health_check_id")
-        check_ids.add(check_id)
+        else:
+            check_ids.add(check_id)
         if not check.get("read_only") or check.get("network") is not False:
             problems.append("health_check_safety")
         if not isinstance(ref, str) or not ref.startswith("builtin://") or ref.startswith(FORBIDDEN_REF_PREFIXES):
             problems.append("health_check_ref")
-        if check.get("timeout_seconds", 0) <= 0:
+        if not isinstance(check.get("timeout_seconds"), int) or isinstance(check.get("timeout_seconds"), bool) or check["timeout_seconds"] <= 0:
             problems.append("health_check_timeout")
     promotion = rollout.get("promotion", {})
+    if not isinstance(promotion, dict):
+        problems.append("promotion_shape")
+        promotion = {}
     if not all(promotion.get(key) is True for key in ("requires_all_health_checks", "requires_exact_manifest_match", "atomic_pointer_switch")):
         problems.append("promotion_guards")
     rollback = rollout.get("rollback", {})
+    if not isinstance(rollback, dict):
+        problems.append("rollback_shape")
+        rollback = {}
     if rollback.get("target") != "previous_known_good" or rollback.get("max_attempts") != 1 or rollback.get("preserve_previous") is not True:
         problems.append("rollback_guards")
 
     scheduler = contract.get("scheduler", {})
+    if not isinstance(scheduler, dict):
+        problems.append("scheduler_shape")
+        scheduler = {}
     if scheduler.get("mode") != "local_only" or scheduler.get("requires_network") is not False:
         problems.append("scheduler_scope")
     if not isinstance(scheduler.get("schedule_ref"), str) or not scheduler["schedule_ref"].startswith("local://"):
         problems.append("schedule_ref")
     if not isinstance(scheduler.get("lock_ref"), str) or not scheduler["lock_ref"].startswith("state/"):
         problems.append("lock_ref")
-    if scheduler.get("max_runtime_seconds", 0) <= 0 or scheduler.get("resume_after_reboot") is not True:
+    if not isinstance(scheduler.get("max_runtime_seconds"), int) or isinstance(scheduler.get("max_runtime_seconds"), bool) or scheduler["max_runtime_seconds"] <= 0 or scheduler.get("resume_after_reboot") is not True:
         problems.append("scheduler_bounds")
     if scheduler.get("missed_run") not in {"skip_if_locked_or_expired", "record_and_skip"}:
         problems.append("missed_run")
@@ -192,7 +227,7 @@ def errors(contract: dict[str, Any]) -> list[str]:
     if (
         not isinstance(backoff, list)
         or not backoff
-        or any(not isinstance(value, int) or value <= 0 or value > scheduler.get("max_runtime_seconds", 0) for value in backoff)
+        or any(not isinstance(value, int) or isinstance(value, bool) or value <= 0 or value > scheduler.get("max_runtime_seconds", 0) for value in backoff)
     ):
         problems.append("scheduler_backoff")
 
@@ -251,13 +286,16 @@ def main() -> int:
         "live_operation": lambda c: c["policy"]["forbidden_operations"].remove("broker_order"),
         "dot_segment": lambda c: c["artifact"]["files"][0].update(path="releases/./escape.bin"),
         "backoff_overrun": lambda c: c["scheduler"].update(backoff_seconds=[901]),
+        "malformed_policy": lambda c: c.update(policy=None),
+        "malformed_artifact": lambda c: c.update(artifact=None),
+        "malformed_health_checks": lambda c: c["rollout"].update(health_checks=None),
     }
     for name, mutate in cases.items():
         candidate = copy.deepcopy(contract)
         mutate(candidate)
         assert errors(candidate), name
 
-    print("PASS: autonomous update contract; dry-run has zero side effects; 8 dangerous mutations rejected; PREP_ONLY remains unverified")
+    print("PASS: autonomous update contract; dry-run has zero side effects; 11 dangerous mutations rejected; PREP_ONLY remains unverified")
     return 0
 
 
