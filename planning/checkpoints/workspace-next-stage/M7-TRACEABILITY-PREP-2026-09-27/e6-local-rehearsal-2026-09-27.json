@@ -10,32 +10,32 @@
     "plan_present": true,
     "resume_present": true,
     "plan_sha256": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
-    "resume_sha256_current": "77c80a9d455858fb64574e6c1ce3ae95a0f25f898e8ab4fb4dfffaabaff53d98",
+    "resume_sha256_current": "e9ac543bcda828572d4b15b56c1432fdc59d4f5bc3f21e36b6c48b5768900e91",
     "repo_snapshots": [
       {
         "scope": "workspace",
         "branch": "main",
-        "head": "8a0d30458138c966e360c4c260ad6f22680b4dec",
-        "dirty_count": 74,
-        "dirty_preview": " M AGENTS.md;   M planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-PREP.md;   M planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json;   M planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/path-verification.json;   M planning/mt5-tradingview-backtester/POST-COMPLETION-ROADMAP-DRAFT.md;   M planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/RESUME.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json"
+        "head": "ed3a808c618bfe53eba4aab8ed8c29d0018922eb",
+        "dirty_count": 72,
+        "dirty_preview": " M AGENTS.md;   M planning/mt5-tradingview-backtester/POST-COMPLETION-ROADMAP-DRAFT.md;   M planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/RESUME.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json.sha256;   M planning/ui-platform/MASTER-UI-PLATFORM-PLAN.md;   M projects/TradingAgents"
       },
       {
         "scope": "mt5",
         "branch": "Nam",
-        "head": "58eb7b2f41c169724a00782d0fe996cde82f2cb6",
+        "head": "8b760d6095dd1ac9e6c0c79970771a641eb7b919",
         "dirty_count": 13,
         "dirty_preview": " M ai_service.py;   M foundation_v2/evidence/replay-ui-1440.png;   M foundation_v2/evidence/replay-ui-360.png;   M foundation_v2/evidence/replay-ui-768.png;   M tests/test_ai_foundation.py;  ?? foundation_v2/evidence/U5-protective-validation-r4.json;  ?? foundation_v2/evidence/U5-protective-validation-r5.json;  ?? foundation_v2/evidence/ps02-lifecycle-wip-r2/"
       },
       {
         "scope": "vi",
         "branch": "main",
-        "head": "7b497807e5635f33b3af46d366a464b4fd0a4510",
+        "head": "3e2c5310fa792adacb5f87c4966b5984cf1f028a",
         "dirty_count": 2,
         "dirty_preview": "?? work/checkpoints/P23-real-media-final-assembly-6h-2026-09-26.json;  ?? work/checkpoints/P23-real-media-process-gpu-smoke-2026-09-26.json"
       }
     ],
-    "authority_commit": "8a0d30458138c966e360c4c260ad6f22680b4dec",
-    "current_context_sha256": "e65e5f7165753ef5b28e8ec76978fe0e45f115f03732886c920085d06f39426d"
+    "authority_commit": "ed3a808c618bfe53eba4aab8ed8c29d0018922eb",
+    "current_context_sha256": "908f074a509ea9a9a8b9da6f823d9f2e92a6c78d26edfc8635f749a5e1019d59"
   },
   "checks": {
     "recovery_dependencies": [

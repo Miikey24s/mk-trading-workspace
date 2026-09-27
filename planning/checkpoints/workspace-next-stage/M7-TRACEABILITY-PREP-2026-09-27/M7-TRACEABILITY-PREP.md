@@ -14,9 +14,9 @@ The path verification companion records the existence, absolute path, byte size,
 
 | Scope | Snapshot | WIP/meaning |
 |---|---|---|
-| Workspace root | `8a0d30458138c966e360c4c260ad6f22680b4dec` | Planning root is dirty with existing user/worker changes; this packet does not stage or reset them. |
-| VI Dubber | `7b497807e5635f33b3af46d366a464b4fd0a4510` (`main`, ahead of `origin/main`) | Two historical P23 JSON receipts remain untracked intentionally; they are not promoted by this packet. |
-| MT5 TradingView Backtester | `58eb7b2f41c169724a00782d0fe996cde82f2cb6` (`Nam`, ahead of `origin/Nam`) | Replay/UI/U5 and PS02 WIP is preserved; no whole-tree staging/reset was performed. |
+| Workspace root | `ed3a808c618bfe53eba4aab8ed8c29d0018922eb` | Planning root is dirty with existing user/worker changes; this packet does not stage or reset them. |
+| VI Dubber | `3e2c5310fa792adacb5f87c4966b5984cf1f028a` (`main`, ahead of `origin/main`) | Two historical P23 JSON receipts remain untracked intentionally; they are not promoted by this packet. |
+| MT5 TradingView Backtester | `8b760d6095dd1ac9e6c0c79970771a641eb7b919` (`Nam`, ahead of `origin/Nam`) | Replay/UI/U5 and PS02 WIP is preserved; no whole-tree staging/reset was performed. |
 | UI-Systems | Source paths under `D:\ANNAM\UI-Systems` | No Git repository was detected at that path; M4 source/hash pins are taken from the scoped closeout, not inferred as a new release. |
 
 ## Requirement → milestone → evidence → owner → status → gap/rollback
@@ -94,7 +94,7 @@ Until those criteria are recorded by the authoritative owner, this packet remain
 
 A fresh-root-style local rehearsal was run from the current workspace without starting a provider, broker, OAuth flow, PostgreSQL service, production service, or external network operation. It read the current master PLAN and `RESUME.md`, captured current root/VI/MT5 HEAD and dirty-tree metadata, and used only existing isolated fixtures plus a focused VI test command.
 
-Final nested-head snapshot: workspace/root 8a0d30458138c966e360c4c260ad6f22680b4dec; MT5 58eb7b2f41c169724a00782d0fe996cde82f2cb6; VI 7b497807e5635f33b3af46d366a464b4fd0a4510 after the catalog projection slice. Existing dirty WIP and historical receipt artifacts remain preserved and are not promoted.
+Final nested-head snapshot: workspace/root ed3a808c618bfe53eba4aab8ed8c29d0018922eb; MT5 8b760d6095dd1ac9e6c0c79970771a641eb7b919; VI 3e2c5310fa792adacb5f87c4966b5984cf1f028a after the chart overlay contract and E3/M6 connector-prep slices. Existing dirty WIP and historical receipt artifacts remain preserved and are not promoted.
 
 | Check | Result | Evidence and limit |
 |---|---|---|
@@ -103,6 +103,6 @@ Final nested-head snapshot: workspace/root 8a0d30458138c966e360c4c260ad6f22680b4
 | M5 catalog backup/rebuild control | **PASS / PREP_ONLY** | Existing M5 receipt has equal metadata backup/restored digests and the 1,000-item/100,000-segment fixture shape. The receipt explicitly does not prove SQLite migration/transaction acceptance, real relink/availability, UI p95, or blob backup. |
 | MT5 restore/hash control | **PASS / receipt replay** | Existing `F7-restore-rehearsal-r1.json` has all checks true and equal source/target metadata counts. This was read-only receipt consistency verification, not a new PostgreSQL restore run. |
 | Packet traceability IDs | **PASS** | All `M7-01`…`M7-16` IDs in this packet are unique. |
-| Archive/hash stability | **PASS / final frozen authority snapshot** | The refreshed 24-reference manifest has zero missing paths and zero hash drift against the final frozen authority snapshot at root commit `8a0d30458138c966e360c4c260ad6f22680b4dec`. Current `RESUME.md` SHA-256 is `77c80a9d455858fb64574e6c1ce3ae95a0f25f898e8ab4fb4dfffaabaff53d98`; two consecutive reads matched. This is a hash-stability PASS for the packet snapshot, not integrated M7 acceptance. |
+| Archive/hash stability | **PASS / final frozen authority snapshot** | The refreshed 24-reference manifest has zero missing paths and zero hash drift against the final frozen authority snapshot at root commit `ed3a808c618bfe53eba4aab8ed8c29d0018922eb`. Current `RESUME.md` SHA-256 is `e9ac543bcda828572d4b15b56c1432fdc59d4f5bc3f21e36b6c48b5768900e91`; two consecutive reads matched. This is a hash-stability PASS for the packet snapshot, not integrated M7 acceptance. |
 
 The machine-readable receipt is [e6-local-rehearsal-2026-09-27.json](e6-local-rehearsal-2026-09-27.json). The rehearsal demonstrates local recovery and no-duplicate controls; the refreshed archive/hash step passes against the frozen authority snapshot. It does not close M7, M0, M5, M6, P23 whole-pipeline, or any permission gate.
