@@ -16,8 +16,8 @@
       "path": "planning/checkpoints/workspace-next-stage/RESUME.md",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\RESUME.md",
       "exists": true,
-      "sha256": "461a5e81b67bed2a0efe09c9d428fb3cb693ae2daea17c18797373c3fafbb900",
-      "bytes": 19705
+      "sha256": "f8c788a30dc5b90fcb342e5376ffbe954219982ed4d9b2384fd6abcfffb572ee",
+      "bytes": 20321
     },
     {
       "path": "planning/checkpoints/workspace-next-stage/M3-M4-SHARED-UI-2026-09-26/CLOSEOUT.md",
@@ -170,9 +170,9 @@
       "path": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/e6-local-rehearsal-2026-09-27.json",
       "absolute_path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\M7-TRACEABILITY-PREP-2026-09-27\\e6-local-rehearsal-2026-09-27.json",
       "exists": true,
-      "sha256": "d1f94f417901848992f8a34ce467d7d60f8340401c5b92dfb311e2f4aeb32d01",
-      "bytes": 4635
+      "sha256": "46749cbe7fdc3fa4193392551327cf7ecd78a3c3183d2486f03d3abd5a18495a",
+      "bytes": 4778
     }
   ],
-  "verified_against_commit": "3c77f3e5f2461639ab3b040e782fabe7a79e1871"
+  "verified_against_commit": "de71ed13d2b0d268bb3b180a9d6956d671d4a33d"
 }

@@ -10,19 +10,19 @@
     "plan_present": true,
     "resume_present": true,
     "plan_sha256": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
-    "resume_sha256_current": "461a5e81b67bed2a0efe09c9d428fb3cb693ae2daea17c18797373c3fafbb900",
+    "resume_sha256_current": "f8c788a30dc5b90fcb342e5376ffbe954219982ed4d9b2384fd6abcfffb572ee",
     "repo_snapshots": [
       {
         "scope": "workspace",
         "branch": "main",
-        "head": "3c77f3e5f2461639ab3b040e782fabe7a79e1871",
+        "head": "de71ed13d2b0d268bb3b180a9d6956d671d4a33d",
         "dirty_count": 72,
         "dirty_preview": " M AGENTS.md;   M planning/mt5-tradingview-backtester/POST-COMPLETION-ROADMAP-DRAFT.md;   M planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/RESUME.md;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json;   M planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json.sha256;   M planning/ui-platform/MASTER-UI-PLATFORM-PLAN.md;   M projects/TradingAgents"
       },
       {
         "scope": "mt5",
         "branch": "Nam",
-        "head": "2efc25cd592d8f6c05dde8bcc9e5f78cb2985971",
+        "head": "636282c510e7dcc38ed4d6a4c6a332bbfed436af",
         "dirty_count": 13,
         "dirty_preview": " M ai_service.py;   M foundation_v2/evidence/replay-ui-1440.png;   M foundation_v2/evidence/replay-ui-360.png;   M foundation_v2/evidence/replay-ui-768.png;   M tests/test_ai_foundation.py;  ?? foundation_v2/evidence/U5-protective-validation-r4.json;  ?? foundation_v2/evidence/U5-protective-validation-r5.json;  ?? foundation_v2/evidence/ps02-lifecycle-wip-r2/"
       },
@@ -34,8 +34,10 @@
         "dirty_preview": "?? work/checkpoints/P23-real-media-final-assembly-6h-2026-09-26.json;  ?? work/checkpoints/P23-real-media-process-gpu-smoke-2026-09-26.json"
       }
     ],
-    "authority_commit": "3c77f3e5f2461639ab3b040e782fabe7a79e1871",
-    "current_context_sha256": "cd52a3d50e7e806ba5cfd5bbea743e7f64d5af617fef1101e0b494410cc9fa9a"
+    "authority_commit": "de71ed13d2b0d268bb3b180a9d6956d671d4a33d",
+    "current_context_sha256": "33c8fa9e2390de2d32f1a830ca4d931e11f45c6cb6fa5bc5f933a537dfe360a5",
+    "research_root_commit": "2ccf96b3fd0a4d07a665159bbe269fa8d3c2dfa4",
+    "mt5_stress_commit": "56333618d437e9032558be2b54a4baa1803410da"
   },
   "checks": {
     "recovery_dependencies": [
