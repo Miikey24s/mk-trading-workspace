@@ -1,0 +1,69 @@
+{
+  "schema": "departure-watchdog-alert-contract-v1",
+  "scope": "PREP_ONLY_OFFLINE",
+  "delivery_mode": "local_advisory_sink_only",
+  "external_delivery_configured": false,
+  "default_state_on_alert_failure": "preserve_fail_closed_state",
+  "dedupe_key": ["run_id", "fence_token", "event_type", "event_id"],
+  "retry_delays_seconds": [0, 60, 300],
+  "escalation": {
+    "P1": "owner",
+    "P0": "owner_and_delegate",
+    "retry_exhausted": "manual_ack"
+  },
+  "watchdog_thresholds_seconds": {
+    "heartbeat_stale": 60,
+    "lease_expiry_warning": 120,
+    "checkpoint_stale": 300
+  },
+  "invariants": {
+    "stop_or_quarantine_remains_fail_closed_when_delivery_fails": true,
+    "duplicate_event_does_not_create_second_initial_alert": true,
+    "delivery_success_is_never_claimed_without_a_sink_receipt": true,
+    "execution_capability": false,
+    "provider_access": false,
+    "broker_access": false
+  },
+  "cases": [
+    {
+      "id": "healthy-heartbeat",
+      "kind": "heartbeat",
+      "now_seconds": 100,
+      "last_heartbeat_seconds": 80,
+      "expected": {"state": "healthy", "alerts": [], "escalation": null}
+    },
+    {
+      "id": "stale-heartbeat",
+      "kind": "heartbeat",
+      "now_seconds": 100,
+      "last_heartbeat_seconds": 0,
+      "expected": {"state": "paused", "alerts": ["watchdog.stale_heartbeat"], "escalation": "owner"}
+    },
+    {
+      "id": "quarantine-immediate",
+      "kind": "event",
+      "event": {"run_id": "run-1", "fence_token": "fence-1", "event_type": "quarantine", "event_id": "evt-q", "severity": "P0"},
+      "expected": {"state": "quarantined", "alerts": ["supervisor.quarantine"], "escalation": "owner_and_delegate"}
+    },
+    {
+      "id": "duplicate-stop-is-deduplicated",
+      "kind": "events",
+      "events": [
+        {"at_seconds": 0, "run_id": "run-1", "fence_token": "fence-1", "event_type": "stop", "event_id": "evt-stop", "severity": "P1"},
+        {"at_seconds": 10, "run_id": "run-1", "fence_token": "fence-1", "event_type": "stop", "event_id": "evt-stop", "severity": "P1"}
+      ],
+      "expected": {"state": "paused", "initial_alert_count": 1, "suppressed_duplicate_count": 1, "escalation": "owner"}
+    },
+    {
+      "id": "unavailable-sink-retries-and-escalates",
+      "kind": "events",
+      "sink_available": false,
+      "events": [
+        {"at_seconds": 0, "run_id": "run-1", "fence_token": "fence-1", "event_type": "stop", "event_id": "evt-retry", "severity": "P1"},
+        {"at_seconds": 60, "run_id": "run-1", "fence_token": "fence-1", "event_type": "stop", "event_id": "evt-retry", "severity": "P1"},
+        {"at_seconds": 300, "run_id": "run-1", "fence_token": "fence-1", "event_type": "stop", "event_id": "evt-retry", "severity": "P1"}
+      ],
+      "expected": {"state": "paused", "attempt_count": 3, "delivered_count": 0, "escalation": "manual_ack"}
+    }
+  ]
+}

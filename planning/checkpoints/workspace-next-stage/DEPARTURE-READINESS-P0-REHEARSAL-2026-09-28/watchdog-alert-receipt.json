@@ -1,0 +1,55 @@
+{
+  "broker_access": false,
+  "cases": {
+    "duplicate-stop-is-deduplicated": {
+      "attempt_count": 1,
+      "delivered_count": 1,
+      "escalation": "owner",
+      "initial_alert_count": 1,
+      "state": "paused",
+      "suppressed_duplicate_count": 1
+    },
+    "healthy-heartbeat": {
+      "alerts": [],
+      "escalation": null,
+      "state": "healthy"
+    },
+    "quarantine-immediate": {
+      "alerts": [
+        "supervisor.quarantine"
+      ],
+      "attempt_count": 1,
+      "delivered_count": 1,
+      "escalation": "owner_and_delegate",
+      "initial_alert_count": 1,
+      "state": "quarantined",
+      "suppressed_duplicate_count": 0
+    },
+    "stale-heartbeat": {
+      "alerts": [
+        "watchdog.stale_heartbeat"
+      ],
+      "escalation": "owner",
+      "state": "paused"
+    },
+    "unavailable-sink-retries-and-escalates": {
+      "attempt_count": 3,
+      "delivered_count": 0,
+      "escalation": "manual_ack",
+      "initial_alert_count": 1,
+      "state": "paused",
+      "suppressed_duplicate_count": 0
+    }
+  },
+  "execution_capability": false,
+  "external_delivery": false,
+  "limitations": [
+    "in-memory sink only; no owner/delegate channel was contacted",
+    "no host watchdog process or lease renewer was started",
+    "alert receipt, retry persistence, and acknowledgement storage remain implementation gates"
+  ],
+  "provider_access": false,
+  "schema": "departure-watchdog-alert-receipt-v1",
+  "scope": "PREP_ONLY_OFFLINE_IN_MEMORY",
+  "status": "PASS_OFFLINE_CONTRACT"
+}

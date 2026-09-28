@@ -1,0 +1,59 @@
+{
+  "schema": "paper-soak-evidence-v1",
+  "scope": "PREP_ONLY_OFFLINE",
+  "status": "NOT_RUN",
+  "evidence_level": "template_only",
+  "window": {
+    "minimum_days": 30,
+    "maximum_days": 60,
+    "observed_days": 0,
+    "start_date_utc": null,
+    "end_date_utc": null
+  },
+  "run_identity": {
+    "run_id": null,
+    "attempt_no": null,
+    "fence_token": null,
+    "config_sha256": null,
+    "strategy_sha256": null,
+    "risk_budget_sha256": null
+  },
+  "mode": "paper",
+  "execution_capability": false,
+  "provider_access": false,
+  "broker_access": false,
+  "oauth_access": false,
+  "daily_reconciliation": [],
+  "required_daily_fields": [
+    "date_utc",
+    "input_cutoff_utc",
+    "candidate_count",
+    "paper_intents",
+    "fills",
+    "realized_pnl_vnd",
+    "unrealized_pnl_vnd",
+    "fees_vnd",
+    "slippage_bps",
+    "equity_hash",
+    "ledger_hash",
+    "reconciliation_status",
+    "health_status",
+    "pause_or_stop_reason"
+  ],
+  "acceptance_gate": {
+    "minimum_observed_days": 30,
+    "maximum_observed_days": 60,
+    "requires_daily_reconciliation": true,
+    "requires_zero_unexplained_ledger_mismatch": true,
+    "requires_pause_on_health_failure": true,
+    "requires_no_duplicate_intents_after_restart": true,
+    "requires_explicit_owner_review_before_any_promotion": true,
+    "live_promotion_automatic": false
+  },
+  "known_blockers": [
+    "No 30-60 day forward/paper run has been executed in this artifact.",
+    "Host-level supervisor and durable cross-project registry are not implemented.",
+    "Alert delivery and acknowledgement persistence are not connected.",
+    "This template cannot establish profitability, live readiness, or unattended execution authority."
+  ]
+}
