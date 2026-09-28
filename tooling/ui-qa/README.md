@@ -27,7 +27,9 @@ npm --prefix tooling/ui-qa run registry-check
 The checker does not migrate consumers, change token files, run a browser, or
 contact Figma, OAuth, providers, brokers, or external services. A non-zero
 exit means metadata, source/snapshot content, or candidate-promotion evidence
-drifted.
+drifted. Candidate contract and focused-receipt references are also bounded to
+the workspace or the owned `D:/ANNAM/UI-Systems` root; absolute paths and
+traversal outside those roots fail closed.
 
 Từ TradingWorkspace (hoặc dùng đường dẫn tuyệt đối):
 
