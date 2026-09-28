@@ -1,0 +1,87 @@
+{
+  "schema": "m7-traceability-refresh/v2",
+  "captured_at": "2026-09-28T08:52:31.9048069+07:00",
+  "status": "PREP_ONLY",
+  "purpose": "Additive current-state receipt after offline VI, MT5, Quant and TradingAgents slices; no M7 acceptance or owner gate was changed.",
+  "repositories": {
+    "root": {"head": "1f7a831420c2ae2911988aea93c0e2a1c241dc1a", "branch": "main"},
+    "vi_dubber": {"head": "49dc82094a50cf57ba39104e93cea7bbee0527fd", "branch": "main", "new_commits": ["4e26862", "49dc820"], "wip": ["work/checkpoints/P23-real-media-final-assembly-6h-2026-09-26.json", "work/checkpoints/P23-real-media-process-gpu-smoke-2026-09-26.json"]},
+    "mt5_foundation": {"head": "875b7f56c75e789f2bf15e3efaf458d408c8ca68", "branch": "Nam", "new_commits": ["4d6d64b", "875b7f5"], "wip_preserved": true},
+    "quant_lab": {"head": "75961c95383ac78d880a2600b1c1298ea8f91332", "branch": "master", "new_commits": ["75961c9"], "wip": ["README.md modified"]},
+    "trading_agents": {"head": "9459baa7deccc3ebc82c8eb189c39c54c97932ea", "branch": "main", "new_commits": ["6c8a4c8", "9459baa"], "wip": ["tests/test_reporting.py modified", "tradingagents/reporting.py modified", "uv.lock untracked"]}
+  },
+  "new_evidence": {
+    "vi_m5_catalog_browser": {"status": "PREP_ONLY", "focused_playwright": "1 passed", "m3_playwright_regression": "2 passed", "m5_api_recovery_regression": "49 passed, 1 skipped", "console_errors": [], "provider": false, "oauth": false, "real_media": false, "job12_touched": false},
+    "mt5_fvg_zone_lifecycle": {"status": "PREP_ONLY", "focused_zone_tests": "20 passed", "chart_combined_tests": "104 passed", "compileall": "pass", "diff_check": "pass", "execution_capability": false, "broker_live": false},
+    "quant_walk_forward_cost_stress": {"status": "PREP_ONLY", "focused_tests": "9 passed", "point_in_time_folds": true, "fee_slippage_cost_stress": true, "execution_capability": false, "edge_claim": false},
+    "tradingagents_provenance_temperature": {"status": "ADVISORY_ONLY", "project_runtime": "projects/TradingAgents/.venv", "focused_tests": "30 passed, 3 warnings", "provider_call": false, "broker_live": false}
+  },
+  "job12": {
+    "job_id": "8dc51f8a892aba21",
+    "status": "running",
+    "stage": "separation",
+    "progress": 0.11056810403832991,
+    "message": "Đang tách lời thoại khỏi nhạc và SFX · 165/487",
+    "completed_chunks": 11,
+    "total_chunks": 29,
+    "current_chunk": "chunk_0011",
+    "state_updated_at": "2026-09-28T08:52:29.731699+07:00",
+    "wrapper_pid": 17692,
+    "lease_pid": 20288,
+    "process_tree_count": 4,
+    "single_run_root_observed": true,
+    "source_sha256": "8dc51f8a892aba2103728a8d2360b30f9a6319d5015ff8fd00ef4bdbc4b08ddf",
+    "acceptance": "running side lane only; no whole-pipeline acceptance"
+  },
+  "m7_status": {
+    "M7-01": "BLOCKED",
+    "M7-02": "PREP_ONLY",
+    "M7-03": "ACCEPTED-SCOPED",
+    "M7-04": "PARTIAL / NOT ACCEPTED",
+    "M7-05": "ACCEPTED-SCOPED",
+    "M7-06": "ACCEPTED-SCOPED",
+    "M7-07": "PARTIAL",
+    "M7-08": "PARTIAL",
+    "M7-09": "PARTIAL",
+    "M7-10": "PREP_ONLY",
+    "M7-11": "PREP_ONLY",
+    "M7-12": "PARTIAL",
+    "M7-13": "NOT RUN / BLOCKED",
+    "M7-14": "ACCEPTED-SCOPED",
+    "M7-15": "PREP_ONLY / CONFIGURED_DENY",
+    "M7-16": "PARTIAL"
+  },
+  "sha256": {
+    "planning/WORKSPACE-NEXT-STAGE-PLAN.md": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
+    "planning/CURRENT-CONTEXT.md": "14cef02d150c380ced73f301fc2aa9f796019ba4c33e2c12c9304f1396790a2b",
+    "planning/checkpoints/workspace-next-stage/RESUME.md": "da9d5ac0fca4b52be756ef0c4f19fc5ee352183de93113e84803eae40ab03d71",
+    "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-PREP.md": "8406b83d68356999ac25787ac29a73dc680e120dc3e208de1f4495830cc1dce8",
+    "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-REFRESH-2026-09-28.json": "3ccfbe989a42f7847e3c1548c12cde1638774285b5180a065df34f5700151142",
+    "projects/vi-dubber/work/checkpoints/M5-catalog-browser-acceptance-receipt-2026-09-28.json": "2106cb46af6b9df59a884222a111deef6132c38666de1f670626e425f3163e1c",
+    "projects/mt5-tradingview-backtester/foundation_v2/evidence/chart-fvg-zone-lifecycle-r1-2026-09-28.json": "b35f3c6de13a32610a848f283de50b793456c6d9b2eccee421190b0161c84455",
+    "projects/quant-trading/docs/research/walk-forward-cost-stress-pilot-r1-2026-09-28.json": "f7aec2530bee122e24db223ca5f0413d8637991f92dd3194f05cb689806d5ff7",
+    "projects/vi-dubber/work/job-8dc51f8a892aba21/state.json": "72ee6e72abd29dc76e94d50adca3cc9e7c694d168dca2fdc58a2736478b609b4",
+    "projects/vi-dubber/work/job-8dc51f8a892aba21/run.lock": "2ebe9ceefca9038e9fd1202f5eadb197c5725e189468722e572d6e397311ae5b"
+  },
+  "hash_semantics": {
+    "basis": "Point-in-time capture before this receipt was written.",
+    "mutable_runtime_files": ["projects/vi-dubber/work/job-8dc51f8a892aba21/state.json", "projects/vi-dubber/work/job-8dc51f8a892aba21/run.lock"],
+    "recheck_rule": "A later state/lock hash change must first be checked against normal Job12 progress before being treated as tamper."
+  },
+  "validation": {
+    "m7_packet_ids": {"count": 16, "unique": 16, "missing": []},
+    "quant_walk_forward": "9 passed",
+    "tradingagents_project_venv": "30 passed, 3 warnings",
+    "external_operations": false,
+    "nested_code_changed_by_refresh": false,
+    "acceptance_ledger_changed": false,
+    "oauth_broker_live_destructive": false
+  },
+  "open_dependencies": [
+    "Job12 whole-pipeline completion and terminal QA",
+    "authorized real-media persistence/relink/performance/integrity acceptance",
+    "owner-scoped M6 OAuth/cloud runs or explicit software-only defers",
+    "fresh-root E6 sign-off plus final archive/preservation record",
+    "explicit FULL versus LIMITED release decision"
+  ]
+}
