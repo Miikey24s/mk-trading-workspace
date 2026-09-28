@@ -1,0 +1,85 @@
+{
+  "schema": "m7-traceability-refresh/v1",
+  "captured_at": "2026-09-28T08:45:05.8075776+07:00",
+  "status": "PREP_ONLY",
+  "purpose": "Additive current-state receipt for M7 preparation; no acceptance ledger or owner gate was changed.",
+  "source": {
+    "plan": "planning/WORKSPACE-NEXT-STAGE-PLAN.md",
+    "context": "planning/CURRENT-CONTEXT.md",
+    "resume": "planning/checkpoints/workspace-next-stage/RESUME.md",
+    "prior_packet": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-PREP.md"
+  },
+  "repositories": {
+    "root": {"head": "59f4765ec5a8de9fdecf34b00fdf98cd8f413190", "branch": "main", "wip": "modified/untracked planning and nested-pointer state preserved"},
+    "vi_dubber": {"head": "c7b5aeb5aef2e837c94683a99fac91ba94af17f7", "branch": "main", "wip": "one modified Playwright test; two historical untracked P23 receipts"},
+    "quant_lab": {"head": "29d241ba421a992db62411c7fc7396c54941d0ec", "branch": "master", "wip": "untracked src/quant_trading/walk_forward.py preserved"},
+    "mt5_foundation": {"head": "31f995a3b3dc49f17eafc2c5af3987db98bc949a", "branch": "Nam", "wip": "active AI/UI/U5/PS02 files preserved"}
+  },
+  "job12": {
+    "job_id": "8dc51f8a892aba21",
+    "status": "running",
+    "stage": "separation",
+    "progress": 0.10718471937029432,
+    "message": "Đang tách lời thoại khỏi nhạc và SFX · 345/487",
+    "completed_chunks": 11,
+    "total_chunks": 29,
+    "current_chunk": "chunk_0011",
+    "state_updated_at": "2026-09-28T08:43:06.590005+07:00",
+    "wrapper_pid": 17692,
+    "lease_pid": 20288,
+    "process_tree_count": 4,
+    "single_run_root_observed": true,
+    "source_sha256": "8dc51f8a892aba2103728a8d2360b30f9a6319d5015ff8fd00ef4bdbc4b08ddf",
+    "acceptance": "running side lane only; no whole-pipeline acceptance"
+  },
+  "m7_status": {
+    "M7-01": "BLOCKED",
+    "M7-02": "PREP_ONLY",
+    "M7-03": "ACCEPTED-SCOPED",
+    "M7-04": "PARTIAL / NOT ACCEPTED",
+    "M7-05": "ACCEPTED-SCOPED",
+    "M7-06": "ACCEPTED-SCOPED",
+    "M7-07": "PARTIAL",
+    "M7-08": "PARTIAL",
+    "M7-09": "PARTIAL",
+    "M7-10": "PREP_ONLY",
+    "M7-11": "PREP_ONLY",
+    "M7-12": "PARTIAL",
+    "M7-13": "NOT RUN / BLOCKED",
+    "M7-14": "ACCEPTED-SCOPED",
+    "M7-15": "PREP_ONLY / CONFIGURED_DENY",
+    "M7-16": "PARTIAL"
+  },
+  "sha256": {
+    "planning/WORKSPACE-NEXT-STAGE-PLAN.md": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
+    "planning/CURRENT-CONTEXT.md": "14cef02d150c380ced73f301fc2aa9f796019ba4c33e2c12c9304f1396790a2b",
+    "planning/checkpoints/workspace-next-stage/RESUME.md": "da9d5ac0fca4b52be756ef0c4f19fc5ee352183de93113e84803eae40ab03d71",
+    "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-PREP.md": "8406b83d68356999ac25787ac29a73dc680e120dc3e208de1f4495830cc1dce8",
+    "projects/vi-dubber/work/job-8dc51f8a892aba21/state.json": "7540a294764a4e6e9cb65b0675efc1e12f9aa885c4de1da1e8751db50b48a975",
+    "projects/vi-dubber/work/job-8dc51f8a892aba21/job.json": "a1f9376b50f903e85d752776956321f3b6fe06c338323522a8f24ce2ac99b038",
+    "projects/vi-dubber/work/job-8dc51f8a892aba21/run.lock": "2ebe9ceefca9038e9fd1202f5eadb197c5725e189468722e572d6e397311ae5b",
+    "projects/vi-dubber/work/checkpoints/P23-job12-repair-receipt-2026-09-28.json": "85b74e8c3a8904a69199164e15c79debbd30c3c84fd0aa8f37103d6acbd13f26"
+  },
+  "hash_semantics": {
+    "basis": "The hashes are a point-in-time capture taken before this receipt was written.",
+    "mutable_runtime_files": [
+      "projects/vi-dubber/work/job-8dc51f8a892aba21/state.json",
+      "projects/vi-dubber/work/job-8dc51f8a892aba21/run.lock"
+    ],
+    "recheck_rule": "Re-read mutable files and record a new receipt after the retained run changes state; never treat a later hash mismatch as a product-data tamper finding without checking runtime advancement first."
+  },
+  "validation": {
+    "packet_ids": {"count": 16, "unique": 16, "missing": []},
+    "external_operations": false,
+    "nested_code_changed": false,
+    "acceptance_ledger_changed": false,
+    "oauth_broker_live_destructive": false
+  },
+  "open_dependencies": [
+    "Job12 whole-pipeline completion and terminal QA",
+    "authorized real-media persistence/relink/performance/integrity acceptance",
+    "owner-scoped M6 OAuth/cloud runs or explicit software-only defers",
+    "fresh-root E6 sign-off plus final archive/preservation record",
+    "explicit FULL versus LIMITED release decision"
+  ]
+}
