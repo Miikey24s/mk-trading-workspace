@@ -1,0 +1,98 @@
+{
+  "schema": "m7-traceability-refresh/v6",
+  "captured_at": "2026-09-28T10:36:37.5145963+07:00",
+  "status": "PREP_ONLY",
+  "purpose": "Additive current-state receipt after MT5 paper-bridge provenance and admission-boundary hardening; no M7 acceptance or owner gate changed.",
+  "repositories": {
+    "root": {"head": "ac2486262d55af21ae3b5f9c13ee47d3a945d673", "branch": "main"},
+    "mt5_foundation": {"head": "ebf1638a158be2f2afb4a71fa52616b820541d17", "branch": "Nam", "new_commits": ["4d2d266", "ebf1638"], "focused_bridge_accounting_execution": "27 passed", "compileall": "pass", "diff_check": "pass", "wip_preserved": true},
+    "vi_dubber": {"head": "558a9e85b0d47bc0c79fe461ae493cf37f6b881c", "branch": "main", "full_suite_reported": "590 passed, 1 skipped, 2 warnings", "frontend_build": "pass", "ui_contracts": "pass", "wip": ["two historical P23 receipts"]},
+    "quant_lab": {"head": "53714053bf144d934d8f59c2f3bb2f132b78619b", "branch": "master", "full_suite_reported": "194 passed", "focused_quality_governance": "25 passed"},
+    "trading_agents": {"head": "267554e092b09436879f04e6967b1a6d642a7129", "branch": "main", "full_suite_reported": "969 passed, 5 skipped, 22 warnings, 88 subtests", "wip": ["uv.lock untracked"]}
+  },
+  "new_evidence": {
+    "mt5_paper_execution_bridge_v2": {
+      "status": "PREP_ONLY_OFFLINE",
+      "previous_commit": "81fa9d9",
+      "hardening_commit": "4d2d266",
+      "receipt_commit": "ebf1638",
+      "focused_tests": "27 passed",
+      "compileall": "pass",
+      "diff_check": "pass",
+      "coverage": ["upstream admission boundary", "capability epoch preservation", "projection event ledger membership", "receipt identity/fingerprint binding", "unknown projection receipt absence", "late in-flight receipt after expiry", "prepared-intent late receipt rejection"],
+      "capabilities": {"provider": false, "network": false, "broker": false, "oauth": false, "holdout": false, "execution": false},
+      "known_limits": ["in-memory immutable projection only", "long-only spot open/close paper actions", "no promotion authority", "no profitability or live-readiness claim"]
+    },
+    "vi_catalog_cache": {"status": "SOFTWARE_VERIFIED_PREP_ONLY", "full_suite": "590 passed, 1 skipped, 2 warnings", "frontend_build": "pass", "ui_contracts": "pass", "provider": false, "oauth": false, "job12_touched": false},
+    "quant_quality_governance": {"status": "PREP_ONLY", "full_suite": "194 passed", "focused_quality_governance": "25 passed", "provider_access": false, "broker_access": false, "execution_capability": false, "edge_claim": false},
+    "tradingagents_advisory": {"status": "ADVISORY_ONLY", "full_suite": "969 passed, 5 skipped, 22 warnings, 88 subtests", "provider_call": false, "broker_live": false}
+  },
+  "job12": {
+    "job_id": "8dc51f8a892aba21",
+    "status": "running",
+    "stage": "separation",
+    "progress": 0.14852883299110198,
+    "message": "Đang tách lời thoại khỏi nhạc và SFX · 440/487",
+    "completed_chunks": 11,
+    "total_chunks": 29,
+    "current_chunk": "chunk_0011",
+    "state_updated_at": "2026-09-28T10:36:35.630477+07:00",
+    "wrapper_pid": 17692,
+    "lease_pid": 20288,
+    "process_tree_count": 4,
+    "single_run_root_observed": true,
+    "source_sha256": "8dc51f8a892aba2103728a8d2360b30f9a6319d5015ff8fd00ef4bdbc4b08ddf",
+    "acceptance": "running side lane only; no whole-pipeline acceptance"
+  },
+  "m7_status": {
+    "M7-01": "BLOCKED",
+    "M7-02": "PREP_ONLY",
+    "M7-03": "ACCEPTED-SCOPED",
+    "M7-04": "PARTIAL / NOT ACCEPTED",
+    "M7-05": "ACCEPTED-SCOPED",
+    "M7-06": "ACCEPTED-SCOPED",
+    "M7-07": "PARTIAL",
+    "M7-08": "PARTIAL",
+    "M7-09": "PARTIAL",
+    "M7-10": "PREP_ONLY",
+    "M7-11": "PREP_ONLY",
+    "M7-12": "PARTIAL",
+    "M7-13": "NOT RUN / BLOCKED",
+    "M7-14": "ACCEPTED-SCOPED",
+    "M7-15": "PREP_ONLY / CONFIGURED_DENY",
+    "M7-16": "PARTIAL"
+  },
+  "sha256": {
+    "planning/WORKSPACE-NEXT-STAGE-PLAN.md": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
+    "planning/CURRENT-CONTEXT.md": "0be659af8f8677680ca7a6b200f5be027957923a77925cb869241fb75dcf3d19",
+    "planning/checkpoints/workspace-next-stage/RESUME.md": "b8d7cba403a6a986a9ce58f3a1820ac81d50489396696a1b22451ca430d9b697",
+    "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-PREP.md": "8406b83d68356999ac25787ac29a73dc680e120dc3e208de1f4495830cc1dce8",
+    "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-REFRESH-2026-09-28-r5.json": "bf00a8f9e9112d8b130a65e1357bab10cc498a16da848c8f05fed89e6adeb9cc",
+    "projects/mt5-tradingview-backtester/foundation_v2/evidence/paper-execution-bridge-r1-2026-09-28.json": "6a081267274eb320ba5f151959008e421681ea589c41e42163bcf4fce8d53a77",
+    "projects/mt5-tradingview-backtester/foundation_v2/evidence/paper-execution-bridge-r2-2026-09-28.json": "946d4ff73ecbbadef3a96619fa332c27a7d653da779abacc1a3a29e04ed59a05",
+    "projects/quant-trading/docs/research/ohlcv-data-quality-pilot-r1-2026-09-28.json": "e4823385fc47622a056dc0c1da437c789893a569a20e460d69cd3267e585a42b",
+    "projects/vi-dubber/work/checkpoints/M5-catalog-query-cache-hardening-receipt-2026-09-28.json": "edede5e8fc62e5a85f7ab5603e39bfacd679304475bea063c3db4da3e602e630",
+    "projects/vi-dubber/work/job-8dc51f8a892aba21/state.json": "1f6caf390c4b671107d37168d99e094b15c9770074602fcb0ca7178fe25933d8",
+    "projects/vi-dubber/work/job-8dc51f8a892aba21/run.lock": "2ebe9ceefca9038e9fd1202f5eadb197c5725e189468722e572d6e397311ae5b"
+  },
+  "hash_semantics": {
+    "basis": "Point-in-time capture before this receipt was written.",
+    "mutable_runtime_files": ["projects/vi-dubber/work/job-8dc51f8a892aba21/state.json", "projects/vi-dubber/work/job-8dc51f8a892aba21/run.lock"],
+    "recheck_rule": "A later state/lock hash change must first be checked against normal Job12 progress before being treated as tamper."
+  },
+  "validation": {
+    "m7_packet_ids": {"count": 16, "unique": 16, "missing": []},
+    "lane_reported_regressions": {"mt5_bridge": "27 passed", "vi": "590 passed, 1 skipped, 2 warnings", "quant": "194 passed", "trading_agents": "969 passed, 5 skipped, 22 warnings, 88 subtests"},
+    "external_operations": false,
+    "nested_code_changed_by_refresh": false,
+    "acceptance_ledger_changed": false,
+    "oauth_broker_live_destructive": false
+  },
+  "open_dependencies": [
+    "Job12 whole-pipeline completion and terminal QA",
+    "authorized real-media persistence/relink/performance/integrity acceptance",
+    "owner-scoped M6 OAuth/cloud runs or explicit software-only defers",
+    "fresh-root E6 sign-off plus final archive/preservation record",
+    "explicit FULL versus LIMITED release decision"
+  ]
+}
