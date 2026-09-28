@@ -142,25 +142,37 @@ function resolveSnapshot(projectRoot, snapshot) {
   return isInside(projectRoot, resolved) ? resolved : null
 }
 
-function resolveReference(reference, manifestDir, workspace) {
+function resolveReference(reference, manifestDir, workspace, systemsRoot) {
   const value = typeof reference === 'string' ? reference : reference?.path
   if (!value || typeof value !== 'string') return null
-  if (path.isAbsolute(value)) return path.resolve(value)
-  if (value.startsWith('workspace:')) return path.resolve(workspace, value.slice('workspace:'.length))
-  return path.resolve(manifestDir, value)
+  const resolved = path.isAbsolute(value)
+    ? path.resolve(value)
+    : value.startsWith('workspace:')
+      ? path.resolve(workspace, value.slice('workspace:'.length))
+      : path.resolve(manifestDir, value)
+  // Candidate manifests are discovered from the workspace-owned UI-Systems
+  // tree. Keep their evidence references bounded to those two roots so a
+  // malformed or untrusted manifest cannot make an audit read arbitrary local
+  // files through an absolute path or `../` traversal.
+  return [workspace, systemsRoot].some(root => isInside(root, resolved)) ? resolved : null
 }
 
-async function validateCandidateGate({ pin, graph, workspace }) {
+async function validateCandidateGate({ pin, graph, workspace, systemsRoot }) {
   if (graph.manifest.status !== 'candidate') return []
   const errors = []
   const contract = pin.contractRef || graph.manifest.contractRef || graph.manifest.contract
   const receipt = pin.focusedReceipt || graph.manifest.focusedReceipt || graph.manifest.promotionReceipt
-  const contractPath = resolveReference(contract, graph.manifestDir, workspace)
-  if (!contractPath || !(await exists(contractPath))) {
+  const contractPath = resolveReference(contract, graph.manifestDir, workspace, systemsRoot)
+  if (contract && !contractPath) {
+    errors.push('candidate contract reference must stay inside the workspace or UI-Systems root')
+  } else if (!contractPath || !(await exists(contractPath))) {
     errors.push('candidate requires an existing token contract reference (`contractRef.path`)')
   }
-  const receiptPath = resolveReference(receipt, graph.manifestDir, workspace)
-  if (!receiptPath || !(await exists(receiptPath))) {
+  const receiptPath = resolveReference(receipt, graph.manifestDir, workspace, systemsRoot)
+  if (receipt && !receiptPath) {
+    errors.push('candidate focused receipt reference must stay inside the workspace or UI-Systems root')
+    return errors
+  } else if (!receiptPath || !(await exists(receiptPath))) {
     errors.push('candidate requires an existing focused promotion receipt (`focusedReceipt.path`)')
     return errors
   }
@@ -181,7 +193,7 @@ async function validateCandidateGate({ pin, graph, workspace }) {
   return errors
 }
 
-async function validatePin({ pin, projectRoot, manifestRegistry, workspace }) {
+async function validatePin({ pin, projectRoot, manifestRegistry, workspace, systemsRoot }) {
   const errors = []
   const scope = Array.isArray(pin?.scope) ? pin.scope.filter(value => typeof value === 'string' && value.trim()) : []
   if (!pin || typeof pin !== 'object') return { errors: ['sharedUiPins entry must be an object'], scope, adoption: 'invalid' }
@@ -214,7 +226,7 @@ async function validatePin({ pin, projectRoot, manifestRegistry, workspace }) {
     const expected = Buffer.from(renderSnapshot(graph), 'utf8')
     if (!actual.equals(expected)) errors.push(`snapshot content drift for ${key}: ${sha256(actual)} != ${sha256(expected)}`)
   }
-  errors.push(...await validateCandidateGate({ pin, graph, workspace }))
+  errors.push(...await validateCandidateGate({ pin, graph, workspace, systemsRoot }))
   return {
     errors,
     system: pin.system,
@@ -252,7 +264,7 @@ export async function auditUiRegistry({ workspace = DEFAULT_WORKSPACE, systemsRo
     const pins = Array.isArray(config.sharedUiPins) ? config.sharedUiPins : []
     const projectPins = []
     for (const pin of pins) {
-      const result = await validatePin({ pin, projectRoot, manifestRegistry: registry, workspace })
+      const result = await validatePin({ pin, projectRoot, manifestRegistry: registry, workspace, systemsRoot })
       projectPins.push(result)
       for (const error of result.errors) errors.push(`${configPath}: ${error}`)
     }

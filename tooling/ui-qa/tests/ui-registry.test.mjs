@@ -69,3 +69,43 @@ test('rejects a malformed shared pin registry instead of treating it as no adopt
   assert.ok(report.errors.some(error => error.includes('sharedUiPins must be an array when declared')))
 })
 
+test('rejects candidate evidence references that escape owned roots', async () => {
+  const workspace = await mkdtemp(path.join(os.tmpdir(), 'tw-ui-registry-workspace-'))
+  const systemsRoot = await mkdtemp(path.join(os.tmpdir(), 'tw-ui-registry-systems-'))
+  const outsideRoot = await mkdtemp(path.join(os.tmpdir(), 'tw-ui-registry-outside-'))
+  const projectRoot = path.join(workspace, 'projects', 'candidate-consumer')
+  const tokenRoot = path.join(systemsRoot, 'core', 'tokens', 'candidate', '1.0.0')
+  await mkdir(path.join(projectRoot, 'ui'), { recursive: true })
+  await mkdir(tokenRoot, { recursive: true })
+  await writeFile(path.join(tokenRoot, 'manifest.json'), JSON.stringify({
+    schemaVersion: 1,
+    name: 'candidate-system',
+    version: '1.0.0',
+    status: 'candidate',
+    modes: {},
+    cssVariables: {},
+  }))
+  const outsideContract = path.join(outsideRoot, 'contract.md')
+  const outsideReceipt = path.join(outsideRoot, 'receipt.json')
+  await writeFile(outsideContract, '# contract\n')
+  await writeFile(outsideReceipt, '{"checks":["state keyboard theme"]}\n')
+  await writeFile(path.join(projectRoot, 'ui', 'project-ui.json'), JSON.stringify({
+    schemaVersion: 1,
+    status: 'candidate-migration',
+    sharedUiPins: [{
+      system: 'candidate-system',
+      version: '1.0.0',
+      sourceSha256: '0'.repeat(64),
+      snapshot: 'missing.css',
+      scope: ['candidate.slice'],
+      contractRef: { path: outsideContract },
+      focusedReceipt: { path: outsideReceipt },
+    }],
+  }))
+
+  const report = await auditUiRegistry({ workspace, systemsRoot })
+  assert.equal(report.status, 'error')
+  assert.ok(report.errors.some(error => error.includes('contract reference must stay inside')))
+  assert.ok(report.errors.some(error => error.includes('focused receipt reference must stay inside')))
+})
+
