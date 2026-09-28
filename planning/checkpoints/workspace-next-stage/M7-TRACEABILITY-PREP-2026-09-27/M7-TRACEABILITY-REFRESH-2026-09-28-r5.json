@@ -1,0 +1,87 @@
+{
+  "schema": "m7-traceability-refresh/v5",
+  "captured_at": "2026-09-28T10:11:44.9315804+07:00",
+  "status": "PREP_ONLY",
+  "purpose": "Additive current-state receipt after MT5 paper-execution bridge, Quant OHLCV quality preflight and VI catalog-cache hardening; no M7 acceptance or owner gate changed.",
+  "repositories": {
+    "root": {"head": "e9c7150df344ec5368e920b60b3f3dc4a9d51b2d", "branch": "main"},
+    "vi_dubber": {"head": "558a9e85b0d47bc0c79fe461ae493cf37f6b881c", "branch": "main", "new_commits": ["e555351", "957869a", "48c3c2a", "558a9e8"], "full_suite_reported": "590 passed, 1 skipped, 2 warnings", "frontend_build": "pass", "ui_contracts": "pass", "wip": ["two historical P23 receipts"]},
+    "mt5_foundation": {"head": "81fa9d9f1816be156dbde8668ed1849c228308fd", "branch": "Nam", "new_commits": ["81fa9d9"], "bridge_accounting_execution_focused": "47 passed", "chart_focused": "25 passed", "compileall": "pass", "diff_check": "pass", "wip_preserved": true},
+    "quant_lab": {"head": "53714053bf144d934d8f59c2f3bb2f132b78619b", "branch": "master", "full_suite_reported": "194 passed", "focused_quality_governance": "25 passed"},
+    "trading_agents": {"head": "267554e092b09436879f04e6967b1a6d642a7129", "branch": "main", "full_suite_reported": "969 passed, 5 skipped, 22 warnings, 88 subtests", "wip": ["uv.lock untracked"]}
+  },
+  "new_evidence": {
+    "mt5_paper_execution_bridge": {"status": "PREP_ONLY_OFFLINE", "focused_bridge_receipt": "25 passed", "combined_bridge_accounting_execution": "47 passed", "chart_focused": "25 passed", "compileall": "pass", "diff_check": "pass", "provider": false, "network": false, "broker": false, "oauth": false, "holdout": false, "execution": false, "known_limits": ["in-memory immutable projection only", "long-only spot paper actions", "no promotion authority", "no profitability or live-readiness claim"]},
+    "quant_ohlcv_quality": {"status": "PREP_ONLY", "full_suite": "194 passed", "focused_quality_governance": "25 passed", "quality_fixture": "4 hourly rows, zero gaps", "provider_access": false, "broker_access": false, "execution_capability": false, "edge_claim": false},
+    "vi_catalog_cache": {"status": "SOFTWARE_VERIFIED_PREP_ONLY", "full_suite": "590 passed, 1 skipped, 2 warnings", "focused_cache": "4 passed, 32 deselected, 2 warnings", "etag_revalidation": true, "query_max_chars": 256, "provider": false, "oauth": false, "job12_touched": false},
+    "tradingagents_advisory": {"status": "ADVISORY_ONLY", "full_suite": "969 passed, 5 skipped, 22 warnings, 88 subtests", "provider_call": false, "broker_live": false}
+  },
+  "job12": {
+    "job_id": "8dc51f8a892aba21",
+    "status": "running",
+    "stage": "separation",
+    "progress": 0.13955039356605065,
+    "message": "Đang tách lời thoại khỏi nhạc và SFX · 480/487",
+    "completed_chunks": 11,
+    "total_chunks": 29,
+    "current_chunk": "chunk_0011",
+    "state_updated_at": "2026-09-28T10:11:43.872206+07:00",
+    "wrapper_pid": 17692,
+    "lease_pid": 20288,
+    "process_tree_count": 4,
+    "single_run_root_observed": true,
+    "source_sha256": "8dc51f8a892aba2103728a8d2360b30f9a6319d5015ff8fd00ef4bdbc4b08ddf",
+    "acceptance": "running side lane only; no whole-pipeline acceptance"
+  },
+  "m7_status": {
+    "M7-01": "BLOCKED",
+    "M7-02": "PREP_ONLY",
+    "M7-03": "ACCEPTED-SCOPED",
+    "M7-04": "PARTIAL / NOT ACCEPTED",
+    "M7-05": "ACCEPTED-SCOPED",
+    "M7-06": "ACCEPTED-SCOPED",
+    "M7-07": "PARTIAL",
+    "M7-08": "PARTIAL",
+    "M7-09": "PARTIAL",
+    "M7-10": "PREP_ONLY",
+    "M7-11": "PREP_ONLY",
+    "M7-12": "PARTIAL",
+    "M7-13": "NOT RUN / BLOCKED",
+    "M7-14": "ACCEPTED-SCOPED",
+    "M7-15": "PREP_ONLY / CONFIGURED_DENY",
+    "M7-16": "PARTIAL"
+  },
+  "sha256": {
+    "planning/WORKSPACE-NEXT-STAGE-PLAN.md": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
+    "planning/CURRENT-CONTEXT.md": "0be659af8f8677680ca7a6b200f5be027957923a77925cb869241fb75dcf3d19",
+    "planning/checkpoints/workspace-next-stage/RESUME.md": "b8d7cba403a6a986a9ce58f3a1820ac81d50489396696a1b22451ca430d9b697",
+    "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-PREP.md": "8406b83d68356999ac25787ac29a73dc680e120dc3e208de1f4495830cc1dce8",
+    "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-REFRESH-2026-09-28-r4.json": "ddebc067ad89750aae6a654b722bc0d76197c60a210a716e2529e4f1dd17816b",
+    "projects/mt5-tradingview-backtester/foundation_v2/evidence/paper-execution-bridge-r1-2026-09-28.json": "6a081267274eb320ba5f151959008e421681ea589c41e42163bcf4fce8d53a77",
+    "projects/mt5-tradingview-backtester/foundation_v2/evidence/paper-accounting-r1-2026-09-28.json": "f0f9561fbeaba0853b8a78451e26d9e91c4ca5c01bc7ad85e1b853f156e2518a",
+    "projects/quant-trading/docs/research/ohlcv-data-quality-pilot-r1-2026-09-28.json": "e4823385fc47622a056dc0c1da437c789893a569a20e460d69cd3267e585a42b",
+    "projects/vi-dubber/work/checkpoints/M5-catalog-query-cache-hardening-receipt-2026-09-28.json": "edede5e8fc62e5a85f7ab5603e39bfacd679304475bea063c3db4da3e602e630",
+    "projects/vi-dubber/work/job-8dc51f8a892aba21/state.json": "3cec2cda9de59e832819d452b0e38417071ed63c832e57ca6d6bb4bca52a2581",
+    "projects/vi-dubber/work/job-8dc51f8a892aba21/run.lock": "2ebe9ceefca9038e9fd1202f5eadb197c5725e189468722e572d6e397311ae5b"
+  },
+  "hash_semantics": {
+    "basis": "Point-in-time capture before this receipt was written.",
+    "mutable_runtime_files": ["projects/vi-dubber/work/job-8dc51f8a892aba21/state.json", "projects/vi-dubber/work/job-8dc51f8a892aba21/run.lock"],
+    "recheck_rule": "A later state/lock hash change must first be checked against normal Job12 progress before being treated as tamper."
+  },
+  "validation": {
+    "m7_packet_ids": {"count": 16, "unique": 16, "missing": []},
+    "lane_reported_regressions": {"vi": "590 passed, 1 skipped, 2 warnings", "mt5_bridge_accounting_execution": "47 passed", "mt5_chart": "25 passed", "quant": "194 passed", "quant_focused": "25 passed", "trading_agents": "969 passed, 5 skipped, 22 warnings, 88 subtests"},
+    "external_operations": false,
+    "nested_code_changed_by_refresh": false,
+    "acceptance_ledger_changed": false,
+    "oauth_broker_live_destructive": false
+  },
+  "open_dependencies": [
+    "Job12 whole-pipeline completion and terminal QA",
+    "authorized real-media persistence/relink/performance/integrity acceptance",
+    "owner-scoped M6 OAuth/cloud runs or explicit software-only defers",
+    "fresh-root E6 sign-off plus final archive/preservation record",
+    "explicit FULL versus LIMITED release decision"
+  ]
+}
