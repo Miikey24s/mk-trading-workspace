@@ -4,7 +4,13 @@
 
 - The intended VI Dubber path is **ChatGPT Web → Dedicated Dubber-WebGPT → VI Dubber**. Dedicated WebGPT now has its own source repo at `D:\ANNAM\AI\vi-dubber-webgpt-core`, extracted from the Cockpit-custom v5.0.8 lineage at `dfb963d` and deployed at revision `5dfcd4f`. The isolated-provider guard now blocks Cockpit provider/routing/catalog writes and CLI route/subagent mutations before any state change. It retains only the browser/Responses and provider-only compatibility needed by VI; it does not start the Cockpit UI, use the global `54005` route, or call Cockpit sync commands. Its `integrationOwner=cockpit` value remains an internal provider-routing compatibility switch.
 - The upstream `D:\ANNAM\AI\codex-chatgpt-web` v6 checkout is not the current product runtime. Live runtime is on the extracted core at port `17850`, browser-only/direct Responses, with the global Codex configuration untouched. The previous checkout `D:\ANNAM\AI\codex-chatgpt-web-cockpit` remains an explicit rollback/reference path through `VI_DUBBER_WEBGPT_CORE`.
-- Verified after extraction: `uv run vi-dubber webgpt-runtime status` reports `ONLINE`, login `OK`, models `chatgpt-web/gpt-5.6-sol-instant` and `chatgpt-web/gpt-5.6-sol`; core typecheck passes and the full core suite is `814 pass / 5 environment-specific fail` (Windows symlink privilege and optional Electron dependency); focused VI WebGPT tests pass `66`; no Job12 replay or provider message was sent.
+- Verified after extraction: `uv run vi-dubber webgpt-runtime status` reports `ONLINE`, login `OK`, models `chatgpt-web/gpt-5.6-sol-instant` and `chatgpt-web/gpt-5.6-sol`; core typecheck passes and the full core suite is `814 pass / 5 environment-specific fail` (Windows symlink privilege and optional Electron dependency); focused VI WebGPT tests pass `66`. A later bounded post-login canary was attempted and failed at browser completion; it did not replay Job12 or modify its cache/receipts.
+
+## Current turn refresh 2026-09-28 · post-login canary remains blocked
+
+- The post-login canary is recorded in [P23-webgpt-canary-2026-09-28](../../../projects/vi-dubber/work/checkpoints/P23-webgpt-canary-2026-09-28.md). Three synthetic browser turns were accepted and rendered assistant blocks, but all stopped at `response-stalled-60s`; none produced `response.completed`, schema-valid translation JSON, or a new Responses receipt.
+- The runtime was cleaned with the supported `service cancel-turns` command after confirming no Job12 process or lease was active. Final health is `ONLINE`, `accepting_turns=true`, `active_http_turns=0`, `active_browser_turns=0`, catalog HTTP 200, login `OK`.
+- Provider acceptance therefore remains **FAIL**. Retained Job12 stays terminal failed at translation; do not resume, use `--fresh`, delete receipts/locks, create a duplicate worker, or switch model/provider until one new bounded canary has a stable assistant completion and parsed payload.
 
 ## Current turn refresh 2026-09-28 · external gates + offline departure wave
 
@@ -16,7 +22,7 @@
   - VI M6 malformed connector recovery hardening `8fa18b3`; M5/M6 focused 61 pass and full VI suite 631 passed, 1 skipped, 2 existing warnings.
   - Workspace cold-start/backup/restore readiness `05b6c7a` + wording alignment `74dfc8e`; offline checker passes `PASS_OFFLINE_CONTRACT`, backup/restore drill passes, and paper-soak remains template-only.
   - Quant paper-soak lineage contract `cd73d9e` + accepted-receipt hardening `a325772`; focused test 6 pass and full Quant suite 219 passed. Accepted evidence still requires run/fence/attempt/config/strategy/risk lineage and never grants provider/broker authority.
-- Current external/runtime facts remain unchanged: `http://127.0.0.1:17850/healthz` is online with active turns 0; retained Job12 is terminal failed at progress `0.3711246200607903` with 28/28 ASR and 864 cached IDs. No resume, duplicate worker, `--fresh`, model/provider switch or login loop was performed.
+- Current external/runtime facts remain unchanged after canary cleanup: `http://127.0.0.1:17850/healthz` is online with active turns 0; retained Job12 is terminal failed at progress `0.3711246200607903` with 28/28 ASR and 864 cached IDs. No resume, duplicate worker, `--fresh`, model/provider switch or login loop was performed.
 - M7 traceability refresh `4ac9f60` is recorded at `M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-REFRESH-2026-09-28.{json,md}`; checker passes `boundaries=6`, `blockers=7`, `m7_ids=16`. This is PREP_ONLY evidence and does not promote any external or execution gate.
 
 ## Refresh execution 2026-09-28 · provider retry checkpoint
