@@ -10,6 +10,7 @@
   - Workspace cold-start/backup/restore readiness `05b6c7a` + wording alignment `74dfc8e`; offline checker passes `PASS_OFFLINE_CONTRACT`, backup/restore drill passes, and paper-soak remains template-only.
   - Quant paper-soak lineage contract `cd73d9e` + accepted-receipt hardening `a325772`; focused test 6 pass and full Quant suite 219 passed. Accepted evidence still requires run/fence/attempt/config/strategy/risk lineage and never grants provider/broker authority.
 - Current external/runtime facts remain unchanged: `http://127.0.0.1:17850/healthz` is online with active turns 0; retained Job12 is terminal failed at progress `0.3711246200607903` with 28/28 ASR and 864 cached IDs. No resume, duplicate worker, `--fresh`, model/provider switch or login loop was performed.
+- M7 traceability refresh `4ac9f60` is recorded at `M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-REFRESH-2026-09-28.{json,md}`; checker passes `boundaries=6`, `blockers=7`, `m7_ids=16`. This is PREP_ONLY evidence and does not promote any external or execution gate.
 
 ## Refresh execution 2026-09-28 · provider retry checkpoint
 
