@@ -1,0 +1,150 @@
+{
+  "schema": "m7-traceability-refresh/v9",
+  "captured_at": "2026-09-28T13:01:59.1278135Z",
+  "status": "PREP_ONLY",
+  "purpose": "Additive M7 traceability snapshot after the external-gate packet and offline departure-readiness wave. Historical receipts and WIP remain authoritative in their owners.",
+  "source_documents": {
+    "current_context": {
+      "path": "planning/CURRENT-CONTEXT.md",
+      "sha256": "988ce132bc5230d769b20e6e5ebf4432049fefcdbf477436f7f20ce5af596b2f"
+    },
+    "resume": {
+      "path": "planning/checkpoints/workspace-next-stage/RESUME.md",
+      "sha256": "9c12135d1ac692c86c128a2f01e14224d5a97edab7776b9c05be5f5e775a5cc3"
+    },
+    "external_gates": {
+      "path": "planning/checkpoints/workspace-next-stage/EXTERNAL-GATES-PACKET-2026-09-28.md",
+      "sha256": "090f1413db21ea43cd852d4a32dbbb759182518f91a08fc216dbcb6c04322b98"
+    }
+  },
+  "repository_heads": {
+    "workspace_root": "54b55428c7f92a87a1d7d59024da4d89697ce290",
+    "vi_dubber": "8fa18b32b573b891771ead39899f3af7b507a19f",
+    "mt5_tradingview_backtester": "f014b77fa4c28431b186853c00e33635671cbbb3",
+    "quant_trading": "a32577263a1f80afd93008102728a7b074f118b2",
+    "trading_agents": "33aa11d8f8defda17720729c4ee7d86fedb337a9"
+  },
+  "changed_boundaries": [
+    {
+      "name": "workspace external-gate routing",
+      "commit": "54b55428c7f92a87a1d7d59024da4d89697ce290",
+      "evidence": "EXTERNAL-GATES-PACKET-2026-09-28.md and RESUME.md current-turn refresh",
+      "validation": "packet records no immediate owner action; all external actions remain resource-scoped",
+      "authority_granted": false
+    },
+    {
+      "name": "VI M6 malformed connector recovery",
+      "commit": "8fa18b32b573b891771ead39899f3af7b507a19f",
+      "evidence": "M5/M6 focused 61 pass; VI full suite 631 passed, 1 skipped, 2 warnings",
+      "validation": "malformed recovery state fails closed; no OAuth, cloud or connector I/O",
+      "authority_granted": false
+    },
+    {
+      "name": "MT5 owner-absence alert contract",
+      "commit": "f014b77fa4c28431b186853c00e33635671cbbb3",
+      "evidence": "owner-absence-alert-r1-2026-09-28 receipt; 34 focused tests pass",
+      "validation": "stale heartbeat/clock skew pauses, deduplicates fenced events, bounds retries and requires sink receipt",
+      "authority_granted": false
+    },
+    {
+      "name": "Quant paper-soak lineage",
+      "commit": "a32577263a1f80afd93008102728a7b074f118b2",
+      "evidence": "paper-soak lineage contract; focused 6 pass; full Quant suite 219 passed",
+      "validation": "accepted evidence requires run/fence/attempt/config/strategy/risk lineage; no profitability or broker claim",
+      "authority_granted": false
+    },
+    {
+      "name": "TradingAgents stable run identity",
+      "commit": "33aa11d8f8defda17720729c4ee7d86fedb337a9",
+      "evidence": "run_id bound to manifest inputs; 32 focused provenance tests pass",
+      "validation": "advisory manifest provenance only; no provider or execution authority",
+      "authority_granted": false
+    },
+    {
+      "name": "offline departure readiness packet",
+      "commit": "05b6c7a",
+      "evidence": "cold-start, backup/restore, watchdog and paper-soak template receipts",
+      "validation": "offline checker PASS_OFFLINE_CONTRACT / PASS_OFFLINE_DRILL; host supervisor, durable sink and 30–60 day soak remain unrun",
+      "authority_granted": false
+    }
+  ],
+  "job12": {
+    "job_id": "8dc51f8a892aba21",
+    "status": "failed",
+    "stage": "translation",
+    "progress": 0.3711246200607903,
+    "completed_asr_chunks": 28,
+    "total_asr_chunks": 28,
+    "cached_unique_id_range": [0, 863],
+    "state_sha256": "3925f1b7638116e98c142ff70f4f257df29e78c6d91120c1e6a5d914f7bfbbf7",
+    "output_present": false,
+    "error_class": "provider detail redacted",
+    "acceptance": "terminal retained failure; no whole-pipeline, provider or 12h acceptance"
+  },
+  "external_gates": [
+    {
+      "id": "dedicated_webgpt",
+      "status": "LOCAL_ONLINE_PROVIDER_ACCEPTANCE_BLOCKED",
+      "next_owner": "agent keeps local health; owner logs in only if the actual session expires",
+      "unblock": "one canary with a valid assistant turn and schema-correct payload"
+    },
+    {
+      "id": "job12_resume",
+      "status": "BLOCKED_BY_PROVIDER_ACCEPTANCE",
+      "next_owner": "agent preserves cache/receipts; no duplicate worker",
+      "unblock": "provider acceptance plus single-lease resume review"
+    },
+    {
+      "id": "human_listening",
+      "status": "OWNER_GATE_PENDING_WHEN_PACKET_READY",
+      "next_owner": "owner",
+      "unblock": "specific media/voice ballot packet"
+    },
+    {
+      "id": "connectors_cloud",
+      "status": "BLOCKED_EXPLICIT_ACCOUNT_DESTINATION_SCOPE",
+      "next_owner": "agent prepares offline contracts; owner chooses account/destination/data scope",
+      "unblock": "OAuth/permission and revoke/reconcile scope"
+    },
+    {
+      "id": "typesafe_jev",
+      "status": "OPTIONAL_OFFLINE_UNKNOWN_SAFE",
+      "next_owner": "agent continues typed contract QA",
+      "unblock": "server-side TYPESAFE_API_KEY for semantic QA"
+    },
+    {
+      "id": "broker_demo_live_holdout",
+      "status": "FAIL_CLOSED",
+      "next_owner": "agent does paper/shadow/risk/reconcile only",
+      "unblock": "owner selects venue/account and exact risk/action scope after paper gates"
+    }
+  ],
+  "residual_external_blockers": [
+    "Dedicated WebGPT provider still has no accepted assistant-turn receipt; local runtime health is not provider acceptance.",
+    "Job12 retained run is terminal failed during translation; do not resume until provider acceptance and lease review.",
+    "Human listening/voice QA is required for media changes and is not substitutable by automated checks.",
+    "OAuth/cloud connector destinations require explicit account, destination, data-class and revoke scope.",
+    "TypeSafe/Jev semantic QA needs an explicitly scoped server-side key; local/fake unknown-safe remains the default.",
+    "Broker/demo/live/holdout remains configured-deny; no paper soak or execution authority is inferred from offline receipts.",
+    "Host supervisor, durable alert sink/acknowledgement, restart recovery and 30–60 day paper soak remain external operational gates."
+  ],
+  "m7_ids": [
+    "M7-01", "M7-02", "M7-03", "M7-04", "M7-05", "M7-06", "M7-07", "M7-08",
+    "M7-09", "M7-10", "M7-11", "M7-12", "M7-13", "M7-14", "M7-15", "M7-16"
+  ],
+  "validation": {
+    "checker": "verify_m7_traceability_refresh_r9.py",
+    "checker_result": "PASS",
+    "nested_product_code_changed": false,
+    "acceptance_ledger_changed": false,
+    "external_operations": false,
+    "wip_preserved": true,
+    "provider_broker_oauth_cloud_holdout_started": false
+  },
+  "authority": {
+    "acceptance_claim": false,
+    "grants": [],
+    "release_label": "PREP_ONLY",
+    "note": "This receipt indexes current evidence and residual gates; it does not promote M7 or any external authority."
+  }
+}
