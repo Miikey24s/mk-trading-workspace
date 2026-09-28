@@ -1,0 +1,140 @@
+{
+  "schema": "m7-traceability-refresh/v7",
+  "captured_at": "2026-09-28T11:31:01.276+07:00",
+  "status": "PREP_ONLY",
+  "purpose": "Additive current-state receipt linking the durable two-year owner-absence autonomy memo; no M7 acceptance or owner gate changed.",
+  "repositories": {
+    "root": {
+      "head": "7517bd634c87de6eae55d8c40ace82526ca56512",
+      "branch": "main"
+    },
+    "mt5_foundation": {
+      "head": "3d6d58d38558af8eb83a9d3c42acadbf305474d8",
+      "branch": "Nam",
+      "focused_bridge_accounting_execution": "27 passed",
+      "compileall": "pass",
+      "diff_check": "pass",
+      "wip_preserved": true,
+      "owner_absence_safety_focused": "10 passed",
+      "owner_absence_safety_compileall": "pass",
+      "owner_absence_safety_diff_check": "pass"
+    },
+    "vi_dubber": {
+      "head": "558a9e85b0d47bc0c79fe461ae493cf37f6b881c",
+      "branch": "main",
+      "full_suite_reported": "590 passed, 1 skipped, 2 warnings",
+      "frontend_build": "pass",
+      "ui_contracts": "pass",
+      "wip": [
+        "two historical P23 receipts"
+      ]
+    },
+    "quant_lab": {
+      "head": "53714053bf144d934d8f59c2f3bb2f132b78619b",
+      "branch": "master",
+      "full_suite_reported": "194 passed",
+      "focused_quality_governance": "25 passed"
+    },
+    "trading_agents": {
+      "head": "267554e092b09436879f04e6967b1a6d642a7129",
+      "branch": "main",
+      "full_suite_reported": "969 passed, 5 skipped, 22 warnings, 88 subtests",
+      "wip": [
+        "uv.lock untracked"
+      ]
+    }
+  },
+  "autonomy_memo": {
+    "markdown": "planning/research/AUTONOMY-2-YEAR-FEASIBILITY-2026-09-28.md",
+    "json": "planning/research/AUTONOMY-2-YEAR-FEASIBILITY-2026-09-28.json",
+    "status": "RESEARCH_PREP_ONLY",
+    "profit_guarantee": false,
+    "execution_authority_granted": false,
+    "bounded_autonomous_pilot_90_days": "conditional",
+    "reliable_large_income_24_months": "not_demonstrable_low_confidence",
+    "recommended_default": "paper_or_shadow_until_all_gates_pass; capped_live_only",
+    "ai_direct_order_authority": "no",
+    "living_docs_linked": [
+      "planning/CURRENT-CONTEXT.md",
+      "planning/checkpoints/workspace-next-stage/RESUME.md"
+    ]
+  },
+  "job12": {
+    "job_id": "8dc51f8a892aba21",
+    "status": "running",
+    "stage": "separation",
+    "progress": 0.16851856605065024,
+    "message": "Đang tách lời thoại khỏi nhạc và SFX · 305/487",
+    "completed_chunks": 11,
+    "total_chunks": 29,
+    "current_chunk": "chunk_0011",
+    "state_updated_at": "2026-09-28T04:31:01.200864+00:00",
+    "wrapper_pid": 17692,
+    "lease_pid": 20288,
+    "process_tree_count": 4,
+    "single_run_root_observed": true,
+    "source_sha256": "8dc51f8a892aba2103728a8d2360b30f9a6319d5015ff8fd00ef4bdbc4b08ddf",
+    "acceptance": "running side lane only; no whole-pipeline acceptance",
+    "state_sha256": "9e4892924233bc82847b9a4197e249ab41575aaf915b105e65ab3467f2252716",
+    "run_lock_sha256": "2ebe9ceefca9038e9fd1202f5eadb197c5725e189468722e572d6e397311ae5b"
+  },
+  "m7_status": {
+    "M7-01": "BLOCKED",
+    "M7-02": "PREP_ONLY",
+    "M7-03": "ACCEPTED-SCOPED",
+    "M7-04": "PARTIAL / NOT ACCEPTED",
+    "M7-05": "ACCEPTED-SCOPED",
+    "M7-06": "ACCEPTED-SCOPED",
+    "M7-07": "PARTIAL",
+    "M7-08": "PARTIAL",
+    "M7-09": "PARTIAL",
+    "M7-10": "PREP_ONLY",
+    "M7-11": "PREP_ONLY",
+    "M7-12": "PARTIAL",
+    "M7-13": "NOT RUN / BLOCKED",
+    "M7-14": "ACCEPTED-SCOPED",
+    "M7-15": "PREP_ONLY / CONFIGURED_DENY",
+    "M7-16": "PARTIAL"
+  },
+  "sha256": {
+    "planning/WORKSPACE-NEXT-STAGE-PLAN.md": "e45fad18411597cae73933908008b9ce91489027a27518e13717df9e06c35bb9",
+    "planning/CURRENT-CONTEXT.md": "421ae64e5bdca37094100b8ae4441720794a097c55ffbef0b0ac39dd6ca559b4",
+    "planning/checkpoints/workspace-next-stage/RESUME.md": "70c234d7691a153ab48c6987c9dd0e718568c1370d8a59b1ea1b9711f933b03a",
+    "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-PREP.md": "8406b83d68356999ac25787ac29a73dc680e120dc3e208de1f4495830cc1dce8",
+    "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-REFRESH-2026-09-28-r6.json": "733925a090cb29f0fa53caaad0e345674030752b961cdbd6804f14c50ef2c4a5",
+    "planning/research/AUTONOMY-2-YEAR-FEASIBILITY-2026-09-28.json": "7553e87102e6f438dd507196c6e5dc444973a3b2db4e72e42a54ec88223f4316",
+    "planning/research/AUTONOMY-2-YEAR-FEASIBILITY-2026-09-28.md": "c38c4ed4a405426dff7920952cd71e471ba22c25baa38087f86a4659fda9b8f9",
+    "projects/vi-dubber/work/job-8dc51f8a892aba21/state.json": "9e4892924233bc82847b9a4197e249ab41575aaf915b105e65ab3467f2252716",
+    "projects/vi-dubber/work/job-8dc51f8a892aba21/run.lock": "2ebe9ceefca9038e9fd1202f5eadb197c5725e189468722e572d6e397311ae5b"
+  },
+  "hash_semantics": {
+    "basis": "Point-in-time capture before this receipt was written.",
+    "mutable_runtime_files": [
+      "projects/vi-dubber/work/job-8dc51f8a892aba21/state.json",
+      "projects/vi-dubber/work/job-8dc51f8a892aba21/run.lock"
+    ],
+    "recheck_rule": "A later state/lock hash change must first be checked against normal Job12 progress before being treated as tamper."
+  },
+  "validation": {
+    "memo_json_status": "RESEARCH_PREP_ONLY",
+    "memo_profit_guarantee": false,
+    "memo_execution_authority": false,
+    "m7_packet_ids": {
+      "count": 16,
+      "unique": 16,
+      "missing": []
+    },
+    "external_operations": false,
+    "nested_code_changed_by_refresh": false,
+    "acceptance_ledger_changed": false,
+    "oauth_broker_live_destructive": false
+  },
+  "open_dependencies": [
+    "Job12 whole-pipeline completion and terminal QA",
+    "authorized real-media persistence/relink/performance/integrity acceptance",
+    "owner-scoped M6 OAuth/cloud runs or explicit software-only defers",
+    "fresh-root E6 sign-off plus final archive/preservation record",
+    "explicit FULL versus LIMITED release decision",
+    "absence-period continuity/legal/MFA/KYC/recovery verification before any capped-live decision"
+  ]
+}
