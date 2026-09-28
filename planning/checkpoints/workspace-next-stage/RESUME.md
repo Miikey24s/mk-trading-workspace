@@ -1,10 +1,10 @@
 # Workspace next stage — execution resume
 
-## Architecture correction 2026-09-28 · Dedicated WebGPT is the lightweight custom fork
+## Architecture correction 2026-09-28 · Dedicated WebGPT is the extracted VI core
 
-- The intended VI Dubber path is **ChatGPT Web → Dedicated Dubber-WebGPT → VI Dubber**. Dedicated WebGPT is a lightweight, isolated VI runtime that reuses the Cockpit-custom core checkout `D:\ANNAM\AI\codex-chatgpt-web-cockpit` for its provider-only/model-routing semantics. The runtime does not start the Cockpit UI, use the global `54005` route, or call Cockpit sync commands; its `integrationOwner=cockpit` value is the core's provider-only behavior switch.
-- The upstream `D:\ANNAM\AI\codex-chatgpt-web` v6 checkout is not the current product runtime. A mistaken native migration was reverted immediately; live runtime is back on the Cockpit-custom core at port `17850`, browser-only/direct Responses, with global Codex configuration untouched. The fork's origin is explicitly documented by commit `e69e5b6` (`lean Cockpit integration v5.0.8`).
-- Verified after rollback: `uv run vi-dubber webgpt-runtime status` reports `ONLINE`, login `OK`, models `chatgpt-web/gpt-5.6-sol-instant` and `chatgpt-web/gpt-5.6-sol`; focused VI WebGPT tests pass `34`; no Job12 replay or provider message was sent.
+- The intended VI Dubber path is **ChatGPT Web → Dedicated Dubber-WebGPT → VI Dubber**. Dedicated WebGPT now has its own source repo at `D:\ANNAM\AI\vi-dubber-webgpt-core`, extracted from the Cockpit-custom v5.0.8 checkout at source revision `dfb963d`. It retains only the browser/Responses and provider-only compatibility needed by VI; it does not start the Cockpit UI, use the global `54005` route, or call Cockpit sync commands. Its `integrationOwner=cockpit` value remains an internal provider-routing compatibility switch.
+- The upstream `D:\ANNAM\AI\codex-chatgpt-web` v6 checkout is not the current product runtime. Live runtime is on the extracted core at port `17850`, browser-only/direct Responses, with the global Codex configuration untouched. The previous checkout `D:\ANNAM\AI\codex-chatgpt-web-cockpit` remains an explicit rollback/reference path through `VI_DUBBER_WEBGPT_CORE`.
+- Verified after extraction: `uv run vi-dubber webgpt-runtime status` reports `ONLINE`, login `OK`, models `chatgpt-web/gpt-5.6-sol-instant` and `chatgpt-web/gpt-5.6-sol`; core typecheck passes and the full core suite is `814 pass / 5 environment-specific fail` (Windows symlink privilege and optional Electron dependency); focused VI WebGPT tests pass `65`; no Job12 replay or provider message was sent.
 
 ## Current turn refresh 2026-09-28 · external gates + offline departure wave
 
