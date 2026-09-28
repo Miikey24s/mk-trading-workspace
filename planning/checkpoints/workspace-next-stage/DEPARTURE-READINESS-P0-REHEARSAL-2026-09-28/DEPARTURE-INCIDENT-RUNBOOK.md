@@ -19,6 +19,9 @@ Run each check and stop on a non-zero exit code:
 python .\run_offline_departure_drill.py --output .\backup-restore-receipt.json
 if ($LASTEXITCODE -ne 0) { throw 'backup/restore rehearsal failed; do not proceed' }
 
+python .\verify_cold_start_contract.py --output .\cold-start-receipt.json
+if ($LASTEXITCODE -ne 0) { throw 'cold-start contract failed; do not proceed' }
+
 python .\verify_watchdog_alert_contract.py --output .\watchdog-alert-receipt.json
 if ($LASTEXITCODE -ne 0) { throw 'watchdog contract failed; do not proceed' }
 
@@ -35,6 +38,11 @@ These checks validate the packet only. They do not start a worker or prove
 that anything will resume after a reboot. Until a host-level supervisor is
 implemented and separately accepted, the safe unattended state is paused or
 offline research.
+
+The cold-start checker is deliberately an inspection gate. A clean fixture
+returns `ready_research` with `launch_allowed: false`; an interrupted fenced
+run returns `recovery_required`; invalid capability or malformed state returns
+`quarantined`. It does not restart a process or clear a stale lock.
 
 ## If a stop or quarantine is observed
 
