@@ -1,5 +1,15 @@
 # Workspace next stage — execution resume
 
+## Current turn refresh 2026-09-28 · external gates + offline departure wave
+
+- External-gate matrix is recorded in [EXTERNAL-GATES-PACKET-2026-09-28](EXTERNAL-GATES-PACKET-2026-09-28.md). **No owner action is required immediately**: Dedicated WebGPT local health is `ok`, but provider acceptance is still blocked on a real assistant turn. OAuth/cloud destination, TypeSafe key, human listening, broker/demo/live/holdout and public/destructive actions remain explicit gates; no secret or external write was performed.
+- Offline departure hardening completed without opening external authority:
+  - MT5 owner-absence alert contract `b9c2811` + evidence `f014b77`; 34 focused tests pass. Stale heartbeat/clock skew pauses, dedupes fenced events, bounds retries, escalates P0, and requires explicit sink receipt before delivery.
+  - VI M6 malformed connector recovery hardening `8fa18b3`; M5/M6 focused 61 pass and full VI suite 631 passed, 1 skipped, 2 existing warnings.
+  - Workspace cold-start/backup/restore readiness `05b6c7a` + wording alignment `74dfc8e`; offline checker passes `PASS_OFFLINE_CONTRACT`, backup/restore drill passes, and paper-soak remains template-only.
+  - Quant paper-soak lineage contract `cd73d9e` + accepted-receipt hardening `a325772`; focused test 6 pass and full Quant suite 219 passed. Accepted evidence still requires run/fence/attempt/config/strategy/risk lineage and never grants provider/broker authority.
+- Current external/runtime facts remain unchanged: `http://127.0.0.1:17850/healthz` is online with active turns 0; retained Job12 is terminal failed at progress `0.3711246200607903` with 28/28 ASR and 864 cached IDs. No resume, duplicate worker, `--fresh`, model/provider switch or login loop was performed.
+
 ## Refresh execution 2026-09-28 · provider retry checkpoint
 
 - **Current routing snapshot (docs/evidence only):** root `a846179`; MT5 host seam `2b0b2cb` and chart causal hardening `79909e6`; VI `c7f27c0`; Quant null/buy-hold baseline `3516a70`; shared UI migration rollback fixture `a256b93`; TradingAgents `27b5a04`. Dedicated WebGPT core fixes `29a7c53` (automation challenge) and `e29a007` (120s DOM grace for slow high-effort turns) are committed; typecheck and focused DOM-grace tests pass. Job12 r7 is terminal at translation after a single retained worker: **28/28 ASR chunks**, **864 cached unique IDs (0–863)**, 49 receipts, then `provider detail redacted` because ChatGPT accepted a message without exposing an assistant turn. Runtime reset and a fresh smoke request after the timeout patch still hit effort-control unavailable, so resume only after the ChatGPT model list/Temporary Chat surface is healthy; preserve cache/receipts and do not silently change model/provider. Autonomy/owner-absence research is recorded in [AUTONOMY-2-YEAR-FEASIBILITY-2026-09-28](../../research/AUTONOMY-2-YEAR-FEASIBILITY-2026-09-28.md) as `RESEARCH_PREP_ONLY`; it grants no execution authority or profit claim.
