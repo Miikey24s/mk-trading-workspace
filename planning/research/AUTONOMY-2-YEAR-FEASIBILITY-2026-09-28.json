@@ -1,0 +1,81 @@
+{
+  "date": "2026-09-28",
+  "status": "RESEARCH_PREP_ONLY",
+  "scope": "Two-to-three-month preparation for approximately 24 months of owner absence during Vietnam military service",
+  "profit_guarantee": false,
+  "execution_authority_granted": false,
+  "verdict": {
+    "bounded_autonomous_pilot_in_90_days": "conditional",
+    "reliable_large_income_for_24_months": "not_demonstrable_low_confidence",
+    "recommended_default": "paper_or_shadow_until_all_gates_pass; capped_live_only",
+    "ai_direct_order_authority": "no"
+  },
+  "verified": [
+    {
+      "claim": "Vietnam military service law Article 21 sets peacetime active service at 24 months, with statutory extension conditions.",
+      "source": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2015/05/3887.signed.pdf"
+    },
+    {
+      "claim": "FINRA algorithmic-trading guidance covers risk assessment, code development, testing/system validation, trading systems and compliance, including system-problem tracking and risk-control review.",
+      "source": "https://www.finra.org/rules-guidance/notices/15-09"
+    },
+    {
+      "claim": "NIST AI RMF provides an official AI-risk governance framework.",
+      "source": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "claim": "17 CFR 240.15c3-5 is a primary market-access risk-control reference; direct applicability depends on venue and jurisdiction.",
+      "source": "https://www.ecfr.gov/current/title-17/chapter-II/part-240/section-240.15c3-5"
+    }
+  ],
+  "inferences": [
+    "Owner absence makes continuity, recovery, reconciliation and capital preservation higher priority than adding models.",
+    "Institutional automated trading is normally supported by monitoring, controls and people; it is not evidence that a solo bot can run unattended for 24 months with stable profit.",
+    "AI should remain typed advisory/ranking/anomaly/research output; deterministic risk and execution layers own authority."
+  ],
+  "unknowns": [
+    "Vietnam-specific tax, digital-asset/venue status and broker terms for the chosen instrument.",
+    "MFA, KYC, account-recovery and lawful-delegation options for the chosen venue.",
+    "Actual strategy edge after fees, slippage, latency, market impact and regime changes.",
+    "Whether the owner can access communications or approve actions during service."
+  ],
+  "must_have": [
+    "Deterministic baseline and causal data contract",
+    "Cost/slippage/latency-aware walk-forward and locked holdout",
+    "30-60 day paper/forward soak with zero unexplained reconciliation drift",
+    "Hard position/loss/order/stale-data/gap/clock/mismatch kill switches",
+    "Idempotent order and restart/recovery path",
+    "Least-privilege API, withdrawal disabled, IP allowlist, separate small account",
+    "24/7 host observability, backup/restore and outage drills",
+    "Lawful MFA/KYC/recovery/delegate path",
+    "24-month capital reserve and explicit stop policy",
+    "AI cannot self-promote, self-edit risk limits or open execution authority"
+  ],
+  "defer": [
+    "PPO/SAC/MuZero and other RL execution policies",
+    "GNN/TDA/chaos/SOC/MEV as live alpha",
+    "HFT tick engine, QPU, SNN/neuromorphic, self-evolving live agents",
+    "Prompt-to-order, wallet/custody/DEX execution and high leverage",
+    "Multi-venue complexity before one venue has passed gates"
+  ],
+  "critical_path_days": {
+    "1-14": "Contracts, risk budget, venue/legal/account continuity and absence runbook",
+    "15-35": "Canonical data, deterministic baseline, costs, OOS/WFO and locked holdout",
+    "36-60": "Paper/forward plus fault injection and restore/reconciliation drills",
+    "61-75": "24/7 shadow and owner-absence rehearsal",
+    "76-90": "Capped live only if all gates pass; otherwise paper/research only"
+  },
+  "go_no_go": [
+    "Net-of-cost forward evidence without look-ahead",
+    "No unreconciled fills or position drift",
+    "Fault injection, restart, restore and outage drills pass",
+    "API/account security and recovery path verified",
+    "Drawdown/ruin fits predefined VND risk budget and reserve",
+    "No unbounded AI execution or self-modification"
+  ],
+  "limitations": [
+    "Web tool returned errors for some current regulatory pages; non-verified pages were not used as evidence.",
+    "This artifact is not legal, tax or investment advice.",
+    "No broker, exchange, OAuth, account or live-trading access was opened."
+  ]
+}
