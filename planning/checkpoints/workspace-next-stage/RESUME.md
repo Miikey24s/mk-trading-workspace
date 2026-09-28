@@ -1,5 +1,11 @@
 # Workspace next stage — execution resume
 
+## Architecture correction 2026-09-28 · Dedicated WebGPT is the lightweight custom fork
+
+- The intended VI Dubber path is **ChatGPT Web → Dedicated Dubber-WebGPT → VI Dubber**. Dedicated WebGPT is a lightweight, isolated custom runtime that reuses the checked-out `D:\ANNAM\AI\codex-chatgpt-web-cockpit` fork; “Cockpit” here is the historical/core checkout name, not a global route, UI dependency or fallback provider.
+- The upstream `D:\ANNAM\AI\codex-chatgpt-web` v6 checkout is not the current product runtime. A mistaken native migration was reverted immediately; live runtime is back on the custom fork at port `17850`, browser-only/direct Responses, with global Codex configuration untouched.
+- Verified after rollback: `uv run vi-dubber webgpt-runtime status` reports `ONLINE`, login `OK`, models `chatgpt-web/gpt-5.6-sol-instant` and `chatgpt-web/gpt-5.6-sol`; focused VI WebGPT tests pass `34`; no Job12 replay or provider message was sent.
+
 ## Current turn refresh 2026-09-28 · external gates + offline departure wave
 
 - External-gate matrix is recorded in [EXTERNAL-GATES-PACKET-2026-09-28](EXTERNAL-GATES-PACKET-2026-09-28.md). **No owner action is required immediately**: Dedicated WebGPT local health is `ok`, but provider acceptance is still blocked on a real assistant turn. OAuth/cloud destination, TypeSafe key, human listening, broker/demo/live/holdout and public/destructive actions remain explicit gates; no secret or external write was performed.
