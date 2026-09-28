@@ -6,12 +6,12 @@
 - The upstream `D:\ANNAM\AI\codex-chatgpt-web` v6 checkout is not the current product runtime. Live runtime is on the extracted core at port `17850`, browser-only/direct Responses, with the global Codex configuration untouched. The previous checkout `D:\ANNAM\AI\codex-chatgpt-web-cockpit` remains an explicit rollback/reference path through `VI_DUBBER_WEBGPT_CORE`.
 - Verified after extraction: `uv run vi-dubber webgpt-runtime status` reports `ONLINE`, login `OK`, models `chatgpt-web/gpt-5.6-sol-instant` and `chatgpt-web/gpt-5.6-sol`; core typecheck passes and the full core suite is `814 pass / 5 environment-specific fail` (Windows symlink privilege and optional Electron dependency); focused VI WebGPT tests pass `66`. A later bounded post-login canary was attempted and failed at browser completion; it did not replay Job12 or modify its cache/receipts.
 
-## Current turn refresh 2026-09-28 · post-fix canary passed; Job12 resume is next
+## Current turn refresh 2026-09-28 · post-fix canary passed; Job12 resume is running
 
 - Dedicated WebGPT source revision `3bde59b375e450a25b0d9a365d778b2c8ade55df` is deployed at port `17850`; runtime status is `ONLINE`, login `OK`, and the catalog still exposes `chatgpt-web/gpt-5.6-sol-instant` and `chatgpt-web/gpt-5.6-sol`.
 - The targeted browser-worker repair was validated by a bounded canary: trace `a345a230e305` reached `16-turn-completed`, HTTP returned `200` with `status=completed`, and the production `_extract_json(..., array=False)` path accepted `{translations:[{id:int,vi:string}]}` with one item. Receipt: [P23-webgpt-canary-post-fix-2026-09-28](../../../projects/vi-dubber/work/checkpoints/P23-webgpt-canary-post-fix-2026-09-28.md), project commit `b851c47`.
 - The synthetic marker was escaped by the ChatGPT Web wrapper (`CANARY\\_OK`), so this gate proves completion and payload shape; it does not prove semantic translation quality.
-- Retained Job12 is unchanged and still terminal failed at translation (`0.3711246200607903`, `28/28` ASR chunks, `864` cached unique IDs, `49` receipts, no output MP4). Before resuming, re-check idle health, source revision, disk and single-lease ownership, then run only the supported `--resume` command. Do not use `--fresh`, delete receipts/locks, create a duplicate worker, or switch provider/model.
+- Retained Job12 has been resumed under its single lease (PID `31688`; parent `19844`) with the supported `--resume` command. It is currently `running/translation`; receipt files now cover contiguous IDs `0..1055` (`1,056` unique IDs), while the state journal is still catching up from its last written `832/4277` snapshot. Do not use `--fresh`, delete receipts/locks, create a duplicate worker, or switch provider/model.
 
 ## Historical turn refresh 2026-09-28 · post-login canary was previously blocked
 
