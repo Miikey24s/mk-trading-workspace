@@ -1,0 +1,70 @@
+{
+  "schema": "m7-traceability-refresh/v8",
+  "captured_at": "2026-09-28T11:42:43.456+07:00",
+  "status": "PREP_ONLY",
+  "purpose": "Minimal additive pointer correction over r7; update the current MT5 owner-absence-safety head and mutable Job12 snapshot without rewriting historical evidence.",
+  "base_receipt": {
+    "json": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-REFRESH-2026-09-28-r7.json",
+    "markdown": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-REFRESH-2026-09-28-r7.md",
+    "json_sha256": "f9ba88985f4865ec2269c25a7ff81fdadfa25452868c0470f052fac1e58aab99",
+    "markdown_sha256": "692b7129080647584723eef09b84f9b32be0c69cd4a65ff210d0a2d484897c7b"
+  },
+  "root_snapshot": {
+    "current_head": "e928cd117345d2e5127327e6d6c195d19ba3206e",
+    "memo_commit": "7517bd634c87de6eae55d8c40ace82526ca56512"
+  },
+  "mt5_pointer": {
+    "head": "b27b1a257fa994079381999b9b6e23ff43eb767e",
+    "prior_r7_head": "3d6d58d38558af8eb83a9d3c42acadbf305474d8",
+    "change": "owner absence safety contract amended with advisory mode",
+    "focused_tests": "10 passed",
+    "bridge_accounting_execution": "27 passed",
+    "compileall": "pass",
+    "diff_check": "pass",
+    "execution_authority": "unchanged; no live/broker authority"
+  },
+  "job12": {
+    "job_id": "8dc51f8a892aba21",
+    "status": "running",
+    "stage": "separation",
+    "progress": 0.172701916495551,
+    "message": "Đang tách lời thoại khỏi nhạc và SFX · 220/487",
+    "current_window": "220/487",
+    "completed_chunks": 11,
+    "total_chunks": 29,
+    "current_chunk": "chunk_0011",
+    "state_updated_at": "2026-09-28T04:42:42.360163+00:00",
+    "wrapper_pid": 17692,
+    "vi_dubber_pid": 14320,
+    "python_pid": 21328,
+    "lease_pid": 20288,
+    "process_tree_count": 4,
+    "single_run_root_observed": true,
+    "source_sha256": "8dc51f8a892aba2103728a8d2360b30f9a6319d5015ff8fd00ef4bdbc4b08ddf",
+    "state_sha256": "e3bf8ced5bee04ec6754027e7a31a1439aab93decb8841b5df0c24033401b7b7",
+    "run_lock_sha256": "2ebe9ceefca9038e9fd1202f5eadb197c5725e189468722e572d6e397311ae5b",
+    "acceptance": "running side lane only; no whole-pipeline acceptance"
+  },
+  "m7_reference": {
+    "packet": "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-PREP.md",
+    "ids_count": 16,
+    "ids_unique": 16,
+    "statuses": "unchanged from r7"
+  },
+  "validation": {
+    "memo_boundary": "unchanged from r7: RESEARCH_PREP_ONLY; no profit guarantee; no execution authority",
+    "nested_code_changed_by_refresh": false,
+    "acceptance_ledger_changed": false,
+    "external_operations": false,
+    "job12_runtime_mutable": true,
+    "wip_preserved": true
+  },
+  "sha256": {
+    "planning/CURRENT-CONTEXT.md": "c05e1cdc866a62a9acac2f7be9a4fafeba9f2603befd3bc82cfd5e163a0e57ca",
+    "planning/checkpoints/workspace-next-stage/RESUME.md": "dcc07527ed04414a51695da16ad6dab08545b93b076c00e2a372a5ad8b7a8fbf",
+    "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-REFRESH-2026-09-28-r7.json": "f9ba88985f4865ec2269c25a7ff81fdadfa25452868c0470f052fac1e58aab99",
+    "planning/checkpoints/workspace-next-stage/M7-TRACEABILITY-PREP-2026-09-27/M7-TRACEABILITY-REFRESH-2026-09-28-r7.md": "692b7129080647584723eef09b84f9b32be0c69cd4a65ff210d0a2d484897c7b",
+    "projects/vi-dubber/work/job-8dc51f8a892aba21/state.json": "e3bf8ced5bee04ec6754027e7a31a1439aab93decb8841b5df0c24033401b7b7",
+    "projects/vi-dubber/work/job-8dc51f8a892aba21/run.lock": "2ebe9ceefca9038e9fd1202f5eadb197c5725e189468722e572d6e397311ae5b"
+  }
+}
