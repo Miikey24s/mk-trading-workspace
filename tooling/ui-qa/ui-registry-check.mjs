@@ -242,6 +242,13 @@ export async function auditUiRegistry({ workspace = DEFAULT_WORKSPACE, systemsRo
       errors.push(`${configPath}: invalid JSON (${error.message})`)
       continue
     }
+    // A missing pin list means the project has not adopted a shared system.
+    // A present, malformed list is registry drift and must be visible instead
+    // of being silently reported as `adoption: none`.
+    const hasSharedUiPins = Object.prototype.hasOwnProperty.call(config, 'sharedUiPins')
+    if (hasSharedUiPins && !Array.isArray(config.sharedUiPins)) {
+      errors.push(`${configPath}: sharedUiPins must be an array when declared`)
+    }
     const pins = Array.isArray(config.sharedUiPins) ? config.sharedUiPins : []
     const projectPins = []
     for (const pin of pins) {

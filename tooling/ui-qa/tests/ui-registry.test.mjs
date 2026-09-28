@@ -53,3 +53,19 @@ test('rejects a candidate pin without contract and focused receipt evidence', as
   assert.ok(report.errors.some(error => error.includes('candidate requires an existing focused promotion receipt')))
 })
 
+test('rejects a malformed shared pin registry instead of treating it as no adoption', async () => {
+  const workspace = await mkdtemp(path.join(os.tmpdir(), 'tw-ui-registry-workspace-'))
+  const systemsRoot = await mkdtemp(path.join(os.tmpdir(), 'tw-ui-registry-systems-'))
+  const projectRoot = path.join(workspace, 'projects', 'malformed-consumer')
+  await mkdir(path.join(projectRoot, 'ui'), { recursive: true })
+  await writeFile(path.join(projectRoot, 'ui', 'project-ui.json'), JSON.stringify({
+    schemaVersion: 1,
+    status: 'exploration',
+    sharedUiPins: { system: 'annam-productivity', version: '1.0.0' },
+  }))
+
+  const report = await auditUiRegistry({ workspace, systemsRoot })
+  assert.equal(report.status, 'error')
+  assert.ok(report.errors.some(error => error.includes('sharedUiPins must be an array when declared')))
+})
+
