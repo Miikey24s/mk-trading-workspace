@@ -10,6 +10,25 @@ Kit không điều phối model, không sửa ledger, không tự khởi động
 
 ## CLI
 
+### Shared UI registry check
+
+`registry-check` is a read-only metadata and snapshot oracle for the layered
+UI platform. It discovers every `projects/**/ui/project-ui.json`, validates
+the pinned token source hash, regenerates the deterministic snapshot in
+memory, checks the consumer snapshot byte-for-byte, and reports each pin's
+explicit scope/adoption mode. A token manifest marked `candidate` is rejected
+unless the pin or manifest names an existing contract reference and a focused
+receipt containing state, keyboard/focus, and light/dark evidence.
+
+```powershell
+npm --prefix tooling/ui-qa run registry-check
+```
+
+The checker does not migrate consumers, change token files, run a browser, or
+contact Figma, OAuth, providers, brokers, or external services. A non-zero
+exit means metadata, source/snapshot content, or candidate-promotion evidence
+drifted.
+
 Từ TradingWorkspace (hoặc dùng đường dẫn tuyệt đối):
 
 ```powershell

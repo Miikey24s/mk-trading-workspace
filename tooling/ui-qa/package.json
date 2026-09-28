@@ -7,7 +7,8 @@
   "scripts": {
     "doctor": "node qa.mjs doctor",
     "smoke": "node qa.mjs smoke",
-    "test": "node --test tests/cli.test.mjs"
+    "test": "node --test tests/cli.test.mjs tests/ui-registry.test.mjs",
+    "registry-check": "node ui-registry-check.mjs --json"
   },
   "devDependencies": {
     "@playwright/cli": "0.1.21",

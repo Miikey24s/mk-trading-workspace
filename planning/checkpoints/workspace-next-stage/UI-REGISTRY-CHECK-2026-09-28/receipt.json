@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "scope": "offline read-only shared UI consumer metadata, token source hashes, and deterministic snapshot parity",
+  "tool": "tooling/ui-qa/ui-registry-check.mjs",
+  "command": "npm --prefix tooling/ui-qa test",
+  "workspace": "D:/ANNAM/TradingWorkspace",
+  "systemsRoot": "D:/ANNAM/UI-Systems",
+  "discovery": {
+    "projectConfigs": 6,
+    "sharedPins": 2,
+    "partialProjects": 2,
+    "errors": 0
+  },
+  "validatedPins": [
+    {
+      "project": "projects/mt5-tradingview-backtester",
+      "system": "annam-productivity",
+      "version": "1.0.0",
+      "scope": ["prop.report.controls"],
+      "sourceSha256": "578f95b7f93be56bd4375bcb71512a90e33528c7213e7d1e346f65c2d55186f9",
+      "snapshotSha256": "85f7fa1bcb545c4a8a1ea4a1dd4fd6ee41b8597167d8d2ccf6c1d117610de2c8"
+    },
+    {
+      "project": "projects/vi-dubber",
+      "system": "annam-productivity",
+      "version": "1.0.0",
+      "scope": ["header.raw-json-control"],
+      "sourceSha256": "578f95b7f93be56bd4375bcb71512a90e33528c7213e7d1e346f65c2d55186f9",
+      "snapshotSha256": "85f7fa1bcb545c4a8a1ea4a1dd4fd6ee41b8597167d8d2ccf6c1d117610de2c8"
+    }
+  ],
+  "candidateGuard": "PASS: fixture test rejects a candidate pin without an existing contract reference and focused state/keyboard/theme receipt",
+  "tests": {
+    "command": "npm test --prefix tooling/ui-qa",
+    "passed": 6,
+    "failed": 0
+  },
+  "consumerMigration": false,
+  "externalSideEffects": false,
+  "providerAccess": false,
+  "brokerAccess": false,
+  "rollback": "Remove the checker invocation; consumer pins and snapshots remain unchanged."
+}
