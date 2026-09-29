@@ -485,3 +485,94 @@ Mẫu cập nhật gọn: **P1 / luồng xem kết quả · Bước 3/6 triển 
 - [x] Run `tests/test_p5c_live_check.py` successfully (4 passed).
 
 Status: hoàn tất kiểm tra phần mềm/connectivity theo phạm vi hẹp. Checkpoint ghi nhận account không cho trade và `OrderCheck` trả `10019 / No money`; không phải successful order validation hoặc live execution acceptance. `--connectivity-only` không cấp quyền gửi lệnh. Xem plan R0–R3/L để tiếp tục.
+
+## P6. FXReplay reference audit → MT5 chart workbench — 2026-09-29
+
+**Trạng thái:** `RESEARCH_PREP_ONLY`. Đây là quyết định sản phẩm và UI contract để chuẩn bị lát triển khai tiếp theo; chưa cấp quyền sửa runtime, mở broker/provider/OAuth, nạp dữ liệu ngoài, giao dịch hoặc deploy. Implementation phải tiếp tục qua worker/reviewer và validation riêng theo mục 12B.
+
+### Mục tiêu đã chốt
+
+MT5 cần tiến gần trải nghiệm một **FXReplay cá nhân hóa**: người dùng vào một session, nhìn chart/replay là trung tâm, thao tác quyết định ngay cạnh vùng giá, ghi journal theo đúng context, rồi quay lại analytics để hiểu và cải thiện kết quả. Mục tiêu là một vòng học có thể kiểm chứng — `replay → execute simulator → journal → inspect → improve` — chứ không phải ghép thêm nhiều trang dashboard.
+
+### Nguồn bằng chứng và giới hạn
+
+| Nguồn | Điều đã kiểm tra | Trạng thái |
+|---|---|---|
+| [FXReplay saved dashboard shell](../../projects/app.fxreplay.com/app.fxreplay.com/en-US/auth/testing/dashboard.html) | Angular shell `<fxr-root>`, base `/en-US/`, dark body, bundle/style được lưu cục bộ | `SAVED_CAPTURE_STATIC_ANALYSIS` |
+| [FXReplay chart bundle](../../projects/app.fxreplay.com/app.fxreplay.com/en-US/chunk-TX5FWBP3.js), [dashboard bundle](../../projects/app.fxreplay.com/app.fxreplay.com/en-US/chunk-J2JPKBE3.js) | Tên và luồng thành phần: top/bottom bar, replay transport, floating toolbar, symbol search, go-to, drawing, journal, news, order và analytics | `SAVED_CAPTURE_STATIC_ANALYSIS` |
+| [FXReplay style tokens](../../projects/app.fxreplay.com/app.fxreplay.com/en-US/styles-QA5EDHJF.css) | Dark/light semantic colors, spacing 2–32, radius, shadow, z-index và motion tokens; Nunito Sans/Lato/mono | `SAVED_CAPTURE_STATIC_ANALYSIS` |
+| [MT5 replay evidence 1440](../../projects/mt5-tradingview-backtester/foundation_v2/evidence/replay-ui-1440.png) | Chart hiện bắt đầu thấp; heading/context/takeaway/status chiếm nhiều chiều cao; rail và right panel cùng tranh chỗ | `LOCAL_RUNTIME_EVIDENCE` |
+| [FX Replay home](https://fxreplay.com/) | Public product positioning và feature vocabulary: Replay mode, Live Journal, Multipair & multichart, Go-to, Economic calendar, Performance analytics, on-chart review | `INTERNET_RESEARCH_POINT_IN_TIME` (HTTP 200, 2026-09-29) |
+| [FX Replay features](https://fxreplay.com/features) | Product loop nhấn mạnh execute trên chart, journal, review, discipline và train không nhìn trước tương lai | `INTERNET_RESEARCH_POINT_IN_TIME` (HTTP 200, 2026-09-29) |
+
+Bản lưu FXReplay không phải một runtime độc lập hoàn chỉnh: HTML chỉ là Angular shell, có dynamic chunk thiếu và request API/telemetry ngoài; PNG capture đã lưu bị đen. Vì vậy các kết luận về layout được lấy từ bundle/CSS, nội dung public và luồng sản phẩm; không được ghi như pixel-perfect reproduction. Payload API cũ có account/session identifier, không copy vào source, evidence mới hoặc prompt worker.
+
+### Quyết định TAKE / ADAPT / REJECT
+
+| Quyết định | Áp dụng cho MT5 | Ranh giới |
+|---|---|---|
+| **TAKE** | Dashboard ưu tiên resume session gần đây; Practice lấy chart làm trung tâm; replay transport luôn nhìn thấy; các thao tác mở theo context; review quay về đúng chart/candle/trade | Giữ flow đầu-cuối rõ hơn việc tăng số route |
+| **TAKE** | Top bar compact cho session, symbol, timeframe, dataset quality/cutoff, mode, theme và ngôn ngữ; rail công cụ có thể thu gọn; right dock chứa `Order draft · Journal · Inspect` | Thông tin ảnh hưởng quyết định mới ở lớp luôn hiện |
+| **TAKE** | `Go To`, symbol/timeframe, drawing, news/economic context và analytics liên kết cùng cursor/session | Mọi link phải giữ context, không mở một màn hình “mất nến đang xem” |
+| **ADAPT** | Tinh thần dark/light semantic tokens, spacing và motion của FXReplay | Bám token/foundation MT5 hiện có; chữ MT5 phải lớn, dễ đọc, Việt-first; không bê font/giá trị màu mù quáng |
+| **ADAPT** | “Trade directly on chart” | Chỉ là `Order draft`/simulator trong MT5 ở thời điểm này; broker lock, holdout, cutoff và quyền live vẫn fail-closed |
+| **ADAPT** | Multipair/multichart | Bắt đầu một chart + dock và một selection state đáng tin; chỉ thêm nhiều chart khi fixture chứng minh không làm mất context và không làm chart quá nhỏ |
+| **REJECT** | Copy paid plan, prop-firm CTA, branding, Mentor AI/marketplace hoặc external telemetry | Không thuộc mục tiêu local/personal và có thể tạo chi phí/quyền/data flow ngoài scope |
+| **REJECT** | Copy raw account/session payload hoặc giả lập “đã có runtime FXReplay” từ bản lưu | Saved capture chỉ là reference; MT5 phải dùng data contract/provenance của chính nó |
+
+### Khoảng trống MT5 cần giải quyết
+
+1. Practice hiện có nhiều heading/context/story/status trước chart, khiến chart không còn là bề mặt quyết định chính.
+2. Replay, Trade, Journal và Analytics đang tách route; thao tác từ chart chưa chia sẻ một selection/cursor/cutoff state đáng tin.
+3. Một số CTA như `Vẽ vùng` và `Trade draft` còn khóa; không được mở bằng mock nếu chưa nối capability/backend contract tương ứng.
+4. Một số điều hướng trong `foundation_v2/web/src/FxReplayShell.jsx` làm rơi `session`, `dataset` hoặc `cursor`; Analytics/Research cần quay lại đúng phiên và vị trí đã xem.
+5. Data Desk hiện thiên về đọc catalog/metadata; vòng local import/preview/quality report chưa đủ để coi data flow là hoàn chỉnh.
+6. Metadata và nhãn phụ dày, chữ nhỏ; cần phân cấp lại thay vì thêm card/wrapper. Flat-first là mặc định.
+
+### UI contract đích cho Practice workbench
+
+**Bố cục desktop:**
+
+- Top context bar khoảng 44–52px: session, symbol, timeframe, quality/cutoff, `Replay/Simulation`, broker lock, EN/VI và theme.
+- Rail trái khoảng 56–64px: select, crosshair, drawing, measure, reset; có tooltip và trạng thái active/disabled rõ.
+- Chart chiếm khoảng 70–78% viewport khả dụng; không để các khối giải thích lặp lại đẩy chart xuống dưới fold.
+- Right dock khoảng 300–340px, đóng/mở được; tab mặc định là `Order draft`, cạnh đó `Journal` và `Inspect`.
+- Replay transport gắn với đáy chart: previous, play/pause, next, speed, jump/go-to, live/cutoff và cursor time. Không để transport thành một route riêng.
+
+**Responsive:** ở 768px giữ chart + dock gọn; ở 360px chuyển rail/transport thành bottom bar và dock thành bottom sheet, nhưng giữ cùng state/labels và không dùng horizontal overflow để che action.
+
+**State tối thiểu dùng chung:**
+
+```text
+workspaceId
+sessionId
+datasetId
+cursorIndex
+decisionCutoff
+mode
+selectedCandle
+selectedTrade
+selectedAnnotation
+activeDockTab
+```
+
+URL/deep-link phải giữ tối thiểu `workspace/session/dataset/cursor/mode` khi điều hướng nội bộ. Mỗi panel đọc cùng selection state và phải phân biệt `loading`, `empty`, `stale`, `error`, `unknown` với `verified`; không suy diễn số liệu khi provenance/cutoff chưa đủ.
+
+### Lát triển khai và nghiệm thu tiếp theo
+
+| Lát | Phạm vi | Bằng chứng bắt buộc |
+|---|---|---|
+| P6.1 · Chart-first shell | Gộp context thành top bar; đưa story/provenance dài vào Inspect; làm chart và transport là trung tâm | Playwright ở 1440/768/360; không overflow; chart có thể nhìn/thao tác trước fold; lock/error/empty vẫn rõ |
+| P6.2 · Context-preserving workbench | Giữ session/dataset/cursor/mode qua shell; đồng bộ selection giữa chart, order draft, journal và inspect | Deep-link/back-forward fixture; chọn candle rồi kiểm tra cả ba dock; không rơi query |
+| P6.3 · Review loop | Link trade/journal/analytics/research trở lại exact candle/trade/cutoff; thêm on-chart review với provenance | Fixture chứng minh không future leak; số liệu analytics truy ngược được; stale/unknown hiển thị đúng |
+| P6.4 · Data Desk readiness | Local CSV preview/import/quality report theo contract hiện có; chưa mở provider ngoài | File nhỏ/thiếu cột/sai timezone/duplicate và dataset hợp lệ; hash/cutoff lưu được |
+| P6.5 · Visual polish | Typography lớn hơn, EN/VI, dark/light, spacing/motion theo token; giảm nested cards | Visual QA có baseline screenshot và keyboard/focus/contrast check; không đổi semantic state |
+
+Acceptance chung: có một luồng `mở session → replay đến cursor → chọn candle → tạo draft/journal → inspect provenance → xem analytics → quay lại đúng cursor`; không broker call; không mở holdout; không copy dữ liệu FXReplay; test và screenshot phải ghi command, viewport, fixture, exit code và giới hạn.
+
+### Không làm trong P6 và điều kiện xem xét lại
+
+- Không thay chart engine, framework, backend runtime hoặc auth chỉ vì muốn giống FXReplay; React/Vite/Lightweight Charts hiện có là incumbent cần reuse.
+- Không mở live trading, OAuth/provider, external data download, paid plan hoặc deploy từ UI research này.
+- Không thêm multichart, AI assistant, prop-firm simulator hay seconds data trước khi một chart + dock + provenance loop đạt acceptance.
+- Nếu chart vẫn quá nhỏ sau P6.1, nếu deep-link còn rơi context, hoặc nếu import không chứng minh được cutoff/hash, dừng polish và quay lại contract/state; ghi decision trong plan trước khi mở phạm vi.
