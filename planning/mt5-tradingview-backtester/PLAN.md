@@ -618,3 +618,7 @@ Acceptance chung: có một luồng `mở session → replay đến cursor → c
 7. **U9/Y12/Y26:** Miro và Figma Make round-trip chưa có evidence mới; clean clone/C0–C2, backup/restore và final all-journey acceptance chưa đóng.
 
 Operational note: audit 29/09 thấy `STATE.json` đã ở revision 389 trong khi `research/.../RESUME.md` còn header cũ; không sửa receipt lịch sử hoặc tự gọi full product complete. Các file dirty/evidence WIP của user và các lane khác được giữ nguyên; mọi commit trên chỉ chứa ownership của lát tương ứng.
+
+## P6 follow-up — Analytics UI integration — 2026-09-29
+
+U6 đã nối tiếp vào UI trong commit `2749a46`: Analytics gọi read model/API theo `X-Workspace-Id`, giữ filter side/outcome/date trong URL, hiển thị `loading/empty/blocked_by_data/stale/error/ready`, giữ provenance và export CSV qua authenticated fetch/blob. Validation riêng: `node --test tests/analytics-story.test.mjs tests/journalAnalytics.test.mjs` **9 passed** và `npm run build` **PASS**. Vì vậy dòng U6 trong checkpoint trên được nâng từ “backend contract, UI còn mở” thành **UI filter/export đã tích hợp ở phạm vi local contract**; full path-dependent analytics, real-data/OOS/prop lifecycle vẫn chưa đóng.
