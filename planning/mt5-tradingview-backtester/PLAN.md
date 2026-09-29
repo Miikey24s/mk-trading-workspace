@@ -576,3 +576,45 @@ Acceptance chung: có một luồng `mở session → replay đến cursor → c
 - Không mở live trading, OAuth/provider, external data download, paid plan hoặc deploy từ UI research này.
 - Không thêm multichart, AI assistant, prop-firm simulator hay seconds data trước khi một chart + dock + provenance loop đạt acceptance.
 - Nếu chart vẫn quá nhỏ sau P6.1, nếu deep-link còn rơi context, hoặc nếu import không chứng minh được cutoff/hash, dừng polish và quay lại contract/state; ghi decision trong plan trước khi mở phạm vi.
+
+## P6 execution checkpoint — 2026-09-29
+
+**Trạng thái:** `SAFE_SLICES_EXECUTED / FULL_PRODUCT_NOT_COMPLETE`. Lượt này đã thực thi các phần offline/local có đủ contract và fixture; không dùng nhãn test xanh để đóng toàn bộ U1–U9 hoặc Y01–Y26. Broker, live, holdout content, provider có phí/OAuth, Figma Make round-trip, Miro update và deploy vẫn giữ gate riêng.
+
+### Các lát đã tích hợp
+
+| Lát | Kết quả | Commit/evidence |
+|---|---|---|
+| P6.1 chart-first shell | Practice gọn hơn, chart/transport là trung tâm, provenance vào Inspect, responsive 1440/768/360 | `f7c6511` |
+| P6.2 context/deep-link | Giữ workspace/session/dataset/cursor/cutoff/mode; validate cursor/cutoff; route tests | `77fcc88`, `f992b4c`, `f6b6ad9` |
+| P6.3 review context | Journal giữ dataset/candle/cutoff/trade provenance và link quay lại replay/analytics | `fa3dae3` |
+| P6.4 Data Desk | CSV local preview → quality → explicit import; hash/range/duplicate/order/gap; stale/error/empty; không gửi path | `6359895`, `5dfc91d` |
+| P6.5 visual/accessibility | Typography/focus/contrast/reduced motion/overflow polish, scoped trong app | `b209aa6` |
+| U4 annotation seam | Typed cutoff-bound chart annotation client, revision guard, reject future/unsafe fields | `0b24869` |
+| U5 bounded regime contract | Regime partition deterministic, chronological, `known_at` fenced, metadata-only holdout | `5b96fb1`, `foundation_v2/evidence/U5-regime-segmentation-r1.json` |
+| U6 analytics backend | Filtered read model/API/CSV export với provenance; thiếu closed ledger → `blocked_by_data` | `3b5774d` |
+| U7 AI boundary | Normalize nested forbidden keys và giữ fail-closed causal/context contract; không chạm provider thật | `eefe12b`, [U7 audit](U7-AI-BOUNDARY-AUDIT-2026-09-29.md) |
+| U3 Learn safety | Reset workspace + request-token chống stale resource response; không lộ answer key | `28b9db2` |
+| Replay fixture | Acceptance fixture tự mock dataset catalog, không phụ thuộc backend đang chạy | `4bb4807` |
+
+### Validation đã chạy
+
+- `node --test tests/*.test.mjs`: **34/34 PASS**.
+- `npm run build`: **PASS**; còn cảnh báo bundle JS >500 kB, không phải lỗi build.
+- Replay, Learn, Prop và Settings Playwright acceptance: **đều PASS** ở 1440/768/360; replay có historical cutoff, no-future-leak, broker lock, conflict reload, branch lineage, resume và keyboard step.
+- `foundation_v2/.venv/Scripts/python.exe -m pytest tests/test_u5c_oos.py -q`: **23 passed, 5 subtests passed**.
+- Data Desk + Analytics focused Python tests: **9 passed**; `compileall` API/read-model/research pass.
+- `git diff --check`: pass cho WIP hiện tại.
+- Replay fixture trước đây fail vì proxy `/api/v2/data/datasets` trỏ `127.0.0.1:8010`; đã cô lập catalog fixture và chạy lại thành công. Không còn listener tạm trên các port QA.
+
+### Phần còn mở sau checkpoint
+
+1. **U1/U4:** full visual/runtime acceptance trên backend fixture thật, drawing gesture gắn chart anchor và manual replay ↔ engine parity; renderer/license review vẫn chưa đóng.
+2. **U2:** provider/calendar/news thật, license/data entitlement và quy trình production-sized Data Desk chưa mở.
+3. **U3/U6:** Analytics UI chưa nối toàn bộ filter/export backend read model; Playbook version/diff và full path-dependent metrics/prop lifecycle còn mở.
+4. **U5:** regime partition mới là contract/fixture; API/job/worker outcome wiring, mid-compute resume, broader stress/regime và real licensed-data OOS chưa nghiệm thu. Holdout vẫn khóa.
+5. **U7:** provider thật, grounded explanation/overlay preview/undo chưa được phép và chưa nghiệm thu; core vẫn dùng được khi AI tắt.
+6. **U8:** chỉ có simulator/deny-by-default foundation; demo broker và live lifecycle cần exact account, quote, risk, action và permission gate riêng.
+7. **U9/Y12/Y26:** Miro và Figma Make round-trip chưa có evidence mới; clean clone/C0–C2, backup/restore và final all-journey acceptance chưa đóng.
+
+Operational note: audit 29/09 thấy `STATE.json` đã ở revision 389 trong khi `research/.../RESUME.md` còn header cũ; không sửa receipt lịch sử hoặc tự gọi full product complete. Các file dirty/evidence WIP của user và các lane khác được giữ nguyên; mọi commit trên chỉ chứa ownership của lát tương ứng.
