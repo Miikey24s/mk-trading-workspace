@@ -21,7 +21,7 @@
     "name": "annam-productivity",
     "candidateVersion": "1.1.0",
     "baseVersion": "1.0.0",
-    "sourceSha256": "cd08c95b362eae674743b7a97785909e6159444d18ae54554555de2713f7459a",
+    "sourceSha256": "22d2dce8c790f9fbe5be7bb4674949a77440d61db44278a4d5c257d82ef9f564",
     "completeSnapshot": true,
     "retainsBaseManifestVariables": true,
     "retainsBaseButtonContract": true,
@@ -30,8 +30,8 @@
       "core/contracts/presentation-state/1.0.0/schema.json": "a479b94111be644d3c51de68fff2901560e0ba2d5c41a420f25232e250e08119",
       "core/tokens/productivity/1.1.0/light.tokens.json": "d602cbd96e295fc3292fd7246d274b27b4b1e580f14b97ffa14e0ccc780f54d6",
       "core/tokens/productivity/1.1.0/dark.tokens.json": "444a11bbe74f21e8997bfd21f100b8ce8165c23233af07e9119f161d0ad83098",
-      "core/tokens/productivity/1.1.0/manifest.json": "ace7ddc864eb1e5c38dd407364bd6601fa14f36eaa3396f308922be2dc87e915",
-      "core/tokens/productivity/1.1.0/ui-system.snapshot.css": "3ed7871cc7ae5698664550d9b0e709bd0a7762dc2e51bebc5ba1430060364cfa"
+      "core/tokens/productivity/1.1.0/manifest.json": "199db1d7e2afa56400f87b89ab171b2b521afa0cda1cf8dcf0164c6d8a5e59d5",
+      "core/tokens/productivity/1.1.0/ui-system.snapshot.css": "b6f735ae62652fbb1495867d05e80f30a6ab27a547601a2c8ca6248219541153"
     }
   },
   "validation": {

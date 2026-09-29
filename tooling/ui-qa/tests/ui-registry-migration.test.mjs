@@ -161,3 +161,63 @@ test('candidate migration and rollback preserve VI/MT5 1.0.0 pins', async () => 
     }
   }
 })
+
+test('candidate manifest carries contract and focused receipt references', async () => {
+  const fixtureWorkspace = await mkdtemp(path.join(os.tmpdir(), 'tw-ui-registry-manifest-gate-'))
+  const fixtureSystemsRoot = path.join(fixtureWorkspace, 'UI-Systems')
+  const candidateProject = path.join(fixtureWorkspace, 'projects', 'candidate-productivity')
+  const candidateSource = path.join(systemsRoot, 'core', 'tokens', 'productivity', '1.1.0')
+  const candidateTarget = path.join(fixtureSystemsRoot, 'core', 'tokens', 'productivity', '1.1.0')
+  const contractSource = path.join(systemsRoot, 'core', 'contracts', 'presentation-state', '1.0.0')
+  const contractTarget = path.join(fixtureSystemsRoot, 'core', 'contracts', 'presentation-state', '1.0.0')
+  const componentSource = path.join(systemsRoot, 'components', 'button', '1.0.0')
+  const componentTarget = path.join(fixtureSystemsRoot, 'components', 'button', '1.0.0')
+  const receiptRelative = path.join(
+    'planning',
+    'checkpoints',
+    'workspace-next-stage',
+    'UI-ECOSYSTEM-PRESENTATION-STATE-2026-09-28',
+    'receipt.json',
+  )
+  try {
+    await Promise.all([
+      cp(candidateSource, candidateTarget, { recursive: true }),
+      cp(contractSource, contractTarget, { recursive: true }),
+      cp(componentSource, componentTarget, { recursive: true }),
+      cp(
+        path.join(workspace, receiptRelative),
+        path.join(fixtureWorkspace, receiptRelative),
+        { recursive: false },
+      ),
+    ])
+    const candidateSnapshot = path.join(candidateTarget, 'ui-system.snapshot.css')
+    const candidateSnapshotPath = path.join(candidateProject, 'ui', 'ui-system.snapshot.css')
+    await mkdir(path.dirname(candidateSnapshotPath), { recursive: true })
+    await cp(candidateSnapshot, candidateSnapshotPath)
+    const candidateHeader = (await readFile(candidateSnapshot, 'utf8')).split('\n', 1)[0]
+    const sourceSha256 = candidateHeader.match(/source-sha256: ([a-f0-9]{64})/i)?.[1]
+    assert.ok(sourceSha256, 'candidate snapshot must carry a source SHA-256')
+
+    await writeFile(
+      path.join(candidateProject, 'ui', 'project-ui.json'),
+      JSON.stringify({
+        schemaVersion: 1,
+        status: 'candidate-migration',
+        sharedUiPins: [{
+          system: 'annam-productivity',
+          version: '1.1.0',
+          sourceSha256,
+          snapshot: 'ui/ui-system.snapshot.css',
+          scope: ['presentation-state.fixture'],
+        }],
+      }, null, 2),
+    )
+
+    const report = await auditUiRegistry({ workspace: fixtureWorkspace, systemsRoot: fixtureSystemsRoot })
+    assert.equal(report.status, 'ok')
+    assert.equal(report.summary.pinCount, 1)
+    assert.equal(report.projects[0].sharedUiPins[0].version, '1.1.0')
+  } finally {
+    await rm(fixtureWorkspace, { recursive: true, force: true })
+  }
+})

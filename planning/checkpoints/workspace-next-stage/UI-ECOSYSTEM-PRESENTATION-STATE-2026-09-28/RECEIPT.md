@@ -33,6 +33,11 @@ The generated 1.1.0 snapshot is a complete replacement candidate: it retains
 all 1.0.0 CSS variables and the 1.0.0 button contract/style, then adds the new
 state roles. It is not a partial override file.
 
+The candidate manifest now carries machine-readable `contractRef` and
+`focusedReceipt` references. The registry checker resolves those references
+inside the owned UI-Systems/workspace roots and rejects a candidate pin when
+either reference or its focused state/keyboard/theme evidence is missing.
+
 ## Contract decisions
 
 - `availability` is one of `loading`, `ready`, `empty`, `unavailable`,
@@ -64,7 +69,15 @@ node tooling/tokens/export-css.mjs \
   core/tokens/productivity/1.1.0/manifest.json \
   --out core/tokens/productivity/1.1.0/ui-system.snapshot.css
   generated complete deterministic snapshot; source-sha256:
-  cd08c95b362eae674743b7a97785909e6159444d18ae54554555de2713f7459a
+  22d2dce8c790f9fbe5be7bb4674949a77440d61db44278a4d5c257d82ef9f564
+
+Registry QA:
+
+```text
+npm --prefix tooling/ui-qa test — 11 passed, 0 failed
+npm --prefix tooling/ui-qa run registry-check — status ok; 6 configs,
+2 productivity 1.0.0 pins, 2 partial adoptions, 0 errors
+```
 
 python compatibility check:
   every 1.0.0 manifest CSS variable/component entry is retained: PASS
