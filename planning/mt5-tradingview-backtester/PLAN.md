@@ -637,9 +637,9 @@ Lượt thực thi tiếp theo đã đóng thêm các lát local/offline có con
 
 | Lát | Kết quả | Commit/evidence |
 |---|---|---|
-| U2 provider readiness | Data Provider Registry và Data Desk hiển thị readiness bounded (`offline/network/OAuth/entitlement/production_ready`); thiếu metadata mặc định fail-closed; không mở provider thật/OAuth/paid | `415fe78`; focused Python **7 passed**; build pass |
-| U3 Journal | Journal có structured decision context, immutable replay source/mode/cutoff, no-trade semantics, provenance/story và giữ tags; chỉ ghi qua revision contract | `066272f`, `8ff0bb2`, `c2816ec`; JS **39/39**, focused Python **4 passed**, build pass |
-| Y25 / U4d / U6e Prop | Objective snapshot (profit/daily loss/DD/calendar), truthful blocked/unknown state, simulation-only start→pause→resume/abandon, revision/event sequence/idempotency | `f19a23a`, `1d98e3c`; `npm run test:prop-ui` + build pass |
+| U2 provider readiness | Data Provider Registry và Data Desk hiển thị readiness bounded (`offline/network/OAuth/entitlement/production_ready`); thiếu metadata mặc định fail-closed; không mở provider thật/OAuth/paid | `415fe78`, `890e605`; focused Python **7 passed**; build pass |
+| U3 Journal | Journal có structured decision context, immutable replay source/mode/cutoff, no-trade semantics, provenance/story và giữ tags; chỉ ghi qua revision contract; Playbook giữ `playbook/revision` khi link sang Journal | `066272f`, `8ff0bb2`, `c2816ec`, `3f03ba7`, `528f506`; JS **40/40**, focused Python **4 passed**, build pass |
+| Y25 / U4d / U6e Prop | Objective snapshot (profit/daily loss/DD/calendar), truthful blocked/unknown state, simulation-only start→pause→resume/abandon/next-phase, revision/event sequence/idempotency và optional metadata guards | `f19a23a`, `1d98e3c`, `7cfa947`, `684b339`; `npm run test:prop-ui` + build pass |
 | U5 regime metrics | Gán trade theo entry segment, cross-segment count, metrics-v2 theo label, scope/starting-balance/holdout metadata; baseline và OOS scenario wiring, fail-closed range/cutoff | `8140a32`; focused OOS **28 passed, 5 subtests** |
 | U7 grounded offline AI | Deterministic chart explanation contract dùng evidence visible, context hash/cutoff/causal timestamp; chặn thiếu evidence, injection, future anchor; luôn `execution_capability=false`, `write_authority=false` | `9af29c9`, `f8af175`; chart contract **26 passed, 8 subtests**; chưa nối provider/panel thật |
 | U9/C05 portability | Read-only package readiness audit và isolated portability smoke; xác nhận workspace/Learn/execution HTTP 200, local-simulator, live/external execution disabled | `066272f`; `python scripts/portability_smoke.py` exit **0**; `package_readiness.py --require-clean` exit **1** đúng vì checkout còn dirty |
@@ -647,7 +647,7 @@ Lượt thực thi tiếp theo đã đóng thêm các lát local/offline có con
 
 ### Validation sau safe continuation
 
-- Frontend unit suite sau các lát mới: **39/39 PASS**.
+- Frontend unit suite sau các lát mới: **40/40 PASS**.
 - `npm run build`: **PASS**; còn cảnh báo chunk JavaScript >500 kB.
 - Replay, Learn, Prop và Settings Playwright acceptance vẫn PASS; Prop acceptance đã thêm objective/lifecycle/idempotency.
 - U5 OOS và U7 chart contract focused suites như bảng trên; Data Desk/provider readiness focused **7 passed**.
