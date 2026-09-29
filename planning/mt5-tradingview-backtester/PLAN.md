@@ -630,3 +630,55 @@ U6 đã nối tiếp vào UI trong commit `2749a46`: Analytics gọi read model/
 - **U5 regime wiring:** `f65f3cb` thêm `RegimePartitionRequest` typed vào job/protocol/hash, materialize bounded metadata sau row read, ghi result/checkpoint metadata và fail-closed với `known_at` vượt cutoff; chưa tính per-regime engine metrics. Focused OOS: **26 passed, 5 subtests**; evidence tại `foundation_v2/evidence/U5-regime-wiring-r1.json`. FH1 lifecycle suite bị chặn bởi cờ destructive DB bắt buộc (`TW_V2_ALLOW_DESTRUCTIVE_TEST_DB=1`), không phải regression; không tự bật cờ trên DB chưa xác nhận disposable.
 
 Sau các lát này, phần local có contract rõ đã được thực thi thêm; các gate external/provider/broker/holdout/Miro/Figma/clean-package trong mục “Phần còn mở” vẫn giữ nguyên.
+
+## P6 follow-up — safe execution continuation — 2026-09-29
+
+Lượt thực thi tiếp theo đã đóng thêm các lát local/offline có contract và fixture rõ. Đây là checkpoint bổ sung; không thay thế các gate external trong PRODUCT-COMPLETION-PLAN và không chuyển trạng thái thành full-product complete.
+
+| Lát | Kết quả | Commit/evidence |
+|---|---|---|
+| U2 provider readiness | Data Provider Registry và Data Desk hiển thị readiness bounded (`offline/network/OAuth/entitlement/production_ready`); thiếu metadata mặc định fail-closed; không mở provider thật/OAuth/paid | `415fe78`; focused Python **7 passed**; build pass |
+| U3 Journal | Journal có structured decision context, immutable replay source/mode/cutoff, no-trade semantics, provenance/story và giữ tags; chỉ ghi qua revision contract | `066272f`, `8ff0bb2`, `c2816ec`; JS **39/39**, focused Python **4 passed**, build pass |
+| Y25 / U4d / U6e Prop | Objective snapshot (profit/daily loss/DD/calendar), truthful blocked/unknown state, simulation-only start→pause→resume/abandon, revision/event sequence/idempotency | `f19a23a`, `1d98e3c`; `npm run test:prop-ui` + build pass |
+| U5 regime metrics | Gán trade theo entry segment, cross-segment count, metrics-v2 theo label, scope/starting-balance/holdout metadata; baseline và OOS scenario wiring, fail-closed range/cutoff | `8140a32`; focused OOS **28 passed, 5 subtests** |
+| U7 grounded offline AI | Deterministic chart explanation contract dùng evidence visible, context hash/cutoff/causal timestamp; chặn thiếu evidence, injection, future anchor; luôn `execution_capability=false`, `write_authority=false` | `9af29c9`, `f8af175`; chart contract **26 passed, 8 subtests**; chưa nối provider/panel thật |
+| U9/C05 portability | Read-only package readiness audit và isolated portability smoke; xác nhận workspace/Learn/execution HTTP 200, local-simulator, live/external execution disabled | `066272f`; `python scripts/portability_smoke.py` exit **0**; `package_readiness.py --require-clean` exit **1** đúng vì checkout còn dirty |
+| PS-03 CSV security | Formula-injection hardening đã được receipt trước nghiệm thu scoped; numeric negative semantics giữ nguyên | existing hardening commit; formula matrix **90/90**, focused tests pass |
+
+### Validation sau safe continuation
+
+- Frontend unit suite sau các lát mới: **39/39 PASS**.
+- `npm run build`: **PASS**; còn cảnh báo chunk JavaScript >500 kB.
+- Replay, Learn, Prop và Settings Playwright acceptance vẫn PASS; Prop acceptance đã thêm objective/lifecycle/idempotency.
+- U5 OOS và U7 chart contract focused suites như bảng trên; Data Desk/provider readiness focused **7 passed**.
+- Không bật `TW_V2_ALLOW_DESTRUCTIVE_TEST_DB=1`; FH1/Path-2 destructive lifecycle tests vẫn bị gate đúng policy.
+- `git diff --check` và compile checks đã chạy ở các lane; WIP/evidence dirty của user vẫn được giữ nguyên.
+
+### Trạng thái sau checkpoint
+
+`SAFE_SLICES_EXECUTED / FULL_PRODUCT_NOT_COMPLETE`. Các phần local đã đủ contract được triển khai thêm, nhưng các mục sau vẫn mở: backend-backed full visual/runtime và renderer/license review; provider/calendar/news thật và entitlement production; path-dependent analytics và real-data/OOS/holdout; U7 provider/panel integration; U8 exact demo/live broker account/risk/action permission; Y12 Miro; Y26 Figma Make round-trip; clean clone/C0–C2 đầy đủ, backup/restore và final all-journey acceptance. Không claim các mục này bằng fixture offline hay test xanh cục bộ.
+
+## P6 follow-up — U9/C0-C2 packaging readiness — 2026-09-29
+
+Lát đóng gói an toàn đã được thêm trong nested repo commit `066272f` (shared
+commit này cũng chứa một lát Journal của worker khác):
+
+- `scripts/package_readiness.py` tạo inventory JSON chỉ đọc cho entrypoint,
+  dependency manifests, lockfiles, generated candidates, private/binary
+  candidates và data/runtime directories. `--require-clean` chỉ dùng trên
+  checkout mới; script không xoá/di chuyển/cài đặt, không khởi động app,
+  không gọi broker/provider, không đọc holdout và không thay đổi checkout.
+- `tests/test_package_readiness.py`: **2/2 PASS**; `git diff --check` PASS.
+- `python scripts/portability_smoke.py`: **exit 0** trên Windows/Python 3.12,
+  venv tạm + requirements cài được; workspace/Learn/execution HTTP 200,
+  local simulator, `live_execution_enabled=false`, `mt5_connection_attempted=false`,
+  temp tree đã dọn.
+- `package_readiness --require-clean`: **exit 1 đúng dự kiến** vì checkout
+  còn dirty WIP của các lane khác. Inventory hiện thấy các manifest/entrypoint
+  bắt buộc, không có generated file đã track; vẫn phải review riêng
+  `MacGateway.ex5`, các file MT5 `.ini/.bak`, data/runtime và license trước khi
+  đóng C06/C07.
+
+Kết luận scope: **C05 software portability smoke PASS**. C01/C02/C03/C04/C06/C07,
+clean clone Y15 và final U9 integration vẫn mở; không dùng smoke local hoặc
+inventory dirty để tuyên bố clean clone/full product complete.
