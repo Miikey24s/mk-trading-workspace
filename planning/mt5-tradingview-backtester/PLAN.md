@@ -622,3 +622,11 @@ Operational note: audit 29/09 thấy `STATE.json` đã ở revision 389 trong kh
 ## P6 follow-up — Analytics UI integration — 2026-09-29
 
 U6 đã nối tiếp vào UI trong commit `2749a46`: Analytics gọi read model/API theo `X-Workspace-Id`, giữ filter side/outcome/date trong URL, hiển thị `loading/empty/blocked_by_data/stale/error/ready`, giữ provenance và export CSV qua authenticated fetch/blob. Validation riêng: `node --test tests/analytics-story.test.mjs tests/journalAnalytics.test.mjs` **9 passed** và `npm run build` **PASS**. Vì vậy dòng U6 trong checkpoint trên được nâng từ “backend contract, UI còn mở” thành **UI filter/export đã tích hợp ở phạm vi local contract**; full path-dependent analytics, real-data/OOS/prop lifecycle vẫn chưa đóng.
+
+## P6 follow-up — U3/U4/U5 local slices — 2026-09-29
+
+- **U3 Playbook:** `d00e56d` thêm màn read-only list/detail/revision history và deterministic leaf diff; GET-only, không freeze/fork/mutation. `node --test tests/playbook.test.mjs`: **3 passed**; build pass.
+- **U4 chart annotations:** `b460f6e` nhận click trên visible candle để tạo local annotation draft có anchor/cutoff hợp lệ; future anchor/unsafe numbers bị loại, draft reset khi session/cursor/revision đổi. POST/persist vẫn khóa vì write authority chưa mở. Chart acceptance và `tests/chartAnnotations.test.mjs`: **5/5**, build/replay fixture pass.
+- **U5 regime wiring:** `f65f3cb` thêm `RegimePartitionRequest` typed vào job/protocol/hash, materialize bounded metadata sau row read, ghi result/checkpoint metadata và fail-closed với `known_at` vượt cutoff; chưa tính per-regime engine metrics. Focused OOS: **26 passed, 5 subtests**; evidence tại `foundation_v2/evidence/U5-regime-wiring-r1.json`. FH1 lifecycle suite bị chặn bởi cờ destructive DB bắt buộc (`TW_V2_ALLOW_DESTRUCTIVE_TEST_DB=1`), không phải regression; không tự bật cờ trên DB chưa xác nhận disposable.
+
+Sau các lát này, phần local có contract rõ đã được thực thi thêm; các gate external/provider/broker/holdout/Miro/Figma/clean-package trong mục “Phần còn mở” vẫn giữ nguyên.
