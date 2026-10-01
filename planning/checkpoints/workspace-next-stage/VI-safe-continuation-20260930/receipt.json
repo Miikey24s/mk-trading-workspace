@@ -1,0 +1,84 @@
+{
+  "schema": "vi-safe-continuation/v1",
+  "timestamp": "2026-09-30T23:24:05+07:00",
+  "scope": "offline-audit",
+  "project": "projects/vi-dubber",
+  "project_head": "da0717a458ebbc61a38b3a4149163a77ea9763da",
+  "root_head": "3eb1d84b37a9b76480a53a11daa3dd56be3f3dfb",
+  "plan_changed": true,
+  "code_changed": false,
+  "provider_started": false,
+  "oauth_started": false,
+  "external_write": false,
+  "active_job_process": false,
+  "doctor": {
+    "exit_code": 0,
+    "dependency_status": "OK",
+    "provider_status": "provider detail redacted / unavailable",
+    "note": "read-only health probe; no runtime start or login"
+  },
+  "tests": {
+    "full": {
+      "command": "uv run pytest -q",
+      "passed": 671,
+      "skipped": 1,
+      "warnings": 2,
+      "failed": 1,
+      "failure": "test_web_e2e_playwright.py::test_playwright_browser_reload_preserves_ui[chromium] initial page.goto timeout 20s",
+      "duration_seconds": 104.68
+    },
+    "isolated_reload": {
+      "command": "uv run pytest -q tests/test_web_e2e_playwright.py::test_playwright_browser_reload_preserves_ui",
+      "result": "1 passed",
+      "duration_seconds": 21.04,
+      "log": "pytest-reload-isolated.log"
+    },
+    "e2e_module": {
+      "command": "uv run pytest -q tests/test_web_e2e_playwright.py",
+      "result": "2 passed, 1 failed",
+      "failure": "reload test initial page.goto timeout after two module tests",
+      "duration_seconds": 42.27,
+      "log": "pytest-e2e-module.log"
+    },
+    "ui_group": {
+      "command": "uv run pytest -q tests/test_web_e2e_playwright.py tests/test_m3_react_ui_playwright.py tests/test_m5_catalog_metadata_ui_contract.py",
+      "result": "5 passed, 1 failed",
+      "failure": "same reload test initial page.goto timeout",
+      "duration_seconds": 57.58,
+      "log": "pytest-ui-group.log"
+    },
+    "control_first_reload": {
+      "result": "2 passed",
+      "duration_seconds": 48.37,
+      "log": "pytest-e2e-first-reload.log"
+    },
+    "control_model_reload": {
+      "result": "2 passed",
+      "duration_seconds": 47.22,
+      "log": "pytest-e2e-model-reload.log"
+    }
+  },
+  "visual": {
+    "artifact": "projects/vi-dubber/work/artifacts/ui-qa/playwright_layout_check.png",
+    "sha256": "34F6CB4C13EEB4F2BDCFD6F3DE4A9C4A954B66C9FC0FFBD8B203A086D86B5AFC",
+    "assertion": "successful layout test captured non-empty screenshot"
+  },
+  "log_sha256": {
+    "pytest-reload-isolated.log": "51DD517A8D56FCE48BDC8A5A3927FADCDA45922B57B34BC1EC921C6FE758FAA6",
+    "pytest-e2e-module.log": "03230321D510517CB5722111EDF1A66914F9CA471A88DF4F586764482F5C37EA",
+    "pytest-ui-group.log": "B70BFE4D7009BE7BE3E1C0FF6AE3D306140823EA0F49CF329636296AF77D529B",
+    "pytest-e2e-model-reload.log": "7A007258E1F3C6EB312E2F773CAAAFAA7AA987C01071C38246F1257860F31859",
+    "pytest-e2e-first-reload.log": "C34C923213746014394318CD636F0F52E23B8B53B138DDAB44FDB60E2A77C765"
+  },
+  "blockers": [
+    "Dedicated WebGPT stable assistant-turn/provider acceptance",
+    "retained Job12 translation resume gate",
+    "M5/M6/M7 PREP_ONLY and OAuth/Drive external-write gates",
+    "whole-pipeline long-form/real-provider acceptance",
+    "shared Playwright Gradio fixture/order flake"
+  ],
+  "resume": "Fix or quarantine e2e fixture offline; update vi PLAN before any UI code slice; resume exact Job12 only after stable provider canary",
+  "rollback": "No product changes; checkpoint is additive",
+  "plan_sha256": "9C80C82EB74291704471823907CAAF9DF7CF7625F8585653B19A0EA429ECF625",
+  "checkpoint_sha256": "85A5B7AB14A6E66CA66617B2A20A510F2DF6A0BEEF02C72F8F3F9BE241B8012F"
+}

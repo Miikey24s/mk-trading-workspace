@@ -1,0 +1,47 @@
+{
+  "checks": {
+    "api_queued_postgres_job": true,
+    "automatic_ranking_disabled": true,
+    "bounded_stress_matrix_persisted": true,
+    "broker_execution_capability": false,
+    "holdout_content_capability": false,
+    "nautilus_runtime_identity": {
+      "nautilus_trader": "1.231.0",
+      "pyarrow": "25.0.1",
+      "python": "3.12.10"
+    },
+    "nautilus_runtime_ready": true,
+    "oos_outcomes_fully_accounted": true,
+    "persisted_oos_result": true,
+    "separate_worker_processed_job": true,
+    "three_stress_scenarios_completed": true
+  },
+  "commit": "07fc8ea3479460cf4db68a781304481cf925b2d4",
+  "fixture": {
+    "dataset_id": "dataset-c78842701fb46f9c1a9d0e1525a64559ce4778943ee899009406234ed17f9fe3",
+    "holdout_from_utc": 86400,
+    "row_count": 24,
+    "workspace": "tenant-u5c-accept"
+  },
+  "job": {
+    "attempt_no": 1,
+    "fold_count": 1,
+    "job_id": "4672c14d4d334419a67debcbe5d5e6ab",
+    "result_sha256": "8f63530f65908cf45c5938bd240dffdafccf022f971e172e43c94b3941d0ddbe",
+    "status": "completed",
+    "status_counts": {
+      "canceled": 0,
+      "completed": 1,
+      "failed": 0
+    },
+    "stress_scenarios": [
+      "base",
+      "wide-fill",
+      "fee-shock"
+    ],
+    "trial_count": 1
+  },
+  "result": "PASS",
+  "schema": "U5C-STRESS-ACCEPTANCE-r1",
+  "scope": "local disposable PostgreSQL + API + separate worker + isolated Nautilus three-scenario U5c stress fixture; no holdout content, broker/live, provider or production action"
+}

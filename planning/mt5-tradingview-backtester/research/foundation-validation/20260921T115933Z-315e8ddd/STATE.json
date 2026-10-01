@@ -1,6 +1,6 @@
 {
   "snapshot_schema": 1,
-  "state_revision": 247,
+  "state_revision": 389,
   "tables": {
     "attempts": [
       {
@@ -450,6 +450,230 @@
         "status": "accepted",
         "task_id": "U5B-REPLAY-CUTOFF-r1",
         "updated_at": "2026-09-24 14:43:37"
+      },
+      {
+        "attempt_id": "U5C-OOS-PLANNER-r1-a1",
+        "base_revision": "e5522d8b9fae1cdef6f00f88799ed0abcda062e1",
+        "child_locator": "/root/u5c_validation + /root integration",
+        "created_at": "2026-09-24 21:52:40",
+        "error": null,
+        "input_hash": "89c7bc8175f671fe67d9bc139d3eaf7133727102c886ed6e7a86c81542a953ec",
+        "namespace": "local-integrated-followup-20260925",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "U5C-OOS-PLANNER-r1",
+        "updated_at": "2026-09-24 21:52:40"
+      },
+      {
+        "attempt_id": "PS-00-PROP-CONTRACT-r1-a1",
+        "base_revision": "860fadd01f463df19d38a67a2294019fc19658d5",
+        "child_locator": "/root/ps00_contract + /root integration",
+        "created_at": "2026-09-24 21:52:40",
+        "error": null,
+        "input_hash": "4c187e3b16e7e1ccf2e6320c76cda23d01c2533faef1a7ff5fbfc0f724b7761f",
+        "namespace": "local-integrated-followup-20260925",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "PS-00-PROP-CONTRACT-r1",
+        "updated_at": "2026-09-24 21:52:40"
+      },
+      {
+        "attempt_id": "U3C-LEARN-BRIDGE-r1-a1",
+        "base_revision": "3835d4482168da65f0ff764e0b791f49e2fe5381",
+        "child_locator": "/root/u3c_learn + /root integration",
+        "created_at": "2026-09-24 21:52:40",
+        "error": null,
+        "input_hash": "0676dfea2ab9bd2d4e9f32ec62454cbeeeaa04c4b80aaba201b39c88f39a6a1a",
+        "namespace": "local-integrated-followup-20260925",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "U3C-LEARN-BRIDGE-r1",
+        "updated_at": "2026-09-24 21:52:40"
+      },
+      {
+        "attempt_id": "PS-01-PROP-PERSISTENCE-r1-a1",
+        "base_revision": "0aa38970fd550af24311c60f53c388ad4da4cd6f",
+        "child_locator": "/root + /root/prop_acceptance_review_r2",
+        "created_at": "2026-09-25 09:20:32",
+        "error": null,
+        "input_hash": "18b0035db6d4509b9b5312e64ed5e3e603216cfec8f19d41936b5dad67c4cd2f",
+        "namespace": "ps01-local-integration",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "PS-01-PROP-PERSISTENCE-r1",
+        "updated_at": "2026-09-25 09:20:32"
+      },
+      {
+        "attempt_id": "U5C-WIRING-HARDEN-r1-a1",
+        "base_revision": "0aa38970fd550af24311c60f53c388ad4da4cd6f",
+        "child_locator": "/root",
+        "created_at": "2026-09-25 11:00:32",
+        "error": null,
+        "input_hash": "344d83c68b695646a6f25edaeeb07bc6d9d85d4af304e7b3d631136dc96846f0",
+        "namespace": "root-post-r283",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "U5C-WIRING-HARDEN-r1",
+        "updated_at": "2026-09-25 11:55:18"
+      },
+      {
+        "attempt_id": "U3C-LEARN-REPLAY-CONTEXT-r1-a1",
+        "base_revision": "459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c",
+        "child_locator": "/root",
+        "created_at": "2026-09-25 11:00:32",
+        "error": null,
+        "input_hash": "40a48b9ce23e75e29af0415adfe5b2c8eee0d29afc80a80cdd533f70bfe8cfbc",
+        "namespace": "root-post-r283",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "U3C-LEARN-REPLAY-CONTEXT-r1",
+        "updated_at": "2026-09-25 11:55:18"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-CHECKPOINT-r1-a1",
+        "base_revision": "22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+        "child_locator": "/root + /root/ps02_lifecycle_review",
+        "created_at": "2026-09-25 12:38:28",
+        "error": null,
+        "input_hash": "2830d519b5b6fecf26c81e592f5dfd884846caac0376bcd0bafde6b67e347126",
+        "namespace": "ps02-lifecycle-checkpoint",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "PS-02-LIFECYCLE-CHECKPOINT-r1",
+        "updated_at": "2026-09-25 12:38:28"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CONNECTION-r1-a1",
+        "base_revision": "432273958778569f9ab76d88767d625ee626c059",
+        "child_locator": "/root + /root/ps02b_review_r2",
+        "created_at": "2026-09-25 14:27:00",
+        "error": null,
+        "input_hash": "06e492fd51665e2b483a3696ee2714476ba5f56f6445c1efe71104b908c78da7",
+        "namespace": "ps02-replay-connection",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "PS-02-REPLAY-CONNECTION-r1",
+        "updated_at": "2026-09-25 14:27:00"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-AUTHORITY-r1-a1",
+        "base_revision": "8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68",
+        "child_locator": "/root + /root/ps02c1_code_review",
+        "created_at": "2026-09-25 14:58:24",
+        "error": null,
+        "input_hash": "df44d55f4ae983c29304ce0655d53dc45f12af27c54890b3c4f25710f6dcbcbb",
+        "namespace": "ps02-lifecycle-authority",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "PS-02-LIFECYCLE-AUTHORITY-r1",
+        "updated_at": "2026-09-25 14:58:24"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1-a1",
+        "base_revision": "9ff840b1dd055a02803e1db38138bf039ca349e3",
+        "child_locator": "/root + /root/ps02c2_exact_review",
+        "created_at": "2026-09-25 16:11:11",
+        "error": null,
+        "input_hash": "b3d8deaef30390003c9e4afc6a9f727d83dffa104bb7a1795b2d16b21aee5943",
+        "namespace": "ps02-replay-phase-transitions",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1",
+        "updated_at": "2026-09-25 16:11:11"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1-a1",
+        "base_revision": "5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12",
+        "child_locator": "/root + /root/ps02c3_exact_review_r2",
+        "created_at": "2026-09-25 22:01:19",
+        "error": null,
+        "input_hash": "6ab195d828887b6ba55e4f1eb315d8bb8ec4fd28efa1b48f2905dd71cb35f1c5",
+        "namespace": "ps02-replay-checkpoint-branch",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1",
+        "updated_at": "2026-09-25 22:01:19"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a1",
+        "base_revision": "65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+        "child_locator": "/root",
+        "created_at": "2026-09-25 23:23:08",
+        "error": "Independent review found P2 canonical-provenance and P3 delayed-idempotency defects; superseded by corrected exact candidate",
+        "input_hash": "c880563274928f3a97e3451c798c5e6a99f48e9cf63e6bd3415bca8c7d198ca6",
+        "namespace": "ps02-prop-hindsight-branch",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "uncertain",
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1",
+        "updated_at": "2026-09-25 23:41:16"
+      },
+      {
+        "attempt_id": "U5C-STRESS-SENSITIVITY-r1-a1",
+        "base_revision": "1c4b7d6172b57e6774e5bca2fcafcba1a694c103",
+        "child_locator": "/root",
+        "created_at": "2026-09-25 23:25:30",
+        "error": null,
+        "input_hash": "ae1f74f0635f77ba3419a9e6649fe0738e41eb0342b6926c6e44cb608c0af998",
+        "namespace": "u5c-stress-sensitivity",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "U5C-STRESS-SENSITIVITY-r1",
+        "updated_at": "2026-09-26 02:47:47"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a2",
+        "base_revision": "65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+        "child_locator": "/root/ps02c4_review",
+        "created_at": "2026-09-25 23:41:16",
+        "error": null,
+        "input_hash": "34ef05673adc34bc3e2b6bd80590d13c5ceaa8a0ae7b2508c0a82fcd9b2a2c5a",
+        "namespace": "ps02-prop-hindsight-branch-r2",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1",
+        "updated_at": "2026-09-26 02:47:47"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a1",
+        "base_revision": "07fc8ea3479460cf4db68a781304481cf925b2d4",
+        "child_locator": "/root",
+        "created_at": "2026-09-26 03:48:12",
+        "error": "Independent M0 review found R1 CSV formula-injection gap; candidate superseded by bounded remediation commit 6655521.",
+        "input_hash": "81d232824a293ff72d481c8ccde0cecf6347ccee0aa1c1a0dd9fad54391ac6ce",
+        "namespace": "ps03-report-ui",
+        "owner_generation": 3,
+        "route_locator": "root/native2",
+        "status": "uncertain",
+        "task_id": "PS-03-REPORT-UI-r1",
+        "updated_at": "2026-09-26 08:46:14"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a2",
+        "base_revision": "567c6073ca1022983d1770dfbe8238d2b8cb3a8a",
+        "child_locator": "/root",
+        "created_at": "2026-09-26 08:46:14",
+        "error": null,
+        "input_hash": "681f4221dcd7502170de4838527b1a542c86327a4f793b6fac08e43e430ded86",
+        "namespace": "ps03-report-ui-csv-r2",
+        "owner_generation": 4,
+        "route_locator": "root/native2",
+        "status": "accepted",
+        "task_id": "PS-03-REPORT-UI-r1",
+        "updated_at": "2026-09-26 08:46:14"
       }
     ],
     "candidates": [
@@ -699,6 +923,134 @@
         "attempt_id": "U5B-REPLAY-CUTOFF-r1-a1",
         "created_at": "2026-09-24 14:43:37",
         "provenance_json": "{\"reviewer\": \"/root/u5_committed_review\", \"validation_receipt\": \"U5-FOLLOWUP-F6-validation-r1.json\", \"validation_sha256\": \"a6e009a712e5127c7c89438d17ff31fa07aecfc9d47ad18ba337168edff09e84\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "860fadd01f463df19d38a67a2294019fc19658d5",
+        "artifact_path": "git:860fadd01f463df19d38a67a2294019fc19658d5",
+        "attempt_id": "U5C-OOS-PLANNER-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "provenance_json": "{\"packet\": \"U5C-OOS-PLANNER-r1-packet-r1.json\", \"packet_sha256\": \"89c7bc8175f671fe67d9bc139d3eaf7133727102c886ed6e7a86c81542a953ec\", \"promotion_reconstructed\": true, \"validation_receipt\": \"PRODUCT-FOLLOWUP-validation-r1.json\", \"validation_sha256\": \"26b06d19db1eeef80bf47c02f8ff68cff54624991cbbe11d661ed3fe3478b332\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "3835d4482168da65f0ff764e0b791f49e2fe5381",
+        "artifact_path": "git:3835d4482168da65f0ff764e0b791f49e2fe5381",
+        "attempt_id": "PS-00-PROP-CONTRACT-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "provenance_json": "{\"packet\": \"PS-00-PROP-CONTRACT-r1-packet-r1.json\", \"packet_sha256\": \"4c187e3b16e7e1ccf2e6320c76cda23d01c2533faef1a7ff5fbfc0f724b7761f\", \"promotion_reconstructed\": true, \"validation_receipt\": \"PRODUCT-FOLLOWUP-validation-r1.json\", \"validation_sha256\": \"26b06d19db1eeef80bf47c02f8ff68cff54624991cbbe11d661ed3fe3478b332\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "92937ec27425b5f0d9308234cbbcf1a35721411c",
+        "artifact_path": "git:92937ec27425b5f0d9308234cbbcf1a35721411c",
+        "attempt_id": "U3C-LEARN-BRIDGE-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "provenance_json": "{\"packet\": \"U3C-LEARN-BRIDGE-r1-packet-r1.json\", \"packet_sha256\": \"0676dfea2ab9bd2d4e9f32ec62454cbeeeaa04c4b80aaba201b39c88f39a6a1a\", \"promotion_reconstructed\": true, \"validation_receipt\": \"PRODUCT-FOLLOWUP-validation-r1.json\", \"validation_sha256\": \"26b06d19db1eeef80bf47c02f8ff68cff54624991cbbe11d661ed3fe3478b332\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "1986b1f9c48bc24677bc88f178cc4f732476942c",
+        "artifact_path": "git:1986b1f9c48bc24677bc88f178cc4f732476942c",
+        "attempt_id": "PS-01-PROP-PERSISTENCE-r1-a1",
+        "created_at": "2026-09-25 09:20:32",
+        "provenance_json": "{\"reviewer\": \"/root/prop_acceptance_review_r2\", \"scope_note\": \"candidate also contains U5C WIP which is not accepted by this task\", \"validation_receipt\": \"foundation_v2\\\\.runtime\\\\ps01-real-service-evidence-r3\\\\PS01-acceptance-r1.json\", \"validation_sha256\": \"7c2f810e70b91e413b42ea7e3e4b11c25035ce9c41c9cd4198c8eb7df3401cba\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c",
+        "artifact_path": "git:459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c",
+        "attempt_id": "U5C-WIRING-HARDEN-r1-a1",
+        "created_at": "2026-09-25 11:00:32",
+        "provenance_json": "{\"independent_review\": \"pending due current 4-WebGPT-turn ceiling\", \"packet\": \"U5C-WIRING-HARDEN-r1-packet-r1.json\", \"packet_sha256\": \"344d83c68b695646a6f25edaeeb07bc6d9d85d4af304e7b3d631136dc96846f0\", \"validation_receipt\": \"artifacts/U5C-WIRING-r2/U5C-wiring-acceptance-r1.json\", \"validation_sha256\": \"8a6b760b8e74cef2a02e50052fa522a3130a2d3ce3ba31caeb5eea9160eac6d9\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+        "artifact_path": "git:22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+        "attempt_id": "U3C-LEARN-REPLAY-CONTEXT-r1-a1",
+        "created_at": "2026-09-25 11:00:32",
+        "provenance_json": "{\"independent_review\": \"pending due current 4-WebGPT-turn ceiling\", \"packet\": \"U3C-LEARN-REPLAY-CONTEXT-r1-packet-r1.json\", \"packet_sha256\": \"40a48b9ce23e75e29af0415adfe5b2c8eee0d29afc80a80cdd533f70bfe8cfbc\", \"validation_receipt\": \"artifacts/U3C-LEARN-REPLAY-CONTEXT-r1/U3C-learn-replay-context-validation-r1.json\", \"validation_sha256\": \"d50534d00f2905906b757357e582c241ff11be6da434f80301ed6784c844e974\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "432273958778569f9ab76d88767d625ee626c059",
+        "artifact_path": "git:432273958778569f9ab76d88767d625ee626c059",
+        "attempt_id": "PS-02-LIFECYCLE-CHECKPOINT-r1-a1",
+        "created_at": "2026-09-25 12:38:28",
+        "provenance_json": "{\"reviewer\": \"/root/ps02_lifecycle_review\", \"scope_note\": \"PS-02A lifecycle checkpoint only; no canonical Replay fill/order authority or public lifecycle endpoint\", \"validation_receipt\": \"artifacts\\\\PS-02-LIFECYCLE-CHECKPOINT-r1\\\\PS02-lifecycle-validation-r1.json\", \"validation_sha256\": \"17b51b505e2eaaa3a7211cb0106938774edeec54a99556b70c1e84208a0ae82e\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68",
+        "artifact_path": "git:8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68",
+        "attempt_id": "PS-02-REPLAY-CONNECTION-r1-a1",
+        "created_at": "2026-09-25 14:27:00",
+        "provenance_json": "{\"review_note\": \"Initial review found two P2 issues; both were remediated in 8e939fd and the exact commit passed re-review with no P1/P2/P3 findings.\", \"reviewer\": \"/root/ps02b_review_r2\", \"validation_receipt\": \"artifacts\\\\PS-02-REPLAY-CONNECTION-r1\\\\PS02-replay-validation-r2.json\", \"validation_sha256\": \"66ba3b11f881845c8f46d64fdadf164ba80c2ce14b12da3913288f40beef98d7\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "9ff840b1dd055a02803e1db38138bf039ca349e3",
+        "artifact_path": "git:9ff840b1dd055a02803e1db38138bf039ca349e3",
+        "attempt_id": "PS-02-LIFECYCLE-AUTHORITY-r1-a1",
+        "created_at": "2026-09-25 14:58:24",
+        "provenance_json": "{\"review_note\": \"Initial review found two P2 issues; both were fixed before exact-commit validation and re-review PASS.\", \"reviewer\": \"/root/ps02c1_code_review\", \"validation_receipt\": \"artifacts\\\\PS-02-LIFECYCLE-AUTHORITY-r1\\\\PS02-lifecycle-authority-validation-r1.json\", \"validation_sha256\": \"95530a2da80562493011e70171a8c31f4066580b2fd5b8575004ae6cd2361e14\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12",
+        "artifact_path": "git:5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12",
+        "attempt_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1-a1",
+        "created_at": "2026-09-25 16:11:11",
+        "provenance_json": "{\"review_note\": \"Independent exact-commit review PASS with no P1/P2/P3 findings.\", \"reviewer\": \"/root/ps02c2_exact_review\", \"validation_receipt\": \"artifacts\\\\PS-02-REPLAY-PHASE-TRANSITIONS-r1\\\\PS02-replay-phase-transitions-validation-r1.json\", \"validation_sha256\": \"6900ff986ee8c92a9f437f692f20192dcf61aefdf98359c4fa22e5d04bb66192\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "95fd6db4526be6658b54bdf0fdea32e1f4af7f5d",
+        "artifact_path": "git:95fd6db4526be6658b54bdf0fdea32e1f4af7f5d",
+        "attempt_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 22:01:19",
+        "provenance_json": "{\"review_note\": \"Independent exact-commit review PASS with no P1/P2/P3 findings.\", \"reviewer\": \"/root/ps02c3_exact_review_r2\", \"validation_receipt\": \"artifacts\\\\PS-02-REPLAY-CHECKPOINT-BRANCH-r1\\\\PS02-replay-checkpoint-branch-validation-r1.json\", \"validation_sha256\": \"b485f5a7aee9bc0a17e374262a61395c14c1be4711a3c3e4f550c58139c51dfe\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "5a9710e3ea8c4874a5584722640d118e40be2304",
+        "artifact_path": "git:5a9710e3ea8c4874a5584722640d118e40be2304",
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 23:23:08",
+        "provenance_json": "{\"postgres_component_sha256\": \"839fc74417c1813b01927bc3a8a7eacfd35f597e5a475e860f49e8affb77a454\", \"review_status\": \"pending: collaboration spawn was blocked by the transport safety layer\", \"validation_receipt\": \"artifacts\\\\PS-02-PROP-HINDSIGHT-BRANCH-r1\\\\PS02-prop-hindsight-branch-validation-r1.json\", \"validation_sha256\": \"f4d8ffbf9af448aade29034b97fef78f23e0abc36712050435afde22148dcb71\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+        "artifact_path": "git:65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+        "attempt_id": "U5C-STRESS-SENSITIVITY-r1-a1",
+        "created_at": "2026-09-25 23:25:30",
+        "provenance_json": "{\"integration_status\": \"fresh PostgreSQL/Nautilus validation pending\", \"review_status\": \"pending independent review\", \"validation_receipt\": \"artifacts\\\\U5C-STRESS-SENSITIVITY-r1\\\\U5C-stress-sensitivity-validation-r1.json\", \"validation_sha256\": \"9bb803ca56e3100ee03fce32a4d882f76f16c757c11663069452049fe788091a\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "07fc8ea3479460cf4db68a781304481cf925b2d4",
+        "artifact_path": "git:07fc8ea3479460cf4db68a781304481cf925b2d4",
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a2",
+        "created_at": "2026-09-25 23:41:16",
+        "provenance_json": "{\"postgres_component_sha256\": \"c881d767362172c8a213f2c5d196b7cb13016eca666d5edd4a44582ddbf414a1\", \"review_status\": \"pending corrected exact-commit review\", \"supersedes_candidate\": \"5a9710e3ea8c4874a5584722640d118e40be2304\", \"validation_receipt\": \"artifacts\\\\PS-02-PROP-HINDSIGHT-BRANCH-r1\\\\PS02-prop-hindsight-branch-validation-r2.json\", \"validation_sha256\": \"2607c4d4033bcbecefdb3129cad67613f08237579448f312ac545e4ac0bf6dd4\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "567c6073ca1022983d1770dfbe8238d2b8cb3a8a",
+        "artifact_path": "git:567c6073ca1022983d1770dfbe8238d2b8cb3a8a",
+        "attempt_id": "PS-03-REPORT-UI-r1-a1",
+        "created_at": "2026-09-26 03:48:12",
+        "provenance_json": "{\"real_service_receipt\": \"foundation_v2/evidence/ps03-report-ui-r1/PS03-report-ui-acceptance-r1.json\", \"real_service_receipt_sha256\": \"052dfca1b6d6c833cda28a926760f477f5a6e2ee399dae3b114ca4fb0d566e79\", \"review_status\": \"pending independent final review\", \"validation_receipt\": \"artifacts\\\\PS-03-REPORT-UI-r1\\\\PS03-report-ui-validation-r1.json\", \"validation_sha256\": \"899c236a6d92dced33618ecf94946223f2f8bc0d4be068dadf1cd3e87c1fe1dd\"}",
+        "schema_version": 1
+      },
+      {
+        "artifact_hash": "665552177892d50f7df4fab3d5a31a538b8ac403",
+        "artifact_path": "git:665552177892d50f7df4fab3d5a31a538b8ac403",
+        "attempt_id": "PS-03-REPORT-UI-r1-a2",
+        "created_at": "2026-09-26 08:46:14",
+        "provenance_json": "{\"packet\": \"artifacts\\\\PS-03-CSV-EXPORT-HARDEN-r1\\\\PS03-csv-remediation-packet-r2.json\", \"packet_sha256\": \"681f4221dcd7502170de4838527b1a542c86327a4f793b6fac08e43e430ded86\", \"reviewer\": \"/root/mt5_m0_audit\", \"validation\": \"artifacts\\\\PS-03-CSV-EXPORT-HARDEN-r1\\\\PS03-csv-remediation-validation-r2.json\", \"validation_sha256\": \"4ded1ea31edf157aa888f57b786d4f386e2a4573329c3fc03bc943752c9dea6d\"}",
         "schema_version": 1
       }
     ],
@@ -2925,6 +3277,1284 @@
         "payload_json": "{\"revision\": \"e5522d8b9fae1cdef6f00f88799ed0abcda062e1\"}",
         "seq": 247,
         "task_id": "U5B-REPLAY-CUTOFF-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 248,
+        "task_id": "U5C-OOS-PLANNER-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"dependencies accepted; reconstructed after scoped commit and root validation\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 249,
+        "task_id": "U5C-OOS-PLANNER-r1"
+      },
+      {
+        "attempt_id": "U5C-OOS-PLANNER-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"e5522d8b9fae1cdef6f00f88799ed0abcda062e1\", \"from_revision\": 2, \"input_hash\": \"89c7bc8175f671fe67d9bc139d3eaf7133727102c886ed6e7a86c81542a953ec\", \"to_revision\": 3}",
+        "seq": 250,
+        "task_id": "U5C-OOS-PLANNER-r1"
+      },
+      {
+        "attempt_id": "U5C-OOS-PLANNER-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root/u5c_validation + /root integration\", \"route_locator\": \"root/native2\"}",
+        "seq": 251,
+        "task_id": "U5C-OOS-PLANNER-r1"
+      },
+      {
+        "attempt_id": "U5C-OOS-PLANNER-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"860fadd01f463df19d38a67a2294019fc19658d5\", \"artifact_path\": \"git:860fadd01f463df19d38a67a2294019fc19658d5\"}",
+        "seq": 252,
+        "task_id": "U5C-OOS-PLANNER-r1"
+      },
+      {
+        "attempt_id": "U5C-OOS-PLANNER-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U5C-OOS-PLANNER-r1-integrated-v1\"}",
+        "seq": 253,
+        "task_id": "U5C-OOS-PLANNER-r1"
+      },
+      {
+        "attempt_id": "U5C-OOS-PLANNER-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"U5C-OOS-PLANNER-r1-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 254,
+        "task_id": "U5C-OOS-PLANNER-r1"
+      },
+      {
+        "attempt_id": "U5C-OOS-PLANNER-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"860fadd01f463df19d38a67a2294019fc19658d5\", \"target_base\": \"Nam:e5522d8b9fae1cdef6f00f88799ed0abcda062e1\"}",
+        "seq": 255,
+        "task_id": "U5C-OOS-PLANNER-r1"
+      },
+      {
+        "attempt_id": "U5C-OOS-PLANNER-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"860fadd01f463df19d38a67a2294019fc19658d5\"}",
+        "seq": 256,
+        "task_id": "U5C-OOS-PLANNER-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 257,
+        "task_id": "PS-00-PROP-CONTRACT-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"dependencies accepted; reconstructed after scoped commit and root validation\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 258,
+        "task_id": "PS-00-PROP-CONTRACT-r1"
+      },
+      {
+        "attempt_id": "PS-00-PROP-CONTRACT-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"860fadd01f463df19d38a67a2294019fc19658d5\", \"from_revision\": 2, \"input_hash\": \"4c187e3b16e7e1ccf2e6320c76cda23d01c2533faef1a7ff5fbfc0f724b7761f\", \"to_revision\": 3}",
+        "seq": 259,
+        "task_id": "PS-00-PROP-CONTRACT-r1"
+      },
+      {
+        "attempt_id": "PS-00-PROP-CONTRACT-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root/ps00_contract + /root integration\", \"route_locator\": \"root/native2\"}",
+        "seq": 260,
+        "task_id": "PS-00-PROP-CONTRACT-r1"
+      },
+      {
+        "attempt_id": "PS-00-PROP-CONTRACT-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"3835d4482168da65f0ff764e0b791f49e2fe5381\", \"artifact_path\": \"git:3835d4482168da65f0ff764e0b791f49e2fe5381\"}",
+        "seq": 261,
+        "task_id": "PS-00-PROP-CONTRACT-r1"
+      },
+      {
+        "attempt_id": "PS-00-PROP-CONTRACT-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"PS-00-PROP-CONTRACT-r1-integrated-v1\"}",
+        "seq": 262,
+        "task_id": "PS-00-PROP-CONTRACT-r1"
+      },
+      {
+        "attempt_id": "PS-00-PROP-CONTRACT-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"PS-00-PROP-CONTRACT-r1-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 263,
+        "task_id": "PS-00-PROP-CONTRACT-r1"
+      },
+      {
+        "attempt_id": "PS-00-PROP-CONTRACT-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"3835d4482168da65f0ff764e0b791f49e2fe5381\", \"target_base\": \"Nam:860fadd01f463df19d38a67a2294019fc19658d5\"}",
+        "seq": 264,
+        "task_id": "PS-00-PROP-CONTRACT-r1"
+      },
+      {
+        "attempt_id": "PS-00-PROP-CONTRACT-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"3835d4482168da65f0ff764e0b791f49e2fe5381\"}",
+        "seq": 265,
+        "task_id": "PS-00-PROP-CONTRACT-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 266,
+        "task_id": "U3C-LEARN-BRIDGE-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"dependencies accepted; reconstructed after scoped commit and root validation\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 267,
+        "task_id": "U3C-LEARN-BRIDGE-r1"
+      },
+      {
+        "attempt_id": "U3C-LEARN-BRIDGE-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"3835d4482168da65f0ff764e0b791f49e2fe5381\", \"from_revision\": 2, \"input_hash\": \"0676dfea2ab9bd2d4e9f32ec62454cbeeeaa04c4b80aaba201b39c88f39a6a1a\", \"to_revision\": 3}",
+        "seq": 268,
+        "task_id": "U3C-LEARN-BRIDGE-r1"
+      },
+      {
+        "attempt_id": "U3C-LEARN-BRIDGE-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root/u3c_learn + /root integration\", \"route_locator\": \"root/native2\"}",
+        "seq": 269,
+        "task_id": "U3C-LEARN-BRIDGE-r1"
+      },
+      {
+        "attempt_id": "U3C-LEARN-BRIDGE-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"92937ec27425b5f0d9308234cbbcf1a35721411c\", \"artifact_path\": \"git:92937ec27425b5f0d9308234cbbcf1a35721411c\"}",
+        "seq": 270,
+        "task_id": "U3C-LEARN-BRIDGE-r1"
+      },
+      {
+        "attempt_id": "U3C-LEARN-BRIDGE-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U3C-LEARN-BRIDGE-r1-integrated-v1\"}",
+        "seq": 271,
+        "task_id": "U3C-LEARN-BRIDGE-r1"
+      },
+      {
+        "attempt_id": "U3C-LEARN-BRIDGE-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"U3C-LEARN-BRIDGE-r1-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 272,
+        "task_id": "U3C-LEARN-BRIDGE-r1"
+      },
+      {
+        "attempt_id": "U3C-LEARN-BRIDGE-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"92937ec27425b5f0d9308234cbbcf1a35721411c\", \"target_base\": \"Nam:3835d4482168da65f0ff764e0b791f49e2fe5381\"}",
+        "seq": 273,
+        "task_id": "U3C-LEARN-BRIDGE-r1"
+      },
+      {
+        "attempt_id": "U3C-LEARN-BRIDGE-r1-a1",
+        "created_at": "2026-09-24 21:52:40",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"92937ec27425b5f0d9308234cbbcf1a35721411c\"}",
+        "seq": 274,
+        "task_id": "U3C-LEARN-BRIDGE-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 09:20:32",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 275,
+        "task_id": "PS-01-PROP-PERSISTENCE-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 09:20:32",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"PS-00 is accepted and PS-01 local persistence/UI evidence plus independent review are complete\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 276,
+        "task_id": "PS-01-PROP-PERSISTENCE-r1"
+      },
+      {
+        "attempt_id": "PS-01-PROP-PERSISTENCE-r1-a1",
+        "created_at": "2026-09-25 09:20:32",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"0aa38970fd550af24311c60f53c388ad4da4cd6f\", \"from_revision\": 2, \"input_hash\": \"18b0035db6d4509b9b5312e64ed5e3e603216cfec8f19d41936b5dad67c4cd2f\", \"to_revision\": 3}",
+        "seq": 277,
+        "task_id": "PS-01-PROP-PERSISTENCE-r1"
+      },
+      {
+        "attempt_id": "PS-01-PROP-PERSISTENCE-r1-a1",
+        "created_at": "2026-09-25 09:20:32",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root + /root/prop_acceptance_review_r2\", \"route_locator\": \"root/native2\"}",
+        "seq": 278,
+        "task_id": "PS-01-PROP-PERSISTENCE-r1"
+      },
+      {
+        "attempt_id": "PS-01-PROP-PERSISTENCE-r1-a1",
+        "created_at": "2026-09-25 09:20:32",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"1986b1f9c48bc24677bc88f178cc4f732476942c\", \"artifact_path\": \"git:1986b1f9c48bc24677bc88f178cc4f732476942c\"}",
+        "seq": 279,
+        "task_id": "PS-01-PROP-PERSISTENCE-r1"
+      },
+      {
+        "attempt_id": "PS-01-PROP-PERSISTENCE-r1-a1",
+        "created_at": "2026-09-25 09:20:32",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"PS-01-PROP-PERSISTENCE-r1-integrated-v1\"}",
+        "seq": 280,
+        "task_id": "PS-01-PROP-PERSISTENCE-r1"
+      },
+      {
+        "attempt_id": "PS-01-PROP-PERSISTENCE-r1-a1",
+        "created_at": "2026-09-25 09:20:32",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"PS-01-PROP-PERSISTENCE-r1-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 281,
+        "task_id": "PS-01-PROP-PERSISTENCE-r1"
+      },
+      {
+        "attempt_id": "PS-01-PROP-PERSISTENCE-r1-a1",
+        "created_at": "2026-09-25 09:20:32",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"1986b1f9c48bc24677bc88f178cc4f732476942c\", \"target_base\": \"Nam:0aa38970fd550af24311c60f53c388ad4da4cd6f\"}",
+        "seq": 282,
+        "task_id": "PS-01-PROP-PERSISTENCE-r1"
+      },
+      {
+        "attempt_id": "PS-01-PROP-PERSISTENCE-r1-a1",
+        "created_at": "2026-09-25 09:20:32",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"1986b1f9c48bc24677bc88f178cc4f732476942c\"}",
+        "seq": 283,
+        "task_id": "PS-01-PROP-PERSISTENCE-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 11:00:32",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 284,
+        "task_id": "U5C-WIRING-HARDEN-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 11:00:32",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"implementation is committed and scoped validation is complete; independent final review remains pending\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 285,
+        "task_id": "U5C-WIRING-HARDEN-r1"
+      },
+      {
+        "attempt_id": "U5C-WIRING-HARDEN-r1-a1",
+        "created_at": "2026-09-25 11:00:32",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"0aa38970fd550af24311c60f53c388ad4da4cd6f\", \"from_revision\": 2, \"input_hash\": \"344d83c68b695646a6f25edaeeb07bc6d9d85d4af304e7b3d631136dc96846f0\", \"to_revision\": 3}",
+        "seq": 286,
+        "task_id": "U5C-WIRING-HARDEN-r1"
+      },
+      {
+        "attempt_id": "U5C-WIRING-HARDEN-r1-a1",
+        "created_at": "2026-09-25 11:00:32",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root\", \"route_locator\": \"root/native2\"}",
+        "seq": 287,
+        "task_id": "U5C-WIRING-HARDEN-r1"
+      },
+      {
+        "attempt_id": "U5C-WIRING-HARDEN-r1-a1",
+        "created_at": "2026-09-25 11:00:32",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c\", \"artifact_path\": \"git:459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c\"}",
+        "seq": 288,
+        "task_id": "U5C-WIRING-HARDEN-r1"
+      },
+      {
+        "attempt_id": "U5C-WIRING-HARDEN-r1-a1",
+        "created_at": "2026-09-25 11:00:32",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U5C-WIRING-HARDEN-r1-root-validation-r1\"}",
+        "seq": 289,
+        "task_id": "U5C-WIRING-HARDEN-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 11:00:32",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 290,
+        "task_id": "U3C-LEARN-REPLAY-CONTEXT-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 11:00:32",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"implementation is committed and scoped validation is complete; independent final review remains pending\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 291,
+        "task_id": "U3C-LEARN-REPLAY-CONTEXT-r1"
+      },
+      {
+        "attempt_id": "U3C-LEARN-REPLAY-CONTEXT-r1-a1",
+        "created_at": "2026-09-25 11:00:32",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c\", \"from_revision\": 2, \"input_hash\": \"40a48b9ce23e75e29af0415adfe5b2c8eee0d29afc80a80cdd533f70bfe8cfbc\", \"to_revision\": 3}",
+        "seq": 292,
+        "task_id": "U3C-LEARN-REPLAY-CONTEXT-r1"
+      },
+      {
+        "attempt_id": "U3C-LEARN-REPLAY-CONTEXT-r1-a1",
+        "created_at": "2026-09-25 11:00:32",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root\", \"route_locator\": \"root/native2\"}",
+        "seq": 293,
+        "task_id": "U3C-LEARN-REPLAY-CONTEXT-r1"
+      },
+      {
+        "attempt_id": "U3C-LEARN-REPLAY-CONTEXT-r1-a1",
+        "created_at": "2026-09-25 11:00:32",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"22ab959e719fa98ef3d0d226edadded0b9b7eaf5\", \"artifact_path\": \"git:22ab959e719fa98ef3d0d226edadded0b9b7eaf5\"}",
+        "seq": 294,
+        "task_id": "U3C-LEARN-REPLAY-CONTEXT-r1"
+      },
+      {
+        "attempt_id": "U3C-LEARN-REPLAY-CONTEXT-r1-a1",
+        "created_at": "2026-09-25 11:00:32",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U3C-LEARN-REPLAY-CONTEXT-r1-root-validation-r1\"}",
+        "seq": 295,
+        "task_id": "U3C-LEARN-REPLAY-CONTEXT-r1"
+      },
+      {
+        "attempt_id": "U5C-WIRING-HARDEN-r1-a1",
+        "created_at": "2026-09-25 11:55:18",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"U5C-WIRING-HARDEN-r1-final-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 296,
+        "task_id": "U5C-WIRING-HARDEN-r1"
+      },
+      {
+        "attempt_id": "U5C-WIRING-HARDEN-r1-a1",
+        "created_at": "2026-09-25 11:55:18",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c\", \"target_base\": \"Nam:ancestor-of-22ab959e719fa98ef3d0d226edadded0b9b7eaf5\"}",
+        "seq": 297,
+        "task_id": "U5C-WIRING-HARDEN-r1"
+      },
+      {
+        "attempt_id": "U5C-WIRING-HARDEN-r1-a1",
+        "created_at": "2026-09-25 11:55:18",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c\"}",
+        "seq": 298,
+        "task_id": "U5C-WIRING-HARDEN-r1"
+      },
+      {
+        "attempt_id": "U3C-LEARN-REPLAY-CONTEXT-r1-a1",
+        "created_at": "2026-09-25 11:55:18",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"U3C-LEARN-REPLAY-CONTEXT-r1-final-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 299,
+        "task_id": "U3C-LEARN-REPLAY-CONTEXT-r1"
+      },
+      {
+        "attempt_id": "U3C-LEARN-REPLAY-CONTEXT-r1-a1",
+        "created_at": "2026-09-25 11:55:18",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"22ab959e719fa98ef3d0d226edadded0b9b7eaf5\", \"target_base\": \"Nam:ancestor-of-22ab959e719fa98ef3d0d226edadded0b9b7eaf5\"}",
+        "seq": 300,
+        "task_id": "U3C-LEARN-REPLAY-CONTEXT-r1"
+      },
+      {
+        "attempt_id": "U3C-LEARN-REPLAY-CONTEXT-r1-a1",
+        "created_at": "2026-09-25 11:55:18",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"22ab959e719fa98ef3d0d226edadded0b9b7eaf5\"}",
+        "seq": 301,
+        "task_id": "U3C-LEARN-REPLAY-CONTEXT-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 12:38:28",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 302,
+        "task_id": "PS-02-LIFECYCLE-CHECKPOINT-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 12:38:28",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"PS-00/PS-01 accepted; PS-02A deterministic lifecycle evidence and independent review are complete\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 303,
+        "task_id": "PS-02-LIFECYCLE-CHECKPOINT-r1"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-CHECKPOINT-r1-a1",
+        "created_at": "2026-09-25 12:38:28",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"22ab959e719fa98ef3d0d226edadded0b9b7eaf5\", \"from_revision\": 2, \"input_hash\": \"2830d519b5b6fecf26c81e592f5dfd884846caac0376bcd0bafde6b67e347126\", \"to_revision\": 3}",
+        "seq": 304,
+        "task_id": "PS-02-LIFECYCLE-CHECKPOINT-r1"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-CHECKPOINT-r1-a1",
+        "created_at": "2026-09-25 12:38:28",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root + /root/ps02_lifecycle_review\", \"route_locator\": \"root/native2\"}",
+        "seq": 305,
+        "task_id": "PS-02-LIFECYCLE-CHECKPOINT-r1"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-CHECKPOINT-r1-a1",
+        "created_at": "2026-09-25 12:38:28",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"432273958778569f9ab76d88767d625ee626c059\", \"artifact_path\": \"git:432273958778569f9ab76d88767d625ee626c059\"}",
+        "seq": 306,
+        "task_id": "PS-02-LIFECYCLE-CHECKPOINT-r1"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-CHECKPOINT-r1-a1",
+        "created_at": "2026-09-25 12:38:28",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"PS-02-LIFECYCLE-CHECKPOINT-r1-integrated-v1\"}",
+        "seq": 307,
+        "task_id": "PS-02-LIFECYCLE-CHECKPOINT-r1"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-CHECKPOINT-r1-a1",
+        "created_at": "2026-09-25 12:38:28",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"PS-02-LIFECYCLE-CHECKPOINT-r1-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 308,
+        "task_id": "PS-02-LIFECYCLE-CHECKPOINT-r1"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-CHECKPOINT-r1-a1",
+        "created_at": "2026-09-25 12:38:28",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"432273958778569f9ab76d88767d625ee626c059\", \"target_base\": \"Nam:22ab959e719fa98ef3d0d226edadded0b9b7eaf5\"}",
+        "seq": 309,
+        "task_id": "PS-02-LIFECYCLE-CHECKPOINT-r1"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-CHECKPOINT-r1-a1",
+        "created_at": "2026-09-25 12:38:28",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"432273958778569f9ab76d88767d625ee626c059\"}",
+        "seq": 310,
+        "task_id": "PS-02-LIFECYCLE-CHECKPOINT-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 14:27:00",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 311,
+        "task_id": "PS-02-REPLAY-CONNECTION-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 14:27:00",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"PS-02A accepted; exact PS-02B candidate has disposable PostgreSQL validation and independent PASS review\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 312,
+        "task_id": "PS-02-REPLAY-CONNECTION-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CONNECTION-r1-a1",
+        "created_at": "2026-09-25 14:27:00",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"432273958778569f9ab76d88767d625ee626c059\", \"from_revision\": 2, \"input_hash\": \"06e492fd51665e2b483a3696ee2714476ba5f56f6445c1efe71104b908c78da7\", \"to_revision\": 3}",
+        "seq": 313,
+        "task_id": "PS-02-REPLAY-CONNECTION-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CONNECTION-r1-a1",
+        "created_at": "2026-09-25 14:27:00",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root + /root/ps02b_review_r2\", \"route_locator\": \"root/native2\"}",
+        "seq": 314,
+        "task_id": "PS-02-REPLAY-CONNECTION-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CONNECTION-r1-a1",
+        "created_at": "2026-09-25 14:27:00",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68\", \"artifact_path\": \"git:8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68\"}",
+        "seq": 315,
+        "task_id": "PS-02-REPLAY-CONNECTION-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CONNECTION-r1-a1",
+        "created_at": "2026-09-25 14:27:00",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"PS-02-REPLAY-CONNECTION-r1-integrated-v2\"}",
+        "seq": 316,
+        "task_id": "PS-02-REPLAY-CONNECTION-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CONNECTION-r1-a1",
+        "created_at": "2026-09-25 14:27:00",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"PS-02-REPLAY-CONNECTION-r1-review-r2\", \"verdict\": \"pass\"}",
+        "seq": 317,
+        "task_id": "PS-02-REPLAY-CONNECTION-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CONNECTION-r1-a1",
+        "created_at": "2026-09-25 14:27:00",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68\", \"target_base\": \"Nam:432273958778569f9ab76d88767d625ee626c059\"}",
+        "seq": 318,
+        "task_id": "PS-02-REPLAY-CONNECTION-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CONNECTION-r1-a1",
+        "created_at": "2026-09-25 14:27:00",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68\"}",
+        "seq": 319,
+        "task_id": "PS-02-REPLAY-CONNECTION-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 14:58:24",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 320,
+        "task_id": "PS-02-LIFECYCLE-AUTHORITY-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 14:58:24",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"PS-02B accepted; exact PS-02C1 candidate has three passing component validations and independent PASS review\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 321,
+        "task_id": "PS-02-LIFECYCLE-AUTHORITY-r1"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-AUTHORITY-r1-a1",
+        "created_at": "2026-09-25 14:58:24",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68\", \"from_revision\": 2, \"input_hash\": \"df44d55f4ae983c29304ce0655d53dc45f12af27c54890b3c4f25710f6dcbcbb\", \"to_revision\": 3}",
+        "seq": 322,
+        "task_id": "PS-02-LIFECYCLE-AUTHORITY-r1"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-AUTHORITY-r1-a1",
+        "created_at": "2026-09-25 14:58:24",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root + /root/ps02c1_code_review\", \"route_locator\": \"root/native2\"}",
+        "seq": 323,
+        "task_id": "PS-02-LIFECYCLE-AUTHORITY-r1"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-AUTHORITY-r1-a1",
+        "created_at": "2026-09-25 14:58:24",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"9ff840b1dd055a02803e1db38138bf039ca349e3\", \"artifact_path\": \"git:9ff840b1dd055a02803e1db38138bf039ca349e3\"}",
+        "seq": 324,
+        "task_id": "PS-02-LIFECYCLE-AUTHORITY-r1"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-AUTHORITY-r1-a1",
+        "created_at": "2026-09-25 14:58:24",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"PS-02-LIFECYCLE-AUTHORITY-r1-integrated-v1\"}",
+        "seq": 325,
+        "task_id": "PS-02-LIFECYCLE-AUTHORITY-r1"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-AUTHORITY-r1-a1",
+        "created_at": "2026-09-25 14:58:24",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"PS-02-LIFECYCLE-AUTHORITY-r1-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 326,
+        "task_id": "PS-02-LIFECYCLE-AUTHORITY-r1"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-AUTHORITY-r1-a1",
+        "created_at": "2026-09-25 14:58:24",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"9ff840b1dd055a02803e1db38138bf039ca349e3\", \"target_base\": \"Nam:8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68\"}",
+        "seq": 327,
+        "task_id": "PS-02-LIFECYCLE-AUTHORITY-r1"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-AUTHORITY-r1-a1",
+        "created_at": "2026-09-25 14:58:24",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"9ff840b1dd055a02803e1db38138bf039ca349e3\"}",
+        "seq": 328,
+        "task_id": "PS-02-LIFECYCLE-AUTHORITY-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 16:11:10",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 329,
+        "task_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 16:11:11",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"PS-02C1 accepted; exact PS-02C2 candidate has passing PostgreSQL/real-service validation and independent PASS review\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 330,
+        "task_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1-a1",
+        "created_at": "2026-09-25 16:11:11",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"9ff840b1dd055a02803e1db38138bf039ca349e3\", \"from_revision\": 2, \"input_hash\": \"b3d8deaef30390003c9e4afc6a9f727d83dffa104bb7a1795b2d16b21aee5943\", \"to_revision\": 3}",
+        "seq": 331,
+        "task_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1-a1",
+        "created_at": "2026-09-25 16:11:11",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root + /root/ps02c2_exact_review\", \"route_locator\": \"root/native2\"}",
+        "seq": 332,
+        "task_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1-a1",
+        "created_at": "2026-09-25 16:11:11",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12\", \"artifact_path\": \"git:5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12\"}",
+        "seq": 333,
+        "task_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1-a1",
+        "created_at": "2026-09-25 16:11:11",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"PS-02-REPLAY-PHASE-TRANSITIONS-r1-integrated-v1\"}",
+        "seq": 334,
+        "task_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1-a1",
+        "created_at": "2026-09-25 16:11:11",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"PS-02-REPLAY-PHASE-TRANSITIONS-r1-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 335,
+        "task_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1-a1",
+        "created_at": "2026-09-25 16:11:11",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12\", \"target_base\": \"Nam:9ff840b1dd055a02803e1db38138bf039ca349e3\"}",
+        "seq": 336,
+        "task_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1-a1",
+        "created_at": "2026-09-25 16:11:11",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12\"}",
+        "seq": 337,
+        "task_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 22:01:19",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 338,
+        "task_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 22:01:19",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"PS-02C2 accepted; exact PS-02C3 checkpoint-branch candidate has passing PostgreSQL/real-service validation and independent PASS review\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 339,
+        "task_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 22:01:19",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12\", \"from_revision\": 2, \"input_hash\": \"6ab195d828887b6ba55e4f1eb315d8bb8ec4fd28efa1b48f2905dd71cb35f1c5\", \"to_revision\": 3}",
+        "seq": 340,
+        "task_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 22:01:19",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root + /root/ps02c3_exact_review_r2\", \"route_locator\": \"root/native2\"}",
+        "seq": 341,
+        "task_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 22:01:19",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"95fd6db4526be6658b54bdf0fdea32e1f4af7f5d\", \"artifact_path\": \"git:95fd6db4526be6658b54bdf0fdea32e1f4af7f5d\"}",
+        "seq": 342,
+        "task_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 22:01:19",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"PS-02-REPLAY-CHECKPOINT-BRANCH-r1-integrated-v1\"}",
+        "seq": 343,
+        "task_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 22:01:19",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"PS-02-REPLAY-CHECKPOINT-BRANCH-r1-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 344,
+        "task_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 22:01:19",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"95fd6db4526be6658b54bdf0fdea32e1f4af7f5d\", \"target_base\": \"Nam:5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12\"}",
+        "seq": 345,
+        "task_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 22:01:19",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"95fd6db4526be6658b54bdf0fdea32e1f4af7f5d\"}",
+        "seq": 346,
+        "task_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 23:23:08",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 347,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 23:23:08",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"PS-02C3 accepted and exact PS-02C4 implementation has matching disposable-PostgreSQL evidence; independent review still pending\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 348,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 23:23:08",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"65d5043692aa0c93cae54f2dd43e55dc0cb15bea\", \"from_revision\": 2, \"input_hash\": \"c880563274928f3a97e3451c798c5e6a99f48e9cf63e6bd3415bca8c7d198ca6\", \"to_revision\": 3}",
+        "seq": 349,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 23:23:08",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root\", \"route_locator\": \"root/native2\"}",
+        "seq": 350,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 23:23:08",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"5a9710e3ea8c4874a5584722640d118e40be2304\", \"artifact_path\": \"git:5a9710e3ea8c4874a5584722640d118e40be2304\"}",
+        "seq": 351,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 23:23:08",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"PS-02-PROP-HINDSIGHT-BRANCH-r1-integrated-v1\"}",
+        "seq": 352,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 23:25:30",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 353,
+        "task_id": "U5C-STRESS-SENSITIVITY-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 23:25:30",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"Accepted U5C wiring dependency is satisfied and the historical stress candidate has exact-source focused validation\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 354,
+        "task_id": "U5C-STRESS-SENSITIVITY-r1"
+      },
+      {
+        "attempt_id": "U5C-STRESS-SENSITIVITY-r1-a1",
+        "created_at": "2026-09-25 23:25:30",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"1c4b7d6172b57e6774e5bca2fcafcba1a694c103\", \"from_revision\": 2, \"input_hash\": \"ae1f74f0635f77ba3419a9e6649fe0738e41eb0342b6926c6e44cb608c0af998\", \"to_revision\": 3}",
+        "seq": 355,
+        "task_id": "U5C-STRESS-SENSITIVITY-r1"
+      },
+      {
+        "attempt_id": "U5C-STRESS-SENSITIVITY-r1-a1",
+        "created_at": "2026-09-25 23:25:30",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root\", \"route_locator\": \"root/native2\"}",
+        "seq": 356,
+        "task_id": "U5C-STRESS-SENSITIVITY-r1"
+      },
+      {
+        "attempt_id": "U5C-STRESS-SENSITIVITY-r1-a1",
+        "created_at": "2026-09-25 23:25:30",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"65d5043692aa0c93cae54f2dd43e55dc0cb15bea\", \"artifact_path\": \"git:65d5043692aa0c93cae54f2dd43e55dc0cb15bea\"}",
+        "seq": 357,
+        "task_id": "U5C-STRESS-SENSITIVITY-r1"
+      },
+      {
+        "attempt_id": "U5C-STRESS-SENSITIVITY-r1-a1",
+        "created_at": "2026-09-25 23:25:30",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U5C-STRESS-SENSITIVITY-r1-focused-v1\"}",
+        "seq": 358,
+        "task_id": "U5C-STRESS-SENSITIVITY-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 23:41:16",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"PS-02-PROP-HINDSIGHT-BRANCH-r1-review-r1\", \"verdict\": \"fail\"}",
+        "seq": 359,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a1",
+        "created_at": "2026-09-25 23:41:16",
+        "event_type": "attempt_uncertain",
+        "owner_generation": 3,
+        "payload_json": "{\"reason\": \"Independent review found P2 canonical-provenance and P3 delayed-idempotency defects; superseded by corrected exact candidate\"}",
+        "seq": 360,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-25 23:41:16",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"uncertain\", \"from_revision\": 7, \"reason\": \"P2/P3 fixes committed and fresh 103-test disposable-PostgreSQL acceptance passed\", \"to\": \"ready\", \"to_revision\": 8}",
+        "seq": 361,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a2",
+        "created_at": "2026-09-25 23:41:16",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"65d5043692aa0c93cae54f2dd43e55dc0cb15bea\", \"from_revision\": 8, \"input_hash\": \"34ef05673adc34bc3e2b6bd80590d13c5ceaa8a0ae7b2508c0a82fcd9b2a2c5a\", \"to_revision\": 9}",
+        "seq": 362,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a2",
+        "created_at": "2026-09-25 23:41:16",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root/ps02c4_review\", \"route_locator\": \"root/native2\"}",
+        "seq": 363,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a2",
+        "created_at": "2026-09-25 23:41:16",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"07fc8ea3479460cf4db68a781304481cf925b2d4\", \"artifact_path\": \"git:07fc8ea3479460cf4db68a781304481cf925b2d4\"}",
+        "seq": 364,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a2",
+        "created_at": "2026-09-25 23:41:16",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"PS-02-PROP-HINDSIGHT-BRANCH-r1-integrated-v2\"}",
+        "seq": 365,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a2",
+        "created_at": "2026-09-26 02:45:29",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"PS-02-PROP-HINDSIGHT-BRANCH-r1-review-r2\", \"verdict\": \"pass\"}",
+        "seq": 366,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a2",
+        "created_at": "2026-09-26 02:47:47",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"PS-02-PROP-HINDSIGHT-BRANCH-r1-runtime-r3\"}",
+        "seq": 367,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a2",
+        "created_at": "2026-09-26 02:47:47",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"07fc8ea3479460cf4db68a781304481cf925b2d4\", \"target_base\": \"Nam:65d5043692aa0c93cae54f2dd43e55dc0cb15bea\"}",
+        "seq": 368,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a2",
+        "created_at": "2026-09-26 02:47:47",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"07fc8ea3479460cf4db68a781304481cf925b2d4\"}",
+        "seq": 369,
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+      },
+      {
+        "attempt_id": "U5C-STRESS-SENSITIVITY-r1-a1",
+        "created_at": "2026-09-26 02:47:47",
+        "event_type": "review_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"review_id\": \"U5C-STRESS-SENSITIVITY-r1-review-r1\", \"verdict\": \"pass\"}",
+        "seq": 370,
+        "task_id": "U5C-STRESS-SENSITIVITY-r1"
+      },
+      {
+        "attempt_id": "U5C-STRESS-SENSITIVITY-r1-a1",
+        "created_at": "2026-09-26 02:47:47",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"U5C-STRESS-SENSITIVITY-r1-integrated-v2\"}",
+        "seq": 371,
+        "task_id": "U5C-STRESS-SENSITIVITY-r1"
+      },
+      {
+        "attempt_id": "U5C-STRESS-SENSITIVITY-r1-a1",
+        "created_at": "2026-09-26 02:47:47",
+        "event_type": "integration_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"candidate_hash\": \"65d5043692aa0c93cae54f2dd43e55dc0cb15bea\", \"target_base\": \"Nam:1c4b7d6172b57e6774e5bca2fcafcba1a694c103\"}",
+        "seq": 372,
+        "task_id": "U5C-STRESS-SENSITIVITY-r1"
+      },
+      {
+        "attempt_id": "U5C-STRESS-SENSITIVITY-r1-a1",
+        "created_at": "2026-09-26 02:47:47",
+        "event_type": "accepted",
+        "owner_generation": 3,
+        "payload_json": "{\"revision\": \"65d5043692aa0c93cae54f2dd43e55dc0cb15bea\"}",
+        "seq": 373,
+        "task_id": "U5C-STRESS-SENSITIVITY-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-26 03:48:12",
+        "event_type": "task_created",
+        "owner_generation": 3,
+        "payload_json": "{\"status\": \"planned\"}",
+        "seq": 374,
+        "task_id": "PS-03-REPORT-UI-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-26 03:48:12",
+        "event_type": "task_transition",
+        "owner_generation": 3,
+        "payload_json": "{\"from\": \"planned\", \"from_revision\": 1, \"reason\": \"Accepted PS-02 hindsight and U3c Learn dependencies are satisfied; exact PS-03 candidate has local real-service evidence\", \"to\": \"ready\", \"to_revision\": 2}",
+        "seq": 375,
+        "task_id": "PS-03-REPORT-UI-r1"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a1",
+        "created_at": "2026-09-26 03:48:12",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 3,
+        "payload_json": "{\"base_revision\": \"07fc8ea3479460cf4db68a781304481cf925b2d4\", \"from_revision\": 2, \"input_hash\": \"81d232824a293ff72d481c8ccde0cecf6347ccee0aa1c1a0dd9fad54391ac6ce\", \"to_revision\": 3}",
+        "seq": 376,
+        "task_id": "PS-03-REPORT-UI-r1"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a1",
+        "created_at": "2026-09-26 03:48:12",
+        "event_type": "attempt_running",
+        "owner_generation": 3,
+        "payload_json": "{\"child_locator\": \"/root\", \"route_locator\": \"root/native2\"}",
+        "seq": 377,
+        "task_id": "PS-03-REPORT-UI-r1"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a1",
+        "created_at": "2026-09-26 03:48:12",
+        "event_type": "candidate_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"artifact_hash\": \"567c6073ca1022983d1770dfbe8238d2b8cb3a8a\", \"artifact_path\": \"git:567c6073ca1022983d1770dfbe8238d2b8cb3a8a\"}",
+        "seq": 378,
+        "task_id": "PS-03-REPORT-UI-r1"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a1",
+        "created_at": "2026-09-26 03:48:12",
+        "event_type": "verification_recorded",
+        "owner_generation": 3,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"PS-03-REPORT-UI-r1-integrated-v1\"}",
+        "seq": 379,
+        "task_id": "PS-03-REPORT-UI-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-26 08:46:14",
+        "event_type": "owner_takeover",
+        "owner_generation": 4,
+        "payload_json": "{\"confirmed_old_inactive\": true, \"new_locator\": \"codex-native2-workspace-next-stage-20260926\", \"previous_generation\": 3, \"previous_locator\": \"codex-native2-coordinator-u2-20260922\"}",
+        "seq": 380,
+        "task_id": null
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a1",
+        "created_at": "2026-09-26 08:46:14",
+        "event_type": "attempt_uncertain",
+        "owner_generation": 4,
+        "payload_json": "{\"reason\": \"Independent M0 review found R1 CSV formula-injection gap; candidate superseded by bounded remediation commit 6655521.\"}",
+        "seq": 381,
+        "task_id": "PS-03-REPORT-UI-r1"
+      },
+      {
+        "attempt_id": null,
+        "created_at": "2026-09-26 08:46:14",
+        "event_type": "task_transition",
+        "owner_generation": 4,
+        "payload_json": "{\"from\": \"uncertain\", \"from_revision\": 7, \"reason\": \"R1 remediated; fresh unit, independent review and disposable-service evidence are ready for candidate a2.\", \"to\": \"ready\", \"to_revision\": 8}",
+        "seq": 382,
+        "task_id": "PS-03-REPORT-UI-r1"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a2",
+        "created_at": "2026-09-26 08:46:14",
+        "event_type": "dispatch_prepared",
+        "owner_generation": 4,
+        "payload_json": "{\"base_revision\": \"567c6073ca1022983d1770dfbe8238d2b8cb3a8a\", \"from_revision\": 8, \"input_hash\": \"681f4221dcd7502170de4838527b1a542c86327a4f793b6fac08e43e430ded86\", \"to_revision\": 9}",
+        "seq": 383,
+        "task_id": "PS-03-REPORT-UI-r1"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a2",
+        "created_at": "2026-09-26 08:46:14",
+        "event_type": "attempt_running",
+        "owner_generation": 4,
+        "payload_json": "{\"child_locator\": \"/root\", \"route_locator\": \"root/native2\"}",
+        "seq": 384,
+        "task_id": "PS-03-REPORT-UI-r1"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a2",
+        "created_at": "2026-09-26 08:46:14",
+        "event_type": "candidate_recorded",
+        "owner_generation": 4,
+        "payload_json": "{\"artifact_hash\": \"665552177892d50f7df4fab3d5a31a538b8ac403\", \"artifact_path\": \"git:665552177892d50f7df4fab3d5a31a538b8ac403\"}",
+        "seq": 385,
+        "task_id": "PS-03-REPORT-UI-r1"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a2",
+        "created_at": "2026-09-26 08:46:14",
+        "event_type": "verification_recorded",
+        "owner_generation": 4,
+        "payload_json": "{\"result\": \"pass\", \"verification_id\": \"PS-03-REPORT-UI-r1-csv-remediation-v2\"}",
+        "seq": 386,
+        "task_id": "PS-03-REPORT-UI-r1"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a2",
+        "created_at": "2026-09-26 08:46:14",
+        "event_type": "review_recorded",
+        "owner_generation": 4,
+        "payload_json": "{\"review_id\": \"PS-03-REPORT-UI-r1-csv-remediation-final-review-r2\", \"verdict\": \"pass\"}",
+        "seq": 387,
+        "task_id": "PS-03-REPORT-UI-r1"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a2",
+        "created_at": "2026-09-26 08:46:14",
+        "event_type": "integration_prepared",
+        "owner_generation": 4,
+        "payload_json": "{\"candidate_hash\": \"665552177892d50f7df4fab3d5a31a538b8ac403\", \"target_base\": \"Nam:665552177892d50f7df4fab3d5a31a538b8ac403\"}",
+        "seq": 388,
+        "task_id": "PS-03-REPORT-UI-r1"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a2",
+        "created_at": "2026-09-26 08:46:14",
+        "event_type": "accepted",
+        "owner_generation": 4,
+        "payload_json": "{\"revision\": \"665552177892d50f7df4fab3d5a31a538b8ac403\"}",
+        "seq": 389,
+        "task_id": "PS-03-REPORT-UI-r1"
       }
     ],
     "integration_intents": [
@@ -3157,6 +4787,146 @@
         "target_base": "Nam:a21895abc8300ad99d3dd1a9308d54fe344a38c0",
         "task_id": "U5B-REPLAY-CUTOFF-r1",
         "updated_at": "2026-09-24 14:43:37"
+      },
+      {
+        "attempt_id": "U5C-OOS-PLANNER-r1-a1",
+        "candidate_hash": "860fadd01f463df19d38a67a2294019fc19658d5",
+        "created_at": "2026-09-24 21:52:40",
+        "promoted_revision": "860fadd01f463df19d38a67a2294019fc19658d5",
+        "state": "finalized",
+        "target_base": "Nam:e5522d8b9fae1cdef6f00f88799ed0abcda062e1",
+        "task_id": "U5C-OOS-PLANNER-r1",
+        "updated_at": "2026-09-24 21:52:40"
+      },
+      {
+        "attempt_id": "PS-00-PROP-CONTRACT-r1-a1",
+        "candidate_hash": "3835d4482168da65f0ff764e0b791f49e2fe5381",
+        "created_at": "2026-09-24 21:52:40",
+        "promoted_revision": "3835d4482168da65f0ff764e0b791f49e2fe5381",
+        "state": "finalized",
+        "target_base": "Nam:860fadd01f463df19d38a67a2294019fc19658d5",
+        "task_id": "PS-00-PROP-CONTRACT-r1",
+        "updated_at": "2026-09-24 21:52:40"
+      },
+      {
+        "attempt_id": "U3C-LEARN-BRIDGE-r1-a1",
+        "candidate_hash": "92937ec27425b5f0d9308234cbbcf1a35721411c",
+        "created_at": "2026-09-24 21:52:40",
+        "promoted_revision": "92937ec27425b5f0d9308234cbbcf1a35721411c",
+        "state": "finalized",
+        "target_base": "Nam:3835d4482168da65f0ff764e0b791f49e2fe5381",
+        "task_id": "U3C-LEARN-BRIDGE-r1",
+        "updated_at": "2026-09-24 21:52:40"
+      },
+      {
+        "attempt_id": "PS-01-PROP-PERSISTENCE-r1-a1",
+        "candidate_hash": "1986b1f9c48bc24677bc88f178cc4f732476942c",
+        "created_at": "2026-09-25 09:20:32",
+        "promoted_revision": "1986b1f9c48bc24677bc88f178cc4f732476942c",
+        "state": "finalized",
+        "target_base": "Nam:0aa38970fd550af24311c60f53c388ad4da4cd6f",
+        "task_id": "PS-01-PROP-PERSISTENCE-r1",
+        "updated_at": "2026-09-25 09:20:32"
+      },
+      {
+        "attempt_id": "U5C-WIRING-HARDEN-r1-a1",
+        "candidate_hash": "459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c",
+        "created_at": "2026-09-25 11:55:18",
+        "promoted_revision": "459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c",
+        "state": "finalized",
+        "target_base": "Nam:ancestor-of-22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+        "task_id": "U5C-WIRING-HARDEN-r1",
+        "updated_at": "2026-09-25 11:55:18"
+      },
+      {
+        "attempt_id": "U3C-LEARN-REPLAY-CONTEXT-r1-a1",
+        "candidate_hash": "22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+        "created_at": "2026-09-25 11:55:18",
+        "promoted_revision": "22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+        "state": "finalized",
+        "target_base": "Nam:ancestor-of-22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+        "task_id": "U3C-LEARN-REPLAY-CONTEXT-r1",
+        "updated_at": "2026-09-25 11:55:18"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-CHECKPOINT-r1-a1",
+        "candidate_hash": "432273958778569f9ab76d88767d625ee626c059",
+        "created_at": "2026-09-25 12:38:28",
+        "promoted_revision": "432273958778569f9ab76d88767d625ee626c059",
+        "state": "finalized",
+        "target_base": "Nam:22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+        "task_id": "PS-02-LIFECYCLE-CHECKPOINT-r1",
+        "updated_at": "2026-09-25 12:38:28"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CONNECTION-r1-a1",
+        "candidate_hash": "8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68",
+        "created_at": "2026-09-25 14:27:00",
+        "promoted_revision": "8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68",
+        "state": "finalized",
+        "target_base": "Nam:432273958778569f9ab76d88767d625ee626c059",
+        "task_id": "PS-02-REPLAY-CONNECTION-r1",
+        "updated_at": "2026-09-25 14:27:00"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-AUTHORITY-r1-a1",
+        "candidate_hash": "9ff840b1dd055a02803e1db38138bf039ca349e3",
+        "created_at": "2026-09-25 14:58:24",
+        "promoted_revision": "9ff840b1dd055a02803e1db38138bf039ca349e3",
+        "state": "finalized",
+        "target_base": "Nam:8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68",
+        "task_id": "PS-02-LIFECYCLE-AUTHORITY-r1",
+        "updated_at": "2026-09-25 14:58:24"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1-a1",
+        "candidate_hash": "5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12",
+        "created_at": "2026-09-25 16:11:11",
+        "promoted_revision": "5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12",
+        "state": "finalized",
+        "target_base": "Nam:9ff840b1dd055a02803e1db38138bf039ca349e3",
+        "task_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1",
+        "updated_at": "2026-09-25 16:11:11"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1-a1",
+        "candidate_hash": "95fd6db4526be6658b54bdf0fdea32e1f4af7f5d",
+        "created_at": "2026-09-25 22:01:19",
+        "promoted_revision": "95fd6db4526be6658b54bdf0fdea32e1f4af7f5d",
+        "state": "finalized",
+        "target_base": "Nam:5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12",
+        "task_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1",
+        "updated_at": "2026-09-25 22:01:19"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a2",
+        "candidate_hash": "07fc8ea3479460cf4db68a781304481cf925b2d4",
+        "created_at": "2026-09-26 02:47:47",
+        "promoted_revision": "07fc8ea3479460cf4db68a781304481cf925b2d4",
+        "state": "finalized",
+        "target_base": "Nam:65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1",
+        "updated_at": "2026-09-26 02:47:47"
+      },
+      {
+        "attempt_id": "U5C-STRESS-SENSITIVITY-r1-a1",
+        "candidate_hash": "65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+        "created_at": "2026-09-26 02:47:47",
+        "promoted_revision": "65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+        "state": "finalized",
+        "target_base": "Nam:1c4b7d6172b57e6774e5bca2fcafcba1a694c103",
+        "task_id": "U5C-STRESS-SENSITIVITY-r1",
+        "updated_at": "2026-09-26 02:47:47"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a2",
+        "candidate_hash": "665552177892d50f7df4fab3d5a31a538b8ac403",
+        "created_at": "2026-09-26 08:46:14",
+        "promoted_revision": "665552177892d50f7df4fab3d5a31a538b8ac403",
+        "state": "finalized",
+        "target_base": "Nam:665552177892d50f7df4fab3d5a31a538b8ac403",
+        "task_id": "PS-03-REPORT-UI-r1",
+        "updated_at": "2026-09-26 08:46:14"
       }
     ],
     "meta": [
@@ -3179,9 +4949,9 @@
     ],
     "owner": [
       {
-        "acquired_at": "2026-09-22 06:04:36",
-        "generation": 3,
-        "locator": "codex-native2-coordinator-u2-20260922",
+        "acquired_at": "2026-09-26 08:46:14",
+        "generation": 4,
+        "locator": "codex-native2-workspace-next-stage-20260926",
         "singleton": 1,
         "state": "active"
       }
@@ -3455,6 +5225,141 @@
         "findings_json": "[{\"finding\": \"PASS: immutable source prefix, dataset identity, future-row flag and exact decision boundary fail closed in the final commit.\", \"severity\": \"info\"}, {\"finding\": \"This proves cutoff/source reconciliation only; full manual replay versus engine trade/fill parity remains open.\", \"severity\": \"residual\"}]",
         "review_id": "U5B-REPLAY-CUTOFF-r1-review-r1",
         "reviewer_locator": "/root/u5_committed_review",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "U5C-OOS-PLANNER-r1-a1",
+        "candidate_hash": "860fadd01f463df19d38a67a2294019fc19658d5",
+        "created_at": "2026-09-24 21:52:40",
+        "findings_json": "[{\"finding\": \"PASS: chronology, purge/embargo, locked-holdout and bounded sweep semantics are explicit and fail closed.\", \"severity\": \"info\"}, {\"finding\": \"Research job/API/worker wiring, stress/regime workflow and real-data OOS evidence remain open.\", \"severity\": \"residual\"}]",
+        "review_id": "U5C-OOS-PLANNER-r1-review-r1",
+        "reviewer_locator": "/root review of child candidate",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "PS-00-PROP-CONTRACT-r1-a1",
+        "candidate_hash": "3835d4482168da65f0ff764e0b791f49e2fe5381",
+        "created_at": "2026-09-24 21:52:40",
+        "findings_json": "[{\"finding\": \"PASS: frozen profile/money/calendar/transition semantics are explicit; root additionally fenced initial-capital drift.\", \"severity\": \"info\"}, {\"finding\": \"Persisted CRUD/resume, canonical simulator event lifecycle, D15-D18 E2E and Prop UI remain open.\", \"severity\": \"residual\"}]",
+        "review_id": "PS-00-PROP-CONTRACT-r1-review-r1",
+        "reviewer_locator": "/root review of child candidate",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "U3C-LEARN-BRIDGE-r1-a1",
+        "candidate_hash": "92937ec27425b5f0d9308234cbbcf1a35721411c",
+        "created_at": "2026-09-24 21:52:40",
+        "findings_json": "[{\"finding\": \"PASS: Learn bridge is read-only, tenant-scoped and excludes tutor answer keys/assessment resources.\", \"severity\": \"info\"}, {\"finding\": \"Learn UI/contextual links and whole-product U3/U9 UI acceptance remain open.\", \"severity\": \"residual\"}]",
+        "review_id": "U3C-LEARN-BRIDGE-r1-review-r1",
+        "reviewer_locator": "/root review of child candidate",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "PS-01-PROP-PERSISTENCE-r1-a1",
+        "candidate_hash": "1986b1f9c48bc24677bc88f178cc4f732476942c",
+        "created_at": "2026-09-25 09:20:32",
+        "findings_json": "[{\"finding\": \"PASS: PS-01 persistence/API/UI scope has no blocker in current source and r3 real-service evidence.\", \"severity\": \"info\"}, {\"finding\": \"PS-02 simulator lifecycle remains open and is not accepted here.\", \"severity\": \"residual\"}, {\"finding\": \"U5C changes in the same candidate commit remain independently unaccepted.\", \"severity\": \"residual\"}]",
+        "review_id": "PS-01-PROP-PERSISTENCE-r1-review-r1",
+        "reviewer_locator": "/root/prop_acceptance_review_r2",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "U5C-WIRING-HARDEN-r1-a1",
+        "candidate_hash": "459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c",
+        "created_at": "2026-09-25 11:55:18",
+        "findings_json": "[{\"finding\": \"PASS: terminal OOS outcomes remain fully accounted through result-validated/candidate-ready; late cancel and stale-attempt paths fail closed.\", \"severity\": \"info\"}, {\"finding\": \"Stress/regime, real-data OOS, holdout-content and broker/demo/live acceptance remain outside this task.\", \"severity\": \"residual\"}]",
+        "review_id": "U5C-WIRING-HARDEN-r1-final-review-r1",
+        "reviewer_locator": "/root/u5c_final_review",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "U3C-LEARN-REPLAY-CONTEXT-r1-a1",
+        "candidate_hash": "22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+        "created_at": "2026-09-25 11:55:18",
+        "findings_json": "[{\"finding\": \"PASS: Replay to Learn round-trip preserves session or dataset/start fallback; Research context remains intact and Learn stays GET-only/read-only.\", \"severity\": \"info\"}, {\"finding\": \"Unavailable/error/safety contextual links are source-reviewed rather than individually clicked; real API/PostgreSQL/Figma/broker acceptance remains separate.\", \"severity\": \"residual\"}]",
+        "review_id": "U3C-LEARN-REPLAY-CONTEXT-r1-final-review-r1",
+        "reviewer_locator": "/root/learn_final_review",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-CHECKPOINT-r1-a1",
+        "candidate_hash": "432273958778569f9ab76d88767d625ee626c059",
+        "created_at": "2026-09-25 12:38:28",
+        "findings_json": "[{\"finding\": \"PASS: no P1/P2 findings remain in the PS-02A lifecycle checkpoint.\", \"severity\": \"info\"}, {\"finding\": \"Trailing HWM basis, EOD boundary commit and final breach precedence were independently rechecked.\", \"severity\": \"info\"}, {\"finding\": \"Canonical Replay order/fill ledger connection and broader PS-02 lifecycle/UI/report scope remain open.\", \"severity\": \"residual\"}]",
+        "review_id": "PS-02-LIFECYCLE-CHECKPOINT-r1-review-r1",
+        "reviewer_locator": "/root/ps02_lifecycle_review",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CONNECTION-r1-a1",
+        "candidate_hash": "8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68",
+        "created_at": "2026-09-25 14:27:00",
+        "findings_json": "[{\"finding\": \"PASS: no P1/P2/P3 findings remain after remediation commit 8e939fd.\", \"severity\": \"info\"}, {\"finding\": \"Final-bar market-order wedge and delayed exact Replay-to-Prop retry were independently rechecked and fixed.\", \"severity\": \"info\"}, {\"finding\": \"Unconsumed backward/out-of-order Replay marks remain fail-closed and broker execution remains unavailable.\", \"severity\": \"info\"}, {\"finding\": \"Lifecycle commands, canonical multi-phase Replay transition and execution rewind/checkpoint reconstruction remain separate follow-up slices.\", \"severity\": \"residual\"}]",
+        "review_id": "PS-02-REPLAY-CONNECTION-r1-review-r2",
+        "reviewer_locator": "/root/ps02b_review_r2",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-AUTHORITY-r1-a1",
+        "candidate_hash": "9ff840b1dd055a02803e1db38138bf039ca349e3",
+        "created_at": "2026-09-25 14:58:24",
+        "findings_json": "[{\"finding\": \"PASS: exact commit has no P1/P2/P3 findings after remediation.\", \"severity\": \"info\"}, {\"finding\": \"Late lifecycle-event retries now return self-consistent historical session/attempt snapshots.\", \"severity\": \"info\"}, {\"finding\": \"Atomic bundle creation rejects divergent session/attempt lifecycle status before persistence.\", \"severity\": \"info\"}, {\"finding\": \"Single-active-attempt, terminal-parent and lifecycle ownership invariants were independently rechecked.\", \"severity\": \"info\"}, {\"finding\": \"Replay-bound next_phase remains fail-closed; canonical multi-phase Replay reset/carry belongs to PS-02C2.\", \"severity\": \"residual\"}]",
+        "review_id": "PS-02-LIFECYCLE-AUTHORITY-r1-review-r1",
+        "reviewer_locator": "/root/ps02c1_code_review",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1-a1",
+        "candidate_hash": "5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12",
+        "created_at": "2026-09-25 16:11:11",
+        "findings_json": "[{\"finding\": \"PASS: exact commit has no P1/P2/P3 findings.\", \"severity\": \"info\"}, {\"finding\": \"Atomic Replay/Prop persistence, fixed lock order and receipt-first exact idempotency were independently checked.\", \"severity\": \"info\"}, {\"finding\": \"Phase metadata, reset/carry policy boundaries and phase-transition event sequencing were independently checked.\", \"severity\": \"info\"}, {\"finding\": \"Execution rewind/checkpoint reconstruction remains outside PS-02C2.\", \"severity\": \"residual\"}]",
+        "review_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1-review-r1",
+        "reviewer_locator": "/root/ps02c2_exact_review",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1-a1",
+        "candidate_hash": "95fd6db4526be6658b54bdf0fdea32e1f4af7f5d",
+        "created_at": "2026-09-25 22:01:19",
+        "findings_json": "[{\"finding\": \"PASS: exact commit has no P1/P2/P3 findings.\", \"severity\": \"info\"}, {\"finding\": \"Persisted checkpoint selection, price-mark fallback, branch lineage remap and parent revision fence were independently reviewed.\", \"severity\": \"info\"}, {\"finding\": \"Prop-attempt rebinding/cloning onto a historical Replay branch remains outside PS-02C3.\", \"severity\": \"residual\"}]",
+        "review_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1-review-r1",
+        "reviewer_locator": "/root/ps02c3_exact_review_r2",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a1",
+        "candidate_hash": "5a9710e3ea8c4874a5584722640d118e40be2304",
+        "created_at": "2026-09-25 23:41:16",
+        "findings_json": "[{\"finding\": \"Generic resume receipt could impersonate canonical Replay-to-Prop provenance because branch admission checked deterministic operation_id without the lifecycle fingerprint.\", \"severity\": \"P2\"}, {\"finding\": \"Delayed exact branch retry returned the mutable child head instead of the receipt's immutable creation revision.\", \"severity\": \"P3\"}]",
+        "review_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-review-r1",
+        "reviewer_locator": "/root/ps02c4_review",
+        "verdict": "fail"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a2",
+        "candidate_hash": "07fc8ea3479460cf4db68a781304481cf925b2d4",
+        "created_at": "2026-09-26 02:45:29",
+        "findings_json": "[{\"finding\": \"Fresh read-only exact-HEAD review found no actionable P1/P2/P3 issue in corrected provenance and delayed-idempotency paths.\", \"severity\": \"info\"}, {\"finding\": \"Fresh disposable PostgreSQL regression ran 103 tests and retained replay/prop receipts with broker execution capability false.\", \"severity\": \"info\"}, {\"finding\": \"Prop objective UI/report/Figma, broader D15/intrabar coverage, broker/live/holdout/provider/deploy remain outside this acceptance.\", \"severity\": \"residual\"}]",
+        "review_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-review-r2",
+        "reviewer_locator": "/root/native2-readonly-review-20260926",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "U5C-STRESS-SENSITIVITY-r1-a1",
+        "candidate_hash": "65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+        "created_at": "2026-09-26 02:47:47",
+        "findings_json": "[{\"finding\": \"Read-only exact-candidate review found bounded deterministic declared stress semantics, no automatic winner selection, and pre-holdout fencing.\", \"severity\": \"info\"}, {\"finding\": \"Fresh disposable PostgreSQL + API + separate worker + isolated Nautilus acceptance passed; candidate-owned sources are unchanged at current HEAD.\", \"severity\": \"info\"}, {\"finding\": \"Approved real-data OOS/holdout, broader regime sensitivity, broker/live/provider/deploy remain outside this acceptance.\", \"severity\": \"residual\"}]",
+        "review_id": "U5C-STRESS-SENSITIVITY-r1-review-r1",
+        "reviewer_locator": "/root/native2-readonly-review-20260926",
+        "verdict": "pass"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a2",
+        "candidate_hash": "665552177892d50f7df4fab3d5a31a538b8ac403",
+        "created_at": "2026-09-26 08:46:14",
+        "findings_json": "[{\"finding\": \"PASS: 15 textual CSV fields x 6 formula prefixes were safe (90/90); CR quoting parsed safely.\", \"severity\": \"info\"}, {\"finding\": \"PASS: negative balance/equity numeric text remains unchanged; JSON/report semantics are not mutated.\", \"severity\": \"info\"}, {\"finding\": \"Broader real-data, Figma, broker/live, holdout and deployment gates remain outside this remediation.\", \"severity\": \"residual\"}]",
+        "review_id": "PS-03-REPORT-UI-r1-csv-remediation-final-review-r2",
+        "reviewer_locator": "/root/mt5_m0_audit",
         "verdict": "pass"
       }
     ],
@@ -3734,6 +5639,174 @@
         "status": "accepted",
         "task_id": "U5B-REPLAY-CUTOFF-r1",
         "updated_at": "2026-09-24 14:43:37"
+      },
+      {
+        "acceptance_json": "[\"Walk-forward folds are chronological train-purge-embargo-OOS with explicit rolling or expanding semantics\", \"Declared overlap requires sufficient purge and nonchronological source rows fail closed\", \"Locked holdout remains metadata-only and source/OOS ranges cannot reach it\", \"Parameter sweeps are deterministic, bounded and account for completed, failed and canceled trials\", \"Focused U5c and integrated local regression pass without opening holdout or broker capability\"]",
+        "accepted_revision": "860fadd01f463df19d38a67a2294019fc19658d5",
+        "allowed_files_json": "[\"foundation_v2/trading_workspace_v2/research_oos.py\", \"foundation_v2/tests/test_u5c_oos.py\"]",
+        "dependencies_json": "[\"U5-NAUTILUS-ADAPTER-r1\", \"U5B-REPLAY-CUTOFF-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "89c7bc8175f671fe67d9bc139d3eaf7133727102c886ed6e7a86c81542a953ec",
+        "status": "accepted",
+        "task_id": "U5C-OOS-PLANNER-r1",
+        "updated_at": "2026-09-24 21:52:40"
+      },
+      {
+        "acceptance_json": "[\"Prop profile/session/attempt/phase contracts are versioned, simulation-only and workspace scoped\", \"Independent Decimal oracle covers target, daily/static/trailing thresholds, open P/L, costs, comparator equality and frozen phase capital\", \"Virtual calendar handles timezone/DST/no-tick resets and never advances from wall clock\", \"Transition intents are revisioned/idempotent and terminal failed attempts cannot be rewritten to pass\", \"Retained U6d subset and integrated local regression pass while broker execution remains out of scope\"]",
+        "accepted_revision": "3835d4482168da65f0ff764e0b791f49e2fe5381",
+        "allowed_files_json": "[\"foundation_v2/trading_workspace_v2/prop_session.py\", \"foundation_v2/tests/test_ps00_prop_session_contract.py\"]",
+        "dependencies_json": "[\"U5B-PROTECTIVE-MARGIN-r1\", \"U5B-REPLAY-CUTOFF-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "4c187e3b16e7e1ccf2e6320c76cda23d01c2533faef1a7ff5fbfc0f724b7761f",
+        "status": "accepted",
+        "task_id": "PS-00-PROP-CONTRACT-r1",
+        "updated_at": "2026-09-24 21:52:40"
+      },
+      {
+        "acceptance_json": "[\"Learn reads the existing education course/progress owners instead of creating a second tracker\", \"Overview, glossary and allowlisted resources are workspace scoped and read-only\", \"Tutor answer keys and assessment resources are not exposed through the bridge\", \"Unconfigured or unauthorized workspaces fail closed and one tenant cannot inherit another tenant education root\", \"Focused API tests and existing U3/F7 regressions pass on the named disposable PostgreSQL fixture\"]",
+        "accepted_revision": "92937ec27425b5f0d9308234cbbcf1a35721411c",
+        "allowed_files_json": "[\"foundation_v2/trading_workspace_v2/learn.py\", \"foundation_v2/trading_workspace_v2/api.py\", \"foundation_v2/tests/test_u3c_learn.py\"]",
+        "dependencies_json": "[\"U3-PATH2-PLAYBOOK-JOURNAL-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "0676dfea2ab9bd2d4e9f32ec62454cbeeeaa04c4b80aaba201b39c88f39a6a1a",
+        "status": "accepted",
+        "task_id": "U3C-LEARN-BRIDGE-r1",
+        "updated_at": "2026-09-24 21:52:40"
+      },
+      {
+        "acceptance_json": "[\"Prop session, attempt, phase and resume state persist in PostgreSQL and survive reload/restart\", \"Initial session+attempt creation is atomic and exact-payload retries are idempotent while conflicts fail closed\", \"Tenant/workspace scope and revision fencing protect create/read/resume mutations\", \"Real local API + Vite + Playwright acceptance passes create, persisted resume, denial and responsive 1440/768/360 flows\", \"Prop scope remains simulation-only and exposes no broker execution capability\"]",
+        "accepted_revision": "1986b1f9c48bc24677bc88f178cc4f732476942c",
+        "allowed_files_json": "[\"foundation_v2/trading_workspace_v2/prop_session.py\", \"foundation_v2/trading_workspace_v2/store.py\", \"foundation_v2/trading_workspace_v2/api.py\", \"foundation_v2/tests/test_ps01_prop_persistence.py\", \"foundation_v2/scripts/ps01_acceptance.py\", \"foundation_v2/web/run_prop_ui_real_acceptance.mjs\", \"foundation_v2/web/src/PropWorkspace.jsx\"]",
+        "dependencies_json": "[\"PS-00-PROP-CONTRACT-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "18b0035db6d4509b9b5312e64ed5e3e603216cfec8f19d41936b5dad67c4cd2f",
+        "status": "accepted",
+        "task_id": "PS-01-PROP-PERSISTENCE-r1",
+        "updated_at": "2026-09-25 09:20:32"
+      },
+      {
+        "acceptance_json": "[\"OOS job/API/worker wiring executes through a separate worker and isolated Nautilus runtime against disposable PostgreSQL\", \"walk-forward and bounded-sweep outcomes persist as research-oos-result-v1 without automatic ranking\", \"terminal OOS checkpoints retain completed trial outcomes through result-validated and candidate-ready so a late cancel cannot relabel completed trials\", \"same-attempt cancellation accounting remains fully accounted while stale-attempt checkpoints are ignored\", \"locked holdout content and broker/live capabilities remain unavailable\"]",
+        "accepted_revision": "459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c",
+        "allowed_files_json": "[\"foundation_v2/trading_workspace_v2/research.py\", \"foundation_v2/trading_workspace_v2/store.py\", \"foundation_v2/tests/test_u5c_oos.py\"]",
+        "dependencies_json": "[\"U5C-OOS-PLANNER-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "344d83c68b695646a6f25edaeeb07bc6d9d85d4af304e7b3d631136dc96846f0",
+        "status": "accepted",
+        "task_id": "U5C-WIRING-HARDEN-r1",
+        "updated_at": "2026-09-25 11:55:18"
+      },
+      {
+        "acceptance_json": "[\"Replay -> Learn -> Replay preserves the persisted replay session context\", \"When no session exists, dataset/start fallback survives the Learn round trip\", \"Learn denied/unavailable/error/safety states keep a contextual return path\", \"Research -> Learn -> Research job context remains intact and Learn remains GET-only/read-only\", \"fixture browser QA passes at 1440/768/360 and the Vite production build succeeds\"]",
+        "accepted_revision": "22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+        "allowed_files_json": "[\"foundation_v2/web/src/LearnWorkspace.jsx\", \"foundation_v2/web/src/ReplayWorkspace.jsx\", \"foundation_v2/web/run_learn_ui_acceptance.mjs\"]",
+        "dependencies_json": "[\"U3C-LEARN-BRIDGE-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "40a48b9ce23e75e29af0415adfe5b2c8eee0d29afc80a80cdd533f70bfe8cfbc",
+        "status": "accepted",
+        "task_id": "U3C-LEARN-REPLAY-CONTEXT-r1",
+        "updated_at": "2026-09-25 11:55:18"
+      },
+      {
+        "acceptance_json": "[\"Deterministic Prop lifecycle evaluation consumes ordered simulator snapshots without generating orders or fills\", \"Money/calendar objectives enforce target, daily/overall drawdown, minimum days, cutoff and breach-before-pass precedence\", \"Trailing drawdown follows declared balance/equity basis; end-of-day HWM advances only at explicit calendar boundaries\", \"Incomplete evaluation quality blocks objective progression without consuming simulator event/cursor progression\", \"PostgreSQL lifecycle persistence is atomic, revision-fenced, idempotent, tenant-scoped and rejects concurrent double-apply\", \"Checkpoint remains simulation-only and exposes no broker execution capability\"]",
+        "accepted_revision": "432273958778569f9ab76d88767d625ee626c059",
+        "allowed_files_json": "[\"foundation_v2/trading_workspace_v2/prop_session.py\", \"foundation_v2/trading_workspace_v2/store.py\", \"foundation_v2/tests/test_ps02_prop_lifecycle.py\", \"foundation_v2/scripts/ps02_lifecycle_acceptance.py\"]",
+        "dependencies_json": "[\"PS-00-PROP-CONTRACT-r1\", \"PS-01-PROP-PERSISTENCE-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "2830d519b5b6fecf26c81e592f5dfd884846caac0376bcd0bafde6b67e347126",
+        "status": "accepted",
+        "task_id": "PS-02-LIFECYCLE-CHECKPOINT-r1",
+        "updated_at": "2026-09-25 12:38:28"
+      },
+      {
+        "acceptance_json": "[\"Canonical Replay execution persists market fills and price marks before Prop lifecycle consumes them\", \"Replay to Prop binding is workspace-scoped, dataset/cost/engine pinned, revision-fenced and ordered\", \"Exact Replay to Prop retries remain idempotent even after later price marks while unseen backward events fail closed\", \"Market orders cannot be queued without a future Replay bar, preventing terminal pending-order wedges\", \"Equity-dependent objectives fail closed when the Replay mark lacks complete intrabar equity coverage\", \"Execution-enabled rewind/branch remains blocked until canonical checkpoint reconstruction exists and broker execution stays unavailable\"]",
+        "accepted_revision": "8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68",
+        "allowed_files_json": "[\"foundation_v2/evidence/PS02-replay-connection-r1.json\", \"foundation_v2/scripts/ps02_replay_connection_acceptance.py\", \"foundation_v2/tests/test_ps02_replay_prop_connection.py\", \"foundation_v2/tests/test_replay_execution_core.py\", \"foundation_v2/trading_workspace_v2/api.py\", \"foundation_v2/trading_workspace_v2/contracts.py\", \"foundation_v2/trading_workspace_v2/execution_semantics.py\", \"foundation_v2/trading_workspace_v2/prop_replay.py\", \"foundation_v2/trading_workspace_v2/replay.py\", \"foundation_v2/trading_workspace_v2/replay_execution.py\", \"foundation_v2/trading_workspace_v2/research_engine.py\", \"foundation_v2/trading_workspace_v2/store.py\"]",
+        "dependencies_json": "[\"PS-02-LIFECYCLE-CHECKPOINT-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "06e492fd51665e2b483a3696ee2714476ba5f56f6445c1efe71104b908c78da7",
+        "status": "accepted",
+        "task_id": "PS-02-REPLAY-CONNECTION-r1",
+        "updated_at": "2026-09-25 14:27:00"
+      },
+      {
+        "acceptance_json": "[\"Prop session lifecycle status and attempt lifecycle status/phase index are server-owned rather than arbitrary resume/session writes\", \"start, pause, resume and abandon lifecycle commands are tenant-scoped, revision-fenced, event-sequence-fenced and idempotent\", \"Session status remains synchronized with its single active attempt; only one active attempt exists per session and restart requires a terminal parent\", \"Delayed exact transition/event retries return self-consistent snapshots while stale or tampered intents fail closed\", \"Pause and resume do not advance simulator virtual time or event sequence\", \"Replay-bound next_phase remains fail-closed until canonical Replay phase reset/carry support exists\", \"Real PostgreSQL/API/Vite/Playwright regression passes at 1440, 768 and 360 widths with broker execution capability disabled\"]",
+        "accepted_revision": "9ff840b1dd055a02803e1db38138bf039ca349e3",
+        "allowed_files_json": "[\"foundation_v2/tests/test_ps01_prop_persistence.py\", \"foundation_v2/tests/test_ps02_prop_lifecycle.py\", \"foundation_v2/trading_workspace_v2/api.py\", \"foundation_v2/trading_workspace_v2/prop_session.py\", \"foundation_v2/trading_workspace_v2/store.py\", \"foundation_v2/web/run_prop_ui_real_acceptance.mjs\"]",
+        "dependencies_json": "[\"PS-02-REPLAY-CONNECTION-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "df44d55f4ae983c29304ce0655d53dc45f12af27c54890b3c4f25710f6dcbcbb",
+        "status": "accepted",
+        "task_id": "PS-02-LIFECYCLE-AUTHORITY-r1",
+        "updated_at": "2026-09-25 14:58:24"
+      },
+      {
+        "acceptance_json": "[\"Replay-bound next_phase persists Replay revision, Prop attempt/session state and idempotency receipt in one PostgreSQL transaction with fixed Replay-to-session-to-attempt lock order\", \"reset, carry_balance and carry_all produce the canonical next-phase money and position state while immutable starting_balance is preserved and phase_index/phase_initial_balance identify the active Replay phase\", \"A canonical phase_transition Replay ledger event advances Replay event_sequence exactly once, preserves the cursor and becomes the new Replay binding boundary\", \"Exact and late exact retries are idempotent; tampered reuse conflicts; concurrent two-tab transitions commit only once; forced persistence failure rolls back both Replay and Prop domains\", \"Replay/Prop lineage, cursor, money, position and event drift fail closed, as do pending orders, missing canonical Replay, final-bar/no-future-bar transitions and unsupported close_by_simulator with an open Replay position\", \"Phase 2 can start and continue Replay step/feed evaluation using the new phase basis without the prior initial-balance mismatch\", \"Disposable PostgreSQL lifecycle regression plus real PostgreSQL/API/Vite/Playwright regression pass with broker execution capability disabled\"]",
+        "accepted_revision": "5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12",
+        "allowed_files_json": "[\"foundation_v2/tests/test_ps02_prop_lifecycle.py\", \"foundation_v2/tests/test_ps02_replay_prop_connection.py\", \"foundation_v2/tests/test_replay_execution_core.py\", \"foundation_v2/trading_workspace_v2/prop_replay.py\", \"foundation_v2/trading_workspace_v2/prop_session.py\", \"foundation_v2/trading_workspace_v2/replay_execution.py\", \"foundation_v2/trading_workspace_v2/store.py\"]",
+        "dependencies_json": "[\"PS-02-LIFECYCLE-AUTHORITY-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "b3d8deaef30390003c9e4afc6a9f727d83dffa104bb7a1795b2d16b21aee5943",
+        "status": "accepted",
+        "task_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1",
+        "updated_at": "2026-09-25 16:11:11"
+      },
+      {
+        "acceptance_json": "[\"Execution-enabled Replay branch selects the latest immutable persisted checkpoint at the requested cursor when one exists, preserving queued/manual execution state\", \"If a multi-bar Replay step has no persisted revision at an intermediate cursor, branch reconstruction uses the canonical price_mark ledger checkpoint and restores balance, floating P/L, equity, open position, pending state, phase metadata and event sequence\", \"The child receives a new replay_session_id and branch_id while the reconstructed ledger is remapped consistently to the child lineage and immutable dataset/instrument/cost pins remain unchanged\", \"Parent Replay state and revision history remain immutable; child creation is revision-fenced against the locked parent head and stale parent revisions fail closed\", \"A reconstructed child can continue deterministic Replay stepping from the checkpoint without mutating the parent\", \"Existing Replay-to-Prop lineage remains fail-closed for a newly forked child unless a separate canonical Prop binding is created\", \"Fresh disposable PostgreSQL Replay/lifecycle regressions and real PostgreSQL/API/Vite/Playwright regression pass with broker execution capability disabled\"]",
+        "accepted_revision": "95fd6db4526be6658b54bdf0fdea32e1f4af7f5d",
+        "allowed_files_json": "[\"foundation_v2/tests/test_ps02_replay_prop_connection.py\", \"foundation_v2/tests/test_replay_execution_core.py\", \"foundation_v2/trading_workspace_v2/replay.py\", \"foundation_v2/trading_workspace_v2/replay_execution.py\", \"foundation_v2/trading_workspace_v2/store.py\"]",
+        "dependencies_json": "[\"PS-02-REPLAY-PHASE-TRANSITIONS-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "6ab195d828887b6ba55e4f1eb315d8bb8ec4fd28efa1b48f2905dd71cb35f1c5",
+        "status": "accepted",
+        "task_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1",
+        "updated_at": "2026-09-25 22:01:19"
+      },
+      {
+        "acceptance_json": "[\"A hindsight Prop child attempt can only be created from a canonical historical Replay branch checkpoint whose immutable dataset, execution lineage, cursor, money, position and pending-order state match a persisted historical Prop checkpoint\", \"The server derives the child attempt identity and branch provenance; the client cannot inject balance, equity, checkpoint state or an arbitrary child attempt id\", \"Concurrent exact retries are idempotent and return one created child plus duplicates; reusing an operation id with different branch content fails closed\", \"Parent Replay and Prop attempt state remain immutable while the child is rebound to the child Replay lineage and can resume deterministic stepping and lifecycle feeds\", \"Tenant, Replay revision, parent Replay revision and parent Prop attempt revision are fenced; missing canonical checkpoints and foreign scope fail closed\", \"Generic Prop attempt creation cannot forge hindsight branches, and nested hindsight branching remains rejected\", \"Fresh disposable PostgreSQL regression evidence covers the exact source hashes with broker execution capability disabled\"]",
+        "accepted_revision": "07fc8ea3479460cf4db68a781304481cf925b2d4",
+        "allowed_files_json": "[\"foundation_v2/tests/test_ps02_replay_prop_connection.py\", \"foundation_v2/trading_workspace_v2/api.py\", \"foundation_v2/trading_workspace_v2/prop_replay.py\", \"foundation_v2/trading_workspace_v2/prop_session.py\", \"foundation_v2/trading_workspace_v2/replay.py\", \"foundation_v2/trading_workspace_v2/store.py\"]",
+        "dependencies_json": "[\"PS-02-REPLAY-CHECKPOINT-BRANCH-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 14,
+        "spec_hash": "c880563274928f3a97e3451c798c5e6a99f48e9cf63e6bd3415bca8c7d198ca6",
+        "status": "accepted",
+        "task_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1",
+        "updated_at": "2026-09-26 02:47:47"
+      },
+      {
+        "acceptance_json": "[\"U5c normalizes a deterministic bounded cost/fill stress matrix with a base scenario plus at most seven declared scenarios and rejects no-op, duplicate, unknown-field and out-of-bound multipliers\", \"The declared sweep multiplied by stress scenarios is bounded before execution and rejects more than 10000 combinations\", \"Stress identity is pinned into the validation protocol by a canonical SHA-256 and rehashed tampering fails closed\", \"Every stress run remains pre-holdout; the planner and worker never authorize holdout content access\", \"Stress modifies only declared cost/fill assumptions for each fold and records all scenario outcomes without ranking or selecting a winner\", \"Runtime budget/cancel checks still fence the expanded matrix\", \"Focused U5c regression passes 19 tests plus 2 subtests on the exact candidate source\"]",
+        "accepted_revision": "65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+        "allowed_files_json": "[\"foundation_v2/tests/test_u5c_oos.py\", \"foundation_v2/trading_workspace_v2/research.py\", \"foundation_v2/trading_workspace_v2/research_oos.py\"]",
+        "dependencies_json": "[\"U5C-WIRING-HARDEN-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 8,
+        "spec_hash": "ae1f74f0635f77ba3419a9e6649fe0738e41eb0342b6926c6e44cb608c0af998",
+        "status": "accepted",
+        "task_id": "U5C-STRESS-SENSITIVITY-r1",
+        "updated_at": "2026-09-26 02:47:47"
+      },
+      {
+        "acceptance_json": "[\"Attempt reports are derived read-only from canonical persisted Prop simulation state and retain session/profile/attempt/phase provenance\", \"Workspace-scoped report APIs support status and clean/hindsight branch filtering without broker execution capability\", \"CSV export contains stable summary fields and excludes arbitrary nested resume payloads and credentials\", \"Prop UI exposes selected-attempt outcome/reasons plus a Reports view with status/branch filters, Learn navigation and CSV export\", \"Hindsight reports remain visibly distinct from clean attempts and report failures do not hide usable persisted resume state\", \"Fixture browser coverage includes breach explanation, filters/export, error/denied/empty/conflict and responsive 1440/768/360 layouts\", \"Disposable PostgreSQL -> API -> Vite -> Playwright validation passes with persisted IDs, tenant denial and no broker/execution request\"]",
+        "accepted_revision": "665552177892d50f7df4fab3d5a31a538b8ac403",
+        "allowed_files_json": "[\"foundation_v2/evidence/ps03-report-ui-r1/PS03-report-ui-acceptance-r1.json\", \"foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-1440.png\", \"foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-360.png\", \"foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-768.png\", \"foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-reports-1440.png\", \"foundation_v2/scripts/ps03_acceptance.py\", \"foundation_v2/tests/test_ps03_prop_reports.py\", \"foundation_v2/trading_workspace_v2/api.py\", \"foundation_v2/trading_workspace_v2/prop_report.py\", \"foundation_v2/web/run_prop_ui_acceptance.mjs\", \"foundation_v2/web/run_prop_ui_real_acceptance.mjs\", \"foundation_v2/web/src/PropWorkspace.jsx\", \"foundation_v2/web/src/styles.css\"]",
+        "dependencies_json": "[\"PS-02-PROP-HINDSIGHT-BRANCH-r1\", \"U3C-LEARN-REPLAY-CONTEXT-r1\"]",
+        "last_reason": "verified promotion observed",
+        "revision": 14,
+        "spec_hash": "81d232824a293ff72d481c8ccde0cecf6347ccee0aa1c1a0dd9fad54391ac6ce",
+        "status": "accepted",
+        "task_id": "PS-03-REPORT-UI-r1",
+        "updated_at": "2026-09-26 08:46:14"
       }
     ],
     "verifications": [
@@ -4086,6 +6159,186 @@
         "verification_id": "U5B-REPLAY-CUTOFF-r1-integrated-v1",
         "verifier": "isolated F6 PostgreSQL/worker/browser regression runner",
         "verifier_version": "u5-followups-20260924"
+      },
+      {
+        "attempt_id": "U5C-OOS-PLANNER-r1-a1",
+        "candidate_hash": "860fadd01f463df19d38a67a2294019fc19658d5",
+        "created_at": "2026-09-24 21:52:40",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"chronological folds with purge/embargo\", \"locked holdout fails closed\", \"bounded sweep accounts all terminal outcomes\", \"38-test post-commit regression passes\"], \"input_hashes\": {\"base\": \"e5522d8b9fae1cdef6f00f88799ed0abcda062e1\", \"candidate\": \"860fadd01f463df19d38a67a2294019fc19658d5\", \"packet\": \"89c7bc8175f671fe67d9bc139d3eaf7133727102c886ed6e7a86c81542a953ec\", \"validation\": \"26b06d19db1eeef80bf47c02f8ff68cff54624991cbbe11d661ed3fe3478b332\"}, \"post_commit\": true, \"test_hash\": \"26b06d19db1eeef80bf47c02f8ff68cff54624991cbbe11d661ed3fe3478b332\", \"test_scope\": \"U5c chronological walk-forward/purge/embargo/locked-holdout planning and bounded sweep plus shared local regression\", \"validation_receipt\": \"PRODUCT-FOLLOWUP-validation-r1.json\"}",
+        "result": "pass",
+        "verification_id": "U5C-OOS-PLANNER-r1-integrated-v1",
+        "verifier": "root post-commit disposable PostgreSQL regression",
+        "verifier_version": "product-followup-20260925"
+      },
+      {
+        "attempt_id": "PS-00-PROP-CONTRACT-r1-a1",
+        "candidate_hash": "3835d4482168da65f0ff764e0b791f49e2fe5381",
+        "created_at": "2026-09-24 21:52:40",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"Decimal money oracle covers target/loss/trailing/cost/open-PnL boundaries\", \"virtual calendar is DST/no-tick aware and wall-clock independent\", \"transition intents are revisioned and idempotent\", \"38-test post-commit regression plus 2 legacy prop tests pass\"], \"input_hashes\": {\"base\": \"860fadd01f463df19d38a67a2294019fc19658d5\", \"candidate\": \"3835d4482168da65f0ff764e0b791f49e2fe5381\", \"packet\": \"4c187e3b16e7e1ccf2e6320c76cda23d01c2533faef1a7ff5fbfc0f724b7761f\", \"validation\": \"26b06d19db1eeef80bf47c02f8ff68cff54624991cbbe11d661ed3fe3478b332\"}, \"post_commit\": true, \"test_hash\": \"26b06d19db1eeef80bf47c02f8ff68cff54624991cbbe11d661ed3fe3478b332\", \"test_scope\": \"PS-00 simulation-only prop domain/money/calendar/transition contract plus retained evaluator and shared local regression\", \"validation_receipt\": \"PRODUCT-FOLLOWUP-validation-r1.json\"}",
+        "result": "pass",
+        "verification_id": "PS-00-PROP-CONTRACT-r1-integrated-v1",
+        "verifier": "root post-commit disposable PostgreSQL regression",
+        "verifier_version": "product-followup-20260925"
+      },
+      {
+        "attempt_id": "U3C-LEARN-BRIDGE-r1-a1",
+        "candidate_hash": "92937ec27425b5f0d9308234cbbcf1a35721411c",
+        "created_at": "2026-09-24 21:52:40",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"course/progress source of truth is reused read-only\", \"answer keys and assessments are denied\", \"workspace binding fails closed\", \"4 focused Learn tests and 38-test post-commit regression pass\"], \"input_hashes\": {\"base\": \"3835d4482168da65f0ff764e0b791f49e2fe5381\", \"candidate\": \"92937ec27425b5f0d9308234cbbcf1a35721411c\", \"packet\": \"0676dfea2ab9bd2d4e9f32ec62454cbeeeaa04c4b80aaba201b39c88f39a6a1a\", \"validation\": \"26b06d19db1eeef80bf47c02f8ff68cff54624991cbbe11d661ed3fe3478b332\"}, \"post_commit\": true, \"test_hash\": \"26b06d19db1eeef80bf47c02f8ff68cff54624991cbbe11d661ed3fe3478b332\", \"test_scope\": \"U3c read-only tenant-scoped education bridge/API plus existing U3/F7 local regression\", \"validation_receipt\": \"PRODUCT-FOLLOWUP-validation-r1.json\"}",
+        "result": "pass",
+        "verification_id": "U3C-LEARN-BRIDGE-r1-integrated-v1",
+        "verifier": "root post-commit disposable PostgreSQL regression",
+        "verifier_version": "product-followup-20260925"
+      },
+      {
+        "attempt_id": "PS-01-PROP-PERSISTENCE-r1-a1",
+        "candidate_hash": "1986b1f9c48bc24677bc88f178cc4f732476942c",
+        "created_at": "2026-09-25 09:20:32",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"Prop session, attempt, phase and resume state persist in PostgreSQL and survive reload/restart\", \"Initial session+attempt creation is atomic and exact-payload retries are idempotent while conflicts fail closed\", \"Tenant/workspace scope and revision fencing protect create/read/resume mutations\", \"Real local API + Vite + Playwright acceptance passes create, persisted resume, denial and responsive 1440/768/360 flows\", \"Prop scope remains simulation-only and exposes no broker execution capability\"], \"input_hashes\": {\"base\": \"0aa38970fd550af24311c60f53c388ad4da4cd6f\", \"candidate\": \"1986b1f9c48bc24677bc88f178cc4f732476942c\", \"validation\": \"7c2f810e70b91e413b42ea7e3e4b11c25035ce9c41c9cd4198c8eb7df3401cba\"}, \"test_hash\": \"7c2f810e70b91e413b42ea7e3e4b11c25035ce9c41c9cd4198c8eb7df3401cba\", \"test_scope\": \"PS-01 persistence + real local service/browser flow; simulation only\", \"validation_checks\": {\"backend_persistence_tests_pass\": true, \"broker_execution_capability\": false, \"postgres_attempt_persisted\": true, \"postgres_session_persisted\": true, \"real_service_browser_pass\": true, \"vite_build_pass\": true}, \"validation_receipt\": \"foundation_v2\\\\.runtime\\\\ps01-real-service-evidence-r3\\\\PS01-acceptance-r1.json\"}",
+        "result": "pass",
+        "verification_id": "PS-01-PROP-PERSISTENCE-r1-integrated-v1",
+        "verifier": "PS-01 disposable PostgreSQL/API/Vite/Playwright acceptance runner",
+        "verifier_version": "ps01-20260925-r3"
+      },
+      {
+        "attempt_id": "U5C-WIRING-HARDEN-r1-a1",
+        "candidate_hash": "459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c",
+        "created_at": "2026-09-25 11:00:32",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"OOS job/API/worker wiring executes through a separate worker and isolated Nautilus runtime against disposable PostgreSQL\", \"walk-forward and bounded-sweep outcomes persist as research-oos-result-v1 without automatic ranking\", \"terminal OOS checkpoints retain completed trial outcomes through result-validated and candidate-ready so a late cancel cannot relabel completed trials\", \"same-attempt cancellation accounting remains fully accounted while stale-attempt checkpoints are ignored\", \"locked holdout content and broker/live capabilities remain unavailable\"], \"input_hashes\": {\"base\": \"0aa38970fd550af24311c60f53c388ad4da4cd6f\", \"candidate\": \"459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c\", \"packet\": \"344d83c68b695646a6f25edaeeb07bc6d9d85d4af304e7b3d631136dc96846f0\", \"validation\": \"8a6b760b8e74cef2a02e50052fa522a3130a2d3ce3ba31caeb5eea9160eac6d9\"}, \"test_hash\": \"8a6b760b8e74cef2a02e50052fa522a3130a2d3ce3ba31caeb5eea9160eac6d9\", \"test_scope\": \"16 focused U5C unit/regression tests plus fresh disposable PostgreSQL API -> separate worker -> isolated Nautilus OOS -> persisted result acceptance\", \"validation_receipt\": \"artifacts/U5C-WIRING-r2/U5C-wiring-acceptance-r1.json\"}",
+        "result": "pass",
+        "verification_id": "U5C-WIRING-HARDEN-r1-root-validation-r1",
+        "verifier": "root focused unittest + disposable PostgreSQL/Nautilus acceptance",
+        "verifier_version": "post-r283-root-20260925"
+      },
+      {
+        "attempt_id": "U3C-LEARN-REPLAY-CONTEXT-r1-a1",
+        "candidate_hash": "22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+        "created_at": "2026-09-25 11:00:32",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"Replay -> Learn -> Replay preserves the persisted replay session context\", \"When no session exists, dataset/start fallback survives the Learn round trip\", \"Learn denied/unavailable/error/safety states keep a contextual return path\", \"Research -> Learn -> Research job context remains intact and Learn remains GET-only/read-only\", \"fixture browser QA passes at 1440/768/360 and the Vite production build succeeds\"], \"input_hashes\": {\"base\": \"459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c\", \"candidate\": \"22ab959e719fa98ef3d0d226edadded0b9b7eaf5\", \"packet\": \"40a48b9ce23e75e29af0415adfe5b2c8eee0d29afc80a80cdd533f70bfe8cfbc\", \"validation\": \"d50534d00f2905906b757357e582c241ff11be6da434f80301ed6784c844e974\"}, \"test_hash\": \"d50534d00f2905906b757357e582c241ff11be6da434f80301ed6784c844e974\", \"test_scope\": \"fixture browser acceptance for Learn states/context links at 1440/768/360 plus Vite production build\", \"validation_receipt\": \"artifacts/U3C-LEARN-REPLAY-CONTEXT-r1/U3C-learn-replay-context-validation-r1.json\"}",
+        "result": "pass",
+        "verification_id": "U3C-LEARN-REPLAY-CONTEXT-r1-root-validation-r1",
+        "verifier": "root Playwright fixture acceptance + Vite build",
+        "verifier_version": "post-r283-root-20260925"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-CHECKPOINT-r1-a1",
+        "candidate_hash": "432273958778569f9ab76d88767d625ee626c059",
+        "created_at": "2026-09-25 12:38:28",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"Deterministic Prop lifecycle evaluation consumes ordered simulator snapshots without generating orders or fills\", \"Money/calendar objectives enforce target, daily/overall drawdown, minimum days, cutoff and breach-before-pass precedence\", \"Trailing drawdown follows declared balance/equity basis; end-of-day HWM advances only at explicit calendar boundaries\", \"Incomplete evaluation quality blocks objective progression without consuming simulator event/cursor progression\", \"PostgreSQL lifecycle persistence is atomic, revision-fenced, idempotent, tenant-scoped and rejects concurrent double-apply\", \"Checkpoint remains simulation-only and exposes no broker execution capability\"], \"input_hashes\": {\"base\": \"22ab959e719fa98ef3d0d226edadded0b9b7eaf5\", \"candidate\": \"432273958778569f9ab76d88767d625ee626c059\", \"validation\": \"17b51b505e2eaaa3a7211cb0106938774edeec54a99556b70c1e84208a0ae82e\"}, \"test_hash\": \"17b51b505e2eaaa3a7211cb0106938774edeec54a99556b70c1e84208a0ae82e\", \"test_scope\": \"PS-00 + PS-01 regressions and PS-02A evaluator/persistence on disposable PostgreSQL\", \"validation_checks\": {\"broker_execution_capability\": false, \"postgres_lifecycle_receipts_persisted\": true, \"postgres_terminal_attempt_persisted\": true, \"ps00_money_calendar_regression_pass\": true, \"ps01_persistence_regression_pass\": true, \"ps02_lifecycle_tests_pass\": true, \"tenant_scope_persistence_covered\": true}, \"validation_receipt\": \"artifacts\\\\PS-02-LIFECYCLE-CHECKPOINT-r1\\\\PS02-lifecycle-validation-r1.json\"}",
+        "result": "pass",
+        "verification_id": "PS-02-LIFECYCLE-CHECKPOINT-r1-integrated-v1",
+        "verifier": "PS-02A disposable PostgreSQL lifecycle acceptance runner",
+        "verifier_version": "ps02-lifecycle-20260925-r4"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CONNECTION-r1-a1",
+        "candidate_hash": "8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68",
+        "created_at": "2026-09-25 14:27:00",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"Canonical Replay execution persists market fills and price marks before Prop lifecycle consumes them\", \"Replay to Prop binding is workspace-scoped, dataset/cost/engine pinned, revision-fenced and ordered\", \"Exact Replay to Prop retries remain idempotent even after later price marks while unseen backward events fail closed\", \"Market orders cannot be queued without a future Replay bar, preventing terminal pending-order wedges\", \"Equity-dependent objectives fail closed when the Replay mark lacks complete intrabar equity coverage\", \"Execution-enabled rewind/branch remains blocked until canonical checkpoint reconstruction exists and broker execution stays unavailable\"], \"input_hashes\": {\"base\": \"432273958778569f9ab76d88767d625ee626c059\", \"candidate\": \"8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68\", \"validation\": \"66ba3b11f881845c8f46d64fdadf164ba80c2ce14b12da3913288f40beef98d7\"}, \"source_sha256\": {\"foundation_v2/scripts/ps02_replay_connection_acceptance.py\": \"db0688828deaffab8b52c2684e248f02b2266e72dcd428f182a21e9e0c1faacc\", \"foundation_v2/tests/test_f7_product_slice.py\": \"aae98e27df7ae95d0aca1723ce27f53d85c305ac94ca33956139bbdcaa654aab\", \"foundation_v2/tests/test_ps02_prop_lifecycle.py\": \"e397b1fdbe89a5674431cb6d3247539bc6744b6f43da13b9801179b951186ed0\", \"foundation_v2/tests/test_ps02_replay_prop_connection.py\": \"89571ccfab152ecfe5492ed3f5400947b69bc08a769448e1687c3448e20ba5a3\", \"foundation_v2/tests/test_replay_execution_core.py\": \"29ce4e66fdc3e7d4ea3dd7ca0a305ca092ae32e39462814e137e2c343378fd41\", \"foundation_v2/tests/test_u5b_protective_margin.py\": \"7ff122e9ed9291f20b73340e354106e9dc2443151c678a37454a13622b644e65\", \"foundation_v2/trading_workspace_v2/api.py\": \"821bb33d409a7a41db9d7f90e2071d5fe9f326eb8f903eb6f8ed3e5106a36987\", \"foundation_v2/trading_workspace_v2/contracts.py\": \"a5a3d61c3dd659f1e2c0bfa71d52d727a7b57db6ae3a473182ac4feac1239d6e\", \"foundation_v2/trading_workspace_v2/execution_semantics.py\": \"c63ae76abf591a0e5bb437233f246d179d62ef24983a24cc1960e8c3b1d0e41d\", \"foundation_v2/trading_workspace_v2/prop_replay.py\": \"d50c042d0612c3f8e020c0423301df4f1e5ee5823c6d28abe181740dfb91e10d\", \"foundation_v2/trading_workspace_v2/prop_session.py\": \"05d410f8b6d95ce0da74b99463d1aa340fcde9591e37c24cb3d83d8d1de8f0ee\", \"foundation_v2/trading_workspace_v2/replay.py\": \"4627d0a44621f5945f8c81ef8b17c692652d25bececb8f11a5a4ce38bbd90059\", \"foundation_v2/trading_workspace_v2/replay_execution.py\": \"114e628817cafeef8b82f4762fdd8e86d0408cdb51ec745b76970b3429fe9045\", \"foundation_v2/trading_workspace_v2/research_engine.py\": \"a7dbd664637075988444ec48a84b5661696b853c47f0b1d3a8e16ecea4ec842e\", \"foundation_v2/trading_workspace_v2/store.py\": \"4368ac0d246dd1a81a2f05ba0bb4285a58b4da3903688d49bbe9f4c75c356c23\"}, \"test_hash\": \"66ba3b11f881845c8f46d64fdadf164ba80c2ce14b12da3913288f40beef98d7\", \"test_scope\": \"PS-00/PS-01/PS-02 lifecycle + F7/U5b + Replay execution + Replay/Prop integration on fresh disposable PostgreSQL\", \"tests_run\": 69, \"validation_checks\": {\"broker_execution_capability\": false, \"focused_regression_pass\": true, \"postgres_prop_attempt_bound_to_replay\": true, \"postgres_replay_execution_ledger_persisted\": true, \"postgres_replay_prop_receipt_persisted\": true}, \"validation_receipt\": \"artifacts\\\\PS-02-REPLAY-CONNECTION-r1\\\\PS02-replay-validation-r2.json\"}",
+        "result": "pass",
+        "verification_id": "PS-02-REPLAY-CONNECTION-r1-integrated-v2",
+        "verifier": "PS-02B exact-commit disposable PostgreSQL Replay/Prop acceptance runner",
+        "verifier_version": "ps02-replay-20260925-r2"
+      },
+      {
+        "attempt_id": "PS-02-LIFECYCLE-AUTHORITY-r1-a1",
+        "candidate_hash": "9ff840b1dd055a02803e1db38138bf039ca349e3",
+        "created_at": "2026-09-25 14:58:24",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"Prop session lifecycle status and attempt lifecycle status/phase index are server-owned rather than arbitrary resume/session writes\", \"start, pause, resume and abandon lifecycle commands are tenant-scoped, revision-fenced, event-sequence-fenced and idempotent\", \"Session status remains synchronized with its single active attempt; only one active attempt exists per session and restart requires a terminal parent\", \"Delayed exact transition/event retries return self-consistent snapshots while stale or tampered intents fail closed\", \"Pause and resume do not advance simulator virtual time or event sequence\", \"Replay-bound next_phase remains fail-closed until canonical Replay phase reset/carry support exists\", \"Real PostgreSQL/API/Vite/Playwright regression passes at 1440, 768 and 360 widths with broker execution capability disabled\"], \"input_hashes\": {\"base\": \"8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68\", \"candidate\": \"9ff840b1dd055a02803e1db38138bf039ca349e3\", \"lifecycle_component\": \"17b51b505e2eaaa3a7211cb0106938774edeec54a99556b70c1e84208a0ae82e\", \"real_service_component\": \"4175bcc53d1ba7444c6d76e3a4ba1efd9026ee557d5093773bc7a7c5d34544eb\", \"replay_component\": \"e4ccea2394645de023854d44f8ee373583989f4368d208d7d6ec589a1bd57a19\", \"validation\": \"95530a2da80562493011e70171a8c31f4066580b2fd5b8575004ae6cd2361e14\"}, \"source_sha256\": {\"foundation_v2/tests/test_ps01_prop_persistence.py\": \"976bdef50b8d4d570073fadda0dcf6738d470771cfb9a190c4310a8b58051f4c\", \"foundation_v2/tests/test_ps02_prop_lifecycle.py\": \"9f5fc747edcacfd2d12e0d38a0e5aebadb94e8cfb47ab0d0e3ed88e8ccfed1b5\", \"foundation_v2/trading_workspace_v2/api.py\": \"7e2a225e8611f617044b5b40112119585f16e6c7b645cb096d9860e4b71a9138\", \"foundation_v2/trading_workspace_v2/prop_session.py\": \"49d6badb086097426baff5867891b6cc286d2185b4009fd66aa3bf8387cf320b\", \"foundation_v2/trading_workspace_v2/store.py\": \"3377ff924b18a5d0ccb171ba230996cb5de1df446edfdc34b9550a3f2897360b\", \"foundation_v2/web/run_prop_ui_real_acceptance.mjs\": \"00bdf5a7a8c6a8d943c2b8356818ce2034a50704fc26e1f5e2cdd40ce25b42d3\"}, \"test_hash\": \"95530a2da80562493011e70171a8c31f4066580b2fd5b8575004ae6cd2361e14\", \"test_scope\": \"Exact commit: PS-00/PS-01/PS-02 lifecycle on disposable PostgreSQL, PS-02B Replay regression, and real PostgreSQL/API/Vite/Playwright regression\", \"tests_run\": 84, \"validation_checks\": {\"broker_execution_capability\": false, \"exact_changed_file_set_pass\": true, \"lifecycle_authority_component_pass\": true, \"postgres_persistence_pass\": true, \"real_service_browser_pass\": true, \"replay_regression_pass\": true, \"vite_build_pass\": true}, \"validation_receipt\": \"artifacts\\\\PS-02-LIFECYCLE-AUTHORITY-r1\\\\PS02-lifecycle-authority-validation-r1.json\"}",
+        "result": "pass",
+        "verification_id": "PS-02-LIFECYCLE-AUTHORITY-r1-integrated-v1",
+        "verifier": "PS-02C1 exact-commit combined lifecycle/replay/real-service validation",
+        "verifier_version": "ps02c1-lifecycle-authority-20260925-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1-a1",
+        "candidate_hash": "5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12",
+        "created_at": "2026-09-25 16:11:11",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"Replay-bound next_phase persists Replay revision, Prop attempt/session state and idempotency receipt in one PostgreSQL transaction with fixed Replay-to-session-to-attempt lock order\", \"reset, carry_balance and carry_all produce the canonical next-phase money and position state while immutable starting_balance is preserved and phase_index/phase_initial_balance identify the active Replay phase\", \"A canonical phase_transition Replay ledger event advances Replay event_sequence exactly once, preserves the cursor and becomes the new Replay binding boundary\", \"Exact and late exact retries are idempotent; tampered reuse conflicts; concurrent two-tab transitions commit only once; forced persistence failure rolls back both Replay and Prop domains\", \"Replay/Prop lineage, cursor, money, position and event drift fail closed, as do pending orders, missing canonical Replay, final-bar/no-future-bar transitions and unsupported close_by_simulator with an open Replay position\", \"Phase 2 can start and continue Replay step/feed evaluation using the new phase basis without the prior initial-balance mismatch\", \"Disposable PostgreSQL lifecycle regression plus real PostgreSQL/API/Vite/Playwright regression pass with broker execution capability disabled\"], \"input_hashes\": {\"base\": \"9ff840b1dd055a02803e1db38138bf039ca349e3\", \"candidate\": \"5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12\", \"lifecycle_component\": \"17b51b505e2eaaa3a7211cb0106938774edeec54a99556b70c1e84208a0ae82e\", \"real_service_component\": \"6a07452c6fbe8744fc12074274fb6b12f5eb7201a71657b6b92a6ceeb28e0a74\", \"replay_component\": \"558d6b6f71426cd5009869c7f1dbfb1ab705e72a314f1e3a6dbf511d33df87c6\", \"validation\": \"6900ff986ee8c92a9f437f692f20192dcf61aefdf98359c4fa22e5d04bb66192\"}, \"source_sha256\": {\"foundation_v2/tests/test_ps02_prop_lifecycle.py\": \"83006b22cc7841ef2356d55a99bfd050251444a2bbafdbd278d7389693261153\", \"foundation_v2/tests/test_ps02_replay_prop_connection.py\": \"3a209fc38cf5e5862343b8189722f55559426c1f54ddd328e855010897ba6a7d\", \"foundation_v2/tests/test_replay_execution_core.py\": \"9c68443a4302ab65d3e038cb6c81e0f485353104c948817367b413d7e5e6d0dc\", \"foundation_v2/trading_workspace_v2/prop_replay.py\": \"cb9a6cb57c5b09863ccba7b599fb7366ae998750e96378c67a4bb7907abc8a19\", \"foundation_v2/trading_workspace_v2/prop_session.py\": \"b019390e0c75184f75d626e98d745389797421bb0b0192fe44c472e9617374e8\", \"foundation_v2/trading_workspace_v2/replay_execution.py\": \"2ece366f06b1504ab2d499d78cb53dc3e4c0b15b21cb2c68495742f6288fe789\", \"foundation_v2/trading_workspace_v2/store.py\": \"6dd1a35ea44c9b31afeb7da64902d3093aecff56e10d5243df5021da9ed94f3e\"}, \"test_hash\": \"6900ff986ee8c92a9f437f692f20192dcf61aefdf98359c4fa22e5d04bb66192\", \"test_scope\": \"Exact commit: atomic Replay/Prop next_phase on disposable PostgreSQL, lifecycle regression and real PostgreSQL/API/Vite/Playwright regression\", \"tests_run\": 95, \"validation_checks\": {\"atomic_replay_prop_phase_transition_pass\": true, \"boundary_fail_closed_pass\": true, \"broker_execution_capability\": false, \"exact_changed_file_set_pass\": true, \"idempotency_race_and_rollback_pass\": true, \"lifecycle_regression_pass\": true, \"phase2_step_feed_pass\": true, \"phase_metadata_and_ledger_transition_pass\": true, \"real_service_browser_pass\": true, \"reset_carry_balance_carry_all_semantics_pass\": true, \"vite_build_pass\": true}, \"validation_receipt\": \"artifacts\\\\PS-02-REPLAY-PHASE-TRANSITIONS-r1\\\\PS02-replay-phase-transitions-validation-r1.json\"}",
+        "result": "pass",
+        "verification_id": "PS-02-REPLAY-PHASE-TRANSITIONS-r1-integrated-v1",
+        "verifier": "PS-02C2 exact-commit Replay phase-transition/lifecycle/real-service validation",
+        "verifier_version": "ps02c2-replay-phase-transitions-20260925-r1"
+      },
+      {
+        "attempt_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1-a1",
+        "candidate_hash": "95fd6db4526be6658b54bdf0fdea32e1f4af7f5d",
+        "created_at": "2026-09-25 22:01:19",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"Execution-enabled Replay branch selects the latest immutable persisted checkpoint at the requested cursor when one exists, preserving queued/manual execution state\", \"If a multi-bar Replay step has no persisted revision at an intermediate cursor, branch reconstruction uses the canonical price_mark ledger checkpoint and restores balance, floating P/L, equity, open position, pending state, phase metadata and event sequence\", \"The child receives a new replay_session_id and branch_id while the reconstructed ledger is remapped consistently to the child lineage and immutable dataset/instrument/cost pins remain unchanged\", \"Parent Replay state and revision history remain immutable; child creation is revision-fenced against the locked parent head and stale parent revisions fail closed\", \"A reconstructed child can continue deterministic Replay stepping from the checkpoint without mutating the parent\", \"Existing Replay-to-Prop lineage remains fail-closed for a newly forked child unless a separate canonical Prop binding is created\", \"Fresh disposable PostgreSQL Replay/lifecycle regressions and real PostgreSQL/API/Vite/Playwright regression pass with broker execution capability disabled\"], \"input_hashes\": {\"base\": \"5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12\", \"candidate\": \"95fd6db4526be6658b54bdf0fdea32e1f4af7f5d\", \"lifecycle_component\": \"17b51b505e2eaaa3a7211cb0106938774edeec54a99556b70c1e84208a0ae82e\", \"real_service_component\": \"6cb4a1c01d4442ecb98c035eb19ea3837f1368f417aff16af161d0280caf8785\", \"replay_component\": \"09512db5ef11a2e025a114a9a653014f28ea94cad96cf9fe5b5cb8757358d346\", \"validation\": \"b485f5a7aee9bc0a17e374262a61395c14c1be4711a3c3e4f550c58139c51dfe\"}, \"source_sha256\": {\"foundation_v2/tests/test_ps02_replay_prop_connection.py\": \"6c73d5b5b2356fcda84c9ad9993cb0509d335754b5022c761a26b56c1da6a034\", \"foundation_v2/tests/test_replay_execution_core.py\": \"406ab3a82a13b7b748a9e5acbeef05a57cf39770ac1d60348fd215ada6bb003f\", \"foundation_v2/trading_workspace_v2/replay.py\": \"15c49f8a10ebba2e3df8907279093ef7156388d4fe3f82e3693828a7e8ddd7ca\", \"foundation_v2/trading_workspace_v2/replay_execution.py\": \"ec514c42deba87f3fcc898e02cce96f53c7092b493750cda9ed6e2c9d38bc290\", \"foundation_v2/trading_workspace_v2/store.py\": \"743461f40da54642dee8cab559976e49a612f3f00097c3ead9b15aa87dc0946f\"}, \"test_hash\": \"b485f5a7aee9bc0a17e374262a61395c14c1be4711a3c3e4f550c58139c51dfe\", \"test_scope\": \"Exact commit: Replay historical checkpoint reconstruction/branching on disposable PostgreSQL plus lifecycle and real PostgreSQL/API/Vite/Playwright regression\", \"tests_run\": 99, \"validation_checks\": {\"broker_execution_capability\": false, \"child_lineage_remap_pass\": true, \"child_resume_step_pass\": true, \"exact_changed_file_set_pass\": true, \"ledger_price_mark_fallback_pass\": true, \"lifecycle_regression_pass\": true, \"money_position_pending_phase_reconstruction_pass\": true, \"parent_immutability_and_revision_fence_pass\": true, \"persisted_checkpoint_selection_pass\": true, \"prop_lineage_fail_closed_pass\": true, \"real_service_browser_pass\": true, \"vite_build_pass\": true}, \"validation_receipt\": \"artifacts\\\\PS-02-REPLAY-CHECKPOINT-BRANCH-r1\\\\PS02-replay-checkpoint-branch-validation-r1.json\"}",
+        "result": "pass",
+        "verification_id": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1-integrated-v1",
+        "verifier": "PS-02C3 exact-commit Replay checkpoint/lifecycle/real-service validation",
+        "verifier_version": "ps02c3-replay-checkpoint-branch-20260925-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a1",
+        "candidate_hash": "5a9710e3ea8c4874a5584722640d118e40be2304",
+        "created_at": "2026-09-25 23:23:08",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"A hindsight Prop child attempt can only be created from a canonical historical Replay branch checkpoint whose immutable dataset, execution lineage, cursor, money, position and pending-order state match a persisted historical Prop checkpoint\", \"The server derives the child attempt identity and branch provenance; the client cannot inject balance, equity, checkpoint state or an arbitrary child attempt id\", \"Concurrent exact retries are idempotent and return one created child plus duplicates; reusing an operation id with different branch content fails closed\", \"Parent Replay and Prop attempt state remain immutable while the child is rebound to the child Replay lineage and can resume deterministic stepping and lifecycle feeds\", \"Tenant, Replay revision, parent Replay revision and parent Prop attempt revision are fenced; missing canonical checkpoints and foreign scope fail closed\", \"Generic Prop attempt creation cannot forge hindsight branches, and nested hindsight branching remains rejected\", \"Fresh disposable PostgreSQL regression evidence covers the exact source hashes with broker execution capability disabled\"], \"input_hashes\": {\"base\": \"65d5043692aa0c93cae54f2dd43e55dc0cb15bea\", \"candidate\": \"5a9710e3ea8c4874a5584722640d118e40be2304\", \"postgres_component\": \"839fc74417c1813b01927bc3a8a7eacfd35f597e5a475e860f49e8affb77a454\", \"validation\": \"f4d8ffbf9af448aade29034b97fef78f23e0abc36712050435afde22148dcb71\"}, \"source_sha256\": {\"foundation_v2/tests/test_ps02_replay_prop_connection.py\": \"86d17e9c5b33963ae969f82c7ea5cd01a976e1f0149b6d5d8b7c659f373c2a44\", \"foundation_v2/trading_workspace_v2/api.py\": \"32a66b447bc38167e076fe6b89f285d680752ca0e60f78742016a9f54d8356ae\", \"foundation_v2/trading_workspace_v2/prop_replay.py\": \"62690b38fb43e033718436bc584be5c3794886ae81f70111da4b0eef077209d5\", \"foundation_v2/trading_workspace_v2/prop_session.py\": \"c393c035994b055982f7aec2c63270a16819f43630f9e02fa841a11721b44bd9\", \"foundation_v2/trading_workspace_v2/replay.py\": \"87325b14f22b8fc6ec733a3b89209682f0a405c84b63b39c62081913897513bf\", \"foundation_v2/trading_workspace_v2/store.py\": \"efe446305b82615c53ae9050971ce74fb608fbb66b0d58f26a96e4bbe5ddc358\"}, \"test_hash\": \"f4d8ffbf9af448aade29034b97fef78f23e0abc36712050435afde22148dcb71\", \"test_scope\": \"Exact source hashes: PS-00/01/02, F7 Replay, U5b protective semantics and Replay-to-Prop PostgreSQL integration including PS-02C4 hindsight branch cases\", \"tests_run\": 102, \"validation_checks\": {\"broker_execution_capability\": false, \"canonical_historical_checkpoint_required\": true, \"child_resume_and_feed_pass\": true, \"exact_changed_file_set_pass\": true, \"exact_source_hash_match_pass\": true, \"forged_and_nested_hindsight_branch_rejected\": true, \"idempotent_concurrent_branch_creation\": true, \"parent_immutability_pass\": true, \"postgres_regression_pass\": true, \"server_owned_child_identity_and_state\": true, \"tenant_and_revision_fences_pass\": true}}",
+        "result": "pass",
+        "verification_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-integrated-v1",
+        "verifier": "PS-02C4 exact-source disposable-PostgreSQL regression",
+        "verifier_version": "ps02c4-prop-hindsight-branch-20260926-r1"
+      },
+      {
+        "attempt_id": "U5C-STRESS-SENSITIVITY-r1-a1",
+        "candidate_hash": "65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+        "created_at": "2026-09-25 23:25:30",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"U5c normalizes a deterministic bounded cost/fill stress matrix with a base scenario plus at most seven declared scenarios and rejects no-op, duplicate, unknown-field and out-of-bound multipliers\", \"The declared sweep multiplied by stress scenarios is bounded before execution and rejects more than 10000 combinations\", \"Stress identity is pinned into the validation protocol by a canonical SHA-256 and rehashed tampering fails closed\", \"Every stress run remains pre-holdout; the planner and worker never authorize holdout content access\", \"Stress modifies only declared cost/fill assumptions for each fold and records all scenario outcomes without ranking or selecting a winner\", \"Runtime budget/cancel checks still fence the expanded matrix\", \"Focused U5c regression passes 19 tests plus 2 subtests on the exact candidate source\"], \"input_hashes\": {\"base\": \"1c4b7d6172b57e6774e5bca2fcafcba1a694c103\", \"candidate\": \"65d5043692aa0c93cae54f2dd43e55dc0cb15bea\", \"validation\": \"9bb803ca56e3100ee03fce32a4d882f76f16c757c11663069452049fe788091a\"}, \"source_sha256\": {\"foundation_v2/tests/test_u5c_oos.py\": \"bb1497898b28f7900f8ea082b2fe04f89912d1ebeef7a9026f802c6b0846e84b\", \"foundation_v2/trading_workspace_v2/research.py\": \"123cdd24d6d67ac30e4bbce465781b488fcb5983e8157a663e915d051c6b5183\", \"foundation_v2/trading_workspace_v2/research_oos.py\": \"c01be3c0df3c0008ca62e056065d76bff12669b72d73beeb88b6536917faaa27\"}, \"subtests_run\": 2, \"test_hash\": \"9bb803ca56e3100ee03fce32a4d882f76f16c757c11663069452049fe788091a\", \"test_scope\": \"Exact candidate files: bounded deterministic stress planner/protocol/worker behavior and holdout fail-closed regression\", \"tests_run\": 19}",
+        "result": "pass",
+        "verification_id": "U5C-STRESS-SENSITIVITY-r1-focused-v1",
+        "verifier": "U5c exact-source focused stress regression",
+        "verifier_version": "u5c-stress-sensitivity-20260926-r1"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a2",
+        "candidate_hash": "07fc8ea3479460cf4db68a781304481cf925b2d4",
+        "created_at": "2026-09-25 23:41:16",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"A hindsight Prop child attempt can only be created from a canonical historical Replay branch checkpoint backed by the exact server-generated Replay-to-Prop lifecycle receipt fingerprint and resulting persisted Prop state\", \"The server derives the child attempt identity and branch provenance; the client cannot inject balance, equity, checkpoint state or an arbitrary child attempt id\", \"Concurrent and delayed exact retries are idempotent and return the immutable branch-creation revision; reusing an operation id with different branch content fails closed\", \"Parent Replay and Prop attempt state remain immutable while the child is rebound to the child Replay lineage and can resume deterministic stepping and lifecycle feeds\", \"Tenant, Replay revision, parent Replay revision and parent Prop attempt revision are fenced; missing, forged generic-resume, or foreign-scope checkpoints fail closed\", \"Generic Prop attempt creation cannot forge hindsight branches, and nested hindsight branching remains rejected\", \"Fresh disposable PostgreSQL regression passes on exact source hashes with broker execution capability disabled\"], \"input_hashes\": {\"base\": \"65d5043692aa0c93cae54f2dd43e55dc0cb15bea\", \"candidate\": \"07fc8ea3479460cf4db68a781304481cf925b2d4\", \"postgres_component\": \"c881d767362172c8a213f2c5d196b7cb13016eca666d5edd4a44582ddbf414a1\", \"validation\": \"2607c4d4033bcbecefdb3129cad67613f08237579448f312ac545e4ac0bf6dd4\"}, \"source_sha256\": {\"foundation_v2/tests/test_ps02_replay_prop_connection.py\": \"ff633c2d65e0561e8125a7a9d16f76d7f93d68f48a91b6494255cbfbf077b3f6\", \"foundation_v2/trading_workspace_v2/api.py\": \"32a66b447bc38167e076fe6b89f285d680752ca0e60f78742016a9f54d8356ae\", \"foundation_v2/trading_workspace_v2/prop_replay.py\": \"62690b38fb43e033718436bc584be5c3794886ae81f70111da4b0eef077209d5\", \"foundation_v2/trading_workspace_v2/prop_session.py\": \"c393c035994b055982f7aec2c63270a16819f43630f9e02fa841a11721b44bd9\", \"foundation_v2/trading_workspace_v2/replay.py\": \"87325b14f22b8fc6ec733a3b89209682f0a405c84b63b39c62081913897513bf\", \"foundation_v2/trading_workspace_v2/store.py\": \"dc46ffebacfe9342d97ab0ab9a85a863f4b86f24f48abbb00a32314dfec3d550\"}, \"test_hash\": \"2607c4d4033bcbecefdb3129cad67613f08237579448f312ac545e4ac0bf6dd4\", \"test_scope\": \"Corrected exact source: full PS-00/01/02, F7, U5b and Replay-to-Prop PostgreSQL regressions including forged-checkpoint and delayed-retry cases\", \"tests_run\": 103}",
+        "result": "pass",
+        "verification_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-integrated-v2",
+        "verifier": "PS-02C4 corrected exact-source disposable-PostgreSQL regression",
+        "verifier_version": "ps02c4-prop-hindsight-branch-20260926-r2"
+      },
+      {
+        "attempt_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-a2",
+        "candidate_hash": "07fc8ea3479460cf4db68a781304481cf925b2d4",
+        "created_at": "2026-09-26 02:47:47",
+        "details_json": "{\"broker_execution_capability\": false, \"exit_code\": 0, \"expected_outcomes\": [\"A hindsight Prop child attempt can only be created from a canonical historical Replay branch checkpoint whose immutable dataset, execution lineage, cursor, money, position and pending-order state match a persisted historical Prop checkpoint\", \"The server derives the child attempt identity and branch provenance; the client cannot inject balance, equity, checkpoint state or an arbitrary child attempt id\", \"Concurrent exact retries are idempotent and return one created child plus duplicates; reusing an operation id with different branch content fails closed\", \"Parent Replay and Prop attempt state remain immutable while the child is rebound to the child Replay lineage and can resume deterministic stepping and lifecycle feeds\", \"Tenant, Replay revision, parent Replay revision and parent Prop attempt revision are fenced; missing canonical checkpoints and foreign scope fail closed\", \"Generic Prop attempt creation cannot forge hindsight branches, and nested hindsight branching remains rejected\", \"Fresh disposable PostgreSQL regression evidence covers the exact source hashes with broker execution capability disabled\"], \"input_hashes\": {\"candidate\": \"07fc8ea3479460cf4db68a781304481cf925b2d4\", \"runtime_receipt\": \"24e9e372ff98c28d0c9de0584b078eb1cbf41716668ed524e70021d7ccdd55fd\"}, \"receipt\": \"artifacts\\\\PS-02-PROP-HINDSIGHT-BRANCH-r1\\\\runtime-r3\\\\PS02-replay-connection-r1.json\", \"test_hash\": \"24e9e372ff98c28d0c9de0584b078eb1cbf41716668ed524e70021d7ccdd55fd\", \"test_scope\": \"Fresh disposable PostgreSQL PS-00/01/02 + F7 + U5b + Replay/Prop regression on current exact HEAD\", \"tests_run\": 103}",
+        "result": "pass",
+        "verification_id": "PS-02-PROP-HINDSIGHT-BRANCH-r1-runtime-r3",
+        "verifier": "fresh disposable PostgreSQL PS-02 regression",
+        "verifier_version": "ps02-runtime-r3-20260926"
+      },
+      {
+        "attempt_id": "U5C-STRESS-SENSITIVITY-r1-a1",
+        "candidate_hash": "65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+        "created_at": "2026-09-26 02:47:47",
+        "details_json": "{\"broker_execution_capability\": false, \"exit_code\": 0, \"expected_outcomes\": [\"U5c normalizes a deterministic bounded cost/fill stress matrix with a base scenario plus at most seven declared scenarios and rejects no-op, duplicate, unknown-field and out-of-bound multipliers\", \"The declared sweep multiplied by stress scenarios is bounded before execution and rejects more than 10000 combinations\", \"Stress identity is pinned into the validation protocol by a canonical SHA-256 and rehashed tampering fails closed\", \"Every stress run remains pre-holdout; the planner and worker never authorize holdout content access\", \"Stress modifies only declared cost/fill assumptions for each fold and records all scenario outcomes without ranking or selecting a winner\", \"Runtime budget/cancel checks still fence the expanded matrix\", \"Focused U5c regression passes 19 tests plus 2 subtests on the exact candidate source\"], \"holdout_content_capability\": false, \"input_hashes\": {\"candidate\": \"65d5043692aa0c93cae54f2dd43e55dc0cb15bea\", \"runtime_receipt\": \"34185de4b1c496ee6e31ce1d6ccb537d9a1c5f5515c5f4c5ed7abcd9736a7c58\", \"validated_at_head\": \"07fc8ea3479460cf4db68a781304481cf925b2d4\"}, \"receipt\": \"artifacts\\\\U5C-STRESS-SENSITIVITY-r1\\\\runtime-r2\\\\U5C-stress-acceptance-r1.json\", \"test_hash\": \"34185de4b1c496ee6e31ce1d6ccb537d9a1c5f5515c5f4c5ed7abcd9736a7c58\", \"test_scope\": \"Fresh disposable PostgreSQL + API + separate worker + isolated Nautilus three-scenario U5C stress fixture; candidate-owned files unchanged after candidate\"}",
+        "result": "pass",
+        "verification_id": "U5C-STRESS-SENSITIVITY-r1-integrated-v2",
+        "verifier": "fresh disposable PostgreSQL/Nautilus U5C stress acceptance",
+        "verifier_version": "u5c-stress-runtime-r2-20260926"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a1",
+        "candidate_hash": "567c6073ca1022983d1770dfbe8238d2b8cb3a8a",
+        "created_at": "2026-09-26 03:48:12",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"Attempt reports are derived read-only from canonical persisted Prop simulation state and retain session/profile/attempt/phase provenance\", \"Workspace-scoped report APIs support status and clean/hindsight branch filtering without broker execution capability\", \"CSV export contains stable summary fields and excludes arbitrary nested resume payloads and credentials\", \"Prop UI exposes selected-attempt outcome/reasons plus a Reports view with status/branch filters, Learn navigation and CSV export\", \"Hindsight reports remain visibly distinct from clean attempts and report failures do not hide usable persisted resume state\", \"Fixture browser coverage includes breach explanation, filters/export, error/denied/empty/conflict and responsive 1440/768/360 layouts\", \"Disposable PostgreSQL -> API -> Vite -> Playwright validation passes with persisted IDs, tenant denial and no broker/execution request\"], \"input_hashes\": {\"base\": \"07fc8ea3479460cf4db68a781304481cf925b2d4\", \"candidate\": \"567c6073ca1022983d1770dfbe8238d2b8cb3a8a\", \"real_service_receipt\": \"052dfca1b6d6c833cda28a926760f477f5a6e2ee399dae3b114ca4fb0d566e79\", \"validation\": \"899c236a6d92dced33618ecf94946223f2f8bc0d4be068dadf1cd3e87c1fe1dd\"}, \"source_sha256\": {\"foundation_v2/evidence/ps03-report-ui-r1/PS03-report-ui-acceptance-r1.json\": \"052dfca1b6d6c833cda28a926760f477f5a6e2ee399dae3b114ca4fb0d566e79\", \"foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-1440.png\": \"3b0f46fa0953f8972b17052d39b1a279579a707b2f553e12fe5c67043324491c\", \"foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-360.png\": \"3ae2a23fd44d27fa6bfca37aca86e029b34e1b14ea1fb9d701c135f484bca2b8\", \"foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-768.png\": \"083276749b461fa7b59983949f7f56d909eb923ee50123e2c71830c097473d43\", \"foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-reports-1440.png\": \"95e3dae72bda5d2231df2563fb7b848fc5ccfa77fa2987f3c0f3c710e3561ca7\", \"foundation_v2/scripts/ps03_acceptance.py\": \"ecfc3df27291ee654e78348d8e1ca3c88b224a3a814e0bd5c9e0a2a30ac45412\", \"foundation_v2/tests/test_ps03_prop_reports.py\": \"54d4c8b7a3574bd0b949ad23e373bb618a4736dcc422a6cd9542ca7e0afea30a\", \"foundation_v2/trading_workspace_v2/api.py\": \"aa0e27d2c42021870fe7c2532023b3b2c70cbb18d2dbc636271f7a08217ba0e0\", \"foundation_v2/trading_workspace_v2/prop_report.py\": \"30b494c146436adbefb56f00ab3c9fa9464509dff3674f4c0ea78edde79bbb72\", \"foundation_v2/web/run_prop_ui_acceptance.mjs\": \"8bcae367ee035ec37936e9710e7c2715341fdc8723ec901f187c32f2d13631db\", \"foundation_v2/web/run_prop_ui_real_acceptance.mjs\": \"cdab936460de4d281f5548c3867f2f69bb5409e4b9a331874734a74c6623017e\", \"foundation_v2/web/src/PropWorkspace.jsx\": \"0fa1c0303b3db416033cb82e2fbf622b5d4552990d038fbcb132b7c4b1d9e252\", \"foundation_v2/web/src/styles.css\": \"59ea12cd83321f435628a632b42dd8f6fa57a66a675962e513d1611d82008f5c\"}, \"test_hash\": \"899c236a6d92dced33618ecf94946223f2f8bc0d4be068dadf1cd3e87c1fe1dd\", \"test_scope\": \"Exact backend/UI source plus fixture browser and disposable PostgreSQL -> API -> Vite -> Playwright report flow\", \"validation_checks\": {\"backend_report_tests_pass\": true, \"broker_execution_capability\": false, \"exact_changed_file_set_pass\": true, \"exact_source_hash_match_pass\": true, \"fixture_prop_ui_pass\": true, \"real_postgres_api_vite_playwright_pass\": true, \"report_failure_isolated_from_resume_state\": true, \"responsive_visual_evidence_retained\": true}}",
+        "result": "pass",
+        "verification_id": "PS-03-REPORT-UI-r1-integrated-v1",
+        "verifier": "PS-03 exact-source local PostgreSQL/API/Vite/Playwright validation",
+        "verifier_version": "ps03-report-ui-20260926-r1"
+      },
+      {
+        "attempt_id": "PS-03-REPORT-UI-r1-a2",
+        "candidate_hash": "665552177892d50f7df4fab3d5a31a538b8ac403",
+        "created_at": "2026-09-26 08:46:14",
+        "details_json": "{\"exit_code\": 0, \"expected_outcomes\": [\"formula-like textual cells are neutralized at CSV serialization boundary\", \"negative numeric values preserve numeric text semantics\", \"real local report export remains functional and simulation-only\"], \"input_hashes\": {\"candidate\": \"665552177892d50f7df4fab3d5a31a538b8ac403\", \"packet\": \"681f4221dcd7502170de4838527b1a542c86327a4f793b6fac08e43e430ded86\", \"service_receipt\": \"d20779b681150df94d5bf93f0183393dc485d84924867ae313f81fedfaaf5d26\"}, \"test_hash\": \"4ded1ea31edf157aa888f57b786d4f386e2a4573329c3fc03bc943752c9dea6d\", \"test_scope\": \"Formula-like CSV text fields, negative numeric preservation, U5c regression, disposable PostgreSQL/API/Vite/Playwright report flow\", \"validation_checks\": {\"broker_execution_capability\": false, \"disposable_postgres_api_vite_playwright\": \"PASS\", \"focused_unittest_plus_u5c\": \"23 passed\", \"formula_prefix_matrix\": \"90/90 textual cells safe\", \"git_diff_check\": \"PASS\", \"negative_numeric_semantics\": \"preserved (-100.25, -50.5, -1)\"}}",
+        "result": "pass",
+        "verification_id": "PS-03-REPORT-UI-r1-csv-remediation-v2",
+        "verifier": "M0 CSV remediation unit plus disposable PostgreSQL/API/Vite/Playwright validation",
+        "verifier_version": "workspace-next-stage-20260926-r2"
       }
     ]
   }

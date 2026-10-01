@@ -1,0 +1,33 @@
+{
+  "acceptance": [
+    "Replay-bound next_phase persists Replay revision, Prop attempt/session state and idempotency receipt in one PostgreSQL transaction with fixed Replay-to-session-to-attempt lock order",
+    "reset, carry_balance and carry_all produce the canonical next-phase money and position state while immutable starting_balance is preserved and phase_index/phase_initial_balance identify the active Replay phase",
+    "A canonical phase_transition Replay ledger event advances Replay event_sequence exactly once, preserves the cursor and becomes the new Replay binding boundary",
+    "Exact and late exact retries are idempotent; tampered reuse conflicts; concurrent two-tab transitions commit only once; forced persistence failure rolls back both Replay and Prop domains",
+    "Replay/Prop lineage, cursor, money, position and event drift fail closed, as do pending orders, missing canonical Replay, final-bar/no-future-bar transitions and unsupported close_by_simulator with an open Replay position",
+    "Phase 2 can start and continue Replay step/feed evaluation using the new phase basis without the prior initial-balance mismatch",
+    "Disposable PostgreSQL lifecycle regression plus real PostgreSQL/API/Vite/Playwright regression pass with broker execution capability disabled"
+  ],
+  "allowed_files": [
+    "foundation_v2/tests/test_ps02_prop_lifecycle.py",
+    "foundation_v2/tests/test_ps02_replay_prop_connection.py",
+    "foundation_v2/tests/test_replay_execution_core.py",
+    "foundation_v2/trading_workspace_v2/prop_replay.py",
+    "foundation_v2/trading_workspace_v2/prop_session.py",
+    "foundation_v2/trading_workspace_v2/replay_execution.py",
+    "foundation_v2/trading_workspace_v2/store.py"
+  ],
+  "base_revision": "9ff840b1dd055a02803e1db38138bf039ca349e3",
+  "candidate_revision": "5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12",
+  "dependencies": [
+    "PS-02-LIFECYCLE-AUTHORITY-r1"
+  ],
+  "residual_scope": [
+    "execution-enabled Replay rewind and branch checkpoint reconstruction with canonical historical position and ledger reconstruction",
+    "lower-timeframe or tick intrabar equity path plus broader D15 cross-asset, financing and calendar quality coverage",
+    "Prop product UI, lifecycle controls, objective charts, reports/export and Figma acceptance",
+    "broker/demo/live, holdout, paid provider and deployment acceptance"
+  ],
+  "safety": "Local simulation-only Replay/Prop phase authority; no broker/live/provider/holdout/deploy capability.",
+  "task": "PS-02-REPLAY-PHASE-TRANSITIONS-r1"
+}

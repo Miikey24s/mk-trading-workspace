@@ -1,0 +1,341 @@
+{
+  "origin": "http://127.0.0.1:5173",
+  "workspace": "tenant-a",
+  "generated_at_utc": "2026-09-30T17:48:15.215Z",
+  "fixture_only": true,
+  "results": [
+    {
+      "id": "submit-running-completed",
+      "scenario": {
+        "kind": "complete",
+        "createCalls": 1,
+        "cancelCalls": 0,
+        "jobGets": 2,
+        "checkpointCalls": 1,
+        "createBodies": [
+          {
+            "dataset_id": "eurusd-h1",
+            "strategy_version": "close-delta-v1",
+            "starting_balance": 12500
+          }
+        ]
+      },
+      "observed": {
+        "runningDesktop": {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "pageHeight": 900,
+          "overflow": 0,
+          "status": "Đang chạy",
+          "text": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nTRADING WORKSPACE / RESEARCH\nResearch theo bằng chứng\n\nContext → quality gate → run → checkpoint → result. Mỗi bước giữ nguyên phạm vi dữ liệu và trạng thái thật.\n\nRESEARCH / SIMULATION\nBroker locked · không gửi lệnh\nData Desk →\nWorkspace tenant-a\nJob job-research-fixture\nĐang chạy\nEngine nautilus sẵn sàng\n✓\nContext\nDataset và phạm vi\n✓\nQuality gate\nTakeaway và cảnh báo\n✓\nRun\nGiả định nghiên cứu\n04\nCheckpoint\nTiến độ có bằng chứng\n05\nResult\nMetrics và hành động tiếp\n01 / CONTEXT\neurusd-h1\n\nPhạm vi cố định cho run này. Đổi dataset sẽ xóa deep link job hiện tại.\n\nMở Data Desk →\nEURUSDm · H1\n100 rows · 16:00 9/3/24 → 02:00 10/3/24\nQUALITY\nĐã xác minh\nHOLDOUT\nHoldout khóa\nPROVIDER\nlocal\nARTIFACT SHA\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nProvenance và giới hạn dữ liệu\n02 / QUALITY GATE\nCó thể chạy local, nhưng provenance còn thiếu\n\nRun vẫn giữ được tính trung thực, nhưng các cảnh báo bên dưới giới hạn cách diễn giải kết quả.\n\n!\nNEXT DECISION\nĐọc 1 cảnh báo trước khi chạy\n1 cảnh báo\nXem cảnh báo ảnh hưởng cách diễn giải\n03 / RUN CONFIG\nCố định giả định\n\nChỉ gửi dataset, strategy contract và starting balance đến local research backend.\n\nDATASET\nChọn dataset\neurusd-h1 · EURUSDm\nDataset là anchor của provenance và không tự đổi theo catalog.\nSTARTING BALANCE\nĐơn vị theo contract engine.\nSTRATEGY CONTRACT\nclose-delta-v1\nChỉ engine đã được backend công bố.\nRun đang chạy…\nGUARD TRƯỚC KHI CHẠY\nĐã xác minh · Holdout khóa · instrument cost metadata có sẵn.\n04 / CHECKPOINT\nRun đang tạo bằng chứng\n\nBackend là authority; checkpoint chỉ mô tả tiến độ, không biến thành kết quả giả.\n\nHủy run\nSTATUS\nĐang chạy\nDATASET\neurusd-h1\nATTEMPT\n1\nCẬP NHẬT\n00:00 1/10/26\nTiến độ backend\n55%\nCheckpoint: fixture-running · attempt 1"
+        },
+        "runningMobile": {
+          "width": 390,
+          "height": 844,
+          "scrollWidth": 390,
+          "bodyScrollWidth": 390,
+          "pageHeight": 844,
+          "overflow": 0,
+          "status": "Đang chạy",
+          "text": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nTRADING WORKSPACE / RESEARCH\nResearch theo bằng chứng\n\nContext → quality gate → run → checkpoint → result. Mỗi bước giữ nguyên phạm vi dữ liệu và trạng thái thật.\n\nRESEARCH / SIMULATION\nBroker locked · không gửi lệnh\nData Desk →\nWorkspace tenant-a\nJob job-research-fixture\nĐang chạy\nEngine nautilus sẵn sàng\n✓\nContext\nDataset và phạm vi\n✓\nQuality gate\nTakeaway và cảnh báo\n✓\nRun\nGiả định nghiên cứu\n04\nCheckpoint\nTiến độ có bằng chứng\n05\nResult\nMetrics và hành động tiếp\n01 / CONTEXT\neurusd-h1\n\nPhạm vi cố định cho run này. Đổi dataset sẽ xóa deep link job hiện tại.\n\nMở Data Desk →\nEURUSDm · H1\n100 rows · 16:00 9/3/24 → 02:00 10/3/24\nQUALITY\nĐã xác minh\nHOLDOUT\nHoldout khóa\nPROVIDER\nlocal\nARTIFACT SHA\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nProvenance và giới hạn dữ liệu\n02 / QUALITY GATE\nCó thể chạy local, nhưng provenance còn thiếu\n\nRun vẫn giữ được tính trung thực, nhưng các cảnh báo bên dưới giới hạn cách diễn giải kết quả.\n\n!\nNEXT DECISION\nĐọc 1 cảnh báo trước khi chạy\n1 cảnh báo\nXem cảnh báo ảnh hưởng cách diễn giải\n03 / RUN CONFIG\nCố định giả định\n\nChỉ gửi dataset, strategy contract và starting balance đến local research backend.\n\nDATASET\nChọn dataset\neurusd-h1 · EURUSDm\nDataset là anchor của provenance và không tự đổi theo catalog.\nSTARTING BALANCE\nĐơn vị theo contract engine.\nSTRATEGY CONTRACT\nclose-delta-v1\nChỉ engine đã được backend công bố.\nRun đang chạy…\nGUARD TRƯỚC KHI CHẠY\nĐã xác minh · Holdout khóa · instrument cost metadata có sẵn.\n04 / CHECKPOINT\nRun đang tạo bằng chứng\n\nBackend là authority; checkpoint chỉ mô tả tiến độ, không biến thành kết quả giả.\n\nHủy run\nSTATUS\nĐang chạy\nDATASET\neurusd-h1\nATTEMPT\n1\nCẬP NHẬT\n00:00 1/10/26\nTiến độ backend\n55%\nCheckpoint: fixture-running · attempt 1"
+        },
+        "completeDesktop": {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "pageHeight": 900,
+          "overflow": 0,
+          "status": "Hoàn tất",
+          "text": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nTRADING WORKSPACE / RESEARCH\nResearch theo bằng chứng\n\nContext → quality gate → run → checkpoint → result. Mỗi bước giữ nguyên phạm vi dữ liệu và trạng thái thật.\n\nRESEARCH / SIMULATION\nBroker locked · không gửi lệnh\nData Desk →\nWorkspace tenant-a\nJob job-research-fixture\nHoàn tất\nEngine nautilus sẵn sàng\n✓\nContext\nDataset và phạm vi\n✓\nQuality gate\nTakeaway và cảnh báo\n✓\nRun\nGiả định nghiên cứu\n✓\nCheckpoint\nTiến độ có bằng chứng\n05\nResult\nMetrics và hành động tiếp\n01 / CONTEXT\neurusd-h1\n\nPhạm vi cố định cho run này. Đổi dataset sẽ xóa deep link job hiện tại.\n\nMở Data Desk →\nEURUSDm · H1\n100 rows · 16:00 9/3/24 → 02:00 10/3/24\nQUALITY\nĐã xác minh\nHOLDOUT\nHoldout khóa\nPROVIDER\nlocal\nARTIFACT SHA\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nProvenance và giới hạn dữ liệu\n02 / QUALITY GATE\nCó thể chạy local, nhưng provenance còn thiếu\n\nRun vẫn giữ được tính trung thực, nhưng các cảnh báo bên dưới giới hạn cách diễn giải kết quả.\n\n!\nNEXT DECISION\nĐọc 1 cảnh báo trước khi chạy\n1 cảnh báo\nXem cảnh báo ảnh hưởng cách diễn giải\n03 / RUN CONFIG\nCố định giả định\n\nChỉ gửi dataset, strategy contract và starting balance đến local research backend.\n\nDATASET\nChọn dataset\neurusd-h1 · EURUSDm\nDataset là anchor của provenance và không tự đổi theo catalog.\nSTARTING BALANCE\nĐơn vị theo contract engine.\nSTRATEGY CONTRACT\nclose-delta-v1\nChỉ engine đã được backend công bố.\nTạo research run\nGUARD TRƯỚC KHI CHẠY\nĐã xác minh · Holdout khóa · instrument cost metadata có sẵn.\n04 / CHECKPOINT\nRun đã có trạng thái cuối\n\nBackend là authority; checkpoint chỉ mô tả tiến độ, không biến thành kết quả giả.\n\nSTATUS\nHoàn tất\nDATASET\neurusd-h1\nATTEMPT\n1\nCẬP NHẬT\n00:00 1/10/26\n05 / RESULT\nKết quả có provenance\n\nĐọc takeaway trước, mở số liệu chi tiết sau.\n\nCompleted\nĐã đóng 2 trade\nNet P/L 42,5. Không suy diễn từ metric bị thiếu.\nTRADES\n2\nNET P/L\n42,5\nWIN RATE\n50%\nMAX DD\n18\n10.042,5\n10.000\nĐường vốn đóng lệnh · từ result backend\nResult provenance\nNEXT ACTION\nĐưa kết quả về vòng lặp trading\n\nResult chỉ có giá trị khi bạn biết bước review tiếp theo.\n\nMở lại Practice ↗\nXem Analytics ↗\nÔn glossary ↗"
+        },
+        "completeMobile": {
+          "width": 390,
+          "height": 844,
+          "scrollWidth": 390,
+          "bodyScrollWidth": 390,
+          "pageHeight": 844,
+          "overflow": 0,
+          "status": "Hoàn tất",
+          "text": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nTRADING WORKSPACE / RESEARCH\nResearch theo bằng chứng\n\nContext → quality gate → run → checkpoint → result. Mỗi bước giữ nguyên phạm vi dữ liệu và trạng thái thật.\n\nRESEARCH / SIMULATION\nBroker locked · không gửi lệnh\nData Desk →\nWorkspace tenant-a\nJob job-research-fixture\nHoàn tất\nEngine nautilus sẵn sàng\n✓\nContext\nDataset và phạm vi\n✓\nQuality gate\nTakeaway và cảnh báo\n✓\nRun\nGiả định nghiên cứu\n✓\nCheckpoint\nTiến độ có bằng chứng\n05\nResult\nMetrics và hành động tiếp\n01 / CONTEXT\neurusd-h1\n\nPhạm vi cố định cho run này. Đổi dataset sẽ xóa deep link job hiện tại.\n\nMở Data Desk →\nEURUSDm · H1\n100 rows · 16:00 9/3/24 → 02:00 10/3/24\nQUALITY\nĐã xác minh\nHOLDOUT\nHoldout khóa\nPROVIDER\nlocal\nARTIFACT SHA\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nProvenance và giới hạn dữ liệu\n02 / QUALITY GATE\nCó thể chạy local, nhưng provenance còn thiếu\n\nRun vẫn giữ được tính trung thực, nhưng các cảnh báo bên dưới giới hạn cách diễn giải kết quả.\n\n!\nNEXT DECISION\nĐọc 1 cảnh báo trước khi chạy\n1 cảnh báo\nXem cảnh báo ảnh hưởng cách diễn giải\n03 / RUN CONFIG\nCố định giả định\n\nChỉ gửi dataset, strategy contract và starting balance đến local research backend.\n\nDATASET\nChọn dataset\neurusd-h1 · EURUSDm\nDataset là anchor của provenance và không tự đổi theo catalog.\nSTARTING BALANCE\nĐơn vị theo contract engine.\nSTRATEGY CONTRACT\nclose-delta-v1\nChỉ engine đã được backend công bố.\nTạo research run\nGUARD TRƯỚC KHI CHẠY\nĐã xác minh · Holdout khóa · instrument cost metadata có sẵn.\n04 / CHECKPOINT\nRun đã có trạng thái cuối\n\nBackend là authority; checkpoint chỉ mô tả tiến độ, không biến thành kết quả giả.\n\nSTATUS\nHoàn tất\nDATASET\neurusd-h1\nATTEMPT\n1\nCẬP NHẬT\n00:00 1/10/26\n05 / RESULT\nKết quả có provenance\n\nĐọc takeaway trước, mở số liệu chi tiết sau.\n\nCompleted\nĐã đóng 2 trade\nNet P/L 42,5. Không suy diễn từ metric bị thiếu.\nTRADES\n2\nNET P/L\n42,5\nWIN RATE\n50%\nMAX DD\n18\n10.042,5\n10.000\nĐường vốn đóng lệnh · từ result backend\nResult provenance\nNEXT ACTION\nĐưa kết quả về vòng lặp trading\n\nResult chỉ có giá trị khi bạn biết bước review tiếp theo.\n\nMở lại Practice ↗\nXem Analytics ↗\nÔn glossary ↗"
+        }
+      },
+      "requests": [
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/datasets",
+          "body": null
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/engines",
+          "body": null
+        },
+        {
+          "method": "POST",
+          "pathname": "/api/v2/research/jobs",
+          "body": {
+            "dataset_id": "eurusd-h1",
+            "strategy_version": "close-delta-v1",
+            "starting_balance": 12500
+          }
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/jobs/job-research-fixture",
+          "body": null
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/jobs/job-research-fixture/checkpoint",
+          "body": null
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/jobs/job-research-fixture",
+          "body": null
+        }
+      ],
+      "responses": [
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/datasets",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/engines",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "pathname": "/api/v2/research/jobs",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/jobs/job-research-fixture",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/jobs/job-research-fixture/checkpoint",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/jobs/job-research-fixture",
+          "status": 200
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "cancel-running-job",
+      "scenario": {
+        "kind": "cancel",
+        "createCalls": 1,
+        "cancelCalls": 1,
+        "jobGets": 1,
+        "checkpointCalls": 1,
+        "createBodies": [
+          {
+            "dataset_id": "eurusd-h1",
+            "strategy_version": "close-delta-v1",
+            "starting_balance": 10000
+          }
+        ]
+      },
+      "observed": {
+        "runningDesktop": {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "pageHeight": 900,
+          "overflow": 0,
+          "status": "Đang chạy",
+          "text": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nTRADING WORKSPACE / RESEARCH\nResearch theo bằng chứng\n\nContext → quality gate → run → checkpoint → result. Mỗi bước giữ nguyên phạm vi dữ liệu và trạng thái thật.\n\nRESEARCH / SIMULATION\nBroker locked · không gửi lệnh\nData Desk →\nWorkspace tenant-a\nJob job-research-fixture\nĐang chạy\nEngine nautilus sẵn sàng\n✓\nContext\nDataset và phạm vi\n✓\nQuality gate\nTakeaway và cảnh báo\n✓\nRun\nGiả định nghiên cứu\n04\nCheckpoint\nTiến độ có bằng chứng\n05\nResult\nMetrics và hành động tiếp\n01 / CONTEXT\neurusd-h1\n\nPhạm vi cố định cho run này. Đổi dataset sẽ xóa deep link job hiện tại.\n\nMở Data Desk →\nEURUSDm · H1\n100 rows · 16:00 9/3/24 → 02:00 10/3/24\nQUALITY\nĐã xác minh\nHOLDOUT\nHoldout khóa\nPROVIDER\nlocal\nARTIFACT SHA\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nProvenance và giới hạn dữ liệu\n02 / QUALITY GATE\nCó thể chạy local, nhưng provenance còn thiếu\n\nRun vẫn giữ được tính trung thực, nhưng các cảnh báo bên dưới giới hạn cách diễn giải kết quả.\n\n!\nNEXT DECISION\nĐọc 1 cảnh báo trước khi chạy\n1 cảnh báo\nXem cảnh báo ảnh hưởng cách diễn giải\n03 / RUN CONFIG\nCố định giả định\n\nChỉ gửi dataset, strategy contract và starting balance đến local research backend.\n\nDATASET\nChọn dataset\neurusd-h1 · EURUSDm\nDataset là anchor của provenance và không tự đổi theo catalog.\nSTARTING BALANCE\nĐơn vị theo contract engine.\nSTRATEGY CONTRACT\nclose-delta-v1\nChỉ engine đã được backend công bố.\nRun đang chạy…\nGUARD TRƯỚC KHI CHẠY\nĐã xác minh · Holdout khóa · instrument cost metadata có sẵn.\n04 / CHECKPOINT\nRun đang tạo bằng chứng\n\nBackend là authority; checkpoint chỉ mô tả tiến độ, không biến thành kết quả giả.\n\nHủy run\nSTATUS\nĐang chạy\nDATASET\neurusd-h1\nATTEMPT\n1\nCẬP NHẬT\n00:00 1/10/26\nTiến độ backend\n20%\nCheckpoint: fixture-running · attempt 1"
+        },
+        "canceledDesktop": {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "pageHeight": 900,
+          "overflow": 0,
+          "status": "Đã hủy",
+          "text": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nTRADING WORKSPACE / RESEARCH\nResearch theo bằng chứng\n\nContext → quality gate → run → checkpoint → result. Mỗi bước giữ nguyên phạm vi dữ liệu và trạng thái thật.\n\nRESEARCH / SIMULATION\nBroker locked · không gửi lệnh\nData Desk →\nWorkspace tenant-a\nJob job-research-fixture\nĐã hủy\nEngine nautilus sẵn sàng\n✓\nContext\nDataset và phạm vi\n✓\nQuality gate\nTakeaway và cảnh báo\n✓\nRun\nGiả định nghiên cứu\n✓\nCheckpoint\nTiến độ có bằng chứng\n!\nResult\nRun kết thúc nhưng chưa có result\n01 / CONTEXT\neurusd-h1\n\nPhạm vi cố định cho run này. Đổi dataset sẽ xóa deep link job hiện tại.\n\nMở Data Desk →\nEURUSDm · H1\n100 rows · 16:00 9/3/24 → 02:00 10/3/24\nQUALITY\nĐã xác minh\nHOLDOUT\nHoldout khóa\nPROVIDER\nlocal\nARTIFACT SHA\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nProvenance và giới hạn dữ liệu\n02 / QUALITY GATE\nCó thể chạy local, nhưng provenance còn thiếu\n\nRun vẫn giữ được tính trung thực, nhưng các cảnh báo bên dưới giới hạn cách diễn giải kết quả.\n\n!\nNEXT DECISION\nĐọc 1 cảnh báo trước khi chạy\n1 cảnh báo\nXem cảnh báo ảnh hưởng cách diễn giải\n03 / RUN CONFIG\nCố định giả định\n\nChỉ gửi dataset, strategy contract và starting balance đến local research backend.\n\nDATASET\nChọn dataset\neurusd-h1 · EURUSDm\nDataset là anchor của provenance và không tự đổi theo catalog.\nSTARTING BALANCE\nĐơn vị theo contract engine.\nSTRATEGY CONTRACT\nclose-delta-v1\nChỉ engine đã được backend công bố.\nTạo research run\nGUARD TRƯỚC KHI CHẠY\nĐã xác minh · Holdout khóa · instrument cost metadata có sẵn.\n04 / CHECKPOINT\nRun đã có trạng thái cuối\n\nBackend là authority; checkpoint chỉ mô tả tiến độ, không biến thành kết quả giả.\n\nSTATUS\nĐã hủy\nDATASET\neurusd-h1\nATTEMPT\n1\nCẬP NHẬT\n00:00 1/10/26\nBackend error: cancelled_by_user\n05 / RESULT\nĐã hủy — chưa có result\n\nBackend đã kết thúc run nhưng không phát hành metrics. Không dựng kết quả thay thế.\n\nĐã hủy\n!\ncancelled_by_user\nGiữ nguyên trạng thái terminal và mở lại workflow khi đã xác định nguyên nhân.\nHọc & thuật ngữ\nMở Practice"
+        },
+        "canceledMobile": {
+          "width": 390,
+          "height": 844,
+          "scrollWidth": 390,
+          "bodyScrollWidth": 390,
+          "pageHeight": 844,
+          "overflow": 0,
+          "status": "Đã hủy",
+          "text": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nTRADING WORKSPACE / RESEARCH\nResearch theo bằng chứng\n\nContext → quality gate → run → checkpoint → result. Mỗi bước giữ nguyên phạm vi dữ liệu và trạng thái thật.\n\nRESEARCH / SIMULATION\nBroker locked · không gửi lệnh\nData Desk →\nWorkspace tenant-a\nJob job-research-fixture\nĐã hủy\nEngine nautilus sẵn sàng\n✓\nContext\nDataset và phạm vi\n✓\nQuality gate\nTakeaway và cảnh báo\n✓\nRun\nGiả định nghiên cứu\n✓\nCheckpoint\nTiến độ có bằng chứng\n!\nResult\nRun kết thúc nhưng chưa có result\n01 / CONTEXT\neurusd-h1\n\nPhạm vi cố định cho run này. Đổi dataset sẽ xóa deep link job hiện tại.\n\nMở Data Desk →\nEURUSDm · H1\n100 rows · 16:00 9/3/24 → 02:00 10/3/24\nQUALITY\nĐã xác minh\nHOLDOUT\nHoldout khóa\nPROVIDER\nlocal\nARTIFACT SHA\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nProvenance và giới hạn dữ liệu\n02 / QUALITY GATE\nCó thể chạy local, nhưng provenance còn thiếu\n\nRun vẫn giữ được tính trung thực, nhưng các cảnh báo bên dưới giới hạn cách diễn giải kết quả.\n\n!\nNEXT DECISION\nĐọc 1 cảnh báo trước khi chạy\n1 cảnh báo\nXem cảnh báo ảnh hưởng cách diễn giải\n03 / RUN CONFIG\nCố định giả định\n\nChỉ gửi dataset, strategy contract và starting balance đến local research backend.\n\nDATASET\nChọn dataset\neurusd-h1 · EURUSDm\nDataset là anchor của provenance và không tự đổi theo catalog.\nSTARTING BALANCE\nĐơn vị theo contract engine.\nSTRATEGY CONTRACT\nclose-delta-v1\nChỉ engine đã được backend công bố.\nTạo research run\nGUARD TRƯỚC KHI CHẠY\nĐã xác minh · Holdout khóa · instrument cost metadata có sẵn.\n04 / CHECKPOINT\nRun đã có trạng thái cuối\n\nBackend là authority; checkpoint chỉ mô tả tiến độ, không biến thành kết quả giả.\n\nSTATUS\nĐã hủy\nDATASET\neurusd-h1\nATTEMPT\n1\nCẬP NHẬT\n00:00 1/10/26\nBackend error: cancelled_by_user\n05 / RESULT\nĐã hủy — chưa có result\n\nBackend đã kết thúc run nhưng không phát hành metrics. Không dựng kết quả thay thế.\n\nĐã hủy\n!\ncancelled_by_user\nGiữ nguyên trạng thái terminal và mở lại workflow khi đã xác định nguyên nhân.\nHọc & thuật ngữ\nMở Practice"
+        }
+      },
+      "requests": [
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/datasets",
+          "body": null
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/engines",
+          "body": null
+        },
+        {
+          "method": "POST",
+          "pathname": "/api/v2/research/jobs",
+          "body": {
+            "dataset_id": "eurusd-h1",
+            "strategy_version": "close-delta-v1",
+            "starting_balance": 10000
+          }
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/jobs/job-research-fixture",
+          "body": null
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/jobs/job-research-fixture/checkpoint",
+          "body": null
+        },
+        {
+          "method": "POST",
+          "pathname": "/api/v2/research/jobs/job-research-fixture/cancel",
+          "body": null
+        }
+      ],
+      "responses": [
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/datasets",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/engines",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "pathname": "/api/v2/research/jobs",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/jobs/job-research-fixture",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/jobs/job-research-fixture/checkpoint",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "pathname": "/api/v2/research/jobs/job-research-fixture/cancel",
+          "status": 200
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "create-conflict-409",
+      "scenario": {
+        "kind": "conflict",
+        "createCalls": 1,
+        "cancelCalls": 0,
+        "jobGets": 0,
+        "checkpointCalls": 0,
+        "createBodies": [
+          {
+            "dataset_id": "eurusd-h1",
+            "strategy_version": "close-delta-v1",
+            "starting_balance": 10000
+          }
+        ]
+      },
+      "observed": {
+        "conflictDesktop": {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "pageHeight": 900,
+          "overflow": 0,
+          "status": "Chưa chạy",
+          "text": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nTRADING WORKSPACE / RESEARCH\nResearch theo bằng chứng\n\nContext → quality gate → run → checkpoint → result. Mỗi bước giữ nguyên phạm vi dữ liệu và trạng thái thật.\n\nRESEARCH / SIMULATION\nBroker locked · không gửi lệnh\nData Desk →\nWorkspace tenant-a\nJob Chưa tạo\nChưa chạy\nEngine nautilus sẵn sàng\n✓\nContext\nDataset và phạm vi\n✓\nQuality gate\nTakeaway và cảnh báo\n03\nRun\nGiả định nghiên cứu\n04\nCheckpoint\nTiến độ có bằng chứng\n05\nResult\nMetrics và hành động tiếp\nResearch không hoàn tất: active_research_job_conflict Thử lại\n01 / CONTEXT\neurusd-h1\n\nPhạm vi cố định cho run này. Đổi dataset sẽ xóa deep link job hiện tại.\n\nMở Data Desk →\nEURUSDm · H1\n100 rows · 16:00 9/3/24 → 02:00 10/3/24\nQUALITY\nĐã xác minh\nHOLDOUT\nHoldout khóa\nPROVIDER\nlocal\nARTIFACT SHA\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nProvenance và giới hạn dữ liệu\n02 / QUALITY GATE\nCó thể chạy local, nhưng provenance còn thiếu\n\nRun vẫn giữ được tính trung thực, nhưng các cảnh báo bên dưới giới hạn cách diễn giải kết quả.\n\n!\nNEXT DECISION\nĐọc 1 cảnh báo trước khi chạy\n1 cảnh báo\nXem cảnh báo ảnh hưởng cách diễn giải\n03 / RUN CONFIG\nCố định giả định\n\nChỉ gửi dataset, strategy contract và starting balance đến local research backend.\n\nDATASET\nChọn dataset\neurusd-h1 · EURUSDm\nDataset là anchor của provenance và không tự đổi theo catalog.\nSTARTING BALANCE\nĐơn vị theo contract engine.\nSTRATEGY CONTRACT\nclose-delta-v1\nChỉ engine đã được backend công bố.\nTạo research run\nGUARD TRƯỚC KHI CHẠY\nĐã xác minh · Holdout khóa · instrument cost metadata có sẵn.\n05 / RESULT\nKết quả sẽ xuất hiện ở đây\n\nKhông có run thì không hiển thị số giả.\n\n○\nChưa có result\nHoàn tất context và run config ở cột bên trái trước.\nHọc & thuật ngữ"
+        },
+        "conflictMobile": {
+          "width": 390,
+          "height": 844,
+          "scrollWidth": 390,
+          "bodyScrollWidth": 390,
+          "pageHeight": 844,
+          "overflow": 0,
+          "status": "Chưa chạy",
+          "text": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nTRADING WORKSPACE / RESEARCH\nResearch theo bằng chứng\n\nContext → quality gate → run → checkpoint → result. Mỗi bước giữ nguyên phạm vi dữ liệu và trạng thái thật.\n\nRESEARCH / SIMULATION\nBroker locked · không gửi lệnh\nData Desk →\nWorkspace tenant-a\nJob Chưa tạo\nChưa chạy\nEngine nautilus sẵn sàng\n✓\nContext\nDataset và phạm vi\n✓\nQuality gate\nTakeaway và cảnh báo\n03\nRun\nGiả định nghiên cứu\n04\nCheckpoint\nTiến độ có bằng chứng\n05\nResult\nMetrics và hành động tiếp\nResearch không hoàn tất: active_research_job_conflict Thử lại\n01 / CONTEXT\neurusd-h1\n\nPhạm vi cố định cho run này. Đổi dataset sẽ xóa deep link job hiện tại.\n\nMở Data Desk →\nEURUSDm · H1\n100 rows · 16:00 9/3/24 → 02:00 10/3/24\nQUALITY\nĐã xác minh\nHOLDOUT\nHoldout khóa\nPROVIDER\nlocal\nARTIFACT SHA\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nProvenance và giới hạn dữ liệu\n02 / QUALITY GATE\nCó thể chạy local, nhưng provenance còn thiếu\n\nRun vẫn giữ được tính trung thực, nhưng các cảnh báo bên dưới giới hạn cách diễn giải kết quả.\n\n!\nNEXT DECISION\nĐọc 1 cảnh báo trước khi chạy\n1 cảnh báo\nXem cảnh báo ảnh hưởng cách diễn giải\n03 / RUN CONFIG\nCố định giả định\n\nChỉ gửi dataset, strategy contract và starting balance đến local research backend.\n\nDATASET\nChọn dataset\neurusd-h1 · EURUSDm\nDataset là anchor của provenance và không tự đổi theo catalog.\nSTARTING BALANCE\nĐơn vị theo contract engine.\nSTRATEGY CONTRACT\nclose-delta-v1\nChỉ engine đã được backend công bố.\nTạo research run\nGUARD TRƯỚC KHI CHẠY\nĐã xác minh · Holdout khóa · instrument cost metadata có sẵn.\n05 / RESULT\nKết quả sẽ xuất hiện ở đây\n\nKhông có run thì không hiển thị số giả.\n\n○\nChưa có result\nHoàn tất context và run config ở cột bên trái trước.\nHọc & thuật ngữ"
+        }
+      },
+      "requests": [
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/datasets",
+          "body": null
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/engines",
+          "body": null
+        },
+        {
+          "method": "POST",
+          "pathname": "/api/v2/research/jobs",
+          "body": {
+            "dataset_id": "eurusd-h1",
+            "strategy_version": "close-delta-v1",
+            "starting_balance": 10000
+          }
+        }
+      ],
+      "responses": [
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/datasets",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/engines",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "pathname": "/api/v2/research/jobs",
+          "status": 409
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 409 (Conflict)"
+      ],
+      "unexpectedConsoleErrors": [],
+      "pass": true
+    }
+  ]
+}

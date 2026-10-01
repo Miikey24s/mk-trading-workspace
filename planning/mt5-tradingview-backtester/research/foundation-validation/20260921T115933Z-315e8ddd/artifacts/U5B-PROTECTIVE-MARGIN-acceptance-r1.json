@@ -1,0 +1,38 @@
+{
+  "task": "U5B-PROTECTIVE-MARGIN-r1",
+  "commit": "fa191a018077848b566bb0a24949601d2f0cb022",
+  "base": "f85319e96e043f2ea377752e4d65b7bc773a86d3",
+  "result": "PASS",
+  "candidate_validation": "foundation_v2/evidence/U5-protective-validation-r6.json",
+  "integrated_validation": "foundation_v2/evidence/U5-protective-validation-integrated-r1.json",
+  "review": "foundation_v2/evidence/U5-protective-review-r1.json",
+  "verification": {
+    "tests": 76,
+    "skipped": 0,
+    "validation": "foundation_v2/evidence/U5-protective-validation-integrated-r1.json",
+    "validation_sha256": "d452fada4ee76649ee5cd5caa5ddcf1f0eb4149797b28812d6f17e0e75bf1fdf",
+    "review_sha256": "07fa22f94778a6833f668cb5f336456b5643bfea4d980289d2c27812f770a9c5",
+    "scope": "U5b protective/margin local synthetic fixture; no broker/live/production",
+    "test_hash": "d452fada4ee76649ee5cd5caa5ddcf1f0eb4149797b28812d6f17e0e75bf1fdf",
+    "input_hashes": {
+      "validation": "d452fada4ee76649ee5cd5caa5ddcf1f0eb4149797b28812d6f17e0e75bf1fdf",
+      "review": "07fa22f94778a6833f668cb5f336456b5643bfea4d980289d2c27812f770a9c5",
+      "commit": "fa191a018077848b566bb0a24949601d2f0cb022"
+    },
+    "test_scope": "post-commit protective and margin semantics plus integrated U5/U2/U3/F7/FH/reference regressions",
+    "expected_outcomes": [
+      "zero skipped tests",
+      "assumption disclosure tamper fails reconciliation",
+      "same-bar dual-hit fails closed",
+      "protective close-1ns ordering permits same-close signal then next-open entry"
+    ],
+    "exit_code": 0,
+    "post_commit": true
+  },
+  "residual_scope": [
+    "manual/replay comparison on the same unseen segment",
+    "durable progress/restart checkpoints and explicit concurrency admission",
+    "U5c chronological OOS/walk-forward/stress/bounded sweep",
+    "real licensed dataset and owner UX acceptance"
+  ]
+}

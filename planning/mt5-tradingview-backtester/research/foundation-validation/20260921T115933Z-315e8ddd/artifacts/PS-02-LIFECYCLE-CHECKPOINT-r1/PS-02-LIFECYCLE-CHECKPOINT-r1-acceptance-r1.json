@@ -1,0 +1,34 @@
+{
+  "accepted_scope": [
+    "Deterministic Prop lifecycle evaluation consumes ordered simulator snapshots without generating orders or fills",
+    "Money/calendar objectives enforce target, daily/overall drawdown, minimum days, cutoff and breach-before-pass precedence",
+    "Trailing drawdown follows declared balance/equity basis; end-of-day HWM advances only at explicit calendar boundaries",
+    "Incomplete evaluation quality blocks objective progression without consuming simulator event/cursor progression",
+    "PostgreSQL lifecycle persistence is atomic, revision-fenced, idempotent, tenant-scoped and rejects concurrent double-apply",
+    "Checkpoint remains simulation-only and exposes no broker execution capability"
+  ],
+  "base": "22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+  "commit": "432273958778569f9ab76d88767d625ee626c059",
+  "residual_scope": [
+    "canonical Replay order/fill ledger connection",
+    "user start/pause/resume and multi-phase carry/reset transition commands",
+    "Prop lifecycle UI and objective charts",
+    "D15 broader intrabar/reordered/missing/cross-asset quality fixtures",
+    "D17 report/export/sample denominators",
+    "broker/demo/live, holdout, provider, deployment and Figma acceptance"
+  ],
+  "result": "PASS",
+  "reviewer": "/root/ps02_lifecycle_review",
+  "task": "PS-02-LIFECYCLE-CHECKPOINT-r1",
+  "validation": "artifacts\\PS-02-LIFECYCLE-CHECKPOINT-r1\\PS02-lifecycle-validation-r1.json",
+  "validation_checks": {
+    "broker_execution_capability": false,
+    "postgres_lifecycle_receipts_persisted": true,
+    "postgres_terminal_attempt_persisted": true,
+    "ps00_money_calendar_regression_pass": true,
+    "ps01_persistence_regression_pass": true,
+    "ps02_lifecycle_tests_pass": true,
+    "tenant_scope_persistence_covered": true
+  },
+  "validation_sha256": "17b51b505e2eaaa3a7211cb0106938774edeec54a99556b70c1e84208a0ae82e"
+}

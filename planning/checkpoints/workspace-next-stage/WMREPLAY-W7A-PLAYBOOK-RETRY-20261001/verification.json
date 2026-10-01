@@ -1,0 +1,29 @@
+{
+  "scope": "WMREPLAY W7-A Playbook read-state recovery",
+  "verified_at_local": "2026-10-01",
+  "product_head_at_rerun": "74fbb206cefc4d7724fa817390b959fed34fc7a0",
+  "implementation_commit": "13e4c92491dfde9ad4c6844ed4161d6627e7a9c1",
+  "owned_files": [
+    "projects/mt5-tradingview-backtester/foundation_v2/web/src/PlaybookWorkspace.jsx",
+    "projects/mt5-tradingview-backtester/foundation_v2/web/src/playbook-story.css",
+    "projects/mt5-tradingview-backtester/foundation_v2/web/tests/playbook.test.mjs"
+  ],
+  "focused_tests": { "command": "node --test tests/playbook.test.mjs", "passed": 4, "failed": 0 },
+  "full_web_tests": { "command": "node --test tests/*.test.mjs", "passed": 55, "failed": 0 },
+  "build": { "command": "npm run build", "status": "passed", "modules": 71, "known_warning": "main JS chunk 719.96 kB > 500 kB" },
+  "controlled_fixture": {
+    "catalog": "503 -> manual retry -> 200",
+    "history": "503 -> manual retry -> 200",
+    "catalog_calls": 2,
+    "history_calls": 2,
+    "final_diff_contains_updated_rule": true,
+    "document_overflow_px": 0,
+    "expected_console_503_responses": true,
+    "mutations": false,
+    "providers_or_broker": false
+  },
+  "existing_evidence": "../WMREPLAY-W7A-playbook-20261001/",
+  "status": "SAFE_SLICE_VERIFIED",
+  "owner_gates": ["freeze/fork/mutation", "broker/provider/OAuth/secret/deploy"],
+  "rollback": "Revert implementation commit 13e4c92 or restore the three owned files."
+}

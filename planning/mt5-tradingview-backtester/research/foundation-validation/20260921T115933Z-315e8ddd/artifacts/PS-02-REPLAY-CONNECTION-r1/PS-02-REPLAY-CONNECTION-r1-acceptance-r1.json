@@ -1,0 +1,33 @@
+{
+  "accepted_scope": [
+    "Canonical Replay execution persists market fills and price marks before Prop lifecycle consumes them",
+    "Replay to Prop binding is workspace-scoped, dataset/cost/engine pinned, revision-fenced and ordered",
+    "Exact Replay to Prop retries remain idempotent even after later price marks while unseen backward events fail closed",
+    "Market orders cannot be queued without a future Replay bar, preventing terminal pending-order wedges",
+    "Equity-dependent objectives fail closed when the Replay mark lacks complete intrabar equity coverage",
+    "Execution-enabled rewind/branch remains blocked until canonical checkpoint reconstruction exists and broker execution stays unavailable"
+  ],
+  "base": "432273958778569f9ab76d88767d625ee626c059",
+  "commit": "8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68",
+  "residual_scope": [
+    "server-owned start/pause/resume/abandon lifecycle commands",
+    "canonical multi-phase Replay reset/carry transitions",
+    "execution rewind/checkpoint reconstruction",
+    "lower-timeframe or tick intrabar equity path and broader D15 quality fixtures",
+    "Prop objective UI, reports/export and Figma acceptance",
+    "broker/demo/live, holdout, paid provider and deployment acceptance"
+  ],
+  "result": "PASS",
+  "reviewer": "/root/ps02b_review_r2",
+  "task": "PS-02-REPLAY-CONNECTION-r1",
+  "tests_run": 69,
+  "validation": "artifacts\\PS-02-REPLAY-CONNECTION-r1\\PS02-replay-validation-r2.json",
+  "validation_checks": {
+    "broker_execution_capability": false,
+    "focused_regression_pass": true,
+    "postgres_prop_attempt_bound_to_replay": true,
+    "postgres_replay_execution_ledger_persisted": true,
+    "postgres_replay_prop_receipt_persisted": true
+  },
+  "validation_sha256": "66ba3b11f881845c8f46d64fdadf164ba80c2ce14b12da3913288f40beef98d7"
+}

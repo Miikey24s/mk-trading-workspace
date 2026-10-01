@@ -1,0 +1,22 @@
+{
+  "browser": "chromium-headless-playwright",
+  "before": {
+    "innerWidth": 1440,
+    "innerHeight": 900,
+    "clientWidth": 1440,
+    "scale": 1
+  },
+  "after_control_equal": {
+    "innerWidth": 1440,
+    "innerHeight": 900,
+    "clientWidth": 1440,
+    "scale": 1
+  },
+  "after_control_minus": {
+    "innerWidth": 1440,
+    "innerHeight": 900,
+    "clientWidth": 1440,
+    "scale": 1
+  },
+  "native_zoom_observable": false
+}

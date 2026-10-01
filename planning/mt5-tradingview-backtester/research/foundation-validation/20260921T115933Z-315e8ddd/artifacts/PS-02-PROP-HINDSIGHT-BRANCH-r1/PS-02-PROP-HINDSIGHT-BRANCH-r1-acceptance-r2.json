@@ -1,0 +1,16 @@
+{
+  "broker_execution_capability": false,
+  "candidate_revision": "07fc8ea3479460cf4db68a781304481cf925b2d4",
+  "residual_scope": [
+    "Prop objective UI/report/export/Figma acceptance",
+    "Broader D15 and intrabar equity-path coverage",
+    "Broker/demo/live, holdout, paid provider and deployment acceptance"
+  ],
+  "result": "accepted",
+  "review": "PASS fresh current-turn read-only exact-HEAD review",
+  "reviewer": "/root/native2-readonly-review-20260926",
+  "runtime_receipt": "artifacts\\PS-02-PROP-HINDSIGHT-BRANCH-r1\\runtime-r3\\PS02-replay-connection-r1.json",
+  "runtime_receipt_sha256": "24e9e372ff98c28d0c9de0584b078eb1cbf41716668ed524e70021d7ccdd55fd",
+  "task": "PS-02-PROP-HINDSIGHT-BRANCH-r1",
+  "tests_run": 103
+}

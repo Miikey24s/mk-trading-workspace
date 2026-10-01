@@ -1,0 +1,23 @@
+const path = require('path');
+const { createRequire } = require('module');
+const req = createRequire(path.resolve('D:/ANNAM/TradingWorkspace/projects/mt5-tradingview-backtester/foundation_v2/web/package.json'));
+const { chromium } = req('playwright');
+const profile = 'C:/Users/MIIKEY/AppData/Local/WMReplay/fxreplay-capture-profile';
+const url = 'https://app.fxreplay.com/en-US/auth/testing/v2/sessions/aad96b3f-3510-4e1a-bd33-290140058547';
+(async () => {
+  const c = await chromium.launchPersistentContext(profile, { headless: true, viewport: { width: 1920, height: 1080 }, locale: 'en-US' });
+  const p = c.pages()[0] || await c.newPage();
+  await p.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await p.waitForTimeout(9000);
+  await p.locator('appcues-experience-container').evaluateAll(ns => ns.forEach(n => n.style.pointerEvents = 'none')).catch(() => {});
+  const collapse = p.locator('button[aria-label="Collapse the order flow panel"]');
+  if (await collapse.count() && await collapse.first().isVisible().catch(() => false)) await collapse.first().click({ force: true }).catch(() => {});
+  const closePanels = p.locator('[aria-label^="Close "]');
+  const count = await closePanels.count();
+  for (let i = 0; i < count; i++) if (await closePanels.nth(i).isVisible().catch(() => false)) await closePanels.nth(i).click({ force: true }).catch(() => {});
+  await p.waitForTimeout(1000);
+  const controls = await p.locator('button,[role="button"]').evaluateAll(ns => ns.map(n => { const r=n.getBoundingClientRect(), s=getComputedStyle(n); return {title:n.title,aria:n.getAttribute('aria-label'),text:(n.innerText||'').trim(),visible:r.width>0&&r.height>0&&s.display!=='none'&&s.visibility!=='hidden',rect:{x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)}}; }).filter(x=>x.visible&&x.rect.y<150));
+  console.log(JSON.stringify(controls, null, 2));
+  await p.screenshot({ path: 'D:/ANNAM/FXReplayCaptures/deep-free-backtest-2026-09-30/clean-chart.png', fullPage: false, animations: 'disabled' });
+  await c.close();
+})();

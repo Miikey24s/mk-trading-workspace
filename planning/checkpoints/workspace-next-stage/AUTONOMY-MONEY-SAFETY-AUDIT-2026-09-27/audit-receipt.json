@@ -1,0 +1,66 @@
+{
+  "schema_version": "autonomy-money-safety-audit-receipt-v1",
+  "mode": "PREP_ONLY_OFFLINE",
+  "date": "2026-09-27",
+  "scope": [
+    "foundation_v2 research and OOS contracts",
+    "Quant Lab accounting and research workflow",
+    "TradingAgents advisory/backtest/checkpoint boundaries"
+  ],
+  "inspected_paths": [
+    "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/research.py",
+    "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/research_oos.py",
+    "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/strategy_contracts.py",
+    "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/research_engine.py",
+    "projects/mt5-tradingview-backtester/foundation_v2/trading_workspace_v2/worker.py",
+    "projects/quant-trading/src/quant_lab/backtest.py",
+    "projects/quant-trading/src/quant_lab/metrics.py",
+    "projects/quant-trading/src/quant_lab/research.py",
+    "projects/quant-trading/src/quant_lab/data.py",
+    "projects/TradingAgents/tradingagents/backtest.py",
+    "projects/TradingAgents/tradingagents/portfolio.py",
+    "projects/TradingAgents/tradingagents/graph/checkpointer.py",
+    "projects/TradingAgents/README.md"
+  ],
+  "verified_observations": [
+    {
+      "id": "OBS-01",
+      "claim": "foundation_v2 pins frozen playbook, dataset snapshot, engine identity, costs and bounded OOS/stress protocol",
+      "status": "VERIFIED_FROM_SOURCE"
+    },
+    {
+      "id": "OBS-02",
+      "claim": "foundation_v2 rejects holdout content access and has job lease/recovery primitives",
+      "status": "VERIFIED_FROM_SOURCE"
+    },
+    {
+      "id": "OBS-03",
+      "claim": "Quant Lab enforces next-bar spot accounting with fees/slippage and chronological train/test reporting",
+      "status": "VERIFIED_FROM_SOURCE"
+    },
+    {
+      "id": "OBS-04",
+      "claim": "TradingAgents backtest scores decision quality and explicitly lacks fills, quantity, cash ledger and equity simulation",
+      "status": "VERIFIED_FROM_SOURCE"
+    },
+    {
+      "id": "OBS-05",
+      "claim": "No inspected project exposes a complete autonomous scheduler, cross-project registry, drift governor or automatic promotion controller",
+      "status": "AUDIT_CONCLUSION"
+    }
+  ],
+  "negative_assertions": {
+    "network_called": false,
+    "credentials_read": false,
+    "broker_started": false,
+    "orders_sent": false,
+    "holdout_opened": false,
+    "scheduler_started": false,
+    "production_code_changed": false
+  },
+  "contract_verification": {
+    "command": "python planning/checkpoints/workspace-next-stage/AUTONOMY-MONEY-SAFETY-AUDIT-2026-09-27/verify_contract.py",
+    "result": "PASS",
+    "output": "AUTONOMY_CONTRACT_PASS: PREP_ONLY, live blocked, fail-closed invariants intact"
+  }
+}

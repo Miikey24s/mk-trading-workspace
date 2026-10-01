@@ -1,0 +1,26 @@
+{
+  "task": "PS-00-PROP-CONTRACT-r1",
+  "base_revision": "860fadd01f463df19d38a67a2294019fc19658d5",
+  "candidate_revision": "3835d4482168da65f0ff764e0b791f49e2fe5381",
+  "dependencies": [
+    "U5B-PROTECTIVE-MARGIN-r1",
+    "U5B-REPLAY-CUTOFF-r1"
+  ],
+  "allowed_files": [
+    "foundation_v2/trading_workspace_v2/prop_session.py",
+    "foundation_v2/tests/test_ps00_prop_session_contract.py"
+  ],
+  "acceptance": [
+    "Prop profile/session/attempt/phase contracts are versioned, simulation-only and workspace scoped",
+    "Independent Decimal oracle covers target, daily/static/trailing thresholds, open P/L, costs, comparator equality and frozen phase capital",
+    "Virtual calendar handles timezone/DST/no-tick resets and never advances from wall clock",
+    "Transition intents are revisioned/idempotent and terminal failed attempts cannot be rewritten to pass",
+    "Retained U6d subset and integrated local regression pass while broker execution remains out of scope"
+  ],
+  "residual_scope": [
+    "PS-01 persisted session CRUD/resume",
+    "PS-02 canonical simulator/equity event lifecycle, phase carry/reset and D15-D18 E2E",
+    "Prop UI, real local data E2E and final Y25 acceptance"
+  ],
+  "safety": "Replay/simulation contract only; no broker account, funded challenge, payout, live execution or external provider action."
+}

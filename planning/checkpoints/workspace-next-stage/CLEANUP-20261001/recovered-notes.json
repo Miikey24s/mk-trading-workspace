@@ -1,0 +1,32 @@
+[
+  {
+    "source": "projects/planning/checkpoints/workspace-next-stage/WMREPLAY-W7A-trade-20261001/runtime.json",
+    "destination": "planning/checkpoints/workspace-next-stage/CLEANUP-20261001/recovered-notes/misplaced-projects-planning/checkpoints/workspace-next-stage/WMREPLAY-W7A-trade-20261001/runtime.json",
+    "sha256": "e7d6e823cd427cdedd9c916981de1a5eb1d8dc013c3e68c36c33f01d07d87e17"
+  },
+  {
+    "source": "projects/planning/checkpoints/workspace-next-stage/WMREPLAY-W7A-trade-20261001/trade-retry-1440.png",
+    "destination": "planning/checkpoints/workspace-next-stage/CLEANUP-20261001/recovered-notes/misplaced-projects-planning/checkpoints/workspace-next-stage/WMREPLAY-W7A-trade-20261001/trade-retry-1440.png",
+    "sha256": "29a5cae7a3be43d48a637da2331ecfc69bc9e3c46e5d90788df9475a4caadf68"
+  },
+  {
+    "source": "projects/planning/checkpoints/workspace-next-stage/WMREPLAY-W7A-trade-20261001/trade-retry-390.png",
+    "destination": "planning/checkpoints/workspace-next-stage/CLEANUP-20261001/recovered-notes/misplaced-projects-planning/checkpoints/workspace-next-stage/WMREPLAY-W7A-trade-20261001/trade-retry-390.png",
+    "sha256": "ae4a1e5b4629649ba268430b8b03fc27561b78804fb5f958ce8821be4c08cba7"
+  },
+  {
+    "source": "projects/mt5-tradingview-backtester/planning/CURRENT-CONTEXT.md",
+    "destination": "planning/checkpoints/workspace-next-stage/CLEANUP-20261001/recovered-notes/mt5-local-planning/CURRENT-CONTEXT.md",
+    "sha256": "aca5f24037c60dc2a1ea0e19b430d2ae6fd7e6e4769c952ded5084274a48cd44"
+  },
+  {
+    "source": "projects/mt5-tradingview-backtester/planning/checkpoints/workspace-next-stage/RESUME.md",
+    "destination": "planning/checkpoints/workspace-next-stage/CLEANUP-20261001/recovered-notes/mt5-local-planning/checkpoints/workspace-next-stage/RESUME.md",
+    "sha256": "526f4b67eb7df58c70f0f190437fa9a612f197474b562442969c6cfcb8b44453"
+  },
+  {
+    "source": "projects/mt5-tradingview-backtester/planning/checkpoints/workspace-next-stage/WMREPLAY-W7B-CONTRAST-ARIA-20261001/CHECKPOINT.md",
+    "destination": "planning/checkpoints/workspace-next-stage/CLEANUP-20261001/recovered-notes/mt5-local-planning/checkpoints/workspace-next-stage/WMREPLAY-W7B-CONTRAST-ARIA-20261001/CHECKPOINT.md",
+    "sha256": "d1144f3c4015ca907450ae11ebf9b68676ed37abf198ed21000110a9d5d05824"
+  }
+]

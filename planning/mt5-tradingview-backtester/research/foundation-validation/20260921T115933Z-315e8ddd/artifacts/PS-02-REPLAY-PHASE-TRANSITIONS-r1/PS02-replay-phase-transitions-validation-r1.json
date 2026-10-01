@@ -1,0 +1,105 @@
+{
+  "accepted_scope": [
+    "Replay-bound next_phase persists Replay revision, Prop attempt/session state and idempotency receipt in one PostgreSQL transaction with fixed Replay-to-session-to-attempt lock order",
+    "reset, carry_balance and carry_all produce the canonical next-phase money and position state while immutable starting_balance is preserved and phase_index/phase_initial_balance identify the active Replay phase",
+    "A canonical phase_transition Replay ledger event advances Replay event_sequence exactly once, preserves the cursor and becomes the new Replay binding boundary",
+    "Exact and late exact retries are idempotent; tampered reuse conflicts; concurrent two-tab transitions commit only once; forced persistence failure rolls back both Replay and Prop domains",
+    "Replay/Prop lineage, cursor, money, position and event drift fail closed, as do pending orders, missing canonical Replay, final-bar/no-future-bar transitions and unsupported close_by_simulator with an open Replay position",
+    "Phase 2 can start and continue Replay step/feed evaluation using the new phase basis without the prior initial-balance mismatch",
+    "Disposable PostgreSQL lifecycle regression plus real PostgreSQL/API/Vite/Playwright regression pass with broker execution capability disabled"
+  ],
+  "base_revision": "9ff840b1dd055a02803e1db38138bf039ca349e3",
+  "candidate_revision": "5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12",
+  "changed_files": [
+    "foundation_v2/tests/test_ps02_prop_lifecycle.py",
+    "foundation_v2/tests/test_ps02_replay_prop_connection.py",
+    "foundation_v2/tests/test_replay_execution_core.py",
+    "foundation_v2/trading_workspace_v2/prop_replay.py",
+    "foundation_v2/trading_workspace_v2/prop_session.py",
+    "foundation_v2/trading_workspace_v2/replay_execution.py",
+    "foundation_v2/trading_workspace_v2/store.py"
+  ],
+  "checks": {
+    "atomic_replay_prop_phase_transition_pass": true,
+    "boundary_fail_closed_pass": true,
+    "broker_execution_capability": false,
+    "exact_changed_file_set_pass": true,
+    "idempotency_race_and_rollback_pass": true,
+    "lifecycle_regression_pass": true,
+    "phase2_step_feed_pass": true,
+    "phase_metadata_and_ledger_transition_pass": true,
+    "real_service_browser_pass": true,
+    "reset_carry_balance_carry_all_semantics_pass": true,
+    "vite_build_pass": true
+  },
+  "components": {
+    "lifecycle_regression": {
+      "checks": {
+        "broker_execution_capability": false,
+        "postgres_lifecycle_receipts_persisted": true,
+        "postgres_terminal_attempt_persisted": true,
+        "ps00_money_calendar_regression_pass": true,
+        "ps01_persistence_regression_pass": true,
+        "ps02_lifecycle_tests_pass": true,
+        "tenant_scope_persistence_covered": true
+      },
+      "receipt": "PS02-lifecycle-regression-component-r1.json",
+      "sha256": "17b51b505e2eaaa3a7211cb0106938774edeec54a99556b70c1e84208a0ae82e"
+    },
+    "real_service": {
+      "checks": {
+        "backend_persistence_tests_pass": true,
+        "broker_execution_capability": false,
+        "postgres_attempt_persisted": true,
+        "postgres_session_persisted": true,
+        "real_service_browser_pass": true,
+        "vite_build_pass": true
+      },
+      "receipt": "PS01-real-service-component-r1.json",
+      "sha256": "6a07452c6fbe8744fc12074274fb6b12f5eb7201a71657b6b92a6ceeb28e0a74",
+      "ui_checks": [
+        "initial_empty_state",
+        "simulation_only_lock",
+        "ui_atomic_create_session_and_attempt_via_real_api",
+        "postgres_persisted_ids",
+        "resume_update_persisted_before_reload",
+        "reload_resume_same_ids_and_updated_cursor",
+        "tenant_denial",
+        "mutations_prop_api_only",
+        "no_broker_execution_request",
+        "responsive_1440_768_360"
+      ]
+    },
+    "replay_phase_transitions": {
+      "checks": {
+        "broker_execution_capability": false,
+        "focused_regression_pass": true,
+        "postgres_prop_attempt_bound_to_replay": true,
+        "postgres_replay_execution_ledger_persisted": true,
+        "postgres_replay_prop_receipt_persisted": true
+      },
+      "receipt": "PS02-replay-phase-transitions-component-r1.json",
+      "sha256": "558d6b6f71426cd5009869c7f1dbfb1ab705e72a314f1e3a6dbf511d33df87c6",
+      "tests_run": 95
+    }
+  },
+  "residual_scope": [
+    "execution-enabled Replay rewind and branch checkpoint reconstruction with canonical historical position and ledger reconstruction",
+    "lower-timeframe or tick intrabar equity path plus broader D15 cross-asset, financing and calendar quality coverage",
+    "Prop product UI, lifecycle controls, objective charts, reports/export and Figma acceptance",
+    "broker/demo/live, holdout, paid provider and deployment acceptance"
+  ],
+  "result": "PASS",
+  "schema": "PS02-REPLAY-PHASE-TRANSITIONS-VALIDATION-r1",
+  "scope": "PS-02C2 canonical atomic Replay-to-Prop multi-phase transitions on exact commit with disposable PostgreSQL plus lifecycle and real API/Vite/Playwright regression; simulation only",
+  "source_sha256": {
+    "foundation_v2/tests/test_ps02_prop_lifecycle.py": "83006b22cc7841ef2356d55a99bfd050251444a2bbafdbd278d7389693261153",
+    "foundation_v2/tests/test_ps02_replay_prop_connection.py": "3a209fc38cf5e5862343b8189722f55559426c1f54ddd328e855010897ba6a7d",
+    "foundation_v2/tests/test_replay_execution_core.py": "9c68443a4302ab65d3e038cb6c81e0f485353104c948817367b413d7e5e6d0dc",
+    "foundation_v2/trading_workspace_v2/prop_replay.py": "cb9a6cb57c5b09863ccba7b599fb7366ae998750e96378c67a4bb7907abc8a19",
+    "foundation_v2/trading_workspace_v2/prop_session.py": "b019390e0c75184f75d626e98d745389797421bb0b0192fe44c472e9617374e8",
+    "foundation_v2/trading_workspace_v2/replay_execution.py": "2ece366f06b1504ab2d499d78cb53dc3e4c0b15b21cb2c68495742f6288fe789",
+    "foundation_v2/trading_workspace_v2/store.py": "6dd1a35ea44c9b31afeb7da64902d3093aecff56e10d5243df5021da9ed94f3e"
+  },
+  "task": "PS-02-REPLAY-PHASE-TRANSITIONS-r1"
+}

@@ -1,0 +1,102 @@
+{
+  "accepted_scope": [
+    "Execution-enabled Replay branch selects the latest immutable persisted checkpoint at the requested cursor when one exists, preserving queued/manual execution state",
+    "If a multi-bar Replay step has no persisted revision at an intermediate cursor, branch reconstruction uses the canonical price_mark ledger checkpoint and restores balance, floating P/L, equity, open position, pending state, phase metadata and event sequence",
+    "The child receives a new replay_session_id and branch_id while the reconstructed ledger is remapped consistently to the child lineage and immutable dataset/instrument/cost pins remain unchanged",
+    "Parent Replay state and revision history remain immutable; child creation is revision-fenced against the locked parent head and stale parent revisions fail closed",
+    "A reconstructed child can continue deterministic Replay stepping from the checkpoint without mutating the parent",
+    "Existing Replay-to-Prop lineage remains fail-closed for a newly forked child unless a separate canonical Prop binding is created",
+    "Fresh disposable PostgreSQL Replay/lifecycle regressions and real PostgreSQL/API/Vite/Playwright regression pass with broker execution capability disabled"
+  ],
+  "base_revision": "5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12",
+  "candidate_revision": "95fd6db4526be6658b54bdf0fdea32e1f4af7f5d",
+  "changed_files": [
+    "foundation_v2/tests/test_ps02_replay_prop_connection.py",
+    "foundation_v2/tests/test_replay_execution_core.py",
+    "foundation_v2/trading_workspace_v2/replay.py",
+    "foundation_v2/trading_workspace_v2/replay_execution.py",
+    "foundation_v2/trading_workspace_v2/store.py"
+  ],
+  "checks": {
+    "broker_execution_capability": false,
+    "child_lineage_remap_pass": true,
+    "child_resume_step_pass": true,
+    "exact_changed_file_set_pass": true,
+    "ledger_price_mark_fallback_pass": true,
+    "lifecycle_regression_pass": true,
+    "money_position_pending_phase_reconstruction_pass": true,
+    "parent_immutability_and_revision_fence_pass": true,
+    "persisted_checkpoint_selection_pass": true,
+    "prop_lineage_fail_closed_pass": true,
+    "real_service_browser_pass": true,
+    "vite_build_pass": true
+  },
+  "components": {
+    "lifecycle_regression": {
+      "checks": {
+        "broker_execution_capability": false,
+        "postgres_lifecycle_receipts_persisted": true,
+        "postgres_terminal_attempt_persisted": true,
+        "ps00_money_calendar_regression_pass": true,
+        "ps01_persistence_regression_pass": true,
+        "ps02_lifecycle_tests_pass": true,
+        "tenant_scope_persistence_covered": true
+      },
+      "receipt": "PS02-lifecycle-regression-component-r1.json",
+      "sha256": "17b51b505e2eaaa3a7211cb0106938774edeec54a99556b70c1e84208a0ae82e"
+    },
+    "real_service": {
+      "checks": {
+        "backend_persistence_tests_pass": true,
+        "broker_execution_capability": false,
+        "postgres_attempt_persisted": true,
+        "postgres_session_persisted": true,
+        "real_service_browser_pass": true,
+        "vite_build_pass": true
+      },
+      "receipt": "PS01-real-service-component-r1.json",
+      "sha256": "6cb4a1c01d4442ecb98c035eb19ea3837f1368f417aff16af161d0280caf8785",
+      "ui_checks": [
+        "initial_empty_state",
+        "simulation_only_lock",
+        "ui_atomic_create_session_and_attempt_via_real_api",
+        "postgres_persisted_ids",
+        "resume_update_persisted_before_reload",
+        "reload_resume_same_ids_and_updated_cursor",
+        "tenant_denial",
+        "mutations_prop_api_only",
+        "no_broker_execution_request",
+        "responsive_1440_768_360"
+      ]
+    },
+    "replay_checkpoint_branch": {
+      "checks": {
+        "broker_execution_capability": false,
+        "focused_regression_pass": true,
+        "postgres_prop_attempt_bound_to_replay": true,
+        "postgres_replay_execution_ledger_persisted": true,
+        "postgres_replay_prop_receipt_persisted": true
+      },
+      "receipt": "PS02-replay-checkpoint-branch-component-r1.json",
+      "sha256": "09512db5ef11a2e025a114a9a653014f28ea94cad96cf9fe5b5cb8757358d346",
+      "tests_run": 99
+    }
+  },
+  "residual_scope": [
+    "Prop-attempt cloning or rebinding onto a historical Replay branch; current Prop binding remains intentionally lineage-specific",
+    "lower-timeframe or tick intrabar equity path plus broader D15 cross-asset, financing and calendar quality coverage",
+    "Prop product UI, branch comparison UI, objective charts, reports/export and Figma acceptance",
+    "broker/demo/live, holdout, paid provider and deployment acceptance"
+  ],
+  "result": "PASS",
+  "schema": "PS02-REPLAY-CHECKPOINT-BRANCH-VALIDATION-r1",
+  "scope": "PS-02C3 execution-enabled Replay historical checkpoint reconstruction and immutable branching on exact commit; simulation only",
+  "source_sha256": {
+    "foundation_v2/tests/test_ps02_replay_prop_connection.py": "6c73d5b5b2356fcda84c9ad9993cb0509d335754b5022c761a26b56c1da6a034",
+    "foundation_v2/tests/test_replay_execution_core.py": "406ab3a82a13b7b748a9e5acbeef05a57cf39770ac1d60348fd215ada6bb003f",
+    "foundation_v2/trading_workspace_v2/replay.py": "15c49f8a10ebba2e3df8907279093ef7156388d4fe3f82e3693828a7e8ddd7ca",
+    "foundation_v2/trading_workspace_v2/replay_execution.py": "ec514c42deba87f3fcc898e02cce96f53c7092b493750cda9ed6e2c9d38bc290",
+    "foundation_v2/trading_workspace_v2/store.py": "743461f40da54642dee8cab559976e49a612f3f00097c3ead9b15aa87dc0946f"
+  },
+  "task": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1"
+}

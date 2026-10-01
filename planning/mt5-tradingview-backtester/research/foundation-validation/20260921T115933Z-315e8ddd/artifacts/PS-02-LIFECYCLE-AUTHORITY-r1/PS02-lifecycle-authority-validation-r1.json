@@ -1,0 +1,101 @@
+{
+  "accepted_scope": [
+    "Prop session lifecycle status and attempt lifecycle status/phase index are server-owned rather than arbitrary resume/session writes",
+    "start, pause, resume and abandon lifecycle commands are tenant-scoped, revision-fenced, event-sequence-fenced and idempotent",
+    "Session status remains synchronized with its single active attempt; only one active attempt exists per session and restart requires a terminal parent",
+    "Delayed exact transition/event retries return self-consistent snapshots while stale or tampered intents fail closed",
+    "Pause and resume do not advance simulator virtual time or event sequence",
+    "Replay-bound next_phase remains fail-closed until canonical Replay phase reset/carry support exists",
+    "Real PostgreSQL/API/Vite/Playwright regression passes at 1440, 768 and 360 widths with broker execution capability disabled"
+  ],
+  "base_revision": "8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68",
+  "candidate_revision": "9ff840b1dd055a02803e1db38138bf039ca349e3",
+  "changed_files": [
+    "foundation_v2/tests/test_ps01_prop_persistence.py",
+    "foundation_v2/tests/test_ps02_prop_lifecycle.py",
+    "foundation_v2/trading_workspace_v2/api.py",
+    "foundation_v2/trading_workspace_v2/prop_session.py",
+    "foundation_v2/trading_workspace_v2/store.py",
+    "foundation_v2/web/run_prop_ui_real_acceptance.mjs"
+  ],
+  "checks": {
+    "broker_execution_capability": false,
+    "exact_changed_file_set_pass": true,
+    "lifecycle_authority_component_pass": true,
+    "postgres_persistence_pass": true,
+    "real_service_browser_pass": true,
+    "replay_regression_pass": true,
+    "vite_build_pass": true
+  },
+  "components": {
+    "lifecycle": {
+      "checks": {
+        "broker_execution_capability": false,
+        "postgres_lifecycle_receipts_persisted": true,
+        "postgres_terminal_attempt_persisted": true,
+        "ps00_money_calendar_regression_pass": true,
+        "ps01_persistence_regression_pass": true,
+        "ps02_lifecycle_tests_pass": true,
+        "tenant_scope_persistence_covered": true
+      },
+      "receipt": "PS02-lifecycle-component-r1.json",
+      "sha256": "17b51b505e2eaaa3a7211cb0106938774edeec54a99556b70c1e84208a0ae82e"
+    },
+    "real_service": {
+      "checks": {
+        "backend_persistence_tests_pass": true,
+        "broker_execution_capability": false,
+        "postgres_attempt_persisted": true,
+        "postgres_session_persisted": true,
+        "real_service_browser_pass": true,
+        "vite_build_pass": true
+      },
+      "receipt": "PS01-real-service-component-r1.json",
+      "sha256": "4175bcc53d1ba7444c6d76e3a4ba1efd9026ee557d5093773bc7a7c5d34544eb",
+      "ui_checks": [
+        "initial_empty_state",
+        "simulation_only_lock",
+        "ui_atomic_create_session_and_attempt_via_real_api",
+        "postgres_persisted_ids",
+        "resume_update_persisted_before_reload",
+        "reload_resume_same_ids_and_updated_cursor",
+        "tenant_denial",
+        "mutations_prop_api_only",
+        "no_broker_execution_request",
+        "responsive_1440_768_360"
+      ]
+    },
+    "replay_regression": {
+      "checks": {
+        "broker_execution_capability": false,
+        "focused_regression_pass": true,
+        "postgres_prop_attempt_bound_to_replay": true,
+        "postgres_replay_execution_ledger_persisted": true,
+        "postgres_replay_prop_receipt_persisted": true
+      },
+      "receipt": "PS02-replay-regression-component-r1.json",
+      "sha256": "e4ccea2394645de023854d44f8ee373583989f4368d208d7d6ec589a1bd57a19",
+      "tests_run": 84
+    }
+  },
+  "residual_scope": [
+    "canonical multi-phase Replay reset/carry transitions",
+    "execution rewind/checkpoint reconstruction",
+    "lower-timeframe/tick intrabar equity path and broader D15 quality fixtures",
+    "Prop product lifecycle controls, objective charts and broader UI acceptance",
+    "D17 reports/export/sample denominators and Figma acceptance",
+    "broker/demo/live, holdout, paid provider and deployment acceptance"
+  ],
+  "result": "PASS",
+  "schema": "PS02-LIFECYCLE-AUTHORITY-VALIDATION-r1",
+  "scope": "PS-02C1 server-owned Prop lifecycle authority on exact commit with disposable PostgreSQL, Replay regression and real API/Vite/Playwright validation; simulation only",
+  "source_sha256": {
+    "foundation_v2/tests/test_ps01_prop_persistence.py": "976bdef50b8d4d570073fadda0dcf6738d470771cfb9a190c4310a8b58051f4c",
+    "foundation_v2/tests/test_ps02_prop_lifecycle.py": "9f5fc747edcacfd2d12e0d38a0e5aebadb94e8cfb47ab0d0e3ed88e8ccfed1b5",
+    "foundation_v2/trading_workspace_v2/api.py": "7e2a225e8611f617044b5b40112119585f16e6c7b645cb096d9860e4b71a9138",
+    "foundation_v2/trading_workspace_v2/prop_session.py": "49d6badb086097426baff5867891b6cc286d2185b4009fd66aa3bf8387cf320b",
+    "foundation_v2/trading_workspace_v2/store.py": "3377ff924b18a5d0ccb171ba230996cb5de1df446edfdc34b9550a3f2897360b",
+    "foundation_v2/web/run_prop_ui_real_acceptance.mjs": "00bdf5a7a8c6a8d943c2b8356818ce2034a50704fc26e1f5e2cdd40ce25b42d3"
+  },
+  "task": "PS-02-LIFECYCLE-AUTHORITY-r1"
+}

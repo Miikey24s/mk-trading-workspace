@@ -1,0 +1,5 @@
+# Preserve bytes used by archive and recovery checksum manifests.
+planning/archive/** -text -diff
+planning/checkpoints/workspace-next-stage/CLEANUP-20261001/recovered-notes/** -text -diff
+planning/checkpoints/workspace-next-stage/CLEANUP-20261001/retired-worktree-evidence/** -text -diff
+planning/mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/STATE.json -text

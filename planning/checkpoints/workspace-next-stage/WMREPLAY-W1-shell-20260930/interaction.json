@@ -1,0 +1,103 @@
+{
+  "initial": {
+    "lang": "vi",
+    "theme": "dark",
+    "scroll": [
+      1440,
+      1440
+    ],
+    "rail": 248,
+    "main": 1192
+  },
+  "preferences": {
+    "lang": "en",
+    "theme": "light",
+    "storedLanguage": "en",
+    "storedTheme": "light"
+  },
+  "helpOpen": {
+    "dialog": true,
+    "active": "help-close",
+    "ariaExpanded": "true"
+  },
+  "helpEscape": {
+    "dialog": false,
+    "active": "help-toggle"
+  },
+  "helpQuestion": {
+    "dialog": false,
+    "active": "help-toggle"
+  },
+  "collapsed": {
+    "rail": 74,
+    "storedRail": "true",
+    "brand": 74
+  },
+  "href": "/?workspace=tenant-a&view=replay&session=s1&dataset=eurusd-qa&cursor=7&cutoff=2026-01-01T00%3A00%3A00Z&mode=Replay&area=testing&section=sessions&select=1",
+  "mobile": {
+    "scroll": [
+      390,
+      390
+    ],
+    "shell": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 844
+    },
+    "top": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 64
+    },
+    "brand": {
+      "x": 0,
+      "y": 0,
+      "w": 88,
+      "h": 63
+    },
+    "rail": {
+      "x": 0,
+      "y": 64,
+      "w": 74,
+      "h": 780
+    },
+    "subnav": {
+      "x": 74,
+      "y": 64,
+      "w": 316,
+      "h": 52
+    },
+    "controls": [
+      {
+        "label": "Mở hoặc thu gọn điều hướng",
+        "w": 28
+      },
+      {
+        "label": "Chuyển ngôn ngữ sang English",
+        "w": 47.3125
+      },
+      {
+        "label": "Giao diện tối",
+        "w": 34
+      },
+      {
+        "label": "Mở phím tắt và trợ giúp",
+        "w": 32
+      },
+      {
+        "label": null,
+        "w": 137
+      },
+      {
+        "label": null,
+        "w": 137
+      }
+    ]
+  },
+  "mobileFocus": {
+    "label": "Testing: Backtesting workspace",
+    "tooltip": "Testing"
+  }
+}

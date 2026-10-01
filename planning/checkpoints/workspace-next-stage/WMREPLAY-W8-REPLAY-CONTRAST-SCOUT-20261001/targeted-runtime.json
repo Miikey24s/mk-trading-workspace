@@ -1,0 +1,626 @@
+{
+  "url": "http://127.0.0.1:5173/?workspace=tenant-a&view=replay&surface=workspace&session=replay-fixture&dataset=ui-live-fixture&cursor=4&mode=Practice&area=testing&section=dashboard",
+  "errors": [],
+  "themes": [
+    {
+      "theme": "dark",
+      "appTheme": "dark",
+      "minimum": null,
+      "belowAA": [],
+      "selected": {
+        ".chart-symbol-ohlc": [
+          {
+            "text": "O 1,08048 · H 1,08076 · L 1,0802 · C 1,08038 · V 160",
+            "color": "rgb(127, 139, 148)",
+            "background": "rgb(5, 6, 7)",
+            "backgroundOwner": "chart-canvas",
+            "ratio": 5.816,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 423.3,
+              "y": 287,
+              "width": 224.9,
+              "height": 14
+            }
+          }
+        ],
+        ".chart-symbol-strip > span:not(.chart-symbol-ohlc)": [
+          {
+            "text": "1 minute",
+            "color": "rgb(176, 177, 180)",
+            "background": "rgb(5, 6, 7)",
+            "backgroundOwner": "chart-canvas",
+            "ratio": 9.458,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 376.2,
+              "y": 287,
+              "width": 39.1,
+              "height": 14
+            }
+          }
+        ],
+        ".replay-evidence-strip > span": [
+          {
+            "text": "5 nến được phép hiển thị",
+            "color": "rgb(127, 139, 147)",
+            "background": "rgb(11, 14, 16)",
+            "backgroundOwner": "replay-shell",
+            "ratio": 5.548,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 415,
+              "y": 934.5,
+              "width": 123.1,
+              "height": 14
+            }
+          },
+          {
+            "text": "Nến tương lai đang ẩn",
+            "color": "rgb(127, 139, 147)",
+            "background": "rgb(11, 14, 16)",
+            "backgroundOwner": "replay-shell",
+            "ratio": 5.548,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 556.1,
+              "y": 934.5,
+              "width": 111.3,
+              "height": 14
+            }
+          },
+          {
+            "text": "Cursor #4",
+            "color": "rgb(196, 163, 94)",
+            "background": "rgb(11, 14, 16)",
+            "backgroundOwner": "replay-shell",
+            "ratio": 8.066,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 1364,
+              "y": 934.5,
+              "width": 55,
+              "height": 14
+            }
+          }
+        ],
+        ".replay-evidence-strip > div strong": [
+          {
+            "text": "Nến tại cutoff",
+            "color": "rgb(214, 222, 226)",
+            "background": "rgb(11, 14, 16)",
+            "backgroundOwner": "replay-shell",
+            "ratio": 14.205,
+            "opacity": "1",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "rect": {
+              "x": 269,
+              "y": 943,
+              "width": 128,
+              "height": 16
+            }
+          }
+        ],
+        ".bar-readout-label": [
+          {
+            "text": "Nến hiện tại #4",
+            "color": "rgb(184, 193, 199)",
+            "background": "rgb(11, 14, 16)",
+            "backgroundOwner": "replay-shell",
+            "ratio": 10.595,
+            "opacity": "1",
+            "fontSize": "13px",
+            "fontWeight": "650",
+            "rect": {
+              "x": 269,
+              "y": 980,
+              "width": 100,
+              "height": 17
+            }
+          }
+        ],
+        ".bar-readout-time": [],
+        ".chart-bottom-cursor": [
+          {
+            "text": "#4 / #4",
+            "color": "rgb(127, 139, 148)",
+            "background": "rgb(7, 9, 10)",
+            "backgroundOwner": "chart-bottom-bar",
+            "ratio": 5.723,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 946.5,
+              "y": 885.5,
+              "width": 32,
+              "height": 14
+            }
+          }
+        ],
+        ".chart-bottom-status": [
+          {
+            "text": "Paper replay EURUSD",
+            "color": "rgb(127, 139, 148)",
+            "background": "rgb(7, 9, 10)",
+            "backgroundOwner": "chart-bottom-bar",
+            "ratio": 5.723,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 990.5,
+              "y": 885.5,
+              "width": 420.5,
+              "height": 14
+            }
+          }
+        ],
+        ".chart-bottom-status strong": [
+          {
+            "text": "EURUSD",
+            "color": "rgb(176, 177, 180)",
+            "background": "rgb(7, 9, 10)",
+            "backgroundOwner": "chart-bottom-bar",
+            "ratio": 9.305,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "650",
+            "rect": {
+              "x": 1371.7,
+              "y": 885.5,
+              "width": 39.3,
+              "height": 14
+            }
+          }
+        ],
+        ".chart-badge": [
+          {
+            "text": "ui-live-fixture",
+            "color": "rgb(167, 178, 186)",
+            "background": "rgba(10, 14, 16, 0.84)",
+            "backgroundOwner": "chart-badge chart-badge-left",
+            "ratio": 8.974,
+            "opacity": "1",
+            "fontSize": "9px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 315,
+              "y": 309,
+              "width": 74.4,
+              "height": 22
+            }
+          },
+          {
+            "text": "LIVE REPLAY CURSOR",
+            "color": "rgb(214, 181, 111)",
+            "background": "rgba(10, 14, 16, 0.84)",
+            "backgroundOwner": "chart-badge chart-badge-right",
+            "ratio": 9.877,
+            "opacity": "1",
+            "fontSize": "9px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 1265.1,
+              "y": 285,
+              "width": 107.9,
+              "height": 22
+            }
+          }
+        ],
+        ".unsupported-tools button:disabled": [
+          {
+            "text": "Vẽ vùng đang khóa · draft local only",
+            "color": "rgb(174, 184, 190)",
+            "background": "rgb(23, 27, 30)",
+            "backgroundOwner": "button",
+            "ratio": 8.581,
+            "opacity": "0.78",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 266,
+              "y": 1325.3,
+              "width": 234.8,
+              "height": 38
+            }
+          },
+          {
+            "text": "Trade draft đang khóa · simulator init",
+            "color": "rgb(174, 184, 190)",
+            "background": "rgb(23, 27, 30)",
+            "backgroundOwner": "button",
+            "ratio": 8.581,
+            "opacity": "0.78",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 507.8,
+              "y": 1325.3,
+              "width": 234.8,
+              "height": 38
+            }
+          }
+        ],
+        ".unsupported-tools button:disabled span": [
+          {
+            "text": "đang khóa · draft local only",
+            "color": "rgb(174, 184, 190)",
+            "background": "rgb(23, 27, 30)",
+            "backgroundOwner": "button",
+            "ratio": 8.581,
+            "opacity": "1",
+            "fontSize": "11px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 273,
+              "y": 1345.8,
+              "width": 220.8,
+              "height": 15
+            }
+          },
+          {
+            "text": "đang khóa · simulator init",
+            "color": "rgb(174, 184, 190)",
+            "background": "rgb(23, 27, 30)",
+            "backgroundOwner": "button",
+            "ratio": 8.581,
+            "opacity": "1",
+            "fontSize": "11px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 514.8,
+              "y": 1345.8,
+              "width": 220.8,
+              "height": 15
+            }
+          }
+        ],
+        ".cutoff-readout small": [
+          {
+            "text": "Phím tắt: → +1 nến · Shift + → +10 nến",
+            "color": "rgb(127, 139, 148)",
+            "background": "rgb(11, 14, 16)",
+            "backgroundOwner": "replay-shell",
+            "ratio": 5.554,
+            "opacity": "1",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 1232,
+              "y": 223,
+              "width": 190,
+              "height": 32
+            }
+          }
+        ]
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflowX": 0
+    },
+    {
+      "theme": "light",
+      "appTheme": "light",
+      "minimum": null,
+      "belowAA": [],
+      "selected": {
+        ".chart-symbol-ohlc": [
+          {
+            "text": "O 1,08048 · H 1,08076 · L 1,0802 · C 1,08038 · V 160",
+            "color": "rgb(127, 139, 148)",
+            "background": "rgb(5, 6, 7)",
+            "backgroundOwner": "chart-canvas",
+            "ratio": 5.816,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 423.3,
+              "y": 287,
+              "width": 224.9,
+              "height": 14
+            }
+          }
+        ],
+        ".chart-symbol-strip > span:not(.chart-symbol-ohlc)": [
+          {
+            "text": "1 minute",
+            "color": "rgb(176, 177, 180)",
+            "background": "rgb(5, 6, 7)",
+            "backgroundOwner": "chart-canvas",
+            "ratio": 9.458,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 376.2,
+              "y": 287,
+              "width": 39.1,
+              "height": 14
+            }
+          }
+        ],
+        ".replay-evidence-strip > span": [
+          {
+            "text": "5 nến được phép hiển thị",
+            "color": "rgb(83, 99, 109)",
+            "background": "rgb(245, 247, 248)",
+            "backgroundOwner": "replay-shell",
+            "ratio": 5.793,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 415,
+              "y": 934.5,
+              "width": 123.1,
+              "height": 14
+            }
+          },
+          {
+            "text": "Nến tương lai đang ẩn",
+            "color": "rgb(83, 99, 109)",
+            "background": "rgb(245, 247, 248)",
+            "backgroundOwner": "replay-shell",
+            "ratio": 5.793,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 556.1,
+              "y": 934.5,
+              "width": 111.3,
+              "height": 14
+            }
+          },
+          {
+            "text": "Cursor #4",
+            "color": "rgb(112, 70, 9)",
+            "background": "rgb(245, 247, 248)",
+            "backgroundOwner": "replay-shell",
+            "ratio": 7.607,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 1364,
+              "y": 934.5,
+              "width": 55,
+              "height": 14
+            }
+          }
+        ],
+        ".replay-evidence-strip > div strong": [
+          {
+            "text": "Nến tại cutoff",
+            "color": "rgb(29, 41, 48)",
+            "background": "rgb(245, 247, 248)",
+            "backgroundOwner": "replay-shell",
+            "ratio": 13.839,
+            "opacity": "1",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "rect": {
+              "x": 269,
+              "y": 943,
+              "width": 128,
+              "height": 16
+            }
+          }
+        ],
+        ".bar-readout-label": [
+          {
+            "text": "Nến hiện tại #4",
+            "color": "rgb(29, 41, 48)",
+            "background": "rgb(245, 247, 248)",
+            "backgroundOwner": "replay-shell",
+            "ratio": 13.839,
+            "opacity": "1",
+            "fontSize": "13px",
+            "fontWeight": "650",
+            "rect": {
+              "x": 269,
+              "y": 980,
+              "width": 100,
+              "height": 17
+            }
+          }
+        ],
+        ".bar-readout-time": [],
+        ".chart-bottom-cursor": [
+          {
+            "text": "#4 / #4",
+            "color": "rgb(127, 139, 148)",
+            "background": "rgb(7, 9, 10)",
+            "backgroundOwner": "chart-bottom-bar",
+            "ratio": 5.723,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 946.5,
+              "y": 885.5,
+              "width": 32,
+              "height": 14
+            }
+          }
+        ],
+        ".chart-bottom-status": [
+          {
+            "text": "Paper replay EURUSD",
+            "color": "rgb(127, 139, 148)",
+            "background": "rgb(7, 9, 10)",
+            "backgroundOwner": "chart-bottom-bar",
+            "ratio": 5.723,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 990.5,
+              "y": 885.5,
+              "width": 420.5,
+              "height": 14
+            }
+          }
+        ],
+        ".chart-bottom-status strong": [
+          {
+            "text": "EURUSD",
+            "color": "rgb(176, 177, 180)",
+            "background": "rgb(7, 9, 10)",
+            "backgroundOwner": "chart-bottom-bar",
+            "ratio": 9.305,
+            "opacity": "1",
+            "fontSize": "10px",
+            "fontWeight": "650",
+            "rect": {
+              "x": 1371.7,
+              "y": 885.5,
+              "width": 39.3,
+              "height": 14
+            }
+          }
+        ],
+        ".chart-badge": [
+          {
+            "text": "ui-live-fixture",
+            "color": "rgb(213, 223, 228)",
+            "background": "rgba(10, 14, 16, 0.84)",
+            "backgroundOwner": "chart-badge chart-badge-left",
+            "ratio": 14.314,
+            "opacity": "1",
+            "fontSize": "9px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 315,
+              "y": 309,
+              "width": 74.4,
+              "height": 22
+            }
+          },
+          {
+            "text": "LIVE REPLAY CURSOR",
+            "color": "rgb(213, 223, 228)",
+            "background": "rgba(10, 14, 16, 0.84)",
+            "backgroundOwner": "chart-badge chart-badge-right",
+            "ratio": 14.314,
+            "opacity": "1",
+            "fontSize": "9px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 1265.1,
+              "y": 285,
+              "width": 107.9,
+              "height": 22
+            }
+          }
+        ],
+        ".unsupported-tools button:disabled": [
+          {
+            "text": "Vẽ vùng đang khóa · draft local only",
+            "color": "rgb(174, 184, 190)",
+            "background": "rgb(23, 27, 30)",
+            "backgroundOwner": "button",
+            "ratio": 8.581,
+            "opacity": "0.78",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 266,
+              "y": 1325.3,
+              "width": 234.8,
+              "height": 38
+            }
+          },
+          {
+            "text": "Trade draft đang khóa · simulator init",
+            "color": "rgb(174, 184, 190)",
+            "background": "rgb(23, 27, 30)",
+            "backgroundOwner": "button",
+            "ratio": 8.581,
+            "opacity": "0.78",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 507.8,
+              "y": 1325.3,
+              "width": 234.8,
+              "height": 38
+            }
+          }
+        ],
+        ".unsupported-tools button:disabled span": [
+          {
+            "text": "đang khóa · draft local only",
+            "color": "rgb(174, 184, 190)",
+            "background": "rgb(23, 27, 30)",
+            "backgroundOwner": "button",
+            "ratio": 8.581,
+            "opacity": "1",
+            "fontSize": "11px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 273,
+              "y": 1345.8,
+              "width": 220.8,
+              "height": 15
+            }
+          },
+          {
+            "text": "đang khóa · simulator init",
+            "color": "rgb(174, 184, 190)",
+            "background": "rgb(23, 27, 30)",
+            "backgroundOwner": "button",
+            "ratio": 8.581,
+            "opacity": "1",
+            "fontSize": "11px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 514.8,
+              "y": 1345.8,
+              "width": 220.8,
+              "height": 15
+            }
+          }
+        ],
+        ".cutoff-readout small": [
+          {
+            "text": "Phím tắt: → +1 nến · Shift + → +10 nến",
+            "color": "rgb(71, 83, 91)",
+            "background": "rgb(245, 247, 248)",
+            "backgroundOwner": "replay-shell",
+            "ratio": 7.357,
+            "opacity": "1",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "rect": {
+              "x": 1232,
+              "y": 223,
+              "width": 190,
+              "height": 32
+            }
+          }
+        ]
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflowX": 0
+    }
+  ]
+}

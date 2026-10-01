@@ -1,0 +1,42 @@
+{
+  "artifact_hashes": {
+    "ps01-real-service-1440.png": "ae414e8ddfcaac56292b65efe2b19d059f9a42c4e4a3c2058cd35965c16475fc",
+    "ps01-real-service-360.png": "69395f2e523f9de1ecebb81f04425b69c8b14b00159586d3a78c4905365e60cd",
+    "ps01-real-service-768.png": "f68e76a9f7fef3ced3477e08a0260bf1be4a1be54516c4640a96530f1e6761e7"
+  },
+  "checks": {
+    "backend_persistence_tests_pass": true,
+    "broker_execution_capability": false,
+    "postgres_attempt_persisted": true,
+    "postgres_session_persisted": true,
+    "real_service_browser_pass": true,
+    "vite_build_pass": true
+  },
+  "result": "PASS",
+  "schema": "PS01-ACCEPTANCE-r1",
+  "scope": "PS-01 local disposable PostgreSQL/API/Vite/Playwright; simulation only; no broker/live/holdout/provider action",
+  "ui": {
+    "attemptId": "attempt-muh4qy9s-h22wq",
+    "checks": [
+      "initial_empty_state",
+      "simulation_only_lock",
+      "ui_atomic_create_session_and_attempt_via_real_api",
+      "postgres_persisted_ids",
+      "resume_update_persisted_before_reload",
+      "reload_resume_same_ids_and_updated_cursor",
+      "tenant_denial",
+      "mutations_prop_api_only",
+      "no_broker_execution_request",
+      "responsive_1440_768_360"
+    ],
+    "fixture": "ps01-real-service-postgres-api-vite",
+    "screenshots": [
+      "D:\\ANNAM\\TradingWorkspace\\planning\\mt5-tradingview-backtester\\research\\foundation-validation\\20260921T115933Z-315e8ddd\\work\\ps02c2-exact-5f6ef7e\\real-service\\ps01-real-service-1440.png",
+      "D:\\ANNAM\\TradingWorkspace\\planning\\mt5-tradingview-backtester\\research\\foundation-validation\\20260921T115933Z-315e8ddd\\work\\ps02c2-exact-5f6ef7e\\real-service\\ps01-real-service-768.png",
+      "D:\\ANNAM\\TradingWorkspace\\planning\\mt5-tradingview-backtester\\research\\foundation-validation\\20260921T115933Z-315e8ddd\\work\\ps02c2-exact-5f6ef7e\\real-service\\ps01-real-service-360.png"
+    ],
+    "sessionId": "ps01-real-service-muh4qy9s-h22wq",
+    "status": "PASS",
+    "workspace": "tenant-ps01-real"
+  }
+}

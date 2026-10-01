@@ -1,0 +1,16 @@
+{
+  "desktop": {
+    "title": "Live workspace",
+    "status": "—Live đang bị khóa theo policyWorkspace nhận được status nhưng chưa có capability read-only nào được cấp.",
+    "surface": "LIVE / TRADESLive tradesĐây là vùng read-only để xem snapshot được cấp quyền; màn này không gửi lệnh.READ ONLY—Chưa có read-only trade feedChưa có nguồn trade snapshot nào được gắn với workspace. Broker/live execution vẫn bị khóa.Mở Data Desk →",
+    "permission": true,
+    "overflow": false,
+    "liveRoute": "?view=live&workspace=tenant-a&section=trades"
+  },
+  "mobile": {
+    "surface": "LIVE / TRADING ACCOUNTSTrading accountsAccount identity và capability phải được cấp rõ ràng trước khi hiển thị trạng thái.READ ONLY—Chưa có account capabilityKhông có account identity hoặc credential nào được đọc từ UI này; live và broker access vẫn fail-closed.Mở Data Desk →",
+    "overflow": false,
+    "buttons": 15
+  },
+  "errors": []
+}

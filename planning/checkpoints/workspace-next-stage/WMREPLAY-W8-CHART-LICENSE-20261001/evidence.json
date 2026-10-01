@@ -1,0 +1,98 @@
+{
+  "checkpoint": "WMREPLAY-W8-CHART-LICENSE-20261001",
+  "timestamp_local": "2026-10-01T01:22:10+07:00",
+  "scope": "read-only package metadata, license, notice search, and Lightweight Charts attribution smoke",
+  "package": {
+    "manifest_path": "projects/mt5-tradingview-backtester/foundation_v2/web/package.json",
+    "requested_range": "^5.0.0",
+    "lockfile_path": "projects/mt5-tradingview-backtester/foundation_v2/web/package-lock.json",
+    "lockfile_version": 3,
+    "resolved_version": "5.2.1",
+    "resolved_url": "https://registry.npmjs.org/lightweight-charts/-/lightweight-charts-5.2.1.tgz",
+    "integrity": "sha512-IVwoK1RLFiLPubaKIjNbtjWLnpPMqiABSrTay6whmNa8L1+19292VtHJ+BWyPUuLCwF0tcQlhEWd1CLB2a1nsQ==",
+    "installed_metadata_path": "projects/mt5-tradingview-backtester/foundation_v2/web/node_modules/lightweight-charts/package.json",
+    "name": "lightweight-charts",
+    "version": "5.2.1",
+    "author": "TradingView, Inc.",
+    "license": "Apache-2.0",
+    "homepage": "https://www.tradingview.com/lightweight-charts/",
+    "dependency": {
+      "name": "fancy-canvas",
+      "version": "2.1.0"
+    }
+  },
+  "license": {
+    "path": "projects/mt5-tradingview-backtester/foundation_v2/web/node_modules/lightweight-charts/LICENSE",
+    "type": "Apache-2.0",
+    "copyright_boilerplate": "Copyright 2023 TradingView, Inc.",
+    "sha256": "70C9D5382506DD184465425C08A99AD9BD6D9AC1313C252968BA0B585E5EF823",
+    "notice_file_present_in_installed_package": false,
+    "readme_attribution_source": "projects/mt5-tradingview-backtester/foundation_v2/web/node_modules/lightweight-charts/README.md:128-131",
+    "readme_attribution_summary": "Specify TradingView as product creator; add attribution notice and a tradingview.com link; attributionLogo satisfies the link requirement."
+  },
+  "app": {
+    "chart_source": "projects/mt5-tradingview-backtester/foundation_v2/web/src/ReplayWorkspace.jsx:168-182",
+    "create_chart_options": {
+      "layout_background": "#030303",
+      "layout_text_color": "#b8c0c8",
+      "attributionLogo_explicit": false,
+      "attributionLogo_explicit_value": null,
+      "effective_default": true
+    },
+    "css_removal_search": {
+      "selector": "#tv-attr-logo",
+      "matches": 0,
+      "chart_host_overflow_hidden": false
+    }
+  },
+  "runtime_smoke": {
+    "method": "temporary Vite page + Playwright Chromium; same createChart layout options; temporary page removed after check",
+    "attribution": true,
+    "anchor": {
+      "id": "tv-attr-logo",
+      "title": "Charting by TradingView",
+      "target": "_blank",
+      "href_prefix": "https://www.tradingview.com/?utm_medium=lwc-link&utm_campaign=lwc-chart"
+    },
+    "chart_host_children": 1,
+    "unexpected_console_errors": 0,
+    "external_network_calls": 0
+  },
+  "wmreplay_route_smoke": {
+    "method": "local Vite + Playwright Chromium; actual `?view=replay` route with intercepted local replay/data fixtures; no backend/provider/broker",
+    "route": "/?view=replay&workspace=tenant-ui&session=replay-fixture",
+    "attribution": true,
+    "anchor": {
+      "id": "tv-attr-logo",
+      "title": "Charting by TradingView",
+      "target": "_blank",
+      "href_prefix": "https://www.tradingview.com/?utm_medium=lwc-link&utm_campaign=lwc-chart",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "rect": {
+        "x": 315,
+        "y": 812,
+        "width": 35,
+        "height": 19
+      }
+    },
+    "unexpected_console_errors": 0,
+    "external_network_calls": 0
+  },
+  "acceptance": {
+    "local_wmreplay_lightweight_charts_attribution": "accepted_builtin_link_logo",
+    "legacy_tradingview_advanced_charts_license": "not assessed / owner-gated",
+    "public_redistribution": "not assessed / owner-gated",
+    "redistribution_notice_text": "open_release_review_due_to_missing_installed_NOTICE"
+  },
+  "sha256": {
+    "installed_package_json": "C6535C33425F81748D8CCBEED8D98FE71DD4A17157D7C04561CAC2A2A180ABE1",
+    "installed_license": "70C9D5382506DD184465425C08A99AD9BD6D9AC1313C252968BA0B585E5EF823",
+    "installed_readme": "E32AAE65B24825B9368A25C6DE05E7A93C0FE9FFF45E5C02CD24FA7E1DE81DB5",
+    "installed_typings": "E3D7CD2E718E92C4F61413F1B15AEBB39F20C9E987A138B30E575C7843CC8C71",
+    "installed_development_bundle": "350786B76B81FD99D2FD4F782AD9A35747883CCE3C2671D0B35EADE8B397A4AE",
+    "web_package_json": "D0151C6A2114BA460AA5487F18494D9043BEDF99303E3DF579F0F9D02CDFEC76",
+    "web_package_lock": "8A6C8E897D5294678BB0960AA6114707F5FCC67D0E86EF71F249ED34B8C298C6"
+  }
+}

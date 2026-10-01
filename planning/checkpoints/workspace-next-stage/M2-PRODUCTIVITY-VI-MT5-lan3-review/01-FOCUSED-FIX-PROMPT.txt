@@ -1,0 +1,26 @@
+Continue the existing lan3 candidate. Local browser review confirmed all 17 original regression checks pass, but 5 additional behavior/accessibility checks still fail. Keep the current productivity design, shared shell, four views, independent VI/MT5 state, dependencies and scope. Do not rebuild the app, add screens, Watch/course, services or new state libraries. This is a focused correction pass.
+
+1. Stop background shortcuts while a dialog is open.
+Reproduce: in VI Review with segment #6 active, open Nhập video; press Ctrl+Enter while focus is in the dialog. The background Review accepts #6 and moves to #7, while the dialog stays open. SegmentReviewer.tsx attaches its handler to window without checking modal scope. Disable Review shortcuts while either import/JSON dialog is active, respect event.defaultPrevented and the event target's interaction scope. Do not solve this only with a Tab trap. Verify Ctrl+Enter, arrows/j/k and Space cannot change background review state while a dialog is active, then normal shortcuts work again after close. Keep both dialogs' already working Tab/Shift+Tab/Escape/focus restoration.
+
+2. Make Import visible from expanded/fullscreen preview.
+When requestFullscreen is rejected, the fallback overlay opens correctly. But clicking its Nhập video opens a z50 modal behind the z60 player: focus moves into an invisible dialog. Use a coherent overlay policy, or exit the enlarged/fullscreen state before opening the dialog. Check native fullscreen too: a larger z-index alone cannot escape the browser fullscreen top layer. Preserve position, selection and drafts; Escape should dismiss the active top interaction without unrelated background changes.
+
+3. Stop restored scroll from being overwritten.
+With segment #6 active, scroll to the bottom, switch MT5 -> VI, and wait for scrolling to settle. The position restores briefly then jumps: measured scrollTop 1355 -> 851. SegmentReviewer's initial restoration and active-segment scrollIntoView both run on mount. Preserve the user's saved scroll on return; only auto-scroll for an actual requested segment navigation/appropriate follow event. Test after animations/scrolling settle, not immediately after mount. Preserve search/filter, selected chunk/segment and unfinished text/speaker drafts, which now work.
+
+4. Separate URL eligibility from loaded media/artifact readiness.
+VideoPlayer's isDecodable currently just checks an http(s)/blob prefix. In a local fault-injection test, a pending HTTP media request has readyState=0 but Play is enabled; after it fails, Play disables but the download link remains. A URL prefix is not decoding or availability evidence.
+Mount an eligible media candidate so it can load, track loading/metadata/can-play/error state, and only enable transport after valid domain state AND actual media readiness. Do not make mounting depend on a canPlay flag that can only become true after mounting. Handle failed load and rejected play honestly. Keep media events driving time and preserve the source-time versus chunk-local-time mapping.
+Gate download independently on actual artifact availability; a downloadable file need not have a browser-supported codec. If availability is unknown in this prototype, keep the control unavailable with an honest reason. Handle a failed download as failure. Audit every download entrypoint: SegmentReviewer.tsx still renders final/SRT /api/jobs/.../download links solely from finalAvailability==ready, although LongformPreviewRail correctly removed its fake final link. The prototype has no such backend files, so these links must not imply success. Keep stale/QA/revision gates. Do not add an external demo video or backend to make the checks green.
+
+5. Finish contrast using semantic roles.
+Profit text is fixed (5.02:1 light, 10.27:1 dark); keep that. Remaining measured normal-text failures:
+- Dark Nhập video button: white on #3b82f6, 12px, 3.68:1.
+- Duyệt button: white on --success, 12px, 3.30:1 light and 2.28:1 dark.
+- Light Tràn giờ badge: #d97706 on its pale warning surface, 11px, 2.86:1.
+Use suitable semantic foreground/background pairs with at least 4.5:1 for normal text in both themes. Separate warning text and success-button colors from chart/status fills as needed. Keep the current visual direction and readable transcript size; verify actual computed pairs, not token names alone.
+
+Preserve the verified behaviors: replay visible-prefix/no future candles/end stop; all-report net +50 USD, winners +180, losers -130, matching filtered CSV; unknown trading days; exact historical session demo-replay-001/rev1/cursor7/08:35 UTC; free-replay cursor independent of report pin and restored through sidebar; VI selective stale invalidation and QA-blocked gates; text selection; saved query/filter/drafts/selection; native fullscreen and fallback Escape; basic 1440/1280/768/390 layouts.
+
+Run build/typecheck and the available interaction checks. Report build, runtime-tested behavior and untested cases separately. With only one fixture job and no playable media, do not claim runtime multi-job isolation or successful real playback has been proven. Return an exportable candidate and concise change/verification notes. No public publishing or extra feature work.

@@ -1,0 +1,10 @@
+{
+  "accepted_revision": "665552177892d50f7df4fab3d5a31a538b8ac403",
+  "owner_generation": 4,
+  "result": "PASS",
+  "reviewer": "/root/mt5_m0_audit",
+  "schema": "PS03-CSV-REMEDIATION-LEDGER-ACCEPTANCE-r2",
+  "task": "PS-03-REPORT-UI-r1",
+  "validation": "artifacts\\PS-03-CSV-EXPORT-HARDEN-r1\\PS03-csv-remediation-validation-r2.json",
+  "validation_sha256": "4ded1ea31edf157aa888f57b786d4f386e2a4573329c3fc03bc943752c9dea6d"
+}

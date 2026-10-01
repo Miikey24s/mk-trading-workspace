@@ -1,0 +1,6489 @@
+{
+  "status": "PASS",
+  "generatedAt": "2026-10-01T04:09:41.045Z",
+  "origin": "http://127.0.0.1:5173",
+  "routes": [
+    {
+      "id": "data",
+      "query": "view=data",
+      "selector": "[data-testid=\"data-desk-root\"]"
+    },
+    {
+      "id": "research",
+      "query": "view=research",
+      "selector": "[data-testid=\"research-root\"]"
+    },
+    {
+      "id": "journal",
+      "query": "view=journal",
+      "selector": "[data-testid=\"journal-workspace\"]"
+    },
+    {
+      "id": "trade",
+      "query": "view=trade&surface=workspace",
+      "selector": "[data-testid=\"trade-workspace\"]"
+    },
+    {
+      "id": "risk",
+      "query": "view=risk",
+      "selector": "[data-testid=\"risk-workspace\"]"
+    },
+    {
+      "id": "playbook",
+      "query": "view=playbook",
+      "selector": "[data-testid=\"playbook-root\"]"
+    }
+  ],
+  "sizes": [
+    {
+      "id": "1440",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "id": "768",
+      "width": 768,
+      "height": 900
+    },
+    {
+      "id": "390",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "resultCount": 18,
+  "failureCount": 0,
+  "blockedExternal": [],
+  "results": [
+    {
+      "route": "data",
+      "viewport": {
+        "id": "1440",
+        "width": 1440,
+        "height": 900
+      },
+      "dark": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "width": 1192,
+          "height": 1240.328125
+        },
+        "shellTheme": "dark",
+        "headingCount": 5,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Data Desk"
+          },
+          {
+            "level": 2,
+            "text": "Preview hoặc import CSV"
+          },
+          {
+            "level": 2,
+            "text": "Dataset catalog"
+          },
+          {
+            "level": 2,
+            "text": "Provenance và QA"
+          },
+          {
+            "level": 2,
+            "text": "Provider capabilities"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 29,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Research",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Replay",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "input",
+            "name": "CSV file",
+            "dataTestId": "data-desk-file-input",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Instrument ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Timeframe seconds",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Source ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Provider label",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "License/use",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Base currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quote currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Account currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Tick size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Pip size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Contract size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quantity min",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quantity step",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Effective from UTC",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Lọc provider",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "button",
+            "name": "ui-live-fixtureprovider unknown",
+            "dataTestId": "dataset-row-ui-live-fixture",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Mở trong Research →",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "width": 1192,
+          "height": 1240.328125
+        },
+        "shellTheme": "light",
+        "headingCount": 5,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Data Desk"
+          },
+          {
+            "level": 2,
+            "text": "Preview hoặc import CSV"
+          },
+          {
+            "level": 2,
+            "text": "Dataset catalog"
+          },
+          {
+            "level": 2,
+            "text": "Provenance và QA"
+          },
+          {
+            "level": 2,
+            "text": "Provider capabilities"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 29,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Research",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Replay",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "input",
+            "name": "CSV file",
+            "dataTestId": "data-desk-file-input",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Instrument ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Timeframe seconds",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Source ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Provider label",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "License/use",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Base currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quote currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Account currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Tick size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Pip size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Contract size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quantity min",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quantity step",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Effective from UTC",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Lọc provider",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "button",
+            "name": "ui-live-fixtureprovider unknown",
+            "dataTestId": "dataset-row-ui-live-fixture",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Mở trong Research →",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 21,
+        "distinct": 18,
+        "tail": [
+          {
+            "tag": "a",
+            "id": "",
+            "testId": "",
+            "name": "Mở trong Research →"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "testId": "",
+            "name": "WMEN⌄☾?TestingLiveStrategiesEducationSettingsMT5 TRADING WORKSPACE / DATA DESKDa"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "",
+            "name": "Mở hoặc thu gọn điều hướng"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "language-toggle",
+            "name": "Chuyển ngôn ngữ sang English"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [
+        "Each child in a list should have a unique \"key\" prop.%s%s See https://react.dev/link/warning-keys for more information. \n\nCheck the render method of `select`.  It was passed a child from DataDeskWorkspace.",
+        "Each child in a list should have a unique \"key\" prop.%s%s See https://react.dev/link/warning-keys for more information. \n\nCheck the render method of `DataDeskWorkspace`. ",
+        "Each child in a list should have a unique \"key\" prop.%s%s See https://react.dev/link/warning-keys for more information. \n\nCheck the render method of `select`.  It was passed a child from DataDeskWorkspace.",
+        "Each child in a list should have a unique \"key\" prop.%s%s See https://react.dev/link/warning-keys for more information. \n\nCheck the render method of `DataDeskWorkspace`. "
+      ],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "research",
+      "viewport": {
+        "id": "1440",
+        "width": 1440,
+        "height": 900
+      },
+      "dark": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "width": 1192,
+          "height": 1003.421875
+        },
+        "shellTheme": "dark",
+        "headingCount": 5,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Research theo bằng chứng"
+          },
+          {
+            "level": 2,
+            "text": "ui-live-fixture"
+          },
+          {
+            "level": 2,
+            "text": "Có thể chạy local, nhưng provenance còn thiếu"
+          },
+          {
+            "level": 2,
+            "text": "Cố định giả định"
+          },
+          {
+            "level": 2,
+            "text": "Kết quả sẽ xuất hiện ở đây"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 16,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Data Desk →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở Data Desk →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "select",
+            "name": "Research dataset",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Starting balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Strategy version",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "button",
+            "name": "Tạo research run",
+            "dataTestId": "research-run-submit",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Học & thuật ngữ",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "width": 1192,
+          "height": 1003.421875
+        },
+        "shellTheme": "light",
+        "headingCount": 5,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Research theo bằng chứng"
+          },
+          {
+            "level": 2,
+            "text": "ui-live-fixture"
+          },
+          {
+            "level": 2,
+            "text": "Có thể chạy local, nhưng provenance còn thiếu"
+          },
+          {
+            "level": 2,
+            "text": "Cố định giả định"
+          },
+          {
+            "level": 2,
+            "text": "Kết quả sẽ xuất hiện ở đây"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 16,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Data Desk →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở Data Desk →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "select",
+            "name": "Research dataset",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Starting balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Strategy version",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "button",
+            "name": "Tạo research run",
+            "dataTestId": "research-run-submit",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Học & thuật ngữ",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 18,
+        "distinct": 18,
+        "tail": [
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": "Starting balance"
+          },
+          {
+            "tag": "select",
+            "id": "",
+            "testId": "",
+            "name": "Strategy version"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "research-run-submit",
+            "name": "Tạo research run"
+          },
+          {
+            "tag": "a",
+            "id": "",
+            "testId": "",
+            "name": "Học & thuật ngữ"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "journal",
+      "viewport": {
+        "id": "1440",
+        "width": 1440,
+        "height": 900
+      },
+      "dark": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "width": 1192,
+          "height": 1941.3125
+        },
+        "shellTheme": "dark",
+        "headingCount": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Journal"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 21,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở replay",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Xem analytics",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "select",
+            "name": "Loại ghi chúQuan sátGiả thuyếtQuyết địnhKhông giao dịchBỏ lỡ giao dịch",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "textarea",
+            "name": "Nội dung",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Điều đã quan sát chỉ dữ kiện tới cutoff",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Giả thuyết",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Quyết định / lý do bỏ qua",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Plan dự kiến",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Actual / kết quả đã biết do người dùng ghi sau khi review",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Bước tiếp theo",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "input",
+            "name": "Tags phân tách bằng dấu phẩy",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Overlay liên quan ID, phân tách bằng dấu phẩy",
+            "dataTestId": "",
+            "tag": "input"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "width": 1192,
+          "height": 1941.3125
+        },
+        "shellTheme": "light",
+        "headingCount": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Journal"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 21,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở replay",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Xem analytics",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "select",
+            "name": "Loại ghi chúQuan sátGiả thuyếtQuyết địnhKhông giao dịchBỏ lỡ giao dịch",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "textarea",
+            "name": "Nội dung",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Điều đã quan sát chỉ dữ kiện tới cutoff",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Giả thuyết",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Quyết định / lý do bỏ qua",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Plan dự kiến",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Actual / kết quả đã biết do người dùng ghi sau khi review",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Bước tiếp theo",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "input",
+            "name": "Tags phân tách bằng dấu phẩy",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Overlay liên quan ID, phân tách bằng dấu phẩy",
+            "dataTestId": "",
+            "tag": "input"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 25,
+        "distinct": 15,
+        "tail": [
+          {
+            "tag": "body",
+            "id": "",
+            "testId": "",
+            "name": "WMEN⌄☾?TestingLiveStrategiesEducationSettingsFXREPLAY / DECISION JOURNALJournalB"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "",
+            "name": "Mở hoặc thu gọn điều hướng"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "language-toggle",
+            "name": "Chuyển ngôn ngữ sang English"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "theme-toggle",
+            "name": "Giao diện sáng"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "trade",
+      "viewport": {
+        "id": "1440",
+        "width": 1440,
+        "height": 900
+      },
+      "dark": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "width": 1192,
+          "height": 366.890625
+        },
+        "shellTheme": "dark",
+        "headingCount": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Trade draft"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 14,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Dashboard",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Sessions",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Trades",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Analytics",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở Practice →",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "width": 1192,
+          "height": 366.890625
+        },
+        "shellTheme": "light",
+        "headingCount": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Trade draft"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 14,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Dashboard",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Sessions",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Trades",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Analytics",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở Practice →",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 16,
+        "distinct": 15,
+        "tail": [
+          {
+            "tag": "a",
+            "id": "",
+            "testId": "",
+            "name": "Analytics"
+          },
+          {
+            "tag": "a",
+            "id": "",
+            "testId": "",
+            "name": "Mở Practice →"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "testId": "",
+            "name": "WMEN⌄☾?TestingLiveStrategiesEducationSettingsDashboardSessionsTradesAnalyticsTRA"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "",
+            "name": "Mở hoặc thu gọn điều hướng"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "risk",
+      "viewport": {
+        "id": "1440",
+        "width": 1440,
+        "height": 900
+      },
+      "dark": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "width": 1192,
+          "height": 831.890625
+        },
+        "shellTheme": "dark",
+        "headingCount": 4,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Risk & giới hạn"
+          },
+          {
+            "level": 2,
+            "text": "Profile giới hạn"
+          },
+          {
+            "level": 2,
+            "text": "Trạng thái tài khoản"
+          },
+          {
+            "level": 2,
+            "text": "Cách đọc kết quả"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 25,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "input",
+            "name": "Profile ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Terms version",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Effective from",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Total drawdown",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "TypeStaticTrailing",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "select",
+            "name": "Overall basisEquityBalance",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Daily loss",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Daily basisEquityBalance",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "select",
+            "name": "Cost basisIncludedSeparate",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Starting balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Equity",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "High-water mark",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Daily start equity",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Chạm đúng floor cũng tính là breach",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "button",
+            "name": "Đánh giá snapshot",
+            "dataTestId": "",
+            "tag": "button"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "width": 1192,
+          "height": 831.890625
+        },
+        "shellTheme": "light",
+        "headingCount": 4,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Risk & giới hạn"
+          },
+          {
+            "level": 2,
+            "text": "Profile giới hạn"
+          },
+          {
+            "level": 2,
+            "text": "Trạng thái tài khoản"
+          },
+          {
+            "level": 2,
+            "text": "Cách đọc kết quả"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 25,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "input",
+            "name": "Profile ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Terms version",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Effective from",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Total drawdown",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "TypeStaticTrailing",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "select",
+            "name": "Overall basisEquityBalance",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Daily loss",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Daily basisEquityBalance",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "select",
+            "name": "Cost basisIncludedSeparate",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Starting balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Equity",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "High-water mark",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Daily start equity",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Chạm đúng floor cũng tính là breach",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "button",
+            "name": "Đánh giá snapshot",
+            "dataTestId": "",
+            "tag": "button"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 27,
+        "distinct": 13,
+        "tail": [
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": ""
+          },
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": ""
+          },
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": ""
+          },
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": ""
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "playbook",
+      "viewport": {
+        "id": "1440",
+        "width": 1440,
+        "height": 900
+      },
+      "dark": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "width": 1192,
+          "height": 754.6875
+        },
+        "shellTheme": "dark",
+        "headingCount": 3,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Playbook versions"
+          },
+          {
+            "level": 2,
+            "text": "Setups"
+          },
+          {
+            "level": 2,
+            "text": "Unnamed playbook"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 13,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "My strategies",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "button",
+            "name": "Unnamed playbookfixture-playbookUnknownr1",
+            "dataTestId": "playbook-row-fixture-playbook",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Mở Journal với setup này →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "button",
+            "name": "Thử lại",
+            "dataTestId": "playbook-history-retry",
+            "tag": "button"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "width": 1192,
+          "height": 754.6875
+        },
+        "shellTheme": "light",
+        "headingCount": 3,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Playbook versions"
+          },
+          {
+            "level": 2,
+            "text": "Setups"
+          },
+          {
+            "level": 2,
+            "text": "Unnamed playbook"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 13,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "My strategies",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "button",
+            "name": "Unnamed playbookfixture-playbookUnknownr1",
+            "dataTestId": "playbook-row-fixture-playbook",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Mở Journal với setup này →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "button",
+            "name": "Thử lại",
+            "dataTestId": "playbook-history-retry",
+            "tag": "button"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 15,
+        "distinct": 14,
+        "tail": [
+          {
+            "tag": "a",
+            "id": "",
+            "testId": "",
+            "name": "Mở Journal với setup này →"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "playbook-history-retry",
+            "name": "Thử lại"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "testId": "",
+            "name": "WMEN⌄☾?TestingLiveStrategiesEducationSettingsMy strategiesTRADING WORKSPACE / PL"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "",
+            "name": "Mở hoặc thu gọn điều hướng"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "responses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:5173/api/v2/playbooks/fixture-playbook/revisions"
+        },
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:5173/api/v2/playbooks/fixture-playbook/revisions"
+        }
+      ],
+      "mutations": []
+    },
+    {
+      "route": "data",
+      "viewport": {
+        "id": "768",
+        "width": 768,
+        "height": 900
+      },
+      "dark": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "width": 694,
+          "height": 1566.65625
+        },
+        "shellTheme": "dark",
+        "headingCount": 5,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Data Desk"
+          },
+          {
+            "level": 2,
+            "text": "Preview hoặc import CSV"
+          },
+          {
+            "level": 2,
+            "text": "Dataset catalog"
+          },
+          {
+            "level": 2,
+            "text": "Provenance và QA"
+          },
+          {
+            "level": 2,
+            "text": "Provider capabilities"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 29,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Research",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Replay",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "input",
+            "name": "CSV file",
+            "dataTestId": "data-desk-file-input",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Instrument ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Timeframe seconds",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Source ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Provider label",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "License/use",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Base currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quote currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Account currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Tick size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Pip size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Contract size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quantity min",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quantity step",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Effective from UTC",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Lọc provider",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "button",
+            "name": "ui-live-fixtureprovider unknown",
+            "dataTestId": "dataset-row-ui-live-fixture",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Mở trong Research →",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "width": 694,
+          "height": 1566.65625
+        },
+        "shellTheme": "light",
+        "headingCount": 5,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Data Desk"
+          },
+          {
+            "level": 2,
+            "text": "Preview hoặc import CSV"
+          },
+          {
+            "level": 2,
+            "text": "Dataset catalog"
+          },
+          {
+            "level": 2,
+            "text": "Provenance và QA"
+          },
+          {
+            "level": 2,
+            "text": "Provider capabilities"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 29,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Research",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Replay",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "input",
+            "name": "CSV file",
+            "dataTestId": "data-desk-file-input",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Instrument ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Timeframe seconds",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Source ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Provider label",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "License/use",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Base currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quote currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Account currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Tick size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Pip size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Contract size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quantity min",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quantity step",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Effective from UTC",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Lọc provider",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "button",
+            "name": "ui-live-fixtureprovider unknown",
+            "dataTestId": "dataset-row-ui-live-fixture",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Mở trong Research →",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 21,
+        "distinct": 18,
+        "tail": [
+          {
+            "tag": "a",
+            "id": "",
+            "testId": "",
+            "name": "Mở trong Research →"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "testId": "",
+            "name": "WMEN⌄☾?TestingLiveStrategiesEducationSettingsMT5 TRADING WORKSPACE / DATA DESKDa"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "",
+            "name": "Mở hoặc thu gọn điều hướng"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "language-toggle",
+            "name": "Chuyển ngôn ngữ sang English"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [
+        "Each child in a list should have a unique \"key\" prop.%s%s See https://react.dev/link/warning-keys for more information. \n\nCheck the render method of `select`.  It was passed a child from DataDeskWorkspace.",
+        "Each child in a list should have a unique \"key\" prop.%s%s See https://react.dev/link/warning-keys for more information. \n\nCheck the render method of `DataDeskWorkspace`. ",
+        "Each child in a list should have a unique \"key\" prop.%s%s See https://react.dev/link/warning-keys for more information. \n\nCheck the render method of `select`.  It was passed a child from DataDeskWorkspace.",
+        "Each child in a list should have a unique \"key\" prop.%s%s See https://react.dev/link/warning-keys for more information. \n\nCheck the render method of `DataDeskWorkspace`. "
+      ],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "research",
+      "viewport": {
+        "id": "768",
+        "width": 768,
+        "height": 900
+      },
+      "dark": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "width": 694,
+          "height": 1505.21875
+        },
+        "shellTheme": "dark",
+        "headingCount": 5,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Research theo bằng chứng"
+          },
+          {
+            "level": 2,
+            "text": "ui-live-fixture"
+          },
+          {
+            "level": 2,
+            "text": "Có thể chạy local, nhưng provenance còn thiếu"
+          },
+          {
+            "level": 2,
+            "text": "Cố định giả định"
+          },
+          {
+            "level": 2,
+            "text": "Kết quả sẽ xuất hiện ở đây"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 16,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Data Desk →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở Data Desk →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "select",
+            "name": "Research dataset",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Starting balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Strategy version",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "button",
+            "name": "Tạo research run",
+            "dataTestId": "research-run-submit",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Học & thuật ngữ",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "width": 694,
+          "height": 1505.21875
+        },
+        "shellTheme": "light",
+        "headingCount": 5,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Research theo bằng chứng"
+          },
+          {
+            "level": 2,
+            "text": "ui-live-fixture"
+          },
+          {
+            "level": 2,
+            "text": "Có thể chạy local, nhưng provenance còn thiếu"
+          },
+          {
+            "level": 2,
+            "text": "Cố định giả định"
+          },
+          {
+            "level": 2,
+            "text": "Kết quả sẽ xuất hiện ở đây"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 16,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Data Desk →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở Data Desk →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "select",
+            "name": "Research dataset",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Starting balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Strategy version",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "button",
+            "name": "Tạo research run",
+            "dataTestId": "research-run-submit",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Học & thuật ngữ",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 18,
+        "distinct": 18,
+        "tail": [
+          {
+            "tag": "select",
+            "id": "",
+            "testId": "",
+            "name": "Research dataset"
+          },
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": "Starting balance"
+          },
+          {
+            "tag": "select",
+            "id": "",
+            "testId": "",
+            "name": "Strategy version"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "research-run-submit",
+            "name": "Tạo research run"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "journal",
+      "viewport": {
+        "id": "768",
+        "width": 768,
+        "height": 900
+      },
+      "dark": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "width": 694,
+          "height": 2199.625
+        },
+        "shellTheme": "dark",
+        "headingCount": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Journal"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 21,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở replay",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Xem analytics",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "select",
+            "name": "Loại ghi chúQuan sátGiả thuyếtQuyết địnhKhông giao dịchBỏ lỡ giao dịch",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "textarea",
+            "name": "Nội dung",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Điều đã quan sát chỉ dữ kiện tới cutoff",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Giả thuyết",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Quyết định / lý do bỏ qua",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Plan dự kiến",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Actual / kết quả đã biết do người dùng ghi sau khi review",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Bước tiếp theo",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "input",
+            "name": "Tags phân tách bằng dấu phẩy",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Overlay liên quan ID, phân tách bằng dấu phẩy",
+            "dataTestId": "",
+            "tag": "input"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "width": 694,
+          "height": 2199.625
+        },
+        "shellTheme": "light",
+        "headingCount": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Journal"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 21,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở replay",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Xem analytics",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "select",
+            "name": "Loại ghi chúQuan sátGiả thuyếtQuyết địnhKhông giao dịchBỏ lỡ giao dịch",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "textarea",
+            "name": "Nội dung",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Điều đã quan sát chỉ dữ kiện tới cutoff",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Giả thuyết",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Quyết định / lý do bỏ qua",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Plan dự kiến",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Actual / kết quả đã biết do người dùng ghi sau khi review",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Bước tiếp theo",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "input",
+            "name": "Tags phân tách bằng dấu phẩy",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Overlay liên quan ID, phân tách bằng dấu phẩy",
+            "dataTestId": "",
+            "tag": "input"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 25,
+        "distinct": 15,
+        "tail": [
+          {
+            "tag": "body",
+            "id": "",
+            "testId": "",
+            "name": "WMEN⌄☾?TestingLiveStrategiesEducationSettingsFXREPLAY / DECISION JOURNALJournalB"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "",
+            "name": "Mở hoặc thu gọn điều hướng"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "language-toggle",
+            "name": "Chuyển ngôn ngữ sang English"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "theme-toggle",
+            "name": "Giao diện sáng"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "trade",
+      "viewport": {
+        "id": "768",
+        "width": 768,
+        "height": 900
+      },
+      "dark": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "width": 694,
+          "height": 366.890625
+        },
+        "shellTheme": "dark",
+        "headingCount": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Trade draft"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 14,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Dashboard",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Sessions",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Trades",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Analytics",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở Practice →",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "width": 694,
+          "height": 366.890625
+        },
+        "shellTheme": "light",
+        "headingCount": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Trade draft"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 14,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Dashboard",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Sessions",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Trades",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Analytics",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở Practice →",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 16,
+        "distinct": 15,
+        "tail": [
+          {
+            "tag": "a",
+            "id": "",
+            "testId": "",
+            "name": "Analytics"
+          },
+          {
+            "tag": "a",
+            "id": "",
+            "testId": "",
+            "name": "Mở Practice →"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "testId": "",
+            "name": "WMEN⌄☾?TestingLiveStrategiesEducationSettingsDashboardSessionsTradesAnalyticsTRA"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "",
+            "name": "Mở hoặc thu gọn điều hướng"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "risk",
+      "viewport": {
+        "id": "768",
+        "width": 768,
+        "height": 900
+      },
+      "dark": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "width": 694,
+          "height": 1198.578125
+        },
+        "shellTheme": "dark",
+        "headingCount": 4,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Risk & giới hạn"
+          },
+          {
+            "level": 2,
+            "text": "Profile giới hạn"
+          },
+          {
+            "level": 2,
+            "text": "Trạng thái tài khoản"
+          },
+          {
+            "level": 2,
+            "text": "Cách đọc kết quả"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 25,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "input",
+            "name": "Profile ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Terms version",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Effective from",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Total drawdown",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "TypeStaticTrailing",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "select",
+            "name": "Overall basisEquityBalance",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Daily loss",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Daily basisEquityBalance",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "select",
+            "name": "Cost basisIncludedSeparate",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Starting balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Equity",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "High-water mark",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Daily start equity",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Chạm đúng floor cũng tính là breach",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "button",
+            "name": "Đánh giá snapshot",
+            "dataTestId": "",
+            "tag": "button"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "width": 694,
+          "height": 1198.578125
+        },
+        "shellTheme": "light",
+        "headingCount": 4,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Risk & giới hạn"
+          },
+          {
+            "level": 2,
+            "text": "Profile giới hạn"
+          },
+          {
+            "level": 2,
+            "text": "Trạng thái tài khoản"
+          },
+          {
+            "level": 2,
+            "text": "Cách đọc kết quả"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 25,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "input",
+            "name": "Profile ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Terms version",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Effective from",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Total drawdown",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "TypeStaticTrailing",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "select",
+            "name": "Overall basisEquityBalance",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Daily loss",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Daily basisEquityBalance",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "select",
+            "name": "Cost basisIncludedSeparate",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Starting balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Equity",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "High-water mark",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Daily start equity",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Chạm đúng floor cũng tính là breach",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "button",
+            "name": "Đánh giá snapshot",
+            "dataTestId": "",
+            "tag": "button"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 27,
+        "distinct": 13,
+        "tail": [
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": ""
+          },
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": ""
+          },
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": ""
+          },
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": ""
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "playbook",
+      "viewport": {
+        "id": "768",
+        "width": 768,
+        "height": 900
+      },
+      "dark": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "width": 694,
+          "height": 990.890625
+        },
+        "shellTheme": "dark",
+        "headingCount": 3,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Playbook versions"
+          },
+          {
+            "level": 2,
+            "text": "Setups"
+          },
+          {
+            "level": 2,
+            "text": "Unnamed playbook"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 13,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "My strategies",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "button",
+            "name": "Unnamed playbookfixture-playbookUnknownr1",
+            "dataTestId": "playbook-row-fixture-playbook",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Mở Journal với setup này →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "button",
+            "name": "Thử lại",
+            "dataTestId": "playbook-history-retry",
+            "tag": "button"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "width": 694,
+          "height": 990.890625
+        },
+        "shellTheme": "light",
+        "headingCount": 3,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Playbook versions"
+          },
+          {
+            "level": 2,
+            "text": "Setups"
+          },
+          {
+            "level": 2,
+            "text": "Unnamed playbook"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 13,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "My strategies",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "button",
+            "name": "Unnamed playbookfixture-playbookUnknownr1",
+            "dataTestId": "playbook-row-fixture-playbook",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Mở Journal với setup này →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "button",
+            "name": "Thử lại",
+            "dataTestId": "playbook-history-retry",
+            "tag": "button"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 15,
+        "distinct": 14,
+        "tail": [
+          {
+            "tag": "a",
+            "id": "",
+            "testId": "",
+            "name": "Mở Journal với setup này →"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "playbook-history-retry",
+            "name": "Thử lại"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "testId": "",
+            "name": "WMEN⌄☾?TestingLiveStrategiesEducationSettingsMy strategiesTRADING WORKSPACE / PL"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "",
+            "name": "Mở hoặc thu gọn điều hướng"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "responses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:5173/api/v2/playbooks/fixture-playbook/revisions"
+        },
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:5173/api/v2/playbooks/fixture-playbook/revisions"
+        }
+      ],
+      "mutations": []
+    },
+    {
+      "route": "data",
+      "viewport": {
+        "id": "390",
+        "width": 390,
+        "height": 844
+      },
+      "dark": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "width": 316,
+          "height": 2483.15625
+        },
+        "shellTheme": "dark",
+        "headingCount": 5,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Data Desk"
+          },
+          {
+            "level": 2,
+            "text": "Preview hoặc import CSV"
+          },
+          {
+            "level": 2,
+            "text": "Dataset catalog"
+          },
+          {
+            "level": 2,
+            "text": "Provenance và QA"
+          },
+          {
+            "level": 2,
+            "text": "Provider capabilities"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 29,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Research",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Replay",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "input",
+            "name": "CSV file",
+            "dataTestId": "data-desk-file-input",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Instrument ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Timeframe seconds",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Source ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Provider label",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "License/use",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Base currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quote currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Account currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Tick size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Pip size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Contract size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quantity min",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quantity step",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Effective from UTC",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Lọc provider",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "button",
+            "name": "ui-live-fixtureprovider unknown",
+            "dataTestId": "dataset-row-ui-live-fixture",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Mở trong Research →",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "width": 316,
+          "height": 2483.15625
+        },
+        "shellTheme": "light",
+        "headingCount": 5,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Data Desk"
+          },
+          {
+            "level": 2,
+            "text": "Preview hoặc import CSV"
+          },
+          {
+            "level": 2,
+            "text": "Dataset catalog"
+          },
+          {
+            "level": 2,
+            "text": "Provenance và QA"
+          },
+          {
+            "level": 2,
+            "text": "Provider capabilities"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 29,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Research",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Replay",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "input",
+            "name": "CSV file",
+            "dataTestId": "data-desk-file-input",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Instrument ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Timeframe seconds",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Source ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Provider label",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "License/use",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Base currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quote currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Account currency",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Tick size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Pip size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Contract size",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quantity min",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Quantity step",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Effective from UTC",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Lọc provider",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "button",
+            "name": "ui-live-fixtureprovider unknown",
+            "dataTestId": "dataset-row-ui-live-fixture",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Mở trong Research →",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 21,
+        "distinct": 18,
+        "tail": [
+          {
+            "tag": "a",
+            "id": "",
+            "testId": "",
+            "name": "Mở trong Research →"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "testId": "",
+            "name": "WMEN⌄☾?TestingLiveStrategiesEducationSettingsMT5 TRADING WORKSPACE / DATA DESKDa"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "",
+            "name": "Mở hoặc thu gọn điều hướng"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "language-toggle",
+            "name": "Chuyển ngôn ngữ sang English"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [
+        "Each child in a list should have a unique \"key\" prop.%s%s See https://react.dev/link/warning-keys for more information. \n\nCheck the render method of `select`.  It was passed a child from DataDeskWorkspace.",
+        "Each child in a list should have a unique \"key\" prop.%s%s See https://react.dev/link/warning-keys for more information. \n\nCheck the render method of `DataDeskWorkspace`. ",
+        "Each child in a list should have a unique \"key\" prop.%s%s See https://react.dev/link/warning-keys for more information. \n\nCheck the render method of `select`.  It was passed a child from DataDeskWorkspace.",
+        "Each child in a list should have a unique \"key\" prop.%s%s See https://react.dev/link/warning-keys for more information. \n\nCheck the render method of `DataDeskWorkspace`. "
+      ],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "research",
+      "viewport": {
+        "id": "390",
+        "width": 390,
+        "height": 844
+      },
+      "dark": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "width": 316,
+          "height": 2004.96875
+        },
+        "shellTheme": "dark",
+        "headingCount": 5,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Research theo bằng chứng"
+          },
+          {
+            "level": 2,
+            "text": "ui-live-fixture"
+          },
+          {
+            "level": 2,
+            "text": "Có thể chạy local, nhưng provenance còn thiếu"
+          },
+          {
+            "level": 2,
+            "text": "Cố định giả định"
+          },
+          {
+            "level": 2,
+            "text": "Kết quả sẽ xuất hiện ở đây"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 16,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Data Desk →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở Data Desk →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "select",
+            "name": "Research dataset",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Starting balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Strategy version",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "button",
+            "name": "Tạo research run",
+            "dataTestId": "research-run-submit",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Học & thuật ngữ",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "width": 316,
+          "height": 2004.96875
+        },
+        "shellTheme": "light",
+        "headingCount": 5,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Research theo bằng chứng"
+          },
+          {
+            "level": 2,
+            "text": "ui-live-fixture"
+          },
+          {
+            "level": 2,
+            "text": "Có thể chạy local, nhưng provenance còn thiếu"
+          },
+          {
+            "level": 2,
+            "text": "Cố định giả định"
+          },
+          {
+            "level": 2,
+            "text": "Kết quả sẽ xuất hiện ở đây"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 16,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Data Desk →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở Data Desk →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "select",
+            "name": "Research dataset",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Starting balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Strategy version",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "button",
+            "name": "Tạo research run",
+            "dataTestId": "research-run-submit",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Học & thuật ngữ",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 18,
+        "distinct": 18,
+        "tail": [
+          {
+            "tag": "select",
+            "id": "",
+            "testId": "",
+            "name": "Research dataset"
+          },
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": "Starting balance"
+          },
+          {
+            "tag": "select",
+            "id": "",
+            "testId": "",
+            "name": "Strategy version"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "research-run-submit",
+            "name": "Tạo research run"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "journal",
+      "viewport": {
+        "id": "390",
+        "width": 390,
+        "height": 844
+      },
+      "dark": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "width": 316,
+          "height": 2343.53125
+        },
+        "shellTheme": "dark",
+        "headingCount": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Journal"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 21,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở replay",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Xem analytics",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "select",
+            "name": "Loại ghi chúQuan sátGiả thuyếtQuyết địnhKhông giao dịchBỏ lỡ giao dịch",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "textarea",
+            "name": "Nội dung",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Điều đã quan sát chỉ dữ kiện tới cutoff",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Giả thuyết",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Quyết định / lý do bỏ qua",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Plan dự kiến",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Actual / kết quả đã biết do người dùng ghi sau khi review",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Bước tiếp theo",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "input",
+            "name": "Tags phân tách bằng dấu phẩy",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Overlay liên quan ID, phân tách bằng dấu phẩy",
+            "dataTestId": "",
+            "tag": "input"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "width": 316,
+          "height": 2343.53125
+        },
+        "shellTheme": "light",
+        "headingCount": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Journal"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 21,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở replay",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Xem analytics",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "select",
+            "name": "Loại ghi chúQuan sátGiả thuyếtQuyết địnhKhông giao dịchBỏ lỡ giao dịch",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "textarea",
+            "name": "Nội dung",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Điều đã quan sát chỉ dữ kiện tới cutoff",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Giả thuyết",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Quyết định / lý do bỏ qua",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Plan dự kiến",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Actual / kết quả đã biết do người dùng ghi sau khi review",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "textarea",
+            "name": "Bước tiếp theo",
+            "dataTestId": "",
+            "tag": "textarea"
+          },
+          {
+            "role": "input",
+            "name": "Tags phân tách bằng dấu phẩy",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Overlay liên quan ID, phân tách bằng dấu phẩy",
+            "dataTestId": "",
+            "tag": "input"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 25,
+        "distinct": 15,
+        "tail": [
+          {
+            "tag": "body",
+            "id": "",
+            "testId": "",
+            "name": "WMEN⌄☾?TestingLiveStrategiesEducationSettingsFXREPLAY / DECISION JOURNALJournalB"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "",
+            "name": "Mở hoặc thu gọn điều hướng"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "language-toggle",
+            "name": "Chuyển ngôn ngữ sang English"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "theme-toggle",
+            "name": "Giao diện sáng"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "trade",
+      "viewport": {
+        "id": "390",
+        "width": 390,
+        "height": 844
+      },
+      "dark": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "width": 316,
+          "height": 488.78125
+        },
+        "shellTheme": "dark",
+        "headingCount": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Trade draft"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 14,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Dashboard",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Sessions",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Trades",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Analytics",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở Practice →",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "width": 316,
+          "height": 488.78125
+        },
+        "shellTheme": "light",
+        "headingCount": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Trade draft"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 14,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Dashboard",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Sessions",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Trades",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Analytics",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Mở Practice →",
+            "dataTestId": "",
+            "tag": "a"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 16,
+        "distinct": 15,
+        "tail": [
+          {
+            "tag": "a",
+            "id": "",
+            "testId": "",
+            "name": "Analytics"
+          },
+          {
+            "tag": "a",
+            "id": "",
+            "testId": "",
+            "name": "Mở Practice →"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "testId": "",
+            "name": "WMEN⌄☾?TestingLiveStrategiesEducationSettingsDashboardSessionsTradesAnalyticsTRA"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "",
+            "name": "Mở hoặc thu gọn điều hướng"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "risk",
+      "viewport": {
+        "id": "390",
+        "width": 390,
+        "height": 844
+      },
+      "dark": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "width": 316,
+          "height": 1907.96875
+        },
+        "shellTheme": "dark",
+        "headingCount": 4,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Risk & giới hạn"
+          },
+          {
+            "level": 2,
+            "text": "Profile giới hạn"
+          },
+          {
+            "level": 2,
+            "text": "Trạng thái tài khoản"
+          },
+          {
+            "level": 2,
+            "text": "Cách đọc kết quả"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 25,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "input",
+            "name": "Profile ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Terms version",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Effective from",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Total drawdown",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "TypeStaticTrailing",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "select",
+            "name": "Overall basisEquityBalance",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Daily loss",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Daily basisEquityBalance",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "select",
+            "name": "Cost basisIncludedSeparate",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Starting balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Equity",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "High-water mark",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Daily start equity",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Chạm đúng floor cũng tính là breach",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "button",
+            "name": "Đánh giá snapshot",
+            "dataTestId": "",
+            "tag": "button"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "width": 316,
+          "height": 1907.96875
+        },
+        "shellTheme": "light",
+        "headingCount": 4,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Risk & giới hạn"
+          },
+          {
+            "level": 2,
+            "text": "Profile giới hạn"
+          },
+          {
+            "level": 2,
+            "text": "Trạng thái tài khoản"
+          },
+          {
+            "level": 2,
+            "text": "Cách đọc kết quả"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 25,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "input",
+            "name": "Profile ID",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Terms version",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Effective from",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Total drawdown",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "TypeStaticTrailing",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "select",
+            "name": "Overall basisEquityBalance",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Daily loss",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "select",
+            "name": "Daily basisEquityBalance",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "select",
+            "name": "Cost basisIncludedSeparate",
+            "dataTestId": "",
+            "tag": "select"
+          },
+          {
+            "role": "input",
+            "name": "Starting balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Balance",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Equity",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "High-water mark",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Daily start equity",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "input",
+            "name": "Chạm đúng floor cũng tính là breach",
+            "dataTestId": "",
+            "tag": "input"
+          },
+          {
+            "role": "button",
+            "name": "Đánh giá snapshot",
+            "dataTestId": "",
+            "tag": "button"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 27,
+        "distinct": 13,
+        "tail": [
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": ""
+          },
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": ""
+          },
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": ""
+          },
+          {
+            "tag": "input",
+            "id": "",
+            "testId": "",
+            "name": ""
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "responses": [],
+      "mutations": []
+    },
+    {
+      "route": "playbook",
+      "viewport": {
+        "id": "390",
+        "width": 390,
+        "height": 844
+      },
+      "dark": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "width": 316,
+          "height": 1368.890625
+        },
+        "shellTheme": "dark",
+        "headingCount": 3,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Playbook versions"
+          },
+          {
+            "level": 2,
+            "text": "Setups"
+          },
+          {
+            "level": 2,
+            "text": "Unnamed playbook"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 13,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "My strategies",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "button",
+            "name": "Unnamed playbookfixture-playbookUnknownr1",
+            "dataTestId": "playbook-row-fixture-playbook",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Mở Journal với setup này →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "button",
+            "name": "Thử lại",
+            "dataTestId": "playbook-history-retry",
+            "tag": "button"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "light": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "width": 316,
+          "height": 1368.890625
+        },
+        "shellTheme": "light",
+        "headingCount": 3,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Playbook versions"
+          },
+          {
+            "level": 2,
+            "text": "Setups"
+          },
+          {
+            "level": 2,
+            "text": "Unnamed playbook"
+          }
+        ],
+        "headingSkips": [],
+        "duplicateIds": [],
+        "ariaRefs": [],
+        "controlsCount": 13,
+        "unnamed": [],
+        "controls": [
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "dataTestId": "",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "dataTestId": "language-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Giao diện sáng",
+            "dataTestId": "theme-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "dataTestId": "help-toggle",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Testing: Backtesting workspace",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Strategies: Quản lý chiến lược",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Education: Course và glossary",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "Settings: Workspace và kết nối",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "a",
+            "name": "My strategies",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "button",
+            "name": "Unnamed playbookfixture-playbookUnknownr1",
+            "dataTestId": "playbook-row-fixture-playbook",
+            "tag": "button"
+          },
+          {
+            "role": "a",
+            "name": "Mở Journal với setup này →",
+            "dataTestId": "",
+            "tag": "a"
+          },
+          {
+            "role": "button",
+            "name": "Thử lại",
+            "dataTestId": "playbook-history-retry",
+            "tag": "button"
+          }
+        ],
+        "hasMain": true,
+        "hasLang": "vi"
+      },
+      "persistedTheme": "light",
+      "focus": {
+        "attempted": 15,
+        "distinct": 14,
+        "tail": [
+          {
+            "tag": "a",
+            "id": "",
+            "testId": "",
+            "name": "Mở Journal với setup này →"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "playbook-history-retry",
+            "name": "Thử lại"
+          },
+          {
+            "tag": "body",
+            "id": "",
+            "testId": "",
+            "name": "WMEN⌄☾?TestingLiveStrategiesEducationSettingsMy strategiesTRADING WORKSPACE / PL"
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "testId": "",
+            "name": "Mở hoặc thu gọn điều hướng"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "responses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:5173/api/v2/playbooks/fixture-playbook/revisions"
+        },
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:5173/api/v2/playbooks/fixture-playbook/revisions"
+        }
+      ],
+      "mutations": []
+    }
+  ],
+  "failures": []
+}

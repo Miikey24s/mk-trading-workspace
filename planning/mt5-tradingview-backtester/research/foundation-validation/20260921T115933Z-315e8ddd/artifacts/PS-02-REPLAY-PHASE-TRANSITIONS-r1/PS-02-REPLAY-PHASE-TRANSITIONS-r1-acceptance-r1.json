@@ -1,0 +1,43 @@
+{
+  "accepted_scope": [
+    "Replay-bound next_phase persists Replay revision, Prop attempt/session state and idempotency receipt in one PostgreSQL transaction with fixed Replay-to-session-to-attempt lock order",
+    "reset, carry_balance and carry_all produce the canonical next-phase money and position state while immutable starting_balance is preserved and phase_index/phase_initial_balance identify the active Replay phase",
+    "A canonical phase_transition Replay ledger event advances Replay event_sequence exactly once, preserves the cursor and becomes the new Replay binding boundary",
+    "Exact and late exact retries are idempotent; tampered reuse conflicts; concurrent two-tab transitions commit only once; forced persistence failure rolls back both Replay and Prop domains",
+    "Replay/Prop lineage, cursor, money, position and event drift fail closed, as do pending orders, missing canonical Replay, final-bar/no-future-bar transitions and unsupported close_by_simulator with an open Replay position",
+    "Phase 2 can start and continue Replay step/feed evaluation using the new phase basis without the prior initial-balance mismatch",
+    "Disposable PostgreSQL lifecycle regression plus real PostgreSQL/API/Vite/Playwright regression pass with broker execution capability disabled"
+  ],
+  "base": "9ff840b1dd055a02803e1db38138bf039ca349e3",
+  "commit": "5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12",
+  "component_sha256": {
+    "lifecycle_regression": "17b51b505e2eaaa3a7211cb0106938774edeec54a99556b70c1e84208a0ae82e",
+    "real_service": "6a07452c6fbe8744fc12074274fb6b12f5eb7201a71657b6b92a6ceeb28e0a74",
+    "replay_phase_transitions": "558d6b6f71426cd5009869c7f1dbfb1ab705e72a314f1e3a6dbf511d33df87c6"
+  },
+  "residual_scope": [
+    "execution-enabled Replay rewind and branch checkpoint reconstruction with canonical historical position and ledger reconstruction",
+    "lower-timeframe or tick intrabar equity path plus broader D15 cross-asset, financing and calendar quality coverage",
+    "Prop product UI, lifecycle controls, objective charts, reports/export and Figma acceptance",
+    "broker/demo/live, holdout, paid provider and deployment acceptance"
+  ],
+  "result": "PASS",
+  "reviewer": "/root/ps02c2_exact_review",
+  "task": "PS-02-REPLAY-PHASE-TRANSITIONS-r1",
+  "tests_run": 95,
+  "validation": "artifacts\\PS-02-REPLAY-PHASE-TRANSITIONS-r1\\PS02-replay-phase-transitions-validation-r1.json",
+  "validation_checks": {
+    "atomic_replay_prop_phase_transition_pass": true,
+    "boundary_fail_closed_pass": true,
+    "broker_execution_capability": false,
+    "exact_changed_file_set_pass": true,
+    "idempotency_race_and_rollback_pass": true,
+    "lifecycle_regression_pass": true,
+    "phase2_step_feed_pass": true,
+    "phase_metadata_and_ledger_transition_pass": true,
+    "real_service_browser_pass": true,
+    "reset_carry_balance_carry_all_semantics_pass": true,
+    "vite_build_pass": true
+  },
+  "validation_sha256": "6900ff986ee8c92a9f437f692f20192dcf61aefdf98359c4fa22e5d04bb66192"
+}

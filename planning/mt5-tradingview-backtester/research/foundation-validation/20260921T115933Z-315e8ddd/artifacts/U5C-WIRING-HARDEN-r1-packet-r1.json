@@ -1,0 +1,22 @@
+{
+  "acceptance": [
+    "OOS job/API/worker wiring executes through a separate worker and isolated Nautilus runtime against disposable PostgreSQL",
+    "walk-forward and bounded-sweep outcomes persist as research-oos-result-v1 without automatic ranking",
+    "terminal OOS checkpoints retain completed trial outcomes through result-validated and candidate-ready so a late cancel cannot relabel completed trials",
+    "same-attempt cancellation accounting remains fully accounted while stale-attempt checkpoints are ignored",
+    "locked holdout content and broker/live capabilities remain unavailable"
+  ],
+  "allowed_files": [
+    "foundation_v2/trading_workspace_v2/research.py",
+    "foundation_v2/trading_workspace_v2/store.py",
+    "foundation_v2/tests/test_u5c_oos.py"
+  ],
+  "base_revision": "0aa38970fd550af24311c60f53c388ad4da4cd6f",
+  "candidate_revision": "459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c",
+  "dependencies": [
+    "U5C-OOS-PLANNER-r1"
+  ],
+  "review_state": "independent_review_pending",
+  "safety": "Local/disposable or fixture validation only; no broker, MT5 execution, holdout opening, provider, paid API, deployment, or secret action.",
+  "task": "U5C-WIRING-HARDEN-r1"
+}

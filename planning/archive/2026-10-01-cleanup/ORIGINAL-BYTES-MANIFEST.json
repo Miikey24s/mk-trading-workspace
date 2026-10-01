@@ -1,0 +1,30 @@
+[
+  {
+    "original": "planning/CURRENT-CONTEXT.md",
+    "archive": "D:\\ANNAM\\TradingWorkspace\\planning\\archive\\2026-10-01-cleanup\\planning__CURRENT-CONTEXT.md",
+    "bytes": 41549,
+    "sha256": "BECEE3B4E293C81705BE741B7243DA251B41F27930738AC584D604FD12B4A6AF",
+    "captured_at": "2026-10-01T13:25:47.6549492+07:00"
+  },
+  {
+    "original": "planning/checkpoints/workspace-next-stage/RESUME.md",
+    "archive": "D:\\ANNAM\\TradingWorkspace\\planning\\archive\\2026-10-01-cleanup\\planning__checkpoints__workspace-next-stage__RESUME.md",
+    "bytes": 64457,
+    "sha256": "D6EB63BA695105CAFFE4E616EAC4D6582EEC9FB85F81AEA90828DD8B295BE680",
+    "captured_at": "2026-10-01T13:25:47.6662683+07:00"
+  },
+  {
+    "original": "planning/mt5-tradingview-backtester/PLAN.md",
+    "archive": "D:\\ANNAM\\TradingWorkspace\\planning\\archive\\2026-10-01-cleanup\\planning__mt5-tradingview-backtester__PLAN.md",
+    "bytes": 117720,
+    "sha256": "ADCC1FFEF94919C90AC53C0E11960CF3E7B4499C64757D94F60EF40F16761862",
+    "captured_at": "2026-10-01T13:25:47.6693605+07:00"
+  },
+  {
+    "original": "planning/ui-platform/MASTER-UI-PLATFORM-PLAN.md",
+    "archive": "D:\\ANNAM\\TradingWorkspace\\planning\\archive\\2026-10-01-cleanup\\planning__ui-platform__MASTER-UI-PLATFORM-PLAN.md",
+    "bytes": 9701,
+    "sha256": "786B17E3429053C9F68696470D574DF0468598C70F1307D7AF2EA82B203EA4D2",
+    "captured_at": "2026-10-01T13:25:47.6737235+07:00"
+  }
+]

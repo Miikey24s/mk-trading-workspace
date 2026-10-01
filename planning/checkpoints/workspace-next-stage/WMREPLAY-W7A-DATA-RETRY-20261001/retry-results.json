@@ -1,0 +1,89 @@
+{
+  "generated_at_utc": "2026-10-01T02:50:45.766Z",
+  "id": "data-catalog-503-retry-200",
+  "origin": "http://127.0.0.1:5173",
+  "attempts": {
+    "datasets": 2,
+    "providers": 2
+  },
+  "exhaustedAttempts": {
+    "datasets": 4,
+    "providers": 4
+  },
+  "errorText": "Không đọc được Data Desk: fixture_catalog_unavailable Thử lại",
+  "readyText": "DATASET\tINSTRUMENT\tRANGE\tQA\tHOLDOUT\tROWS\n\neurusd-h1\nlocal\n\tEURUSDm\nH1\n\t16:00 9/3/24\n→ 02:00 10/3/24\n\tĐã xác minh\tKhóa\t100",
+  "requests": [
+    {
+      "method": "GET",
+      "pathname": "/api/v2/data/datasets"
+    },
+    {
+      "method": "GET",
+      "pathname": "/api/v2/data/providers"
+    },
+    {
+      "method": "GET",
+      "pathname": "/api/v2/data/datasets"
+    },
+    {
+      "method": "GET",
+      "pathname": "/api/v2/data/providers"
+    },
+    {
+      "method": "GET",
+      "pathname": "/api/v2/data/datasets",
+      "case": "exhaustion"
+    },
+    {
+      "method": "GET",
+      "pathname": "/api/v2/data/providers",
+      "case": "exhaustion"
+    },
+    {
+      "method": "GET",
+      "pathname": "/api/v2/data/datasets",
+      "case": "exhaustion"
+    },
+    {
+      "method": "GET",
+      "pathname": "/api/v2/data/providers",
+      "case": "exhaustion"
+    },
+    {
+      "method": "GET",
+      "pathname": "/api/v2/data/datasets",
+      "case": "exhaustion"
+    },
+    {
+      "method": "GET",
+      "pathname": "/api/v2/data/providers",
+      "case": "exhaustion"
+    },
+    {
+      "method": "GET",
+      "pathname": "/api/v2/data/datasets",
+      "case": "exhaustion"
+    },
+    {
+      "method": "GET",
+      "pathname": "/api/v2/data/providers",
+      "case": "exhaustion"
+    }
+  ],
+  "nonGetRequests": [],
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+  ],
+  "unexpectedConsoleErrors": [],
+  "screenshots": [
+    "data-retry-1440.png",
+    "data-retry-390.png",
+    "data-retry-exhausted-alert-390.png"
+  ],
+  "trace": "data-retry.trace.zip"
+}

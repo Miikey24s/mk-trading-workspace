@@ -1,0 +1,24 @@
+{
+  "generated_at_utc": "2026-09-30T17:19:00Z",
+  "route": "/?view=overview&workspace=tenant-a",
+  "theme": "light",
+  "viewport": "1440x900",
+  "activeRail": {
+    "foreground": "#5a3a06",
+    "background": "#f0e6d1",
+    "contrastRatio": 8.3
+  },
+  "activeRailIcon": {
+    "foreground": "#5a3a06",
+    "background": "#f0e6d1",
+    "contrastRatio": 8.3
+  },
+  "menuIcon": {
+    "foreground": "#47535b",
+    "background": "#f5f7f8",
+    "contrastRatio": 7.36
+  },
+  "overflowPx": 0,
+  "pageErrors": 0,
+  "consoleErrors": 0
+}

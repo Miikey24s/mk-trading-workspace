@@ -27,6 +27,8 @@ tmp/
 **/pg-dist/
 **/pg-dist/**
 co05_sandbox/
+# Local Git fixture used by the historical native-v2 experiment.
+planning/mt5-tradingview-backtester/research/webgpt-native-v2/results/runs/20260920T233707Z-9b241f0d/fixtures/p05-repo/
 f5-change-path-*/
 f5-client-*/
 f5-engine-*/
@@ -36,6 +38,7 @@ f5-port-*/
 f5-postgres-*/
 f5-runtime-*/
 *.log
+*.pid
 *.7z
 *.zip
 *.tar*

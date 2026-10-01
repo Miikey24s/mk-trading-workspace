@@ -1,0 +1,53 @@
+{
+  "accepted_scope": [
+    "Attempt reports are derived read-only from canonical persisted Prop simulation state and retain session/profile/attempt/phase provenance",
+    "Workspace-scoped report APIs support status and clean/hindsight branch filtering without broker execution capability",
+    "CSV export contains stable summary fields and excludes arbitrary nested resume payloads and credentials",
+    "Prop UI exposes selected-attempt outcome/reasons plus a Reports view with status/branch filters, Learn navigation and CSV export",
+    "Hindsight reports remain visibly distinct from clean attempts and report failures do not hide usable persisted resume state",
+    "Fixture browser coverage includes breach explanation, filters/export, error/denied/empty/conflict and responsive 1440/768/360 layouts",
+    "Disposable PostgreSQL -> API -> Vite -> Playwright validation passes with persisted IDs, tenant denial and no broker/execution request"
+  ],
+  "base_revision": "07fc8ea3479460cf4db68a781304481cf925b2d4",
+  "candidate_revision": "567c6073ca1022983d1770dfbe8238d2b8cb3a8a",
+  "checks": {
+    "backend_report_tests_pass": true,
+    "broker_execution_capability": false,
+    "exact_changed_file_set_pass": true,
+    "exact_source_hash_match_pass": true,
+    "fixture_prop_ui_pass": true,
+    "real_postgres_api_vite_playwright_pass": true,
+    "report_failure_isolated_from_resume_state": true,
+    "responsive_visual_evidence_retained": true
+  },
+  "residual_scope": [
+    "Independent final review before ledger acceptance",
+    "Journal integration and broader U3c contextual return links",
+    "Licensed real-data Prop journey and final INT-PS recovery acceptance",
+    "Figma Make round-trip and whole-product U1 visual acceptance",
+    "Broker/demo/live, holdout, provider and deployment gates"
+  ],
+  "result": "PASS",
+  "schema": "PS03-REPORT-UI-VALIDATION-r1",
+  "scope": "Exact-source PS-03 backend report plus local Prop report UI; simulation only",
+  "source_receipt": {
+    "path": "foundation_v2/evidence/ps03-report-ui-r1/PS03-report-ui-acceptance-r1.json",
+    "sha256": "052dfca1b6d6c833cda28a926760f477f5a6e2ee399dae3b114ca4fb0d566e79"
+  },
+  "source_sha256": {
+    "foundation_v2/evidence/ps03-report-ui-r1/PS03-report-ui-acceptance-r1.json": "052dfca1b6d6c833cda28a926760f477f5a6e2ee399dae3b114ca4fb0d566e79",
+    "foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-1440.png": "3b0f46fa0953f8972b17052d39b1a279579a707b2f553e12fe5c67043324491c",
+    "foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-360.png": "3ae2a23fd44d27fa6bfca37aca86e029b34e1b14ea1fb9d701c135f484bca2b8",
+    "foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-768.png": "083276749b461fa7b59983949f7f56d909eb923ee50123e2c71830c097473d43",
+    "foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-reports-1440.png": "95e3dae72bda5d2231df2563fb7b848fc5ccfa77fa2987f3c0f3c710e3561ca7",
+    "foundation_v2/scripts/ps03_acceptance.py": "ecfc3df27291ee654e78348d8e1ca3c88b224a3a814e0bd5c9e0a2a30ac45412",
+    "foundation_v2/tests/test_ps03_prop_reports.py": "54d4c8b7a3574bd0b949ad23e373bb618a4736dcc422a6cd9542ca7e0afea30a",
+    "foundation_v2/trading_workspace_v2/api.py": "aa0e27d2c42021870fe7c2532023b3b2c70cbb18d2dbc636271f7a08217ba0e0",
+    "foundation_v2/trading_workspace_v2/prop_report.py": "30b494c146436adbefb56f00ab3c9fa9464509dff3674f4c0ea78edde79bbb72",
+    "foundation_v2/web/run_prop_ui_acceptance.mjs": "8bcae367ee035ec37936e9710e7c2715341fdc8723ec901f187c32f2d13631db",
+    "foundation_v2/web/run_prop_ui_real_acceptance.mjs": "cdab936460de4d281f5548c3867f2f69bb5409e4b9a331874734a74c6623017e",
+    "foundation_v2/web/src/PropWorkspace.jsx": "0fa1c0303b3db416033cb82e2fbf622b5d4552990d038fbcb132b7c4b1d9e252",
+    "foundation_v2/web/src/styles.css": "59ea12cd83321f435628a632b42dd8f6fa57a66a675962e513d1611d82008f5c"
+  },
+  "task": "PS-03-REPORT-UI-r1"
+}

@@ -1,0 +1,26 @@
+{
+  "task": "U5C-OOS-PLANNER-r1",
+  "base_revision": "e5522d8b9fae1cdef6f00f88799ed0abcda062e1",
+  "candidate_revision": "860fadd01f463df19d38a67a2294019fc19658d5",
+  "dependencies": [
+    "U5-NAUTILUS-ADAPTER-r1",
+    "U5B-REPLAY-CUTOFF-r1"
+  ],
+  "allowed_files": [
+    "foundation_v2/trading_workspace_v2/research_oos.py",
+    "foundation_v2/tests/test_u5c_oos.py"
+  ],
+  "acceptance": [
+    "Walk-forward folds are chronological train-purge-embargo-OOS with explicit rolling or expanding semantics",
+    "Declared overlap requires sufficient purge and nonchronological source rows fail closed",
+    "Locked holdout remains metadata-only and source/OOS ranges cannot reach it",
+    "Parameter sweeps are deterministic, bounded and account for completed, failed and canceled trials",
+    "Focused U5c and integrated local regression pass without opening holdout or broker capability"
+  ],
+  "residual_scope": [
+    "wire planner into canonical research job/API/worker lifecycle",
+    "stress costs/fills/regimes and production OOS workflow",
+    "real licensed dataset evidence and any authorized holdout protocol"
+  ],
+  "safety": "Local pre-holdout software planning only; holdout content remains closed and no broker/provider/deploy action is authorized."
+}

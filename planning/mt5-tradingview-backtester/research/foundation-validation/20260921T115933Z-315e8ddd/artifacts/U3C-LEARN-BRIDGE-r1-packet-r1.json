@@ -1,0 +1,26 @@
+{
+  "task": "U3C-LEARN-BRIDGE-r1",
+  "base_revision": "3835d4482168da65f0ff764e0b791f49e2fe5381",
+  "candidate_revision": "92937ec27425b5f0d9308234cbbcf1a35721411c",
+  "dependencies": [
+    "U3-PATH2-PLAYBOOK-JOURNAL-r1"
+  ],
+  "allowed_files": [
+    "foundation_v2/trading_workspace_v2/learn.py",
+    "foundation_v2/trading_workspace_v2/api.py",
+    "foundation_v2/tests/test_u3c_learn.py"
+  ],
+  "acceptance": [
+    "Learn reads the existing education course/progress owners instead of creating a second tracker",
+    "Overview, glossary and allowlisted resources are workspace scoped and read-only",
+    "Tutor answer keys and assessment resources are not exposed through the bridge",
+    "Unconfigured or unauthorized workspaces fail closed and one tenant cannot inherit another tenant's education root",
+    "Focused API tests and existing U3/F7 regressions pass on the named disposable PostgreSQL fixture"
+  ],
+  "residual_scope": [
+    "supported Learn UI and chart/setup contextual links",
+    "education progress mutation remains owned by the existing tutor protocol",
+    "whole-product U3/U9 UI acceptance"
+  ],
+  "safety": "Read-only education bridge; no answer-key exposure, no automatic course completion and no broker/data/provider side effect."
+}

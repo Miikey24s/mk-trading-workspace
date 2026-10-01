@@ -1,0 +1,576 @@
+{
+  "status": "PAIR_REPRODUCIBILITY_ONLY",
+  "policy": {
+    "settle": "networkidle, required root visible, fonts ready, reduced-motion, animation/transition suppression, 750ms after injection; 150ms between duplicate captures",
+    "pairPixel": {
+      "channelThreshold": 8,
+      "changedRatioLimit": 0.005,
+      "purpose": "duplicate-capture reproducibility only; not cross-revision visual acceptance"
+    },
+    "geometry": {
+      "tolerancePx": 1,
+      "invariants": [
+        "viewport width/height",
+        "devicePixelRatio=1",
+        "document scrollWidth equals viewport width where no overflow is expected"
+      ]
+    },
+    "candidateSelection": "first capture (-a) is the candidate image; second capture (-b) is a same-state reproducibility receipt",
+    "canonicalRule": "Do not promote without a pinned owner-approved route/state fixture, source revision, browser build, theme/locale, viewport/deviceScaleFactor and independent review."
+  },
+  "states": [
+    {
+      "id": "01-dashboard-dark-1440x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\01-dashboard-dark-1440x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\01-dashboard-dark-1440x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 1440,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 1296000,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "02-dashboard-light-1440x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\02-dashboard-light-1440x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\02-dashboard-light-1440x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 1440,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 1296000,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "03-sessions-dark-1440x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\03-sessions-dark-1440x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\03-sessions-dark-1440x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 1440,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 1296000,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "04-sessions-light-1440x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\04-sessions-light-1440x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\04-sessions-light-1440x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 1440,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 1296000,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "05-replay-dark-1440x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\05-replay-dark-1440x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\05-replay-dark-1440x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 1440,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 1296000,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "06-replay-light-1440x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\06-replay-light-1440x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\06-replay-light-1440x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 1440,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 1296000,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "07-analytics-dark-1440x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\07-analytics-dark-1440x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\07-analytics-dark-1440x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 1440,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 1296000,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "08-analytics-light-1440x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\08-analytics-light-1440x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\08-analytics-light-1440x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 1440,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 1296000,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "09-dashboard-dark-768x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\09-dashboard-dark-768x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\09-dashboard-dark-768x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 768,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 691200,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "10-dashboard-light-768x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\10-dashboard-light-768x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\10-dashboard-light-768x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 768,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 691200,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "11-sessions-dark-768x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\11-sessions-dark-768x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\11-sessions-dark-768x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 768,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 691200,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "12-sessions-light-768x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\12-sessions-light-768x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\12-sessions-light-768x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 768,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 691200,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "13-replay-dark-768x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\13-replay-dark-768x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\13-replay-dark-768x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 768,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 691200,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "14-replay-light-768x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\14-replay-light-768x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\14-replay-light-768x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 768,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 691200,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "15-analytics-dark-768x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\15-analytics-dark-768x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\15-analytics-dark-768x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 768,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 691200,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "16-analytics-light-768x900",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\16-analytics-light-768x900-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\16-analytics-light-768x900-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 768,
+        "height": 900,
+        "changedPixels": 0,
+        "totalPixels": 691200,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "17-dashboard-dark-390x844",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\17-dashboard-dark-390x844-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\17-dashboard-dark-390x844-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 390,
+        "height": 844,
+        "changedPixels": 0,
+        "totalPixels": 329160,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "18-dashboard-light-390x844",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\18-dashboard-light-390x844-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\18-dashboard-light-390x844-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 390,
+        "height": 844,
+        "changedPixels": 0,
+        "totalPixels": 329160,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "19-sessions-dark-390x844",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\19-sessions-dark-390x844-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\19-sessions-dark-390x844-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 390,
+        "height": 844,
+        "changedPixels": 0,
+        "totalPixels": 329160,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "20-sessions-light-390x844",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\20-sessions-light-390x844-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\20-sessions-light-390x844-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 390,
+        "height": 844,
+        "changedPixels": 0,
+        "totalPixels": 329160,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "21-replay-dark-390x844",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\21-replay-dark-390x844-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\21-replay-dark-390x844-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 390,
+        "height": 844,
+        "changedPixels": 0,
+        "totalPixels": 329160,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "22-replay-light-390x844",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\22-replay-light-390x844-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\22-replay-light-390x844-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 390,
+        "height": 844,
+        "changedPixels": 0,
+        "totalPixels": 329160,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "23-analytics-dark-390x844",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\23-analytics-dark-390x844-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\23-analytics-dark-390x844-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 390,
+        "height": 844,
+        "changedPixels": 0,
+        "totalPixels": 329160,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "id": "24-analytics-light-390x844",
+      "candidate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\24-analytics-light-390x844-a.png",
+      "duplicate": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\24-analytics-light-390x844-b.png",
+      "pixel": {
+        "sameShape": true,
+        "width": 390,
+        "height": 844,
+        "changedPixels": 0,
+        "totalPixels": 329160,
+        "changedRatio": 0.0,
+        "maxChannelDelta": 0,
+        "pass": true
+      },
+      "geometry": {
+        "pass": true,
+        "maxDeltaPx": 0.0,
+        "changes": []
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "pass": true
+    }
+  ],
+  "overallPass": true
+}

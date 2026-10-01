@@ -1,0 +1,1452 @@
+{
+  "scope": {
+    "fixture": "w8-large-heap-frame-fixture",
+    "requestedRows": 5000,
+    "iterations": 360,
+    "dwellMs": 250,
+    "expectedDurationSeconds": 90,
+    "route": "/?view=analytics&workspace=w8-heap-frame&job=large-fixture",
+    "sourceChanged": false,
+    "externalCalls": false
+  },
+  "thresholds": {
+    "maxLongTaskMs": 200,
+    "p95FrameIntervalMs": 50,
+    "minFrameSampleCount": 300,
+    "maxDomDelta": 10,
+    "maxHeapDeltaBytes": 12582912,
+    "maxHeapGrowthPerMinuteBytes": 8388608,
+    "maxUnexpectedPageErrors": 0,
+    "maxHorizontalOverflowPx": 2
+  },
+  "run": {
+    "startedAt": "2026-09-30T18:03:39.503Z",
+    "navigation": {
+      "elapsedMs": 181980,
+      "selectorState": {
+        "outcome": 1,
+        "side": 1,
+        "nextPage": 1,
+        "previousPage": 1
+      },
+      "initial": {
+        "navMs": 1468,
+        "nodes": 1272,
+        "rows": 50,
+        "heap": 20500000,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "gcExposed": true
+      }
+    },
+    "session": {
+      "elapsedSessionMs": 180454,
+      "requestedIterations": 360,
+      "completedIterations": 360,
+      "dwellMs": 250,
+      "samples": [
+        {
+          "iteration": 0,
+          "elapsedMs": 1791,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 15,
+          "elapsedMs": 10204,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 30,
+          "elapsedMs": 18759,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 45,
+          "elapsedMs": 27760,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 60,
+          "elapsedMs": 35236,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 75,
+          "elapsedMs": 42552,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 90,
+          "elapsedMs": 50035,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 105,
+          "elapsedMs": 57307,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 120,
+          "elapsedMs": 64715,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 135,
+          "elapsedMs": 71965,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 150,
+          "elapsedMs": 79373,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 165,
+          "elapsedMs": 86520,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 180,
+          "elapsedMs": 93849,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 195,
+          "elapsedMs": 100966,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 210,
+          "elapsedMs": 108334,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 225,
+          "elapsedMs": 115948,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 240,
+          "elapsedMs": 123383,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 255,
+          "elapsedMs": 130514,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 270,
+          "elapsedMs": 137766,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 285,
+          "elapsedMs": 144859,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 300,
+          "elapsedMs": 152151,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 315,
+          "elapsedMs": 159332,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 330,
+          "elapsedMs": 166685,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 345,
+          "elapsedMs": 173932,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        },
+        {
+          "iteration": 359,
+          "elapsedMs": 180615,
+          "heap": 20500000,
+          "afterGcHeap": 20500000,
+          "nodes": 1272,
+          "rows": 50,
+          "scrollWidth": 1440,
+          "viewportWidth": 1440
+        }
+      ],
+      "interactionErrors": []
+    },
+    "final": {
+      "nodes": 1272,
+      "rows": 50,
+      "heap": 20500000,
+      "afterGcHeap": 20500000,
+      "maxLongTaskMs": 75,
+      "longTaskCount": 272,
+      "frameSampleCount": 9633,
+      "p95FrameIntervalMs": 33.39999999999782,
+      "maxFrameIntervalMs": 99.89999999999998,
+      "heapDeltaBytes": 0,
+      "heapGrowthPerMinuteBytes": 0,
+      "maxDomDelta": 0,
+      "horizontalOverflowPx": 0,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "frameIntervalsSummary": {
+        "minMs": 16.5,
+        "medianMs": 16.69999999999709,
+        "p95Ms": 33.39999999999782,
+        "maxMs": 99.89999999999998
+      },
+      "longTasks": [
+        {
+          "duration": 65,
+          "startTime": 149.59999999403954
+        },
+        {
+          "duration": 59,
+          "startTime": 240.5
+        },
+        {
+          "duration": 71,
+          "startTime": 346.79999999701977
+        },
+        {
+          "duration": 54,
+          "startTime": 2174.1999999955297
+        },
+        {
+          "duration": 56,
+          "startTime": 2621.5
+        },
+        {
+          "duration": 53,
+          "startTime": 2806.2999999970198
+        },
+        {
+          "duration": 56,
+          "startTime": 3288.5999999940395
+        },
+        {
+          "duration": 56,
+          "startTime": 3745.6999999955297
+        },
+        {
+          "duration": 53,
+          "startTime": 3911.7999999970198
+        },
+        {
+          "duration": 52,
+          "startTime": 4373.79999999702
+        },
+        {
+          "duration": 51,
+          "startTime": 4952.0999999940395
+        },
+        {
+          "duration": 51,
+          "startTime": 5125.69999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 5577.69999999553
+        },
+        {
+          "duration": 53,
+          "startTime": 6047.19999999553
+        },
+        {
+          "duration": 53,
+          "startTime": 6213.19999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 6656
+        },
+        {
+          "duration": 51,
+          "startTime": 7098.69999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 7277.79999999702
+        },
+        {
+          "duration": 54,
+          "startTime": 7854
+        },
+        {
+          "duration": 53,
+          "startTime": 8295.89999999851
+        },
+        {
+          "duration": 54,
+          "startTime": 8476.69999999553
+        },
+        {
+          "duration": 52,
+          "startTime": 8960.09999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 9400.79999999702
+        },
+        {
+          "duration": 51,
+          "startTime": 9567.89999999851
+        },
+        {
+          "duration": 51,
+          "startTime": 10009.79999999702
+        },
+        {
+          "duration": 54,
+          "startTime": 10589.09999999404
+        },
+        {
+          "duration": 56,
+          "startTime": 10749.79999999702
+        },
+        {
+          "duration": 51,
+          "startTime": 11204.69999999553
+        },
+        {
+          "duration": 52,
+          "startTime": 11687.39999999851
+        },
+        {
+          "duration": 51,
+          "startTime": 11852.59999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 12297.29999999702
+        },
+        {
+          "duration": 51,
+          "startTime": 12735.89999999851
+        },
+        {
+          "duration": 51,
+          "startTime": 12901.59999999404
+        },
+        {
+          "duration": 52,
+          "startTime": 13484.19999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 13924.5
+        },
+        {
+          "duration": 54,
+          "startTime": 14095.5
+        },
+        {
+          "duration": 55,
+          "startTime": 14586.19999999553
+        },
+        {
+          "duration": 52,
+          "startTime": 15027.09999999404
+        },
+        {
+          "duration": 52,
+          "startTime": 15196.39999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 15641.09999999404
+        },
+        {
+          "duration": 53,
+          "startTime": 16202.09999999404
+        },
+        {
+          "duration": 53,
+          "startTime": 16376.5
+        },
+        {
+          "duration": 53,
+          "startTime": 16830.39999999851
+        },
+        {
+          "duration": 53,
+          "startTime": 17316.09999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 17477.69999999553
+        },
+        {
+          "duration": 52,
+          "startTime": 17934.39999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 18381
+        },
+        {
+          "duration": 54,
+          "startTime": 18552.09999999404
+        },
+        {
+          "duration": 56,
+          "startTime": 19140.09999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 19588.79999999702
+        },
+        {
+          "duration": 51,
+          "startTime": 19753.5
+        },
+        {
+          "duration": 52,
+          "startTime": 20231.39999999851
+        },
+        {
+          "duration": 52,
+          "startTime": 20663.79999999702
+        },
+        {
+          "duration": 52,
+          "startTime": 20828.69999999553
+        },
+        {
+          "duration": 52,
+          "startTime": 21267
+        },
+        {
+          "duration": 53,
+          "startTime": 21815.69999999553
+        },
+        {
+          "duration": 56,
+          "startTime": 21983.59999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 22423.89999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 22885.69999999553
+        },
+        {
+          "duration": 52,
+          "startTime": 23058.59999999404
+        },
+        {
+          "duration": 50,
+          "startTime": 23496.79999999702
+        },
+        {
+          "duration": 54,
+          "startTime": 25036.19999999553
+        },
+        {
+          "duration": 53,
+          "startTime": 25181.5
+        },
+        {
+          "duration": 52,
+          "startTime": 25693.59999999404
+        },
+        {
+          "duration": 55,
+          "startTime": 26090.09999999404
+        },
+        {
+          "duration": 52,
+          "startTime": 26233
+        },
+        {
+          "duration": 52,
+          "startTime": 26674.09999999404
+        },
+        {
+          "duration": 50,
+          "startTime": 27059.89999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 27196.29999999702
+        },
+        {
+          "duration": 54,
+          "startTime": 27598.19999999553
+        },
+        {
+          "duration": 52,
+          "startTime": 28108.19999999553
+        },
+        {
+          "duration": 52,
+          "startTime": 28245.69999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 28639
+        },
+        {
+          "duration": 51,
+          "startTime": 29074.39999999851
+        },
+        {
+          "duration": 52,
+          "startTime": 29210.09999999404
+        },
+        {
+          "duration": 50,
+          "startTime": 29606.89999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 30000.19999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 30137.09999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 30636.19999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 31030.39999999851
+        },
+        {
+          "duration": 53,
+          "startTime": 31168.29999999702
+        },
+        {
+          "duration": 52,
+          "startTime": 31597.29999999702
+        },
+        {
+          "duration": 52,
+          "startTime": 32004.19999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 32144.19999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 32549.09999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 33033
+        },
+        {
+          "duration": 51,
+          "startTime": 33170.79999999702
+        },
+        {
+          "duration": 53,
+          "startTime": 33565
+        },
+        {
+          "duration": 52,
+          "startTime": 34007.89999999851
+        },
+        {
+          "duration": 52,
+          "startTime": 34148.89999999851
+        },
+        {
+          "duration": 53,
+          "startTime": 34544.09999999404
+        },
+        {
+          "duration": 53,
+          "startTime": 34954.69999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 35092.59999999404
+        },
+        {
+          "duration": 53,
+          "startTime": 35581.5
+        },
+        {
+          "duration": 51,
+          "startTime": 35978.59999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 36118.89999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 36553.59999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 36943.29999999702
+        },
+        {
+          "duration": 52,
+          "startTime": 37080.89999999851
+        },
+        {
+          "duration": 53,
+          "startTime": 37484.5
+        },
+        {
+          "duration": 53,
+          "startTime": 37987.59999999404
+        },
+        {
+          "duration": 50,
+          "startTime": 38129.5
+        },
+        {
+          "duration": 53,
+          "startTime": 38534
+        },
+        {
+          "duration": 52,
+          "startTime": 38974.79999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 39113.79999999702
+        },
+        {
+          "duration": 51,
+          "startTime": 39510.19999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 40905.19999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 41041.09999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 41466.09999999404
+        },
+        {
+          "duration": 52,
+          "startTime": 41861.29999999702
+        },
+        {
+          "duration": 53,
+          "startTime": 42007.89999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 42395.59999999404
+        },
+        {
+          "duration": 52,
+          "startTime": 42908
+        },
+        {
+          "duration": 57,
+          "startTime": 43044.39999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 43442.5
+        },
+        {
+          "duration": 50,
+          "startTime": 43866.39999999851
+        },
+        {
+          "duration": 53,
+          "startTime": 44001.09999999404
+        },
+        {
+          "duration": 52,
+          "startTime": 44404.59999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 44799.19999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 44935.89999999851
+        },
+        {
+          "duration": 51,
+          "startTime": 45426.89999999851
+        },
+        {
+          "duration": 54,
+          "startTime": 45828
+        },
+        {
+          "duration": 56,
+          "startTime": 45981.19999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 46429.09999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 46822.09999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 46960.89999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 47358.79999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 47830.59999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 47965.29999999702
+        },
+        {
+          "duration": 51,
+          "startTime": 48365.69999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 48806.5
+        },
+        {
+          "duration": 51,
+          "startTime": 48943
+        },
+        {
+          "duration": 52,
+          "startTime": 49343
+        },
+        {
+          "duration": 52,
+          "startTime": 49746.79999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 49883.79999999702
+        },
+        {
+          "duration": 52,
+          "startTime": 50392
+        },
+        {
+          "duration": 52,
+          "startTime": 50934.39999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 51757.5
+        },
+        {
+          "duration": 51,
+          "startTime": 51893.89999999851
+        },
+        {
+          "duration": 54,
+          "startTime": 52290
+        },
+        {
+          "duration": 50,
+          "startTime": 52788.19999999553
+        },
+        {
+          "duration": 54,
+          "startTime": 52926.79999999702
+        },
+        {
+          "duration": 51,
+          "startTime": 53326.29999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 53745.89999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 53882.89999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 54272.39999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 54650
+        },
+        {
+          "duration": 51,
+          "startTime": 54785.39999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 55273.19999999553
+        },
+        {
+          "duration": 53,
+          "startTime": 55665.89999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 55802.89999999851
+        },
+        {
+          "duration": 53,
+          "startTime": 57653.89999999851
+        },
+        {
+          "duration": 53,
+          "startTime": 58747.09999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 60527.39999999851
+        },
+        {
+          "duration": 52,
+          "startTime": 60676.89999999851
+        },
+        {
+          "duration": 53,
+          "startTime": 61123
+        },
+        {
+          "duration": 50,
+          "startTime": 64021.69999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 64415.59999999404
+        },
+        {
+          "duration": 54,
+          "startTime": 65059.59999999404
+        },
+        {
+          "duration": 53,
+          "startTime": 66927.79999999702
+        },
+        {
+          "duration": 51,
+          "startTime": 67543.5
+        },
+        {
+          "duration": 50,
+          "startTime": 67949.39999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 68910
+        },
+        {
+          "duration": 51,
+          "startTime": 69301.5
+        },
+        {
+          "duration": 50,
+          "startTime": 69435.79999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 70436.69999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 71796.29999999702
+        },
+        {
+          "duration": 51,
+          "startTime": 72315.89999999851
+        },
+        {
+          "duration": 55,
+          "startTime": 74163.39999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 74304.59999999404
+        },
+        {
+          "duration": 53,
+          "startTime": 75192.09999999404
+        },
+        {
+          "duration": 59,
+          "startTime": 75339
+        },
+        {
+          "duration": 55,
+          "startTime": 76199.09999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 76346.19999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 78182.09999999404
+        },
+        {
+          "duration": 50,
+          "startTime": 78320.59999999404
+        },
+        {
+          "duration": 50,
+          "startTime": 78700.69999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 79219.09999999404
+        },
+        {
+          "duration": 53,
+          "startTime": 79732.09999999404
+        },
+        {
+          "duration": 52,
+          "startTime": 81610.89999999851
+        },
+        {
+          "duration": 52,
+          "startTime": 82630.09999999404
+        },
+        {
+          "duration": 50,
+          "startTime": 83197.29999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 86881.29999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 89884.79999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 90322.89999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 94193.5
+        },
+        {
+          "duration": 50,
+          "startTime": 96053.29999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 97061.79999999702
+        },
+        {
+          "duration": 56,
+          "startTime": 98381.89999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 100413.69999999553
+        },
+        {
+          "duration": 58,
+          "startTime": 102796.39999999851
+        },
+        {
+          "duration": 51,
+          "startTime": 103197.29999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 103812.19999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 106154.59999999404
+        },
+        {
+          "duration": 50,
+          "startTime": 106689.39999999851
+        },
+        {
+          "duration": 51,
+          "startTime": 107622.69999999553
+        },
+        {
+          "duration": 54,
+          "startTime": 108034.39999999851
+        },
+        {
+          "duration": 51,
+          "startTime": 108180.5
+        },
+        {
+          "duration": 51,
+          "startTime": 108695
+        },
+        {
+          "duration": 50,
+          "startTime": 109092.69999999553
+        },
+        {
+          "duration": 52,
+          "startTime": 109235.79999999702
+        },
+        {
+          "duration": 55,
+          "startTime": 109672.89999999851
+        },
+        {
+          "duration": 52,
+          "startTime": 110026.19999999553
+        },
+        {
+          "duration": 54,
+          "startTime": 110171.89999999851
+        },
+        {
+          "duration": 50,
+          "startTime": 110566.09999999404
+        },
+        {
+          "duration": 54,
+          "startTime": 111016.29999999702
+        },
+        {
+          "duration": 75,
+          "startTime": 111113.5
+        },
+        {
+          "duration": 53,
+          "startTime": 111202.29999999702
+        },
+        {
+          "duration": 52,
+          "startTime": 111292.69999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 113082.59999999404
+        },
+        {
+          "duration": 68,
+          "startTime": 113226.79999999702
+        },
+        {
+          "duration": 56,
+          "startTime": 113778.39999999851
+        },
+        {
+          "duration": 53,
+          "startTime": 114190.5
+        },
+        {
+          "duration": 65,
+          "startTime": 114337.39999999851
+        },
+        {
+          "duration": 58,
+          "startTime": 115217.59999999404
+        },
+        {
+          "duration": 57,
+          "startTime": 115376.19999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 115801.39999999851
+        },
+        {
+          "duration": 52,
+          "startTime": 116293.19999999553
+        },
+        {
+          "duration": 59,
+          "startTime": 117259
+        },
+        {
+          "duration": 51,
+          "startTime": 117428.09999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 118193.59999999404
+        },
+        {
+          "duration": 50,
+          "startTime": 119231.69999999553
+        },
+        {
+          "duration": 53,
+          "startTime": 119373.5
+        },
+        {
+          "duration": 50,
+          "startTime": 121728
+        },
+        {
+          "duration": 52,
+          "startTime": 123074.29999999702
+        },
+        {
+          "duration": 53,
+          "startTime": 123219.09999999404
+        },
+        {
+          "duration": 50,
+          "startTime": 123743.5
+        },
+        {
+          "duration": 51,
+          "startTime": 125082.69999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 125557.59999999404
+        },
+        {
+          "duration": 52,
+          "startTime": 126177.19999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 127007.59999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 130371.5
+        },
+        {
+          "duration": 50,
+          "startTime": 130872.09999999404
+        },
+        {
+          "duration": 50,
+          "startTime": 132735.79999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 133722.79999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 139938.19999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 140943.79999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 141503
+        },
+        {
+          "duration": 50,
+          "startTime": 142276.19999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 145207.79999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 147065.69999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 147686.29999999702
+        },
+        {
+          "duration": 52,
+          "startTime": 148066.09999999404
+        },
+        {
+          "duration": 52,
+          "startTime": 148204.19999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 152504.69999999553
+        },
+        {
+          "duration": 51,
+          "startTime": 154352.69999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 155343.5
+        },
+        {
+          "duration": 50,
+          "startTime": 155763.79999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 156802.79999999702
+        },
+        {
+          "duration": 54,
+          "startTime": 158613.19999999553
+        },
+        {
+          "duration": 60,
+          "startTime": 158753.09999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 159151.3999999985
+        },
+        {
+          "duration": 63,
+          "startTime": 159685.59999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 159837.8999999985
+        },
+        {
+          "duration": 50,
+          "startTime": 160226.79999999702
+        },
+        {
+          "duration": 53,
+          "startTime": 161578.79999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 161725.79999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 162236.79999999702
+        },
+        {
+          "duration": 55,
+          "startTime": 162548.09999999404
+        },
+        {
+          "duration": 62,
+          "startTime": 162618.79999999702
+        },
+        {
+          "duration": 55,
+          "startTime": 162722.69999999553
+        },
+        {
+          "duration": 52,
+          "startTime": 163141.69999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 165517.5
+        },
+        {
+          "duration": 52,
+          "startTime": 166034.19999999553
+        },
+        {
+          "duration": 53,
+          "startTime": 167041.09999999404
+        },
+        {
+          "duration": 51,
+          "startTime": 167450.59999999404
+        },
+        {
+          "duration": 54,
+          "startTime": 167597.8999999985
+        },
+        {
+          "duration": 51,
+          "startTime": 169935.59999999404
+        },
+        {
+          "duration": 50,
+          "startTime": 170507.69999999553
+        },
+        {
+          "duration": 50,
+          "startTime": 173268.29999999702
+        },
+        {
+          "duration": 51,
+          "startTime": 174287.79999999702
+        },
+        {
+          "duration": 50,
+          "startTime": 179604.09999999404
+        }
+      ]
+    },
+    "thresholds": {
+      "maxLongTaskMs": 200,
+      "p95FrameIntervalMs": 50,
+      "minFrameSampleCount": 300,
+      "maxDomDelta": 10,
+      "maxHeapDeltaBytes": 12582912,
+      "maxHeapGrowthPerMinuteBytes": 8388608,
+      "maxUnexpectedPageErrors": 0,
+      "maxHorizontalOverflowPx": 2
+    },
+    "verdicts": {
+      "longTasks": true,
+      "frameP95": true,
+      "frameSampleCount": true,
+      "domDelta": true,
+      "heapDelta": true,
+      "heapRate": true,
+      "pageErrors": true,
+      "horizontalOverflow": true,
+      "interactions": true,
+      "mobileOverflow": true
+    },
+    "warmupTrace": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-HEAP-FRAME-20261001\\analytics-stress-warmup.trace.zip",
+    "mobile": {
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "overflow": false,
+      "nodes": 1272,
+      "rows": 50
+    }
+  },
+  "errors": [],
+  "server": {
+    "reused": true,
+    "fallbackStarted": false,
+    "stderr": []
+  },
+  "finishedAt": "2026-09-30T18:06:42.011Z"
+}

@@ -1,16 +1,18 @@
 # TradingWorkspace
 
-Workspace lập kế hoạch cá nhân; không phải repository phần mềm. Không tự `git init` hoặc áp một workflow code cho mọi cuộc trò chuyện.
+Git superproject cho kế hoạch, hướng dẫn học và công cụ dùng chung; bốn repo sản phẩm trong `projects/` có lịch sử Git riêng. `README.md` là cửa vào, không phải bảng tiến độ thứ hai. Không tự `git init` hoặc áp workflow code cho cuộc trò chuyện chỉ cần tư vấn.
 
 ## Context và reuse liên project
 
-Khi lập kế hoạch liên project/giai đoạn mới, đọc `planning/CURRENT-CONTEXT.md`; dùng `planning/CONTEXT-LIFECYCLE.md` khi compact hoặc bàn giao. Review worker/evidence trước compact; chưa đạt thì giữ lỗi, WIP, gate và bước resume trong bản ngắn. Nhãn compact khác nhãn complete. Reuse tài sản/knowledge/workflow trước; chỉ shared khi nhiều consumer thật và giảm maintenance. PLAN/ledger đang có worker giữ nguyên authority; không archive như complete khi còn gate. Archive chỉ đọc khi cần điều tra, không tự nạp toàn lịch sử. Root/model/concurrency của plan mới không thay worker đang chạy.
+Khi lập kế hoạch liên project/giai đoạn mới, đọc `planning/CURRENT-CONTEXT.md`; quy trình phân loại, cleanup, compact và bàn giao nằm trong `planning/CONTEXT-LIFECYCLE.md`. Mỗi loại thông tin có một owner: PLAN giữ scope/acceptance; ledger hoặc tracker mà PLAN chỉ định giữ trạng thái; checkpoint giữ bằng chứng. Với run MT5, `STATE.json` là export từ ledger, `RESUME.md` hướng dẫn tiếp tục; không sửa snapshot để tự công nhận task đạt. README/context chỉ điều hướng hoặc tóm tắt có nguồn, không tạo ledger cạnh tranh.
+
+Review worker/evidence trước compact; giữ lỗi, WIP, gate và bước resume. Compact/archive không có nghĩa complete. Không giành quyền ghi của worker đang chạy; archive chỉ đọc khi cần điều tra. Reuse tài sản/knowledge/workflow trước; chỉ shared khi nhiều consumer thật và giảm maintenance. Root/model/concurrency của plan mới không thay worker đang chạy.
 
 Khi user giao `planning/WORKSPACE-NEXT-STAGE-PLAN.md`, đọc profile và mọi execution override hiện hành trong PLAN/`planning/CURRENT-CONTEXT.md`, rồi áp dụng đúng scope của lần giao đó. Không hard-code tên model hoặc child cap trong rule này; nếu user ủy quyền một override rõ trong phiên hiện tại thì giữ override đó cho phiên, không tự sửa global config. Chưa được giao thì không chạy worker.
 
 ## Trading Workspace / điều phối agent
 
-Plan nguồn: `planning/mt5-tradingview-backtester/PLAN.md`; phân công và review ở mục 12B. Khi được yêu cầu chạy task qua CLI, đọc `tooling/agent-workflow/README.md` và `POLICY.md`; `roles.json` là cấu hình model/effort, `VALIDATION.md` ghi khả năng đã kiểm chứng. Ưu tiên runner/model mà profile và config hiện hành chỉ định; không tự đổi provider, model hoặc fallback để né gate. Tìm và reuse trước khi build mới. Mở workspace không cho phép tự chạy worker, sửa repo sản phẩm, giao dịch, merge hoặc deploy.
+MT5 nhận scope từ `planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md` → `EXECUTION-ENTRYPOINT.md` → nguồn trạng thái/receipt được dẫn tới; `PLAN.md` là index và lịch sử, giữ các phân công còn hiệu lực. UI theo `WMREPLAY-UI-MASTER-PLAN.md`, không khởi động lại exploration từ prompt cũ. Khi được yêu cầu chạy task qua CLI, đọc `tooling/agent-workflow/README.md` và `POLICY.md`; `roles.json` giữ cấu hình model/effort, `VALIDATION.md` giữ khả năng đã kiểm chứng. Ưu tiên runner/model mà profile hiện hành chỉ định; không tự đổi provider/model để né gate. Mở workspace không cho phép tự chạy worker, sửa repo sản phẩm, giao dịch, merge hoặc deploy.
 
 ## Học trading / Trading education
 

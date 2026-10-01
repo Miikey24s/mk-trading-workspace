@@ -1,0 +1,1175 @@
+{
+  "method": {
+    "pixel": {
+      "channelThreshold": 8,
+      "criterion": "pixel is changed when max RGB channel absolute difference > 8",
+      "acceptableRatio": 0.005,
+      "note": "threshold tolerates anti-aliasing/subpixel raster noise; identical-state screenshots are the baseline pair, not a product visual golden."
+    },
+    "geometry": {
+      "perCoordinateTolerancePx": 1,
+      "criterion": "all captured stable selector rect coordinates/dimensions remain within 1 CSS px",
+      "acceptableRatio": 0,
+      "note": "viewport/document dimensions are exact invariants."
+    },
+    "transition": "prefers-reduced-motion=reduce plus injected animation/transition/caret suppression; fonts awaited; 900 ms settle before capture and 120 ms between pair."
+  },
+  "states": [
+    {
+      "id": "overview-dark-1440x900",
+      "route": "/?view=overview&workspace=w8-screenshot-diff",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshots": [
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\overview-dark-1440x900-a.png",
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\overview-dark-1440x900-b.png"
+      ],
+      "geometryA": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "document": {
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 248,
+              "height": 836
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 248,
+              "y": 116,
+              "width": 1192,
+              "height": 784
+            }
+          ],
+          ".fx-content main": [],
+          "h1": [],
+          "[role=\"tablist\"]": [],
+          "tbody": [],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "geometryB": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "document": {
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 248,
+              "height": 836
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 248,
+              "y": 116,
+              "width": 1192,
+              "height": 784
+            }
+          ],
+          ".fx-content main": [],
+          "h1": [],
+          "[role=\"tablist\"]": [],
+          "tbody": [],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "title": "MT5 Trading Workspace · FX Replay",
+      "lang": "vi",
+      "themeValue": "dark",
+      "textFingerprint": "EN⌄ ☼ ? Testing Live Strategies Education Settings Dashboard Sessions Trades Analytics Backtesting session ⓘ Start a session Prop firm session ⓘ Start a challenge Tutorials ⓘ Learn more Performance ▥ Backtesting ⌄ ▣ Lifetime ⌄ Chưa có performance ledger cho phạm vi Backtesting; các chỉ số sẽ xuất hiện sau khi session có dữ liệu trade. Time Invested i — ◷ Historical time replayed i — Time Invested i No time invested yet. Trades taken i — Chưa có trade ledger ◉ Overall win rate i — Win Rate i No win rate yet. Trades by symbol i No trades by symbol yet. 1 datasets1 research jobs1 saved records"
+    },
+    {
+      "id": "overview-dark-390x844",
+      "route": "/?view=overview&workspace=w8-screenshot-diff",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshots": [
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\overview-dark-390x844-a.png",
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\overview-dark-390x844-b.png"
+      ],
+      "geometryA": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 844
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 74,
+              "height": 780
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 74,
+              "y": 116,
+              "width": 316,
+              "height": 728
+            }
+          ],
+          ".fx-content main": [],
+          "h1": [],
+          "[role=\"tablist\"]": [],
+          "tbody": [],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "geometryB": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 844
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 74,
+              "height": 780
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 74,
+              "y": 116,
+              "width": 316,
+              "height": 728
+            }
+          ],
+          ".fx-content main": [],
+          "h1": [],
+          "[role=\"tablist\"]": [],
+          "tbody": [],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "title": "MT5 Trading Workspace · FX Replay",
+      "lang": "vi",
+      "themeValue": "dark",
+      "textFingerprint": "WM EN⌄ ☼ ? Dashboard Sessions Trades Analytics Backtesting session ⓘ Start a session Prop firm session ⓘ Start a challenge Tutorials ⓘ Learn more Performance ▥ Backtesting ⌄ ▣ Lifetime ⌄ Chưa có performance ledger cho phạm vi Backtesting; các chỉ số sẽ xuất hiện sau khi session có dữ liệu trade. Time Invested i — ◷ Historical time replayed i — Time Invested i No time invested yet. Trades taken i — Chưa có trade ledger ◉ Overall win rate i — Win Rate i No win rate yet. Trades by symbol i No trades by symbol yet. 1 datasets1 research jobs1 saved records"
+    },
+    {
+      "id": "overview-light-1440x900",
+      "route": "/?view=overview&workspace=w8-screenshot-diff",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshots": [
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\overview-light-1440x900-a.png",
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\overview-light-1440x900-b.png"
+      ],
+      "geometryA": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "document": {
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 248,
+              "height": 836
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 248,
+              "y": 116,
+              "width": 1192,
+              "height": 784
+            }
+          ],
+          ".fx-content main": [],
+          "h1": [],
+          "[role=\"tablist\"]": [],
+          "tbody": [],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "geometryB": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "document": {
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 248,
+              "height": 836
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 248,
+              "y": 116,
+              "width": 1192,
+              "height": 784
+            }
+          ],
+          ".fx-content main": [],
+          "h1": [],
+          "[role=\"tablist\"]": [],
+          "tbody": [],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "title": "MT5 Trading Workspace · FX Replay",
+      "lang": "vi",
+      "themeValue": "light",
+      "textFingerprint": "EN⌄ ☾ ? Testing Live Strategies Education Settings Dashboard Sessions Trades Analytics Backtesting session ⓘ Start a session Prop firm session ⓘ Start a challenge Tutorials ⓘ Learn more Performance ▥ Backtesting ⌄ ▣ Lifetime ⌄ Chưa có performance ledger cho phạm vi Backtesting; các chỉ số sẽ xuất hiện sau khi session có dữ liệu trade. Time Invested i — ◷ Historical time replayed i — Time Invested i No time invested yet. Trades taken i — Chưa có trade ledger ◉ Overall win rate i — Win Rate i No win rate yet. Trades by symbol i No trades by symbol yet. 1 datasets1 research jobs1 saved records"
+    },
+    {
+      "id": "overview-light-390x844",
+      "route": "/?view=overview&workspace=w8-screenshot-diff",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshots": [
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\overview-light-390x844-a.png",
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\overview-light-390x844-b.png"
+      ],
+      "geometryA": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 844
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 74,
+              "height": 780
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 74,
+              "y": 116,
+              "width": 316,
+              "height": 728
+            }
+          ],
+          ".fx-content main": [],
+          "h1": [],
+          "[role=\"tablist\"]": [],
+          "tbody": [],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "geometryB": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 844
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 74,
+              "height": 780
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 74,
+              "y": 116,
+              "width": 316,
+              "height": 728
+            }
+          ],
+          ".fx-content main": [],
+          "h1": [],
+          "[role=\"tablist\"]": [],
+          "tbody": [],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "title": "MT5 Trading Workspace · FX Replay",
+      "lang": "vi",
+      "themeValue": "light",
+      "textFingerprint": "WM EN⌄ ☾ ? Dashboard Sessions Trades Analytics Backtesting session ⓘ Start a session Prop firm session ⓘ Start a challenge Tutorials ⓘ Learn more Performance ▥ Backtesting ⌄ ▣ Lifetime ⌄ Chưa có performance ledger cho phạm vi Backtesting; các chỉ số sẽ xuất hiện sau khi session có dữ liệu trade. Time Invested i — ◷ Historical time replayed i — Time Invested i No time invested yet. Trades taken i — Chưa có trade ledger ◉ Overall win rate i — Win Rate i No win rate yet. Trades by symbol i No trades by symbol yet. 1 datasets1 research jobs1 saved records"
+    },
+    {
+      "id": "analytics-dark-1440x900",
+      "route": "/?view=analytics&workspace=w8-screenshot-diff&job=large-fixture",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshots": [
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\analytics-dark-1440x900-a.png",
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\analytics-dark-1440x900-b.png"
+      ],
+      "geometryA": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "document": {
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 248,
+              "height": 836
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 248,
+              "y": 116,
+              "width": 1192,
+              "height": 784
+            }
+          ],
+          ".fx-content main": [
+            {
+              "x": 248,
+              "y": 116,
+              "width": 1192,
+              "height": 4240.469
+            }
+          ],
+          "h1": [
+            {
+              "x": 282,
+              "y": 169,
+              "width": 535.172,
+              "height": 43.688
+            }
+          ],
+          "[role=\"tablist\"]": [],
+          "tbody": [
+            {
+              "x": 283,
+              "y": 1819.531,
+              "width": 1122,
+              "height": 2100
+            }
+          ],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "geometryB": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "document": {
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 248,
+              "height": 836
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 248,
+              "y": 116,
+              "width": 1192,
+              "height": 784
+            }
+          ],
+          ".fx-content main": [
+            {
+              "x": 248,
+              "y": 116,
+              "width": 1192,
+              "height": 4240.469
+            }
+          ],
+          "h1": [
+            {
+              "x": 282,
+              "y": 169,
+              "width": 535.172,
+              "height": 43.688
+            }
+          ],
+          "[role=\"tablist\"]": [],
+          "tbody": [
+            {
+              "x": 283,
+              "y": 1819.531,
+              "width": 1122,
+              "height": 2100
+            }
+          ],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "title": "MT5 Trading Workspace · FX Replay",
+      "lang": "vi",
+      "themeValue": "dark",
+      "textFingerprint": "EN⌄ ☼ ? Testing Live Strategies Education Settings Dashboard Sessions Trades Analytics ANALYTICS / DATA STORY Analytics Đọc từ context → takeaway → bằng chứng → drill-down. Dữ liệu thiếu vẫn giữ nguyên là N/A. Research / local · broker locked RESEARCH JOB large-fixture REPLAY Không gắn session TRADE FOCUS Chưa chọn Mở Research Mở Journal FILTER / CLOSED TRADES Thu hẹp ledger trước khi đọc metric Ngày được hiểu theo UTC và chỉ áp dụng khi nguồn có close time. SIDE Tất cả BUY SELL OUTCOME Tất cả Thắng Thua Hòa vốn TỪ NGÀY (UTC) ĐẾN NGÀY (UTC) Xóa lọc Tải CSV Side: ALL · Outcome: all · Close: mọi"
+    },
+    {
+      "id": "analytics-dark-390x844",
+      "route": "/?view=analytics&workspace=w8-screenshot-diff&job=large-fixture",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshots": [
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\analytics-dark-390x844-a.png",
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\analytics-dark-390x844-b.png"
+      ],
+      "geometryA": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 844
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 74,
+              "height": 780
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 74,
+              "y": 116,
+              "width": 316,
+              "height": 728
+            }
+          ],
+          ".fx-content main": [
+            {
+              "x": 74,
+              "y": 116,
+              "width": 316,
+              "height": 5884.5
+            }
+          ],
+          "h1": [
+            {
+              "x": 92,
+              "y": 161,
+              "width": 280,
+              "height": 35.875
+            }
+          ],
+          "[role=\"tablist\"]": [],
+          "tbody": [
+            {
+              "x": 93,
+              "y": 3305.25,
+              "width": 720,
+              "height": 2050
+            }
+          ],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "geometryB": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 844
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 74,
+              "height": 780
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 74,
+              "y": 116,
+              "width": 316,
+              "height": 728
+            }
+          ],
+          ".fx-content main": [
+            {
+              "x": 74,
+              "y": 116,
+              "width": 316,
+              "height": 5884.5
+            }
+          ],
+          "h1": [
+            {
+              "x": 92,
+              "y": 161,
+              "width": 280,
+              "height": 35.875
+            }
+          ],
+          "[role=\"tablist\"]": [],
+          "tbody": [
+            {
+              "x": 93,
+              "y": 3305.25,
+              "width": 720,
+              "height": 2050
+            }
+          ],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "title": "MT5 Trading Workspace · FX Replay",
+      "lang": "vi",
+      "themeValue": "dark",
+      "textFingerprint": "WM EN⌄ ☼ ? Dashboard Sessions Trades Analytics ANALYTICS / DATA STORY Analytics Đọc từ context → takeaway → bằng chứng → drill-down. Dữ liệu thiếu vẫn giữ nguyên là N/A. Research / local · broker locked RESEARCH JOB large-fixture REPLAY Không gắn session TRADE FOCUS Chưa chọn Mở Research Mở Journal FILTER / CLOSED TRADES Thu hẹp ledger trước khi đọc metric Ngày được hiểu theo UTC và chỉ áp dụng khi nguồn có close time. SIDE Tất cả BUY SELL OUTCOME Tất cả Thắng Thua Hòa vốn TỪ NGÀY (UTC) ĐẾN NGÀY (UTC) Xóa lọc Tải CSV Side: ALL · Outcome: all · Close: mọi ngày → mọi ngày TAKEAWAY / ONE CLEAR RE"
+    },
+    {
+      "id": "analytics-light-1440x900",
+      "route": "/?view=analytics&workspace=w8-screenshot-diff&job=large-fixture",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshots": [
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\analytics-light-1440x900-a.png",
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\analytics-light-1440x900-b.png"
+      ],
+      "geometryA": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "document": {
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 248,
+              "height": 836
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 248,
+              "y": 116,
+              "width": 1192,
+              "height": 784
+            }
+          ],
+          ".fx-content main": [
+            {
+              "x": 248,
+              "y": 116,
+              "width": 1192,
+              "height": 4240.469
+            }
+          ],
+          "h1": [
+            {
+              "x": 282,
+              "y": 169,
+              "width": 535.172,
+              "height": 43.688
+            }
+          ],
+          "[role=\"tablist\"]": [],
+          "tbody": [
+            {
+              "x": 283,
+              "y": 1819.531,
+              "width": 1122,
+              "height": 2100
+            }
+          ],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "geometryB": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "document": {
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 248,
+              "height": 836
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 248,
+              "y": 116,
+              "width": 1192,
+              "height": 784
+            }
+          ],
+          ".fx-content main": [
+            {
+              "x": 248,
+              "y": 116,
+              "width": 1192,
+              "height": 4240.469
+            }
+          ],
+          "h1": [
+            {
+              "x": 282,
+              "y": 169,
+              "width": 535.172,
+              "height": 43.688
+            }
+          ],
+          "[role=\"tablist\"]": [],
+          "tbody": [
+            {
+              "x": 283,
+              "y": 1819.531,
+              "width": 1122,
+              "height": 2100
+            }
+          ],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "title": "MT5 Trading Workspace · FX Replay",
+      "lang": "vi",
+      "themeValue": "light",
+      "textFingerprint": "EN⌄ ☾ ? Testing Live Strategies Education Settings Dashboard Sessions Trades Analytics ANALYTICS / DATA STORY Analytics Đọc từ context → takeaway → bằng chứng → drill-down. Dữ liệu thiếu vẫn giữ nguyên là N/A. Research / local · broker locked RESEARCH JOB large-fixture REPLAY Không gắn session TRADE FOCUS Chưa chọn Mở Research Mở Journal FILTER / CLOSED TRADES Thu hẹp ledger trước khi đọc metric Ngày được hiểu theo UTC và chỉ áp dụng khi nguồn có close time. SIDE Tất cả BUY SELL OUTCOME Tất cả Thắng Thua Hòa vốn TỪ NGÀY (UTC) ĐẾN NGÀY (UTC) Xóa lọc Tải CSV Side: ALL · Outcome: all · Close: mọi"
+    },
+    {
+      "id": "analytics-light-390x844",
+      "route": "/?view=analytics&workspace=w8-screenshot-diff&job=large-fixture",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshots": [
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\analytics-light-390x844-a.png",
+        "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-SCREENSHOT-DIFF-20261001\\analytics-light-390x844-b.png"
+      ],
+      "geometryA": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 844
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 74,
+              "height": 780
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 74,
+              "y": 116,
+              "width": 316,
+              "height": 728
+            }
+          ],
+          ".fx-content main": [
+            {
+              "x": 74,
+              "y": 116,
+              "width": 316,
+              "height": 5884.5
+            }
+          ],
+          "h1": [
+            {
+              "x": 92,
+              "y": 161,
+              "width": 280,
+              "height": 35.875
+            }
+          ],
+          "[role=\"tablist\"]": [],
+          "tbody": [
+            {
+              "x": 93,
+              "y": 3305.25,
+              "width": 720,
+              "height": 2050
+            }
+          ],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "geometryB": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "selectors": {
+          "#root": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 844
+            }
+          ],
+          ".fx-shell": [],
+          ".fx-topbar": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 64
+            }
+          ],
+          ".fx-rail": [
+            {
+              "x": 0,
+              "y": 64,
+              "width": 74,
+              "height": 780
+            }
+          ],
+          ".fx-content": [
+            {
+              "x": 74,
+              "y": 116,
+              "width": 316,
+              "height": 728
+            }
+          ],
+          ".fx-content main": [
+            {
+              "x": 74,
+              "y": 116,
+              "width": 316,
+              "height": 5884.5
+            }
+          ],
+          "h1": [
+            {
+              "x": 92,
+              "y": 161,
+              "width": 280,
+              "height": 35.875
+            }
+          ],
+          "[role=\"tablist\"]": [],
+          "tbody": [
+            {
+              "x": 93,
+              "y": 3305.25,
+              "width": 720,
+              "height": 2050
+            }
+          ],
+          ".analytics-hero": [],
+          ".rd-panel-head": []
+        }
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "title": "MT5 Trading Workspace · FX Replay",
+      "lang": "vi",
+      "themeValue": "light",
+      "textFingerprint": "WM EN⌄ ☾ ? Dashboard Sessions Trades Analytics ANALYTICS / DATA STORY Analytics Đọc từ context → takeaway → bằng chứng → drill-down. Dữ liệu thiếu vẫn giữ nguyên là N/A. Research / local · broker locked RESEARCH JOB large-fixture REPLAY Không gắn session TRADE FOCUS Chưa chọn Mở Research Mở Journal FILTER / CLOSED TRADES Thu hẹp ledger trước khi đọc metric Ngày được hiểu theo UTC và chỉ áp dụng khi nguồn có close time. SIDE Tất cả BUY SELL OUTCOME Tất cả Thắng Thua Hòa vốn TỪ NGÀY (UTC) ĐẾN NGÀY (UTC) Xóa lọc Tải CSV Side: ALL · Outcome: all · Close: mọi ngày → mọi ngày TAKEAWAY / ONE CLEAR RE"
+    }
+  ],
+  "server": {
+    "origin": "http://127.0.0.1:5173",
+    "reused": true
+  },
+  "fixture": {
+    "overview": {
+      "schema_version": "overview-v1",
+      "counts": {
+        "datasets": 1,
+        "research_jobs": {
+          "completed": 1
+        },
+        "records": {
+          "journal": 0,
+          "sessions": 1
+        }
+      }
+    },
+    "analyticsRows": 5000
+  }
+}

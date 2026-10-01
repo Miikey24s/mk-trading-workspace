@@ -1,0 +1,42 @@
+{
+  "artifact_hashes": {
+    "ps01-real-service-1440.png": "325e2983adbd5006cebe7aa83fda4b3f87ed83b6e8b905fc49e30643e0e8464b",
+    "ps01-real-service-360.png": "d6925d3479771fee5f7a28ab3bf58a8be4e650202cd6c7f9eee24bf41996c5d1",
+    "ps01-real-service-768.png": "7fd42877d5a6e78629ad6baed5d0dd1e7ea171323d19e36bd85dce85037ec63a"
+  },
+  "checks": {
+    "backend_persistence_tests_pass": true,
+    "broker_execution_capability": false,
+    "postgres_attempt_persisted": true,
+    "postgres_session_persisted": true,
+    "real_service_browser_pass": true,
+    "vite_build_pass": true
+  },
+  "result": "PASS",
+  "schema": "PS01-ACCEPTANCE-r1",
+  "scope": "PS-01 local disposable PostgreSQL/API/Vite/Playwright; simulation only; no broker/live/holdout/provider action",
+  "ui": {
+    "attemptId": "attempt-muh2udd5-2qjca",
+    "checks": [
+      "initial_empty_state",
+      "simulation_only_lock",
+      "ui_atomic_create_session_and_attempt_via_real_api",
+      "postgres_persisted_ids",
+      "resume_update_persisted_before_reload",
+      "reload_resume_same_ids_and_updated_cursor",
+      "tenant_denial",
+      "mutations_prop_api_only",
+      "no_broker_execution_request",
+      "responsive_1440_768_360"
+    ],
+    "fixture": "ps01-real-service-postgres-api-vite",
+    "screenshots": [
+      "D:\\ANNAM\\TradingWorkspace\\projects\\_ps02c1_accept_9ff840b\\foundation_v2\\evidence\\ps02c1-exact-real-r1\\ps01-real-service-1440.png",
+      "D:\\ANNAM\\TradingWorkspace\\projects\\_ps02c1_accept_9ff840b\\foundation_v2\\evidence\\ps02c1-exact-real-r1\\ps01-real-service-768.png",
+      "D:\\ANNAM\\TradingWorkspace\\projects\\_ps02c1_accept_9ff840b\\foundation_v2\\evidence\\ps02c1-exact-real-r1\\ps01-real-service-360.png"
+    ],
+    "sessionId": "ps01-real-service-muh2udd5-2qjca",
+    "status": "PASS",
+    "workspace": "tenant-ps01-real"
+  }
+}

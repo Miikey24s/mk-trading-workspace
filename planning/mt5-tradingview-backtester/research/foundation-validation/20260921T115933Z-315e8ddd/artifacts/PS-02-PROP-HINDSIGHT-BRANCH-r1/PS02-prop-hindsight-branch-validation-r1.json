@@ -1,0 +1,62 @@
+{
+  "accepted_scope": [
+    "A hindsight Prop child attempt can only be created from a canonical historical Replay branch checkpoint whose immutable dataset, execution lineage, cursor, money, position and pending-order state match a persisted historical Prop checkpoint",
+    "The server derives the child attempt identity and branch provenance; the client cannot inject balance, equity, checkpoint state or an arbitrary child attempt id",
+    "Concurrent exact retries are idempotent and return one created child plus duplicates; reusing an operation id with different branch content fails closed",
+    "Parent Replay and Prop attempt state remain immutable while the child is rebound to the child Replay lineage and can resume deterministic stepping and lifecycle feeds",
+    "Tenant, Replay revision, parent Replay revision and parent Prop attempt revision are fenced; missing canonical checkpoints and foreign scope fail closed",
+    "Generic Prop attempt creation cannot forge hindsight branches, and nested hindsight branching remains rejected",
+    "Fresh disposable PostgreSQL regression evidence covers the exact source hashes with broker execution capability disabled"
+  ],
+  "base_revision": "65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+  "candidate_revision": "5a9710e3ea8c4874a5584722640d118e40be2304",
+  "checks": {
+    "broker_execution_capability": false,
+    "canonical_historical_checkpoint_required": true,
+    "child_resume_and_feed_pass": true,
+    "exact_changed_file_set_pass": true,
+    "exact_source_hash_match_pass": true,
+    "forged_and_nested_hindsight_branch_rejected": true,
+    "idempotent_concurrent_branch_creation": true,
+    "parent_immutability_pass": true,
+    "postgres_regression_pass": true,
+    "server_owned_child_identity_and_state": true,
+    "tenant_and_revision_fences_pass": true
+  },
+  "residual_scope": [
+    "Independent final review is still required before ledger acceptance",
+    "Lower-timeframe or tick intrabar equity path and broader D15 cross-asset, financing and calendar coverage",
+    "Prop branch comparison UI, objective charts, reports/export and Figma acceptance",
+    "Nested hindsight Prop branching is intentionally unsupported in this slice",
+    "Broker/demo/live, holdout, paid provider and deployment acceptance"
+  ],
+  "result": "PASS",
+  "retained_component": {
+    "path": "artifacts\\PS-02-PROP-HINDSIGHT-BRANCH-r1\\PS02C4-postgres-component-r1.json",
+    "sha256": "839fc74417c1813b01927bc3a8a7eacfd35f597e5a475e860f49e8affb77a454"
+  },
+  "schema": "PS02-PROP-HINDSIGHT-BRANCH-VALIDATION-r1",
+  "scope": "PS-02C4 canonical historical Prop checkpoint cloning onto a hindsight Replay branch; local simulation only",
+  "source_sha256": {
+    "foundation_v2/tests/test_ps02_replay_prop_connection.py": "86d17e9c5b33963ae969f82c7ea5cd01a976e1f0149b6d5d8b7c659f373c2a44",
+    "foundation_v2/trading_workspace_v2/api.py": "32a66b447bc38167e076fe6b89f285d680752ca0e60f78742016a9f54d8356ae",
+    "foundation_v2/trading_workspace_v2/prop_replay.py": "62690b38fb43e033718436bc584be5c3794886ae81f70111da4b0eef077209d5",
+    "foundation_v2/trading_workspace_v2/prop_session.py": "c393c035994b055982f7aec2c63270a16819f43630f9e02fa841a11721b44bd9",
+    "foundation_v2/trading_workspace_v2/replay.py": "87325b14f22b8fc6ec733a3b89209682f0a405c84b63b39c62081913897513bf",
+    "foundation_v2/trading_workspace_v2/store.py": "efe446305b82615c53ae9050971ce74fb608fbb66b0d58f26a96e4bbe5ddc358"
+  },
+  "task": "PS-02-PROP-HINDSIGHT-BRANCH-r1",
+  "tests": {
+    "modules": [
+      "foundation_v2.tests.test_ps00_prop_session_contract",
+      "foundation_v2.tests.test_ps01_prop_persistence",
+      "foundation_v2.tests.test_ps02_prop_lifecycle",
+      "foundation_v2.tests.test_f7_product_slice",
+      "foundation_v2.tests.test_u5b_protective_margin",
+      "foundation_v2.tests.test_replay_execution_core",
+      "foundation_v2.tests.test_ps02_replay_prop_connection"
+    ],
+    "return_code": 0,
+    "tests_run": 102
+  }
+}

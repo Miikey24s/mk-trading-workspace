@@ -1,0 +1,22 @@
+{
+  "acceptance": [
+    "Replay -> Learn -> Replay preserves the persisted replay session context",
+    "When no session exists, dataset/start fallback survives the Learn round trip",
+    "Learn denied/unavailable/error/safety states keep a contextual return path",
+    "Research -> Learn -> Research job context remains intact and Learn remains GET-only/read-only",
+    "fixture browser QA passes at 1440/768/360 and the Vite production build succeeds"
+  ],
+  "allowed_files": [
+    "foundation_v2/web/src/LearnWorkspace.jsx",
+    "foundation_v2/web/src/ReplayWorkspace.jsx",
+    "foundation_v2/web/run_learn_ui_acceptance.mjs"
+  ],
+  "base_revision": "459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c",
+  "candidate_revision": "22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+  "dependencies": [
+    "U3C-LEARN-BRIDGE-r1"
+  ],
+  "review_state": "independent_review_pending",
+  "safety": "Local/disposable or fixture validation only; no broker, MT5 execution, holdout opening, provider, paid API, deployment, or secret action.",
+  "task": "U3C-LEARN-REPLAY-CONTEXT-r1"
+}

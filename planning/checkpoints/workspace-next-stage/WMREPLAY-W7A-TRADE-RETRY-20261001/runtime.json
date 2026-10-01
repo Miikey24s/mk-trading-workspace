@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "fixture": "local-intercepted-trade-read-error-retry",
+  "origin": "http://127.0.0.1:4178",
+  "checks": [
+    "replay_and_dataset_503_are_explicit_unknown_states",
+    "both_gets_recover_on_single_retry",
+    "persistent_get_failures_stop_after_three_retries",
+    "simulator_context_stays_blocked_when_unknown",
+    "no_simulator_or_broker_posts",
+    "responsive_1440_390_no_overflow"
+  ],
+  "attempts": {
+    "retry": {
+      "replay": 2,
+      "dataset": 2
+    },
+    "cap": {
+      "replay": 4,
+      "dataset": 4
+    }
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/v2/replay/sessions/trade-retry"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/data/datasets"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/data/datasets",
+      "scenario": "retry"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/replay/sessions/trade-retry"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/data/datasets"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/data/datasets",
+      "scenario": "retry"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/replay/sessions/trade-cap"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/data/datasets"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/data/datasets",
+      "scenario": "cap"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/replay/sessions/trade-cap"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/replay/sessions/trade-cap"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/replay/sessions/trade-cap"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/data/datasets"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/data/datasets",
+      "scenario": "cap"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/data/datasets"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/data/datasets",
+      "scenario": "cap"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/data/datasets"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/data/datasets",
+      "scenario": "cap"
+    }
+  ],
+  "post_count": 0,
+  "console_errors": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+  ],
+  "server_errors": [],
+  "screenshots": [
+    "trade-unknown-1440.png",
+    "trade-ready-390.png",
+    "trade-retry-cap-390.png",
+    "trade-retry-trace.zip"
+  ]
+}

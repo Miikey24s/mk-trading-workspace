@@ -1,0 +1,35 @@
+{
+  "generated_at_utc": "2026-09-30T17:41:29.439Z",
+  "results": [
+    {
+      "reducedMotion": false,
+      "state": {
+        "lang": "en",
+        "theme": "light",
+        "overflow": 0,
+        "transitionDurations": [
+          "0.14s, 0.14s",
+          "0.14s, 0.14s",
+          "0.14s, 0.14s",
+          "0.14s, 0.14s"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "reducedMotion": true,
+      "state": {
+        "lang": "en",
+        "theme": "light",
+        "overflow": 0,
+        "transitionDurations": [
+          "1e-06s",
+          "1e-06s",
+          "1e-06s",
+          "1e-06s"
+        ]
+      },
+      "errors": []
+    }
+  ]
+}

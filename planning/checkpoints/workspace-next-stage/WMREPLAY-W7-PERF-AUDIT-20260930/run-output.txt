@@ -1,0 +1,808 @@
+{
+  "server": {
+    "port": 5173,
+    "reused": true,
+    "stderr": []
+  },
+  "routes": [
+    {
+      "name": "overview-small",
+      "url": "/?view=overview&workspace=w7-perf",
+      "base": {
+        "domNodes": 193,
+        "bodyHeight": 900,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "unnamedButtons": 0,
+        "unnamedLinks": 0,
+        "focusable": 18,
+        "rootLang": "vi",
+        "theme": "dark",
+        "routeHeading": "Performance",
+        "tableRows": 0,
+        "canvasCount": 0,
+        "svgCount": 10,
+        "scrollContainers": [
+          {
+            "selector": "fx-content",
+            "clientHeight": 784,
+            "scrollHeight": 899,
+            "overflowY": "auto"
+          },
+          {
+            "selector": "STRONG",
+            "clientHeight": 31,
+            "scrollHeight": 36,
+            "overflowY": "visible"
+          },
+          {
+            "selector": "STRONG",
+            "clientHeight": 31,
+            "scrollHeight": 36,
+            "overflowY": "visible"
+          },
+          {
+            "selector": "STRONG",
+            "clientHeight": 31,
+            "scrollHeight": 36,
+            "overflowY": "visible"
+          },
+          {
+            "selector": "STRONG",
+            "clientHeight": 31,
+            "scrollHeight": 36,
+            "overflowY": "visible"
+          },
+          {
+            "selector": "fx-dashboard-metric-title",
+            "clientHeight": 20,
+            "scrollHeight": 30,
+            "overflowY": "visible"
+          },
+          {
+            "selector": "fx-dashboard-metric-icon fx-dashboard-clock",
+            "clientHeight": 20,
+            "scrollHeight": 30,
+            "overflowY": "visible"
+          },
+          {
+            "selector": "fx-dashboard-metric-title",
+            "clientHeight": 20,
+            "scrollHeight": 27,
+            "overflowY": "visible"
+          }
+        ],
+        "firstTextSamples": [
+          "WM",
+          "EN⌄",
+          "☼",
+          "?",
+          "Testing",
+          "Live",
+          "Strategies",
+          "Education",
+          "Settings",
+          "Dashboard",
+          "Sessions",
+          "Trades",
+          "Analytics",
+          "ⓘ",
+          "Start a session",
+          "ⓘ",
+          "Start a challenge",
+          "ⓘ",
+          "Learn more",
+          "Performance",
+          "⌄",
+          "⌄",
+          "Chưa có performance ledger cho phạm vi Backtesting; các chỉ số sẽ xuất hiện sau ",
+          "Time Invested",
+          "i",
+          "—",
+          "◷",
+          "Historical time replayed",
+          "i",
+          "—",
+          "i",
+          "No time invested yet.",
+          "Trades taken",
+          "i",
+          "—",
+          "Chưa có trade ledger",
+          "◉",
+          "Overall win rate",
+          "i",
+          "—",
+          "i",
+          "No win rate yet.",
+          "i",
+          "No trades by symbol yet.",
+          "1 datasets",
+          "1 research jobs",
+          "1 saved records"
+        ],
+        "root": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        }
+      },
+      "themes": {
+        "before": {
+          "root": "dark",
+          "bg": "rgb(12, 14, 16)"
+        },
+        "contrastBefore": [
+          {
+            "selector": "h1",
+            "missing": true
+          },
+          {
+            "selector": "h2",
+            "text": "Performance",
+            "fg": "rgb(232, 237, 240)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 16.394328364696445
+          },
+          {
+            "selector": "p",
+            "text": "No time invested yet.",
+            "fg": "rgb(140, 151, 159)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 6.485109705255269
+          },
+          {
+            "selector": "button",
+            "text": "",
+            "fg": "rgb(176, 177, 180)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 9.018939288269854
+          },
+          {
+            "selector": "a",
+            "text": "Testing",
+            "fg": "rgb(255, 255, 255)",
+            "bg": "rgb(32, 34, 37)",
+            "ratio": 15.946050457830736
+          }
+        ],
+        "after": {
+          "root": "light",
+          "bg": "rgb(245, 247, 248)"
+        },
+        "contrastAfter": [
+          {
+            "selector": "h1",
+            "missing": true
+          },
+          {
+            "selector": "h2",
+            "text": "Performance",
+            "fg": "rgb(21, 32, 51)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 15.192689078871995
+          },
+          {
+            "selector": "p",
+            "text": "No time invested yet.",
+            "fg": "rgb(83, 99, 109)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 5.793112869594683
+          },
+          {
+            "selector": "button",
+            "text": "",
+            "fg": "rgb(176, 177, 180)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 1.9953433825395719
+          },
+          {
+            "selector": "a",
+            "text": "Testing",
+            "fg": "rgb(116, 123, 127)",
+            "bg": "rgb(32, 34, 37)",
+            "ratio": 3.707263496473402
+          }
+        ]
+      },
+      "zooms": {
+        "2": {
+          "scrollWidth": 720,
+          "viewportWidth": 720,
+          "overflow": false,
+          "bodyHeight": 900
+        },
+        "1.25": {
+          "scrollWidth": 1152,
+          "viewportWidth": 1152,
+          "overflow": false,
+          "bodyHeight": 900
+        }
+      },
+      "keyboard": {
+        "first": "Mở hoặc thu gọn điều hướng",
+        "visible": true,
+        "outline": "none",
+        "outlineWidth": "3px",
+        "boxShadow": "none"
+      },
+      "perf": {
+        "navMs": 1569,
+        "longTasks": [
+          {
+            "duration": 51,
+            "startTime": 128.30000000447035
+          }
+        ],
+        "maxLongTaskMs": 51,
+        "resourceCount": 50
+      },
+      "longSession": null,
+      "viewports": {
+        "390": {
+          "scrollWidth": 390,
+          "viewportWidth": 390,
+          "overflow": false,
+          "bodyHeight": 844
+        },
+        "768": {
+          "scrollWidth": 768,
+          "viewportWidth": 768,
+          "overflow": false,
+          "bodyHeight": 1024
+        },
+        "1280": {
+          "scrollWidth": 1280,
+          "viewportWidth": 1280,
+          "overflow": false,
+          "bodyHeight": 800
+        }
+      },
+      "screenshot": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W7-PERF-AUDIT-20260930\\overview-small-1440.png",
+      "trace": null,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "elapsedMs": 1793
+    },
+    {
+      "name": "analytics-large-5000",
+      "url": "/?view=analytics&workspace=w7-perf&job=large-fixture",
+      "base": {
+        "domNodes": 1272,
+        "bodyHeight": 900,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "unnamedButtons": 0,
+        "unnamedLinks": 0,
+        "focusable": 315,
+        "rootLang": "vi",
+        "theme": "dark",
+        "routeHeading": "Analytics",
+        "tableRows": 50,
+        "canvasCount": 0,
+        "svgCount": 8,
+        "scrollContainers": [
+          {
+            "selector": "fx-content",
+            "clientHeight": 784,
+            "scrollHeight": 4240,
+            "overflowY": "auto"
+          }
+        ],
+        "firstTextSamples": [
+          "WM",
+          "EN⌄",
+          "☼",
+          "?",
+          "Testing",
+          "Live",
+          "Strategies",
+          "Education",
+          "Settings",
+          "Dashboard",
+          "Sessions",
+          "Trades",
+          "Analytics",
+          "ANALYTICS / DATA STORY",
+          "Analytics",
+          "Đọc từ context → takeaway → bằng chứng → drill-down. Dữ liệu thiếu vẫn giữ nguyê",
+          "Research job",
+          "large-fixture",
+          "Replay",
+          "Không gắn session",
+          "Trade focus",
+          "Chưa chọn",
+          "Mở Research",
+          "Mở Journal",
+          "FILTER / CLOSED TRADES",
+          "Thu hẹp ledger trước khi đọc metric",
+          "Ngày được hiểu theo UTC và chỉ áp dụng khi nguồn có close time.",
+          "Side",
+          "Tất cả",
+          "BUY",
+          "SELL",
+          "Outcome",
+          "Tất cả",
+          "Thắng",
+          "Thua",
+          "Hòa vốn",
+          "Từ ngày (UTC)",
+          "Đến ngày (UTC)",
+          "Xóa lọc",
+          "Tải CSV",
+          "ALL",
+          "all",
+          "mọi ngày → mọi ngày",
+          "TAKEAWAY / ONE CLEAR READ",
+          "Kết quả đang dương 8.335 sau 5.000 trade đóng. Drawdown balance đóng lớn nhất là",
+          "Phạm vi: w7-large-fixture · fixture · research · 1 thg 1, 2024 → 8 thg 9, 2037. ",
+          "N = 5.000",
+          "Dataset",
+          "w7-large-fixture",
+          "Instrument",
+          "N/A",
+          "Timeframe",
+          "N/A",
+          "Strategy / playbook",
+          "fixture",
+          "Observed UTC",
+          "1 thg 1, 2024 → 8 thg 9, 2037",
+          "Timezone",
+          "UTC",
+          "Data quality",
+          "N/A",
+          "Trades in scope",
+          "5000",
+          "Trades total",
+          "5000",
+          "Balance basis",
+          "closed trades",
+          "Mode",
+          "Research / simulation",
+          "Broker",
+          "Locked",
+          "Net P/L",
+          "8.335",
+          "account units · net",
+          "research result",
+          "Win rate",
+          "33,3%",
+          "1.667 thắng · 1.667 thua · 1.666 hòa",
+          "derived from ledger",
+          "Trades"
+        ],
+        "root": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        }
+      },
+      "themes": {
+        "before": {
+          "root": "dark",
+          "bg": "rgb(12, 14, 16)"
+        },
+        "contrastBefore": [
+          {
+            "selector": "h1",
+            "text": "Analytics",
+            "fg": "rgb(240, 243, 245)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 17.352690908511185
+          },
+          {
+            "selector": "h2",
+            "text": "Kết quả đang dương 8.335 sau 5.000 trade đóng. Dra",
+            "fg": "rgb(241, 244, 245)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 17.49555285748689
+          },
+          {
+            "selector": "p",
+            "text": "Đọc từ context → takeaway → bằng chứng → drill-dow",
+            "fg": "rgb(160, 171, 178)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 8.253527141562992
+          },
+          {
+            "selector": "button",
+            "text": "",
+            "fg": "rgb(176, 177, 180)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 9.018939288269854
+          },
+          {
+            "selector": "a",
+            "text": "Testing",
+            "fg": "rgb(255, 255, 255)",
+            "bg": "rgb(32, 34, 37)",
+            "ratio": 15.946050457830736
+          }
+        ],
+        "after": {
+          "root": "light",
+          "bg": "rgb(245, 247, 248)"
+        },
+        "contrastAfter": [
+          {
+            "selector": "h1",
+            "text": "Analytics",
+            "fg": "rgb(29, 41, 48)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 13.839174600113385
+          },
+          {
+            "selector": "h2",
+            "text": "Kết quả đang dương 8.335 sau 5.000 trade đóng. Dra",
+            "fg": "rgb(29, 41, 48)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 13.839174600113385
+          },
+          {
+            "selector": "p",
+            "text": "Đọc từ context → takeaway → bằng chứng → drill-dow",
+            "fg": "rgb(83, 99, 109)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 5.793112869594683
+          },
+          {
+            "selector": "button",
+            "text": "",
+            "fg": "rgb(176, 177, 180)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 1.9953433825395719
+          },
+          {
+            "selector": "a",
+            "text": "Testing",
+            "fg": "rgb(41, 52, 59)",
+            "bg": "rgb(32, 34, 37)",
+            "ratio": 1.2518662084735253
+          }
+        ]
+      },
+      "zooms": {
+        "2": {
+          "scrollWidth": 720,
+          "viewportWidth": 720,
+          "overflow": false,
+          "bodyHeight": 900
+        },
+        "1.25": {
+          "scrollWidth": 1152,
+          "viewportWidth": 1152,
+          "overflow": false,
+          "bodyHeight": 900
+        }
+      },
+      "keyboard": {
+        "first": "Mở hoặc thu gọn điều hướng",
+        "visible": true,
+        "outline": "none",
+        "outlineWidth": "3px",
+        "boxShadow": "none"
+      },
+      "perf": {
+        "navMs": 7532,
+        "longTasks": [
+          {
+            "duration": 51,
+            "startTime": 163.59999999403954
+          },
+          {
+            "duration": 437,
+            "startTime": 343.29999999701977
+          },
+          {
+            "duration": 409,
+            "startTime": 2089.5999999940395
+          },
+          {
+            "duration": 418,
+            "startTime": 2618.7999999970198
+          },
+          {
+            "duration": 404,
+            "startTime": 3166.0999999940395
+          },
+          {
+            "duration": 397,
+            "startTime": 3769.0999999940395
+          },
+          {
+            "duration": 414,
+            "startTime": 4302.79999999702
+          },
+          {
+            "duration": 398,
+            "startTime": 4910.89999999851
+          },
+          {
+            "duration": 402,
+            "startTime": 5481.69999999553
+          },
+          {
+            "duration": 412,
+            "startTime": 6019.89999999851
+          },
+          {
+            "duration": 409,
+            "startTime": 6555.5
+          },
+          {
+            "duration": 417,
+            "startTime": 7087.29999999702
+          }
+        ],
+        "maxLongTaskMs": 437,
+        "resourceCount": 61
+      },
+      "longSession": {
+        "iterations": 10,
+        "before": {
+          "nodes": 1272,
+          "rows": 50,
+          "heap": 23100000
+        },
+        "after": {
+          "nodes": 1272,
+          "rows": 50,
+          "heap": 23100000
+        },
+        "nodeDelta": 0,
+        "heapDelta": 0
+      },
+      "viewports": {
+        "390": {
+          "scrollWidth": 390,
+          "viewportWidth": 390,
+          "overflow": false,
+          "bodyHeight": 844
+        },
+        "768": {
+          "scrollWidth": 768,
+          "viewportWidth": 768,
+          "overflow": false,
+          "bodyHeight": 1024
+        },
+        "1280": {
+          "scrollWidth": 1280,
+          "viewportWidth": 1280,
+          "overflow": false,
+          "bodyHeight": 800
+        }
+      },
+      "screenshot": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W7-PERF-AUDIT-20260930\\analytics-large-5000-1440.png",
+      "trace": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W7-PERF-AUDIT-20260930\\analytics-large-5000.trace.zip",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "elapsedMs": 8331
+    },
+    {
+      "name": "live-denied",
+      "url": "/?view=live&workspace=w7-perf",
+      "base": {
+        "domNodes": 152,
+        "bodyHeight": 900,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "unnamedButtons": 0,
+        "unnamedLinks": 0,
+        "focusable": 16,
+        "rootLang": "vi",
+        "theme": "dark",
+        "routeHeading": "Live workspace",
+        "tableRows": 0,
+        "canvasCount": 0,
+        "svgCount": 7,
+        "scrollContainers": [],
+        "firstTextSamples": [
+          "WM",
+          "EN⌄",
+          "☼",
+          "?",
+          "Testing",
+          "Live",
+          "Strategies",
+          "Education",
+          "Settings",
+          "Calendar",
+          "Trades",
+          "Notes",
+          "Tag analytics",
+          "Trading accounts",
+          "WORKSPACE / LIVE",
+          "Live workspace",
+          "Kiểm tra capability và snapshot read-only trước khi đưa bất kỳ dữ liệu nào vào w",
+          "BROKER LOCKED",
+          "w7-perf",
+          "Calendar",
+          "Read only",
+          "PREP_ONLY",
+          "—",
+          "Không đọc được live status",
+          "fixture unavailable",
+          "Thử lại",
+          "PERMISSION BOUNDARY",
+          "Live remains read-only",
+          "FAIL-CLOSED",
+          "Live có route để làm rõ trạng thái, không phải để mở execution authority. Mọi ca",
+          "Market feed",
+          "Chưa cấp",
+          "Account identity",
+          "Chưa cấp",
+          "Broker send",
+          "Đã khóa",
+          "Holdout / external write",
+          "PREP_ONLY",
+          "LIVE / CALENDAR",
+          "Market calendar",
+          "Lịch sự kiện chỉ hiển thị khi workspace có một market-data source đã được xác mi",
+          "READ ONLY",
+          "—",
+          "Chưa có market calendar source",
+          "Không tự tải dữ liệu thị trường ở màn này. Kết nối local hoặc dataset đã xác min",
+          "→",
+          "/api/v2/live/status"
+        ],
+        "root": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        }
+      },
+      "themes": {
+        "before": {
+          "root": "dark",
+          "bg": "rgb(12, 14, 16)"
+        },
+        "contrastBefore": [
+          {
+            "selector": "h1",
+            "text": "Live workspace",
+            "fg": "rgb(255, 255, 255)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 19.338266507480956
+          },
+          {
+            "selector": "h2",
+            "text": "Live remains read-only",
+            "fg": "rgb(255, 255, 255)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 19.338266507480956
+          },
+          {
+            "selector": "p",
+            "text": "Kiểm tra capability và snapshot read-only trước kh",
+            "fg": "rgb(176, 177, 180)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 9.018939288269854
+          },
+          {
+            "selector": "button",
+            "text": "",
+            "fg": "rgb(176, 177, 180)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 9.018939288269854
+          },
+          {
+            "selector": "a",
+            "text": "Testing",
+            "fg": "rgb(176, 177, 180)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 9.018939288269854
+          }
+        ],
+        "after": {
+          "root": "light",
+          "bg": "rgb(245, 247, 248)"
+        },
+        "contrastAfter": [
+          {
+            "selector": "h1",
+            "text": "Live workspace",
+            "fg": "rgb(29, 41, 48)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 13.839174600113385
+          },
+          {
+            "selector": "h2",
+            "text": "Live remains read-only",
+            "fg": "rgb(29, 41, 48)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 13.839174600113385
+          },
+          {
+            "selector": "p",
+            "text": "Kiểm tra capability và snapshot read-only trước kh",
+            "fg": "rgb(83, 99, 109)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 5.793112869594683
+          },
+          {
+            "selector": "button",
+            "text": "",
+            "fg": "rgb(176, 177, 180)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 1.9953433825395719
+          },
+          {
+            "selector": "a",
+            "text": "Testing",
+            "fg": "rgb(119, 129, 136)",
+            "bg": "rgba(0, 0, 0, 0)",
+            "ratio": 3.701182633367691
+          }
+        ]
+      },
+      "zooms": {
+        "2": {
+          "scrollWidth": 720,
+          "viewportWidth": 720,
+          "overflow": false,
+          "bodyHeight": 900
+        },
+        "1.25": {
+          "scrollWidth": 1152,
+          "viewportWidth": 1152,
+          "overflow": false,
+          "bodyHeight": 900
+        }
+      },
+      "keyboard": {
+        "first": "Mở hoặc thu gọn điều hướng",
+        "visible": true,
+        "outline": "none",
+        "outlineWidth": "3px",
+        "boxShadow": "none"
+      },
+      "perf": {
+        "navMs": 1500,
+        "longTasks": [
+          {
+            "duration": 50,
+            "startTime": 94.89999999850988
+          }
+        ],
+        "maxLongTaskMs": 50,
+        "resourceCount": 50
+      },
+      "longSession": null,
+      "viewports": {
+        "390": {
+          "scrollWidth": 390,
+          "viewportWidth": 390,
+          "overflow": false,
+          "bodyHeight": 844
+        },
+        "768": {
+          "scrollWidth": 768,
+          "viewportWidth": 768,
+          "overflow": false,
+          "bodyHeight": 1024
+        },
+        "1280": {
+          "scrollWidth": 1280,
+          "viewportWidth": 1280,
+          "overflow": false,
+          "bodyHeight": 800
+        }
+      },
+      "screenshot": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W7-PERF-AUDIT-20260930\\live-denied-1440.png",
+      "trace": null,
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      ],
+      "elapsedMs": 1720
+    }
+  ],
+  "largeFixture": {
+    "requestedRows": 5000
+  },
+  "observations": [],
+  "errors": []
+}

@@ -1,0 +1,18 @@
+{
+  "first": {
+    "rows": 50,
+    "circles": 240,
+    "drawdownBars": 240,
+    "pagination": "←\nTrang 1/10 · hiển thị 1–50 / 500\n→",
+    "overflow": false
+  },
+  "second": {
+    "rows": 50,
+    "pagination": "←\nTrang 2/10 · hiển thị 51–100 / 500\n→"
+  },
+  "mobile": {
+    "rows": 50,
+    "overflow": false
+  },
+  "errors": []
+}

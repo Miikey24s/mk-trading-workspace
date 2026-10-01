@@ -1,0 +1,2447 @@
+{
+  "generatedAt": "2026-09-30T18:05:28.728Z",
+  "tool": "Playwright + Chromium CDP",
+  "axeCore": {
+    "installed": false,
+    "reason": "axe-core is not present in the existing node_modules; no package was installed"
+  },
+  "server": {
+    "origin": "http://127.0.0.1:4192",
+    "startedByScript": true,
+    "stderr": []
+  },
+  "routes": [
+    {
+      "name": "overview",
+      "url": "/?view=overview&workspace=w8-a11y",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-A11Y-ZOOM-20261001\\overview-1440.png",
+      "tracePath": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-A11Y-ZOOM-20261001\\overview-1440.trace.zip",
+      "beforeZoom": {
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "dpr": 1,
+        "visualScale": 1,
+        "scrollWidth": 1440,
+        "bodyHeight": 900
+      },
+      "zoom": {
+        "attempted": true,
+        "before": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "dpr": 1,
+          "visualScale": 1,
+          "scrollWidth": 1440,
+          "bodyHeight": 900
+        },
+        "steps": [
+          {
+            "key": "Control+Equal",
+            "state": {
+              "innerWidth": 1440,
+              "dpr": 1,
+              "visualScale": 1,
+              "scrollWidth": 1440,
+              "overflow": false
+            }
+          },
+          {
+            "key": "Control+Equal",
+            "state": {
+              "innerWidth": 1440,
+              "dpr": 1,
+              "visualScale": 1,
+              "scrollWidth": 1440,
+              "overflow": false
+            }
+          },
+          {
+            "key": "Control+0",
+            "state": {
+              "innerWidth": 1440,
+              "dpr": 1,
+              "visualScale": 1,
+              "scrollWidth": 1440,
+              "overflow": false
+            }
+          }
+        ]
+      },
+      "zoomProxies": {
+        "125-percent-css-viewport": {
+          "viewportWidth": 1152,
+          "scrollWidth": 1152,
+          "overflow": false,
+          "bodyHeight": 900
+        },
+        "200-percent-css-viewport": {
+          "viewportWidth": 720,
+          "scrollWidth": 720,
+          "overflow": false,
+          "bodyHeight": 900
+        }
+      },
+      "final": {
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "overflow": false,
+        "focusables": 18
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "name": "Mở hoặc thu gọn điều hướng",
+        "visible": true,
+        "outline": "solid"
+      },
+      "a11y": {
+        "cdpAvailable": true,
+        "cdpError": null,
+        "nodeCount": 181,
+        "roleCounts": {
+          "RootWebArea": 1,
+          "generic": 14,
+          "banner": 1,
+          "complementary": 1,
+          "region": 2,
+          "image": 1,
+          "button": 6,
+          "link": 12,
+          "navigation": 1,
+          "StaticText": 60,
+          "InlineTextBox": 60,
+          "heading": 4,
+          "status": 1,
+          "article": 7,
+          "strong": 7,
+          "paragraph": 3
+        },
+        "sample": [
+          {
+            "role": "RootWebArea",
+            "name": "MT5 Trading Workspace · FX Replay",
+            "ignored": false
+          },
+          {
+            "role": "generic",
+            "name": "",
+            "ignored": false
+          },
+          {
+            "role": "banner",
+            "name": "",
+            "ignored": false
+          },
+          {
+            "role": "complementary",
+            "name": "Điều hướng chính WMREPLAY",
+            "ignored": false
+          },
+          {
+            "role": "region",
+            "name": "Nội dung WMREPLAY",
+            "ignored": false
+          },
+          {
+            "role": "image",
+            "name": "WMREPLAY",
+            "ignored": false
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "ignored": false
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "ignored": false
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Testing: Backtesting workspace",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Strategies: Quản lý chiến lược",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Education: Course và glossary",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Settings: Workspace và kết nối",
+            "ignored": false
+          },
+          {
+            "role": "navigation",
+            "name": "Điều hướng workspace",
+            "ignored": false
+          },
+          {
+            "role": "generic",
+            "name": "",
+            "ignored": false
+          },
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "EN⌄",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "?",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Testing",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Live",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Strategies",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Education",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Settings",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Dashboard",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Sessions",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Trades",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Analytics",
+            "ignored": false
+          },
+          {
+            "role": "region",
+            "name": "Dashboard",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "EN⌄",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "?",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "Testing",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "Live",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "Strategies",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "Education",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "Settings",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Dashboard",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Sessions",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Trades",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Analytics",
+            "ignored": false
+          }
+        ],
+        "dom": {
+          "duplicateIds": [],
+          "controls": [
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Mở hoặc thu gọn điều hướng",
+              "disabled": false
+            },
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Chuyển ngôn ngữ sang English",
+              "disabled": false
+            },
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Giao diện tối",
+              "disabled": false
+            },
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Mở phím tắt và trợ giúp",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Testing: Backtesting workspace",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Live: Theo dõi thị trường và tài khoản",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Strategies: Quản lý chiến lược",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Education: Course và glossary",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Settings: Workspace và kết nối",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Dashboard",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Sessions",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Trades",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Analytics",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Backtesting session ⓘStart a session",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Prop firm session ⓘStart a challenge",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Tutorials ⓘLearn more",
+              "disabled": false
+            },
+            {
+              "tag": "button",
+              "role": "",
+              "name": "▥ Backtesting ⌄",
+              "disabled": false
+            },
+            {
+              "tag": "button",
+              "role": "",
+              "name": "▣ Lifetime ⌄",
+              "disabled": false
+            }
+          ],
+          "unnamedControls": 0,
+          "headings": [
+            {
+              "level": 2,
+              "text": "Performance"
+            },
+            {
+              "level": 3,
+              "text": "Time Investedi"
+            },
+            {
+              "level": 3,
+              "text": "Win Ratei"
+            },
+            {
+              "level": 3,
+              "text": "Trades by symboli"
+            }
+          ],
+          "headingSkips": [],
+          "ariaHiddenFocusable": 0,
+          "landmarkCount": 3,
+          "lang": "vi"
+        }
+      },
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "name": "analytics",
+      "url": "/?view=analytics&workspace=w8-a11y&job=w8-fixture",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-A11Y-ZOOM-20261001\\analytics-1440.png",
+      "tracePath": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-A11Y-ZOOM-20261001\\analytics-1440.trace.zip",
+      "beforeZoom": {
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "dpr": 1,
+        "visualScale": 1,
+        "scrollWidth": 1440,
+        "bodyHeight": 900
+      },
+      "zoom": {
+        "attempted": true,
+        "before": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "dpr": 1,
+          "visualScale": 1,
+          "scrollWidth": 1440,
+          "bodyHeight": 900
+        },
+        "steps": [
+          {
+            "key": "Control+Equal",
+            "state": {
+              "innerWidth": 1440,
+              "dpr": 1,
+              "visualScale": 1,
+              "scrollWidth": 1440,
+              "overflow": false
+            }
+          },
+          {
+            "key": "Control+Equal",
+            "state": {
+              "innerWidth": 1440,
+              "dpr": 1,
+              "visualScale": 1,
+              "scrollWidth": 1440,
+              "overflow": false
+            }
+          },
+          {
+            "key": "Control+0",
+            "state": {
+              "innerWidth": 1440,
+              "dpr": 1,
+              "visualScale": 1,
+              "scrollWidth": 1440,
+              "overflow": false
+            }
+          }
+        ]
+      },
+      "zoomProxies": {
+        "125-percent-css-viewport": {
+          "viewportWidth": 1152,
+          "scrollWidth": 1152,
+          "overflow": false,
+          "bodyHeight": 900
+        },
+        "200-percent-css-viewport": {
+          "viewportWidth": 720,
+          "scrollWidth": 720,
+          "overflow": false,
+          "bodyHeight": 900
+        }
+      },
+      "final": {
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "overflow": false,
+        "focusables": 195
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "name": "Mở hoặc thu gọn điều hướng",
+        "visible": true,
+        "outline": "solid"
+      },
+      "a11y": {
+        "cdpAvailable": true,
+        "cdpError": null,
+        "nodeCount": 1816,
+        "roleCounts": {
+          "RootWebArea": 1,
+          "generic": 444,
+          "banner": 1,
+          "complementary": 2,
+          "region": 8,
+          "image": 2,
+          "button": 179,
+          "link": 14,
+          "navigation": 2,
+          "StaticText": 488,
+          "main": 1,
+          "InlineTextBox": 498,
+          "sectionheader": 1,
+          "heading": 6,
+          "paragraph": 5,
+          "DescriptionList": 3,
+          "strong": 12,
+          "LabelText": 4,
+          "term": 29,
+          "definition": 29,
+          "emphasis": 4,
+          "article": 1,
+          "table": 1,
+          "group": 2,
+          "combobox": 2,
+          "Date": 2,
+          "rowgroup": 1,
+          "DisclosureTriangle": 2,
+          "MenuListPopup": 2,
+          "row": 1,
+          "option": 7,
+          "columnheader": 6,
+          "code": 50,
+          "spinbutton": 6
+        },
+        "sample": [
+          {
+            "role": "RootWebArea",
+            "name": "MT5 Trading Workspace · FX Replay",
+            "ignored": false
+          },
+          {
+            "role": "generic",
+            "name": "",
+            "ignored": false
+          },
+          {
+            "role": "banner",
+            "name": "",
+            "ignored": false
+          },
+          {
+            "role": "complementary",
+            "name": "Điều hướng chính WMREPLAY",
+            "ignored": false
+          },
+          {
+            "role": "region",
+            "name": "Nội dung WMREPLAY",
+            "ignored": false
+          },
+          {
+            "role": "image",
+            "name": "WMREPLAY",
+            "ignored": false
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "ignored": false
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "ignored": false
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Testing: Backtesting workspace",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Strategies: Quản lý chiến lược",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Education: Course và glossary",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Settings: Workspace và kết nối",
+            "ignored": false
+          },
+          {
+            "role": "navigation",
+            "name": "Điều hướng workspace",
+            "ignored": false
+          },
+          {
+            "role": "generic",
+            "name": "",
+            "ignored": false
+          },
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "EN⌄",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "?",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Testing",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Live",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Strategies",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Education",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Settings",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Dashboard",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Sessions",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Trades",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Analytics",
+            "ignored": false
+          },
+          {
+            "role": "main",
+            "name": "",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "EN⌄",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "?",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "Testing",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "Live",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "Strategies",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "Education",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "Settings",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Dashboard",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Sessions",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Trades",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Analytics",
+            "ignored": false
+          }
+        ],
+        "dom": {
+          "duplicateIds": [],
+          "controls": [
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Mở hoặc thu gọn điều hướng",
+              "disabled": false
+            },
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Chuyển ngôn ngữ sang English",
+              "disabled": false
+            },
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Giao diện tối",
+              "disabled": false
+            },
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Mở phím tắt và trợ giúp",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Testing: Backtesting workspace",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Live: Theo dõi thị trường và tài khoản",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Strategies: Quản lý chiến lược",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Education: Course và glossary",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Settings: Workspace và kết nối",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Dashboard",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Sessions",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Trades",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Analytics",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Mở Research",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Mở Journal",
+              "disabled": false
+            },
+            {
+              "tag": "select",
+              "role": "",
+              "name": "Analytics side",
+              "disabled": false
+            },
+            {
+              "tag": "select",
+              "role": "",
+              "name": "Analytics outcome",
+              "disabled": false
+            },
+            {
+              "tag": "input",
+              "role": "",
+              "name": "Analytics from date",
+              "disabled": false
+            },
+            {
+              "tag": "input",
+              "role": "",
+              "name": "Analytics to date",
+              "disabled": false
+            },
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Xóa lọc",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Tải CSV",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-1, balance 1.012",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-2, balance 1.005",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-3, balance 1.005",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-4, balance 1.017",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-5, balance 1.010",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-6, balance 1.010",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-7, balance 1.022",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-8, balance 1.015",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-9, balance 1.015",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-10, balance 1.027",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-11, balance 1.020",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-12, balance 1.020",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-13, balance 1.032",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-14, balance 1.025",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-15, balance 1.025",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-16, balance 1.037",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-17, balance 1.030",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-18, balance 1.030",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-19, balance 1.042",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-20, balance 1.035",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-21, balance 1.035",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-22, balance 1.047",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-23, balance 1.040",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-24, balance 1.040",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-25, balance 1.052",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-26, balance 1.045",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-27, balance 1.045",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-28, balance 1.057",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-29, balance 1.050",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-30, balance 1.050",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-31, balance 1.062",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-32, balance 1.055",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-33, balance 1.055",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-34, balance 1.067",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-35, balance 1.060",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-36, balance 1.060",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-37, balance 1.072",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-38, balance 1.065",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-39, balance 1.065",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-40, balance 1.077",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-41, balance 1.070",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-42, balance 1.070",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-43, balance 1.082",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-44, balance 1.075",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-45, balance 1.075",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-46, balance 1.087",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-47, balance 1.080",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-48, balance 1.080",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-49, balance 1.092",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-50, balance 1.085",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-51, balance 1.085",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-52, balance 1.097",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-53, balance 1.090",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-54, balance 1.090",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-55, balance 1.102",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-56, balance 1.095",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-57, balance 1.095",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-58, balance 1.107",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-59, balance 1.100",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-60, balance 1.100",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-61, balance 1.112",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-62, balance 1.105",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-63, balance 1.105",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-64, balance 1.117",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-65, balance 1.110",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-66, balance 1.110",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-67, balance 1.122",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-68, balance 1.115",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-69, balance 1.115",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-70, balance 1.127",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-71, balance 1.120",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-72, balance 1.120",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-73, balance 1.132",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-74, balance 1.125",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-75, balance 1.125",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-76, balance 1.137",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-77, balance 1.130",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-78, balance 1.130",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-79, balance 1.142",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-80, balance 1.135",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-81, balance 1.135",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-82, balance 1.147",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-83, balance 1.140",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-84, balance 1.140",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-85, balance 1.152",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-86, balance 1.145",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-87, balance 1.145",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-88, balance 1.157",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-89, balance 1.150",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-90, balance 1.150",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-91, balance 1.162",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-92, balance 1.155",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-93, balance 1.155",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-94, balance 1.167",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-95, balance 1.160",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-96, balance 1.160",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-97, balance 1.172",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-98, balance 1.165",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-99, balance 1.165",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-100, balance 1.177",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-101, balance 1.170",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-102, balance 1.170",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-103, balance 1.182",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-104, balance 1.175",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-105, balance 1.175",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-106, balance 1.187",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-107, balance 1.180",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-108, balance 1.180",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-109, balance 1.192",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-110, balance 1.185",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-111, balance 1.185",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-112, balance 1.197",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-113, balance 1.190",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-114, balance 1.190",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-115, balance 1.202",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-116, balance 1.195",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-117, balance 1.195",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-118, balance 1.207",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-119, balance 1.200",
+              "disabled": false
+            },
+            {
+              "tag": "circle",
+              "role": "button",
+              "name": "w8-120, balance 1.200",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Mở Journal →",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-1",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-2",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-3",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-4",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-5",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-6",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-7",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-8",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-9",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-10",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-11",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-12",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-13",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-14",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-15",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-16",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-17",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-18",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-19",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-20",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-21",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-22",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-23",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-24",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-25",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-26",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-27",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-28",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-29",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-30",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-31",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-32",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-33",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-34",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-35",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-36",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-37",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-38",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-39",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-40",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-41",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-42",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-43",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-44",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-45",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-46",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-47",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-48",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-49",
+              "disabled": false
+            },
+            {
+              "tag": "tr",
+              "role": "button",
+              "name": "Chọn trade w8-50",
+              "disabled": false
+            },
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Trang trước",
+              "disabled": true
+            },
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Trang sau",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Về Research",
+              "disabled": false
+            }
+          ],
+          "unnamedControls": 0,
+          "headings": [
+            {
+              "level": 1,
+              "text": "Analytics"
+            },
+            {
+              "level": 2,
+              "text": "Kết quả đang dương 200 sau 120 trade đóng. Drawdown balance đóng lớn nhất là 7."
+            },
+            {
+              "level": 2,
+              "text": "Closed-trade balance"
+            },
+            {
+              "level": 2,
+              "text": "Nguồn và giới hạn"
+            },
+            {
+              "level": 2,
+              "text": "120 trade đóng"
+            },
+            {
+              "level": 2,
+              "text": "Chọn một điểm để tiếp tục review"
+            }
+          ],
+          "headingSkips": [],
+          "ariaHiddenFocusable": 0,
+          "landmarkCount": 7,
+          "lang": "vi"
+        }
+      },
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "name": "replay",
+      "url": "/?view=replay&surface=workspace&workspace=w8-a11y&session=w8-fixture&dataset=w8-fixture&cursor=3&mode=Practice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-A11Y-ZOOM-20261001\\replay-390.png",
+      "tracePath": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-A11Y-ZOOM-20261001\\replay-390.trace.zip",
+      "beforeZoom": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "dpr": 1,
+        "visualScale": 1,
+        "scrollWidth": 390,
+        "bodyHeight": 844
+      },
+      "zoom": {
+        "attempted": true,
+        "before": {
+          "innerWidth": 390,
+          "innerHeight": 844,
+          "dpr": 1,
+          "visualScale": 1,
+          "scrollWidth": 390,
+          "bodyHeight": 844
+        },
+        "steps": [
+          {
+            "key": "Control+Equal",
+            "state": {
+              "innerWidth": 390,
+              "dpr": 1,
+              "visualScale": 1,
+              "scrollWidth": 390,
+              "overflow": false
+            }
+          },
+          {
+            "key": "Control+Equal",
+            "state": {
+              "innerWidth": 390,
+              "dpr": 1,
+              "visualScale": 1,
+              "scrollWidth": 390,
+              "overflow": false
+            }
+          },
+          {
+            "key": "Control+0",
+            "state": {
+              "innerWidth": 390,
+              "dpr": 1,
+              "visualScale": 1,
+              "scrollWidth": 390,
+              "overflow": false
+            }
+          }
+        ]
+      },
+      "zoomProxies": {
+        "125-percent-css-viewport": {
+          "viewportWidth": 312,
+          "scrollWidth": 312,
+          "overflow": false,
+          "bodyHeight": 844
+        },
+        "200-percent-css-viewport": {
+          "viewportWidth": 195,
+          "scrollWidth": 195,
+          "overflow": false,
+          "bodyHeight": 844
+        }
+      },
+      "final": {
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "overflow": false,
+        "focusables": 16
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "name": "Mở hoặc thu gọn điều hướng",
+        "visible": true,
+        "outline": "solid"
+      },
+      "a11y": {
+        "cdpAvailable": true,
+        "cdpError": null,
+        "nodeCount": 88,
+        "roleCounts": {
+          "RootWebArea": 1,
+          "generic": 6,
+          "banner": 1,
+          "complementary": 1,
+          "region": 2,
+          "image": 1,
+          "button": 4,
+          "link": 11,
+          "navigation": 1,
+          "StaticText": 21,
+          "main": 1,
+          "InlineTextBox": 28,
+          "sectionheader": 1,
+          "heading": 2,
+          "paragraph": 2,
+          "strong": 1,
+          "LabelText": 1,
+          "combobox": 1,
+          "MenuListPopup": 1,
+          "option": 1
+        },
+        "sample": [
+          {
+            "role": "RootWebArea",
+            "name": "MT5 Trading Workspace · FX Replay",
+            "ignored": false
+          },
+          {
+            "role": "generic",
+            "name": "",
+            "ignored": false
+          },
+          {
+            "role": "banner",
+            "name": "",
+            "ignored": false
+          },
+          {
+            "role": "complementary",
+            "name": "Điều hướng chính WMREPLAY",
+            "ignored": false
+          },
+          {
+            "role": "region",
+            "name": "Nội dung WMREPLAY",
+            "ignored": false
+          },
+          {
+            "role": "image",
+            "name": "WMREPLAY",
+            "ignored": false
+          },
+          {
+            "role": "button",
+            "name": "Chuyển ngôn ngữ sang English",
+            "ignored": false
+          },
+          {
+            "role": "button",
+            "name": "Giao diện tối",
+            "ignored": false
+          },
+          {
+            "role": "button",
+            "name": "Mở phím tắt và trợ giúp",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Testing: Backtesting workspace",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Live: Theo dõi thị trường và tài khoản",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Strategies: Quản lý chiến lược",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Education: Course và glossary",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Settings: Workspace và kết nối",
+            "ignored": false
+          },
+          {
+            "role": "navigation",
+            "name": "Điều hướng workspace",
+            "ignored": false
+          },
+          {
+            "role": "generic",
+            "name": "",
+            "ignored": false
+          },
+          {
+            "role": "button",
+            "name": "Mở hoặc thu gọn điều hướng",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "EN⌄",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "?",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Dashboard",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Sessions",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Trades",
+            "ignored": false
+          },
+          {
+            "role": "link",
+            "name": "Analytics",
+            "ignored": false
+          },
+          {
+            "role": "main",
+            "name": "",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "EN⌄",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "?",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Dashboard",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Sessions",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Trades",
+            "ignored": false
+          },
+          {
+            "role": "StaticText",
+            "name": "Analytics",
+            "ignored": false
+          },
+          {
+            "role": "sectionheader",
+            "name": "",
+            "ignored": false
+          },
+          {
+            "role": "region",
+            "name": "Mở replay",
+            "ignored": false
+          },
+          {
+            "role": "generic",
+            "name": "",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "Dashboard",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "Sessions",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "Trades",
+            "ignored": false
+          },
+          {
+            "role": "InlineTextBox",
+            "name": "Analytics",
+            "ignored": false
+          },
+          {
+            "role": "generic",
+            "name": "",
+            "ignored": false
+          },
+          {
+            "role": "heading",
+            "name": "Practice · Replay",
+            "ignored": false
+          },
+          {
+            "role": "paragraph",
+            "name": "",
+            "ignored": false
+          }
+        ],
+        "dom": {
+          "duplicateIds": [],
+          "controls": [
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Mở hoặc thu gọn điều hướng",
+              "disabled": false
+            },
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Chuyển ngôn ngữ sang English",
+              "disabled": false
+            },
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Giao diện tối",
+              "disabled": false
+            },
+            {
+              "tag": "button",
+              "role": "",
+              "name": "Mở phím tắt và trợ giúp",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Testing: Backtesting workspace",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Live: Theo dõi thị trường và tài khoản",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Strategies: Quản lý chiến lược",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Education: Course và glossary",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Settings: Workspace và kết nối",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Dashboard",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Sessions",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Trades",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Analytics",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Học & thuật ngữ",
+              "disabled": false
+            },
+            {
+              "tag": "select",
+              "role": "",
+              "name": "Datasetw8-fixture · đang kiểm tra",
+              "disabled": false
+            },
+            {
+              "tag": "a",
+              "role": "",
+              "name": "Mở Data Desk →",
+              "disabled": false
+            }
+          ],
+          "unnamedControls": 0,
+          "headings": [
+            {
+              "level": 1,
+              "text": "Practice · Replay"
+            },
+            {
+              "level": 2,
+              "text": "Mở chart để bắt đầu replay"
+            }
+          ],
+          "headingSkips": [],
+          "ariaHiddenFocusable": 0,
+          "landmarkCount": 5,
+          "lang": "vi"
+        }
+      },
+      "pageErrors": [],
+      "consoleErrors": []
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "pageErrors": 0,
+    "consoleErrors": 0,
+    "overflowCases": [],
+    "nativeZoomObserved": false,
+    "unnamedControlCases": [],
+    "ariaHiddenFocusableCases": [],
+    "headingSkipCases": []
+  }
+}

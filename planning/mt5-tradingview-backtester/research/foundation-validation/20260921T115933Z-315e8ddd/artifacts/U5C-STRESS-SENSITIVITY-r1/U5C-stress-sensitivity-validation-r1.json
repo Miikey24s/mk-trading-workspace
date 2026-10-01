@@ -1,0 +1,43 @@
+{
+  "accepted_scope": [
+    "U5c normalizes a deterministic bounded cost/fill stress matrix with a base scenario plus at most seven declared scenarios and rejects no-op, duplicate, unknown-field and out-of-bound multipliers",
+    "The declared sweep multiplied by stress scenarios is bounded before execution and rejects more than 10000 combinations",
+    "Stress identity is pinned into the validation protocol by a canonical SHA-256 and rehashed tampering fails closed",
+    "Every stress run remains pre-holdout; the planner and worker never authorize holdout content access",
+    "Stress modifies only declared cost/fill assumptions for each fold and records all scenario outcomes without ranking or selecting a winner",
+    "Runtime budget/cancel checks still fence the expanded matrix",
+    "Focused U5c regression passes 19 tests plus 2 subtests on the exact candidate source"
+  ],
+  "base_revision": "1c4b7d6172b57e6774e5bca2fcafcba1a694c103",
+  "candidate_revision": "65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+  "checks": {
+    "exact_changed_file_set_pass": true,
+    "exact_source_hash_match_pass": true,
+    "focused_pytest_pass": true,
+    "holdout_access": false,
+    "ranking_or_winner_selection": false,
+    "stress_matrix_bounded_and_deterministic": true
+  },
+  "residual_scope": [
+    "Fresh disposable PostgreSQL plus isolated Nautilus end-to-end validation for this stress candidate",
+    "Independent final review before ledger acceptance",
+    "Regime segmentation/sensitivity beyond declared cost/fill scenarios",
+    "Approved real-data OOS evidence and any later owner-approved holdout evaluation",
+    "Broker/demo/live, provider and deployment acceptance"
+  ],
+  "result": "PASS",
+  "schema": "U5C-STRESS-SENSITIVITY-VALIDATION-r1",
+  "scope": "Focused exact-source validation of bounded U5c cost/fill stress sensitivity; no real-data or holdout opening",
+  "source_sha256": {
+    "foundation_v2/tests/test_u5c_oos.py": "bb1497898b28f7900f8ea082b2fe04f89912d1ebeef7a9026f802c6b0846e84b",
+    "foundation_v2/trading_workspace_v2/research.py": "123cdd24d6d67ac30e4bbce465781b488fcb5983e8157a663e915d051c6b5183",
+    "foundation_v2/trading_workspace_v2/research_oos.py": "c01be3c0df3c0008ca62e056065d76bff12669b72d73beeb88b6536917faaa27"
+  },
+  "task": "U5C-STRESS-SENSITIVITY-r1",
+  "tests": {
+    "command": "uv run --project . --with pytest python -m pytest tests/test_u5c_oos.py -q",
+    "return_code": 0,
+    "subtests_run": 2,
+    "tests_run": 19
+  }
+}

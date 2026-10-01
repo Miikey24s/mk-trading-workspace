@@ -1,0 +1,34 @@
+{
+  "acceptance": [
+    "Prop session lifecycle status and attempt lifecycle status/phase index are server-owned rather than arbitrary resume/session writes",
+    "start, pause, resume and abandon lifecycle commands are tenant-scoped, revision-fenced, event-sequence-fenced and idempotent",
+    "Session status remains synchronized with its single active attempt; only one active attempt exists per session and restart requires a terminal parent",
+    "Delayed exact transition/event retries return self-consistent snapshots while stale or tampered intents fail closed",
+    "Pause and resume do not advance simulator virtual time or event sequence",
+    "Replay-bound next_phase remains fail-closed until canonical Replay phase reset/carry support exists",
+    "Real PostgreSQL/API/Vite/Playwright regression passes at 1440, 768 and 360 widths with broker execution capability disabled"
+  ],
+  "allowed_files": [
+    "foundation_v2/tests/test_ps01_prop_persistence.py",
+    "foundation_v2/tests/test_ps02_prop_lifecycle.py",
+    "foundation_v2/trading_workspace_v2/api.py",
+    "foundation_v2/trading_workspace_v2/prop_session.py",
+    "foundation_v2/trading_workspace_v2/store.py",
+    "foundation_v2/web/run_prop_ui_real_acceptance.mjs"
+  ],
+  "base_revision": "8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68",
+  "candidate_revision": "9ff840b1dd055a02803e1db38138bf039ca349e3",
+  "dependencies": [
+    "PS-02-REPLAY-CONNECTION-r1"
+  ],
+  "residual_scope": [
+    "canonical multi-phase Replay reset/carry transitions",
+    "execution rewind/checkpoint reconstruction",
+    "lower-timeframe/tick intrabar equity path and broader D15 quality fixtures",
+    "Prop product lifecycle controls, objective charts and broader UI acceptance",
+    "D17 reports/export/sample denominators and Figma acceptance",
+    "broker/demo/live, holdout, paid provider and deployment acceptance"
+  ],
+  "safety": "Local simulation-only lifecycle authority; no broker/live/provider/holdout/deploy capability.",
+  "task": "PS-02-LIFECYCLE-AUTHORITY-r1"
+}

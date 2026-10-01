@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "audit_date_local": "2026-10-01T00:05:56.6787156+07:00",
+  "audit_date_utc": "2026-09-30T17:05:56.6820156Z",
+  "scope": "read_only_retained_job12_audit",
+  "job_id": "job-8dc51f8a892aba21",
+  "source": {
+    "path": "projects/vi-dubber/work/youtube/IXSu0MClr34.mp4",
+    "bytes": 1879628959,
+    "sha256": "8dc51f8a892aba2103728a8d2360b30f9a6319d5015ff8fd00ef4bdbc4b08ddf"
+  },
+  "state": {
+    "path": "projects/vi-dubber/work/job-8dc51f8a892aba21/state.json",
+    "status": "completed",
+    "stage": "complete",
+    "progress": 1.0,
+    "updated_at": "2026-09-29T04:46:47.747373+00:00",
+    "duration_seconds": 42831.561,
+    "segments": 4277,
+    "overflow_segments": 43,
+    "completed_chunks": 28,
+    "total_chunks": 28
+  },
+  "output": {
+    "path": "projects/vi-dubber/work/outputs/IXSu0MClr34_vi.mp4",
+    "bytes": 2279943309,
+    "sha256": "ec8f4b843013d62d9d0f80d49f84ca86c4ebfe176346d9f3299c7ca692070548",
+    "job_copy_sha256": "ec8f4b843013d62d9d0f80d49f84ca86c4ebfe176346d9f3299c7ca692070548",
+    "byte_identical_to_job_copy": true,
+    "ffprobe": {
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "video": "av1 1920x1080 42831.550s",
+      "audio": "aac 48000Hz stereo 42831.548s"
+    }
+  },
+  "subtitle": {
+    "path": "projects/vi-dubber/work/outputs/IXSu0MClr34_vi.vi.srt",
+    "cues": 4277,
+    "ids_contiguous": true,
+    "timestamps_monotonic": true,
+    "last_end_seconds": 42827.745
+  },
+  "qa": {
+    "path": "projects/vi-dubber/work/job-8dc51f8a892aba21/qa.json",
+    "passed": false,
+    "global_passed": null,
+    "full_track_skipped": true,
+    "mode": "risk_segments",
+    "similarity": 0.9494095104116151,
+    "threshold": 0.78,
+    "segments_checked": 4277,
+    "initial_failed": 123,
+    "final_failed": 122,
+    "repairs_attempted": 2,
+    "repairs_completed": 2,
+    "reason_counts_final": {
+      "missing_critical": 71,
+      "timing_overflow": 43,
+      "severe_transcript_mismatch": 17,
+      "transcript_mismatch": 8
+    },
+    "terminology_passed": true,
+    "mix_loudness_passed": true,
+    "mix_true_peak_passed": true
+  },
+  "runtime": {
+    "run_lock_found": false,
+    "matching_process_found": false,
+    "provider_port_17850_listening": false,
+    "local_qwen_port_8091_listening": false
+  },
+  "action_taken": "none; no provider/login/resume/cache/receipt/lock/output mutation"
+}

@@ -1,0 +1,2004 @@
+{
+  "status": "SPIKE_NON_ACCEPTANCE",
+  "sourceModeUnchanged": true,
+  "transform": [
+    {
+      "url": "http://127.0.0.1:4199/src/FxReplayShell.jsx",
+      "count": 1,
+      "originalBytes": 128667
+    },
+    {
+      "url": "http://127.0.0.1:4199/src/FxReplayShell.jsx",
+      "count": 1,
+      "originalBytes": 128667
+    },
+    {
+      "url": "http://127.0.0.1:4199/src/FxReplayShell.jsx",
+      "count": 1,
+      "originalBytes": 128667
+    }
+  ],
+  "fixture": {
+    "rows": 5000,
+    "cutoffIndex": 3999,
+    "visibleRows": 4000,
+    "futureRows": 1000,
+    "futureMarker": "9.999999"
+  },
+  "route": "http://127.0.0.1:4199/?view=replay&workspace=tenant-fullbleed&session=fullbleed-spike-fixture&surface=workspace",
+  "viewports": {
+    "desktop": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "shellClass": "fx-app fx-shell-story  is-chart-workspace is-chart-route",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900,
+        "display": "grid",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "topbar": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 46,
+        "display": "grid",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "topbarLeft": {
+        "x": 10,
+        "y": 7.5,
+        "width": 621.4375,
+        "height": 30,
+        "display": "flex",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 621,
+        "clientWidth": 621
+      },
+      "topbarActions": {
+        "x": 808.546875,
+        "y": 7.5,
+        "width": 621.453125,
+        "height": 30,
+        "display": "flex",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 621,
+        "clientWidth": 621
+      },
+      "rail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 0,
+        "clientWidth": 0
+      },
+      "main": {
+        "x": 0,
+        "y": 46,
+        "width": 1440,
+        "height": 854,
+        "display": "flex",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "content": {
+        "x": 0,
+        "y": 46,
+        "width": 1440,
+        "height": 854,
+        "display": "block",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "context": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "overflowX": "auto",
+        "overflowY": "auto",
+        "scrollWidth": 0,
+        "clientWidth": 0
+      },
+      "toolbar": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 0,
+        "clientWidth": 0
+      },
+      "chartFrame": {
+        "x": 0,
+        "y": 46,
+        "width": 1440,
+        "height": 808,
+        "display": "grid",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "chart": {
+        "x": 50,
+        "y": 46,
+        "width": 1336,
+        "height": 807,
+        "display": "block",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 1336,
+        "clientWidth": 1336
+      },
+      "chartCanvas": {
+        "x": 50,
+        "y": 46,
+        "width": 1336,
+        "height": 807,
+        "display": "block",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 1336,
+        "clientWidth": 1336
+      },
+      "bottomBar": {
+        "x": 0,
+        "y": 854,
+        "width": 1440,
+        "height": 46,
+        "display": "grid",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 1438,
+        "clientWidth": 1438
+      },
+      "canvasCount": 7,
+      "visibleRows": "4000",
+      "futureMarkerInText": false,
+      "cutoffVisible": true,
+      "brokerLockVisible": false,
+      "documentOverflowX": 0,
+      "documentOverflowY": 0,
+      "controlCount": 36,
+      "controlBoxes": [
+        {
+          "name": "Quay lại Sessions",
+          "x": 10,
+          "right": 38,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Tiến nhanh",
+          "x": 138.640625,
+          "right": 166.640625,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Thêm chart",
+          "x": 174.640625,
+          "right": 202.640625,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Khung thời gian",
+          "x": 210.640625,
+          "right": 244.640625,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Indicators",
+          "x": 252.640625,
+          "right": 335.96875,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Order flow",
+          "x": 343.96875,
+          "right": 431.703125,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Analytics",
+          "x": 439.703125,
+          "right": 517.234375,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Undo",
+          "x": 1160.6875,
+          "right": 1188.6875,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Redo",
+          "x": 1196.6875,
+          "right": 1224.6875,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Chuyển ngôn ngữ sang English",
+          "x": 1232.6875,
+          "right": 1280,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Giao diện tối",
+          "x": 1288,
+          "right": 1350,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Mở phím tắt và trợ giúp",
+          "x": 1358,
+          "right": 1390,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Fullscreen",
+          "x": 1398,
+          "right": 1430,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Crosshair",
+          "x": 9.5,
+          "right": 39.5,
+          "y": 55,
+          "bottom": 85,
+          "disabled": false
+        },
+        {
+          "name": "Trend line",
+          "x": 9.5,
+          "right": 39.5,
+          "y": 88,
+          "bottom": 118,
+          "disabled": false
+        },
+        {
+          "name": "Horizontal line",
+          "x": 9.5,
+          "right": 39.5,
+          "y": 121,
+          "bottom": 151,
+          "disabled": false
+        },
+        {
+          "name": "Shapes",
+          "x": 9.5,
+          "right": 39.5,
+          "y": 154,
+          "bottom": 184,
+          "disabled": false
+        },
+        {
+          "name": "Text annotation",
+          "x": 9.5,
+          "right": 39.5,
+          "y": 187,
+          "bottom": 217,
+          "disabled": false
+        },
+        {
+          "name": "Measure",
+          "x": 9.5,
+          "right": 39.5,
+          "y": 220,
+          "bottom": 250,
+          "disabled": false
+        },
+        {
+          "name": "Orders (locked)",
+          "x": 1398.5,
+          "right": 1428.5,
+          "y": 55,
+          "bottom": 85,
+          "disabled": true
+        },
+        {
+          "name": "Object tree",
+          "x": 1398.5,
+          "right": 1428.5,
+          "y": 88,
+          "bottom": 118,
+          "disabled": false
+        },
+        {
+          "name": "Watchlist",
+          "x": 1398.5,
+          "right": 1428.5,
+          "y": 121,
+          "bottom": 151,
+          "disabled": false
+        },
+        {
+          "name": "Journal",
+          "x": 1398.5,
+          "right": 1428.5,
+          "y": 154,
+          "bottom": 184,
+          "disabled": false
+        },
+        {
+          "name": "News",
+          "x": 1398.5,
+          "right": 1428.5,
+          "y": 187,
+          "bottom": 217,
+          "disabled": false
+        },
+        {
+          "name": "1D",
+          "x": 11,
+          "right": 40,
+          "y": 862.5,
+          "bottom": 890.5,
+          "disabled": false
+        },
+        {
+          "name": "5D",
+          "x": 44,
+          "right": 73,
+          "y": 862.5,
+          "bottom": 890.5,
+          "disabled": false
+        },
+        {
+          "name": "1M",
+          "x": 77,
+          "right": 106,
+          "y": 862.5,
+          "bottom": 890.5,
+          "disabled": false
+        },
+        {
+          "name": "3M",
+          "x": 110,
+          "right": 139,
+          "y": 862.5,
+          "bottom": 890.5,
+          "disabled": false
+        },
+        {
+          "name": "6M",
+          "x": 143,
+          "right": 172,
+          "y": 862.5,
+          "bottom": 890.5,
+          "disabled": false
+        },
+        {
+          "name": "1Y",
+          "x": 176,
+          "right": 205,
+          "y": 862.5,
+          "bottom": 890.5,
+          "disabled": false
+        },
+        {
+          "name": "All",
+          "x": 209,
+          "right": 238,
+          "y": 862.5,
+          "bottom": 890.5,
+          "disabled": false
+        },
+        {
+          "name": "Về nến đầu tiên",
+          "x": 569.328125,
+          "right": 598.328125,
+          "y": 862.5,
+          "bottom": 890.5,
+          "disabled": false
+        },
+        {
+          "name": "Lùi một nến",
+          "x": 603.328125,
+          "right": 632.328125,
+          "y": 862.5,
+          "bottom": 890.5,
+          "disabled": false
+        },
+        {
+          "name": "Phát replay",
+          "x": 637.328125,
+          "right": 727.328125,
+          "y": 862.5,
+          "bottom": 890.5,
+          "disabled": true
+        },
+        {
+          "name": "Tiến một nến",
+          "x": 732.328125,
+          "right": 761.328125,
+          "y": 862.5,
+          "bottom": 890.5,
+          "disabled": true
+        },
+        {
+          "name": "Tiến mười nến",
+          "x": 766.328125,
+          "right": 795.328125,
+          "y": 862.5,
+          "bottom": 890.5,
+          "disabled": true
+        }
+      ],
+      "clippedTopbarControls": [],
+      "overlappingTopbarControls": [],
+      "controlsOutsideViewport": [],
+      "inaccessibleTopbarControls": []
+    },
+    "tablet": {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "shellClass": "fx-app fx-shell-story  is-chart-workspace is-chart-route",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 900,
+        "display": "grid",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "topbar": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 46,
+        "display": "grid",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "topbarLeft": {
+        "x": 5,
+        "y": 7.5,
+        "width": 564,
+        "height": 30,
+        "display": "flex",
+        "overflowX": "auto",
+        "overflowY": "auto",
+        "scrollWidth": 564,
+        "clientWidth": 564
+      },
+      "topbarActions": {
+        "x": 573,
+        "y": 7.5,
+        "width": 190,
+        "height": 30,
+        "display": "flex",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 190,
+        "clientWidth": 190
+      },
+      "rail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 0,
+        "clientWidth": 0
+      },
+      "main": {
+        "x": 0,
+        "y": 46,
+        "width": 768,
+        "height": 854,
+        "display": "flex",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "content": {
+        "x": 0,
+        "y": 46,
+        "width": 768,
+        "height": 854,
+        "display": "block",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "context": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 0,
+        "clientWidth": 0
+      },
+      "toolbar": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 0,
+        "clientWidth": 0
+      },
+      "chartFrame": {
+        "x": 0,
+        "y": 46,
+        "width": 768,
+        "height": 808,
+        "display": "grid",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "chart": {
+        "x": 44,
+        "y": 46,
+        "width": 674,
+        "height": 807,
+        "display": "block",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 674,
+        "clientWidth": 674
+      },
+      "chartCanvas": {
+        "x": 44,
+        "y": 46,
+        "width": 674,
+        "height": 807,
+        "display": "block",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 674,
+        "clientWidth": 674
+      },
+      "bottomBar": {
+        "x": 0,
+        "y": 854,
+        "width": 768,
+        "height": 46,
+        "display": "grid",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 766,
+        "clientWidth": 766
+      },
+      "canvasCount": 7,
+      "visibleRows": "4000",
+      "futureMarkerInText": false,
+      "cutoffVisible": true,
+      "brokerLockVisible": false,
+      "documentOverflowX": 0,
+      "documentOverflowY": 0,
+      "controlCount": 30,
+      "controlBoxes": [
+        {
+          "name": "Quay lại Sessions",
+          "x": 5,
+          "right": 33,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Tiến nhanh",
+          "x": 121.640625,
+          "right": 149.640625,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Thêm chart",
+          "x": 151.640625,
+          "right": 179.640625,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Khung thời gian",
+          "x": 181.640625,
+          "right": 215.640625,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Indicators",
+          "x": 217.640625,
+          "right": 283.40625,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Order flow",
+          "x": 285.40625,
+          "right": 354.859375,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Analytics",
+          "x": 356.859375,
+          "right": 417.828125,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Undo",
+          "x": 573,
+          "right": 601,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Redo",
+          "x": 603,
+          "right": 631,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Giao diện tối",
+          "x": 633,
+          "right": 695,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Mở phím tắt và trợ giúp",
+          "x": 697,
+          "right": 729,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Fullscreen",
+          "x": 731,
+          "right": 763,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Crosshair",
+          "x": 6.5,
+          "right": 36.5,
+          "y": 55,
+          "bottom": 85,
+          "disabled": false
+        },
+        {
+          "name": "Trend line",
+          "x": 6.5,
+          "right": 36.5,
+          "y": 88,
+          "bottom": 118,
+          "disabled": false
+        },
+        {
+          "name": "Horizontal line",
+          "x": 6.5,
+          "right": 36.5,
+          "y": 121,
+          "bottom": 151,
+          "disabled": false
+        },
+        {
+          "name": "Shapes",
+          "x": 6.5,
+          "right": 36.5,
+          "y": 154,
+          "bottom": 184,
+          "disabled": false
+        },
+        {
+          "name": "Text annotation",
+          "x": 6.5,
+          "right": 36.5,
+          "y": 187,
+          "bottom": 217,
+          "disabled": false
+        },
+        {
+          "name": "Measure",
+          "x": 6.5,
+          "right": 36.5,
+          "y": 220,
+          "bottom": 250,
+          "disabled": false
+        },
+        {
+          "name": "1D",
+          "x": 270.5,
+          "right": 299.5,
+          "y": 860,
+          "bottom": 888,
+          "disabled": false
+        },
+        {
+          "name": "5D",
+          "x": 303.5,
+          "right": 332.5,
+          "y": 860,
+          "bottom": 888,
+          "disabled": false
+        },
+        {
+          "name": "1M",
+          "x": 336.5,
+          "right": 365.5,
+          "y": 860,
+          "bottom": 888,
+          "disabled": false
+        },
+        {
+          "name": "3M",
+          "x": 369.5,
+          "right": 398.5,
+          "y": 860,
+          "bottom": 888,
+          "disabled": false
+        },
+        {
+          "name": "6M",
+          "x": 402.5,
+          "right": 431.5,
+          "y": 860,
+          "bottom": 888,
+          "disabled": false
+        },
+        {
+          "name": "1Y",
+          "x": 435.5,
+          "right": 464.5,
+          "y": 860,
+          "bottom": 888,
+          "disabled": false
+        },
+        {
+          "name": "All",
+          "x": 468.5,
+          "right": 497.5,
+          "y": 860,
+          "bottom": 888,
+          "disabled": false
+        },
+        {
+          "name": "Về nến đầu tiên",
+          "x": 233.328125,
+          "right": 262.328125,
+          "y": 893,
+          "bottom": 921,
+          "disabled": false
+        },
+        {
+          "name": "Lùi một nến",
+          "x": 267.328125,
+          "right": 296.328125,
+          "y": 893,
+          "bottom": 921,
+          "disabled": false
+        },
+        {
+          "name": "Phát replay",
+          "x": 301.328125,
+          "right": 391.328125,
+          "y": 893,
+          "bottom": 921,
+          "disabled": true
+        },
+        {
+          "name": "Tiến một nến",
+          "x": 396.328125,
+          "right": 425.328125,
+          "y": 893,
+          "bottom": 921,
+          "disabled": true
+        },
+        {
+          "name": "Tiến mười nến",
+          "x": 430.328125,
+          "right": 459.328125,
+          "y": 893,
+          "bottom": 921,
+          "disabled": true
+        }
+      ],
+      "clippedTopbarControls": [],
+      "overlappingTopbarControls": [],
+      "controlsOutsideViewport": [
+        {
+          "name": "Về nến đầu tiên",
+          "x": 233.328125,
+          "right": 262.328125,
+          "y": 893,
+          "bottom": 921,
+          "disabled": false
+        },
+        {
+          "name": "Lùi một nến",
+          "x": 267.328125,
+          "right": 296.328125,
+          "y": 893,
+          "bottom": 921,
+          "disabled": false
+        },
+        {
+          "name": "Phát replay",
+          "x": 301.328125,
+          "right": 391.328125,
+          "y": 893,
+          "bottom": 921,
+          "disabled": true
+        },
+        {
+          "name": "Tiến một nến",
+          "x": 396.328125,
+          "right": 425.328125,
+          "y": 893,
+          "bottom": 921,
+          "disabled": true
+        },
+        {
+          "name": "Tiến mười nến",
+          "x": 430.328125,
+          "right": 459.328125,
+          "y": 893,
+          "bottom": 921,
+          "disabled": true
+        }
+      ],
+      "inaccessibleTopbarControls": []
+    },
+    "mobile": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "shellClass": "fx-app fx-shell-story  is-chart-workspace is-chart-route",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "display": "grid",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "topbar": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 46,
+        "display": "grid",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "topbarLeft": {
+        "x": 5,
+        "y": 7.5,
+        "width": 214,
+        "height": 30,
+        "display": "flex",
+        "overflowX": "auto",
+        "overflowY": "auto",
+        "scrollWidth": 413,
+        "clientWidth": 214
+      },
+      "topbarActions": {
+        "x": 223,
+        "y": 7.5,
+        "width": 162,
+        "height": 30,
+        "display": "flex",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 162,
+        "clientWidth": 162
+      },
+      "rail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 0,
+        "clientWidth": 0
+      },
+      "main": {
+        "x": 0,
+        "y": 46,
+        "width": 390,
+        "height": 798,
+        "display": "flex",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "content": {
+        "x": 0,
+        "y": 46,
+        "width": 390,
+        "height": 798,
+        "display": "block",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "context": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 0,
+        "clientWidth": 0
+      },
+      "toolbar": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 0,
+        "clientWidth": 0
+      },
+      "chartFrame": {
+        "x": 0,
+        "y": 46,
+        "width": 390,
+        "height": 746,
+        "display": "grid",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "chart": {
+        "x": 38,
+        "y": 46,
+        "width": 306,
+        "height": 745,
+        "display": "block",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 306,
+        "clientWidth": 306
+      },
+      "chartCanvas": {
+        "x": 38,
+        "y": 46,
+        "width": 306,
+        "height": 745,
+        "display": "block",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 306,
+        "clientWidth": 306
+      },
+      "bottomBar": {
+        "x": 0,
+        "y": 792,
+        "width": 390,
+        "height": 52,
+        "display": "grid",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "scrollWidth": 388,
+        "clientWidth": 388
+      },
+      "canvasCount": 7,
+      "visibleRows": "4000",
+      "futureMarkerInText": false,
+      "cutoffVisible": false,
+      "brokerLockVisible": false,
+      "documentOverflowX": 0,
+      "documentOverflowY": 0,
+      "controlCount": 30,
+      "controlBoxes": [
+        {
+          "name": "Quay lại Sessions",
+          "x": 5,
+          "right": 33,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Tiến nhanh",
+          "x": 121.640625,
+          "right": 149.640625,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Thêm chart",
+          "x": 151.640625,
+          "right": 179.640625,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Khung thời gian",
+          "x": 181.640625,
+          "right": 215.640625,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Indicators",
+          "x": 217.640625,
+          "right": 283.40625,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Order flow",
+          "x": 285.40625,
+          "right": 354.859375,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Analytics",
+          "x": 356.859375,
+          "right": 417.828125,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Undo",
+          "x": 223,
+          "right": 251,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Redo",
+          "x": 253,
+          "right": 281,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Giao diện tối",
+          "x": 283,
+          "right": 317,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Mở phím tắt và trợ giúp",
+          "x": 319,
+          "right": 351,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Fullscreen",
+          "x": 353,
+          "right": 385,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        },
+        {
+          "name": "Crosshair",
+          "x": 5,
+          "right": 32,
+          "y": 55,
+          "bottom": 84,
+          "disabled": false
+        },
+        {
+          "name": "Trend line",
+          "x": 5,
+          "right": 32,
+          "y": 87,
+          "bottom": 116,
+          "disabled": false
+        },
+        {
+          "name": "Horizontal line",
+          "x": 5,
+          "right": 32,
+          "y": 119,
+          "bottom": 148,
+          "disabled": false
+        },
+        {
+          "name": "Shapes",
+          "x": 5,
+          "right": 32,
+          "y": 151,
+          "bottom": 180,
+          "disabled": false
+        },
+        {
+          "name": "Text annotation",
+          "x": 5,
+          "right": 32,
+          "y": 183,
+          "bottom": 212,
+          "disabled": false
+        },
+        {
+          "name": "Measure",
+          "x": 5,
+          "right": 32,
+          "y": 215,
+          "bottom": 244,
+          "disabled": false
+        },
+        {
+          "name": "1D",
+          "x": 9,
+          "right": 38,
+          "y": 787,
+          "bottom": 815,
+          "disabled": false
+        },
+        {
+          "name": "5D",
+          "x": 42,
+          "right": 71,
+          "y": 787,
+          "bottom": 815,
+          "disabled": false
+        },
+        {
+          "name": "1M",
+          "x": 75,
+          "right": 104,
+          "y": 787,
+          "bottom": 815,
+          "disabled": false
+        },
+        {
+          "name": "3M",
+          "x": 108,
+          "right": 137,
+          "y": 787,
+          "bottom": 815,
+          "disabled": false
+        },
+        {
+          "name": "6M",
+          "x": 141,
+          "right": 170,
+          "y": 787,
+          "bottom": 815,
+          "disabled": false
+        },
+        {
+          "name": "1Y",
+          "x": 174,
+          "right": 203,
+          "y": 787,
+          "bottom": 815,
+          "disabled": false
+        },
+        {
+          "name": "All",
+          "x": 207,
+          "right": 236,
+          "y": 787,
+          "bottom": 815,
+          "disabled": false
+        },
+        {
+          "name": "Về nến đầu tiên",
+          "x": 82,
+          "right": 111,
+          "y": 809,
+          "bottom": 837,
+          "disabled": false
+        },
+        {
+          "name": "Lùi một nến",
+          "x": 116,
+          "right": 145,
+          "y": 809,
+          "bottom": 837,
+          "disabled": false
+        },
+        {
+          "name": "Phát replay",
+          "x": 150,
+          "right": 240,
+          "y": 809,
+          "bottom": 837,
+          "disabled": true
+        },
+        {
+          "name": "Tiến một nến",
+          "x": 245,
+          "right": 274,
+          "y": 809,
+          "bottom": 837,
+          "disabled": true
+        },
+        {
+          "name": "Tiến mười nến",
+          "x": 279,
+          "right": 308,
+          "y": 809,
+          "bottom": 837,
+          "disabled": true
+        }
+      ],
+      "clippedTopbarControls": [
+        {
+          "name": "Analytics",
+          "x": 356.859375,
+          "right": 417.828125,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        }
+      ],
+      "overlappingTopbarControls": [
+        "Indicators / Undo",
+        "Indicators / Redo",
+        "Order flow / Giao diện tối",
+        "Order flow / Mở phím tắt và trợ giúp",
+        "Analytics / Fullscreen"
+      ],
+      "controlsOutsideViewport": [
+        {
+          "name": "Analytics",
+          "x": 356.859375,
+          "right": 417.828125,
+          "y": 7.5,
+          "bottom": 37.5,
+          "disabled": false
+        }
+      ],
+      "inaccessibleTopbarControls": [
+        "Indicators",
+        "Order flow"
+      ]
+    }
+  },
+  "keyboardRoute": {
+    "firstFocus": {
+      "tag": "A",
+      "name": "Quay lại Sessions"
+    },
+    "helpOpened": true,
+    "helpClosed": true,
+    "backHref": "/?workspace=tenant-fullbleed&view=replay&session=fullbleed-spike-fixture&select=1",
+    "backRoute": {
+      "url": "http://127.0.0.1:4199/?workspace=tenant-fullbleed&view=replay&session=fullbleed-spike-fixture&select=1",
+      "chartVisible": false,
+      "shellClass": "fx-app fx-shell-story is-rail-collapsed  "
+    },
+    "restoredFullBleed": true,
+    "restoredRows": "4000"
+  },
+  "throughput": {
+    "mountMs": 1749,
+    "pointerMoves": 180,
+    "pointerMs": 5717.1779,
+    "longTaskCount": 1,
+    "maxLongTaskMs": 66,
+    "heapUsed": 20500000
+  },
+  "network": {
+    "requests": [
+      {
+        "method": "GET",
+        "url": "/"
+      },
+      {
+        "method": "GET",
+        "url": "/@vite/client"
+      },
+      {
+        "method": "GET",
+        "url": "/src/main.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/@react-refresh"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/react_jsx-dev-runtime.js"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/react.js"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/react-dom_client.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/LearnWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/PropWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/ReplayWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/AnalyticsWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/JournalWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/SettingsWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/DataDeskWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/ResearchWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/TradeWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/RiskWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/PlaybookWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/LiveWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/SessionPicker.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/workspaceContext.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/styles.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/dashboard.css"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/chunk-4PXDAZTX.js"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/chunk-Q4AC2O6Z.js"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/vite/dist/client/env.mjs"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/lightweight-charts.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/chartAnnotations.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/ReplayWorkspace.css"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/chunk-QQF3ERH2.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/researchDataApi.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/dataDeskApi.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/research-data.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/analytics-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/journal-analytics.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/journal-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/NotionConnector.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/TradeWorkspace.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/learnIntegration.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/RiskWorkspace.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/settings.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/research-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/playbookApi.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/playbook-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/live-workspace.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/session-picker.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/fx-shell-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/fx-shell-preferences.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/notionConnector.js"
+      },
+      {
+        "method": "GET",
+        "url": "/api/v2/data/datasets"
+      },
+      {
+        "method": "GET",
+        "url": "/api/v2/replay/sessions/fullbleed-spike-fixture"
+      },
+      {
+        "method": "GET",
+        "url": "/"
+      },
+      {
+        "method": "GET",
+        "url": "/@vite/client"
+      },
+      {
+        "method": "GET",
+        "url": "/src/main.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/@react-refresh"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/vite/dist/client/env.mjs"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/react_jsx-dev-runtime.js"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/react.js"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/react-dom_client.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/LearnWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/PropWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/ReplayWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/AnalyticsWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/JournalWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/SettingsWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/DataDeskWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/ResearchWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/TradeWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/RiskWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/PlaybookWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/LiveWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/SessionPicker.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/workspaceContext.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/styles.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/dashboard.css"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/chunk-4PXDAZTX.js"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/chunk-Q4AC2O6Z.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/learnIntegration.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/analytics-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/journal-analytics.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/journal-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/NotionConnector.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/lightweight-charts.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/chartAnnotations.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/ReplayWorkspace.css"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/chunk-QQF3ERH2.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/settings.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/researchDataApi.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/research-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/dataDeskApi.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/research-data.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/TradeWorkspace.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/RiskWorkspace.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/fx-shell-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/fx-shell-preferences.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/live-workspace.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/playbookApi.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/playbook-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/session-picker.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/notionConnector.js"
+      },
+      {
+        "method": "GET",
+        "url": "/api/v2/replay/sessions"
+      },
+      {
+        "method": "GET",
+        "url": "/"
+      },
+      {
+        "method": "GET",
+        "url": "/@vite/client"
+      },
+      {
+        "method": "GET",
+        "url": "/src/main.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/@react-refresh"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/vite/dist/client/env.mjs"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/react_jsx-dev-runtime.js"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/react.js"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/react-dom_client.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/LearnWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/PropWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/ReplayWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/AnalyticsWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/JournalWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/SettingsWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/DataDeskWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/ResearchWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/TradeWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/RiskWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/PlaybookWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/LiveWorkspace.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/SessionPicker.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/src/workspaceContext.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/styles.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/dashboard.css"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/chunk-4PXDAZTX.js"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/chunk-Q4AC2O6Z.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/learnIntegration.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/NotionConnector.jsx"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/lightweight-charts.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/chartAnnotations.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/ReplayWorkspace.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/analytics-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/node_modules/.vite/deps/chunk-QQF3ERH2.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/journal-analytics.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/journal-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/settings.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/researchDataApi.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/dataDeskApi.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/research-data.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/research-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/TradeWorkspace.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/RiskWorkspace.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/playbookApi.js"
+      },
+      {
+        "method": "GET",
+        "url": "/src/playbook-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/fx-shell-story.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/fx-shell-preferences.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/live-workspace.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/session-picker.css"
+      },
+      {
+        "method": "GET",
+        "url": "/src/notionConnector.js"
+      },
+      {
+        "method": "GET",
+        "url": "/api/v2/data/datasets"
+      },
+      {
+        "method": "GET",
+        "url": "/api/v2/replay/sessions/fullbleed-spike-fixture"
+      }
+    ],
+    "externalOrUnmockedApiRequests": [],
+    "nonGetRequests": []
+  },
+  "errors": [],
+  "screenshots": [
+    "fullbleed-1440.png",
+    "fullbleed-768.png",
+    "fullbleed-390.png"
+  ],
+  "trace": "fullbleed-trace.zip"
+}

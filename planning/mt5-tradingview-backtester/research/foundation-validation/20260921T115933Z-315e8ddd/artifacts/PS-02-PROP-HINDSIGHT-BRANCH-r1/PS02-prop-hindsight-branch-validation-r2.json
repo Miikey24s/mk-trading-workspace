@@ -1,0 +1,49 @@
+{
+  "accepted_scope": [
+    "A hindsight Prop child attempt can only be created from a canonical historical Replay branch checkpoint backed by the exact server-generated Replay-to-Prop lifecycle receipt fingerprint and resulting persisted Prop state",
+    "The server derives the child attempt identity and branch provenance; the client cannot inject balance, equity, checkpoint state or an arbitrary child attempt id",
+    "Concurrent and delayed exact retries are idempotent and return the immutable branch-creation revision; reusing an operation id with different branch content fails closed",
+    "Parent Replay and Prop attempt state remain immutable while the child is rebound to the child Replay lineage and can resume deterministic stepping and lifecycle feeds",
+    "Tenant, Replay revision, parent Replay revision and parent Prop attempt revision are fenced; missing, forged generic-resume, or foreign-scope checkpoints fail closed",
+    "Generic Prop attempt creation cannot forge hindsight branches, and nested hindsight branching remains rejected",
+    "Fresh disposable PostgreSQL regression passes on exact source hashes with broker execution capability disabled"
+  ],
+  "base_revision": "65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+  "candidate_revision": "07fc8ea3479460cf4db68a781304481cf925b2d4",
+  "checks": {
+    "broker_execution_capability": false,
+    "delayed_exact_retry_returns_creation_revision": true,
+    "exact_changed_file_set_pass": true,
+    "exact_source_hash_match_pass": true,
+    "forged_generic_resume_checkpoint_rejected": true,
+    "fresh_disposable_postgres_regression_pass": true,
+    "tests_run": 103
+  },
+  "residual_scope": [
+    "Independent final review of the corrected exact candidate is still required before acceptance",
+    "Lower-timeframe or tick intrabar equity path and broader D15 cross-asset, financing and calendar coverage",
+    "Prop branch comparison UI, objective charts, reports/export and Figma acceptance",
+    "Nested hindsight Prop branching is intentionally unsupported in this slice",
+    "Broker/demo/live, holdout, paid provider and deployment acceptance"
+  ],
+  "result": "PASS",
+  "retained_component": {
+    "path": "artifacts\\PS-02-PROP-HINDSIGHT-BRANCH-r1\\PS02C4-postgres-component-r2.json",
+    "sha256": "c881d767362172c8a213f2c5d196b7cb13016eca666d5edd4a44582ddbf414a1"
+  },
+  "review_findings_addressed": [
+    "P2 forged generic-resume receipt can no longer establish canonical Replay-to-Prop provenance because exact lifecycle fingerprint and derived state must match",
+    "P3 delayed exact branch retry now loads the immutable receipt entity revision and historical session revision"
+  ],
+  "schema": "PS02-PROP-HINDSIGHT-BRANCH-VALIDATION-r2",
+  "source_sha256": {
+    "foundation_v2/tests/test_ps02_replay_prop_connection.py": "ff633c2d65e0561e8125a7a9d16f76d7f93d68f48a91b6494255cbfbf077b3f6",
+    "foundation_v2/trading_workspace_v2/api.py": "32a66b447bc38167e076fe6b89f285d680752ca0e60f78742016a9f54d8356ae",
+    "foundation_v2/trading_workspace_v2/prop_replay.py": "62690b38fb43e033718436bc584be5c3794886ae81f70111da4b0eef077209d5",
+    "foundation_v2/trading_workspace_v2/prop_session.py": "c393c035994b055982f7aec2c63270a16819f43630f9e02fa841a11721b44bd9",
+    "foundation_v2/trading_workspace_v2/replay.py": "87325b14f22b8fc6ec733a3b89209682f0a405c84b63b39c62081913897513bf",
+    "foundation_v2/trading_workspace_v2/store.py": "dc46ffebacfe9342d97ab0ab9a85a863f4b86f24f48abbb00a32314dfec3d550"
+  },
+  "supersedes_candidate": "5a9710e3ea8c4874a5584722640d118e40be2304",
+  "task": "PS-02-PROP-HINDSIGHT-BRANCH-r1"
+}

@@ -1,0 +1,23 @@
+{
+  "commit": "22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+  "note": "Independent final review accepted the already-verified candidate; no new product code was introduced by this ledger action.",
+  "residual_scope": [
+    "broader setup/playbook contextual links",
+    "real API/PostgreSQL Learn browser integration",
+    "Figma round-trip and whole-product UI acceptance",
+    "broker/live acceptance"
+  ],
+  "result": "PASS",
+  "review_findings": [
+    {
+      "finding": "PASS: Replay to Learn round-trip preserves session or dataset/start fallback; Research context remains intact and Learn stays GET-only/read-only.",
+      "severity": "info"
+    },
+    {
+      "finding": "Unavailable/error/safety contextual links are source-reviewed rather than individually clicked; real API/PostgreSQL/Figma/broker acceptance remains separate.",
+      "severity": "residual"
+    }
+  ],
+  "reviewer": "/root/learn_final_review",
+  "task": "U3C-LEARN-REPLAY-CONTEXT-r1"
+}

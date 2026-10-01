@@ -1,0 +1,21 @@
+{
+  "schema": "U3C-LEARN-REPLAY-CONTEXT-VALIDATION-r1",
+  "result": "PASS",
+  "commit": "22ab959e719fa98ef3d0d226edadded0b9b7eaf5",
+  "scope": "local fixture browser QA + Vite build; read-only Learn; replay/simulation only; no broker/live/provider/holdout action",
+  "checks": {
+    "learn_fixture_pass": true,
+    "replay_session_round_trip": true,
+    "replay_dataset_start_fallback": true,
+    "research_job_context_preserved": true,
+    "learn_get_only": true,
+    "responsive_1440_768_360": true,
+    "vite_build_pass": true,
+    "broker_execution_capability": false
+  },
+  "screenshots": {
+    "learn-ui-fixture-1440.png": "78b2dd7dcc6bac02ffed6bc1864b7b036ef6e0eb807e1edf8e4193400cf4ff0b",
+    "learn-ui-fixture-360.png": "a064e0e6d2177f95c0a2ad892d4fcf2870e32cbc0e42891fef441d873b11cb45",
+    "learn-ui-fixture-768.png": "0689afef3fb21a237007aef8e7ceed885b4d617304695398026f99fac56962f6"
+  }
+}

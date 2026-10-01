@@ -1,17 +1,22 @@
 # Execution Resume
 
-Updated 2026-09-24. Operational task state belongs to `ledger.sqlite3` and its
+Updated 2026-09-25. Operational task state belongs to `ledger.sqlite3` and its
 controller-generated `STATE.json`, not to the historical master-plan snapshots.
 
-Current STATE revision **247**. In addition to the accepted reference engine and
-Nautilus adapter, `U5B-PROTECTIVE-MARGIN-r1`,
-`U5A-CHECKPOINT-ADMISSION-r1`, and `U5B-REPLAY-CUTOFF-r1` are accepted at their
-explicit scoped boundaries. Current product HEAD is
-`e5522d8b9fae1cdef6f00f88799ed0abcda062e1` on `Nam`; preceding U5a checkpoint
-commit is `a21895abc8300ad99d3dd1a9308d54fe344a38c0`.
+Current STATE revision **295**. In addition to the accepted reference engine,
+Nautilus adapter and earlier U5 follow-ups, `U5C-OOS-PLANNER-r1`,
+`PS-00-PROP-CONTRACT-r1`, `U3C-LEARN-BRIDGE-r1`, and
+`PS-01-PROP-PERSISTENCE-r1` are accepted at their explicit scoped boundaries.
+Two newer tasks are deliberately left in `verifying`, not accepted:
+`U5C-WIRING-HARDEN-r1` and `U3C-LEARN-REPLAY-CONTEXT-r1`. Current product HEAD is
+`22ab959e719fa98ef3d0d226edadded0b9b7eaf5` on `Nam`; the immediate new commits
+are `459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c` (U5C late-cancel accounting
+hardening) and the HEAD above (Replay/Learn context preservation).
 Goal remains active for the full product plan; this checkpoint is not completion.
-All U5 follow-up implementation/review children have finished; no validation
-PostgreSQL/API/web process from the 2026-09-24 acceptance run remains active.
+The fresh U5C acceptance used a temporary PostgreSQL cluster created inside a
+`TemporaryDirectory`; the harness stopped the server on exit. Historical named
+fixtures must still be verified by exact process/data-directory before reuse. They
+are not product services.
 
 ## Verified Baseline
 
@@ -135,6 +140,198 @@ trade/fill parity. Acceptance receipt:
 `artifacts/U5-FOLLOWUP-F6-validation-r1.json` (PostgreSQL + worker + Python suite +
 desktop/mobile browser fixture + Vite build; broker capability remained false).
 
+## Accepted 25/09 Follow-up Slices
+
+STATE revision 274 records three additional narrowly scoped accepted tasks. Shared
+post-commit receipt: `artifacts/PRODUCT-FOLLOWUP-validation-r1.json`; it records
+38/38 integrated foundation tests plus 2/2 retained prop-profile tests, zero
+skipped, on the named disposable PostgreSQL fixture. No broker/live/Figma/
+holdout-content/provider/production acceptance is implied.
+
+- `U5C-OOS-PLANNER-r1` -> `860fadd01f463df19d38a67a2294019fc19658d5`:
+  chronological rolling/expanding walk-forward planning, purge/embargo, locked
+  metadata-only holdout and bounded sweep accounting. Research job/API/worker
+  wiring, stress/regime and real-data OOS evidence remain open.
+- `PS-00-PROP-CONTRACT-r1` -> `3835d4482168da65f0ff764e0b791f49e2fe5381`:
+  simulation-only versioned profile/session/attempt/phase contracts, Decimal money
+  oracle, virtual calendar and idempotent revisioned transitions. PS-01 persisted
+  CRUD/resume, PS-02 simulator lifecycle and Prop UI remain open.
+- `U3C-LEARN-BRIDGE-r1` -> `92937ec27425b5f0d9308234cbbcf1a35721411c`:
+  tenant-scoped read-only bridge to the existing education course/progress source,
+  glossary and allowlisted resources without answer-key exposure. Learn UI and
+  contextual chart/setup links remain open.
+
+## Post-r274 local checkpoints — not ledger-accepted yet
+
+The product branch advanced after STATE revision 274. These commits are durable
+implementation checkpoints, but they do **not** become accepted ledger tasks until
+the missing review/integrated evidence is recorded through the existing controller.
+
+- `15d32ac` (`feat: persist resumable prop sessions`): PS-01 PostgreSQL-backed
+  session/attempt/resume persistence implementation. This predates the current
+  resume turn and is not retroactively marked accepted here.
+- `bc87f88` (`feat: add prop session workspace UI`): simulation-only Prop workspace
+  plus labeled Playwright product-fixture acceptance. `npm run test:prop-ui` passed
+  create -> reload/resume, conflict/empty/denied/error, mutation-scope and
+  1440/768/360 responsive checks; `npm run build` passed. The browser test intercepts
+  Prop API calls, so real disposable-PostgreSQL/API/UI E2E and PS-02 lifecycle remain
+  open. Visual review of 1440 and 360 screenshots found no blocking layout defect.
+- `0aa3897` (`feat: execute bounded OOS research jobs`): wires accepted U5c planner
+  semantics into the research API/job protocol/worker and records bounded train/OOS
+  outcomes without authorizing holdout content. `test_u5c_oos` passed 14/14. A wider
+  U5 oracle/replay/OOS run passed 46 tests with 10 environment-gated skips because
+  that command did not bind PostgreSQL/Nautilus. Integrated disposable-DB/Nautilus
+  validation and independent review remain required before ledger acceptance.
+
+One read-only browser-WebGPT review turn was launched for the two new commits but
+did not return a settled review result before the coordinator checkpointed this
+resume. It is not acceptance evidence and must not be counted as a PASS.
+
+## Accepted PS-01 continuation and U5C remediation — 25/09
+
+STATE revision **283** accepts `PS-01-PROP-PERSISTENCE-r1` at commit
+`1986b1f9c48bc24677bc88f178cc4f732476942c`. Receipt:
+`artifacts/PS-01-PROP-PERSISTENCE-r1-acceptance-r1.json`. The accepted scope is
+local simulation-only Prop session/attempt/phase/resume persistence with atomic
+initial session+attempt creation, tenant/revision fencing, real local API + Vite +
+Playwright create/resume/reload/denial coverage and responsive 1440/768/360 checks.
+The retained evidence is
+`foundation_v2/.runtime/ps01-real-service-evidence-r3/PS01-acceptance-r1.json`;
+it explicitly records `broker_execution_capability=false`. Independent reviewer
+`/root/prop_acceptance_review_r2` found no PS-01 blocker. PS-02 simulator/challenge
+lifecycle remains separate and open.
+
+The same commit also contains U5C cancellation/checkpoint remediation, but that
+scope is **not** transitively accepted by PS-01. Independent U5C review found a
+stale-attempt bug: after a lease-expired retry, cancel could reuse trial outcomes
+from the prior attempt. `_oos_cancellation_state()` now only reuses outcomes when
+the checkpoint `attempt_no` equals the current job attempt, and a PostgreSQL-gated
+regression was added. The pure stale-attempt regression passes and the focused
+`test_u5c_oos` suite passes **15/15** with the pinned validation runtime. A fresh
+destructive fixture run and a new end-to-end API -> PostgreSQL job -> worker ->
+Nautilus OOS -> persisted result validation were not completed in this turn;
+automatic approval review blocked the command before execution. Therefore U5C
+job/API/worker wiring remains an implementation checkpoint, not ledger acceptance.
+
+## Post-r283 verifying candidates — STATE r295
+
+The current browser-WebGPT budget was held to exactly **4 total turns** including
+the coordinator: root + three subagents. No extra browser review turn was created
+after the fixes below, so both tasks remain `verifying` until an independent final
+review is recorded through the controller.
+
+- `U5C-WIRING-HARDEN-r1` ->
+  `459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c` (`verifying`). Independent review of
+  the prior `1986b1f` checkpoint found a real late-cancel race: once an OOS sweep
+  completed, `result-validated`/`candidate-ready` overwrote the checkpoint without
+  terminal `trial_outcomes`, so a cancel before `complete_job` could relabel already
+  completed trials as canceled. The fix preserves terminal outcomes/counts through
+  both final checkpoints and adds regression coverage for both phases. Focused
+  `test_u5c_oos` now passes **16/16**. A fresh disposable PostgreSQL acceptance also
+  passes the real flow API -> PostgreSQL job -> separate worker -> isolated Nautilus
+  OOS -> persisted `research-oos-result-v1`; receipt:
+  `artifacts/U5C-WIRING-r2/U5C-wiring-acceptance-r1.json`, SHA256
+  `8a6b760b8e74cef2a02e50052fa522a3130a2d3ce3ba31caeb5eea9160eac6d9`.
+  Holdout content and broker/live capability remain unavailable. This evidence
+  resolves the reviewer's named technical blockers, but it is not a substitute for
+  an independent re-review of the final candidate.
+- Existing commit `82265233b5897540a1fb325a5cdfc862a8bb9d6b` already contains the
+  read-only Learn workspace UI (course/progress, resource reader, glossary, fail-
+  closed safety states and responsive fixture QA). A read-only subagent audit found
+  the previous RESUME stale on that point and advised reusing the page rather than
+  rebuilding it. Root reran its fixture acceptance and Vite build successfully.
+- `U3C-LEARN-REPLAY-CONTEXT-r1` ->
+  `22ab959e719fa98ef3d0d226edadded0b9b7eaf5` (`verifying`). Replay now links into
+  Learn with `from=replay` while preserving the current persisted `session`, or the
+  `dataset/start` fallback before a session exists. Learn returns to the same Replay
+  context from success, denied, unavailable, error and safety-fail-closed states;
+  Research job context remains intact. Fixture browser QA passes at 1440/768/360,
+  Learn remains GET-only/read-only, and the Vite production build passes. Receipt:
+  `artifacts/U3C-LEARN-REPLAY-CONTEXT-r1/U3C-learn-replay-context-validation-r1.json`,
+  SHA256 `d50534d00f2905906b757357e582c241ff11be6da434f80301ed6784c844e974`.
+
+Next safe sequence: independently review the two r295 candidates and ledger-accept
+only if those reviews pass. Then start PS-02 with the deterministic backend lifecycle
+layer first: reuse PS-00 contracts/oracles, PS-01 persistence/idempotency, Replay
+cutoff/lineage and proven U5b execution semantics before adding Prop lifecycle UI.
+
+## Accepted r295 final reviews — STATE r301
+
+Independent final reviews completed on 25/09 and both previously verifying
+candidates are now ledger-accepted without changing their recorded scope:
+
+- `U5C-WIRING-HARDEN-r1` -> `459b5d69523bd1ef9a8e97e4edd04e5f2fc2677c`:
+  final review PASS. Terminal OOS outcomes remain fully accounted through
+  `result-validated` / `candidate-ready`; late-cancel and stale-attempt paths fail
+  closed. Stress/regime, approved real-data OOS, holdout content and broker/demo/live
+  remain outside this acceptance.
+- `U3C-LEARN-REPLAY-CONTEXT-r1` ->
+  `22ab959e719fa98ef3d0d226edadded0b9b7eaf5`: final review PASS. Replay -> Learn ->
+  Replay preserves the persisted session or dataset/start fallback, Research context
+  remains intact, Learn is GET-only/read-only and broker capability remains locked.
+  Real API/PostgreSQL Learn browser integration, Figma and broader contextual links
+  remain separate.
+
+Acceptance receipts are `artifacts/U5C-WIRING-HARDEN-r1-acceptance-r1.json` and
+`artifacts/U3C-LEARN-REPLAY-CONTEXT-r1-acceptance-r1.json`. Current next safe product
+slice is PS-02 backend lifecycle, keeping it simulation-only and not claiming a full
+Replay order simulator connection until that canonical ledger exists and is tested.
+
+## PS-02A lifecycle checkpoint accepted — STATE r310
+
+`PS-02-LIFECYCLE-CHECKPOINT-r1` is ledger-accepted at
+`432273958778569f9ab76d88767d625ee626c059`. The accepted scope is the deterministic
+simulation-only Prop lifecycle evaluator plus atomic PostgreSQL persistence: ordered
+event/revision fencing, target/min-day/position handling, breach-before-pass
+precedence, explicit calendar boundaries, incomplete-data blocking without consuming
+the simulator cursor/event, durable idempotency and concurrent double-apply rejection.
+Trailing drawdown now follows the declared balance/equity basis; end-of-day HWM is
+committed only at an explicit boundary while intraday trailing keeps event-level HWM
+updates. Final independent review `/root/ps02_lifecycle_review` passed with no P1/P2
+findings after those boundary cases were fixed.
+
+Fresh disposable PostgreSQL acceptance passed PS-00 + PS-01 regressions and PS-02A
+tests. Retained validation receipt:
+`artifacts/PS-02-LIFECYCLE-CHECKPOINT-r1/PS02-lifecycle-validation-r1.json`, SHA256
+`17b51b505e2eaaa3a7211cb0106938774edeec54a99556b70c1e84208a0ae82e`.
+This is deliberately a checkpoint rather than full PS-02: canonical Replay
+order/fill-ledger connection, lifecycle commands and multi-phase transition behavior,
+Prop objective UI/charts, broader D15 quality fixtures, D17 reports and all
+broker/demo/live, holdout, provider, deployment and Figma gates remain open.
+
+Next safe PS-02 slice is the canonical Replay simulator/ledger connection feeding
+these lifecycle events, reusing existing Replay execution semantics rather than
+introducing another fill authority.
+
+## PS-02B Replay/Prop connection implemented — not ledger-accepted yet
+
+Implementation commit `d78865c485f63a7c0cd8bbbea44d999eb612c217` connects the
+canonical Replay execution ledger to the accepted PS-02A Prop lifecycle without
+opening broker capability. Replay now persists revision-fenced market orders,
+market/protective fills, close-price account marks and resumable position/order state;
+Prop consumes only persisted `price_mark` events through a server-derived event ID and
+immutable dataset/cost/engine binding. Exact retries are idempotent, previously used
+order operation IDs cannot create a second position, and client payloads do not supply
+Prop balance/equity directly.
+
+Equity-dependent Prop rules fail closed to `evaluation_quality=insufficient` when an
+OHLC bar had position exposure but no lower-timeframe intrabar equity path is available.
+Balance-only rules may consume the same canonical close mark. Execution-enabled replay
+branch/rewind is deliberately rejected until checkpoint reconstruction can preserve the
+historical position/ledger exactly.
+
+Fresh disposable PostgreSQL 17.11 acceptance passed 67 tests across PS-00/01/02,
+F7 replay regression, U5b protective semantics, Replay execution and the new API-to-
+PostgreSQL Replay->Prop flow. Receipt:
+`foundation_v2/evidence/PS02-replay-connection-r1.json`, SHA256
+`1a00b41661938d35076609452007a2f026e2496a74fc04636461e42f29b0e7c7`.
+This is an implementation/validation checkpoint only; STATE remains r310 because no
+independent final review was run in this turn.
+
+Next safe PS-02 slice is lifecycle commands and multi-phase reset/carry behavior on top
+of this canonical ledger, with execution rewind/checkpoint reconstruction and broader
+D15 intrabar/cross-asset/calendar coverage still explicit follow-ups before full PS-02.
+
 ## Still Open
 
 - Remaining U5a: true mid-computation resume from an internal engine cursor/state;
@@ -143,13 +340,21 @@ desktop/mobile browser fixture + Vite build; broker capability remained false).
 - Remaining U5b: full manual replay versus engine decision/trade/fill parity on
   the same segment, including execution-model/slippage differences. Protective,
   margin and cutoff/source slices are accepted only at their recorded local scope.
-- U5c: chronological OOS/walk-forward, purge/embargo, stress and bounded sweep.
-- U3c tenant-safe Learn bridge; broader U4 replay/renderer acceptance; U6+ dependent work.
+- U5c planner semantics are accepted. Canonical job/API/worker wiring plus late-
+  cancel remediation is now recorded as `U5C-WIRING-HARDEN-r1` at STATE r295 with
+  16/16 focused tests and fresh disposable-DB/Nautilus E2E PASS. Independent final
+  review, ledger acceptance, stress/regime and real-data OOS evidence remain open.
+- U3c read-only backend bridge is accepted. The existing Learn UI was rediscovered
+  and revalidated; Replay/Learn context preservation is recorded as
+  `U3C-LEARN-REPLAY-CONTEXT-r1` at STATE r295. Independent final review/ledger
+  acceptance and broader setup/playbook contextual links remain open, as do broader
+  U4 replay/renderer acceptance and U6+ dependent work.
 - Replay viewer controlled-fixture Playwright acceptance passed on 2026-09-24 for
   no-future-leak, broker lock, revision conflict reload, branch lineage, persisted
   resume and responsive 1440/768/360. This is not real-data/full-U4/Figma acceptance.
-- Y25 Prop Firm Session remains requested but unimplemented end-to-end. Y26 Figma
-  Make round-trip has no verified capability/diff evidence yet.
+- Y25 Prop Firm Session has accepted PS-00 contract/oracle semantics and accepted
+  `PS-01-PROP-PERSISTENCE-r1` at STATE r283 / `1986b1f`. Simulator lifecycle PS-02
+  remains open. Y26 Figma Make round-trip has no verified capability/diff evidence yet.
 - U1 whole-product visual acceptance, real licensed data, empirical validation,
   AI provider, broker/demo/live, remote deployment and Miro gates remain separate
   and closed.

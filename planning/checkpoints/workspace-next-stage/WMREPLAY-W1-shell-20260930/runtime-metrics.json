@@ -1,0 +1,104 @@
+[
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "dark": {
+      "theme": "dark",
+      "viewport": [
+        1440,
+        900
+      ],
+      "scroll": [
+        1440,
+        900
+      ],
+      "shell": [
+        1440,
+        900
+      ],
+      "topBg": "rgb(3, 3, 3)",
+      "topText": "rgb(242, 244, 245)",
+      "railBg": "rgb(3, 3, 3)",
+      "dom": 192,
+      "longTasks": 0,
+      "nav": 246.10000000149012,
+      "bodyBg": "rgb(12, 14, 16)"
+    },
+    "light": {
+      "theme": "light",
+      "topBg": "rgb(245, 247, 248)",
+      "topText": "rgb(29, 41, 48)",
+      "railBg": "rgb(233, 238, 240)"
+    }
+  },
+  {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "dark": {
+      "theme": "dark",
+      "viewport": [
+        768,
+        1024
+      ],
+      "scroll": [
+        768,
+        1024
+      ],
+      "shell": [
+        768,
+        1024
+      ],
+      "topBg": "rgb(3, 3, 3)",
+      "topText": "rgb(242, 244, 245)",
+      "railBg": "rgb(3, 3, 3)",
+      "dom": 192,
+      "longTasks": 0,
+      "nav": 147.5,
+      "bodyBg": "rgb(12, 14, 16)"
+    },
+    "light": {
+      "theme": "light",
+      "topBg": "rgb(245, 247, 248)",
+      "topText": "rgb(29, 41, 48)",
+      "railBg": "rgb(233, 238, 240)"
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": {
+      "theme": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "shell": [
+        390,
+        844
+      ],
+      "topBg": "rgb(3, 3, 3)",
+      "topText": "rgb(242, 244, 245)",
+      "railBg": "rgb(3, 3, 3)",
+      "dom": 192,
+      "longTasks": 0,
+      "nav": 234.89999999850988,
+      "bodyBg": "rgb(12, 14, 16)"
+    },
+    "light": {
+      "theme": "light",
+      "topBg": "rgb(245, 247, 248)",
+      "topText": "rgb(29, 41, 48)",
+      "railBg": "rgb(233, 238, 240)"
+    }
+  }
+]

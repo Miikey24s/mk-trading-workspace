@@ -1,56 +1,59 @@
-# Current context — đọc đầu tiên khi lập kế hoạch liên project
+# Current context — routing sống của TradingWorkspace
 
-## Refresh execution 2026-09-28 · provider retry checkpoint
+**Snapshot:** 2026-10-01 · cleanup compact 01. Đây là file điều hướng, không phải acceptance ledger và không thay runtime state.
 
-Snapshot điều phối hiện tại (routing/evidence, không thay acceptance ledger): root `a846179` (login-gate traceability); MT5 host seam `2b0b2cb` và chart causal hardening `79909e6` (offline/PREP_ONLY); VI `c7f27c0` atop `32810aa` (catalog startup/restart/restore, stale-revision rejection và allowlisted WebGPT login-gate diagnostics); Quant offline null/buy-hold baseline `3516a70`; TradingAgents `27b5a04`; shared UI migration rollback fixture `a256b93`. Dedicated WebGPT source repo `D:\ANNAM\AI\vi-dubber-webgpt-core` được tách từ Cockpit-custom lineage `dfb963d` và deployed tại revision `5dfcd4f`; isolated-provider guard blocks Cockpit route/provider/catalog writes; core typecheck pass và full suite đạt 814 pass với 5 lỗi môi trường đã biết (Windows symlink privilege và optional Electron dependency). Runtime port 17850 đang dùng core mới; repo Cockpit cũ giữ vai trò rollback. Job12 r3/r4/r6/r7 đều dừng tại translation do WebGPT UI/session không tạo assistant turn hoặc Temporary Chat/model controls không ổn định; lần mới nhất r7 giữ **28/28 ASR chunks**, **864 cached unique IDs (0–863)**, 49 receipt, rồi dừng tại batch kế tiếp với `provider detail redacted`. Smoke sau timeout patch vẫn gặp effort-control unavailable, nên cần UI/account WebGPT hồi phục trước khi resume. Không đổi model/provider, không xóa cache/receipt, không claim whole-pipeline. M5/M6/M7 vẫn `PREP_ONLY`; chưa claim broker hoặc live authority. Các baseline/HEAD mô tả bên dưới là historical snapshot, không ghi đè trạng thái hiện tại và không rewrite WIP.
+## Chuỗi đọc bắt buộc
 
+1. `AGENTS.md` áp dụng.
+2. File này.
+3. `WORKSPACE-NEXT-STAGE-PLAN.md` cho điều phối liên project.
+4. `checkpoints/workspace-next-stage/RESUME.md` cho trạng thái execution mới nhất.
+5. PLAN/ledger/checkpoint đúng project và đúng task.
 
-**Offline additions 28/09/2026:** frontier evidence routing, theory application matrix, plan completion audit và [autonomy/owner-absence feasibility memo](research/AUTONOMY-2-YEAR-FEASIBILITY-2026-09-28.md) đã được ghi; memo là `RESEARCH_PREP_ONLY`, không guarantee profit và không cấp execution authority. Quant OHLCV quality + model governance + feature PSI/OOD + walk-forward cost stress (`5371405`), VI catalog query/cache/ETag hardening (`e555351`→`558a9e8`) và M6 receipt-lineage hardening (`34c8a391`), VI Job12 separation-path repair/fail-fast (`e61cad5`/`51c0df6`), MT5 paper-account/bridge provenance hardening (`6956045`→`ebf1638`) và UI registry drift checker (`0408d71`) đã được kiểm chứng offline; tất cả vẫn là PREP_ONLY/research/advisory. Lượt mới nhất thêm VI M5 metadata UI QA (`883c2da`), VI M6 connector contract/revoke/revision fencing (`f70c92a`→`ba576d1`→`ed5d789`), MT5 invalid-bars JSON serialization fix (`7f0b807`) và Quant null/buy-hold baseline (`3516a70`); các receipt đều giữ PREP_ONLY/NO_CLAIM boundary. Duplicate skill copies trong checkout/evidence tạm đã được archive tại `planning/archive/ai-environment-duplicates-20260928/`; audit deterministic sau cleanup là **OK**. Không mở provider, broker, wallet, OAuth, holdout hoặc execution.
+Không đọc toàn archive để bắt đầu task. Archive chỉ mở để kiểm tra nguyên nhân, hash, regression hoặc quyết định lịch sử.
 
-**Offline additions wave 2 (28/09/2026):** MT5 fenced supervisor được bind vào paper admission (`210db13`) với exact risk/intent/epoch/provenance; Quant thêm deterministic fee/slippage Monte Carlo stress và type validation (`21f0dc3`→`d90aadc`); VI thêm startup/restart/restore rehearsal và stale-revision reject-before-mutation (`4cb884a`→`32810aa`); TradingAgents giữ `run_id` ổn định và publish report atomic (`27b5a04`); UI registry checker từ chối `sharedUiPins` sai kiểu (`33f758a`); departure P0 audit ghi rõ các gap host supervisor, durable registry, backup drill, alert/runbook và paper soak (`470dc54`). Các slice đều offline/PREP_ONLY, không mở provider, broker, OAuth, wallet, holdout hay execution.
+## Authority map
 
-**Offline additions wave 3 (28/09/2026):** VI validates persisted macro-chunk plans and normalizes malformed plans fail-closed (`2d07397`, `32d2585`; 56 focused pipeline/longform tests pass); the extracted WebGPT core now blocks isolated Cockpit/provider route mutations (`5dfcd4f`, 24 core tests + typecheck pass) and VI enables the guard (`c8f37ae`, 66 focused tests pass). MT5 adds a tenant-scoped read-only research checkpoint endpoint (`614ccb5`, PREP_ONLY; DB integration intentionally not run) and durable owner-absence alert-journal decisions (`09b45ee`, 42 focused tests pass; external sink/watchdog still gated). Quant enforces strictly advancing paper-soak input cutoffs (`7533dd7`, full suite 220 pass). TradingAgents writes state logs atomically (`6581e02`, full suite 975 pass/5 skipped). UI-Systems docs clarify foundation vs accepted-scoped release vs candidate presentation state; registry/UI QA remains clean and no consumer migration occurred. All remain offline/PREP_ONLY; no provider, broker, OAuth, wallet, holdout or execution authority is opened.\n\n**26/09/2026 · routing/context, không là acceptance ledger.** Workspace `D:/ANNAM/TradingWorkspace` là planning root; từng project có owner/runtime riêng. Refresh khi chốt QA Make đã thấy Git metadata ở root; không tự init hoặc stage WIP ngoài task. `D:/ANNAM/RoadMap` là cwd cũ, không mặc định còn đúng.
+| Phạm vi | Authority | Vai trò |
+|---|---|---|
+| Workspace routing | `CURRENT-CONTEXT.md` | Baseline, priority, permission boundary và link đọc tiếp |
+| Cross-project handoff | `WORKSPACE-NEXT-STAGE-PLAN.md` | Milestone, dependency, acceptance scope và worker workflow |
+| Current execution | `checkpoints/workspace-next-stage/RESUME.md` | WIP, owner, last verified gate, blocker và next action |
+| MT5 product | `mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md` | Product scope, U/Y gates, PATH-2 và acceptance nghiệp vụ |
+| MT5 UI | `mt5-tradingview-backtester/WMREPLAY-UI-MASTER-PLAN.md` | W0–W8 UI scope, visual/a11y/performance gates |
+| MT5 runtime | Operational ledger/`STATE.json`/receipts được `EXECUTION-ENTRYPOINT.md` dẫn | Attempt state; không copy vào PLAN |
+| VI Dubber | `../projects/vi-dubber/PLAN.md` + source/tests/checkpoints | Product phase, contracts và acceptance |
+| Quant/TradingAgents | Project README/AGENTS/ledger riêng | Offline research/regression; không mở provider/broker |
+| Shared UI | `D:/ANNAM/UI-Systems/docs/` + accepted-scoped release receipt | Foundation/contracts; không suy release từ snapshot |
 
-## Lối đọc ngắn
+`CONTEXT-LIFECYCLE.md` là policy về authority, compact, archive và resume-read test. Không tạo ledger hoặc master PLAN thứ hai.
 
-1. AGENTS áp dụng → file này → PLAN đúng task.
-2. Đọc đúng spec/ADR và evidence liên quan; không mở toàn bộ archive/research.
-3. Trước sửa: refresh repo status + owner/task state; snapshot trong tài liệu không thay bằng chứng hiện tại.
+## Trạng thái hiện tại đã xác minh
 
-| Việc đang làm | Nguồn quyết định / tiếp tục |
-|---|---|
-| Handoff cả giai đoạn tiếp theo | [WORKSPACE-NEXT-STAGE-PLAN v1.3](WORKSPACE-NEXT-STAGE-PLAN.md) → [RESUME](checkpoints/workspace-next-stage/RESUME.md): **M2 Make COMPLETE, M3 integration COMPLETE-SCOPED, M4 shared release COMPLETE-SCOPED**. M5 vẫn phụ thuộc VI baseline M0 |
-| Review trước compact/giai đoạn mới | [WORKER-REVIEW-2026-09-26](WORKER-REVIEW-2026-09-26.md): `REVIEWED-PARTIAL`, còn findings; handoff ngắn không thay ledger/PLAN |
-| MT5 product execution | [PRODUCT-COMPLETION-PLAN](mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md) → [entrypoint](mt5-tradingview-backtester/EXECUTION-ENTRYPOINT.md) → operational RESUME/ledger ở đó |
-| MT5 foundation | [PATH-2 ADR](mt5-tradingview-backtester/FOUNDATION-ADR-0001-PATH2.md); không bắt đầu lại research nếu không có revisit trigger |
-| VI Dubber hiện tại | [project PLAN](../projects/vi-dubber/PLAN.md), [README](../projects/vi-dubber/README.md), checkpoint/test receipts; task `01a0dc70-94e2-7ad2-97d0-1f262b2ffa04` có lượt cuối failed trong review 26/09, không suy mọi child/process đã dừng |
-| UI ecosystem | [UI platform plan](ui-platform/MASTER-UI-PLATFORM-PLAN.md); `D:/ANNAM/UI-Systems/docs/ARCHITECTURE.md`; [UI skill](../.agents/skills/ui-platform-workflow/SKILL.md) |
-| Figma cũ/mới | **Owner chốt lan4, QA Make đã xong**: [closeout](checkpoints/workspace-next-stage/M2-PRODUCTIVITY-VI-MT5-lan4-review/CLOSEOUT.md). Không cần lan5. [NEXT-STAGE §6A](WORKSPACE-NEXT-STAGE-PLAN.md#6a-m2-đã-đóng-đúng-scope--bàn-giao-sang-code-integration) giữ 3 lỗi cho M3 code integration; U1d/Y26/full product round-trip vẫn theo authority domain |
-| Security review có chọn lọc | [NEXT-STAGE §10A](WORKSPACE-NEXT-STAGE-PLAN.md#10a-reverse-skill--lớp-review-có-chọn-lọc-không-thêm-runtime): reverse-skill là reference; chưa activate/run/install. Không dùng scope mk-open cũ cho target mới |
-| Integration tương lai | [brief](WORKSPACE-INTEGRATIONS-RESEARCH-DRAFT.md), chưa giao execution |
-| Quant/trading 3–5 năm | [roadmap draft](mt5-tradingview-backtester/POST-COMPLETION-ROADMAP-DRAFT.md), chưa giao execution |
-| Quản lý tài liệu | [CONTEXT-LIFECYCLE](CONTEXT-LIFECYCLE.md); [archive record](archive/2026-09-26-context/README.md) |
+- **MT5 WMREPLAY:** W7-A route recovery và W7-B shell/route contrast repair đã có evidence; integrated web suite 56/56, Vite build pass với cảnh báo bundle khoảng 723 kB, route matrix 45/45, W7-B structural/request-safety 18/18. Đây là fixture/runtime evidence theo scope, chưa phải whole-product acceptance.
+- **MT5 open:** Replay contrast vẫn cần nghiệm thu browser; WIP `ReplayWorkspace.css` đã checkpoint ở MT5 `a90526c`; native browser zoom, axe/WCAG, canonical golden promotion, full-bleed, long-duration heap/frame, Dashboard aggregate semantics và owner-gated broker/provider/OAuth/upload/holdout/deploy/destructive work vẫn mở.
+- **Job12/VI provider:** artifact-level completion không đồng nghĩa media QA. Current audit giữ `qa.passed=false`, `full_track_skipped=true`, `final_failed=122`; không `--fresh`, không xóa cache/receipt/lock, không đổi provider/model và không claim whole-pipeline.
+- **VI Dubber:** các P/M slices đã accepted chỉ đúng scope; P23 vẫn còn repeated whole-job/live-provider/whole-pipeline gates. Human listening và external/provider gates không được suy ra từ offline test.
+- **Quant:** ưu tiên offline data quality, provenance, PSI/OOD, cost stress và paper-soak fencing. Không mở live/execution.
+- **TradingAgents:** ưu tiên offline regression và atomic state publication. Không mở provider/API key/network nếu chưa có task riêng.
+- **Shared UI:** `annam-productivity` và Figma Make là accepted-scoped evidence; không coi đó là global theme/product-runtime acceptance.
 
-## Quyết định còn sống
+## Quyết định sống
 
-- Reuse → adapt → shared khi nhiều consumer thật và giảm maintenance → mới build. “Có thư mục foundation” không chứng minh có component đã accepted.
-- MT5 PATH-2 đã approved: nền mới + selective reuse domain/tests/data/knowledge. Không giữ legacy Flask làm authority lâu dài.
-- UI: global/product-agnostic ở `D:/ANNAM/UI-Systems`; trading-specific ở `UI/`; media UI ở VI Dubber; không kéo media qua trading-domain layer.
-- Agent UI autonomy của MT5 không mở quyền broker/provider/OAuth/deploy. Human-listening của Dubber chưa được bỏ. User cho phép thao tác Figma thủ công khi capability thiếu, không phải cho phép upload secret/data riêng.
-- Chọn C cho UI giai đoạn mới: reuse nền tối thiểu → Make bounded exploration → proof cả hai app → consolidate. Figma Make quan trọng nhưng autonomy/Playwright vẫn là fallback; Make prototype GitHub one-way khác local-codebase Mac-only closed beta. [Research](research/WORKSPACE-NEXT-STAGE-2026-09-26.md) giữ bằng chứng/limitations; chưa round-trip runtime.
-- **Owner đã chốt skeleton lan4:** productivity, shell chung, VI Jobs/Review + MT5 Replay/Report, light/dark và domain state riêng. M2/QA Make COMPLETE; ba lỗi runtime đã được sửa ở M3. M4 đã phát hành scoped `annam-productivity@1.0.0` với token snapshot/hash và một neutral control chứng minh reuse ở VI+MT5; đây không phải whole-app/global-theme acceptance.
-- Hậu-PLAN dự kiến dùng GPT-5.6 Sol root, tối đa **3 subagents đồng thời**, không bắt buộc dùng đủ; không sửa trần/runtime hay điều phối worker hiện tại.
-- **Execution override 27/09/2026:** user explicitly authorized autonomous parallel work beyond the plan's 3-child cap for this session. Runtime catalog resolves `ch/linxaq` to GPT-6 Astra with `ultra`; use the host pool up to its configured ceiling, without changing global config.
-- AI coding, AI nhúng trong sản phẩm và job runtime là ba phạm vi khác nhau. Không gộp credentials/quotas/ledgers vì cùng máy.
+- **Execution override đã ghi nhận 27/09/2026:** trong phiên được giao chạy `WORKSPACE-NEXT-STAGE-PLAN.md`, owner cho phép làm song song vượt cap 3 children; runtime khi đó resolve `ch/linxaq` thành GPT-6 Astra `ultra`, dùng host pool trong trần cấu hình. Giữ override khi tiếp nối đúng execution đó; kiểm tra runtime thực tế, không tự sửa global config. Đây không phải model/cap mặc định cho task cleanup hoặc một lần giao plan mới.
+- Reuse → adapt → shared khi có nhiều consumer thật và rollback rõ; không thêm framework chỉ vì có thư mục foundation.
+- PATH-2 MT5 vẫn là foundation authority; không quay lại legacy Flask làm nguồn chính.
+- UI global ở `D:/ANNAM/UI-Systems`; trading UI ở `UI/` và MT5; media UI ở VI Dubber.
+- TypeSafe/Jev chỉ là typed advisory judgment; không sở hữu arithmetic, fills, risk, ledger hoặc execution.
+- Provider, broker, wallet, OAuth, holdout, public upload, paid service, deploy và destructive cleanup đều fail-closed.
+- Các plan frontier, SaaS/multiuser, distributed compute, AI factory, SDK expansion và cloud connector là future reference; không thuộc execution hiện tại.
 
-## Baseline có thời điểm, không hoàn thành giả
+## Resume hiện tại
 
-Review 26/09: hai task chính bị stream-disconnect, chưa có final acceptance. Dubber v2.18 còn P23, listening/P14 và WIP; MT5 STATE/SQLite mới hơn RESUME và headers cũ, PS-03 verifying. [Review record](WORKER-REVIEW-2026-09-26.md) giữ baseline, findings và focused offline tests; đọc nguồn thật lại trước resume. Không gọi provider/broker hoặc chạy product acceptance đầy đủ để “refresh” trong task planning; kiểm chứng hẹp read-only/offline khi review được phép.
+1. Đọc `RESUME.md`, sau đó đọc đúng domain PLAN.
+2. MT5 tiếp tục từ Replay contrast scout/lane, tiếp tục từ CSS đã checkpoint `a90526c` và chạy lại route matrix sau source change.
+3. VI chỉ tiếp tục bounded offline correctness/harness repair; provider/media rerun cần owner gate.
+4. Quant/TradingAgents giữ offline regression và evidence; không mở external authority.
+5. Mỗi worker ghi receipt tại project/checkpoint owner, không append raw log vào file này.
 
-Refresh execution 28/09 (routing only): nguồn trạng thái hiện tại là [RESUME](checkpoints/workspace-next-stage/RESUME.md). MT5 `Nam`/`31f995a` đã sửa renderer scope-reset cleanup để giữ `known_at`/source provenance và vẫn fail-closed; chart/AI/UI/parity focused suite là `121 passed`. Quant `29d241b` nối feature provenance → PSI/OOD → governance review; full suite `176 passed`. VI `c7b5aeb` thêm local catalog search UI trên nền M5 API metadata-only, cùng M6 receipt-lineage binding và M5 API consistency checker/SQLite handle fix; full suite `587 passed, 1 skipped, 2 warnings`, frontend build/typecheck + UI/telemetry contracts pass. Job12 đã qua các window separation đầu tiên sau repair và đang chạy đúng một lease dưới PID `20288`; không tạo duplicate. UI registry checker `0408d71` pass với 6 configs/2 pins/2 partial/0 errors. PostgreSQL 18 local validation trước đó vẫn giữ nguyên receipt `227` tests. Chart/AI/UI contracts vẫn offline/closed-bar, chưa có SDK/provider/alert delivery/broker/live authority; M5/M6/M7 vẫn PREP_ONLY. Hai historical P23 receipts và product WIP vẫn untracked/dirty có chủ ý; không stage/reset WIP. Whole-pipeline/live-provider gates mở.
-
-The current TypeSafe/Jev boundary remains optional typed judgment only: local/fake offline is the default, server-side key/model pinning and redaction are required, and unavailable/uncertain results fail to `unknown`/review. It cannot own arithmetic, fills, risk, ledger or execution. Model fallback is documented in `planning/checkpoints/workspace-next-stage/MODEL-PORTABILITY-FALLBACK-2026-09-27.md` (`00ddbcd`): future Sol/model changes resume from the authority chain and evidence packet, never from chat memory, and never silently widen broker/provider/live permissions. The autonomous-update packet and checker are `PREP_ONLY_OFFLINE`; its deterministic dry-run has zero external side effects and rejects fifteen dangerous or malformed mutations. `.runtime/` and `.worktrees/` are safely ignored, with no deletion, install, signature fetch, scheduler or production promotion. The receipt is `planning/checkpoints/workspace-next-stage/AUTONOMOUS-UPDATE-GOVERNANCE-2026-09-27/verification-receipt-v1.json`.
-
-## Phạm vi lượt này
-
-User brief tại [OWNER-BRIEF](archive/2026-09-26-context/OWNER-BRIEF.md); [research](research/WORKSPACE-NEXT-STAGE-2026-09-26.md) giữ lịch sử planning. Trạng thái thực thi đọc [RESUME](checkpoints/workspace-next-stage/RESUME.md). User đã giao tiếp tục full plan trong phiên hiện tại: **M2 COMPLETE; M3 selected-diff product integration và M4 scoped shared release đã hoàn thành**. Current autonomous execution packet là [AUTONOMOUS-EXECUTION-2026-09-27](checkpoints/workspace-next-stage/AUTONOMOUS-EXECUTION-2026-09-27.md); M5–M7 tiếp tục theo baseline/permission gates hiện hành. Local contracts, hardening, UI, offline adapters, tests, recovery và research được làm ngay; long external waits được giữ resumable. Không tự waive human listening, 6h real-media, OAuth/account, broker/live/holdout hoặc destructive gates.
+Bản đầy đủ trước cleanup được giữ tại `archive/2026-10-01-cleanup/planning__CURRENT-CONTEXT.md`; SHA-256 nằm trong `ORIGINAL-BYTES-MANIFEST.json`.

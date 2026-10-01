@@ -1,0 +1,30 @@
+{
+  "accepted_scope": [
+    "Prop session, attempt, phase and resume state persist in PostgreSQL and survive reload/restart",
+    "Initial session+attempt creation is atomic and exact-payload retries are idempotent while conflicts fail closed",
+    "Tenant/workspace scope and revision fencing protect create/read/resume mutations",
+    "Real local API + Vite + Playwright acceptance passes create, persisted resume, denial and responsive 1440/768/360 flows",
+    "Prop scope remains simulation-only and exposes no broker execution capability"
+  ],
+  "base": "0aa38970fd550af24311c60f53c388ad4da4cd6f",
+  "commit": "1986b1f9c48bc24677bc88f178cc4f732476942c",
+  "residual_scope": [
+    "PS-02 simulator event/order lifecycle and challenge evaluation integration",
+    "broker/demo/live execution capability",
+    "Figma Make round-trip and whole-product UI acceptance",
+    "U5C research changes carried by the same Git commit remain independently unaccepted"
+  ],
+  "result": "PASS",
+  "reviewer": "/root/prop_acceptance_review_r2",
+  "task": "PS-01-PROP-PERSISTENCE-r1",
+  "validation": "foundation_v2\\.runtime\\ps01-real-service-evidence-r3\\PS01-acceptance-r1.json",
+  "validation_checks": {
+    "backend_persistence_tests_pass": true,
+    "broker_execution_capability": false,
+    "postgres_attempt_persisted": true,
+    "postgres_session_persisted": true,
+    "real_service_browser_pass": true,
+    "vite_build_pass": true
+  },
+  "validation_sha256": "7c2f810e70b91e413b42ea7e3e4b11c25035ce9c41c9cd4198c8eb7df3401cba"
+}

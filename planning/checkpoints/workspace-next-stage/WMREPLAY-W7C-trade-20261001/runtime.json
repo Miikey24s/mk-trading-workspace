@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "fixture": "local-intercepted-trade-simulator",
+  "origin": "http://127.0.0.1:4176",
+  "checks": [
+    "initialize_post_revision_and_execution_state",
+    "queue_post_revision_and_pending_ledger_state",
+    "409_revision_conflict_preserves_draft",
+    "broker_provider_external_calls_absent",
+    "responsive_1440_390",
+    "no_horizontal_overflow",
+    "no_unexpected_console_or_page_errors"
+  ],
+  "requests": [
+    "trade-success:execution:1",
+    "trade-success:orders:2",
+    "trade-conflict:execution:1",
+    "trade-conflict:orders:2"
+  ],
+  "post_count": 4,
+  "console_errors": [
+    "Failed to load resource: the server responded with a status of 409 (Conflict)"
+  ],
+  "screenshots": [
+    "trade-mutation-success-1440.png",
+    "trade-mutation-success-390.png",
+    "trade-mutation-conflict-390.png",
+    "trade-mutation-trace.zip"
+  ]
+}

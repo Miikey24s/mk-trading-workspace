@@ -1,0 +1,375 @@
+{
+  "origin": "http://127.0.0.1:5173",
+  "generated_at_utc": "2026-09-30T17:08:37.159Z",
+  "cases": [
+    {
+      "id": "data-empty",
+      "url": "/?view=data&workspace=tenant-a",
+      "observed": {
+        "ids": {
+          "data-desk-root": true,
+          "data-desk-import": true,
+          "data-desk-empty": true
+        },
+        "title": "MT5 Trading Workspace · FX Replay",
+        "h1": "Data Desk",
+        "width": 1440,
+        "scrollWidth": 1440,
+        "height": 900,
+        "visibleText": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nMT5 TRADING WORKSPACE / DATA DESK\nData Desk\n\nChọn dữ liệu có provenance rõ ràng trước khi replay hoặc chạy research.\n\nResearch\nReplay\nRESEARCH / SIMULATION\nBroker locked · holdout không mở\nWorkspace tenant-a\nDatasets 0\nProviders 0\nHoldout khóa\nLOCAL DATA / NO PROVIDER\nPreview hoặc import CSV\n\nFile được đọc bằng browser; server chỉ nhận nội dung sau khi bạn bấm Preview. Không gửi đường dẫn file.\n\nBROKER LOCKED\nCSV FILE\nINSTRUMENT ID\nTIMEFRAME SECONDS\nProvenance và instrument spec\nPreview quality\nImport dataset\nChưa có preview\nChọn file CSV, kiểm tra quality, rồi mới quyết định import.\nDataset catalog\n\nChỉ hiển thị dữ liệu thuộc workspace hiện tại.\n\nPROVIDER\nTất cả\nWorkspace chưa có dataset nào phù hợp. Không thể bắt đầu research từ dữ liệu trống.\nChọn một dataset để xem provenance, range và các cảnh báo trước khi mở Research.\nProvider capabilities\n\nCapability khai báo không đồng nghĩa đã có quyền đọc history hoặc holdout.\n\nChưa có provider capability nào.\nQuy tắc an toàn\nLocal CSV import chỉ tạo artifact immutable trong workspace hiện tại.\nKhông mở holdout, không gọi provider ngoài và không gửi lệnh broker.\nDataset chưa verified vẫn phải gắn nhãn trước khi dùng."
+      },
+      "tablet": {
+        "width": 768,
+        "scrollWidth": 768,
+        "height": 1024
+      },
+      "mobile": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 844
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "/api/v2/data/datasets"
+        },
+        {
+          "method": "GET",
+          "url": "/api/v2/data/providers"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "data-selected",
+      "url": "/?view=data&workspace=tenant-a&dataset=eurusd-h1",
+      "observed": {
+        "ids": {
+          "data-desk-root": true,
+          "dataset-details": true,
+          "data-desk-import": true
+        },
+        "title": "MT5 Trading Workspace · FX Replay",
+        "h1": "Data Desk",
+        "width": 1440,
+        "scrollWidth": 1440,
+        "height": 900,
+        "visibleText": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nMT5 TRADING WORKSPACE / DATA DESK\nData Desk\n\nChọn dữ liệu có provenance rõ ràng trước khi replay hoặc chạy research.\n\nResearch\nReplay\nRESEARCH / SIMULATION\nBroker locked · holdout không mở\nWorkspace tenant-a\nDatasets 1\nProviders 1\nHoldout khóa\nLOCAL DATA / NO PROVIDER\nPreview hoặc import CSV\n\nFile được đọc bằng browser; server chỉ nhận nội dung sau khi bạn bấm Preview. Không gửi đường dẫn file.\n\nBROKER LOCKED\nCSV FILE\nINSTRUMENT ID\nTIMEFRAME SECONDS\nProvenance và instrument spec\nPreview quality\nImport dataset\nChưa có preview\nChọn file CSV, kiểm tra quality, rồi mới quyết định import.\nDataset catalog\n\nChỉ hiển thị dữ liệu thuộc workspace hiện tại.\n\nPROVIDER\nTất cả\nlocal\nDATASET\tINSTRUMENT\tRANGE\tQA\tHOLDOUT\tROWS\n\neurusd-h1\nlocal\n\tEURUSDm\nH1\n\t16:00 9/3/24\n→ 02:00 10/3/24\n\tĐã xác minh\tKhóa\t100\nProvenance và QA\n\nĐây là bằng chứng metadata hiện có; không suy ra dữ liệu thiếu thành số 0.\n\nMở trong Research →\nDATASET\neurusd-h1\nPROVIDER\nlocal\nINSTRUMENT / TF\nEURUSDm · H1\nSỐ NẾN\n100\nRANGE UTC\n16:00 9/3/24 → 02:00 10/3/24\nLICENSE\ntest\nQUALITY\nĐã xác minh\nHOLDOUT\nHoldout khóa\nARTIFACT HASH\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nRETRIEVED\n00:00 30/9/26\nTRANSFORM\nChưa xác định\nINSTRUMENT SPEC\nCó\nCần biết trước khi chạy\nKhông có quyền holdout trong workspace này.\nProvider capabilities\n\nCapability khai báo không đồng nghĩa đã có quyền đọc history hoặc holdout.\n\nlocal\nKhông có capability đọc được khai báo\noffline · entitlement: unverified\nChưa đủ điều kiện production\nOffline / no network\nĐã khai báo\nQuy tắc an toàn\nLocal CSV import chỉ tạo artifact immutable trong workspace hiện tại.\nKhông mở holdout, không gọi provider ngoài và không gửi lệnh broker.\nDataset chưa verified vẫn phải gắn nhãn trước khi dùng."
+      },
+      "tablet": {
+        "width": 768,
+        "scrollWidth": 768,
+        "height": 1024
+      },
+      "mobile": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 844
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "/api/v2/data/datasets"
+        },
+        {
+          "method": "GET",
+          "url": "/api/v2/data/providers"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "research-empty",
+      "url": "/?view=research&workspace=tenant-a",
+      "observed": {
+        "ids": {
+          "research-root": true,
+          "research-data-context": true,
+          "research-quality-takeaway": true,
+          "research-run-form": true
+        },
+        "title": "MT5 Trading Workspace · FX Replay",
+        "h1": "Research theo bằng chứng",
+        "width": 1440,
+        "scrollWidth": 1440,
+        "height": 900,
+        "visibleText": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nTRADING WORKSPACE / RESEARCH\nResearch theo bằng chứng\n\nContext → quality gate → run → checkpoint → result. Mỗi bước giữ nguyên phạm vi dữ liệu và trạng thái thật.\n\nRESEARCH / SIMULATION\nBroker locked · không gửi lệnh\nData Desk →\nWorkspace tenant-a\nJob Chưa tạo\nChưa chạy\nEngine reference / chưa xác minh\n01\nContext\nDataset và phạm vi\n02\nQuality gate\nTakeaway và cảnh báo\n03\nRun\nGiả định nghiên cứu\n04\nCheckpoint\nTiến độ có bằng chứng\n05\nResult\nMetrics và hành động tiếp\n01 / CONTEXT\nChọn dataset để bắt đầu\n\nResearch cần một phạm vi dữ liệu cụ thể trước khi có thể nói về kết quả.\n\nMở Data Desk →\n—\nChưa có dữ liệu đầu vào\nKhông hiển thị placeholder metrics và không tự suy ra provenance.\n02 / QUALITY GATE\nChưa có dataset để ra quyết định\n\nMở Data Desk để chọn một dataset. Research không tự tạo dữ liệu và không dùng số 0 để lấp chỗ trống.\n\n—\nNEXT DECISION\nChọn dataset trước khi cấu hình run\n1 cảnh báo\nXem cảnh báo ảnh hưởng cách diễn giải\n03 / RUN CONFIG\nCố định giả định\n\nChỉ gửi dataset, strategy contract và starting balance đến local research backend.\n\ni\nĐang mở lại job hiện tại\nMuốn tạo run mới, mở Data Desk để chọn một dataset khác.\n05 / RESULT\nKết quả sẽ xuất hiện ở đây\n\nKhông có run thì không hiển thị số giả.\n\n○\nChưa có result\nHoàn tất context và run config ở cột bên trái trước.\nHọc & thuật ngữ"
+      },
+      "tablet": {
+        "width": 768,
+        "scrollWidth": 768,
+        "height": 1024
+      },
+      "mobile": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 844
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "/api/v2/data/datasets"
+        },
+        {
+          "method": "GET",
+          "url": "/api/v2/research/engines"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "research-selected",
+      "url": "/?view=research&workspace=tenant-a&dataset=eurusd-h1",
+      "observed": {
+        "ids": {
+          "research-root": true,
+          "research-data-context": true,
+          "research-quality-takeaway": true,
+          "research-run-form": true
+        },
+        "title": "MT5 Trading Workspace · FX Replay",
+        "h1": "Research theo bằng chứng",
+        "width": 1440,
+        "scrollWidth": 1440,
+        "height": 900,
+        "visibleText": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nTRADING WORKSPACE / RESEARCH\nResearch theo bằng chứng\n\nContext → quality gate → run → checkpoint → result. Mỗi bước giữ nguyên phạm vi dữ liệu và trạng thái thật.\n\nRESEARCH / SIMULATION\nBroker locked · không gửi lệnh\nData Desk →\nWorkspace tenant-a\nJob Chưa tạo\nChưa chạy\nEngine reference / chưa xác minh\n✓\nContext\nDataset và phạm vi\n✓\nQuality gate\nTakeaway và cảnh báo\n03\nRun\nGiả định nghiên cứu\n04\nCheckpoint\nTiến độ có bằng chứng\n05\nResult\nMetrics và hành động tiếp\n01 / CONTEXT\neurusd-h1\n\nPhạm vi cố định cho run này. Đổi dataset sẽ xóa deep link job hiện tại.\n\nMở Data Desk →\nEURUSDm · H1\n100 rows · 16:00 9/3/24 → 02:00 10/3/24\nQUALITY\nĐã xác minh\nHOLDOUT\nHoldout khóa\nPROVIDER\nlocal\nARTIFACT SHA\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nProvenance và giới hạn dữ liệu\n02 / QUALITY GATE\nCó thể chạy local, nhưng provenance còn thiếu\n\nRun vẫn giữ được tính trung thực, nhưng các cảnh báo bên dưới giới hạn cách diễn giải kết quả.\n\n!\nNEXT DECISION\nĐọc 1 cảnh báo trước khi chạy\n1 cảnh báo\nXem cảnh báo ảnh hưởng cách diễn giải\n03 / RUN CONFIG\nCố định giả định\n\nChỉ gửi dataset, strategy contract và starting balance đến local research backend.\n\nDATASET\nChọn dataset\neurusd-h1 · EURUSDm\nDataset là anchor của provenance và không tự đổi theo catalog.\nSTARTING BALANCE\nĐơn vị theo contract engine.\nSTRATEGY CONTRACT\nclose-delta-v1\nChỉ engine đã được backend công bố.\nTạo research run\nGUARD TRƯỚC KHI CHẠY\nĐã xác minh · Holdout khóa · instrument cost metadata có sẵn.\n05 / RESULT\nKết quả sẽ xuất hiện ở đây\n\nKhông có run thì không hiển thị số giả.\n\n○\nChưa có result\nHoàn tất context và run config ở cột bên trái trước.\nHọc & thuật ngữ"
+      },
+      "tablet": {
+        "width": 768,
+        "scrollWidth": 768,
+        "height": 1024
+      },
+      "mobile": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 844
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "/api/v2/data/datasets"
+        },
+        {
+          "method": "GET",
+          "url": "/api/v2/research/engines"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "journal-empty",
+      "url": "/?view=journal&workspace=tenant-a",
+      "observed": {
+        "ids": {
+          "journal-workspace": true
+        },
+        "title": "MT5 Trading Workspace · FX Replay",
+        "h1": "Journal",
+        "width": 1440,
+        "scrollWidth": 1440,
+        "height": 900,
+        "visibleText": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nFXREPLAY / DECISION JOURNAL\nJournal\n\nBiến một replay cutoff thành câu chuyện có bằng chứng: điều thấy → quyết định → kết quả → bước tiếp theo.\n\nLocal workspace · broker locked\nLINKED CONTEXT\nChưa chọn replay session\nWORKFLOW\nJournal chỉ tạo được từ replay context\nMở Practice từ một dataset local trước khi ghi để không mất nguồn bằng chứng.\nMở replay\nXem analytics\nENTRIES\n0 ghi chú\nToàn bộ workspace\n+ Ghi chú\nJournal đang trống\nMở Journal từ replay để tạo ghi chú có source rõ ràng.\nDECISION STORY\nChọn một entry để xem điều gì đã được biết tại cutoff.\nJournal tách phần tóm tắt khỏi note gốc để bạn đọc nhanh trước khi mở provenance.\nNEW ENTRY\nGhi chú mới\nLoại ghi chú\nQuan sát\nGiả thuyết\nQuyết định\nKhông giao dịch\nBỏ lỡ giao dịch\nNội dung\nDECISION CONTEXT\nĐiều đã quan sát\nchỉ dữ kiện tới cutoff\nGiả thuyết\nQuyết định / lý do bỏ qua\nPlan dự kiến\nActual / kết quả đã biết\ndo người dùng ghi sau khi review\nBước tiếp theo\nTags\nphân tách bằng dấu phẩy\nOverlay liên quan\nID, phân tách bằng dấu phẩy\nIMMUTABLE SOURCE\nN/A:N/A\nSource gắn với session/trade và không đổi khi sửa revision.\nLưu ghi chú"
+      },
+      "tablet": {
+        "width": 768,
+        "scrollWidth": 768,
+        "height": 1024
+      },
+      "mobile": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 844
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "/api/v2/journal"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "journal-context",
+      "url": "/?view=journal&workspace=tenant-a&session=session-1&trade=trade-1&cursor=10",
+      "observed": {
+        "ids": {
+          "journal-workspace": true
+        },
+        "title": "MT5 Trading Workspace · FX Replay",
+        "h1": "Journal",
+        "width": 1440,
+        "scrollWidth": 1440,
+        "height": 900,
+        "visibleText": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nFXREPLAY / DECISION JOURNAL\nJournal\n\nBiến một replay cutoff thành câu chuyện có bằng chứng: điều thấy → quyết định → kết quả → bước tiếp theo.\n\nLocal workspace · broker locked\nLINKED CONTEXT\nReplay session-1\nTrade trade-1\nCutoff nến #10\nChỉ ngữ cảnh này\nMở lại replay\nWORKFLOW\nĐang ghi quanh một replay context\nMỗi entry giữ lại cutoff, source và revision để review sau này.\nMở replay\nXem analytics\nENTRIES\n0 ghi chú\nĐang lọc theo context hiện tại\n+ Ghi chú\nChưa có ghi chú cho context này\nTạo ghi chú đầu tiên để lưu decision cùng replay.\nDECISION STORY\nChọn một entry để xem điều gì đã được biết tại cutoff.\nJournal tách phần tóm tắt khỏi note gốc để bạn đọc nhanh trước khi mở provenance.\nNEW ENTRY\nGhi chú mới\nLoại ghi chú\nQuan sát\nGiả thuyết\nQuyết định\nKhông giao dịch\nBỏ lỡ giao dịch\nNội dung\nDECISION CONTEXT\nĐiều đã quan sát\nchỉ dữ kiện tới cutoff\nGiả thuyết\nQuyết định / lý do bỏ qua\nPlan dự kiến\nActual / kết quả đã biết\ndo người dùng ghi sau khi review\nBước tiếp theo\nTags\nphân tách bằng dấu phẩy\nOverlay liên quan\nID, phân tách bằng dấu phẩy\nIMMUTABLE SOURCE\nreplay-trade:trade-1\nSource gắn với session/trade và không đổi khi sửa revision.\nLưu ghi chú"
+      },
+      "tablet": {
+        "width": 768,
+        "scrollWidth": 768,
+        "height": 1024
+      },
+      "mobile": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 844
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "/api/v2/journal"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "trade-empty",
+      "url": "/?view=trade&workspace=tenant-a",
+      "observed": {
+        "ids": {
+          "trade-workspace": true,
+          "trade-simulator-banner": true
+        },
+        "title": "MT5 Trading Workspace · FX Replay",
+        "h1": "Trade draft",
+        "width": 1440,
+        "scrollWidth": 1440,
+        "height": 900,
+        "visibleText": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nDashboard\nSessions\nTrades\nAnalytics\nTRADE DESK / REPLAY CONTEXT\nTrade draft\n\nTạo lệnh giả lập từ đúng decision cutoff hiện tại, kiểm tra risk trước khi queue.\n\nSession\nChưa chọn session\nChưa có dataset\nSIM\nSIMULATOR / PAPER ONLY\nQueue order chỉ ghi vào replay ledger local. Broker/live execution đang khóa.\nMở Practice trước\nTrade draft cần session, dataset và decision cutoff. Hãy mở một replay session rồi quay lại Trade desk.\nMở Practice →"
+      },
+      "tablet": {
+        "width": 768,
+        "scrollWidth": 768,
+        "height": 1024
+      },
+      "mobile": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 844
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "/api/v2/data/datasets"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "risk-idle",
+      "url": "/?view=risk&workspace=tenant-a",
+      "observed": {
+        "ids": {
+          "risk-workspace": true
+        },
+        "title": "MT5 Trading Workspace · FX Replay",
+        "h1": "Risk & giới hạn",
+        "width": 1440,
+        "scrollWidth": 1440,
+        "height": 900,
+        "visibleText": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nRISK LAB / LOCAL EVALUATOR\nRisk & giới hạn\n\nKiểm tra drawdown và daily loss trên một snapshot rõ nguồn. Số liệu thiếu sẽ bị chặn thay vì coi như 0.\n\nSIMULATION ONLY\nKhông có broker action\nRisk Lab không mở live trading\nKết quả chỉ đánh giá profile + snapshot bạn nhập, giữ nguyên các giới hạn local/replay.\nINPUT / PROFILE\nProfile giới hạn\nPROFILE ID\nTERMS VERSION\nEFFECTIVE FROM\nTOTAL DRAWDOWN\nTYPE\nStatic\nTrailing\nOVERALL BASIS\nEquity\nBalance\nDAILY LOSS\nDAILY BASIS\nEquity\nBalance\nCOST BASIS\nIncluded\nSeparate\nINPUT / SNAPSHOT\nTrạng thái tài khoản\nSTARTING BALANCE\nBALANCE\nEQUITY\nHIGH-WATER MARK\nDAILY START EQUITY\nChạm đúng floor cũng tính là breach\nĐánh giá snapshot\nREAD BEFORE PROMOTION\nCách đọc kết quả\nFloor\nMức thấp nhất cho phép theo profile hiện tại.\nRemaining\nKhoảng còn lại trước khi chạm giới hạn.\nBlocked\nThiếu dữ liệu nên chưa được phép kết luận.\nSimulation\nKhông nói lên khả năng payout hay edge."
+      },
+      "tablet": {
+        "width": 768,
+        "scrollWidth": 768,
+        "height": 1024
+      },
+      "mobile": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 844
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requests": [],
+      "pass": true
+    },
+    {
+      "id": "playbook-empty",
+      "url": "/?view=playbook&workspace=tenant-a",
+      "observed": {
+        "ids": {
+          "playbook-root": true,
+          "playbook-empty": true
+        },
+        "title": "MT5 Trading Workspace · FX Replay",
+        "h1": "Playbook versions",
+        "width": 1440,
+        "scrollWidth": 1440,
+        "height": 900,
+        "visibleText": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nMy strategies\nTRADING WORKSPACE / PLAYBOOK\nPlaybook versions\n\nĐọc lineage và diff của setup mà không làm thay đổi record backend.\n\nREAD ONLY\nBroker locked · không freeze / fork\nCATALOG\nSetups\n0\nChưa có playbook\nBackend chưa có record để đọc. UI này không tự tạo bản ghi.\nChọn một playbook\nChọn record bên trái để đọc metadata và version history."
+      },
+      "tablet": {
+        "width": 768,
+        "scrollWidth": 768,
+        "height": 1024
+      },
+      "mobile": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 844
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "/api/v2/playbooks"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "playbook-selected",
+      "url": "/?view=playbook&workspace=tenant-a&playbook=pb-1",
+      "observed": {
+        "ids": {
+          "playbook-root": true,
+          "playbook-summary": true,
+          "playbook-diff": true
+        },
+        "title": "MT5 Trading Workspace · FX Replay",
+        "h1": "Playbook versions",
+        "width": 1440,
+        "scrollWidth": 1440,
+        "height": 900,
+        "visibleText": "EN⌄\n☼\n?\nTesting\nLive\nStrategies\nEducation\nSettings\nMy strategies\nTRADING WORKSPACE / PLAYBOOK\nPlaybook versions\n\nĐọc lineage và diff của setup mà không làm thay đổi record backend.\n\nREAD ONLY\nBroker locked · không freeze / fork\nCATALOG\nSetups\n1\nBreakout\npb-1\nDraft\nr2\nSELECTED PLAYBOOK\nBreakout\nDraft\n\nĐây là read-only projection của record backend. Muốn đổi setup, workflow sẽ tạo fork mới sau khi contract UI được duyệt.\n\nRECORD\npb-1\nCURRENT REVISION\nr2\nCAPABILITY\nManual only\nCREATED\n2026-09-30 00:00:00 UTC\nUPDATED\n2026-09-30 01:00:00 UTC\nPARENT\nRoot record\nRULE SURFACE\nentry\nMở Journal với setup này →\nVERSION LINEAGE\nSo sánh revision\nREAD ONLY\nBase\nr1\nr2\n→\nCompare\nr1\nr2\nFIELD\nBASE R1\nCOMPARE R2\nrules.entry\nopen\nclose\n\nDiff chỉ hiển thị các field thay đổi; payload gốc vẫn thuộc backend record và không bị sửa từ màn này."
+      },
+      "tablet": {
+        "width": 768,
+        "scrollWidth": 768,
+        "height": 1024
+      },
+      "mobile": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 844
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "url": "/api/v2/playbooks"
+        },
+        {
+          "method": "GET",
+          "url": "/api/v2/playbooks/pb-1/revisions"
+        }
+      ],
+      "pass": true
+    }
+  ]
+}

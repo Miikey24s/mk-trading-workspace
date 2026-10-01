@@ -1,0 +1,45 @@
+{
+  "schema": "product-followup-validation-v1",
+  "date": "2026-09-25",
+  "scope": "local software and disposable PostgreSQL regression only; no broker, live, holdout-content, Figma, real-data, provider, or production acceptance",
+  "database": "tw_u5_resume_20260922",
+  "data_directory": "D:/ANNAM/TradingWorkspace/projects/mt5-tradingview-backtester/foundation_v2/.runtime/f7-pgdata-20260922",
+  "commits": {
+    "U5C-OOS-PLANNER-r1": "860fadd01f463df19d38a67a2294019fc19658d5",
+    "PS-00-PROP-CONTRACT-r1": "3835d4482168da65f0ff764e0b791f49e2fe5381",
+    "U3C-LEARN-BRIDGE-r1": "92937ec27425b5f0d9308234cbbcf1a35721411c"
+  },
+  "checks": [
+    {
+      "command": ".venv/Scripts/python.exe -m unittest tests.test_ps00_prop_session_contract tests.test_u5c_oos tests.test_u3c_learn tests.test_contracts tests.test_u3_playbook_journal tests.test_f7_product_slice -v",
+      "cwd": "foundation_v2",
+      "tests": 38,
+      "skipped": 0,
+      "exit_code": 0,
+      "result": "pass"
+    },
+    {
+      "command": "foundation_v2/.venv/Scripts/python.exe -m unittest tests.test_prop_profile -v",
+      "cwd": "projects/mt5-tradingview-backtester",
+      "tests": 2,
+      "skipped": 0,
+      "exit_code": 0,
+      "result": "pass"
+    }
+  ],
+  "source_sha256": {
+    "foundation_v2/trading_workspace_v2/research_oos.py": "7adb58fb82d56b0e39b1b234ccc81efcebd4744b2d11385264101d349e7c01f5",
+    "foundation_v2/tests/test_u5c_oos.py": "7648bb9876376455af68ca11ac44f9aea512ddc723636b4e9796659f27cca23c",
+    "foundation_v2/trading_workspace_v2/prop_session.py": "286e051a474088f7e4e6fa51a301e109eb5e206b73548e2349cfa25189f6e4f4",
+    "foundation_v2/tests/test_ps00_prop_session_contract.py": "7731675c71cfa8690819b5c2fe6be1b66db3c689fae8c629efbc79e68e01afdc",
+    "foundation_v2/trading_workspace_v2/learn.py": "9e67abc4ec805f749894dad110b1dbb787eace566ce49b7ea9456927d90d5f33",
+    "foundation_v2/tests/test_u3c_learn.py": "dbd1eff8495bab000f9f176088dc34c51d0c5b98a29bc36847433bf578371f47",
+    "foundation_v2/trading_workspace_v2/api.py": "ce34ff9f69138563a8193a3edb65508f708043024dfce56169107abdf794e8b7"
+  },
+  "notes": [
+    "U5c remains a planner/library slice and is not yet wired into the research job/API/worker lifecycle.",
+    "PS-00 freezes domain/oracle semantics only; persisted CRUD/resume and simulator lifecycle remain open.",
+    "U3c is a read-only backend/API bridge; Learn UI acceptance remains open.",
+    "The retained PostgreSQL fixture was started only for validation and must be stopped after this execution turn."
+  ]
+}

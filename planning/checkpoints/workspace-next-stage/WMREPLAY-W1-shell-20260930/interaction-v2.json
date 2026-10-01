@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "route": "?workspace=tenant-a&view=overview&session=s1&dataset=eurusd-qa&cursor=7&cutoff=2026-01-01T00:00:00Z&mode=Replay&job=omit",
+    "scroll": [
+      1440,
+      1440
+    ],
+    "rail": 248,
+    "theme": "dark",
+    "lang": "vi"
+  },
+  "href": "/?workspace=tenant-a&view=replay&session=s1&dataset=eurusd-qa&cursor=7&cutoff=2026-01-01T00%3A00%3A00Z&mode=Replay&area=testing&section=sessions&select=1",
+  "help": {
+    "open": true,
+    "focusOnOpen": "help-close",
+    "focusAfterTab": "help-close",
+    "focusAfterShiftTab": "help-close",
+    "afterEscape": {
+      "open": false,
+      "focus": "help-toggle"
+    }
+  },
+  "light": {
+    "theme": "light",
+    "topBg": "rgb(245, 247, 248)",
+    "activeTabColor": "rgb(41, 52, 59)"
+  },
+  "language": {
+    "html": "en",
+    "stored": "en"
+  },
+  "collapse": {
+    "rail": 74,
+    "stored": "true"
+  }
+}

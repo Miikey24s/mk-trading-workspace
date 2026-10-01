@@ -1,0 +1,15 @@
+{
+  "base_candidate": "567c6073ca1022983d1770dfbe8238d2b8cb3a8a",
+  "candidate": "665552177892d50f7df4fab3d5a31a538b8ac403",
+  "changed_files": [
+    "foundation_v2/tests/test_ps03_prop_reports.py",
+    "foundation_v2/trading_workspace_v2/prop_report.py"
+  ],
+  "finding": "R1 spreadsheet formula injection at Prop CSV export boundary",
+  "fix": "Neutralize formula-like prefixes only for textual CSV fields; preserve numeric semantics including negative values.",
+  "independent_reviewer": "/root/mt5_m0_audit",
+  "schema": "PS03-CSV-REMEDIATION-PACKET-r2",
+  "service_receipt": "artifacts/PS-03-CSV-EXPORT-HARDEN-r1/PS03-report-ui-acceptance-r1.json",
+  "service_receipt_sha256": "d20779b681150df94d5bf93f0183393dc485d84924867ae313f81fedfaaf5d26",
+  "task": "PS-03-REPORT-UI-r1"
+}

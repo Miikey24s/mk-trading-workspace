@@ -1,0 +1,184 @@
+{
+  "schema_version": "native-browser-zoom-v1",
+  "generated_at": "2026-09-30T18:24:13.202Z",
+  "environment": {
+    "platform": "win32",
+    "node": "v24.19.0",
+    "chromePath": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "headed": true,
+    "playwright": "existing local dependency",
+    "no_new_dependencies": true
+  },
+  "server": {
+    "origin": "http://127.0.0.1:4201",
+    "started_by_script": true,
+    "stderr": []
+  },
+  "cases": [
+    {
+      "name": "overview-headed-chrome",
+      "url": "http://127.0.0.1:4201/?view=overview&workspace=native-zoom-w8",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "before": {
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "outerWidth": 1456,
+        "outerHeight": 988,
+        "devicePixelRatio": 1,
+        "visualScale": 1,
+        "visualWidth": 1440,
+        "visualHeight": 900,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 900,
+        "overflow": false,
+        "activeTag": "BODY",
+        "activeName": "WMEN⌄☼?TestingLiveStrategiesEducationSettingsDashboardSessionsTradesAnalyticsBac",
+        "activeRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        }
+      },
+      "steps": [
+        {
+          "key": "Control+Equal",
+          "state": {
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "outerWidth": 1456,
+            "outerHeight": 988,
+            "devicePixelRatio": 1,
+            "visualScale": 1,
+            "visualWidth": 1440,
+            "visualHeight": 900,
+            "scrollWidth": 1440,
+            "clientWidth": 1440,
+            "bodyHeight": 900,
+            "overflow": false,
+            "activeTag": "BODY",
+            "activeName": "WMEN⌄☼?TestingLiveStrategiesEducationSettingsDashboardSessionsTradesAnalyticsBac",
+            "activeRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            }
+          }
+        },
+        {
+          "key": "Control+Shift+Equal",
+          "state": {
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "outerWidth": 1456,
+            "outerHeight": 988,
+            "devicePixelRatio": 1,
+            "visualScale": 1,
+            "visualWidth": 1440,
+            "visualHeight": 900,
+            "scrollWidth": 1440,
+            "clientWidth": 1440,
+            "bodyHeight": 900,
+            "overflow": false,
+            "activeTag": "BODY",
+            "activeName": "WMEN⌄☼?TestingLiveStrategiesEducationSettingsDashboardSessionsTradesAnalyticsBac",
+            "activeRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            }
+          }
+        },
+        {
+          "key": "Control+Equal",
+          "state": {
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "outerWidth": 1456,
+            "outerHeight": 988,
+            "devicePixelRatio": 1,
+            "visualScale": 1,
+            "visualWidth": 1440,
+            "visualHeight": 900,
+            "scrollWidth": 1440,
+            "clientWidth": 1440,
+            "bodyHeight": 900,
+            "overflow": false,
+            "activeTag": "BODY",
+            "activeName": "WMEN⌄☼?TestingLiveStrategiesEducationSettingsDashboardSessionsTradesAnalyticsBac",
+            "activeRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            }
+          }
+        },
+        {
+          "key": "Control+0",
+          "state": {
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "outerWidth": 1456,
+            "outerHeight": 988,
+            "devicePixelRatio": 1,
+            "visualScale": 1,
+            "visualWidth": 1440,
+            "visualHeight": 900,
+            "scrollWidth": 1440,
+            "clientWidth": 1440,
+            "bodyHeight": 900,
+            "overflow": false,
+            "activeTag": "BODY",
+            "activeName": "WMEN⌄☼?TestingLiveStrategiesEducationSettingsDashboardSessionsTradesAnalyticsBac",
+            "activeRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            }
+          }
+        }
+      ],
+      "after": {
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "outerWidth": 1456,
+        "outerHeight": 988,
+        "devicePixelRatio": 1,
+        "visualScale": 1,
+        "visualWidth": 1440,
+        "visualHeight": 900,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 900,
+        "overflow": false,
+        "activeTag": "BODY",
+        "activeName": "WMEN⌄☼?TestingLiveStrategiesEducationSettingsDashboardSessionsTradesAnalyticsBac",
+        "activeRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        }
+      },
+      "pageErrors": [],
+      "consoleErrors": []
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "headed_launch_succeeded": true,
+    "native_zoom_observed": false,
+    "reset_returned_baseline": true,
+    "overflow_after_steps": [],
+    "page_errors": 0,
+    "console_errors": 0
+  }
+}

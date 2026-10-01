@@ -1,0 +1,56 @@
+{
+  "at_utc": "2026-09-25T16:23:05.426726+00:00",
+  "checks": {
+    "broker_execution_capability": false,
+    "focused_regression_pass": true,
+    "postgres_prop_attempt_bound_to_replay": true,
+    "postgres_replay_execution_ledger_persisted": true,
+    "postgres_replay_prop_receipt_persisted": true
+  },
+  "postgresql": {
+    "database": "tw_ps02_replay",
+    "ephemeral_cluster": true,
+    "loopback_only": true
+  },
+  "residual_scope": [
+    "execution-enabled rewind/branch checkpoint reconstruction",
+    "lower-timeframe or tick intrabar equity path for full equity-rule coverage",
+    "cross-asset marks, financing/calendar accrual and broader D15 quality fixtures",
+    "start/pause/resume, multi-phase carry/reset lifecycle commands",
+    "Prop objective UI, reports/export and Figma acceptance",
+    "broker/demo/live, holdout, paid provider and deployment acceptance"
+  ],
+  "result": "PASS",
+  "schema": "PS02-REPLAY-CONNECTION-r1",
+  "scope": "simulation-only canonical Replay market-fill/price-mark ledger feeding persisted Prop lifecycle on a fresh disposable PostgreSQL cluster; no broker, holdout, provider or production capability",
+  "source_sha256": {
+    "foundation_v2/scripts/ps02_replay_connection_acceptance.py": "eaa7335e495af4cf83ebe77d02e7e631cbdf80e10084fdc0f91a71d4a1a45f1a",
+    "foundation_v2/tests/test_f7_product_slice.py": "802a79a4ca8b352751263d39ce1e8e8f80bd443260fd487a3bd42bc351cd5665",
+    "foundation_v2/tests/test_ps02_prop_lifecycle.py": "f93fe067498048ec9279e61a0900e06a4686881d978a3dd3faca38972752e812",
+    "foundation_v2/tests/test_ps02_replay_prop_connection.py": "246eaf2d6aea8ea0d805a181184cb088ec2f62d39668e9b1b36dee3a1720ad04",
+    "foundation_v2/tests/test_replay_execution_core.py": "3da05bff87dbe12cc5ccb0374b42e535cb4e1f7e0124967710738428e216d9ce",
+    "foundation_v2/tests/test_u5b_protective_margin.py": "0ca9a2ba97a5694c1c79179fc445a64e530c144750725b474cb4fc8db79040d9",
+    "foundation_v2/trading_workspace_v2/api.py": "7e2a225e8611f617044b5b40112119585f16e6c7b645cb096d9860e4b71a9138",
+    "foundation_v2/trading_workspace_v2/contracts.py": "3f24631110c236c9d8e48c10d186dadb55a04bf777d0e293c40ae2222f1828c8",
+    "foundation_v2/trading_workspace_v2/execution_semantics.py": "080bc43b4475f326e1d055260933759b5109ea737fb8ea3c54026bd1f348cd97",
+    "foundation_v2/trading_workspace_v2/prop_replay.py": "7d7c067bb65cb72458f5a69b2d45c51fd5a94c612d23f4a6d3e57bbdaff54cab",
+    "foundation_v2/trading_workspace_v2/prop_session.py": "12a43d9042ed3b478139f3b536fd969ef76e6607adb697c0d93516252131298a",
+    "foundation_v2/trading_workspace_v2/replay.py": "b2183b15b5967643ec3b1ffa03268bb9d773337737f324fd2f9cab94523663ad",
+    "foundation_v2/trading_workspace_v2/replay_execution.py": "e1438f5492e8b38cb106e6992ed9e75b957f736485ecef1d41e82670da24ddf0",
+    "foundation_v2/trading_workspace_v2/research_engine.py": "8d4354f9d8042f36885c3976d69e5e7ebfaf20474fe459c0c234f38fdd118f05",
+    "foundation_v2/trading_workspace_v2/store.py": "71a5b5d8c060bd95aabfc2247c2ac5a7037bfca50d77b5a7604e7ee4d6d4b4e2"
+  },
+  "tests": {
+    "modules": [
+      "foundation_v2.tests.test_ps00_prop_session_contract",
+      "foundation_v2.tests.test_ps01_prop_persistence",
+      "foundation_v2.tests.test_ps02_prop_lifecycle",
+      "foundation_v2.tests.test_f7_product_slice",
+      "foundation_v2.tests.test_u5b_protective_margin",
+      "foundation_v2.tests.test_replay_execution_core",
+      "foundation_v2.tests.test_ps02_replay_prop_connection"
+    ],
+    "return_code": 0,
+    "tests_run": 98
+  }
+}

@@ -1,0 +1,1330 @@
+{
+  "status": "PASS",
+  "scope": "local Playwright fixture route matrix, not integrated product acceptance",
+  "origin": "http://127.0.0.1:4193",
+  "sizes": [
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 768,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "routeCount": 15,
+  "caseCount": 45,
+  "passed": 45,
+  "failed": 0,
+  "transitions": [
+    {
+      "id": "theme-toggle-reload",
+      "status": "PASS",
+      "from": "dark",
+      "to": "light"
+    },
+    {
+      "id": "dashboard-to-sessions",
+      "status": "PASS",
+      "url": "http://127.0.0.1:4193/?workspace=tenant-matrix&view=replay&select=1"
+    },
+    {
+      "id": "sessions-to-analytics-demo",
+      "status": "PASS",
+      "url": "http://127.0.0.1:4193/?workspace=tenant-matrix&view=analytics&select=1&demo=1",
+      "demoLabeled": true
+    },
+    {
+      "id": "replay-empty-to-data",
+      "status": "PASS",
+      "url": "http://127.0.0.1:4193/?workspace=tenant-matrix&view=data"
+    },
+    {
+      "id": "replay-chart-to-sessions",
+      "status": "PASS",
+      "url": "http://127.0.0.1:4193/?workspace=tenant-matrix&view=replay&session=matrix-session&area=testing&section=sessions&select=1"
+    }
+  ],
+  "results": [
+    {
+      "id": "overview",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 272,
+          "width": 1144,
+          "height": 21
+        },
+        "shellClass": "fx-app fx-shell-story   ",
+        "heading": "",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/overview"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "sessions",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 248,
+          "width": 1192,
+          "height": 961.1875
+        },
+        "shellClass": "fx-app fx-shell-story   ",
+        "heading": "",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/replay/sessions"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "replay-empty",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 903.8125,
+          "width": 518.1875,
+          "height": 27.9375
+        },
+        "shellClass": "fx-app fx-shell-story   ",
+        "heading": "Practice · Replay",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "replay-loaded",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 305,
+          "width": 1078,
+          "height": 594
+        },
+        "shellClass": "fx-app fx-shell-story   is-chart-route",
+        "heading": "Practice · Replay",
+        "chartRows": "20",
+        "chartWidth": 1078,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets",
+        "GET /api/v2/replay/sessions/matrix-session"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "replay-error",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 266,
+          "width": 1156,
+          "height": 77
+        },
+        "shellClass": "fx-app fx-shell-story   is-chart-route",
+        "heading": "Practice · Replay",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets",
+        "GET /api/v2/replay/sessions/missing-session"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "trade",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 248,
+          "width": 1192,
+          "height": 481.890625
+        },
+        "shellClass": "fx-app fx-shell-story   ",
+        "heading": "Trade draft",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/replay/sessions/matrix-session",
+        "GET /api/v2/data/datasets"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "analytics",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 248,
+          "width": 1192,
+          "height": 518.765625
+        },
+        "shellClass": "fx-app fx-shell-story   ",
+        "heading": "Analytics",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/journal"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "journal",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 248,
+          "width": 1192,
+          "height": 1941.3125
+        },
+        "shellClass": "fx-app fx-shell-story   ",
+        "heading": "Journal",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/journal"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "research",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 248,
+          "width": 1192,
+          "height": 1010.921875
+        },
+        "shellClass": "fx-app fx-shell-story   ",
+        "heading": "Research theo bằng chứng",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets",
+        "GET /api/v2/research/engines"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "data",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 248,
+          "width": 1192,
+          "height": 1240.328125
+        },
+        "shellClass": "fx-app fx-shell-story   ",
+        "heading": "Data Desk",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets",
+        "GET /api/v2/data/providers"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "risk",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 248,
+          "width": 1192,
+          "height": 831.890625
+        },
+        "shellClass": "fx-app fx-shell-story   ",
+        "heading": "Risk & giới hạn",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "playbook",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 248,
+          "width": 1192,
+          "height": 447.6875
+        },
+        "shellClass": "fx-app fx-shell-story   ",
+        "heading": "Playbook versions",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/playbooks"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "settings",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 248,
+          "width": 1192,
+          "height": 934
+        },
+        "shellClass": "fx-app fx-shell-story   ",
+        "heading": "Settings",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/session/status",
+        "GET /api/v2/connectors/notion/oauth/status"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "learn",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 248,
+          "width": 1192,
+          "height": 203.5
+        },
+        "shellClass": "fx-app fx-shell-story   ",
+        "heading": "Học & thuật ngữ",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/learn/overview",
+        "GET /api/v2/learn/glossary"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "prop",
+      "width": 1440,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "documentWidth": 1440,
+        "overflowX": 0,
+        "root": {
+          "x": 248,
+          "width": 1192,
+          "height": 910
+        },
+        "shellClass": "fx-app fx-shell-story   ",
+        "heading": "Luyện challenge",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/prop/sessions"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "overview",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 98,
+          "width": 646,
+          "height": 42
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/overview"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "sessions",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 694,
+          "height": 1551.1875
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/replay/sessions"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "replay-empty",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 92,
+          "width": 658,
+          "height": 27.9375
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Practice · Replay",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "replay-loaded",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 127,
+          "width": 622,
+          "height": 522
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  is-chart-route",
+        "heading": "Practice · Replay",
+        "chartRows": "20",
+        "chartWidth": 622,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets",
+        "GET /api/v2/replay/sessions/matrix-session"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "replay-error",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 92,
+          "width": 658,
+          "height": 77
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  is-chart-route",
+        "heading": "Practice · Replay",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets",
+        "GET /api/v2/replay/sessions/missing-session"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "trade",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 694,
+          "height": 501.390625
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Trade draft",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/replay/sessions/matrix-session",
+        "GET /api/v2/data/datasets"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "analytics",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 694,
+          "height": 547.265625
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Analytics",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/journal"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "journal",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 694,
+          "height": 2199.625
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Journal",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/journal"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "research",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 694,
+          "height": 1524.71875
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Research theo bằng chứng",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets",
+        "GET /api/v2/research/engines"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "data",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 694,
+          "height": 1542.65625
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Data Desk",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets",
+        "GET /api/v2/data/providers"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "risk",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 694,
+          "height": 1198.578125
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Risk & giới hạn",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "playbook",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 694,
+          "height": 524.890625
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Playbook versions",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/playbooks"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "settings",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 694,
+          "height": 990
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Settings",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/session/status",
+        "GET /api/v2/connectors/notion/oauth/status"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "learn",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 694,
+          "height": 203.5
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Học & thuật ngữ",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/learn/overview",
+        "GET /api/v2/learn/glossary"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "prop",
+      "width": 768,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 694,
+          "height": 1117
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Luyện challenge",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/prop/sessions"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "overview",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 90,
+          "width": 284,
+          "height": 63
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/overview"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "sessions",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 316,
+          "height": 2131.890625
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/replay/sessions"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "replay-empty",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 86,
+          "width": 292,
+          "height": 57.875
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Practice · Replay",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "replay-loaded",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 101,
+          "width": 276,
+          "height": 390
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  is-chart-route",
+        "heading": "Practice · Replay",
+        "chartRows": "20",
+        "chartWidth": 276,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets",
+        "GET /api/v2/replay/sessions/matrix-session"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "replay-error",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 70,
+          "width": 308,
+          "height": 98
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  is-chart-route",
+        "heading": "Practice · Replay",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets",
+        "GET /api/v2/replay/sessions/missing-session"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "trade",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 316,
+          "height": 888.28125
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Trade draft",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/replay/sessions/matrix-session",
+        "GET /api/v2/data/datasets"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "analytics",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 316,
+          "height": 690.03125
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Analytics",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/journal"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "journal",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 316,
+          "height": 2343.53125
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Journal",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/journal"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "research",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 316,
+          "height": 2000.96875
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Research theo bằng chứng",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets",
+        "GET /api/v2/research/engines"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "data",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 316,
+          "height": 2416.15625
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Data Desk",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/data/datasets",
+        "GET /api/v2/data/providers"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "risk",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 316,
+          "height": 1907.96875
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Risk & giới hạn",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "playbook",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 316,
+          "height": 625.890625
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Playbook versions",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": true
+      },
+      "requests": [
+        "GET /api/v2/playbooks"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "settings",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 316,
+          "height": 2276.4375
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Settings",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/session/status",
+        "GET /api/v2/connectors/notion/oauth/status"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "learn",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 316,
+          "height": 228.4375
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Học & thuật ngữ",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/learn/overview",
+        "GET /api/v2/learn/glossary"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "id": "prop",
+      "width": 390,
+      "status": "PASS",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "overflowX": 0,
+        "root": {
+          "x": 74,
+          "width": 316,
+          "height": 1566.109375
+        },
+        "shellClass": "fx-app fx-shell-story is-rail-collapsed  ",
+        "heading": "Luyện challenge",
+        "chartRows": null,
+        "chartWidth": null,
+        "hasBrokerLock": false
+      },
+      "requests": [
+        "GET /api/v2/prop/sessions"
+      ],
+      "pageErrors": [],
+      "consoleErrors": []
+    }
+  ],
+  "failures": []
+}

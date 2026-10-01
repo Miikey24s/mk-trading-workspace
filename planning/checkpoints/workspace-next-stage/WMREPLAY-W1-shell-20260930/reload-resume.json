@@ -1,0 +1,26 @@
+{
+  "before": {
+    "path": "?workspace=tenant-a&view=overview&session=s1&dataset=eurusd-qa&cursor=7&cutoff=2026-01-01T00:00:00Z&mode=Replay",
+    "lang": "en",
+    "theme": "light",
+    "rail": 74,
+    "stored": [
+      "en",
+      "light",
+      "true"
+    ]
+  },
+  "after": {
+    "path": "?workspace=tenant-a&view=overview&session=s1&dataset=eurusd-qa&cursor=7&cutoff=2026-01-01T00:00:00Z&mode=Replay",
+    "lang": "en",
+    "theme": "light",
+    "rail": 74,
+    "stored": [
+      "en",
+      "light",
+      "true"
+    ]
+  },
+  "routePreserved": true,
+  "preferencesPreserved": true
+}

@@ -1,0 +1,31 @@
+{
+  "acceptance": [
+    "Prop session, attempt, phase and resume state persist in PostgreSQL and survive reload/restart",
+    "Initial session+attempt creation is atomic and exact-payload retries are idempotent while conflicts fail closed",
+    "Tenant/workspace scope and revision fencing protect create/read/resume mutations",
+    "Real local API + Vite + Playwright acceptance passes create, persisted resume, denial and responsive 1440/768/360 flows",
+    "Prop scope remains simulation-only and exposes no broker execution capability"
+  ],
+  "allowed_files": [
+    "foundation_v2/trading_workspace_v2/prop_session.py",
+    "foundation_v2/trading_workspace_v2/store.py",
+    "foundation_v2/trading_workspace_v2/api.py",
+    "foundation_v2/tests/test_ps01_prop_persistence.py",
+    "foundation_v2/scripts/ps01_acceptance.py",
+    "foundation_v2/web/run_prop_ui_real_acceptance.mjs",
+    "foundation_v2/web/src/PropWorkspace.jsx"
+  ],
+  "base_revision": "0aa38970fd550af24311c60f53c388ad4da4cd6f",
+  "candidate_revision": "1986b1f9c48bc24677bc88f178cc4f732476942c",
+  "dependencies": [
+    "PS-00-PROP-CONTRACT-r1"
+  ],
+  "residual_scope": [
+    "PS-02 simulator event/order lifecycle and challenge evaluation integration",
+    "broker/demo/live execution capability",
+    "Figma Make round-trip and whole-product UI acceptance",
+    "U5C research changes carried by the same Git commit remain independently unaccepted"
+  ],
+  "safety": "Local simulation-only PostgreSQL/API/Vite/Playwright evidence; no broker/live/provider/holdout/deploy action.",
+  "task": "PS-01-PROP-PERSISTENCE-r1"
+}

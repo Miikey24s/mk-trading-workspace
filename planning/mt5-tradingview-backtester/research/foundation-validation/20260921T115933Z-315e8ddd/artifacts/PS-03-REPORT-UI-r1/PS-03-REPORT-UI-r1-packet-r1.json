@@ -1,0 +1,41 @@
+{
+  "acceptance": [
+    "Attempt reports are derived read-only from canonical persisted Prop simulation state and retain session/profile/attempt/phase provenance",
+    "Workspace-scoped report APIs support status and clean/hindsight branch filtering without broker execution capability",
+    "CSV export contains stable summary fields and excludes arbitrary nested resume payloads and credentials",
+    "Prop UI exposes selected-attempt outcome/reasons plus a Reports view with status/branch filters, Learn navigation and CSV export",
+    "Hindsight reports remain visibly distinct from clean attempts and report failures do not hide usable persisted resume state",
+    "Fixture browser coverage includes breach explanation, filters/export, error/denied/empty/conflict and responsive 1440/768/360 layouts",
+    "Disposable PostgreSQL -> API -> Vite -> Playwright validation passes with persisted IDs, tenant denial and no broker/execution request"
+  ],
+  "allowed_files": [
+    "foundation_v2/evidence/ps03-report-ui-r1/PS03-report-ui-acceptance-r1.json",
+    "foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-1440.png",
+    "foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-360.png",
+    "foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-768.png",
+    "foundation_v2/evidence/ps03-report-ui-r1/ps03-real-service-reports-1440.png",
+    "foundation_v2/scripts/ps03_acceptance.py",
+    "foundation_v2/tests/test_ps03_prop_reports.py",
+    "foundation_v2/trading_workspace_v2/api.py",
+    "foundation_v2/trading_workspace_v2/prop_report.py",
+    "foundation_v2/web/run_prop_ui_acceptance.mjs",
+    "foundation_v2/web/run_prop_ui_real_acceptance.mjs",
+    "foundation_v2/web/src/PropWorkspace.jsx",
+    "foundation_v2/web/src/styles.css"
+  ],
+  "base_revision": "07fc8ea3479460cf4db68a781304481cf925b2d4",
+  "candidate_revision": "567c6073ca1022983d1770dfbe8238d2b8cb3a8a",
+  "dependencies": [
+    "PS-02-PROP-HINDSIGHT-BRANCH-r1",
+    "U3C-LEARN-REPLAY-CONTEXT-r1"
+  ],
+  "residual_scope": [
+    "Independent final review before ledger acceptance",
+    "Journal integration and broader U3c contextual return links",
+    "Licensed real-data Prop journey and final INT-PS recovery acceptance",
+    "Figma Make round-trip and whole-product U1 visual acceptance",
+    "Broker/demo/live, holdout, provider and deployment gates"
+  ],
+  "safety": "Simulation-only Prop reporting and education navigation; no broker/live/provider/holdout/deploy capability.",
+  "task": "PS-03-REPORT-UI-r1"
+}

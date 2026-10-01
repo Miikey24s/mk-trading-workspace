@@ -1,0 +1,118 @@
+{
+  "origin": "http://127.0.0.1:5173",
+  "route": "http://127.0.0.1:5173/?view=overview&workspace=tenant-a",
+  "requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/v2/overview"
+    }
+  ],
+  "before": {
+    "status": "Chưa có performance ledger cho phạm vi Backtesting; các chỉ số sẽ xuất hiện sau khi session có dữ liệu trade.",
+    "metrics": [
+      "—",
+      "—",
+      "—",
+      "—"
+    ],
+    "charts": [
+      "No time invested yet.",
+      "No win rate yet.",
+      "No trades by symbol yet."
+    ],
+    "scope": [
+      {
+        "text": "▥  Backtesting ⌄",
+        "pressed": "true"
+      },
+      {
+        "text": "▣  Lifetime ⌄",
+        "pressed": "false"
+      }
+    ],
+    "overflow": 0
+  },
+  "after": {
+    "status": "Chưa có performance ledger cho phạm vi Lifetime; các chỉ số sẽ xuất hiện sau khi session có dữ liệu trade.",
+    "metrics": [
+      "—",
+      "—",
+      "—",
+      "—"
+    ],
+    "charts": [
+      "No time invested yet.",
+      "No win rate yet.",
+      "No trades by symbol yet."
+    ],
+    "scope": [
+      {
+        "text": "▥  Backtesting ⌄",
+        "pressed": "false"
+      },
+      {
+        "text": "▣  Lifetime ⌄",
+        "pressed": "true"
+      }
+    ],
+    "overflow": 0
+  },
+  "mobile": {
+    "status": "Chưa có performance ledger cho phạm vi Lifetime; các chỉ số sẽ xuất hiện sau khi session có dữ liệu trade.",
+    "metrics": [
+      "—",
+      "—",
+      "—",
+      "—"
+    ],
+    "charts": [
+      "No time invested yet.",
+      "No win rate yet.",
+      "No trades by symbol yet."
+    ],
+    "scope": [
+      {
+        "text": "▥  Backtesting ⌄",
+        "pressed": "false"
+      },
+      {
+        "text": "▣  Lifetime ⌄",
+        "pressed": "true"
+      }
+    ],
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "document": {
+      "scrollWidth": 390,
+      "scrollHeight": 844
+    }
+  },
+  "errors": [],
+  "health": {
+    "status": "ok",
+    "fixture": true,
+    "execution_capability": false
+  },
+  "overview": {
+    "schema_version": "workspace-overview-v1",
+    "workspace_id": "tenant-a",
+    "counts": {
+      "datasets": 1,
+      "research_jobs": {
+        "queued": 0,
+        "running": 0,
+        "completed": 1,
+        "failed": 0
+      },
+      "records": {
+        "playbooks": 1,
+        "journal": 2,
+        "annotations": 3
+      }
+    },
+    "execution_capability": false,
+    "source": "offline-fixture"
+  }
+}

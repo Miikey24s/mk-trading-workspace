@@ -1,0 +1,44 @@
+{
+  "accepted_scope": [
+    "Execution-enabled Replay branch selects the latest immutable persisted checkpoint at the requested cursor when one exists, preserving queued/manual execution state",
+    "If a multi-bar Replay step has no persisted revision at an intermediate cursor, branch reconstruction uses the canonical price_mark ledger checkpoint and restores balance, floating P/L, equity, open position, pending state, phase metadata and event sequence",
+    "The child receives a new replay_session_id and branch_id while the reconstructed ledger is remapped consistently to the child lineage and immutable dataset/instrument/cost pins remain unchanged",
+    "Parent Replay state and revision history remain immutable; child creation is revision-fenced against the locked parent head and stale parent revisions fail closed",
+    "A reconstructed child can continue deterministic Replay stepping from the checkpoint without mutating the parent",
+    "Existing Replay-to-Prop lineage remains fail-closed for a newly forked child unless a separate canonical Prop binding is created",
+    "Fresh disposable PostgreSQL Replay/lifecycle regressions and real PostgreSQL/API/Vite/Playwright regression pass with broker execution capability disabled"
+  ],
+  "base": "5f6ef7ec6172602b923a6f6f4af14e8d8aef8f12",
+  "commit": "95fd6db4526be6658b54bdf0fdea32e1f4af7f5d",
+  "component_sha256": {
+    "lifecycle_regression": "17b51b505e2eaaa3a7211cb0106938774edeec54a99556b70c1e84208a0ae82e",
+    "real_service": "6cb4a1c01d4442ecb98c035eb19ea3837f1368f417aff16af161d0280caf8785",
+    "replay_checkpoint_branch": "09512db5ef11a2e025a114a9a653014f28ea94cad96cf9fe5b5cb8757358d346"
+  },
+  "residual_scope": [
+    "Prop-attempt cloning or rebinding onto a historical Replay branch; current Prop binding remains intentionally lineage-specific",
+    "lower-timeframe or tick intrabar equity path plus broader D15 cross-asset, financing and calendar quality coverage",
+    "Prop product UI, branch comparison UI, objective charts, reports/export and Figma acceptance",
+    "broker/demo/live, holdout, paid provider and deployment acceptance"
+  ],
+  "result": "PASS",
+  "reviewer": "/root/ps02c3_exact_review_r2",
+  "task": "PS-02-REPLAY-CHECKPOINT-BRANCH-r1",
+  "tests_run": 99,
+  "validation": "artifacts\\PS-02-REPLAY-CHECKPOINT-BRANCH-r1\\PS02-replay-checkpoint-branch-validation-r1.json",
+  "validation_checks": {
+    "broker_execution_capability": false,
+    "child_lineage_remap_pass": true,
+    "child_resume_step_pass": true,
+    "exact_changed_file_set_pass": true,
+    "ledger_price_mark_fallback_pass": true,
+    "lifecycle_regression_pass": true,
+    "money_position_pending_phase_reconstruction_pass": true,
+    "parent_immutability_and_revision_fence_pass": true,
+    "persisted_checkpoint_selection_pass": true,
+    "prop_lineage_fail_closed_pass": true,
+    "real_service_browser_pass": true,
+    "vite_build_pass": true
+  },
+  "validation_sha256": "b485f5a7aee9bc0a17e374262a61395c14c1be4711a3c3e4f550c58139c51dfe"
+}

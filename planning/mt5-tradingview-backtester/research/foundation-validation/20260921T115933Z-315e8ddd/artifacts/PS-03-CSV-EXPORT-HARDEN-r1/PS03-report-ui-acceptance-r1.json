@@ -1,0 +1,54 @@
+{
+  "artifact_hashes": {
+    "ps03-real-service-1440.png": "6672dc17d2bd33a6195a31edc0e8fbb99a4095ff4f0050cc6b247109501b61ea",
+    "ps03-real-service-360.png": "28d247ffec349c4d46453c9550ca2cf5e75dd812984a892d49d5d22604d1d6ad",
+    "ps03-real-service-768.png": "08f64286e439f9f43f41c5f30734bee95200a6760524e77fda0646870e65375e",
+    "ps03-real-service-reports-1440.png": "44e258c09226a5c2378a0cea6e743e6991aa6926d91e6af6f3f1b1211511025c"
+  },
+  "checks": {
+    "broker_execution_capability": false,
+    "postgres_attempt_persisted": true,
+    "postgres_session_persisted": true,
+    "prop_persistence_and_report_tests_pass": true,
+    "real_service_browser_report_flow_pass": true,
+    "report_filter_and_csv_real_api": true,
+    "vite_build_pass": true
+  },
+  "residual_scope": [
+    "journal integration and broader U3c contextual links",
+    "licensed real-data Prop journey and final INT-PS recovery acceptance",
+    "Figma Make round-trip and whole-product U1 visual acceptance",
+    "broker/demo/live, holdout, provider and deployment gates"
+  ],
+  "result": "PASS",
+  "schema": "PS03-REPORT-UI-ACCEPTANCE-r1",
+  "scope": "PS-03 local disposable PostgreSQL/API/Vite/Playwright report slice: persisted attempt report, status/branch filtering, breach explanation, Learn link and CSV export; simulation only",
+  "ui": {
+    "attemptId": "attempt-mui569t1-ko4ch",
+    "checks": [
+      "initial_empty_state",
+      "simulation_only_lock",
+      "ui_atomic_create_session_and_attempt_via_real_api",
+      "postgres_persisted_ids",
+      "resume_update_persisted_before_reload",
+      "reload_resume_same_ids_and_updated_cursor",
+      "selected_attempt_report_from_real_api",
+      "report_status_and_branch_filters_real_api",
+      "report_csv_export_real_api",
+      "tenant_denial",
+      "mutations_prop_api_only",
+      "no_broker_execution_request",
+      "responsive_1440_768_360"
+    ],
+    "fixture": "ps03-real-service-postgres-api-vite",
+    "screenshots": [
+      "C:\\Users\\MIIKEY\\AppData\\Local\\Temp\\tw-ps03-csv-r3-current\\ps03-real-service-reports-1440.png",
+      "C:\\Users\\MIIKEY\\AppData\\Local\\Temp\\tw-ps03-csv-r3-current\\ps03-real-service-1440.png",
+      "C:\\Users\\MIIKEY\\AppData\\Local\\Temp\\tw-ps03-csv-r3-current\\ps03-real-service-768.png",
+      "C:\\Users\\MIIKEY\\AppData\\Local\\Temp\\tw-ps03-csv-r3-current\\ps03-real-service-360.png"
+    ],
+    "sessionId": "ps03-real-service-mui569t1-ko4ch",
+    "status": "PASS",
+    "workspace": "tenant-ps03-real"
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "origin": "http://127.0.0.1:5173",
+  "generated_at_utc": "2026-09-30T17:54:36.017Z",
+  "contract": {
+    "workspace": "tenant-a",
+    "endpoints": [
+      "/api/v2/data/datasets",
+      "/api/v2/data/providers",
+      "/api/v2/data/csv/preview",
+      "/api/v2/data/csv/import"
+    ],
+    "execution_capability": false,
+    "external_network": false,
+    "broker_or_provider_access": false
+  },
+  "results": {
+    "success": {
+      "pageErrors": [],
+      "consoleErrors": [],
+      "requests": [
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/datasets",
+          "body": null
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/providers",
+          "body": null
+        },
+        {
+          "method": "POST",
+          "pathname": "/api/v2/data/csv/preview",
+          "body": {
+            "csv_text": "time,open,high,low,close\n2026-01-01T00:00:00Z,1.10000,1.10100,1.09900,1.10050\n2026-01-01T01:00:00Z,1.10050,1.10200,1.10000,1.10150\n",
+            "source": {
+              "source_id": "local-csv-upload",
+              "provider": "local-csv",
+              "instrument_mapping": {
+                "EURUSDm": "EURUSDm"
+              },
+              "license_use": "user-supplied-local",
+              "retrieved_at_utc": "2026-09-30T17:54:34.560Z",
+              "export_settings": "browser-file-text-v1"
+            },
+            "instrument": {
+              "instrument_id": "EURUSDm",
+              "asset_class": "fx",
+              "base_ccy": "EUR",
+              "quote_ccy": "USD",
+              "account_ccy": "USD",
+              "tick_size": "0.00001",
+              "pip_size": "0.0001",
+              "contract_size": "100000",
+              "quantity_min": "0.01",
+              "quantity_step": "0.01",
+              "effective_from_utc": "1970-01-01T00:00:00Z",
+              "effective_to_utc": ""
+            },
+            "timeframe_seconds": 3600,
+            "holdout_policy": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "method": "POST",
+          "pathname": "/api/v2/data/csv/import",
+          "body": {
+            "csv_text": "time,open,high,low,close\n2026-01-01T00:00:00Z,1.10000,1.10100,1.09900,1.10050\n2026-01-01T01:00:00Z,1.10050,1.10200,1.10000,1.10150\n",
+            "source": {
+              "source_id": "local-csv-upload",
+              "provider": "local-csv",
+              "instrument_mapping": {
+                "EURUSDm": "EURUSDm"
+              },
+              "license_use": "user-supplied-local",
+              "retrieved_at_utc": "2026-09-30T17:54:34.560Z",
+              "export_settings": "browser-file-text-v1"
+            },
+            "instrument": {
+              "instrument_id": "EURUSDm",
+              "asset_class": "fx",
+              "base_ccy": "EUR",
+              "quote_ccy": "USD",
+              "account_ccy": "USD",
+              "tick_size": "0.00001",
+              "pip_size": "0.0001",
+              "contract_size": "100000",
+              "quantity_min": "0.01",
+              "quantity_step": "0.01",
+              "effective_from_utc": "1970-01-01T00:00:00Z",
+              "effective_to_utc": ""
+            },
+            "timeframe_seconds": 3600,
+            "holdout_policy": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/datasets",
+          "body": null
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/providers",
+          "body": null
+        }
+      ],
+      "unexpectedRequests": [],
+      "datasetReads": 2,
+      "previewAttempts": 1,
+      "importAttempts": 1,
+      "prePreviewState": "eurusd-fixture.csv · 0.1 KiB · Chưa gửi lên server",
+      "previewText": "PREVIEW / QUALITY\nQuality report\nĐạt kiểm tra cơ bản\nROWS\n2\nUNIQUE TIMESTAMPS\n2\nRANGE UTC\n00:00 1/1/26 → 01:00 1/1/26\nDUPLICATES\n0\nOUT OF ORDER\n0\nGAPS / OVERLAP\n0 / 0\nDATASET ID\ndataset-imported-fixture\nRAW SHA-256\n5555555555555555555555555555555555555555555555555555555555555555\nNORMALIZED SHA-256\n4444444444444444444444444444444444444444444444444444444444444444",
+      "successText": "Đã thêm dataset dataset-imported-fixture vào catalog workspace.",
+      "readbackText": "DATASET\tINSTRUMENT\tRANGE\tQA\tHOLDOUT\tROWS\n\ndataset-imported-fixture\nlocal-csv\n\tEURUSDm\nH1\n\t00:00 1/1/26\n→ 01:00 1/1/26\n\tFixture / QA only\tKhóa\t2",
+      "readbackObservedAfterImport": true,
+      "mobileMetrics": {
+        "viewportWidth": 390,
+        "documentScrollWidth": 390,
+        "panelTitleWidth": 146,
+        "reportHeadWidth": 146
+      },
+      "unexpectedConsoleErrors": []
+    },
+    "rollback": {
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 409 (Conflict)"
+      ],
+      "requests": [
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/datasets",
+          "body": null
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/providers",
+          "body": null
+        },
+        {
+          "method": "POST",
+          "pathname": "/api/v2/data/csv/preview",
+          "body": {
+            "csv_text": "time,open,high,low,close\n2026-01-01T00:00:00Z,1.10000,1.10100,1.09900,1.10050\n2026-01-01T01:00:00Z,1.10050,1.10200,1.10000,1.10150\n",
+            "source": {
+              "source_id": "local-csv-upload",
+              "provider": "local-csv",
+              "instrument_mapping": {
+                "EURUSDm": "EURUSDm"
+              },
+              "license_use": "user-supplied-local",
+              "retrieved_at_utc": "2026-09-30T17:54:35.546Z",
+              "export_settings": "browser-file-text-v1"
+            },
+            "instrument": {
+              "instrument_id": "EURUSDm",
+              "asset_class": "fx",
+              "base_ccy": "EUR",
+              "quote_ccy": "USD",
+              "account_ccy": "USD",
+              "tick_size": "0.00001",
+              "pip_size": "0.0001",
+              "contract_size": "100000",
+              "quantity_min": "0.01",
+              "quantity_step": "0.01",
+              "effective_from_utc": "1970-01-01T00:00:00Z",
+              "effective_to_utc": ""
+            },
+            "timeframe_seconds": 3600,
+            "holdout_policy": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "method": "POST",
+          "pathname": "/api/v2/data/csv/import",
+          "body": {
+            "csv_text": "time,open,high,low,close\n2026-01-01T00:00:00Z,1.10000,1.10100,1.09900,1.10050\n2026-01-01T01:00:00Z,1.10050,1.10200,1.10000,1.10150\n",
+            "source": {
+              "source_id": "local-csv-upload",
+              "provider": "local-csv",
+              "instrument_mapping": {
+                "EURUSDm": "EURUSDm"
+              },
+              "license_use": "user-supplied-local",
+              "retrieved_at_utc": "2026-09-30T17:54:35.546Z",
+              "export_settings": "browser-file-text-v1"
+            },
+            "instrument": {
+              "instrument_id": "EURUSDm",
+              "asset_class": "fx",
+              "base_ccy": "EUR",
+              "quote_ccy": "USD",
+              "account_ccy": "USD",
+              "tick_size": "0.00001",
+              "pip_size": "0.0001",
+              "contract_size": "100000",
+              "quantity_min": "0.01",
+              "quantity_step": "0.01",
+              "effective_from_utc": "1970-01-01T00:00:00Z",
+              "effective_to_utc": ""
+            },
+            "timeframe_seconds": 3600,
+            "holdout_policy": {
+              "mode": "none"
+            }
+          }
+        }
+      ],
+      "unexpectedRequests": [],
+      "datasetReads": 1,
+      "previewAttempts": 1,
+      "importAttempts": 1,
+      "errorText": "Không xử lý được CSV: fixture_import_conflict",
+      "catalogAfterFailure": "DATASET\tINSTRUMENT\tRANGE\tQA\tHOLDOUT\tROWS\n\ndataset-baseline\nlocal-csv\n\tEURUSDm\nH1\n\t00:00 1/1/26\n→ 01:00 1/1/26\n\tFixture / QA only\tKhóa\t2",
+      "previewRetainedAfterFailure": true,
+      "noCatalogReadbackAfterFailure": true,
+      "mobileMetrics": {
+        "viewportWidth": 390,
+        "documentScrollWidth": 390,
+        "panelTitleWidth": 146,
+        "reportHeadWidth": 146
+      },
+      "unexpectedConsoleErrors": []
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "viewport": "1440x900",
+  "route": "/?workspace=tenant-a&view=overview",
+  "fixture": "local dashboard with no broker/provider",
+  "open": {"key": "?", "dialog": true, "focus": "help-close"},
+  "close": {"key": "?", "dialog": false, "focus": "help-toggle"},
+  "result": "pass"
+}

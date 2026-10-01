@@ -1,0 +1,39 @@
+{
+  "acceptance": [
+    "Canonical Replay execution persists market fills and price marks before Prop lifecycle consumes them",
+    "Replay to Prop binding is workspace-scoped, dataset/cost/engine pinned, revision-fenced and ordered",
+    "Exact Replay to Prop retries remain idempotent even after later price marks while unseen backward events fail closed",
+    "Market orders cannot be queued without a future Replay bar, preventing terminal pending-order wedges",
+    "Equity-dependent objectives fail closed when the Replay mark lacks complete intrabar equity coverage",
+    "Execution-enabled rewind/branch remains blocked until canonical checkpoint reconstruction exists and broker execution stays unavailable"
+  ],
+  "allowed_files": [
+    "foundation_v2/evidence/PS02-replay-connection-r1.json",
+    "foundation_v2/scripts/ps02_replay_connection_acceptance.py",
+    "foundation_v2/tests/test_ps02_replay_prop_connection.py",
+    "foundation_v2/tests/test_replay_execution_core.py",
+    "foundation_v2/trading_workspace_v2/api.py",
+    "foundation_v2/trading_workspace_v2/contracts.py",
+    "foundation_v2/trading_workspace_v2/execution_semantics.py",
+    "foundation_v2/trading_workspace_v2/prop_replay.py",
+    "foundation_v2/trading_workspace_v2/replay.py",
+    "foundation_v2/trading_workspace_v2/replay_execution.py",
+    "foundation_v2/trading_workspace_v2/research_engine.py",
+    "foundation_v2/trading_workspace_v2/store.py"
+  ],
+  "base_revision": "432273958778569f9ab76d88767d625ee626c059",
+  "candidate_revision": "8e939fde59e65d13a7f99d5ed4ca4cbe650aaf68",
+  "dependencies": [
+    "PS-02-LIFECYCLE-CHECKPOINT-r1"
+  ],
+  "residual_scope": [
+    "server-owned start/pause/resume/abandon lifecycle commands",
+    "canonical multi-phase Replay reset/carry transitions",
+    "execution rewind/checkpoint reconstruction",
+    "lower-timeframe or tick intrabar equity path and broader D15 quality fixtures",
+    "Prop objective UI, reports/export and Figma acceptance",
+    "broker/demo/live, holdout, paid provider and deployment acceptance"
+  ],
+  "safety": "Local simulation-only Replay/Prop integration and disposable PostgreSQL evidence; no broker/live/provider/holdout/deploy action.",
+  "task": "PS-02-REPLAY-CONNECTION-r1"
+}

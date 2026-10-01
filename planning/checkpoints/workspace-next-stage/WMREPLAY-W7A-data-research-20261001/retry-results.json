@@ -1,0 +1,85 @@
+{
+  "origin": "http://127.0.0.1:5173",
+  "generated_at_utc": "2026-09-30T17:17:06.821Z",
+  "results": [
+    {
+      "id": "data-catalog-503-retry-200",
+      "datasetAttempts": 2,
+      "errorText": "Không đọc được Data Desk: fixture_catalog_unavailable Thử lại",
+      "readyText": "DATASET\tINSTRUMENT\tRANGE\tQA\tHOLDOUT\tROWS\n\neurusd-h1\nlocal\n\tEURUSDm\nH1\n\t16:00 9/3/24\n→ 02:00 10/3/24\n\tĐã xác minh\tKhóa\t100",
+      "requests": [
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/datasets"
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/providers"
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/datasets"
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/providers"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      ],
+      "unexpectedConsoleErrors": []
+    },
+    {
+      "id": "research-catalog-503-retry-200",
+      "datasetAttempts": 2,
+      "errorText": "Không đọc được catalog: fixture_catalog_unavailable Thử lại",
+      "readyText": "03 / RUN CONFIG\nCố định giả định\n\nChỉ gửi dataset, strategy contract và starting balance đến local research backend.\n\nDATASET\nChọn dataset\neurusd-h1 · EURUSDm\nDataset là anchor của provenance và không tự đổi theo catalog.\nSTARTING BALANCE\nĐơn vị theo contract engine.\nSTRATEGY CONTRACT\nclose-delta-v1\nChỉ engine đã được backend công bố.\nTạo research run\nGUARD TRƯỚC KHI CHẠY\nĐã xác minh · Holdout khóa · instrument cost metadata có sẵn.",
+      "requests": [
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/datasets"
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/engines"
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/data/datasets"
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/engines"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      ],
+      "unexpectedConsoleErrors": []
+    },
+    {
+      "id": "research-job-503-retry-200",
+      "jobAttempts": 2,
+      "errorText": "Research không hoàn tất: fixture_job_unavailable Thử lại",
+      "readyText": "05 / RESULT\nKết quả có provenance\n\nĐọc takeaway trước, mở số liệu chi tiết sau.\n\nCompleted\nChưa có trade để kết luận\nNet P/L chưa có dữ liệu. Không suy diễn từ metric bị thiếu.\nTRADES\n0\nNET P/L\nChưa có dữ liệu\nWIN RATE\nN/A\nMAX DD\nChưa có dữ liệu\nChưa có đủ điểm để vẽ đường vốn.\nResult provenance\nNEXT ACTION\nĐưa kết quả về vòng lặp trading\n\nResult chỉ có giá trị khi bạn biết bước review tiếp theo.\n\nMở lại Practice ↗\nXem Analytics ↗\nÔn glossary ↗",
+      "requests": [
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/jobs/job-1"
+        },
+        {
+          "method": "GET",
+          "pathname": "/api/v2/research/jobs/job-1"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      ],
+      "unexpectedConsoleErrors": []
+    }
+  ]
+}

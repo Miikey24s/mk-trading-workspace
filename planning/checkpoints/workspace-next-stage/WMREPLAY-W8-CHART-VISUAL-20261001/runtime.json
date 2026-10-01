@@ -1,0 +1,262 @@
+{
+  "status": "PASS_WITH_OPEN_GATES",
+  "fixture": {
+    "id": "chart-5000-fixture",
+    "rows": 5000,
+    "source": "local Playwright route interception",
+    "cutoff": 4999
+  },
+  "route": "http://127.0.0.1:4187/?view=replay&workspace=tenant-chart&session=chart-5000-fixture&surface=workspace",
+  "browser": "Chromium headless via Playwright",
+  "viewports": {
+    "desktop": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "shellClass": "fx-app fx-shell-story  ",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900,
+        "display": "grid",
+        "overflowX": "hidden"
+      },
+      "rail": {
+        "x": 0,
+        "y": 64,
+        "width": 248,
+        "height": 836,
+        "display": "flex",
+        "overflowX": "visible"
+      },
+      "main": {
+        "x": 248,
+        "y": 64,
+        "width": 1192,
+        "height": 836,
+        "display": "flex",
+        "overflowX": "hidden"
+      },
+      "content": {
+        "x": 248,
+        "y": 116,
+        "width": 1192,
+        "height": 784,
+        "display": "block",
+        "overflowX": "auto"
+      },
+      "chartFrame": {
+        "x": 266,
+        "y": 274,
+        "width": 1156,
+        "height": 596,
+        "display": "grid",
+        "overflowX": "visible"
+      },
+      "chartCanvas": {
+        "x": 305,
+        "y": 275,
+        "width": 1078,
+        "height": 594,
+        "display": "block",
+        "overflowX": "visible"
+      },
+      "chart": {
+        "x": 305,
+        "y": 275,
+        "width": 1078,
+        "height": 594,
+        "display": "block",
+        "overflowX": "visible"
+      },
+      "canvasCount": 7,
+      "canvases": [
+        {
+          "width": 1032,
+          "height": 566,
+          "cssWidth": 1032,
+          "cssHeight": 566
+        },
+        {
+          "width": 1032,
+          "height": 566,
+          "cssWidth": 1032,
+          "cssHeight": 566
+        },
+        {
+          "width": 46,
+          "height": 566,
+          "cssWidth": 46,
+          "cssHeight": 566
+        },
+        {
+          "width": 46,
+          "height": 566,
+          "cssWidth": 46,
+          "cssHeight": 566
+        },
+        {
+          "width": 1032,
+          "height": 28,
+          "cssWidth": 1032,
+          "cssHeight": 28
+        },
+        {
+          "width": 1032,
+          "height": 28,
+          "cssWidth": 1032,
+          "cssHeight": 28
+        },
+        {
+          "width": 46,
+          "height": 28,
+          "cssWidth": 46,
+          "cssHeight": 28
+        }
+      ],
+      "overflow": 0,
+      "visibleRows": "5000",
+      "bodyTextHasFuturePrice": false
+    },
+    "mobile": {
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "shellClass": "fx-app fx-shell-story  ",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 900,
+        "display": "grid",
+        "overflowX": "hidden"
+      },
+      "rail": {
+        "x": 0,
+        "y": 64,
+        "width": 220,
+        "height": 836,
+        "display": "flex",
+        "overflowX": "visible"
+      },
+      "main": {
+        "x": 220,
+        "y": 64,
+        "width": 170,
+        "height": 836,
+        "display": "flex",
+        "overflowX": "hidden"
+      },
+      "content": {
+        "x": 220,
+        "y": 116,
+        "width": 170,
+        "height": 784,
+        "display": "block",
+        "overflowX": "auto"
+      },
+      "chartFrame": {
+        "x": 232,
+        "y": 681,
+        "width": 146,
+        "height": 392,
+        "display": "grid",
+        "overflowX": "visible"
+      },
+      "chartCanvas": {
+        "x": 263,
+        "y": 682,
+        "width": 114,
+        "height": 390,
+        "display": "block",
+        "overflowX": "visible"
+      },
+      "chart": {
+        "x": 263,
+        "y": 682,
+        "width": 114,
+        "height": 390,
+        "display": "block",
+        "overflowX": "visible"
+      },
+      "canvasCount": 7,
+      "canvases": [
+        {
+          "width": 68,
+          "height": 362,
+          "cssWidth": 68,
+          "cssHeight": 362
+        },
+        {
+          "width": 68,
+          "height": 362,
+          "cssWidth": 68,
+          "cssHeight": 362
+        },
+        {
+          "width": 46,
+          "height": 362,
+          "cssWidth": 46,
+          "cssHeight": 362
+        },
+        {
+          "width": 46,
+          "height": 362,
+          "cssWidth": 46,
+          "cssHeight": 362
+        },
+        {
+          "width": 68,
+          "height": 28,
+          "cssWidth": 68,
+          "cssHeight": 28
+        },
+        {
+          "width": 68,
+          "height": 28,
+          "cssWidth": 68,
+          "cssHeight": 28
+        },
+        {
+          "width": 46,
+          "height": 28,
+          "cssWidth": 46,
+          "cssHeight": 28
+        }
+      ],
+      "overflow": 0,
+      "visibleRows": "5000",
+      "bodyTextHasFuturePrice": false
+    }
+  },
+  "throughput": {
+    "chartReadyMs": 1721,
+    "pointerMoves": 180,
+    "moveDurationMs": 5921.6775,
+    "longTaskCount": 2,
+    "maxLongTaskMs": 66,
+    "domNodes": 361,
+    "heapUsed": 21700000
+  },
+  "safety": {
+    "visibleRowsOnly": true,
+    "futureTextLeak": false,
+    "consoleErrors": []
+  },
+  "screenshots": [
+    "chart-5000-desktop-1440.png",
+    "chart-5000-mobile-390.png"
+  ],
+  "trace": "chart-5000-trace.zip",
+  "conclusions": {
+    "chartCanvasVisible": true,
+    "mobileCanvasVisible": false,
+    "fullBleedProven": false,
+    "fullBleedOpenGate": "SHELL_SKELETON_MODE=true keeps the product rail and standard shell; chartWorkspace full-bleed branch is not active in this build.",
+    "mobileCanvasOpenGate": "390px chart remains visible but is narrower than 250 CSS px because the normal shell/rail path is active; compact full-bleed workspace is not proven.",
+    "longSessionLimit": "This bounded fixture measures one 5000-row mount and 180 pointer moves; it is not a 60fps frame/heap acceptance or long-duration soak."
+  }
+}

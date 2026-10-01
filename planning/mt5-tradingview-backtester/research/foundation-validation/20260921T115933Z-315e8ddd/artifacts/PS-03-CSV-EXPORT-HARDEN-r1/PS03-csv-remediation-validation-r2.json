@@ -1,0 +1,30 @@
+{
+  "candidate": "665552177892d50f7df4fab3d5a31a538b8ac403",
+  "checks": {
+    "broker_execution_capability": false,
+    "disposable_postgres_api_vite_playwright": "PASS",
+    "focused_unittest_plus_u5c": "23 passed",
+    "formula_prefix_matrix": "90/90 textual cells safe",
+    "git_diff_check": "PASS",
+    "negative_numeric_semantics": "preserved (-100.25, -50.5, -1)"
+  },
+  "evidence_sha256": {
+    "PS03-report-ui-acceptance-r1.json": "d20779b681150df94d5bf93f0183393dc485d84924867ae313f81fedfaaf5d26",
+    "ps03-real-service-1440.png": "6672dc17d2bd33a6195a31edc0e8fbb99a4095ff4f0050cc6b247109501b61ea",
+    "ps03-real-service-360.png": "28d247ffec349c4d46453c9550ca2cf5e75dd812984a892d49d5d22604d1d6ad",
+    "ps03-real-service-768.png": "08f64286e439f9f43f41c5f30734bee95200a6760524e77fda0646870e65375e",
+    "ps03-real-service-reports-1440.png": "44e258c09226a5c2378a0cea6e743e6991aa6926d91e6af6f3f1b1211511025c"
+  },
+  "residual_scope": [
+    "journal and broader contextual links",
+    "licensed real-data Prop journey and final INT-PS recovery",
+    "Figma Make round-trip and whole-product U1 visual acceptance",
+    "broker/demo/live, holdout, provider and deployment gates"
+  ],
+  "result": "PASS",
+  "schema": "PS03-CSV-REMEDIATION-VALIDATION-r2",
+  "source_sha256": {
+    "foundation_v2/tests/test_ps03_prop_reports.py": "f7459efc297ee42b283cde9aa744eeb5b42698de0a34454cefec87e06364b836",
+    "foundation_v2/trading_workspace_v2/prop_report.py": "ef13273ec9a93775bc4064a84823c278162d561846b2bd7bf3ec92da7993856d"
+  }
+}

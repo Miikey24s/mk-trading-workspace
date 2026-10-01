@@ -1,0 +1,27 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "3FFB22418FAA4D1A5BFE414B05E99B0E61393227649425AD7C62ED1A6EC2B3EC",
+    "Name": "headed-before-1440.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "3FFB22418FAA4D1A5BFE414B05E99B0E61393227649425AD7C62ED1A6EC2B3EC",
+    "Name": "headed-Control_Equal-1.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "3FFB22418FAA4D1A5BFE414B05E99B0E61393227649425AD7C62ED1A6EC2B3EC",
+    "Name": "headed-Control_Shift_Equal-2.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "3FFB22418FAA4D1A5BFE414B05E99B0E61393227649425AD7C62ED1A6EC2B3EC",
+    "Name": "headed-Control_Equal-3.png"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "3FFB22418FAA4D1A5BFE414B05E99B0E61393227649425AD7C62ED1A6EC2B3EC",
+    "Name": "headed-Control_0-4.png"
+  }
+]

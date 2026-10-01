@@ -1,0 +1,15 @@
+{
+  "schema_version": "native-zoom-cua-attempt-v1",
+  "attempted_at": "2026-09-30T18:23:44.1845791Z",
+  "browser": "Codex In-app Browser (iab)",
+  "url": "http://127.0.0.1:4202/?view=overview&workspace=native-zoom-cua",
+  "visibility": "visible=true rejected in subagent thread; background visible=false tab used",
+  "actions": [
+    "tab.pressKey(null, \"Control++\")",
+    "tab.pressKey(null, \"Control+Shift+=\")",
+    "tab.pressKey(null, \"ctrl+plus\")"
+  ],
+  "result": "No accessibility-tree change after each action; screenshot showed no observable layout/text scale change.",
+  "limitation": "Legacy CUA tab surface does not expose page evaluate/visualViewport metrics; native browser chrome is not observable from this subagent.",
+  "side_effects": "Local read-only fixture only; no API writes or external navigation."
+}

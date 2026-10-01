@@ -1,0 +1,338 @@
+[
+  {
+    "id": "01-dashboard-dark-1440x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\01-dashboard-dark-1440x900-a.png",
+      "sha256": "7E9C80151361B3093F80CA7B37F8889E2288013C591B3D89A26FAC9DEB3160A9",
+      "bytes": 55760
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\01-dashboard-dark-1440x900-b.png",
+      "sha256": "7E9C80151361B3093F80CA7B37F8889E2288013C591B3D89A26FAC9DEB3160A9",
+      "bytes": 55760
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "02-dashboard-light-1440x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\02-dashboard-light-1440x900-a.png",
+      "sha256": "AF5F07B9BB19CD95A5D01F3044A7999EDCF27318D4DBD684DA6FE3E5228099D0",
+      "bytes": 56639
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\02-dashboard-light-1440x900-b.png",
+      "sha256": "AF5F07B9BB19CD95A5D01F3044A7999EDCF27318D4DBD684DA6FE3E5228099D0",
+      "bytes": 56639
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "03-sessions-dark-1440x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\03-sessions-dark-1440x900-a.png",
+      "sha256": "5CD26C7B80173A8DC0250A0D5A610903FF88FF8E86FE9507C25D0D236BC4B9B4",
+      "bytes": 65169
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\03-sessions-dark-1440x900-b.png",
+      "sha256": "5CD26C7B80173A8DC0250A0D5A610903FF88FF8E86FE9507C25D0D236BC4B9B4",
+      "bytes": 65169
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "04-sessions-light-1440x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\04-sessions-light-1440x900-a.png",
+      "sha256": "ED29E81BFD6E97864A7C1B5821E06C38E5D6B5917C4AE17C58EF9611B9E7DA6D",
+      "bytes": 63683
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\04-sessions-light-1440x900-b.png",
+      "sha256": "ED29E81BFD6E97864A7C1B5821E06C38E5D6B5917C4AE17C58EF9611B9E7DA6D",
+      "bytes": 63683
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "05-replay-dark-1440x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\05-replay-dark-1440x900-a.png",
+      "sha256": "7A4620300FC8F08801224FA4AC7FC5DE2A51DBF878ABC1F08BA266C53380488B",
+      "bytes": 48447
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\05-replay-dark-1440x900-b.png",
+      "sha256": "7A4620300FC8F08801224FA4AC7FC5DE2A51DBF878ABC1F08BA266C53380488B",
+      "bytes": 48447
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "06-replay-light-1440x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\06-replay-light-1440x900-a.png",
+      "sha256": "35F37BEB6441EFC05F9E16B5650E20D7819B980B5B6A20E48E148FF6C6ABEA58",
+      "bytes": 48775
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\06-replay-light-1440x900-b.png",
+      "sha256": "35F37BEB6441EFC05F9E16B5650E20D7819B980B5B6A20E48E148FF6C6ABEA58",
+      "bytes": 48775
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "07-analytics-dark-1440x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\07-analytics-dark-1440x900-a.png",
+      "sha256": "01BB7082FA998A17D97763752D9B2BB90B6F5181D11C9FF06F9BEF55A3051279",
+      "bytes": 77135
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\07-analytics-dark-1440x900-b.png",
+      "sha256": "01BB7082FA998A17D97763752D9B2BB90B6F5181D11C9FF06F9BEF55A3051279",
+      "bytes": 77135
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "08-analytics-light-1440x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\08-analytics-light-1440x900-a.png",
+      "sha256": "5B5271703CC7C80B3ECDF43DB2E52AB40B883C1F906128739AB6018201144414",
+      "bytes": 78967
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\08-analytics-light-1440x900-b.png",
+      "sha256": "5B5271703CC7C80B3ECDF43DB2E52AB40B883C1F906128739AB6018201144414",
+      "bytes": 78967
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "09-dashboard-dark-768x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\09-dashboard-dark-768x900-a.png",
+      "sha256": "69F091000D09AF5C4ECB6D1FD262329364C9DA9D97E704CCFA9897E1BD87BB4A",
+      "bytes": 37951
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\09-dashboard-dark-768x900-b.png",
+      "sha256": "69F091000D09AF5C4ECB6D1FD262329364C9DA9D97E704CCFA9897E1BD87BB4A",
+      "bytes": 37951
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "10-dashboard-light-768x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\10-dashboard-light-768x900-a.png",
+      "sha256": "64DB7EB72659FC476221BA76E51FDD260321AB6C4E590313FD28571605434BAB",
+      "bytes": 39649
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\10-dashboard-light-768x900-b.png",
+      "sha256": "64DB7EB72659FC476221BA76E51FDD260321AB6C4E590313FD28571605434BAB",
+      "bytes": 39649
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "11-sessions-dark-768x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\11-sessions-dark-768x900-a.png",
+      "sha256": "DEB25793F493BCCA493862A3A82B67D945E4E1105F45A81B5808E6C92A48C5EB",
+      "bytes": 41627
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\11-sessions-dark-768x900-b.png",
+      "sha256": "DEB25793F493BCCA493862A3A82B67D945E4E1105F45A81B5808E6C92A48C5EB",
+      "bytes": 41627
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "12-sessions-light-768x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\12-sessions-light-768x900-a.png",
+      "sha256": "46BEB191E04FD09610996483B5B1D5417B42FD0B504CF796BBF92E222F0064F1",
+      "bytes": 41991
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\12-sessions-light-768x900-b.png",
+      "sha256": "46BEB191E04FD09610996483B5B1D5417B42FD0B504CF796BBF92E222F0064F1",
+      "bytes": 41991
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "13-replay-dark-768x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\13-replay-dark-768x900-a.png",
+      "sha256": "C570A4BF8FE0AD88F7E6D5D9E70D4C40179A017440802BE2E3BAAE00DB901062",
+      "bytes": 34088
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\13-replay-dark-768x900-b.png",
+      "sha256": "C570A4BF8FE0AD88F7E6D5D9E70D4C40179A017440802BE2E3BAAE00DB901062",
+      "bytes": 34088
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "14-replay-light-768x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\14-replay-light-768x900-a.png",
+      "sha256": "59210E9175D51FA27740116F9A7BDF50F27D562F2EFCA90196399F199CA211BB",
+      "bytes": 34540
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\14-replay-light-768x900-b.png",
+      "sha256": "59210E9175D51FA27740116F9A7BDF50F27D562F2EFCA90196399F199CA211BB",
+      "bytes": 34540
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "15-analytics-dark-768x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\15-analytics-dark-768x900-a.png",
+      "sha256": "142DC0260580B611D315D75DAC4BB42E003A19B87AB64A21748611812ECCD2F2",
+      "bytes": 53335
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\15-analytics-dark-768x900-b.png",
+      "sha256": "142DC0260580B611D315D75DAC4BB42E003A19B87AB64A21748611812ECCD2F2",
+      "bytes": 53335
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "16-analytics-light-768x900",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\16-analytics-light-768x900-a.png",
+      "sha256": "86609FDFC65C8971AE1526A2C083E60299823CE95226876E683923C2D783BADE",
+      "bytes": 54636
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\16-analytics-light-768x900-b.png",
+      "sha256": "86609FDFC65C8971AE1526A2C083E60299823CE95226876E683923C2D783BADE",
+      "bytes": 54636
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "17-dashboard-dark-390x844",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\17-dashboard-dark-390x844-a.png",
+      "sha256": "3CC6E131E67731AD25971911833DB174F7AA1CB2E8988258B332F8BD97F4552B",
+      "bytes": 30054
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\17-dashboard-dark-390x844-b.png",
+      "sha256": "3CC6E131E67731AD25971911833DB174F7AA1CB2E8988258B332F8BD97F4552B",
+      "bytes": 30054
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "18-dashboard-light-390x844",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\18-dashboard-light-390x844-a.png",
+      "sha256": "1530409AD5E375F05BB7A967C6B84481EDAEBDD2CC16DCB4B948E17DB61DDBF3",
+      "bytes": 31570
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\18-dashboard-light-390x844-b.png",
+      "sha256": "1530409AD5E375F05BB7A967C6B84481EDAEBDD2CC16DCB4B948E17DB61DDBF3",
+      "bytes": 31570
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "19-sessions-dark-390x844",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\19-sessions-dark-390x844-a.png",
+      "sha256": "DA03062AF52313ED545518DC592FA4FBAA763813C79BA416A154202F590997BB",
+      "bytes": 35954
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\19-sessions-dark-390x844-b.png",
+      "sha256": "DA03062AF52313ED545518DC592FA4FBAA763813C79BA416A154202F590997BB",
+      "bytes": 35954
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "20-sessions-light-390x844",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\20-sessions-light-390x844-a.png",
+      "sha256": "E6C89E2C3C77C1A8027F93A6F1E0D501B9972D7E0D7EFE73722DD43DBE71085E",
+      "bytes": 35714
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\20-sessions-light-390x844-b.png",
+      "sha256": "E6C89E2C3C77C1A8027F93A6F1E0D501B9972D7E0D7EFE73722DD43DBE71085E",
+      "bytes": 35714
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "21-replay-dark-390x844",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\21-replay-dark-390x844-a.png",
+      "sha256": "23977C26A60E7763EA111AB8B43B54A514824AE9A60C80D8AAD372FD7B6B39ED",
+      "bytes": 30704
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\21-replay-dark-390x844-b.png",
+      "sha256": "23977C26A60E7763EA111AB8B43B54A514824AE9A60C80D8AAD372FD7B6B39ED",
+      "bytes": 30704
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "22-replay-light-390x844",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\22-replay-light-390x844-a.png",
+      "sha256": "8D178332E3A7A5208EAB29732B5720DCA819D2EA028626263C346BDC0DEFCE84",
+      "bytes": 30847
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\22-replay-light-390x844-b.png",
+      "sha256": "8D178332E3A7A5208EAB29732B5720DCA819D2EA028626263C346BDC0DEFCE84",
+      "bytes": 30847
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "23-analytics-dark-390x844",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\23-analytics-dark-390x844-a.png",
+      "sha256": "6A687193C868414E7684AB475A1D9FB55FEF2A4F0F4D3B5E69A92A6021D21CD4",
+      "bytes": 36744
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\23-analytics-dark-390x844-b.png",
+      "sha256": "6A687193C868414E7684AB475A1D9FB55FEF2A4F0F4D3B5E69A92A6021D21CD4",
+      "bytes": 36744
+    },
+    "pairByteIdentical": true
+  },
+  {
+    "id": "24-analytics-light-390x844",
+    "candidate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\24-analytics-light-390x844-a.png",
+      "sha256": "6508C0BAEF0127BCA87AACBC58A18954E7A794792110839509845A58CA641D89",
+      "bytes": 37014
+    },
+    "duplicate": {
+      "path": "D:\\ANNAM\\TradingWorkspace\\planning\\checkpoints\\workspace-next-stage\\WMREPLAY-W8-CANONICAL-GOLDEN-20261001\\24-analytics-light-390x844-b.png",
+      "sha256": "6508C0BAEF0127BCA87AACBC58A18954E7A794792110839509845A58CA641D89",
+      "bytes": 37014
+    },
+    "pairByteIdentical": true
+  }
+]

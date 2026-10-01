@@ -1,0 +1,30 @@
+{
+  "acceptance": [
+    "U5c normalizes a deterministic bounded cost/fill stress matrix with a base scenario plus at most seven declared scenarios and rejects no-op, duplicate, unknown-field and out-of-bound multipliers",
+    "The declared sweep multiplied by stress scenarios is bounded before execution and rejects more than 10000 combinations",
+    "Stress identity is pinned into the validation protocol by a canonical SHA-256 and rehashed tampering fails closed",
+    "Every stress run remains pre-holdout; the planner and worker never authorize holdout content access",
+    "Stress modifies only declared cost/fill assumptions for each fold and records all scenario outcomes without ranking or selecting a winner",
+    "Runtime budget/cancel checks still fence the expanded matrix",
+    "Focused U5c regression passes 19 tests plus 2 subtests on the exact candidate source"
+  ],
+  "allowed_files": [
+    "foundation_v2/tests/test_u5c_oos.py",
+    "foundation_v2/trading_workspace_v2/research.py",
+    "foundation_v2/trading_workspace_v2/research_oos.py"
+  ],
+  "base_revision": "1c4b7d6172b57e6774e5bca2fcafcba1a694c103",
+  "candidate_revision": "65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+  "dependencies": [
+    "U5C-WIRING-HARDEN-r1"
+  ],
+  "residual_scope": [
+    "Fresh disposable PostgreSQL plus isolated Nautilus end-to-end validation for this stress candidate",
+    "Independent final review before ledger acceptance",
+    "Regime segmentation/sensitivity beyond declared cost/fill scenarios",
+    "Approved real-data OOS evidence and any later owner-approved holdout evaluation",
+    "Broker/demo/live, provider and deployment acceptance"
+  ],
+  "safety": "Research-only bounded pre-holdout sensitivity; no broker/live/provider/deploy capability and no holdout content authorization.",
+  "task": "U5C-STRESS-SENSITIVITY-r1"
+}

@@ -1,0 +1,158 @@
+{
+  "status": "PASS",
+  "source_change": false,
+  "report": [
+    {
+      "theme": "dark",
+      "width": 1440,
+      "items": [
+        {
+          "text": "Đang xem đúng cutoff report ở nến #3.",
+          "color": "rgb(240, 214, 156)",
+          "background": [
+            11,
+            14,
+            16
+          ],
+          "ratio": 13.65
+        },
+        {
+          "text": "Replay gốc hiện ở nến #4; dữ liệu sau cutoff này không được render.",
+          "color": "rgb(203, 185, 143)",
+          "background": [
+            11,
+            14,
+            16
+          ],
+          "ratio": 10.028
+        },
+        {
+          "text": "Tạo branch nếu muốn tiếp tục từ đúng mốc report mà không sửa session gốc.",
+          "color": "rgb(203, 185, 143)",
+          "background": [
+            11,
+            14,
+            16
+          ],
+          "ratio": 10.028
+        }
+      ],
+      "overflow": 0,
+      "screenshot": "replay-contrast-dark-1440.png"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "items": [
+        {
+          "text": "Đang xem đúng cutoff report ở nến #3.",
+          "color": "rgb(240, 214, 156)",
+          "background": [
+            11,
+            14,
+            16
+          ],
+          "ratio": 13.65
+        },
+        {
+          "text": "Replay gốc hiện ở nến #4; dữ liệu sau cutoff này không được render.",
+          "color": "rgb(203, 185, 143)",
+          "background": [
+            11,
+            14,
+            16
+          ],
+          "ratio": 10.028
+        },
+        {
+          "text": "Tạo branch nếu muốn tiếp tục từ đúng mốc report mà không sửa session gốc.",
+          "color": "rgb(203, 185, 143)",
+          "background": [
+            11,
+            14,
+            16
+          ],
+          "ratio": 10.028
+        }
+      ],
+      "overflow": 0,
+      "screenshot": "replay-contrast-dark-390.png"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "items": [
+        {
+          "text": "Đang xem đúng cutoff report ở nến #3.",
+          "color": "rgb(112, 70, 9)",
+          "background": [
+            245,
+            247,
+            248
+          ],
+          "ratio": 7.607
+        },
+        {
+          "text": "Replay gốc hiện ở nến #4; dữ liệu sau cutoff này không được render.",
+          "color": "rgb(112, 70, 9)",
+          "background": [
+            245,
+            247,
+            248
+          ],
+          "ratio": 7.607
+        },
+        {
+          "text": "Tạo branch nếu muốn tiếp tục từ đúng mốc report mà không sửa session gốc.",
+          "color": "rgb(112, 70, 9)",
+          "background": [
+            245,
+            247,
+            248
+          ],
+          "ratio": 7.607
+        }
+      ],
+      "overflow": 0,
+      "screenshot": "replay-contrast-light-1440.png"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "items": [
+        {
+          "text": "Đang xem đúng cutoff report ở nến #3.",
+          "color": "rgb(112, 70, 9)",
+          "background": [
+            245,
+            247,
+            248
+          ],
+          "ratio": 7.607
+        },
+        {
+          "text": "Replay gốc hiện ở nến #4; dữ liệu sau cutoff này không được render.",
+          "color": "rgb(112, 70, 9)",
+          "background": [
+            245,
+            247,
+            248
+          ],
+          "ratio": 7.607
+        },
+        {
+          "text": "Tạo branch nếu muốn tiếp tục từ đúng mốc report mà không sửa session gốc.",
+          "color": "rgb(112, 70, 9)",
+          "background": [
+            245,
+            247,
+            248
+          ],
+          "ratio": 7.607
+        }
+      ],
+      "overflow": 0,
+      "screenshot": "replay-contrast-light-390.png"
+    }
+  ]
+}

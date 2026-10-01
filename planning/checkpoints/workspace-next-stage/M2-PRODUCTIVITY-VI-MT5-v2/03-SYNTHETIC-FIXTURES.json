@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "purpose": "UI prototype only; all trading values are synthetic and are not real performance or a broker feed",
+  "vi": {
+    "fixture_source": "Reuse the VI fixtures already in this Make project",
+    "required_preview_states": ["ready", "processing", "stale", "blocked", "unknown"],
+    "watch_scope": "deferred_to_mt5_course_learn",
+    "backend_connection": "not_connected"
+  },
+  "mt5": {
+    "mode": "replay",
+    "source": "synthetic",
+    "workspace_id": "demo-workspace",
+    "session_id": "demo-replay-001",
+    "attempt_id": "demo-attempt-001",
+    "dataset_id": "demo-candles-v1",
+    "revision": 1,
+    "symbol": "DEMO",
+    "timeframe": "5m",
+    "timezone": "UTC",
+    "price_precision": 2,
+    "currency": "USD",
+    "initial_cursor": 7,
+    "candles": [
+      {"time": "2026-09-01T08:00:00Z", "open": 100, "high": 101.2, "low": 99.6, "close": 100.8},
+      {"time": "2026-09-01T08:05:00Z", "open": 100.8, "high": 101.8, "low": 100.4, "close": 101.4},
+      {"time": "2026-09-01T08:10:00Z", "open": 101.4, "high": 101.7, "low": 100.3, "close": 100.6},
+      {"time": "2026-09-01T08:15:00Z", "open": 100.6, "high": 100.9, "low": 99.8, "close": 100.1},
+      {"time": "2026-09-01T08:20:00Z", "open": 100.1, "high": 101.1, "low": 99.9, "close": 100.9},
+      {"time": "2026-09-01T08:25:00Z", "open": 100.9, "high": 102, "low": 100.5, "close": 101.6},
+      {"time": "2026-09-01T08:30:00Z", "open": 101.6, "high": 101.9, "low": 100.7, "close": 101},
+      {"time": "2026-09-01T08:35:00Z", "open": 101, "high": 101.4, "low": 100.2, "close": 100.5},
+      {"time": "2026-09-01T08:40:00Z", "open": 100.5, "high": 101.5, "low": 100.1, "close": 101.2},
+      {"time": "2026-09-01T08:45:00Z", "open": 101.2, "high": 102.3, "low": 100.9, "close": 102}
+    ],
+    "report": {
+      "id": "demo-report-001",
+      "revision": 1,
+      "status": "practice_snapshot",
+      "initial_balance": 10000,
+      "trading_days": null,
+      "pnl_basis": "net_after_fees",
+      "valuation_note": "Synthetic ledger amounts supplied for UI arithmetic only, not inferred from demo candle price moves; no equity/drawdown or firm-rule claim",
+      "replay_context": {
+        "session_id": "demo-replay-001",
+        "revision": 1,
+        "cursor_index": 7,
+        "source_time": "2026-09-01T08:35:00Z",
+        "historical_read_only": true
+      },
+      "trades": [
+        {"id": "DEMO-01", "closed_at": "2026-09-01T08:05:00Z", "close_bar": 1, "gross_pnl": 126, "fees": 6, "net_pnl": 120},
+        {"id": "DEMO-02", "closed_at": "2026-09-01T08:15:00Z", "close_bar": 3, "gross_pnl": -74, "fees": 6, "net_pnl": -80},
+        {"id": "DEMO-03", "closed_at": "2026-09-01T08:25:00Z", "close_bar": 5, "gross_pnl": 66, "fees": 6, "net_pnl": 60},
+        {"id": "DEMO-04", "closed_at": "2026-09-01T08:35:00Z", "close_bar": 7, "gross_pnl": -44, "fees": 6, "net_pnl": -50}
+      ],
+      "expected_all_rows": {"trade_count": 4, "gross_pnl": 74, "fees": 24, "net_pnl": 50, "win_rate_pct": 50, "closed_trade_balance": 10050},
+      "expected_winning_rows": {"trade_count": 2, "gross_pnl": 192, "fees": 12, "net_pnl": 180, "win_rate_pct": 100},
+      "expected_losing_rows": {"trade_count": 2, "gross_pnl": -118, "fees": 12, "net_pnl": -130, "win_rate_pct": 0}
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": "autonomy-readiness-contract-v1",
+  "scope": "PREP_ONLY_OFFLINE",
+  "generated_at": "2026-09-27",
+  "purpose": "Gate research, backtest, paper and demo preparation without authorizing broker execution or promising income.",
+  "source_of_truth": {
+    "engine": "projects/mt5-tradingview-backtester/foundation_v2",
+    "accounting_reference": "projects/quant-trading",
+    "llm_advisor": "projects/TradingAgents"
+  },
+  "hard_invariants": {
+    "credentials": false,
+    "broker_connection": false,
+    "order_send": false,
+    "holdout_content_access": false,
+    "automatic_promotion": false,
+    "guaranteed_income_claim": false,
+    "leverage_or_short_in_quant_lab": false,
+    "live_authorization": false
+  },
+  "states": [
+    "RESEARCH",
+    "BACKTEST_CANDIDATE",
+    "PAPER_CANDIDATE",
+    "PAPER_RUNNING",
+    "DEMO_SHADOW",
+    "PAUSED",
+    "QUARANTINED",
+    "LIVE_REQUESTED",
+    "LIVE_AUTHORIZED"
+  ],
+  "transitions": [
+    {
+      "from": "RESEARCH",
+      "to": "BACKTEST_CANDIDATE",
+      "requires": ["frozen_strategy_revision", "dataset_manifest_digest", "deterministic_engine_receipt", "cost_model"]
+    },
+    {
+      "from": "BACKTEST_CANDIDATE",
+      "to": "PAPER_CANDIDATE",
+      "requires": ["chronological_oos", "holdout_denied", "cost_fill_stress", "risk_policy", "uncertainty_report", "baseline_benchmark", "evidence_receipt"]
+    },
+    {
+      "from": "PAPER_CANDIDATE",
+      "to": "PAPER_RUNNING",
+      "requires": ["offline_paper_ledger", "idempotency_key", "reconciliation", "scheduler_policy", "pause_on_health_failure"],
+      "owner_gate": "explicit_owner_review"
+    },
+    {
+      "from": "PAPER_RUNNING",
+      "to": "DEMO_SHADOW",
+      "requires": ["minimum_paper_window", "shadow_parity", "drift_baseline", "operator_telemetry"],
+      "owner_gate": "explicit_owner_review"
+    },
+    {
+      "from": "DEMO_SHADOW",
+      "to": "LIVE_REQUESTED",
+      "requires": ["credential_review", "broker_contract_review", "risk_budget", "rollback_plan", "incident_contact"],
+      "owner_gate": "explicit_owner_review"
+    },
+    {
+      "from": "LIVE_REQUESTED",
+      "to": "LIVE_AUTHORIZED",
+      "requires": ["separate_live_authorization_record"],
+      "owner_gate": "explicit_owner_review",
+      "allowed_in_this_artifact": false
+    }
+  ],
+  "fail_closed": {
+    "on_missing_evidence": "PAUSED",
+    "on_data_quality_failure": "QUARANTINED",
+    "on_drift_breach": "PAUSED",
+    "on_duplicate_or_stale_run": "PAUSED",
+    "on_provider_or_model_error": "PAUSED",
+    "on_reconciliation_mismatch": "QUARANTINED"
+  },
+  "project_readiness": {
+    "foundation_v2": {
+      "research": "PASS_SCOPED",
+      "backtest": "PASS_SCOPED",
+      "paper": "PREP_ONLY",
+      "demo": "PREP_ONLY",
+      "live": "BLOCKED",
+      "missing_gate_ids": ["A-01", "A-04", "A-05", "A-06", "A-07", "A-08", "A-09", "A-10", "A-11"]
+    },
+    "quant_lab": {
+      "research": "PASS_SCOPED",
+      "backtest": "PASS_SCOPED",
+      "paper": "MISSING",
+      "demo": "MISSING",
+      "live": "BLOCKED",
+      "missing_gate_ids": ["A-01", "A-03", "A-04", "A-05", "A-06", "A-07", "A-08", "A-09", "A-10", "A-11"]
+    },
+    "tradingagents": {
+      "research": "PASS_SCOPED_ADVISORY",
+      "backtest": "DECISION_QUALITY_ONLY",
+      "paper": "MISSING",
+      "demo": "MISSING",
+      "live": "BLOCKED",
+      "missing_gate_ids": ["A-01", "A-02", "A-03", "A-04", "A-05", "A-06", "A-07", "A-08", "A-09", "A-10", "A-11"]
+    }
+  },
+  "next_safe_slices": [
+    "Implement a shared strategy/dataset/model lineage registry as metadata only.",
+    "Implement an offline paper ledger and deterministic reconciliation in foundation_v2.",
+    "Add cross-project walk-forward/holdout/stress/uncertainty evidence receipts.",
+    "Add risk governor and drift monitor that can only pause or quarantine.",
+    "Add a durable scheduler contract with bounded retries and resumable checkpoints; keep provider waits external.",
+    "Add UI states for unproven, paper-only, paused, quarantined and unavailable telemetry."
+  ]
+}

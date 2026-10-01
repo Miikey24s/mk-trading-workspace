@@ -1,0 +1,14 @@
+Continue this existing Figma Make project using the two attached files: 02-DESIGN-BRIEF.md and 03-SYNTHETIC-FIXTURES.json.
+
+The owner has selected a focused productivity direction. This is the next iteration of the existing VI Dubber prototype, expanded to demonstrate the shared foundation in both VI Dubber and MT5 Trading Workspace. Preserve useful existing code and behavior; do not start a new unrelated app.
+
+Updated scope for this round:
+- Build a shared application shell, semantic theme tokens, navigation and a small set of genuinely reused controls. Provide a product switcher between VI Dubber and MT5 for reviewing the two shells in this prototype. Their domain state stays separate.
+- VI Dubber: jobs/process list and the existing bilingual Review workspace, with inline preview, real fullscreen when available, selective rerender states and an optional Engineer drawer. Do NOT build a separate Watch experience, viewing library or course player. Watch will later belong with MT5 course/Learn.
+- MT5: a coherent product navigation shell, one chart/replay view and one report view. Implement the exact report-to-replay cursor round trip with synthetic data. Other product areas get concise, honest scope placeholders; Learn is reserved for a later iteration.
+- Use the productivity visual direction in the brief: flat-first, readable Vietnamese, strong hierarchy, restrained color, light/dark, a large work surface and controls close to their task. Reuse controls while letting VI prioritize review and MT5 prioritize chart/data density.
+- The owner permits modernizing the experimental frontend. Keep React 19 + TypeScript + Tailwind 4 and the compatible Vite/tooling already supported by this Make project. The old requirement to preserve React 18/Tailwind 3 does not apply to this iteration. Avoid unrelated frameworks/services.
+
+Implement one cohesive candidate now, not multiple alternatives. Work through foundation -> VI -> MT5, then verify the interactions listed in the brief. Use existing VI fixtures where valid; the JSON supplies a small MT5 fixture and expected arithmetic. Clearly label simulated content. No real backend, broker, cloud or paid-provider connection is part of this run.
+
+Return runnable, exportable code plus a short summary of shared pieces, working interactions, known gaps and dependency changes. Report what you actually verified. Keep export possible without public publishing. Do not build extra screens, documentation systems or features beyond this packet.

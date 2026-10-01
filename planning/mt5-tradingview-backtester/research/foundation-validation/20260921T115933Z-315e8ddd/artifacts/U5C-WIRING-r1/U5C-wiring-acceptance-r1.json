@@ -1,0 +1,40 @@
+{
+  "checks": {
+    "api_queued_postgres_job": true,
+    "automatic_ranking_disabled": true,
+    "broker_execution_capability": false,
+    "holdout_content_capability": false,
+    "nautilus_runtime_identity": {
+      "nautilus_trader": "1.231.0",
+      "pyarrow": "25.0.1",
+      "python": "3.12.10"
+    },
+    "nautilus_runtime_ready": true,
+    "oos_outcomes_fully_accounted": true,
+    "persisted_oos_result": true,
+    "separate_worker_processed_job": true
+  },
+  "commit": "1986b1f9c48bc24677bc88f178cc4f732476942c",
+  "fixture": {
+    "dataset_id": "dataset-c78842701fb46f9c1a9d0e1525a64559ce4778943ee899009406234ed17f9fe3",
+    "holdout_from_utc": 86400,
+    "row_count": 24,
+    "workspace": "tenant-u5c-accept"
+  },
+  "job": {
+    "attempt_no": 1,
+    "fold_count": 1,
+    "job_id": "a7721ad9b5ea4d63b4a0b9fdc082068b",
+    "result_sha256": "d981b9a34eaeb9fd0a7373be6f2f42c43c52e1320bc67547d7ee3a7b30663d14",
+    "status": "completed",
+    "status_counts": {
+      "canceled": 0,
+      "completed": 1,
+      "failed": 0
+    },
+    "trial_count": 1
+  },
+  "result": "PASS",
+  "schema": "U5C-WIRING-ACCEPTANCE-r1",
+  "scope": "local disposable PostgreSQL + API + separate worker + isolated Nautilus OOS fixture; no holdout content, broker/live, provider or production action"
+}

@@ -1,0 +1,18 @@
+{
+  "broker_execution_capability": false,
+  "candidate_owned_sources_unchanged": true,
+  "candidate_revision": "65d5043692aa0c93cae54f2dd43e55dc0cb15bea",
+  "holdout_content_capability": false,
+  "residual_scope": [
+    "Approved real-data OOS and any later owner-approved holdout evaluation",
+    "Broader regime segmentation/sensitivity",
+    "Broker/demo/live, provider and deployment acceptance"
+  ],
+  "result": "accepted",
+  "review": "PASS fresh current-turn read-only exact-candidate review",
+  "reviewer": "/root/native2-readonly-review-20260926",
+  "runtime_receipt": "artifacts\\U5C-STRESS-SENSITIVITY-r1\\runtime-r2\\U5C-stress-acceptance-r1.json",
+  "runtime_receipt_sha256": "34185de4b1c496ee6e31ce1d6ccb537d9a1c5f5515c5f4c5ed7abcd9736a7c58",
+  "task": "U5C-STRESS-SENSITIVITY-r1",
+  "validated_at_head": "07fc8ea3479460cf4db68a781304481cf925b2d4"
+}

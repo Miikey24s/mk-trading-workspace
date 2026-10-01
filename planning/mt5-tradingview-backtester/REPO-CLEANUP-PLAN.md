@@ -2,6 +2,8 @@
 
 Phiên bản **1.2 · 20/09/2026** · **PHỤ LỤC, CHƯA DI CHUYỂN/XÓA FILE**.
 
+**Đối chiếu 01/10/2026:** quy trình dọn toàn workspace và nguồn tài liệu chính thức nằm tại [CONTEXT-LIFECYCLE](../CONTEXT-LIFECYCLE.md). Các mô tả entrypoint trong inventory bên dưới là baseline ngày 20/09, không thay hướng PATH-2 hiện tại trong [README sản phẩm](../../projects/mt5-tradingview-backtester/README.md). Phụ lục này giữ scope MT5; không tự huỷ hạng mục hoặc mở quyền xoá repo/dữ liệu khác.
+
 **Greenfield gate:** cleanup không được ép giữ repo hoặc implementation. F5 trong [foundation plan](FOUNDATION-RESEARCH-PLAN.md) chọn PATH-1/2/3; scope đường dẫn/code disposition cập nhật theo quyết định đó. [Knowledge register](KNOWLEDGE-PRESERVATION-REGISTER.md) và data handoff phải đạt trước retire. Quyền nghiên cứu xây mới không là quyền xóa repo cũ ngay.
 
 Tài liệu con của [PRODUCT-COMPLETION-PLAN.md](PRODUCT-COMPLETION-PLAN.md). Mục đích: một entrypoint rõ, code dễ tìm/reuse, cài lại được, không có dữ liệu cá nhân lẫn source và không phá phần đang dùng. Không đo thành công bằng số file/dòng code đã xóa.

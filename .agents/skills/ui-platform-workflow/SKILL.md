@@ -5,7 +5,7 @@ description: Design, systemize, implement, scale, or migrate UI using the ANNAM 
 
 # ANNAM UI platform workflow
 
-Use the layered UI platform instead of treating every UI task as an isolated redesign.
+Use the layered UI platform and the project's current direction. Existing-product fixes and QA start from the shipped or in-progress implementation; exploration is a separate stage, not the default response to every UI task.
 
 ## Read first
 
@@ -21,6 +21,7 @@ For any task in `TradingWorkspace`:
 
 ### Exploration
 
+- Enter this stage when the task explicitly requests a new direction or the current plan authorizes revisiting it. A historical exploration plan or generator prompt does not reopen the design decision.
 - Follow the project's recorded approval authority before locking tokens/components. MT5/Trading Workspace has owner-delegated agent UI approval since 23/09/2026; use its rubric and runtime QA, not a new user aesthetic gate. Other projects retain their user-approval requirements.
 - Break references into selectable parts; explain design terminology in plain Vietnamese when the user is choosing.
 - Use Stitch Web/Figma Make or another visual tool for divergent candidates when available.
@@ -54,15 +55,18 @@ For any task in `TradingWorkspace`:
 - Create isolated upgrade changes, run tests, render stable fixtures, produce visual diffs, and preserve the old version when checks fail.
 - Never silently propagate a breaking shared UI change into all projects.
 
-## MT5 pilot
+## MT5 / WMREPLAY
 
 For `projects/mt5-tradingview-backtester`, also read:
 
-- `planning/mt5-tradingview-backtester/MT5-UI-EXPLORATION-PLAN.md`
 - `planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md`
+- Its `EXECUTION-ENTRYPOINT.md` and current task/evidence locators
+- `planning/mt5-tradingview-backtester/WMREPLAY-UI-MASTER-PLAN.md` for UI scope and quality gates
 - `projects/mt5-tradingview-backtester/ui/project-ui.json`
 
-The current preview is a candidate until agent QA passes; delegation does not make it accepted. Use the project's `.agents/skills/trading-ui-qa/SKILL.md` for Playwright-first verification and the parent `tooling/ui-qa/README.md` for checked tooling. Do not use the legacy staged agent-workflow runner (which forbids browser access) as the UI-QA executor.
+Continue implementation and runtime QA in the main repository's `foundation_v2`; the selected direction does not mean all screens or product gates have passed. Follow its `AGENTS.md` for retired prototypes. Read old U1/Figma exploration plans only when investigating a decision, not as current tasks or instructions to recreate a deleted checkout.
+
+Use the project's `.agents/skills/trading-ui-qa/SKILL.md` for Playwright-first verification and the parent `tooling/ui-qa/README.md` for checked tooling. Return evidence to the existing task owner; do not create another progress tracker or edit generated state as acceptance. Do not use the legacy staged agent-workflow runner (which forbids browser access) as the UI-QA executor.
 
 Do not weaken broker/live/holdout/provider gates while doing UI work.
 

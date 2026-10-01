@@ -1,0 +1,197 @@
+{
+  "status": "PASS",
+  "fixture": "WMREPLAY-W7C-risk-mutation-20261001",
+  "origin": "http://127.0.0.1:4187",
+  "workspace": "tenant-risk-mutation-fixture",
+  "generated_at_utc": "2026-09-30T17:51:44.634Z",
+  "cases": [
+    "empty",
+    "success",
+    "breach",
+    "blocked",
+    "error"
+  ],
+  "widths": [
+    1440,
+    390
+  ],
+  "checks": [
+    "empty idle state has no evaluator mutation",
+    "within-limits success response renders WITHIN LIMITS",
+    "breached response renders BREACHED",
+    "client-side blocked-by-data state prevents POST",
+    "503 evaluator error surfaces role=alert",
+    "all POSTs are local evaluator calls with workspace header",
+    "mutation payloads contain no broker, credential, OAuth, key or secret fields",
+    "1440px and 390px screenshots have no horizontal overflow",
+    "console and page errors are empty"
+  ],
+  "results": [
+    {
+      "id": "empty",
+      "width": 1440,
+      "expected": "idle",
+      "observed": "empty",
+      "mutationCount": 0,
+      "requestPaths": [],
+      "bodyFieldSafety": true,
+      "overflowPx": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "pass": true
+    },
+    {
+      "id": "empty",
+      "width": 390,
+      "expected": "idle",
+      "observed": "empty",
+      "mutationCount": 0,
+      "requestPaths": [],
+      "bodyFieldSafety": true,
+      "overflowPx": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "pass": true
+    },
+    {
+      "id": "success",
+      "width": 1440,
+      "expected": "within_limits",
+      "observed": "within_limits",
+      "mutationCount": 1,
+      "requestPaths": [
+        {
+          "method": "POST",
+          "path": "/api/v2/analytics/prop/evaluate",
+          "workspace": "tenant-risk-mutation-fixture"
+        }
+      ],
+      "bodyFieldSafety": true,
+      "overflowPx": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "pass": true
+    },
+    {
+      "id": "success",
+      "width": 390,
+      "expected": "within_limits",
+      "observed": "within_limits",
+      "mutationCount": 1,
+      "requestPaths": [
+        {
+          "method": "POST",
+          "path": "/api/v2/analytics/prop/evaluate",
+          "workspace": "tenant-risk-mutation-fixture"
+        }
+      ],
+      "bodyFieldSafety": true,
+      "overflowPx": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "pass": true
+    },
+    {
+      "id": "breach",
+      "width": 1440,
+      "expected": "breached",
+      "observed": "breached",
+      "mutationCount": 1,
+      "requestPaths": [
+        {
+          "method": "POST",
+          "path": "/api/v2/analytics/prop/evaluate",
+          "workspace": "tenant-risk-mutation-fixture"
+        }
+      ],
+      "bodyFieldSafety": true,
+      "overflowPx": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "pass": true
+    },
+    {
+      "id": "breach",
+      "width": 390,
+      "expected": "breached",
+      "observed": "breached",
+      "mutationCount": 1,
+      "requestPaths": [
+        {
+          "method": "POST",
+          "path": "/api/v2/analytics/prop/evaluate",
+          "workspace": "tenant-risk-mutation-fixture"
+        }
+      ],
+      "bodyFieldSafety": true,
+      "overflowPx": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "pass": true
+    },
+    {
+      "id": "blocked",
+      "width": 1440,
+      "expected": "blocked_by_data",
+      "observed": "blocked",
+      "mutationCount": 0,
+      "requestPaths": [],
+      "bodyFieldSafety": true,
+      "overflowPx": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "pass": true
+    },
+    {
+      "id": "blocked",
+      "width": 390,
+      "expected": "blocked_by_data",
+      "observed": "blocked",
+      "mutationCount": 0,
+      "requestPaths": [],
+      "bodyFieldSafety": true,
+      "overflowPx": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "pass": true
+    },
+    {
+      "id": "error",
+      "width": 1440,
+      "expected": "error",
+      "observed": "error",
+      "mutationCount": 1,
+      "requestPaths": [
+        {
+          "method": "POST",
+          "path": "/api/v2/analytics/prop/evaluate",
+          "workspace": "tenant-risk-mutation-fixture"
+        }
+      ],
+      "bodyFieldSafety": true,
+      "overflowPx": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "pass": true
+    },
+    {
+      "id": "error",
+      "width": 390,
+      "expected": "error",
+      "observed": "error",
+      "mutationCount": 1,
+      "requestPaths": [
+        {
+          "method": "POST",
+          "path": "/api/v2/analytics/prop/evaluate",
+          "workspace": "tenant-risk-mutation-fixture"
+        }
+      ],
+      "bodyFieldSafety": true,
+      "overflowPx": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "pass": true
+    }
+  ]
+}
