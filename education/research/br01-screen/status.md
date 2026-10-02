@@ -1,12 +1,25 @@
 # Checkpoint 2026-09-13 — pipeline nghiên cứu chạy xong hai kịch bản
 
-## Mới nhất — thay thế trạng thái chưa duyệt bên dưới
+## Hiện tại — đối chiếu receipt vòng 02 ngày 02/10/2026
+
+H1 và H2 đều bị reject theo gate đã khóa; chưa tạo v1, chưa có bằng chứng edge.
+[OPTIMIZATION-02-STATUS.md](OPTIMIZATION-02-STATUS.md) dẫn receipt H2 đã có từ vòng
+16/09/2026: 2021 là development, không còn independent validation. Hai scenario đều
+có 10 trades và 1 winner; net R lần lượt −5,05 và −5,7452, giống shadow v0.
+Receipt ghi 2022/2025 chưa truy cập; checkpoint này không chạy thêm performance,
+không mở raw quote/calendar/holdout, không sửa rule/risk hoặc tiến độ học viên.
+
+Bộ đếm filter đã được sửa để nhận cả retest và breakout. Receipt đính chính riêng
+ghi H2 lọc 2 breakout mỗi scenario thay vì 0; receipt gốc, trades, P/L và quyết định
+reject được giữ nguyên. Các trạng thái chưa tối ưu/chưa dùng 2021 bên dưới là lịch sử.
+
+## Checkpoint baseline 13/09/2026 — trước hai vòng tối ưu
 
 Người dùng đã đồng ý lịch archive + chi phí giả định rõ ràng và yêu cầu làm. Đã chuẩn hóa lịch, chốt [protocol trước P/L](RESEARCH-RUN-PROTOCOL.md), chạy preflight và hai episode. **104 tests đạt**, đối chiếu scalar độc lập toàn bộ recorded trades đạt. Thận trọng:21lệnh,−146,98USD, dừng21/11/2019. Stress:18lệnh,−138,93USD, dừng01/05/2019. Cảhai dừng do Q lớn hơn phần đệm tổng còn lại, không reset và không chạy tới2020 sau khi dừng.
 
 Xem [RESEARCH-RESULTS.md](RESEARCH-RESULTS.md) để đọc kết quả, giả định và bằng chứng. Setup **hoàn tất trong phạm vi mô phỏng nghiên cứu đã duyệt**; không phải exact FTMO replication, không bằng chứng edge. Vẫn giữ nguyên raw/luật, không xem2025 hoặc performance2021–2024. Không còn job nền. Các đoạn “còn chờ duyệt lịch/phí”, “chưa chạy performance” phía dưới là checkpoint cũ.
 
-## Trạng thái hiện hành — thay cho các checkpoint cũ phía dưới
+## Checkpoint trước baseline — giữ để tra lịch sử
 
 Người dùng yêu cầu sửa các vấn đề còn lại và **chấp nhận sai lệch nhỏ của dữ liệu giá**. Không tiếp tục chữa/tải lại QDM, không sửa raw, không điền giá thiếu hoặc ghép feed. Ngoại lệ dữ liệu được ghi trong `execution-profile.json`; chấp nhận ngoại lệ không biến dữ liệu thành hoàn hảo. Tick gap ở đường khớp được gắn cờ từng lệnh. Nếu hoàn toàn không có quote để thoát, engine không thể bịa P/L.
 

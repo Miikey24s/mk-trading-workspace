@@ -22,7 +22,7 @@ Mục tiêu: tìm xem **setup có edge sau chi phí hay không**, rồi mới c�
 5. **Tạo version mới** — mọi thay đổi có ý nghĩa thành `v1`, `v2`...; không ghi đè v0 và không trộn kết quả giữa version.
 6. **So trên development** — đo expectancy sau chi phí, số lệnh, drawdown, losing streak, stability theo năm/quý, sensitivity với cost và độ phức tạp/manual burden.
 7. **Freeze candidate tốt hơn** — chỉ giữ thay đổi nếu cải thiện có lý do và không phụ thuộc một đoạn ngắn hoặc một tham số quá chính xác.
-8. **Chronological validation 2021–2022** — luật đã khóa; nếu sửa dựa trên kết quả này thì giai đoạn đó trở thành development, không còn independent validation.
+8. **Chronological validation** — luật đã khóa; 2021 đã chuyển thành development cho H2, giữ 2022 cho validation. Nếu sửa dựa trên validation thì phần đó trở thành development, không còn độc lập.
 9. **Robustness 2023–2024** — kiểm tra giai đoạn gần hơn và đối chiếu FTMO; đây không phải holdout hoàn toàn vì đã dùng cho audit kỹ thuật.
 10. **Pre-register final test** — khóa rule, cost model, engine và tiêu chí đọc kết quả trước khi mở 2025.
 11. **Holdout 2025 một lần** — không nhìn rồi đổi tiêu chí để pass; fail thì coi là bằng chứng chống lại version đó.
@@ -76,12 +76,16 @@ Nếu forward/demo về sau cho thấy suy giảm có bằng chứng, quay lại
 
 ## Bước hiện tại
 
-BR-01 đã chuyển từ **thu bằng chứng development → chẩn đoán** sang vòng tối ưu đầu tiên.
-`H1_R_BODY_5P` đã được khóa trước dữ liệu mới trong
-[OPTIMIZATION-01-PROTOCOL.md](OPTIMIZATION-01-PROTOCOL.md); core Price Action v0 vẫn khóa.
-Unseen screen 25/11/2019–2020 đã chạy xong. `H1_R_BODY_5P` cải thiện tổng R so với shadow
-v0 nhưng vẫn âm ở cả conservative và stress, nên fail gate đã khóa và bị reject. Xem
-[OPTIMIZATION-01-STATUS.md](OPTIMIZATION-01-STATUS.md). Chưa tạo v1; bước kế tiếp quay về
-**chẩn đoán** để đặt một hypothesis mới có lý do, không chỉnh threshold 5 pip sau kết quả.
+Hai vòng tối ưu đã có receipt: H1 retest body 5 pip bị reject trên unseen development
+2019–2020; H2 breakout body 5 pip bị reject trên 2021 được chuyển thành development
+trước test. Xem [OPTIMIZATION-01-STATUS.md](OPTIMIZATION-01-STATUS.md) và
+[OPTIMIZATION-02-STATUS.md](OPTIMIZATION-02-STATUS.md). Core Price Action v0 vẫn khóa,
+chưa tạo v1. H2 lọc 2 breakout mỗi scenario nhưng không thay trade nào; net R vẫn âm
+và giống shadow v0. Bộ đếm tổng được đính chính từ receipt đã lưu, không chạy lại giá.
+
+Bước tiếp theo quay về **chẩn đoán** từ bằng chứng development đã xem, tách signal,
+cost/fill và risk/account. Không chỉnh threshold 5 pip sau kết quả, không thêm filter
+để cứu mẫu âm, không mở 2022–2025 trong vòng H2 đã fail. Một hypothesis mới cần protocol
+riêng; việc đối chiếu receipt hiện tại không tự cấp quyền chạy thêm performance.
 
 Nguồn trạng thái: [RESEARCH-RESULTS.md](RESEARCH-RESULTS.md), [STUDY-PLAN.md](STUDY-PLAN.md), [BR-01 v0](../../practice/eurusd-breakout-retest-v0.md).

@@ -178,7 +178,8 @@ def summarize(result):
         'profit_factor_R': (sum(positives) / abs(sum(negatives))) if negatives else None,
         'longest_losing_streak': longest,
         'exit_reasons': dict(collections.Counter(t['reason'] for t in trades)),
-        'candidate_filtered_signals': sum(e.get('status') == 'candidate_retest_body_filter'
+        'candidate_filtered_signals': sum(e.get('status') in (
+            'candidate_retest_body_filter', 'candidate_breakout_body_filter')
                                           for e in result['events']),
         'execution_rejections': dict(collections.Counter(
             e['execution'] for e in result['events'] if e.get('execution'))),

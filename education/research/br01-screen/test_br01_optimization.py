@@ -2,7 +2,7 @@ import unittest
 
 from br01_engine import Execution, HOUR
 from news_calendar import Calendar, timestamp
-from optimize_br01 import BODY_5P, run_shadow
+from optimize_br01 import BODY_5P, run_shadow, summarize
 from optimize_br01_02 import BODY_5P as BREAKOUT_BODY_5P, passes_breakout_body, validate_2021_range
 from test_br01_engine import snapshot, ticks
 
@@ -38,6 +38,7 @@ class ShadowOptimizationTests(unittest.TestCase):
                          min_retest_body_points=BODY_5P)
         self.assertFalse(out['trades'])
         self.assertTrue(any(e['status'] == 'candidate_retest_body_filter' for e in out['events']))
+        self.assertEqual(summarize(out)['candidate_filtered_signals'], 1)
 
     def test_body_5p_filter_accepts_boundary(self):
         out = run_shadow(self.bars(retest_body=50), self.provider, Calendar(snapshot()),
@@ -48,6 +49,21 @@ class ShadowOptimizationTests(unittest.TestCase):
     def test_breakout_body_5p_boundary(self):
         self.assertTrue(passes_breakout_body(110000, 110000 + BREAKOUT_BODY_5P, BREAKOUT_BODY_5P))
         self.assertFalse(passes_breakout_body(110000, 110000 + BREAKOUT_BODY_5P - 1, BREAKOUT_BODY_5P))
+
+    def test_summary_counts_breakout_and_retest_filters_only(self):
+        result = {'trades': [], 'events': [
+            {'status': 'candidate_retest_body_filter'},
+            {'status': 'candidate_breakout_body_filter'},
+            {'status': 'candidate_breakout_body_filter'},
+            {'status': 'candidate_unrelated_filter'},
+            {'status': 'cancel'},
+            {'status': 'signal'},
+            {},
+        ]}
+        summary = summarize(result)
+        self.assertEqual(summary['candidate_filtered_signals'], 3)
+        self.assertEqual(summary['trades'], 0)
+        self.assertEqual(summary['net_R'], 0)
 
     def test_optimization_02_range_keeps_2022_unopened(self):
         validate_2021_range(timestamp('2021-01-01T00:00:00+00:00'),

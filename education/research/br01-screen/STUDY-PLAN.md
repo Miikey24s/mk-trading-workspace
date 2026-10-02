@@ -2,9 +2,9 @@
 
 Vòng phát triển sau baseline được khóa riêng tại [DEVELOPMENT-LOOP.md](DEVELOPMENT-LOOP.md). Tài liệu đó tách `strategy evidence` khỏi `manual execution`, giữ v0 nguyên trạng và chỉ cho tạo version mới sau bước chẩn đoán có bằng chứng.
 
-**Đã chạy lần đầu theo proxy được duyệt:** kết quả tại [RESEARCH-RESULTS.md](RESEARCH-RESULTS.md). Hai episode bắt đầu2018 nhưng dừng2019 do phần đệm tổng không đủ Q; không gọi hoàn thành performance2018–2020. Không tiếp tục2021–2024/2025. Chưa tối ưu bộ luật. Checkpoint chưa chạy phía dưới được giữ làm lịch sử.
+**Trạng thái hiện tại:** hai episode đầu dừng trong 2019 do hết phần đệm rủi ro; không gọi hoàn thành performance 2018–2020. H1 bị reject trên unseen development 2019–2020. H2 cũng bị reject trên 2021 đã được chuyển thành development theo [protocol vòng 02](OPTIMIZATION-02-PROTOCOL.md); xem [OPTIMIZATION-02-STATUS.md](OPTIMIZATION-02-STATUS.md). Chưa tạo v1 hoặc xác nhận edge; BR-01 v0 giữ nguyên. Không chạy thêm performance 2021–2024/2025 từ checkpoint này. Các đoạn chưa chạy phía dưới là lịch sử.
 
-Checkpoint mới: ngoại lệ giá nhỏ đã được người dùng chấp nhận, không còn chặn việc triển khai. Engine offline và adapter QDM đã kiểm thử; chưa chạy performance vì lịch trước phiên và cơ sở phí chưa chốt. Giữ nguyên thứ tự giai đoạn bên dưới. Xem [status.md](status.md), không dùng phần “Điểm xuất phát” lịch sử làm trạng thái hiện tại.
+Checkpoint trước baseline: ngoại lệ giá nhỏ đã được người dùng chấp nhận; engine offline và adapter QDM đã kiểm thử. Lịch archive và chi phí giả định sau đó được duyệt cho mô phỏng nghiên cứu tại [RESEARCH-RESULTS.md](RESEARCH-RESULTS.md). Không dùng checkpoint chưa chạy hoặc phần “Điểm xuất phát” làm trạng thái hiện tại.
 
 Yêu cầu mới mở rộng kiểm tra dữ liệu EURUSD về2018–2022. Không phát triển repo giao diện, không đặt lệnh, không mở2025. Kế hoạch này mở rộng phạm vi nguồn/đánh giá ban đầu2023–2024 trong protocol cũ, không thay tham số BR-01 v0.
 
@@ -15,7 +15,8 @@ Yêu cầu mới mở rộng kiểm tra dữ liệu EURUSD về2018–2022. Khô
 | Khoảng thời gian | Vai trò trước khi xem kết quả |
 |---|---|
 | 2018–2020 | Development cho các thay đổi sau baseline v0. Lưu mọi thử nghiệm và lý do; không săn hàng nghìn cấu hình |
-| 2021–2022 | Kiểm tra tiếp theo theo thời gian với luật đóng băng; nếu sửa dựa trên kết quả này, phần đó trở thành development và không còn là kiểm tra độc lập |
+| 2021 | Đã dùng làm development cho H2; H2 bị reject. Không còn là independent validation |
+| 2022 | Giữ làm chronological validation; receipt vòng 02 ghi chưa truy cập. H2 fail nên không mở trong cùng vòng |
 | 2023–2024 | Kiểm tra độ bền giai đoạn gần hơn, đối chiếu riêng FTMO. Đã dùng để khảo sát kỹ thuật/dữ liệu; không gọi là holdout hoàn toàn chưa chạm |
 | 2025 | Holdout cuối: người dùng đã tải về trong QDM All time, nhưng agent chưa đọc quote/chạy/xem kết quả. Không có trong CSV nghiên cứu 2018–2024. Chỉ mở sau khi khóa luật, chi phí, engine, ngưỡng đánh giá và có quyết định cho phép riêng |
 | Demo về sau | Forward test về thao tác, điều kiện feed và thực thi; không gộp vào backtest quá khứ |
