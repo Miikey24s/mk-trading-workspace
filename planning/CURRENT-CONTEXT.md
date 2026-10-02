@@ -1,6 +1,6 @@
 # Current context — routing sống của TradingWorkspace
 
-**Snapshot:** 2026-10-01 · cleanup compact 01. Đây là file điều hướng, không phải acceptance ledger và không thay runtime state.
+**Snapshot:** MT5 cập nhật 2026-10-02; các project khác giữ snapshot cleanup 2026-10-01. Đây là file điều hướng, không phải acceptance ledger và không thay runtime state.
 
 ## Chuỗi đọc bắt buộc
 
@@ -30,8 +30,8 @@ Không đọc toàn archive để bắt đầu task. Archive chỉ mở để ki
 
 ## Trạng thái hiện tại đã xác minh
 
-- **MT5 WMREPLAY:** W7-A route recovery và W7-B shell/route contrast repair đã có evidence; integrated web suite 56/56, Vite build pass với cảnh báo bundle khoảng 723 kB, route matrix 45/45, W7-B structural/request-safety 18/18. Đây là fixture/runtime evidence theo scope, chưa phải whole-product acceptance.
-- **MT5 open:** Replay contrast vẫn cần nghiệm thu browser; WIP `ReplayWorkspace.css` đã checkpoint ở MT5 `a90526c`; native browser zoom, axe/WCAG, canonical golden promotion, full-bleed, long-duration heap/frame, Dashboard aggregate semantics và owner-gated broker/provider/OAuth/upload/holdout/deploy/destructive work vẫn mở.
+- **MT5 WMREPLAY:** Dashboard/Sessions/chart/Trades/Analytics đã nối dữ liệu persisted; Analytics/CSV giữ đúng cursor lịch sử. Checkpoint backend `e97800c`, UI `d3456cd`; 95 backend tests + 3 subtests, 76 web tests, build pass, 108 route/axe/reflow cases và 42 native zoom cases. Luồng API/PostgreSQL thật dùng dữ liệu mô phỏng trong QA DB riêng; fixture và từng scope được ghi tại [integration checkpoint](../projects/mt5-tradingview-backtester/foundation_v2/evidence/wm-ui-integration-20261002/resume/CHECKPOINT.md). Chưa phải whole-product acceptance.
+- **MT5 open:** independent rubric review, canonical golden promotion, full-bleed promotion, manual WCAG và long-duration heap/frame vẫn mở. Long heap gate trước đó đã fail và chưa được short diagnostic đóng lại. Broker/provider/OAuth/upload/holdout/deploy/destructive work giữ owner gate.
 - **Job12/VI provider:** artifact-level completion không đồng nghĩa media QA. Current audit giữ `qa.passed=false`, `full_track_skipped=true`, `final_failed=122`; không `--fresh`, không xóa cache/receipt/lock, không đổi provider/model và không claim whole-pipeline.
 - **VI Dubber:** các P/M slices đã accepted chỉ đúng scope; P23 vẫn còn repeated whole-job/live-provider/whole-pipeline gates. Human listening và external/provider gates không được suy ra từ offline test.
 - **Quant:** ưu tiên offline data quality, provenance, PSI/OOD, cost stress và paper-soak fencing. Không mở live/execution.
@@ -51,7 +51,7 @@ Không đọc toàn archive để bắt đầu task. Archive chỉ mở để ki
 ## Resume hiện tại
 
 1. Đọc `RESUME.md`, sau đó đọc đúng domain PLAN.
-2. MT5 tiếp tục từ Replay contrast scout/lane, tiếp tục từ CSS đã checkpoint `a90526c` và chạy lại route matrix sau source change.
+2. MT5 tiếp tục từ integration checkpoint 2026-10-02 và execution ledger hiện có: review độc lập/golden rồi xử lý heap dài hạn theo triage. Chạy lại route matrix khi có source change; không suy acceptance toàn sản phẩm từ các packet đã pass.
 3. VI chỉ tiếp tục bounded offline correctness/harness repair; provider/media rerun cần owner gate.
 4. Quant/TradingAgents giữ offline regression và evidence; không mở external authority.
 5. Mỗi worker ghi receipt tại project/checkpoint owner, không append raw log vào file này.
