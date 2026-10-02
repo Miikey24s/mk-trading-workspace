@@ -1,6 +1,10 @@
 # Current context — routing sống của TradingWorkspace
 
-**Snapshot:** MT5 cập nhật 2026-10-02; các project khác giữ snapshot cleanup 2026-10-01. Đây là file điều hướng, không phải acceptance ledger và không thay runtime state.
+**Snapshot:** cập nhật execution liên project 2026-10-02. Đây là file điều hướng, không phải acceptance ledger và không thay runtime state. [Checkpoint đối chiếu PLAN](checkpoints/workspace-next-stage/ALL-PLAN-EXECUTION-20261002/CHECKPOINT.md) giữ requirement/evidence/gate và WIP.
+
+**Ưu tiên mới nhất của owner:** tập trung MT5; VI Dubber để sau, không mở thêm lane
+VI. Root tiếp quản WIP sau interruption; fresh agent inventory chỉ còn root.
+Continuation được chốt sau00:00+07 ngày03/10; folders giữ execution date02/10.
 
 ## Chuỗi đọc bắt buộc
 
@@ -30,12 +34,16 @@ Không đọc toàn archive để bắt đầu task. Archive chỉ mở để ki
 
 ## Trạng thái hiện tại đã xác minh
 
-- **MT5 WMREPLAY:** Dashboard/Sessions/chart/Trades/Analytics đã nối dữ liệu persisted; Analytics/CSV giữ đúng cursor lịch sử. Checkpoint backend `e97800c`, UI `d3456cd`; 95 backend tests + 3 subtests, 76 web tests, build pass, 108 route/axe/reflow cases và 42 native zoom cases. Luồng API/PostgreSQL thật dùng dữ liệu mô phỏng trong QA DB riêng; fixture và từng scope được ghi tại [integration checkpoint](../projects/mt5-tradingview-backtester/foundation_v2/evidence/wm-ui-integration-20261002/resume/CHECKPOINT.md). Chưa phải whole-product acceptance.
-- **MT5 open:** independent rubric review, canonical golden promotion, full-bleed promotion, manual WCAG và long-duration heap/frame vẫn mở. Long heap gate trước đó đã fail và chưa được short diagnostic đóng lại. Broker/provider/OAuth/upload/holdout/deploy/destructive work giữ owner gate.
+- **MT5 WMREPLAY:** `f11ddab` hoàn tất Journal/Data/Learn repair và promote đúng24 approved chart image hashes. Final UI source8205c89b… qua76web tests/build,144actual route/axe/reflow cases,32/32four-route và8/8chart comparisons. Comparator dùng maxDiffPixels0 với default perceptual threshold; exactbytes là guarantee của promotion copy. [Final UI receipt](../projects/mt5-tradingview-backtester/foundation_v2/evidence/wm-all-plan-20261002/ui-repair/CHECKPOINT.md) giữ failed attempts và exclusions. Real-course Learn10API/6readyUI/6loaded-chart journeys pass, course/progress hashes unchanged. Chưa whole-product acceptance.
+- **MT5 recovery/research:** U5b predeclared manual protective parity `b03304e`, U5a native feasibility `55add2e`, synthetic restore15checks `c418a07`, clean tracked-source Windows warm-cache setup `6265dc3`. Ledger/STATE r389 có37 tasks accepted ở scope đã đăng ký; các additions này không tự ledger-accept. U5a durable crash-state restore chưa đạt. Learn bridge đã accepted-scoped; QA404 là `learn_not_configured`, không là mất backend.
+- **MT5 heap:** `c26d425` giữ final receipt của Analytics fixture5.000rows, measured3.601.275ms/2.620iterations/61precise samples. Post-GC12,62→13,69MiB, delta1,0653MiB, DOMdelta0, zeroerrors/overflow: scoped one-hour PASS. Framep95=33,2ms không có verdict60Hz. Historicalcoarse-heapFAIL vẫn giữ; đây chưa là whole-chart performance. Manual UI/Learn remediation và whole U/Y/W gates xem checkpoint hiện tại.
 - **Job12/VI provider:** artifact-level completion không đồng nghĩa media QA. Current audit giữ `qa.passed=false`, `full_track_skipped=true`, `final_failed=122`; không `--fresh`, không xóa cache/receipt/lock, không đổi provider/model và không claim whole-pipeline.
-- **VI Dubber:** các P/M slices đã accepted chỉ đúng scope; P23 vẫn còn repeated whole-job/live-provider/whole-pipeline gates. Human listening và external/provider gates không được suy ra từ offline test.
-- **Quant:** ưu tiên offline data quality, provenance, PSI/OOD, cost stress và paper-soak fencing. Không mở live/execution.
-- **TradingAgents:** ưu tiên offline regression và atomic state publication. Không mở provider/API key/network nếu chưa có task riêng.
+- **VI Dubber — để sau:** `317ced9` chốt preview403/500 intent/retry, explicit Final/QA verdict và keyboard/contrast;22browser tests,30state captures/18axe scans không có violations. Không có independent final-r6 sign-off hoặc fullWCAG verdict. `af07c92` diagnostic143windows đã xong, canonical122QAfailures giữ nguyên; không inference resume hoặc mở M0-VI-ready/M5.
+- **MT5 U5b margin:** `544e422` opt-in replay-execution-v2, fixed original starting-balance admission tại next-open; v1 bytes/behavior giữ nguyên.166offline tests/23subtests, root35core/service pass với hashes không drift. [Margin receipt](../projects/mt5-tradingview-backtester/foundation_v2/evidence/U5B-replay-margin-v2-CHECKPOINT.md) giữ rollback-v2 limits; PostgreSQL integration/horizon/manual-no-signal/floating-path và fullU5 còn mở.
+- **MT5 chart states:** `d0267d5`, [bounded W8 receipt](../projects/mt5-tradingview-backtester/foundation_v2/evidence/wm-all-plan-20261002/chart-states/CHECKPOINT.md) giữ8/8cases ×5types, mixedOHLC/crosshair/wheel/pan/type-switch/Volume/SMA/history-reload trên2themes/4widths. UI source8205c89b… unchanged; root viewed7images, finalrawhashes equal. Independent approval/touch/pinch/manualWCAG/performance/fullW8 còn mở; canonical fixture/goldens không đổi.
+- **Quant:** imported paper-soak safety-field validation `c498399`,35focused/257full tests; actual30–60day soak/recovery/alerts còn mở. Không live/execution.
+- **TradingAgents:** HEAD `94e11a4`,133focused offline regression tests/socket denial; không mở provider/API key/network.
+- **BR-01:** `65b5eb6` đính chính H2 filter count từ stored events và cập nhật research pointers; reject/P&L giữ nguyên,2021 đã consumed as development. Không đổi learner progress hoặc mở2022/2025.
 - **Shared UI:** `annam-productivity` và Figma Make là accepted-scoped evidence; không coi đó là global theme/product-runtime acceptance.
 
 ## Quyết định sống
@@ -51,8 +59,8 @@ Không đọc toàn archive để bắt đầu task. Archive chỉ mở để ki
 ## Resume hiện tại
 
 1. Đọc `RESUME.md`, sau đó đọc đúng domain PLAN.
-2. MT5 tiếp tục từ integration checkpoint 2026-10-02 và execution ledger hiện có: review độc lập/golden rồi xử lý heap dài hạn theo triage. Chạy lại route matrix khi có source change; không suy acceptance toàn sản phẩm từ các packet đã pass.
-3. VI chỉ tiếp tục bounded offline correctness/harness repair; provider/media rerun cần owner gate.
+2. MT5 margin đã commit `544e422`; W8 mixedOHLC/all5types/mousegestures đã scopedPASS. Tiếp independent visual review/touch-keyboard/chartlong-session hoặc remainingU5 gaps theo dependencies; giữ fixture/goldens/ledger. Scoped Vite5186PID18572/tool34774 đã teardown sau exactcommandcheck; fresh listeners5180/5186/8020/8030 absent. Không restart/reseed backend.
+3. VI UI-state audit đã commit `317ced9`, diagnostic143/143 đã xong. Owner ưu tiên MT5; để VI lại sau và giữ provider/TTS/rerender/human gates.
 4. Quant/TradingAgents giữ offline regression và evidence; không mở external authority.
 5. Mỗi worker ghi receipt tại project/checkpoint owner, không append raw log vào file này.
 

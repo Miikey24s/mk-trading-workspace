@@ -1,5 +1,28 @@
 # Execution Resume
 
+## Current reconciliation — 2026-10-02
+
+Fresh read-only inspection confirms `ledger.sqlite3` and its exported STATE both have revision **389**, with **37 registered tasks accepted** at their recorded scope. Latest acceptance is PS-03 report/CSV remediation. Owner generation 4 and locator `codex-native2-workspace-next-stage-20260926` are retained as historical ledger metadata; no takeover or new acceptance mutation was performed. The dated r295/r310 narrative below is history and must not schedule already accepted PS-02, U5c wiring/stress or U3c context work again.
+
+Current implementation/evidence is routed from [workspace RESUME](../../../../checkpoints/workspace-next-stage/RESUME.md). Since that ledger's last event, the repo has advanced with bounded connectors, chart/offline AI and WMREPLAY persisted integration. Their project receipts remain scoped evidence; this reconciliation does not retroactively ledger-accept or close U/Y milestones.
+
+Latest verified additions in this execution: U5b completed manual protective trades compared with reference and primary Nautilus (92 tests +20 subtests; `b03304e`); WMREPLAY accessible names/alignment and actual 144-case scan (`e62638a`); exact 56 independently reviewed Dashboard/Sessions/Trades/Analytics golden baselines (`8bde8fe`); current-schema synthetic replay/branch/drawing/analytics restore (15 checks, `c418a07`). Project receipt root: `foundation_v2/evidence/wm-all-plan-20261002/`. Historical failures and untracked prior evidence are preserved.
+
+Further additions: exact24 independently reviewed chart images/comparison8of8 (`295b466`); clean tracked-source Windows warm-cache setup76web+44backend tests (`6265dc3`); native streaming/resume feasibility (`55add2e`); U5b sequential protective/no-order/overlap/causal-prefix fixtures (`c98fef6`, combined106tests+20subtests). The same-process native output matches one-shot, but whole-engine crash-state restore remains unsupported by demonstrated public APIs. A live cursor or input stream is not durable resume. That U5b receipt exposes legacy margin divergence (research skips/replay fills); opt-in v2 closes declared-order admission as documented below, while legacy semantics remain unchanged. Persisted manual no-signal audit, horizon close and canonical floating-path equivalence remain missing. These additions do not mutate ledger acceptance.
+
+Precise one-hour Analytics fixture heap completed in `c26d425`: measured3,601,275ms/2,620iterations/61samples, post-GC delta1.0653MiB, DOMdelta0, noerrors/overflow. Source71373c3a… was unchanged during sampling. Historical coarse-heapFAIL remains preserved; p95frame33.2ms is not a60Hz verdict or whole-chart acceptance. Heap producer exited20:46:15+07; do not resume or duplicate it.
+
+Journal/Data/Learn repair and24approvedchartimage promotion finished in `f11ddab`, UI source8205c89b…. Validation:76web/build,144actual route/axe/reflow,32four-route/8chart comparisons, Learn10API/6readyUI/6loadedchart journeys; course/progress unchanged. Comparator maxDiffPixels0 keeps the default perceptual threshold; exactbytes refer to approved image copy. See `foundation_v2/evidence/wm-all-plan-20261002/ui-repair/CHECKPOINT.md` for failed attempts and read-only service resume.
+
+U5b margin v2 is reviewed/committed in `544e422`: explicit opt-in, next-open admission against original starting balance, versioned rejection/readers/Prop/fork; exact v1 bytes/behavior remain unchanged.166offline tests/23subtests and root35core/service checks pass with no source drift. See `foundation_v2/evidence/U5B-replay-margin-v2-CHECKPOINT.md` for contract, oracle, no-DB scope and rollback limits. Horizon/manual-no-signal/canonical floating-path remain open.
+
+Owner now prioritizes MT5 and defers VI. Only root remains after interruption. Bounded mixedOHLC/all5types/wheel-pan/type-switch/Volume/SMA/history renderer QA passed8/8, source8205c89b… unchanged; root reviewed7final byte-equal images. Receipt: `foundation_v2/evidence/wm-all-plan-20261002/chart-states/CHECKPOINT.md`. Synthetic scope does not replace independent visual approval/touch/pinch/keyboard-only/performance. Scoped Vite5186 torn down after exact process check; fresh listeners5180/5186/8020/8030 absent, no API/DB/reseed. Final continuation crossed00:00+07 on03/10; parent folder retains02/10.
+
+PS-02 broader D15 quality coverage, Y25/Y26, manual WCAG/whole-chart performance, licensed data/OOS, provider, broker, Miro and deployment remain separate. New scoped proof does not change ledger acceptance. Workspace checkpoint routes current evidence and verification.
+
+## Historical execution checkpoints
+
+
 Updated 2026-09-25. Operational task state belongs to `ledger.sqlite3` and its
 controller-generated `STATE.json`, not to the historical master-plan snapshots.
 
@@ -332,7 +355,7 @@ Next safe PS-02 slice is lifecycle commands and multi-phase reset/carry behavior
 of this canonical ledger, with execution rewind/checkpoint reconstruction and broader
 D15 intrabar/cross-asset/calendar coverage still explicit follow-ups before full PS-02.
 
-## Still Open
+## Historical open list at r310 — use current reconciliation above
 
 - Remaining U5a: true mid-computation resume from an internal engine cursor/state;
   broader multi-instance capacity validation. Runtime duration is still supervised
