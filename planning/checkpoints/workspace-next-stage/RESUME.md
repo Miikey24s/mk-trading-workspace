@@ -44,6 +44,10 @@ Không API/DB/reseed và không suy old service receipts thành liveness.
 
 - Owner browser-feedback follow-up `a7616e2` removes the resume card/background/left accent and generic heading; actual session is h1, refresh becomes44pxaccessible icon. [Flat Dashboard receipt](../../../projects/mt5-tradingview-backtester/foundation_v2/evidence/ui-dashboard-flat-20261003/CHECKPOINT.md):79unit/build,8overviewaxe/reflow, focused fixture+realcursor60reload/Analytics journeys and4independent visual/theme cases PASS. Source/state semantics unchanged; first real API timeout and successful unchanged-source retry retained.
 
+### Dashboard pattern trial requested by owner
+
+- MT5 `2137918` trials the approved direction on Dashboard only: compact session scope/continuation, four selected-session metrics, dominant cumulative closed-trade P/L chart and three recent rows; Sessions owns full management and Analytics owns detailed date filters. Header/aside icon centers align within1CSSpx, including expanded/collapsed resting states; full branding remains. [Checkpoint](../../../projects/mt5-tradingview-backtester/foundation_v2/evidence/ui-dashboard-pattern-20261003/CHECKPOINT.md) records80webtests/build79modules, fixture+real60trade/net75USD/replay61candle/date-filter journeys,8controls/2drawer/11management regressions,144routeaxe/reflow and6nativezoom cases PASS, plus independent8real/9state checks. Source`05000d3a…`stable. Failed harness/default-origin/mixed-source attempts retained separately. UI5180/API8020 remain read-only; no ledger/STATE/golden/shared-system promotion. Await owner feedback on the trial before migrating other page layouts; whole product remains incomplete.
+
 ### VI Dubber / Job12
 
 - The latest retained Job12 artifact is complete at job-state level but not accepted for full media QA: `qa.passed=false`, `full_track_skipped=true`, `global_passed=null`, `final_failed=122`.
