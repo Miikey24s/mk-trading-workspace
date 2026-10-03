@@ -42,6 +42,8 @@ Không API/DB/reseed và không suy old service receipts thành liveness.
 - Broker, provider, OAuth, secret, paid service, upload, holdout, deploy and destructive actions remain owner-gated.
 - Re-run the route matrix after any future UI source change. Do not promote fixture evidence to whole-product acceptance.
 
+- Owner browser-feedback follow-up `a7616e2` removes the resume card/background/left accent and generic heading; actual session is h1, refresh becomes44pxaccessible icon. [Flat Dashboard receipt](../../../projects/mt5-tradingview-backtester/foundation_v2/evidence/ui-dashboard-flat-20261003/CHECKPOINT.md):79unit/build,8overviewaxe/reflow, focused fixture+realcursor60reload/Analytics journeys and4independent visual/theme cases PASS. Source/state semantics unchanged; first real API timeout and successful unchanged-source retry retained.
+
 ### VI Dubber / Job12
 
 - The latest retained Job12 artifact is complete at job-state level but not accepted for full media QA: `qa.passed=false`, `full_track_skipped=true`, `global_passed=null`, `final_failed=122`.
