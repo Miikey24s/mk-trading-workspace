@@ -97,7 +97,7 @@ Không API/DB/reseed và không suy old service receipts thành liveness.
 
 ## Next safe actions
 
-1. MT5: owner-reported UI controls repair committed `84fe411` with scoped independent/interaction/144route acceptance; refresh/review canonical header goldens separately if pursuing pixel acceptance. Margin v2 reviewed/committed `544e422`; mixedOHLC/all5types/wheel-pan/type-switch renderer QA finished8/8. Next ready work is independent chart-variant visual review, bounded touch/keyboard checks or remainingU5 horizon/no-signal/floating gaps after contract review. Keep synthetic evidence separate from backend/manualWCAG/whole-chart performance; canonicalfixture/goldens/ledger unchanged.
+1. MT5: latest owner-requested Trades/Analytics and reload/title cleanup is committed below. Continue from that report contract, preserve completed Dashboard/Sessions and review owner feedback without rerunning successful checks absent new changes. Independent chart-variant/touch checks and remainingU5 horizon/no-signal/floating gaps still need their own contract/evidence; canonicalfixture/goldens/ledger unchanged.
 2. MT5: final Analytics heap receipt is recorded in `c26d425`; do not duplicate the completed job. Retain historical failure, full-chart/frame, manual WCAG and whole-product gates. Do not repeat successful suites without a new change or concrete risk.
 3. VI: owner deferred new work; retain completed `317ced9` UI audit and `af07c92` diagnostic. No inference resume. Provider/translation/TTS/rerender, memory and human acceptance retain their gates.
 4. Quant/TradingAgents: keep offline regression/evidence and do not open external authority.
@@ -110,3 +110,20 @@ Không API/DB/reseed và không suy old service receipts thành liveness.
 - If a task is interrupted, resume from this file plus the project ledger/receipt; do not infer completion from folder existence or chat history.
 
 The pre-cleanup full resume is preserved at `../../archive/2026-10-01-cleanup/planning__checkpoints__workspace-next-stage__RESUME.md`; its SHA-256 is recorded in `../../archive/2026-10-01-cleanup/ORIGINAL-BYTES-MANIFEST.json`.
+
+## FX Replay Trades and dual Analytics — owner request04/10/2026
+
+MT5 `3efa158` adds read-only SL/RR/observed-excursion experiments and exact Analytics event cutoffs;
+`a80483a` rebuilds Trades and Sessions/Prop Analytics with Performance/Drawdown/Simulation,
+filters/search/columns/pages/detail/CSV/local seeded Monte Carlo, removing manual reload actions
+and repeated visible page titles. [Product checkpoint](../../../projects/mt5-tradingview-backtester/foundation_v2/evidence/ui-fx-analytics-20261004/CHECKPOINT.md)
+owns the behavior/data/tradeoffs/evidence and [independent review](../../../projects/mt5-tradingview-backtester/foundation_v2/evidence/ui-fx-analytics-20261004/REVIEW.md)
+keeps scoped findings, repaired contrast/tokens/tablet readability and failed probes explicit.
+
+Final UI hash`f53c7208…` stable across24actual GET-only journeys and12native zoom cases.89web/83Python
+tests and91modulebuild PASS;13labeled state/historical,17Sessions regression and11management-fixture
+checks PASS. Actual isolated QA data is60closed trades/net75USD, historicalcursor20/event60 is20/25;
+Prop reports are actually empty, and challenge/report binding evidence remains fixture-scoped.
+No real MT5 account data, broker/provider writes, DB migration/reseed, goldens or ledger/STATE promotion.
+Preview UI5180PID18400/API8020PID6004 (GET-only adapter/isolatedDB); recheck PIDs on resume.
+Whole-product acceptance and the earlier separate gates remain open; VI remains deferred.
