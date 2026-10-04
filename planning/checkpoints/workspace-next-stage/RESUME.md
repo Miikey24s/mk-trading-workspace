@@ -127,3 +127,9 @@ Prop reports are actually empty, and challenge/report binding evidence remains f
 No real MT5 account data, broker/provider writes, DB migration/reseed, goldens or ledger/STATE promotion.
 Preview UI5180PID18400/API8020PID6004 (GET-only adapter/isolatedDB); recheck PIDs on resume.
 Whole-product acceptance and the earlier separate gates remain open; VI remains deferred.
+
+Owner's header correction04/10: Dashboard restored24px separation; Analytics Sessions/Prop firm
+now belongs to nested shell navigation beside the primary tabs (second row below760px), with
+header shrink/clipping and Prop attempt URL preservation repaired. [Focused header checkpoint](../../../projects/mt5-tradingview-backtester/foundation_v2/evidence/ui-workspace-header-20261004/CHECKPOINT.md)
+keeps89unit/build,36actual loaded-header/navigation cases,12native zoom and independent8+4cases,
+final hash`cff018bb…`, retained findings/source-drift failure and unchanged backend/data boundaries.
