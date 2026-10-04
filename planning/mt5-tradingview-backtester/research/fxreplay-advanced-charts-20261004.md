@@ -1,6 +1,6 @@
 # FX Replay Alpha and Advanced Charts integration decision — 04/10/2026
 
-Owner direction: use FX Replay's Alpha chart if an official integration is available; otherwise migrate WMReplay to TradingView Advanced Charts. This authorizes the engine direction, not a new vendor license, account or publication.
+Owner direction: use FX Replay's Alpha chart if an official integration is available; otherwise migrate WMReplay to TradingView Advanced Charts. On 04/10/2026 the owner explicitly confirmed "đã được cấp quyền rồi" for this project and authorized using the existing local distribution. The integration proceeds on that confirmation; it does not authorize publication or a vendor version upgrade.
 
 ## Verified evidence
 
@@ -14,7 +14,7 @@ Owner direction: use FX Replay's Alpha chart if an official integration is avail
 
 ## Concrete migration contract
 
-Use Advanced Charts as the native drawing/indicator/settings surface once the owner confirms a valid grant for this project or supplies an authorized distribution. Keep the existing session catalog, simulation ledger and API as the data/state owners.
+Use the authorized local Advanced Charts v23.040 as the native drawing/indicator/settings surface. Keep the existing session catalog, simulation ledger and API as the data/state owners.
 
 1. Serve the authorized local distribution through an explicit local asset path in Vite development and the supported preview/build deployment. Do not commit vendor files or rely on FX Replay/CDN hotlinks. Verify the granted version rather than silently updating v23.
 2. Connect a Datafeed adapter to the registered dataset and `visible_rows` only. `resolveSymbol` derives precision/tick/session/timezone metadata from the actual instrument; `getBars` must never return candles after the selected cutoff. Cache and subscription generations must be scoped by workspace/session/dataset/resolution/cutoff. Reset chart caches on rewind/scope changes, not just forward updates.
@@ -23,4 +23,4 @@ Use Advanced Charts as the native drawing/indicator/settings surface once the ow
 5. Retain expected revision, target identity, historical locks, next-bar fills and protection-change semantics. Check the authorized edition/version's order/position line APIs before choosing native trading lines; Advanced Charts and Trading Platform capabilities are not interchangeable. Never imply a broker order was sent.
 6. Accept only after native drawings/indicators/settings and actual replay journeys pass: canonical versus historical cutoff, forward/back/reset, reload/save, switch session/resolution/theme, precision, TP/SL amendments/conflicts, desktop/mobile and accessibility. Preserve the current chart as a reversible rollback until these checks pass.
 
-Current outcome: engine direction is approved and the integration boundary is identified. Running/publishing the proprietary library awaits permission evidence for this exact project. No product runtime or canonical acceptance state changed. The existing UI5180/API8020 read-only preview remains the current implementation.
+Current outcome: the owner has confirmed access rights for this project. Product commit `100bbd3` runs the local integration at UI5180 with the existing GET-only API8020 preview. Implementation, independent acceptance and remaining vendor contrast limits are recorded in [the Advanced Charts checkpoint](../../../projects/mt5-tradingview-backtester/foundation_v2/evidence/ui-advanced-chart-20261004/CHECKPOINT.md). This research note does not grant public distribution or mark U4/the product complete.
