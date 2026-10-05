@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "name": "annam-productivity",
+  "version": "1.0.0",
+  "sourceDecision": "TradingWorkspace M2 lan4 productivity semantic roles",
+  "modes": {
+    "light": {
+      "file": "light.tokens.json",
+      "selector": ":root"
+    },
+    "dark": {
+      "file": "dark.tokens.json",
+      "selector": ".dark, .ui-theme-dark"
+    }
+  },
+  "cssVariables": {
+    "color.background": "--ui-bg",
+    "color.surface": "--ui-surface",
+    "color.surface2": "--ui-surface-2",
+    "color.surfaceHover": "--ui-surface-hover",
+    "color.text": "--ui-text",
+    "color.textSoft": "--ui-text-soft",
+    "color.muted": "--ui-muted",
+    "color.border": "--ui-border",
+    "color.borderStrong": "--ui-border-strong",
+    "color.accent": "--ui-accent",
+    "color.accentForeground": "--ui-accent-fg",
+    "color.selected": "--ui-selected",
+    "color.selectedSoft": "--ui-selected-soft",
+    "color.focus": "--ui-focus",
+    "color.success": "--ui-success",
+    "color.warning": "--ui-warning",
+    "color.warningText": "--ui-warning-text",
+    "color.error": "--ui-error",
+    "color.unknown": "--ui-unknown",
+    "button.accentBackground": "--ui-btn-accent-bg",
+    "button.accentForeground": "--ui-btn-accent-fg",
+    "button.successBackground": "--ui-btn-success-bg",
+    "button.successForeground": "--ui-btn-success-fg"
+  },
+  "components": [
+    {
+      "name": "button",
+      "version": "1.0.0",
+      "contractFile": "../../../../components/button/1.0.0/CONTRACT.md",
+      "styleFile": "../../../../components/button/1.0.0/button.css"
+    }
+  ]
+}

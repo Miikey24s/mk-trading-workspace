@@ -3,7 +3,7 @@
   "domain": "trading",
   "version": "0.1.0-dev",
   "status": "foundation",
-  "globalPlatform": "D:\\ANNAM\\UI-Systems",
+  "globalPlatform": "../UI-Systems",
   "supportedSystemFamilies": [],
   "pilotProjects": [
     "mt5-tradingview-backtester"

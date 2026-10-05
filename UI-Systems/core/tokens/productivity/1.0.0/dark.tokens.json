@@ -1,0 +1,31 @@
+{
+  "color": {
+    "$type": "color",
+    "background": { "$value": "#0a0e17" },
+    "surface": { "$value": "#111725" },
+    "surface2": { "$value": "#161d2d" },
+    "surfaceHover": { "$value": "#1b2334" },
+    "text": { "$value": "#e8edf5" },
+    "textSoft": { "$value": "#c3ccdb" },
+    "muted": { "$value": "#8b98ad" },
+    "border": { "$value": "#232c3e" },
+    "borderStrong": { "$value": "#33405a" },
+    "accent": { "$value": "#3b82f6" },
+    "accentForeground": { "$value": "#ffffff" },
+    "selected": { "$value": "#3b82f6" },
+    "selectedSoft": { "$value": "#16233d" },
+    "focus": { "$value": "#60a5fa" },
+    "success": { "$value": "#22c55e" },
+    "warning": { "$value": "#f59e0b" },
+    "warningText": { "$value": "#fcd34d" },
+    "error": { "$value": "#f87171" },
+    "unknown": { "$value": "#8b98ad" }
+  },
+  "button": {
+    "$type": "color",
+    "accentBackground": { "$value": "#2563eb" },
+    "accentForeground": { "$value": "#ffffff" },
+    "successBackground": { "$value": "#15803d" },
+    "successForeground": { "$value": "#ffffff" }
+  }
+}

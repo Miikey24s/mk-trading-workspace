@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "name": "annam-productivity",
+  "version": "1.1.0",
+  "status": "candidate",
+  "baseVersion": "1.0.0",
+  "sourceDecision": "Additive semantic state roles for loading, freshness, certainty and permission-safe UI. Existing 1.0.0 values remain unchanged.",
+  "modes": {
+    "light": {
+      "file": "light.tokens.json",
+      "selector": ":root"
+    },
+    "dark": {
+      "file": "dark.tokens.json",
+      "selector": ".dark, .ui-theme-dark"
+    }
+  },
+  "cssVariables": {
+    "color.background": "--ui-bg",
+    "color.surface": "--ui-surface",
+    "color.surface2": "--ui-surface-2",
+    "color.surfaceHover": "--ui-surface-hover",
+    "color.text": "--ui-text",
+    "color.textSoft": "--ui-text-soft",
+    "color.muted": "--ui-muted",
+    "color.border": "--ui-border",
+    "color.borderStrong": "--ui-border-strong",
+    "color.accent": "--ui-accent",
+    "color.accentForeground": "--ui-accent-fg",
+    "color.selected": "--ui-selected",
+    "color.selectedSoft": "--ui-selected-soft",
+    "color.focus": "--ui-focus",
+    "color.success": "--ui-success",
+    "color.successText": "--ui-success-text",
+    "color.info": "--ui-info",
+    "color.infoText": "--ui-info-text",
+    "color.warning": "--ui-warning",
+    "color.warningText": "--ui-warning-text",
+    "color.stale": "--ui-stale",
+    "color.staleText": "--ui-stale-text",
+    "color.partial": "--ui-partial",
+    "color.partialText": "--ui-partial-text",
+    "color.error": "--ui-error",
+    "color.errorText": "--ui-error-text",
+    "color.denied": "--ui-denied",
+    "color.deniedText": "--ui-denied-text",
+    "color.unknown": "--ui-unknown",
+    "color.unknownText": "--ui-unknown-text",
+    "button.accentBackground": "--ui-btn-accent-bg",
+    "button.accentForeground": "--ui-btn-accent-fg",
+    "button.successBackground": "--ui-btn-success-bg",
+    "button.successForeground": "--ui-btn-success-fg"
+  },
+  "components": [
+    {
+      "name": "button",
+      "version": "1.0.0",
+      "contractFile": "../../../../components/button/1.0.0/CONTRACT.md",
+      "styleFile": "../../../../components/button/1.0.0/button.css"
+    }
+  ],
+  "contractRef": {
+    "path": "../../../contracts/presentation-state/1.0.0/CONTRACT.md",
+    "id": "annam.presentation-state",
+    "version": "1.0.0"
+  },
+  "focusedReceipt": {
+    "path": "workspace:planning/checkpoints/workspace-next-stage/UI-ECOSYSTEM-PRESENTATION-STATE-2026-09-28/receipt.json",
+    "schema": "ui-ecosystem-presentation-state-receipt/v1"
+  },
+  "migration": {
+    "backwardCompatible": true,
+    "consumerAction": "Opt in by pinning 1.1.0; do not mutate an existing 1.0.0 snapshot in place.",
+    "removedRoles": [],
+    "breakingBehavior": false
+  }
+}

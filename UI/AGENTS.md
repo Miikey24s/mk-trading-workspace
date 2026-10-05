@@ -5,7 +5,7 @@ This directory contains reusable trading-domain UI contracts. Parent instruction
 ## Scope
 
 - Keep trading semantics here: chart/replay controls, PnL/risk presentation, trading tables, analytical views, order/position/fill display contracts.
-- Keep generic controls and visual foundations in `D:\ANNAM\UI-Systems`.
+- Keep generic controls and visual foundations in `../UI-Systems/` (relative to this directory).
 - Keep project-only flows in the owning project repository.
 
 ## Safety semantics

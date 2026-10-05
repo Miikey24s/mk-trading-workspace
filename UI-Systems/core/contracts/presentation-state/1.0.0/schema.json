@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://annam.local/ui/presentation-state/1.0.0/schema.json",
+  "title": "ANNAM presentation state",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["availability"],
+  "properties": {
+    "availability": {
+      "type": "string",
+      "enum": ["loading", "ready", "empty", "unavailable", "error", "denied"]
+    },
+    "freshness": {
+      "type": "string",
+      "enum": ["current", "stale", "partial", "unknown"]
+    },
+    "certainty": {
+      "type": "string",
+      "enum": ["known", "uncertain", "unknown"]
+    },
+    "reasonCode": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ariaLabel": {
+      "type": "string",
+      "minLength": 1
+    },
+    "payload": {}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "availability": { "const": "ready" } },
+        "required": ["availability"]
+      },
+      "then": {
+        "required": ["freshness", "certainty"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "availability": { "enum": ["error", "denied"] } },
+        "required": ["availability"]
+      },
+      "then": {
+        "required": ["reasonCode"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "availability": { "enum": ["loading", "empty", "unavailable", "error", "denied"] } },
+        "required": ["availability"]
+      },
+      "then": {
+        "required": ["label"]
+      }
+    },
+    {
+      "if": {
+        "required": ["freshness"],
+        "properties": { "freshness": { "enum": ["stale", "partial", "unknown"] } }
+      },
+      "then": {
+        "required": ["label"]
+      }
+    }
+  ]
+}

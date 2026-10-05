@@ -239,7 +239,7 @@ async function validatePin({ pin, projectRoot, manifestRegistry, workspace, syst
   }
 }
 
-export async function auditUiRegistry({ workspace = DEFAULT_WORKSPACE, systemsRoot = path.resolve(workspace, '..', 'UI-Systems') } = {}) {
+export async function auditUiRegistry({ workspace = DEFAULT_WORKSPACE, systemsRoot = path.resolve(workspace, 'UI-Systems') } = {}) {
   const projectsRoot = path.join(workspace, 'projects')
   const configPaths = await walk(projectsRoot, (file, name) => name === 'project-ui.json' && path.basename(path.dirname(file)) === 'ui')
   const registry = await discoverManifests(systemsRoot)
@@ -296,7 +296,7 @@ function parseArgs(args) {
     else if (arg === '--help' || arg === '-h') options.help = true
     else throw new Error(`unknown argument: ${arg}`)
   }
-  if (!options.systemsRoot) options.systemsRoot = path.resolve(options.workspace, '..', 'UI-Systems')
+  if (!options.systemsRoot) options.systemsRoot = path.resolve(options.workspace, 'UI-Systems')
   return options
 }
 

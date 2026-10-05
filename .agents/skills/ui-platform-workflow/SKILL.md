@@ -13,7 +13,7 @@ For any task in `TradingWorkspace`:
 
 1. Read `D:\ANNAM\TradingWorkspace\AGENTS.md`.
 2. Read `D:\ANNAM\TradingWorkspace\planning\ui-platform\MASTER-UI-PLATFORM-PLAN.md` when the task changes workflow, architecture, reuse, scaling, or migration policy.
-3. Read `D:\ANNAM\UI-Systems\AGENTS.md` for global/shared changes.
+3. Read `UI-Systems/AGENTS.md` from the TradingWorkspace root for global/shared changes.
 4. Read `D:\ANNAM\TradingWorkspace\UI\AGENTS.md` for trading-domain shared changes.
 5. Read the target project's closest `AGENTS.md` and `ui/` contract/config.
 

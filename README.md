@@ -33,7 +33,8 @@ Workspace chưa được nghiệm thu như một sản phẩm thống nhất. MT
 | `projects/` | Bốn repo sản phẩm ở bảng trên. Các checkout UI và nghiệm thu cũ đã được gỡ; đường phục hồi nằm trong [checkpoint cleanup](planning/checkpoints/workspace-next-stage/CLEANUP-20261001/CHECKPOINT.md). |
 | `planning/` | PLAN, quyết định, checkpoint và bằng chứng; `archive/` giữ lịch sử để tra cứu. |
 | `education/` | Course, bài tập và tiến độ học. |
-| `UI/` | Hợp đồng UI đặc thù trading; xem [UI README](UI/README.md). Nền UI dùng chung nằm ngoài repo tại `D:\ANNAM\UI-Systems`. |
+| `UI-Systems/` | Nền UI dùng chung, tokens và công cụ export được lưu trực tiếp trong repo; xem [UI Systems](UI-Systems/README.md). |
+| `UI/` | Hợp đồng UI đặc thù trading; xem [UI README](UI/README.md). |
 | `tooling/` | [Agent workflow](tooling/agent-workflow/README.md), [UI QA](tooling/ui-qa/README.md), [run registry](tooling/run_registry/README.md). `reverse-skill/` là submodule tham khảo riêng. |
 | `miro/` | Tài liệu sơ đồ kiến trúc. |
 
@@ -52,6 +53,9 @@ git submodule update --init -- projects/mt5-tradingview-backtester projects/vi-d
 ```
 
 Lệnh trên lấy đúng bốn sản phẩm. Submodule `tooling/reverse-skill` là bộ tham khảo riêng, chỉ khởi tạo khi công việc cần đến. Fixture Git lịch sử đã được bỏ khỏi index và giữ local; nó không còn ảnh hưởng thao tác submodule.
+
+`UI-Systems/` được lấy cùng repo gốc, không cần khởi tạo thêm repo hoặc tải
+thư mục ngoài workspace. Kiểm tra các pins bằng `npm --prefix tooling/ui-qa run registry-check`.
 
 Với một checkout đã có, kiểm tra và lưu thay đổi local trước khi cập nhật. Sau khi pull repo gốc, chạy lại lệnh `git submodule update --init -- ...` ở trên để lấy đúng các mốc đã pin. Không tự chuyển tất cả repo con sang HEAD mới nhất bằng `--remote --merge`.
 

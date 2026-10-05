@@ -1,0 +1,6 @@
+# Existing consumer pins hash exact source bytes, including line endings.
+core/tokens/** -text
+components/** -text
+core/contracts/** -text
+# The deterministic exporter terminates snapshots with a blank line.
+core/tokens/**/ui-system.snapshot.css whitespace=-blank-at-eof

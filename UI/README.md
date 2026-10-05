@@ -3,12 +3,15 @@
 Shared trading-domain layer between the global ANNAM UI platform and individual trading projects.
 
 ```text
-D:\ANNAM\UI-Systems
+UI-Systems/ (workspace root)
         ↓
-D:\ANNAM\TradingWorkspace\UI
+UI/ (workspace root)
         ↓
 projects\<trading-project>\ui
 ```
+
+Shared foundations are tracked in [UI-Systems](../UI-Systems/README.md).
+`domain-ui.json.globalPlatform` resolves relative to this `UI/` directory.
 
 ## Owns
 

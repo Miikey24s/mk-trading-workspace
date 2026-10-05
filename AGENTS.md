@@ -36,7 +36,7 @@ Khi dạy đọc nến, mẫu hình, zone hoặc chú thích chart/replay, đọ
 
 ## UI platform / design system
 
-Khi làm UI exploration, design system, Stitch/Figma workflow, shared trading UI, visual QA hoặc migration UI giữa project, đọc `.agents/skills/ui-platform-workflow/SKILL.md`. Global foundations ở `D:\ANNAM\UI-Systems`, trading-domain UI ở `UI/`, project-specific UI ở `projects/<project>/ui/`; `planning/` chỉ giữ plan/quyết định/checkpoint.
+Khi làm UI exploration, design system, Stitch/Figma workflow, shared trading UI, visual QA hoặc migration UI giữa project, đọc `.agents/skills/ui-platform-workflow/SKILL.md`. Global foundations ở `UI-Systems/` trong repo, trading-domain UI ở `UI/`, project-specific UI ở `projects/<project>/ui/`; `planning/` chỉ giữ plan/quyết định/checkpoint.
 
 ## Các dự án / repository độc lập (Tầng 2 - `projects/`)
 

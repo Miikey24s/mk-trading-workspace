@@ -28,8 +28,13 @@ The checker does not migrate consumers, change token files, run a browser, or
 contact Figma, OAuth, providers, brokers, or external services. A non-zero
 exit means metadata, source/snapshot content, or candidate-promotion evidence
 drifted. Candidate contract and focused-receipt references are also bounded to
-the workspace or the owned `D:/ANNAM/UI-Systems` root; absolute paths and
+the workspace or the configured UI-Systems root; absolute paths and
 traversal outside those roots fail closed.
+
+The default token source is `UI-Systems/` inside this repository. It travels
+with a normal Git clone; `--systems-root` remains available for explicit fixture
+or external sources. Consumer pins and generated CSS do not change when the
+source directory moves.
 
 Từ TradingWorkspace (hoặc dùng đường dẫn tuyệt đối):
 

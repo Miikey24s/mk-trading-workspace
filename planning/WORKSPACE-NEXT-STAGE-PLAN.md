@@ -21,7 +21,7 @@ Kết luận chọn: **C — nền tối thiểu reuse → Make exploration nh�
 |---|---|
 | MT5 yêu cầu hiện tại | [Product Plan](mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md), [entrypoint](mt5-tradingview-backtester/EXECUTION-ENTRYPOINT.md) → operational ledger/STATE/receipts; [PATH-2 ADR](mt5-tradingview-backtester/FOUNDATION-ADR-0001-PATH2.md) |
 | VI baseline | [PLAN hiện tại](../projects/vi-dubber/PLAN.md), [README](../projects/vi-dubber/README.md), checkpoints; [UI-FIX-PLAN](../projects/vi-dubber/frontend/UI-FIX-PLAN.md) chỉ reuse requirements còn thiếu sau reconciliation |
-| UI foundation | [UI skill](../.agents/skills/ui-platform-workflow/SKILL.md), [master UI plan](ui-platform/MASTER-UI-PLATFORM-PLAN.md), `D:/ANNAM/UI-Systems` docs/contracts; [trading semantics](../UI/docs/TRADING-UI-CONTRACT.md) |
+| UI foundation | [UI skill](../.agents/skills/ui-platform-workflow/SKILL.md), [master UI plan](ui-platform/MASTER-UI-PLATFORM-PLAN.md), [UI-Systems](../UI-Systems/README.md) docs/contracts; [trading semantics](../UI/docs/TRADING-UI-CONTRACT.md) |
 | MT5 UI/Make acceptance | [UI autonomy/Figma/Prop](mt5-tradingview-backtester/UI-AUTONOMY-FIGMA-PROP-PLAN.md); reuse FM/PS/INT gates, không nghiệm thu lại phần đủ same-scope evidence |
 | Integrations | [brief](WORKSPACE-INTEGRATIONS-RESEARCH-DRAFT.md), research archive E1–E7 chỉ khi tới connector |
 | Tinh gọn/handoff | [CONTEXT-LIFECYCLE](CONTEXT-LIFECYCLE.md); complete khác compacted |

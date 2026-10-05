@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "platformVersion": "0.1.0-dev",
+  "status": "foundation",
+  "tokenFormat": "DTCG-compatible",
+  "systemFamilies": [],
+  "defaultSystemFamily": null,
+  "defaultTheme": null,
+  "migrationPolicy": "pinned-versions-with-reviewed-upgrades"
+}

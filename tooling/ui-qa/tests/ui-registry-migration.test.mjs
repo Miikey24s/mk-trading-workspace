@@ -7,7 +7,7 @@ import assert from 'node:assert/strict'
 import { auditUiRegistry } from '../ui-registry-check.mjs'
 
 const workspace = path.resolve(import.meta.dirname, '../../..')
-const systemsRoot = path.resolve(workspace, '..', 'UI-Systems')
+const systemsRoot = path.resolve(workspace, 'UI-Systems')
 function tokenLeaves(document, prefix = []) {
   const leaves = new Map()
   for (const [key, value] of Object.entries(document)) {
@@ -213,8 +213,9 @@ test('candidate manifest carries contract and focused receipt references', async
       }, null, 2),
     )
 
-    const report = await auditUiRegistry({ workspace: fixtureWorkspace, systemsRoot: fixtureSystemsRoot })
+    const report = await auditUiRegistry({ workspace: fixtureWorkspace })
     assert.equal(report.status, 'ok')
+    assert.equal(report.systemsRoot, fixtureSystemsRoot)
     assert.equal(report.summary.pinCount, 1)
     assert.equal(report.projects[0].sharedUiPins[0].version, '1.1.0')
   } finally {

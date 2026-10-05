@@ -28,7 +28,7 @@ Không đọc toàn archive để bắt đầu task. Archive chỉ mở để ki
 | MT5 runtime | Operational ledger/`STATE.json`/receipts được `EXECUTION-ENTRYPOINT.md` dẫn | Attempt state; không copy vào PLAN |
 | VI Dubber | `../projects/vi-dubber/PLAN.md` + source/tests/checkpoints | Product phase, contracts và acceptance |
 | Quant/TradingAgents | Project README/AGENTS/ledger riêng | Offline research/regression; không mở provider/broker |
-| Shared UI | `D:/ANNAM/UI-Systems/docs/` + accepted-scoped release receipt | Foundation/contracts; không suy release từ snapshot |
+| Shared UI | `UI-Systems/docs/` tại workspace root + accepted-scoped release receipt | Foundation/contracts; không suy release từ snapshot |
 
 `CONTEXT-LIFECYCLE.md` là policy về authority, compact, archive và resume-read test. Không tạo ledger hoặc master PLAN thứ hai.
 
@@ -51,7 +51,7 @@ Không đọc toàn archive để bắt đầu task. Archive chỉ mở để ki
 - **Execution override đã ghi nhận 27/09/2026:** trong phiên được giao chạy `WORKSPACE-NEXT-STAGE-PLAN.md`, owner cho phép làm song song vượt cap 3 children; runtime khi đó resolve `ch/linxaq` thành GPT-6 Astra `ultra`, dùng host pool trong trần cấu hình. Giữ override khi tiếp nối đúng execution đó; kiểm tra runtime thực tế, không tự sửa global config. Đây không phải model/cap mặc định cho task cleanup hoặc một lần giao plan mới.
 - Reuse → adapt → shared khi có nhiều consumer thật và rollback rõ; không thêm framework chỉ vì có thư mục foundation.
 - PATH-2 MT5 vẫn là foundation authority; không quay lại legacy Flask làm nguồn chính.
-- UI global ở `D:/ANNAM/UI-Systems`; trading UI ở `UI/` và MT5; media UI ở VI Dubber.
+- UI global ở `UI-Systems/` trong repo; trading UI ở `UI/` và MT5; media UI ở VI Dubber. [Checkpoint chuyển thư mục](checkpoints/ui-systems-relocation-20261005/CHECKPOINT.md) giữ bằng chứng; đường dẫn D: cũ trong receipts/archive là lịch sử.
 - TypeSafe/Jev chỉ là typed advisory judgment; không sở hữu arithmetic, fills, risk, ledger hoặc execution.
 - Provider, broker, wallet, OAuth, holdout, public upload, paid service, deploy và destructive cleanup đều fail-closed.
 - Các plan frontier, SaaS/multiuser, distributed compute, AI factory, SDK expansion và cloud connector là future reference; không thuộc execution hiện tại.

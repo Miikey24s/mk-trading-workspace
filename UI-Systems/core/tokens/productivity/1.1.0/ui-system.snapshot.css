@@ -1,0 +1,105 @@
+/* annam-ui: annam-productivity@1.1.0; source-sha256: 22d2dce8c790f9fbe5be7bb4674949a77440d61db44278a4d5c257d82ef9f564; generated: deterministic */
+
+:root {
+  --ui-bg: #f6f7f9;
+  --ui-surface: #ffffff;
+  --ui-surface-2: #f1f5f9;
+  --ui-surface-hover: #eef2f7;
+  --ui-text: #0f172a;
+  --ui-text-soft: #334155;
+  --ui-muted: #64748b;
+  --ui-border: #e2e8f0;
+  --ui-border-strong: #cbd5e1;
+  --ui-accent: #2563eb;
+  --ui-accent-fg: #ffffff;
+  --ui-selected: #2563eb;
+  --ui-selected-soft: #eff6ff;
+  --ui-focus: #2563eb;
+  --ui-success: #16a34a;
+  --ui-success-text: #166534;
+  --ui-info: #2563eb;
+  --ui-info-text: #1d4ed8;
+  --ui-warning: #d97706;
+  --ui-warning-text: #92400e;
+  --ui-stale: #b45309;
+  --ui-stale-text: #92400e;
+  --ui-partial: #7c3aed;
+  --ui-partial-text: #6d28d9;
+  --ui-error: #dc2626;
+  --ui-error-text: #b91c1c;
+  --ui-denied: #b91c1c;
+  --ui-denied-text: #991b1b;
+  --ui-unknown: #64748b;
+  --ui-unknown-text: #475569;
+  --ui-btn-accent-bg: #2563eb;
+  --ui-btn-accent-fg: #ffffff;
+  --ui-btn-success-bg: #15803d;
+  --ui-btn-success-fg: #ffffff;
+}
+
+.dark, .ui-theme-dark {
+  --ui-bg: #0a0e17;
+  --ui-surface: #111725;
+  --ui-surface-2: #161d2d;
+  --ui-surface-hover: #1b2334;
+  --ui-text: #e8edf5;
+  --ui-text-soft: #c3ccdb;
+  --ui-muted: #8b98ad;
+  --ui-border: #232c3e;
+  --ui-border-strong: #33405a;
+  --ui-accent: #3b82f6;
+  --ui-accent-fg: #ffffff;
+  --ui-selected: #3b82f6;
+  --ui-selected-soft: #16233d;
+  --ui-focus: #60a5fa;
+  --ui-success: #22c55e;
+  --ui-success-text: #86efac;
+  --ui-info: #60a5fa;
+  --ui-info-text: #bfdbfe;
+  --ui-warning: #f59e0b;
+  --ui-warning-text: #fcd34d;
+  --ui-stale: #fbbf24;
+  --ui-stale-text: #fde68a;
+  --ui-partial: #c4b5fd;
+  --ui-partial-text: #ddd6fe;
+  --ui-error: #f87171;
+  --ui-error-text: #fecaca;
+  --ui-denied: #fb7185;
+  --ui-denied-text: #fecdd3;
+  --ui-unknown: #8b98ad;
+  --ui-unknown-text: #c3ccdb;
+  --ui-btn-accent-bg: #2563eb;
+  --ui-btn-accent-fg: #ffffff;
+  --ui-btn-success-bg: #15803d;
+  --ui-btn-success-fg: #ffffff;
+}
+
+.ui-button {
+  border: 1px solid var(--ui-border-strong);
+  border-radius: 4px;
+  background: var(--ui-surface-2);
+  color: var(--ui-text);
+  cursor: pointer;
+}
+
+.ui-button:hover:not(:disabled) {
+  border-color: var(--ui-border-strong);
+  background: var(--ui-surface-hover);
+}
+
+.ui-button:focus-visible {
+  outline: 2px solid var(--ui-focus);
+  outline-offset: 2px;
+}
+
+.ui-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.ui-button--primary {
+  border-color: var(--ui-btn-accent-bg);
+  background: var(--ui-btn-accent-bg);
+  color: var(--ui-btn-accent-fg);
+}
+

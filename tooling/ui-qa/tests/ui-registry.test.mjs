@@ -8,9 +8,9 @@ import { auditUiRegistry } from '../ui-registry-check.mjs'
 test('audits every consumer and reports bounded partial adoption', async () => {
   const report = await auditUiRegistry({
     workspace: path.resolve(import.meta.dirname, '../../..'),
-    systemsRoot: 'D:/ANNAM/UI-Systems',
   })
   assert.equal(report.status, 'ok')
+  assert.equal(report.systemsRoot, path.resolve(import.meta.dirname, '../../../UI-Systems'))
   assert.equal(report.summary.pinCount, 2)
   assert.equal(report.summary.partialProjects, 2)
   const pinned = report.projects

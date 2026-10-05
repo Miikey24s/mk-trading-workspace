@@ -6,7 +6,7 @@
 
 - Cross-project UI handoff: `../WORKSPACE-NEXT-STAGE-PLAN.md`.
 - MT5 product/UI acceptance: `../mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md` and `../mt5-tradingview-backtester/WMREPLAY-UI-MASTER-PLAN.md`.
-- Shared UI foundation/contracts: `D:/ANNAM/UI-Systems/docs/` and accepted-scoped release receipts.
+- Shared UI foundation/contracts: [UI-Systems docs](../../UI-Systems/docs/ARCHITECTURE.md) in this repo and accepted-scoped release receipts.
 - VI media UI remains owned by `projects/vi-dubber`; do not move media concerns into trading UI.
 
 ## Closed exploration decision
@@ -24,7 +24,7 @@ Do not create more candidates or Make rounds for the closed skeleton unless a ne
 
 ## Layer ownership
 
-- Global/product-agnostic tokens and contracts: `D:/ANNAM/UI-Systems`.
+- Global/product-agnostic tokens and contracts: `UI-Systems/` at the workspace root.
 - Trading-domain UI and WMREPLAY: `projects/mt5-tradingview-backtester` plus its planning authority.
 - Media UI: `projects/vi-dubber`.
 - Agent review must preserve state, data, accessibility, stale/error/permission behavior and rollback. UI evidence never grants broker/provider/OAuth/deploy authority.
