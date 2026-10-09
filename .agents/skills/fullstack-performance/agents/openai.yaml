@@ -1,0 +1,4 @@
+interface:
+  display_name: "Full-stack Performance"
+  short_description: "Measure UI, API and database bottlenecks fairly"
+  default_prompt: "Use $fullstack-performance to measure this slow journey and compare the smallest effective optimization."
