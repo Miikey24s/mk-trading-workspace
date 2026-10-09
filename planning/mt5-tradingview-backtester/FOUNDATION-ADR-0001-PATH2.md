@@ -20,7 +20,9 @@ Initial target: React/Vite/Lightweight Charts client, Python 3.12 + FastAPI cont
 API target revision, 09/10/2026: the owner explicitly authorized selecting and
 replacing the API technology during development. After an isolated seven-stack
 comparison, the selected control/API target is Rust/Axum, with Python retained
-for research/backtest/provider workers. See the product's
+for research/backtest/provider workers. The owner subsequently confirmed this
+selection and requested the operational gap audit. Queue, storage, observability,
+resource budgets and recovery requirements are included in the product's
 [API platform decision](../../projects/mt5-tradingview-backtester/foundation_v2/docs/API-STACK-DECISION-20261009.md)
 and [measurement receipt](../../projects/mt5-tradingview-backtester/foundation_v2/evidence/api-stack-comparison-20261009/RECEIPT.md).
 The current product still runs FastAPI; no runtime migration is accepted by this
