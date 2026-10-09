@@ -17,6 +17,15 @@ The legacy Flask/SQLite composition is not the new authority and is not wrapped 
 
 Initial target: React/Vite/Lightweight Charts client, Python 3.12 + FastAPI control boundary, PostgreSQL transactional metadata, immutable Parquet/Arrow artifacts with DuckDB analytical access, bounded research workers, NautilusTrader behind an adapter where its tested semantics apply, and one isolated execution authority/gateway when separately authorized.
 
+API target revision, 09/10/2026: the owner explicitly authorized selecting and
+replacing the API technology during development. After an isolated seven-stack
+comparison, the selected control/API target is Rust/Axum, with Python retained
+for research/backtest/provider workers. See the product's
+[API platform decision](../../projects/mt5-tradingview-backtester/foundation_v2/docs/API-STACK-DECISION-20261009.md)
+and [measurement receipt](../../projects/mt5-tradingview-backtester/foundation_v2/evidence/api-stack-comparison-20261009/RECEIPT.md).
+The current product still runs FastAPI; no runtime migration is accepted by this
+revision. PATH-2's domain/storage/authority boundaries and other gates remain.
+
 ## Rejected options
 
 - PATH-1: rejected because the measured legacy closure requires broad request/storage/authority refactoring before it matches the target boundaries.
