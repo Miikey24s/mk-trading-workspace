@@ -3,6 +3,7 @@ import { readdir, readFile, stat } from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
+import { cssTokenValue } from '../../UI-Systems/tooling/tokens/css-value.mjs'
 
 const DEFAULT_WORKSPACE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 
@@ -91,16 +92,10 @@ async function readSourceGraph(manifestPath) {
   return { manifest, manifestDir, modes, components, sourceSha256: sourceHash.digest('hex') }
 }
 
-function tokenValue(document, tokenPath) {
-  const node = tokenPath.split('.').reduce((current, key) => current?.[key], document)
-  if (!node || typeof node.$value !== 'string') throw new Error(`missing string token: ${tokenPath}`)
-  return node.$value
-}
-
 function renderSnapshot(graph) {
   const blocks = graph.modes.map(({ selector, document }) => {
     const modeDeclarations = Object.entries(graph.manifest.cssVariables || {})
-      .map(([tokenPath, cssVariable]) => `  ${cssVariable}: ${tokenValue(document, tokenPath)};`)
+      .map(([tokenPath, cssVariable]) => `  ${cssVariable}: ${cssTokenValue(document, tokenPath)};`)
       .join('\n')
     return `${selector} {\n${modeDeclarations}\n}`
   })

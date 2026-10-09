@@ -1,5 +1,10 @@
 # ANNAM UI Systems
 
+`annam-compact@0.1.0` is the opt-in compact foundation candidate first consumed
+by WMREPLAY. Its [contract](core/tokens/compact/0.1.0/CONTRACT.md) covers sizes,
+type, color roles, states, motion and layout defaults, including future controls.
+It does not upgrade other consumers or replace existing productivity pins.
+
 Reusable UI platform, tracked directly in the TradingWorkspace superproject.
 
 This is not one visual theme. It is a layered system that can host multiple UI families while sharing stable foundations, contracts, tooling, and migration rules.

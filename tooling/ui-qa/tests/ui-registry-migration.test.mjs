@@ -30,6 +30,11 @@ async function sha256File(filePath) {
 async function copyConsumerFixture(sourceProject, fixtureProject) {
   await mkdir(path.dirname(fixtureProject), { recursive: true })
   await cp(sourceProject, fixtureProject, { recursive: true })
+  // This fixture migrates productivity only; other systems have their own snapshots/evidence.
+  const configPath = path.join(fixtureProject, 'project-ui.json')
+  const config = JSON.parse(await readFile(configPath, 'utf8'))
+  config.sharedUiPins = config.sharedUiPins.filter(pin => pin.system === 'annam-productivity')
+  await writeFile(configPath, JSON.stringify(config, null, 2))
 }
 
 test('1.1.0 keeps existing token values compatible with 1.0.0', async () => {

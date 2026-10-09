@@ -11,11 +11,11 @@ test('audits every consumer and reports bounded partial adoption', async () => {
   })
   assert.equal(report.status, 'ok')
   assert.equal(report.systemsRoot, path.resolve(import.meta.dirname, '../../../UI-Systems'))
-  assert.equal(report.summary.pinCount, 2)
+  assert.equal(report.summary.pinCount, 3)
   assert.equal(report.summary.partialProjects, 2)
   const pinned = report.projects
     .flatMap(project => project.sharedUiPins.map(pin => ({ project: project.project, ...pin })))
-  assert.deepEqual(pinned.map(pin => pin.system), ['annam-productivity', 'annam-productivity'])
+  assert.deepEqual(pinned.map(pin => pin.system), ['annam-productivity', 'annam-compact', 'annam-productivity'])
   assert.ok(pinned.every(pin => pin.adoption === 'partial' && pin.scope.length > 0))
   assert.ok(pinned.every(pin => /^[a-f0-9]{64}$/.test(pin.snapshotSha256)))
 })

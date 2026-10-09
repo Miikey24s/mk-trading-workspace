@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto'
 import { readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
+import { cssTokenValue } from './css-value.mjs'
 
 function usage() {
   throw new Error('usage: node tooling/tokens/export-css.mjs <manifest.json> --out <snapshot.css>')
@@ -17,14 +18,6 @@ const manifestDir = path.dirname(manifestPath)
 const outputPath = path.resolve(args[outIndex + 1])
 const manifestRaw = await readFile(manifestPath)
 const manifest = JSON.parse(manifestRaw.toString('utf8'))
-
-function tokenValue(document, tokenPath) {
-  const node = tokenPath.split('.').reduce((current, key) => current?.[key], document)
-  if (!node || typeof node.$value !== 'string') {
-    throw new Error('missing string token: ' + tokenPath)
-  }
-  return node.$value
-}
 
 const sourceFiles = [{ relative: path.basename(manifestPath), raw: manifestRaw }]
 const modes = []
@@ -57,7 +50,7 @@ const sourceSha256 = hash.digest('hex')
 
 const blocks = modes.map(({ selector, document }) => {
   const declarations = Object.entries(manifest.cssVariables)
-    .map(([tokenPath, cssVariable]) => '  ' + cssVariable + ': ' + tokenValue(document, tokenPath) + ';')
+    .map(([tokenPath, cssVariable]) => '  ' + cssVariable + ': ' + cssTokenValue(document, tokenPath) + ';')
     .join('\n')
   return selector + ' {\n' + declarations + '\n}'
 })
