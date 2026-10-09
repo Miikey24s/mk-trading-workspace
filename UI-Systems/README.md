@@ -63,3 +63,7 @@ not approve a whole-app theme or promote domain UI into this directory.
 opt-in until its contract, focused state/keyboard/theme evidence, and an
 explicit consumer migration are reviewed. Existing consumers remain pinned to
 `1.0.0` until that migration is complete.
+
+`annam-compact@0.1.1` retains the0.1.0 baseline and provides a scoped WMREPLAY
+follow-up: neutral selected rows, blue toggles and contracts for dependent data
+states plus KPI/card/report patterns. It remains opt-in with focused evidence.

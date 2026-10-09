@@ -2,6 +2,7 @@
 core/tokens/** -text
 # Compact source bytes use CRLF, which is part of the pinned source hash.
 core/tokens/compact/0.1.0/*.json whitespace=cr-at-eol
+core/tokens/compact/0.1.1/*.json whitespace=cr-at-eol
 components/** -text
 core/contracts/** -text
 # The deterministic exporter terminates snapshots with a blank line.
