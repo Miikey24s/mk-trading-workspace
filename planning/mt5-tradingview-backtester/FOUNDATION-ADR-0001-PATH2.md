@@ -25,8 +25,14 @@ selection and requested the operational gap audit. Queue, storage, observability
 resource budgets and recovery requirements are included in the product's
 [API platform decision](../../projects/mt5-tradingview-backtester/foundation_v2/docs/API-STACK-DECISION-20261009.md)
 and [measurement receipt](../../projects/mt5-tradingview-backtester/foundation_v2/evidence/api-stack-comparison-20261009/RECEIPT.md).
-The current product still runs FastAPI; no runtime migration is accepted by this
-revision. PATH-2's domain/storage/authority boundaries and other gates remain.
+The owner then authorized implementing the complete selected architecture. The
+local application now runs Axum on port 8010 with supervised Python domain and
+research workers. Four checksum migrations and adoption of existing completed
+download records followed a verified database/artifact backup. Both isolated
+full-process acceptance and read-only journeys in the real local UI passed;
+see the [implementation receipt](../../projects/mt5-tradingview-backtester/foundation_v2/evidence/api-platform-implementation-20261009/RECEIPT.md).
+This is scoped local platform acceptance, not acceptance of every product journey
+or hosted deployment. PATH-2's domain/storage/authority boundaries and other gates remain.
 
 ## Rejected options
 
