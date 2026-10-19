@@ -38,6 +38,8 @@ test("private initialization is idempotent and does not share homes or credentia
   expect(other.brokerSocketPath).not.toBe(config.brokerSocketPath);
   expect(providerConfig(config).chatgptWeb?.localToolsEnabled).toBe(false);
   expect(providerConfig(config).chatgptWeb?.providerOnly).toBe(true);
+  expect(providerConfig(config).chatgptWeb?.startMinimized).toBe(true);
+  expect(providerConfig(loadCore(home)).chatgptWeb?.startMinimized).toBe(true);
   expect(existsSync(join(home, "codex-compat", "config.toml"))).toBe(false);
   expect(() => initializeCore("relative-home", 17851)).toThrow("absolute");
   loadCore(home);

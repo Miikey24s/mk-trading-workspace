@@ -52,8 +52,9 @@ export class CoreAccount {
   status() {
     const present = this.present();
     const models = present ? this.catalog() : [];
+    const preferred = models.find(model => model.id === "chatgpt-web/gpt-6-sol") ?? models[0];
     const selection = models.some(model => model.id === this.selection?.model && model.efforts.includes(this.selection.effort as never))
-      ? this.selection : models[0] ? { model: models[0].id, effort: models[0].efforts.includes("high") ? "high" : models[0].efforts[0] } : null;
+      ? this.selection : preferred ? { model: preferred.id, effort: preferred.efforts.includes("high") ? "high" : preferred.efforts[0] } : null;
     return { service: "chatgpt-web-core", account_scope: "local-machine", status: this.operation ? this.operation.phase
       : this.failure ? "error" : present ? this.verifiedAt ? "connected" : "saved" : "disconnected",
       login_state_present: present, verified_at: this.verifiedAt ?? null, operation: this.operation ?? null,

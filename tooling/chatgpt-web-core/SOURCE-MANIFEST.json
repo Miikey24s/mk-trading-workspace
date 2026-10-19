@@ -45,7 +45,7 @@
     },
     {
       "path": "src/adapters/chatgpt-web/browser-worker.ts",
-      "sha256": "b9a44e1f9b9e0ae84dd689cdefd92ecd62527b86cc29b532743e500deaaee585",
+      "sha256": "609b9d24d5ab3108773ae355f556e0ee87962f6270566540c39902763c41bf24",
       "upstream_sha256": "88064dc8d02dbf858b3ad7a45c62fd44c808d63e44094aa4bdee3d40d77ea7b2",
       "local_adjustment": "Selective v6.1.11 model compatibility and owned account lifecycle"
     },
@@ -229,7 +229,8 @@
     },
     {
       "path": "src/config.ts",
-      "sha256": "9af750f54f58a864da969fbda6ed856d81d17615f42eabe7121688c580ed0d98"
+      "sha256": "5622e83b73f34b87a3b903b5a3f73cbc20f311652b39ae60719a38a0c06509af",
+      "upstream_sha256": "9af750f54f58a864da969fbda6ed856d81d17615f42eabe7121688c580ed0d98"
     },
     {
       "path": "src/dev-chat/cli.ts",
@@ -345,7 +346,8 @@
     },
     {
       "path": "src/types.ts",
-      "sha256": "e87ada4f4c9da30e606c07fb1b71b2f04b8c17de72fc08be8f35a38ebcad121e"
+      "sha256": "f75182f9493d49f768415cf1bc28e42fda731a114c8a58e4ee782e212858a535",
+      "upstream_sha256": "e87ada4f4c9da30e606c07fb1b71b2f04b8c17de72fc08be8f35a38ebcad121e"
     },
     {
       "path": "src/typesafe/client.ts",
@@ -385,7 +387,7 @@
     },
     {
       "path": "tests/browser-worker-contract.test.ts",
-      "sha256": "83fccc6e15cdf04e8c8e6783f1129039eda766710a9be9197a3fb9df43b6a2ef",
+      "sha256": "00bc880112b49946f6e81adb819cfa6ae98b43c2d914361e151818799b7b80b9",
       "upstream_sha256": "0705ce5a4aac8637106312b5438e124fe39f3ba0c22d6056545f2b6ffabb9dcb",
       "local_adjustment": "Selective v6.1.11 model compatibility and owned account lifecycle"
     },
@@ -409,7 +411,7 @@
     },
     {
       "path": "src/core-account.ts",
-      "sha256": "4c8c5195d59c93c8708e599fa1672ab7fee16df7125703c1de75db6a530b3f2b",
+      "sha256": "5da2efc02051813f0f9ab10218f2f0b98471effd31273e6cdf0b0d51929a71a7",
       "origin": "workspace"
     },
     {
@@ -419,7 +421,7 @@
     },
     {
       "path": "src/core-profile.ts",
-      "sha256": "172f172f98b617e09efff914a39488af66fa69209a371133e872018962af12bb",
+      "sha256": "41c855f9058654dc154d5db659071bc9ebbf348d22d345ae19edbf46a9fa3dd6",
       "origin": "workspace"
     },
     {
@@ -429,7 +431,7 @@
     },
     {
       "path": "tests/core-account.test.ts",
-      "sha256": "ab9f7ae8bea7a38bf00d0fc23fa8beece0dad923df063cdae8af53c61a428717",
+      "sha256": "e82802daa7b9881746ef6ee6f9e7177c4f6a760fa795abf1918fc80c397de386",
       "origin": "workspace"
     },
     {
@@ -445,12 +447,28 @@
       "origin": "selective-upstream",
       "source_revision": "9fe005eefb93913c138368b0972b8a0c476fcf54",
       "upstream_sha256": "50013c9d426b4760da8b00eb323cdcf4fb765452f748bd117b216379853e6f1c"
+    },
+    {
+      "path": "tests/core.test.ts",
+      "origin": "workspace",
+      "sha256": "f33955b00e0de3f6062838ee5552fdf1d7789a7881e72c6b6f273ccc37e7c7bd"
+    },
+    {
+      "path": "README.md",
+      "origin": "workspace",
+      "sha256": "5589cf2d23828e7337f3f95afcdcc837717da9e02d0ab9dd7921c7cbe8818f45"
+    },
+    {
+      "path": "tests/core-background-browser.test.ts",
+      "origin": "workspace",
+      "sha256": "e683a20e600309a8f080c9a67a2ee1f657c15e935bfc8d9dcc640a5463d9321a"
     }
   ],
   "content_normalization": "UTF-8 LF, enforced by .gitattributes",
   "local_adjustments": [
     "bun.lock root package name",
-    "Whitespace-only cleanup in src/cli.ts and src/codex-interrupt-hook.ts; original LF hashes retained"
+    "Whitespace-only cleanup in src/cli.ts and src/codex-interrupt-hook.ts; original LF hashes retained",
+    "Prefer saved model selection, then GPT-6 Sol/high; keep inference headed with minimized owned windows while login stays visible."
   ],
   "selective_update": {
     "tag": "v6.1.11",

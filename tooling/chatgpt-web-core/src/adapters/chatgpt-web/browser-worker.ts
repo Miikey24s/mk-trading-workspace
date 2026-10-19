@@ -1364,6 +1364,7 @@ export interface ResolvedBrowserConfig {
   turnTimeoutMs?: number;
   responseDomGraceMs?: number;
   headed: boolean;
+  startMinimized?: boolean;
   autoApproveToolCalls: boolean;
 }
 
@@ -1374,15 +1375,25 @@ export const CHATGPT_MANAGED_CHROME_IGNORED_DEFAULT_ARGS = [
 ] as const;
 
 export function managedChromeLaunchOptions(
-  config: Pick<ResolvedBrowserConfig, "chromeExecutablePath" | "headed">,
+  config: Pick<ResolvedBrowserConfig, "chromeExecutablePath" | "headed" | "startMinimized">,
 ) {
   return {
     executablePath: config.chromeExecutablePath,
     headless: !config.headed,
     chromiumSandbox: true,
     ignoreDefaultArgs: [...CHATGPT_MANAGED_CHROME_IGNORED_DEFAULT_ARGS],
-    args: [...CHATGPT_BROWSER_AUTOMATION_ARGS],
+    args: [...CHATGPT_BROWSER_AUTOMATION_ARGS, ...(config.headed && config.startMinimized ? ["--start-minimized"] : [])],
   };
+}
+
+/** New managed pages can create a window after Chrome has consumed its startup flags. */
+export async function minimizeManagedPage(page: Page, config: Pick<ResolvedBrowserConfig, "headed" | "startMinimized">): Promise<void> {
+  if (!config.headed || !config.startMinimized) return;
+  const session = await page.context().newCDPSession(page);
+  try {
+    const { windowId } = await session.send("Browser.getWindowForTarget");
+    await session.send("Browser.setWindowBounds", { windowId, bounds: { windowState: "minimized" } });
+  } finally { await session.detach(); }
 }
 
 export function chatGptTurnIsComplete(state: {
@@ -2305,6 +2316,7 @@ export function resolveBrowserConfig(provider: CodexProviderConfig): ResolvedBro
     ...(turnTimeoutMs !== undefined ? { turnTimeoutMs } : {}),
     ...(responseDomGraceMs !== undefined ? { responseDomGraceMs } : {}),
     headed: configured.headed !== false,
+    startMinimized: configured.startMinimized === true,
     autoApproveToolCalls: configured.autoApproveToolCalls === true,
   };
 }
@@ -2624,6 +2636,7 @@ export class ChatGptBrowserWorker {
     this.browser = await chromium.launch(managedChromeLaunchOptions(this.config));
     this.context = await this.browser.newContext({ storageState: this.config.storageStatePath });
     this.page = await this.context.newPage();
+    await minimizeManagedPage(this.page, this.config);
     return this.page;
   }
 
@@ -2661,7 +2674,10 @@ export class ChatGptBrowserWorker {
       throw new Error("Launcher turns require an explicitly leased browser surface");
     }
     const { context } = await this.ensureManagedBrowser();
-    return await context.newPage();
+    const page = await context.newPage();
+    try { await minimizeManagedPage(page, this.config); }
+    catch (error) { await page.close(); throw error; }
+    return page;
   }
 
   private async selectModelAndEffort(

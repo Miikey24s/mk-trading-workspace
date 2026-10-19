@@ -45,6 +45,7 @@ export function initializeCore(home: string, port: number): AppConfig {
   }
   const config = defaultConfig("browser-only");
   config.integrationOwner = "cockpit";
+  config.browserStartMinimized = true;
   config.port = port;
   assertCoreProfile(config, home);
   saveConfig(config);
@@ -54,6 +55,7 @@ export function initializeCore(home: string, port: number): AppConfig {
 export function loadCore(home: string): AppConfig {
   bindCoreHome(home);
   const config = loadConfig();
+  config.browserStartMinimized ??= true;
   assertCoreProfile(config, home);
   return config;
 }

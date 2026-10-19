@@ -95,3 +95,16 @@ test("failed probe never publishes a successful connection test", async () => {
   expect(account.status().test).toBe(null);
   expect(account.status().error).toBe("probe_failed");
 });
+
+test("fresh accounts prefer GPT-6 Sol high while explicit saved choices win", () => {
+  const { config, dependencies, setPresent } = setup("default-model");
+  setPresent(true); config.solAvailable = true;
+  const account = new CoreAccount(config, async () => true, dependencies);
+  expect(account.status().selection).toEqual({ model: "chatgpt-web/gpt-6-sol", effort: "high" });
+  account.select({ model: "chatgpt-web/gpt-6-sol", effort: "medium" });
+  expect(new CoreAccount(config, async () => true, dependencies).status().selection)
+    .toEqual({ model: "chatgpt-web/gpt-6-sol", effort: "medium" });
+  config.solAvailable = false;
+  const fallback = new CoreAccount(config, async () => true, dependencies).status();
+  expect(fallback.models.some(model => model.id === fallback.selection?.model)).toBe(true);
+});

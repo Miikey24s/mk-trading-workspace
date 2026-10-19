@@ -84,6 +84,7 @@ export interface AppConfig {
   storageStatePath: string;
   brokerSocketPath: string;
   headed: boolean;
+  browserStartMinimized?: boolean;
   solAvailable: boolean;
   extraHighAvailable?: boolean;
   proAvailable: boolean;
@@ -418,6 +419,9 @@ function parseConfig(value: unknown, path: string): AppConfig {
     throw new Error(`Invalid contextWindow in ${path}`);
   }
   if (typeof parsed.headed !== "boolean") throw new Error(`Invalid headed in ${path}`);
+  if (parsed.browserStartMinimized !== undefined && typeof parsed.browserStartMinimized !== "boolean") {
+    throw new Error(`Invalid browserStartMinimized in ${path}`);
+  }
   if (typeof parsed.autoApproveToolCalls !== "boolean") {
     throw new Error(`Invalid autoApproveToolCalls in ${path}`);
   }
@@ -605,6 +609,7 @@ export function providerConfig(config: AppConfig): CodexProviderConfig {
       threadEnvironmentStatePath: join(getConfigDir(), "runtime", "thread-environments.json"),
       lunaCheckpointStatePath: join(getConfigDir(), "runtime", "luna-checkpoints.json"),
       headed: config.headed,
+      startMinimized: config.browserStartMinimized === true,
       localToolsEnabled: config.mode === "full",
       providerOnly: config.integrationOwner === "cockpit",
       solAvailable: manual ? false : config.solAvailable,

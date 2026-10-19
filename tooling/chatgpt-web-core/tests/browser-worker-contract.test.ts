@@ -404,6 +404,10 @@ test("managed Chrome uses the normal sandbox and masks the Playwright automation
   expect(CHATGPT_MANAGED_CHROME_IGNORED_DEFAULT_ARGS).toContain("--enable-automation");
   expect(options.ignoreDefaultArgs).toEqual([...CHATGPT_MANAGED_CHROME_IGNORED_DEFAULT_ARGS]);
   expect(options.args).toContain("--disable-blink-features=AutomationControlled");
+  expect(options.args).not.toContain("--start-minimized");
+  const background = managedChromeLaunchOptions({ chromeExecutablePath: "chrome.exe", headed: true, startMinimized: true });
+  expect(background.headless).toBeFalse();
+  expect(background.args).toContain("--start-minimized");
 });
 
 test("send button locator keeps the legacy test id and accepts the current submit-button surface", () => {

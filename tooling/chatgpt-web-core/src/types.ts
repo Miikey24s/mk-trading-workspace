@@ -301,6 +301,8 @@ export interface CodexProviderConfig {
     stallTimeoutSec?: number;
     /** Keep the single controlled browser visible. */
     headed?: boolean;
+    /** Start owned inference windows minimized; interactive login stays visible. */
+    startMinimized?: boolean;
     /** Attach the turn-bound Codex MCP capability for every connector-capable Web model. */
     localToolsEnabled?: boolean;
     /** Run behind an external router; local execution authority remains entirely in outer Codex. */

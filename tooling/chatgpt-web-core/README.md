@@ -63,6 +63,14 @@ là xác minh trong tiến trình hiện tại; `test` chỉ có sau phản hồ
 Catalog không chứng minh entitlement từng model. Disconnect xóa browser state
 của profile này; không đăng xuất tài khoản trên thiết bị khác.
 
+Core mặc định ưu tiên GPT‑6 Sol/high khi chưa có lựa chọn hợp lệ đã lưu, rồi
+mới fallback sang catalog hiện có. Lựa chọn đã lưu không bị reset khi mở chat.
+Inference giữ Chrome headed và chạy với cửa sổ thu nhỏ: startup flag cùng CDP
+áp dụng cho từng cửa sổ/page mới. Login vẫn hiện bình thường. Home cũ tự nhận
+default `browserStartMinimized=true`; đặt false trong config riêng để chẩn đoán.
+Smoke native không dùng account hoặc mạng:
+`$env:CORE_BROWSER_SMOKE='1'; bun test tests/core-background-browser.test.ts`.
+
 Đây là kết nối browser không chính thức, không phải OpenAI API. Khả năng model
 phụ thuộc tài khoản và trạng thái login; catalog quảng bá theo khả năng đã ghi
 nhận, không phải bằng chứng model vừa trả lời thành công. Nội dung gửi đi được
