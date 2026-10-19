@@ -103,6 +103,63 @@ test.skipIf(!process.env.CHATGPT_DOM_TEST_BROWSER)("GPT-6 Pro is verified from t
   expect(await selectGpt6Pro(PICKERS.current)).toEqual({ ok: true, label: "Pro", draft: "Draft" });
 }, 60_000);
 
+// Captured from the MT5-owned Plus picker: three efforts, a versionless header,
+// and an explicit checked GPT-6 row in the collapsed advanced view.
+async function selectEffortOnly(options: {
+  family?: "6" | "5.6"; row?: string; announcement?: string;
+  frozenEntrance?: boolean; hiddenHeader?: boolean; duplicateChecked?: boolean;
+}) {
+  const browser = await chromium.launch({ executablePath: process.env.CHATGPT_DOM_TEST_BROWSER, headless: true });
+  try {
+    const page = await browser.newPage();
+    page.setDefaultTimeout(5_000);
+    const fixture = FIXTURE
+      .replace('id="picker" role="menu"', 'id="picker" role="menu" data-state="open"')
+      .replace('id="header-effort"', 'id="header-effort" data-effort-only="true"')
+      .replace('const efforts = ["Instant", "Medium", "High", "Extra High", "Pro"]', 'const efforts = ["Instant", "Medium", "High"]')
+      .replace('aria-valuemax="4"', 'aria-valuemax="2"');
+    await page.setContent('<script>window.pickerHeader = () => ""; window.pickerStatus = effort => effort + ", 3 of 3.";</script>' + fixture);
+    await page.evaluate(options => {
+      const rows = document.querySelectorAll('[role="menuitemradio"]');
+      rows[0]!.textContent = options.row ?? 'GPT-6';
+      if (options.family === '5.6') rows[1]!.textContent = 'GPT-6';
+      if (options.duplicateChecked) rows[1]!.setAttribute('aria-checked', 'true');
+      if (options.hiddenHeader) document.querySelector('[data-model-picker-view-toggle]')!.setAttribute('aria-hidden', 'true');
+      if (options.announcement) (window as any).pickerStatus = () => options.announcement;
+      if (options.frozenEntrance) {
+        const style = document.createElement('style');
+        style.textContent = '@keyframes entrance { from { opacity:0 } to { opacity:1 } } #picker { animation:entrance 1s paused both; }';
+        document.head.append(style);
+      }
+    }, options);
+    const worker = Object.create(ChatGptBrowserWorker.prototype) as any;
+    let ok = false;
+    try {
+      await worker.selectModelAndEffort(page, CHATGPT_WEB_MODEL_ID, "high", {
+        localToolsEnabled: false, solAvailable: true, extraHighAvailable: false, proAvailable: false,
+      }, undefined, options.family ?? "6");
+      ok = true;
+    } catch (error) {
+      expect(String(error)).toContain('could not be selected and verified');
+    }
+    expect(await page.locator('#prompt-textarea').innerText()).toBe('Draft');
+    return ok;
+  } finally { await browser.close(); }
+}
+
+test.skipIf(!process.env.CHATGPT_DOM_TEST_BROWSER)("versionless three-step picker verifies explicit GPT-6 and GPT-5.6 rows, including a frozen minimized entrance", async () => {
+  expect(await selectEffortOnly({})).toBe(true);
+  expect(await selectEffortOnly({ family: '5.6', row: 'GPT-5.6 Sol' })).toBe(true);
+  expect(await selectEffortOnly({ frozenEntrance: true })).toBe(true);
+}, 60_000);
+
+test.skipIf(!process.env.CHATGPT_DOM_TEST_BROWSER)("versionless picker rejects Latest, conflicting, hidden, and ambiguous model evidence", async () => {
+  for (const options of [
+    { row: 'Latest' }, { row: 'GPT-7' }, { announcement: '5.6 High, 3 of 3.' },
+    { hiddenHeader: true }, { duplicateChecked: true },
+  ]) expect(await selectEffortOnly(options)).toBe(false);
+}, 60_000);
+
 test.skipIf(!process.env.CHATGPT_DOM_TEST_BROWSER)("GPT-6 Pro is still verified from the older versioned slider announcement", async () => {
   expect(await selectGpt6Pro(PICKERS.legacy)).toEqual({ ok: true, label: "Pro", draft: "Draft" });
 }, 60_000);

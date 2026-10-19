@@ -57,6 +57,13 @@ trước khi gửi. Không tự đồng bộ toàn bộ upstream: một số mod
 VI đã kiểm chứng, cùng sửa riêng cho login/cancel và giới hạn tool-free.
 `SOURCE-MANIFEST.json` ghi hash baseline, hash hiện tại và revision đối chiếu.
 
+Bộ chọn family tiếp tục dùng upstream. Đối chiếu thêm revision
+`cdfceafd51df9ab6f19818c145eac5a99c593a3d`: `model-selection.ts` giống nguyên bản.
+Core bổ sung đọc model từ đúng radio row đang checked khi header mới chỉ ghi
+effort (`data-effort-only`), và đọc state menu đang mở dù animation bị treo ở
+opacity0 trong Chrome thu nhỏ. Chỉ chấp nhận row có phiên bản rõ; `Latest`,
+version thiếu/sai hoặc bằng chứng mâu thuẫn vẫn bị chặn trước khi gửi.
+
 Account API có login/probe bất đồng bộ, selection, cancel và disconnect. Status
 không xuất cookie/token/email. `saved` chỉ chứng minh có state đã lưu; `connected`
 là xác minh trong tiến trình hiện tại; `test` chỉ có sau phản hồi model hoàn tất.

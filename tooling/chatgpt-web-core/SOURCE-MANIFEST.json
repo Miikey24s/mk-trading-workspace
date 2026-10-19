@@ -183,9 +183,9 @@
     },
     {
       "path": "src/chatgpt-session.ts",
-      "sha256": "28e6588fdb26e642ee288d62b91de191776d8171d6966e4178dd2f08551015d0",
+      "sha256": "a60bfd014e537586b9e7a43dd9bec7f0711f1e440f1e55d0dc02993fc5268e4f",
       "upstream_sha256": "ab8a117bb7a6c3d5b0c3b4223dac590752d6ec65f3cf7aa70a58542f3e40c56f",
-      "local_adjustment": "Selective v6.1.11 model compatibility and owned account lifecycle"
+      "local_adjustment": "Versionless effort-only picker identity from explicit checked row; minimized entrance compatibility and regression coverage"
     },
     {
       "path": "src/chatgpt-web-models.ts",
@@ -443,10 +443,11 @@
     },
     {
       "path": "tests/chatgpt-model-family-browser.test.ts",
-      "sha256": "9b0ff629b9252861e25a97f7bc277b47c51a307e755e2280d906c037dc88fdd9",
+      "sha256": "c9ca2e9fddb7424441a381e8ec9420c7eb4000aa4e57dcfad42824246f9c11d2",
       "origin": "selective-upstream",
       "source_revision": "9fe005eefb93913c138368b0972b8a0c476fcf54",
-      "upstream_sha256": "50013c9d426b4760da8b00eb323cdcf4fb765452f748bd117b216379853e6f1c"
+      "upstream_sha256": "50013c9d426b4760da8b00eb323cdcf4fb765452f748bd117b216379853e6f1c",
+      "local_adjustment": "Versionless effort-only picker identity from explicit checked row; minimized entrance compatibility and regression coverage"
     },
     {
       "path": "tests/core.test.ts",
@@ -456,7 +457,7 @@
     {
       "path": "README.md",
       "origin": "workspace",
-      "sha256": "5589cf2d23828e7337f3f95afcdcc837717da9e02d0ab9dd7921c7cbe8818f45"
+      "sha256": "a59c959689ae41fe08b3db5c2f274b2cd940c7b844d1a5ca1dc9c41d76e4e572"
     },
     {
       "path": "tests/core-background-browser.test.ts",
@@ -474,5 +475,9 @@
     "tag": "v6.1.11",
     "revision": "9fe005eefb93913c138368b0972b8a0c476fcf54",
     "scope": "Model catalog, family selection and verification, normal-browser login cancellation; no agents, launcher, global configuration or persistence default update."
+  },
+  "model_picker_review": {
+    "revision": "cdfceafd51df9ab6f19818c145eac5a99c593a3d",
+    "scope": "model-selection.ts matches upstream byte-for-byte; local chatgpt-session.ts compatibility for effort-only headers and minimized menu entrance"
   }
 }

@@ -60,7 +60,11 @@ export async function readChatGptModelAnnouncements(slider: Locator): Promise<st
       for (let parent: Element | null = node; parent; parent = parent.parentElement) {
         if (parent.matches('[hidden], [inert], [aria-hidden="true"]')) return false;
         const style = getComputedStyle(parent);
-        if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") return false;
+        // Minimized Chrome can suspend the open menu's entrance animation at
+        // opacity zero. Its active view still carries the selected model state.
+        const enteringMenu = parent === menu && parent.getAttribute("data-state") === "open"
+          && style.animationName !== "none";
+        if (style.display === "none" || style.visibility === "hidden" || (style.opacity === "0" && !enteringMenu)) return false;
       }
       return true;
     };
@@ -78,6 +82,20 @@ export async function readChatGptModelAnnouncements(slider: Locator): Promise<st
         }
       }
       descriptions.push(words.join(" "));
+      // Some three-step pickers omit the version from both the announcement and
+      // header. Only an explicitly versioned checked row can resolve that case;
+      // "Latest" alone may still route lower efforts to an older family.
+      const effortOnly = content.querySelector('[data-effort-only="true"]');
+      if (effortOnly && rendered(effortOnly)) {
+        const selected = [...(menu?.querySelectorAll('[role="menuitemradio"][aria-checked="true"]') ?? [])]
+          .filter(row => row.closest('[role="menu"]') === menu);
+        const label = selected.length === 1
+          ? selected[0]!.textContent?.normalize("NFKC").replace(/\p{Cf}/gu, "").replace(/\s+/g, " ").trim()
+          : undefined;
+        if (label && /^(?:GPT[-\s]?)?\d+(?:\.\d+)?(?:\s+(?:Sol|Astra))?$/i.test(label)) {
+          descriptions.push(`${label} ${effortOnly.textContent?.trim() ?? ""}`);
+        }
+      }
     }
     return descriptions;
   });

@@ -1,5 +1,31 @@
 # Validation — 19/10/2026
 
+## Model picker compatibility — 19/10/2026
+
+Đối chiếu upstream `cdfceafd51df9ab6f19818c145eac5a99c593a3d`:
+`src/adapters/chatgpt-web/model-selection.ts` giống hệt core. Không thay engine
+hoặc catalog. Tái hiện trên account riêng MT5: GPT-6/High đã được chọn nhưng
+header và announcement chỉ ghi effort; Chrome minimized còn treo menu entrance
+ở opacity0. Bổ sung nguồn identity từ explicit checked model row của cùng menu
+cho header `data-effort-only`; không suy diễn `Latest` hoặc bỏ family check.
+
+- Typecheck pass; 17/17core tests và173/173transport tests pass, gồm manifest hash.
+  Production web build pass (cảnh báo chunk lớn có sẵn).
+- Model/Chrome DOM focused tests11/11pass, bao phủ picker cũ/mới, 3/5efforts, animation treo,
+  GPT-6/GPT-5.6, version thiếu/sai/mâu thuẫn, header hidden và nhiều checked rows.
+- Live selection-only roundtrip: GPT-5.6/Medium → GPT-6/High → GPT-6/Medium →
+  GPT-6/High đều verified; cả4bước window minimized, không có user turn được gửi.
+  Đây là bằng chứng chọn model; không phải một lượt inference hoàn chỉnh.
+- Sau khi nạp lại riêng core do MT5 sở hữu, một account probe thật qua backend
+  sản phẩm hoàn tất ở2026-10-19T15:03:36Z với GPT-6 Sol/high. Status `connected`,
+  `test.model=chatgpt-web/gpt-6-sol`, `test.effort=high`, không có error/operation.
+  Diagnostic `af4a9e222d2b-b722212c` đi qua selection-confirmed, send-accepted,
+  response-visible và turn-completed. Không restart Rust API hoặc đổi lựa chọn.
+- MT5 nút đóng chat: hover nền transparent, focus bàn phím và đóng panel pass
+  ở360/768/1368px, light/dark. Đã xem screenshot desktop/mobile.
+- Diagnostic scripts/screenshots giữ local tại workspace
+  `.runtime/model-picker-20261019/`; không nhập browser state hoặc credential.
+
 ## Selective upstream update và account UI
 
 Đối chiếu upstream v6.1.11 tại revision
