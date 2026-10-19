@@ -7,6 +7,8 @@ export interface CodexParsedRequest {
   _rawBody?: unknown;
   /** Set only by the trusted Web route, never parsed from caller-supplied model metadata. */
   _chatgptModelFamily?: "5.6" | "6";
+  /** Internal core entrypoint only; never accepted from an HTTP request body. */
+  _toolFreeChat?: boolean;
   /** Number of leading raw input items restored from local previous_response_id state. */
   _replayPrefixLen?: number;
   /** Trusted Codex thread owner restored from proxy-private previous_response_id state. */
@@ -301,6 +303,8 @@ export interface CodexProviderConfig {
     stallTimeoutSec?: number;
     /** Keep the single controlled browser visible. */
     headed?: boolean;
+    /** Preserve the native Chrome identity of the saved interactive login when running headless. */
+    useNativeUserAgent?: boolean;
     /** Start owned inference windows minimized; interactive login stays visible. */
     startMinimized?: boolean;
     /** Attach the turn-bound Codex MCP capability for every connector-capable Web model. */

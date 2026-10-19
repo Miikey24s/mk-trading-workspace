@@ -1364,6 +1364,7 @@ export interface ResolvedBrowserConfig {
   turnTimeoutMs?: number;
   responseDomGraceMs?: number;
   headed: boolean;
+  useNativeUserAgent?: boolean;
   startMinimized?: boolean;
   autoApproveToolCalls: boolean;
 }
@@ -1384,6 +1385,19 @@ export function managedChromeLaunchOptions(
     ignoreDefaultArgs: [...CHATGPT_MANAGED_CHROME_IGNORED_DEFAULT_ARGS],
     args: [...CHATGPT_BROWSER_AUTOMATION_ARGS, ...(config.headed && config.startMinimized ? ["--start-minimized"] : [])],
   };
+}
+
+export async function managedChromeContext(browser: Browser, config: Pick<ResolvedBrowserConfig, "storageStatePath" | "useNativeUserAgent">): Promise<BrowserContext> {
+  let userAgent: string | undefined;
+  if (config.useNativeUserAgent) {
+    const probe = await browser.newContext();
+    try {
+      const page = await probe.newPage();
+      // Chrome's headless UA otherwise differs from the interactive login's UA.
+      userAgent = await page.evaluate(() => navigator.userAgent.replace("HeadlessChrome/", "Chrome/"));
+    } finally { await probe.close(); }
+  }
+  return browser.newContext({ storageState: config.storageStatePath, ...(userAgent ? { userAgent } : {}) });
 }
 
 /** New managed pages can create a window after Chrome has consumed its startup flags. */
@@ -2316,6 +2330,7 @@ export function resolveBrowserConfig(provider: CodexProviderConfig): ResolvedBro
     ...(turnTimeoutMs !== undefined ? { turnTimeoutMs } : {}),
     ...(responseDomGraceMs !== undefined ? { responseDomGraceMs } : {}),
     headed: configured.headed !== false,
+    useNativeUserAgent: configured.useNativeUserAgent === true,
     startMinimized: configured.startMinimized === true,
     autoApproveToolCalls: configured.autoApproveToolCalls === true,
   };
@@ -2634,7 +2649,7 @@ export class ChatGptBrowserWorker {
       throw new Error(`Configured Chrome executable does not exist: ${this.config.chromeExecutablePath}`);
     }
     this.browser = await chromium.launch(managedChromeLaunchOptions(this.config));
-    this.context = await this.browser.newContext({ storageState: this.config.storageStatePath });
+    this.context = await managedChromeContext(this.browser, this.config);
     this.page = await this.context.newPage();
     await minimizeManagedPage(this.page, this.config);
     return this.page;
@@ -2650,7 +2665,7 @@ export class ChatGptBrowserWorker {
         throw new Error(`Configured Chrome executable does not exist: ${this.config.chromeExecutablePath}`);
       }
       const browser = await chromium.launch(managedChromeLaunchOptions(this.config));
-      const context = await browser.newContext({ storageState: this.config.storageStatePath });
+      const context = await managedChromeContext(browser, this.config);
       this.browser = browser;
       this.context = context;
       return { browser, context };
@@ -3262,11 +3277,10 @@ export class ChatGptBrowserWorker {
       : rawActions;
     if (typeof (actions as unknown as { count?: unknown }).count !== "function") return undefined;
     const actionCount = await withChatGptBrowserObservationTimeout(withBrowserTurnAbort(actions.count(), signal));
-    if (actionCount <= baselineCount) return undefined;
-    // Read aloud is assistant-only in the current renderer. If it has not
-    // mounted yet, use the last completion action rather than the first new
-    // action, which can belong to the just-submitted user bubble.
-    const action = readAloudCount > 0 ? readAloudActions.last() : actions.last();
+    if (actionCount <= baselineCount || readAloudCount === 0) return undefined;
+    // Copy can belong to the just-submitted user bubble. Bind the unstructured
+    // fallback only after the assistant-only Read aloud action has mounted.
+    const action = readAloudActions.last();
     const identity = `current-ui-response-${baselineCount + 1}`;
     const bound = await withChatGptBrowserObservationTimeout(withBrowserTurnAbort(action.evaluate((element, options) => {
       const button = element as HTMLElement;
@@ -3305,22 +3319,17 @@ export class ChatGptBrowserWorker {
         if (gap < 0 || gap > 320 || (nearest && gap >= nearest.gap)) continue;
         nearest = { node, gap };
       }
-      const responseColumnIsUser = responseColumn?.closest(
-        '[data-message-author-role="user"], [data-user-message-bubble]',
-      ) !== null;
-      let responseRoot: HTMLElement | null = responseColumn && !responseColumnIsUser
-        ? responseColumn
-        : nearest?.node.parentElement ?? null;
+      // The action toolbar and answer can be in separate sibling trees. Their first
+      // shared column may include the entire conversation, including the private prompt.
+      let responseRoot: HTMLElement | null = nearest?.node.parentElement ?? null;
       if (!responseRoot) return false;
-      if (responseRoot !== responseColumn) {
-        for (;;) {
-          const parentElement: HTMLElement | null = responseRoot.parentElement;
-          if (!parentElement || parentElement === document.body || parentElement.contains(button)) break;
-          if (parentElement.querySelector("button")) break;
-          const text = (parentElement.textContent ?? "").trim();
-          if (!text) break;
-          responseRoot = parentElement;
-        }
+      for (;;) {
+        const parentElement: HTMLElement | null = responseRoot.parentElement;
+        if (!parentElement || parentElement === document.body || parentElement.contains(button)) break;
+        if (parentElement.querySelector("button, [contenteditable='true'], [data-message-author-role='user'], [data-user-message-bubble]")) break;
+        const text = (parentElement.textContent ?? "").trim();
+        if (!text) break;
+        responseRoot = parentElement;
       }
       if (!(responseRoot.textContent ?? "").trim()) return false;
       document.querySelectorAll<HTMLElement>(`[${options.responseAttribute}]`).forEach(candidate => {
@@ -3338,11 +3347,7 @@ export class ChatGptBrowserWorker {
       identity,
     }, { timeout: 2_000, signal }), signal));
     if (!bound) return undefined;
-    const stableLocator = typeof (action as unknown as { locator?: unknown }).locator === "function"
-      ? action.locator(
-        'xpath=ancestor::*[count(.//button) >= 3 and string-length(normalize-space(.)) > 0][1]',
-      )
-      : page.locator(`[${CHATGPT_CURRENT_RESPONSE_ATTRIBUTE}=${JSON.stringify(identity)}]`);
+    const stableLocator = page.locator(`[${CHATGPT_CURRENT_RESPONSE_ATTRIBUTE}=${JSON.stringify(identity)}]`);
     return {
       identity,
       locator: stableLocator,
@@ -4465,21 +4470,34 @@ export class ChatGptBrowserWorker {
       const answerRootSelector = '.markdown, [data-message-author-role="assistant"] .puik-root.not-markdown > [class*="_DilResponseRoot"]';
       const hasLegacyTurnIdentity = root.matches(
         '[data-turn], [data-turn-id], [data-turn-id-container], [data-testid^="conversation-turn"]',
-      ) || root.querySelector(
+      ) || Boolean(root.querySelector(
         '[data-turn], [data-turn-id], [data-turn-id-container], [data-testid^="conversation-turn"]',
-      ) !== null;
+      ));
       const currentRendererAttributeRoot = root.hasAttribute(options.currentResponseAttribute);
+      // A current-renderer turn group owns BOTH the user bubble and the answer.
+      // Its assistant role is on a screen-reader heading, not a message container.
+      // Keep the group for mutation/completion tracking, but serialize only the
+      // assistant branch. An empty/pending branch must never fall back to the group.
+      const groupedCurrentRenderer = root.hasAttribute("data-turn-key") && !hasLegacyTurnIdentity;
+      const groupedAssistantRoots = groupedCurrentRenderer
+        ? [...root.querySelectorAll<HTMLElement>('[data-conversation-role="assistant"]')]
+          .map(candidate => /^H[1-6]$/.test(candidate.tagName) ? candidate.parentElement! : candidate)
+          .filter(candidate => !candidate.querySelector('[data-user-message-bubble], [data-message-author-role="user"]'))
+          .filter(renderedInDom)
+        : [];
       const inferredCurrentRendererRoot = !hasLegacyTurnIdentity
         && !root.querySelector(answerRootSelector)
         && root.querySelector(options.currentAssistantActionSelector) !== null
         && Boolean((root.textContent ?? "").trim());
-      const currentRendererRoot = currentRendererAttributeRoot || inferredCurrentRendererRoot;
+      const currentRendererRoot = groupedCurrentRenderer || currentRendererAttributeRoot || inferredCurrentRendererRoot;
       // ChatGPT uses the same content renderer for intermediate commentary and for the final
       // answer. Older responses nested commentary in the streaming-status container. Pro can also
       // render a completed commentary Markdown root immediately before that live status container.
       // Final-answer Markdown follows the live status instead, so DOM order remains the semantic
       // boundary without relying on localized labels such as "Pro thinking".
-      const allMarkdownRoots = currentRendererRoot
+      const allMarkdownRoots = groupedCurrentRenderer
+        ? (renderedInDom(root) ? groupedAssistantRoots : [])
+        : currentRendererRoot
         ? (renderedInDom(root) ? [root] : [])
         : [...root.querySelectorAll<HTMLElement>(answerRootSelector)]
           .filter(candidate => !candidate.parentElement?.closest(answerRootSelector))
@@ -4521,7 +4539,8 @@ export class ChatGptBrowserWorker {
       // CHATGPT_MARKDOWN_CONTENT_BEGIN
       const chatGptMarkdownContent = (markdownRoot: HTMLElement): HTMLElement => {
         const content = markdownRoot.cloneNode(true) as HTMLElement;
-        const currentRendererRoot = markdownRoot.hasAttribute("data-codex-web-gpt-current-response");
+        const currentRendererRoot = markdownRoot.hasAttribute("data-codex-web-gpt-current-response")
+          || Boolean(markdownRoot.querySelector('[data-conversation-role="assistant"]'));
         if (currentRendererRoot) {
           for (const hidden of Array.from(content.querySelectorAll('[hidden], [aria-hidden="true"], .sr-only'))) {
             hidden.remove();
@@ -4716,13 +4735,13 @@ export class ChatGptBrowserWorker {
         linkTargets: segment.linkTargets,
       }));
       const rendered = renderedRoots.at(-1);
-      const completionAction = rendered && !currentRendererRoot
+      const completionAction = rendered && (!currentRendererRoot || groupedCurrentRenderer)
         ? [...root.querySelectorAll<HTMLElement>(options.completionActionSelector)]
           .filter(renderedInDom)
           .find(candidate => !rendered.contains(candidate)
             && Boolean(rendered.compareDocumentPosition(candidate) & Node.DOCUMENT_POSITION_FOLLOWING))
         : undefined;
-      const currentRendererComplete = currentRendererRoot
+      const currentRendererComplete = !groupedCurrentRenderer && currentRendererRoot
         && (root.getAttribute(options.currentResponseCompleteAttribute) === "true"
           || (inferredCurrentRendererRoot
             && streamingStatusContainers.length === 0
@@ -4746,6 +4765,7 @@ export class ChatGptBrowserWorker {
           ?? candidate;
       };
       const traceText = (candidate: HTMLElement): string => {
+        if (currentRendererRoot && renderedRoots.includes(candidate)) return markdownText(chatGptMarkdownContent(candidate));
         const ariaLabel = candidate.getAttribute("aria-label")?.trim();
         if (ariaLabel) return ariaLabel;
         // Animated ChatGPT action counters visually split a phrase around the changing number, so
@@ -4858,8 +4878,10 @@ export class ChatGptBrowserWorker {
         key: observerKey,
         snapshot: {
           responsePresent: currentRendererRoot ? renderedRoots.length > 0 : true,
-          visibleText: renderedRoots.map(candidate => candidate.innerText.trim()).filter(Boolean).join("\n\n"),
-          fullHtml: renderedRoots.map(candidate => candidate.innerHTML).join(""),
+          visibleText: renderedRoots.map(candidate => currentRendererRoot
+            ? markdownText(chatGptMarkdownContent(candidate)) : candidate.innerText.trim()).filter(Boolean).join("\n\n"),
+          fullHtml: renderedRoots.map(candidate => currentRendererRoot
+            ? chatGptMarkdownContent(candidate).innerHTML : candidate.innerHTML).join(""),
           markdownSegments,
           completionActionVisible: currentRendererComplete || completionAction !== undefined,
           streamingStatusVisible: streamingStatusContainers.length > 0,

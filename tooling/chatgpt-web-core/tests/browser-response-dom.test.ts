@@ -6,6 +6,7 @@ import { ChatGptBrowserWorker, ChatGptCompletionTracker, CHATGPT_COMPLETION_SETT
 import { ChatGptMarkdownBuffer, type ChatGptMarkdownSegment } from "../src/adapters/chatgpt-web/markdown";
 
 const smokeHtml = readFileSync(new URL("./fixtures/chatgpt-dil-smoke.html", import.meta.url), "utf8");
+const sharedGroupHtml = readFileSync(new URL("./fixtures/chatgpt-shared-turn-group.html", import.meta.url), "utf8");
 type Snapshot = {
   responsePresent: boolean;
   visibleText: string;
@@ -104,6 +105,30 @@ test("current renderer response root reaches Markdown delivery without legacy tu
   const buffer = new ChatGptMarkdownBuffer();
   buffer.observe(response.markdownSegments, 0);
   expect(buffer.finish().markdown).toBe('{"translations":\\[{"id":1,"vi":"Giữ FVG hiển thị."}\\]}');
+});
+
+test("shared current-renderer group delivers only the assistant branch", async () => {
+  const response = await snapshot(sharedGroupHtml);
+  expect(response.visibleText).toBe("REPLAY READY");
+  expect(response.fullHtml).not.toContain("PRIVATE INSTRUCTIONS");
+  expect(response.fullHtml).not.toContain("ChatGPT said:");
+  expect(response.completionActionVisible).toBeTrue();
+  expect(response.traceBlocks.filter(block => block.kind === "answer").map(({ kind, text }) => ({ kind, text }))).toEqual([{ kind: "answer", text: "REPLAY READY" }]);
+  const buffer = new ChatGptMarkdownBuffer();
+  buffer.observe(response.markdownSegments);
+  expect(buffer.finish().markdown).toBe("REPLAY READY");
+});
+
+test("pending shared group never delivers the user bubble or treats its Copy as completion", async () => {
+  for (const html of [
+    sharedGroupHtml.replace('<div><p>REPLAY READY</p></div>', '').replace('<div class="turn-action-controls"><button aria-label="Copy"></button><button aria-label="Read aloud"></button></div>', ''),
+    '<div id="turn" data-turn-key="pending"><div data-user-message-bubble="true"><p>PRIVATE INSTRUCTIONS</p><button aria-label="Copy"></button></div><span hidden data-chatgpt-agent-turn-start></span></div>',
+  ]) {
+    const response = await snapshot(html);
+    expect(response.visibleText).toBe("");
+    expect(response.completionActionVisible).toBeFalse();
+    expect(response.markdownSegments).toEqual([]);
+  }
 });
 
 test("hidden current renderer roots are treated as missing response DOM", async () => {

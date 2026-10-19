@@ -72,11 +72,20 @@ của profile này; không đăng xuất tài khoản trên thiết bị khác.
 
 Core mặc định ưu tiên GPT‑6 Sol/high khi chưa có lựa chọn hợp lệ đã lưu, rồi
 mới fallback sang catalog hiện có. Lựa chọn đã lưu không bị reset khi mở chat.
-Inference giữ Chrome headed và chạy với cửa sổ thu nhỏ: startup flag cùng CDP
-áp dụng cho từng cửa sổ/page mới. Login vẫn hiện bình thường. Home cũ tự nhận
-default `browserStartMinimized=true`; đặt false trong config riêng để chẩn đoán.
-Smoke native không dùng account hoặc mạng:
-`$env:CORE_BROWSER_SMOKE='1'; bun test tests/core-background-browser.test.ts`.
+Inference qua core chạy Chrome headless, không tạo cửa sổ để rồi thu nhỏ.
+Context khôi phục state đã lưu với user agent Chrome cùng phiên bản của lần
+đăng nhập tương tác. Login vẫn dùng cửa sổ riêng hiện bình thường; model picker,
+ownership và cancellation tiếp tục dùng engine hiện có. Không fallback sang
+headed nếu inference lỗi. `browserStartMinimized` chỉ còn phục vụ đường headed
+legacy, không điều khiển request product chat.
+
+Điểm vào core bật chế độ product chat nội bộ: chỉ gửi instructions của sản phẩm
+và hội thoại text, không thêm Codex harness/MCP hoặc cảnh báo local tools.
+HTTP caller không thể tự bật chế độ này qua body. Với renderer mới gộp user và
+assistant trong `data-turn-key`, bridge theo dõi cả nhóm nhưng chỉ serialize
+nhánh assistant; user bubble và tiêu đề screen-reader không phải câu trả lời.
+Smoke Chrome không dùng account hoặc mạng ngoài:
+`bun test tests/core-response-browser.test.ts tests/browser-response-dom.test.ts`.
 
 Đây là kết nối browser không chính thức, không phải OpenAI API. Khả năng model
 phụ thuộc tài khoản và trạng thái login; catalog quảng bá theo khả năng đã ghi

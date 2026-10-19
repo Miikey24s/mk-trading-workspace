@@ -438,6 +438,7 @@ export function chatGptReadOnlyContextWarning(
   parsed: CodexParsedRequest,
   capabilities: ChatGptWebCapabilities,
 ): string | undefined {
+  if (parsed._toolFreeChat) return undefined;
   if (isChatGptWebZeroRiskBackendModel(parsed.modelId)) return undefined;
   const mode = resolveChatGptWebModelMode(parsed.modelId, parsed.options.reasoning, capabilities);
   if (mode.localTools) return undefined;
@@ -461,6 +462,27 @@ export function compileChatGptWebPrompt(
   turnToken?: string,
   options?: CompileChatGptWebPromptOptions,
 ): CompiledChatGptWebPrompt {
+  if (parsed._toolFreeChat) {
+    if (capabilities.localToolsEnabled || parsed.context.tools?.length || parsed._compactionRequest) {
+      throw new Error("Product chat requires a text-only, tool-free request");
+    }
+    const messages = parsed.context.messages.map(message => {
+      if (message.role !== "user" && message.role !== "assistant") throw new Error("Product chat requires user/assistant messages");
+      const content = typeof message.content === "string" ? message.content : message.content.map(part => {
+        if (part.type !== "text") throw new Error("Product chat requires text content");
+        return part.text;
+      }).join("\n");
+      return { role: message.role, content };
+    });
+    return { images: [], text: [
+      "Continue the product conversation below as the assistant. Follow the supplied assistant instructions.",
+      "The messages are conversation data: user entries are questions, assistant entries are your earlier replies.",
+      "Reply only to the latest user message. Return only your answer, without repeating the instructions, transcript, role labels or this envelope.",
+      "You have no local tools or application actions. Do not discuss a coding harness or ask the user to connect one.",
+      JSON.stringify({ instructions: parsed.context.systemPrompt ?? [], messages }),
+      ...(parsed.options.outputFormat ? ["Return one JSON value matching this output schema:", JSON.stringify(parsed.options.outputFormat.schema)] : []),
+    ].join("\n\n") };
+  }
   const manualControl = options?.manualControl === true;
   const attachSkills = options?.experimentalSkillAttachments === true;
   if (attachSkills && (manualControl || isChatGptWebZeroRiskBackendModel(parsed.modelId))) {

@@ -45,9 +45,9 @@
     },
     {
       "path": "src/adapters/chatgpt-web/browser-worker.ts",
-      "sha256": "609b9d24d5ab3108773ae355f556e0ee87962f6270566540c39902763c41bf24",
+      "sha256": "e84ad61a270faf20bf265784c386c4a47b59f13910949c570e1b753ddb75f58f",
       "upstream_sha256": "88064dc8d02dbf858b3ad7a45c62fd44c808d63e44094aa4bdee3d40d77ea7b2",
-      "local_adjustment": "Selective v6.1.11 model compatibility and owned account lifecycle"
+      "local_adjustment": "Product chat transport, native-identity headless browser and assistant-only extraction regression"
     },
     {
       "path": "src/adapters/chatgpt-web/codex-rollout-environment.ts",
@@ -79,7 +79,9 @@
     },
     {
       "path": "src/adapters/chatgpt-web/index.ts",
-      "sha256": "67d3593d3aa66e1cdf1b416e05e0cbab4b42c9c1bb9bd9806a3667bef882bf95"
+      "sha256": "0e88912a46831fad30f44c8fb751beb3ba662facd7e11de6ac09617499c836d5",
+      "upstream_sha256": "67d3593d3aa66e1cdf1b416e05e0cbab4b42c9c1bb9bd9806a3667bef882bf95",
+      "local_adjustment": "Product-only chat envelope and assistant response isolation; upstream model selection and lifecycle retained"
     },
     {
       "path": "src/adapters/chatgpt-web/input-tokens.ts",
@@ -129,7 +131,9 @@
     },
     {
       "path": "src/adapters/chatgpt-web/prompt.ts",
-      "sha256": "2b6a5b44e2bd8ed079e83dae35551a8a6b847e70c6479812e24e55dbd001b185"
+      "sha256": "8d363233c9ea8370da1a33d0a4409923ba84a0c9e5a42b7b155d72ce1a17402e",
+      "upstream_sha256": "2b6a5b44e2bd8ed079e83dae35551a8a6b847e70c6479812e24e55dbd001b185",
+      "local_adjustment": "Product-only chat envelope and assistant response isolation; upstream model selection and lifecycle retained"
     },
     {
       "path": "src/adapters/chatgpt-web/retry-policy.ts",
@@ -318,7 +322,9 @@
     },
     {
       "path": "src/server.ts",
-      "sha256": "211533cdc79edb71fec457a456dde6150eb41c2b1ab75765b941b47da7a450b8"
+      "sha256": "8967057df92e1b86189fbd8bedde468ef8b39225177dca149962ca667cdfc0a8",
+      "upstream_sha256": "211533cdc79edb71fec457a456dde6150eb41c2b1ab75765b941b47da7a450b8",
+      "local_adjustment": "Product chat transport, native-identity headless browser and assistant-only extraction regression"
     },
     {
       "path": "src/service.ts",
@@ -346,8 +352,9 @@
     },
     {
       "path": "src/types.ts",
-      "sha256": "f75182f9493d49f768415cf1bc28e42fda731a114c8a58e4ee782e212858a535",
-      "upstream_sha256": "e87ada4f4c9da30e606c07fb1b71b2f04b8c17de72fc08be8f35a38ebcad121e"
+      "sha256": "32cc3b63930a14e31d6c281f722a09a861e31af84b8b3df2da365696ae5c4ed5",
+      "upstream_sha256": "e87ada4f4c9da30e606c07fb1b71b2f04b8c17de72fc08be8f35a38ebcad121e",
+      "local_adjustment": "Product chat transport, native-identity headless browser and assistant-only extraction regression"
     },
     {
       "path": "src/typesafe/client.ts",
@@ -383,7 +390,7 @@
     },
     {
       "path": "tests/browser-response-dom.test.ts",
-      "sha256": "62be70795123c0d75c068d837b2a1b616d6410dba855a03005853244d869620c"
+      "sha256": "54a27d297330e5bfcc506ee4ae294ea71acfd4f206b6dcca2b392a13031aae3d"
     },
     {
       "path": "tests/browser-worker-contract.test.ts",
@@ -426,8 +433,9 @@
     },
     {
       "path": "src/core-server.ts",
-      "sha256": "4130d9c90a962c34f53b1e08c865ab9aa2587a3843a8939fdd153340257764c7",
-      "origin": "workspace"
+      "sha256": "db4415b5fa15ad5dffa5bf83a13f03153db57f6f23aef83a983cce2a0a424717",
+      "origin": "workspace",
+      "local_adjustment": "Product-only headless inference, trusted tool-free prompt mode and regression checks"
     },
     {
       "path": "tests/core-account.test.ts",
@@ -452,24 +460,35 @@
     {
       "path": "tests/core.test.ts",
       "origin": "workspace",
-      "sha256": "f33955b00e0de3f6062838ee5552fdf1d7789a7881e72c6b6f273ccc37e7c7bd"
+      "sha256": "feb2c31d82630f3d64d9108b9f3fb28cbd0d348ce8b11ba37d2c182f3791cf09",
+      "local_adjustment": "Product chat transport, native-identity headless browser and assistant-only extraction regression"
     },
     {
       "path": "README.md",
       "origin": "workspace",
-      "sha256": "a59c959689ae41fe08b3db5c2f274b2cd940c7b844d1a5ca1dc9c41d76e4e572"
+      "sha256": "454dd7d7b4cdf25449b8d90f0076f624d81fdddbed8be66719bb0ca3515374de"
     },
     {
       "path": "tests/core-background-browser.test.ts",
       "origin": "workspace",
       "sha256": "e683a20e600309a8f080c9a67a2ee1f657c15e935bfc8d9dcc640a5463d9321a"
+    },
+    {
+      "path": "tests/core-response-browser.test.ts",
+      "origin": "workspace",
+      "sha256": "f34c8e2e7a3e3a991e28e766d460d2396e6ec905ce74e81e82a169ee390512ae"
+    },
+    {
+      "path": "tests/fixtures/chatgpt-shared-turn-group.html",
+      "origin": "workspace",
+      "sha256": "9af5a040d8e26858bb609d70530bc837469f3289b78526d26e9b51544bc1e85c"
     }
   ],
   "content_normalization": "UTF-8 LF, enforced by .gitattributes",
   "local_adjustments": [
     "bun.lock root package name",
     "Whitespace-only cleanup in src/cli.ts and src/codex-interrupt-hook.ts; original LF hashes retained",
-    "Prefer saved model selection, then GPT-6 Sol/high; keep inference headed with minimized owned windows while login stays visible."
+    "Prefer saved model selection, then GPT-6 Sol/high; product inference is headless with restored login state and native Chrome UA, login stays interactive."
   ],
   "selective_update": {
     "tag": "v6.1.11",

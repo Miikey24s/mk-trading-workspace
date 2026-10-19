@@ -362,6 +362,8 @@ export class HttpTurnCounter {
 type ChatGptWebAdapterFactory = (provider: CodexProviderConfig) => ProviderAdapter;
 
 export interface ResponseRequestOptions {
+  /** Product chat uses its own instructions without the Codex harness prompt or notices. */
+  toolFreeChat?: boolean;
   /** DEV and other in-process harnesses can keep continuation state in their own canonical store. */
   rememberState?: boolean;
   /** Observe the exact production adapter stream when invoking the handler in-process. */
@@ -564,6 +566,7 @@ export async function responseRequest(
   let route: ChatGptWebModelRoute;
   try {
     parsed = parseRequest(expanded);
+    if (options.toolFreeChat) parsed._toolFreeChat = true;
     route = routeChatGptWebRequest(parsed, config);
     const identity = extractChatGptTurnIdentity(parsed);
     if (identity.threadId && identity.turnId) {
@@ -656,6 +659,7 @@ export async function responseRequest(
   }
 
   const provider = providerConfig(config);
+  if (options.toolFreeChat) provider.chatgptWeb = { ...provider.chatgptWeb, headed: false, useNativeUserAgent: true };
   let traceId: string | undefined;
   try {
     traceId = chatGptWebTraceId(provider, parsed);

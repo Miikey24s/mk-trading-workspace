@@ -9,6 +9,7 @@ import { providerConfig } from "../src/config";
 import { responseRequest } from "../src/server";
 import { extractChatGptTurnIdentity, extractChatGptTurnUserRevision } from "../src/adapters/chatgpt-web/environment";
 import { chatGptTurnExecutionKey, chatGptTurnRoundKey, chatGptThreadOwnershipKey } from "../src/adapters/chatgpt-web/turn-execution";
+import { compileChatGptWebPrompt, chatGptReadOnlyContextWarning } from "../src/adapters/chatgpt-web/prompt";
 
 const root = mkdtempSync(join(tmpdir(), "chatgpt-core-test-"));
 const oldEnvironment = Object.fromEntries(["CODEX_HOME", "CODEX_CHATGPT_WEB_HOME", "ANTIGRAVITY_COCKPIT_HOME", "VI_DUBBER_CORE_MODE", "TYPESAFE_ERROR_CLASSIFICATION", "TYPESAFE_TOOL_DISCOVERY"]
@@ -91,6 +92,7 @@ test("validated requests cross the retained handler with clean headers and no re
     calls++;
     expect(cfg.mode).toBe("browser-only");
     expect(options?.rememberState).toBe(false);
+    expect(options?.toolFreeChat).toBe(true);
     expect(req.headers.has("authorization")).toBe(false);
     expect(req.headers.has("x-codex-turn-metadata")).toBe(false);
     const body = await req.json();
@@ -120,7 +122,16 @@ test("real loopback HTTP uses the retained Responses parser and envelope with a 
       runTurn: async (parsed, incoming, emit) => {
         turns++;
         expect(provider.chatgptWeb?.localToolsEnabled).toBe(false);
+        expect(provider.chatgptWeb?.useNativeUserAgent).toBe(true);
+        expect(provider.chatgptWeb?.headed).toBe(false);
         expect(parsed.context.tools ?? []).toHaveLength(0);
+        expect(parsed._toolFreeChat).toBe(true);
+        const capabilities = { localToolsEnabled: false, solAvailable: true, extraHighAvailable: false, proAvailable: false };
+        const prompt = compileChatGptWebPrompt(parsed, capabilities).text;
+        expect(prompt).toContain(input.input);
+        expect(prompt).not.toContain("codex_context");
+        expect(prompt).not.toContain("Codex task");
+        expect(chatGptReadOnlyContextWarning(parsed, capabilities)).toBeUndefined();
         expect(incoming.headers.has("authorization")).toBe(false);
         const identity = extractChatGptTurnIdentity(parsed);
         expect(identity.threadId).toStartWith("core-");

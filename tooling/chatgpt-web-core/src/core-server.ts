@@ -136,7 +136,7 @@ export function createCoreHandler(config: AppConfig, dependencies: CoreDependenc
         method: "POST", headers: { "content-type": "application/json" },
         body: JSON.stringify({ ...body, input, client_metadata: { "x-codex-turn-metadata": { thread_id: threadId, turn_id: turnId } } }), signal,
       });
-      const result = await (dependencies.respond ?? responseRequest)(clean, config, undefined, { rememberState: false });
+      const result = await (dependencies.respond ?? responseRequest)(clean, config, undefined, { rememberState: false, toolFreeChat: true });
       if (deadline.aborted) return failure(504, "provider_timeout");
       if (req.signal.aborted) return failure(499, "client_cancelled");
       return result;
