@@ -168,14 +168,19 @@ function writeVerificationMarker(
 async function inspectStoredState(
   config: AppConfig,
   storageState: NonNullable<BrowserContextOptions["storageState"]>,
+  signal?: AbortSignal,
 ): Promise<ChatGptWebAccountCapabilities & { url: string }> {
+  signal?.throwIfAborted();
   const verifierBrowser = await chromium.launch({
     executablePath: config.chromeExecutablePath,
     headless: false,
     ignoreDefaultArgs: ["--password-store=basic", "--use-mock-keychain"],
     args: [...CHATGPT_BROWSER_AUTOMATION_ARGS, "--no-first-run", "--no-default-browser-check"],
   });
+  const cancel = () => { void verifierBrowser.close(); };
+  signal?.addEventListener("abort", cancel, { once: true });
   try {
+    signal?.throwIfAborted();
     const verifierContext = await verifierBrowser.newContext({ storageState });
     try {
       const verifierPage = await verifierContext.newPage();
@@ -188,6 +193,7 @@ async function inspectStoredState(
       await verifierContext.close();
     }
   } finally {
+    signal?.removeEventListener("abort", cancel);
     await verifierBrowser.close();
   }
 }
@@ -384,8 +390,10 @@ export async function captureSystemBrowserLoginToFile(
 
 export async function loginToChatGpt(
   config: AppConfig,
-  options: { timeoutMs?: number } = {},
+  options: { timeoutMs?: number; signal?: AbortSignal; onPhase?: (phase: "waiting_for_browser" | "verifying") => void } = {},
 ): Promise<BrowserLoginResult> {
+  const signal = AbortSignal.any([options.signal ?? new AbortController().signal, AbortSignal.timeout(options.timeoutMs ?? SYSTEM_LOGIN_TIMEOUT_MS)]);
+  signal.throwIfAborted();
   if (!existsSync(config.chromeExecutablePath)) {
     throw new Error(`Google Chrome was not found at ${config.chromeExecutablePath}. Pass --chrome with its executable path.`);
   }
@@ -402,22 +410,33 @@ export async function loginToChatGpt(
     "--no-default-browser-check",
     CHATGPT_TEMPORARY_CHAT_URL,
   ], { env: process.env, stdio: "ignore" });
-  const loginExit = await new Promise<number>((resolveExit, rejectExit) => {
-    loginBrowser.once("error", rejectExit);
-    loginBrowser.once("exit", (code, signal) => {
-      if (signal) rejectExit(new Error(`Normal Chrome login window exited from signal ${signal}`));
-      else resolveExit(code ?? 1);
+  options.onPhase?.("waiting_for_browser");
+  const cancelLogin = () => { void stopOwnedLoginBrowser(loginBrowser).catch(() => {}); };
+  signal.addEventListener("abort", cancelLogin, { once: true });
+  if (signal.aborted) cancelLogin();
+  let loginExit: number;
+  try {
+    loginExit = await new Promise<number>((resolveExit, rejectExit) => {
+      loginBrowser.once("error", rejectExit);
+      loginBrowser.once("exit", (code, signal) => {
+        if (signal) rejectExit(new Error(`Normal Chrome login window exited from signal ${signal}`));
+        else resolveExit(code ?? 1);
+      });
     });
-  });
+  } finally { signal.removeEventListener("abort", cancelLogin); }
+  signal.throwIfAborted();
   if (loginExit !== 0) throw new Error(`Normal Chrome login window exited with status ${loginExit}`);
-
+  options.onPhase?.("verifying");
   const context = await chromium.launchPersistentContext(profileDir, {
     executablePath: config.chromeExecutablePath,
     headless: false,
     ignoreDefaultArgs: ["--password-store=basic", "--use-mock-keychain"],
-    args: [...CHATGPT_BROWSER_AUTOMATION_ARGS, "--no-first-run", "--no-default-browser-check", "--restore-last-session"],
+    args: [...CHATGPT_BROWSER_AUTOMATION_ARGS, "--no-first-run", "--no-default-browser-check"],
   });
+  const cancelVerification = () => { void context.close(); };
+  signal.addEventListener("abort", cancelVerification, { once: true });
   try {
+    signal.throwIfAborted();
     const page = context.pages()[0] ?? await context.newPage();
     await page.goto(CHATGPT_TEMPORARY_CHAT_URL, {
       waitUntil: "domcontentloaded",
@@ -431,9 +450,10 @@ export async function loginToChatGpt(
     }
     await assertAuthenticatedChatGptPage(page);
     await assertTemporaryChatPage(page);
-    const state = await context.storageState();
+    const state = sanitizeBrowserLoginStorageState(await context.storageState());
 
-    const inspected = await inspectStoredState(config, state);
+    const inspected = await inspectStoredState(config, state, signal);
+    signal.throwIfAborted();
     atomicWriteFile(config.storageStatePath, `${JSON.stringify(state)}\n`);
     writeVerificationMarker(config.storageStatePath, inspected);
     return {
@@ -444,6 +464,7 @@ export async function loginToChatGpt(
       proAvailable: inspected.proAvailable,
     };
   } finally {
+    signal.removeEventListener("abort", cancelVerification);
     await context.close();
     if (browserLoginStateExists(config)) rmSync(profileDir, { recursive: true, force: true });
   }

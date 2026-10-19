@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "start": "bun run src/core-cli.ts",
-    "test": "bun test ./tests/core.test.ts",
+    "test": "bun test ./tests/core.test.ts ./tests/core-account.test.ts ./tests/chatgpt-model-selection.test.ts",
     "test:transport": "bun test ./tests/browser-login.test.ts ./tests/browser-response-dom.test.ts ./tests/browser-worker-contract.test.ts ./tests/chatgpt-web-models.test.ts ./tests/server-models.test.ts ./tests/http-body.test.ts",
     "typecheck": "bun x --no-install --bun tsc --noEmit"
   },

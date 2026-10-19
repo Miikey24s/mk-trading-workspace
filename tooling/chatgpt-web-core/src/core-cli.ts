@@ -3,6 +3,7 @@ import { saveConfig } from "./config";
 import { closeChatGptBrowserWorkers } from "./adapters/chatgpt-web/browser-worker";
 import { initializeCore, loadCore } from "./core-profile";
 import { createCoreHandler } from "./core-server";
+import { CoreAccount } from "./core-account";
 
 async function main() {
   const args = process.argv.slice(2);
@@ -21,8 +22,8 @@ async function main() {
   }
   const home = options.get("--home");
   if (!home) throw new Error("--home is required; global profiles are never used");
-  if (command !== "init" && options.has("--port")) throw new Error("--port is only supported by init");
-  const config = command === "init" ? initializeCore(home, Number(options.get("--port"))) : loadCore(home);
+  if (!["init", "serve"].includes(command) && options.has("--port")) throw new Error("--port is only supported by init or serve");
+  const config = command === "init" || options.has("--port") ? initializeCore(home, Number(options.get("--port"))) : loadCore(home);
   if (command === "init" || command === "status") {
     console.log(JSON.stringify({ service: "chatgpt-web-core", home, port: config.port, profile: "tool-free",
       login_state_present: browserLoginStateExists(config), transport_probed: false }));
@@ -37,12 +38,23 @@ async function main() {
     console.log("Dedicated login verified; account model capabilities updated.");
     return;
   }
+  let handler: ReturnType<typeof createCoreHandler>;
+  const account = new CoreAccount(config, async (selection, signal) => {
+    const result = await handler(new Request("http://127.0.0.1/v1/responses", { method: "POST", signal,
+      headers: { authorization: `Bearer ${config.controlToken}`, "content-type": "application/json" },
+      body: JSON.stringify({ model: selection.model, reasoning: { effort: selection.effort }, input: "Reply exactly OK.", stream: false, store: false }) }));
+    const body = await result.json();
+    return result.ok && body.status === "completed" && Array.isArray(body.output)
+      && body.output.some((item: { content?: { text?: string }[] }) => item.content?.some(part => !!part.text?.trim()));
+  });
+  handler = createCoreHandler(config, { account });
   const server = Bun.serve({ hostname: "127.0.0.1", port: config.port, idleTimeout: 0,
-    maxRequestBodySize: 65536, fetch: createCoreHandler(config) });
+    maxRequestBodySize: 65536, fetch: handler });
   let stopping = false;
   const stop = async () => {
     if (stopping) return;
     stopping = true;
+    await account.cancel();
     await server.stop(true);
     await closeChatGptBrowserWorkers();
     process.exit(0);

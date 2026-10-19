@@ -8,7 +8,8 @@ cho MT5 và VI Dubber. Hiện ưu tiên MT5; VI Dubber chưa chuyển runtime.
 ## Phạm vi
 
 Điểm vào được hỗ trợ là `src/core-cli.ts`, chỉ có `init`, `status`, `login`,
-`serve`, bắt buộc home riêng. HTTP chỉ mở health/models/responses. Requests
+`serve`, bắt buộc home riêng. HTTP mở health/models/responses và API quản lý
+account riêng cho backend (`/core/account`). Requests
 text-only, tool-free, không stream hoặc nối history tự động; một request mỗi
 lần, tối đa64KiB và deadline180giây. Data routes cần bearer token trong config
 private; browser Origin bị chặn. Không chạy UI Cockpit, harness, MCP hoặc agents.
@@ -30,6 +31,7 @@ bun run test:transport
 Dùng Bun1.4.2 theo package/lock. Cần Chrome để login và gửi yêu cầu thật.
 Hướng dẫn consumer đầu tiên: [MT5 ChatGPT Web](../../projects/mt5-tradingview-backtester/foundation_v2/docs/CHATGPT-WEB.md).
 Không có bước tự đăng nhập, tự tạo service nền hoặc đổi route global.
+MT5 khởi động và sở hữu runtime khi owner bấm kết nối; tiến trình dừng cùng API.
 
 ## Source và quyền sử dụng
 
@@ -41,6 +43,18 @@ làm sai hash. bun.lock đổi tên root package; hai file có cleanup whitespac
 giữ thêm hash source gốc trong manifest.
 Không nhập Git history vì source cũ ghi nhận historical credentials.
 Không copy browser state, config/token, cache, node_modules hoặc runtime.
+
+Đã đối chiếu release upstream **v6.1.11** (`9fe005eefb93913c138368b0972b8a0c476fcf54`)
+và lấy chọn lọc catalog GPT‑6 Sol, bộ chọn model mới và kiểm tra đúng phiên bản
+trước khi gửi. Không tự đồng bộ toàn bộ upstream: một số module còn giữ baseline
+VI đã kiểm chứng, cùng sửa riêng cho login/cancel và giới hạn tool-free.
+`SOURCE-MANIFEST.json` ghi hash baseline, hash hiện tại và revision đối chiếu.
+
+Account API có login/probe bất đồng bộ, selection, cancel và disconnect. Status
+không xuất cookie/token/email. `saved` chỉ chứng minh có state đã lưu; `connected`
+là xác minh trong tiến trình hiện tại; `test` chỉ có sau phản hồi model hoàn tất.
+Catalog không chứng minh entitlement từng model. Disconnect xóa browser state
+của profile này; không đăng xuất tài khoản trên thiết bị khác.
 
 Đây là kết nối browser không chính thức, không phải OpenAI API. Khả năng model
 phụ thuộc tài khoản và trạng thái login; catalog quảng bá theo khả năng đã ghi

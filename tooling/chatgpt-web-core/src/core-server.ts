@@ -1,11 +1,13 @@
 import { timingSafeEqual } from "node:crypto";
 import { browserLoginStateExists } from "./browser-login";
 import type { AppConfig } from "./config";
+import type { CoreAccount } from "./core-account";
 import { modelsRequest, responseRequest } from "./server";
 
 const MAX_BYTES = 65536;
 const ALLOWED_FIELDS = new Set(["model", "instructions", "input", "reasoning", "stream", "store", "text", "max_output_tokens"]);
 type CoreDependencies = {
+  account?: CoreAccount;
   models?: typeof modelsRequest;
   respond?: typeof responseRequest;
   loginPresent?: typeof browserLoginStateExists;
@@ -72,6 +74,7 @@ async function readBoundedJson(req: Request): Promise<unknown> {
 
 export function createCoreHandler(config: AppConfig, dependencies: CoreDependencies = {}) {
   let busy = false;
+  let managingAccount = false;
   return async (req: Request): Promise<Response> => {
     const path = new URL(req.url).pathname;
     // Browser pages cannot use the caller's private local transport.
@@ -85,9 +88,28 @@ export function createCoreHandler(config: AppConfig, dependencies: CoreDependenc
     const expected = Buffer.from(`Bearer ${config.controlToken}`);
     const actual = Buffer.from(req.headers.get("authorization") ?? "");
     if (actual.length !== expected.length || !timingSafeEqual(actual, expected)) return failure(401, "unauthorized");
+    if (dependencies.account && path.startsWith("/core/account")) {
+      const account = dependencies.account;
+      if (req.method === "GET" && path === "/core/account") return Response.json(account.status());
+      if (req.method !== "POST" || !["login", "probe", "selection", "cancel", "disconnect"].some(action => path === `/core/account/${action}`)) return failure(404, "not_found");
+      if (managingAccount) return failure(409, "account_busy");
+      if (busy && !(account.busy && (path.endsWith("/cancel") || path.endsWith("/disconnect")))) return failure(409, "provider_busy");
+      managingAccount = true;
+      try {
+        const body = await readBoundedJson(req);
+        if (path.endsWith("/selection")) return Response.json(account.select(body));
+        if (!body || typeof body !== "object" || Array.isArray(body) || Object.keys(body).length) return failure(400, "invalid_request");
+        if (path.endsWith("/cancel")) return Response.json(await account.cancel());
+        if (path.endsWith("/disconnect")) return Response.json(await account.disconnect());
+        return Response.json(account.start(path.endsWith("/login") ? "login" : "probe"), { status: 202 });
+      } catch (error) {
+        const code = error instanceof Error && ["account_busy", "login_required", "invalid_selection"].includes(error.message) ? error.message : "account_action_failed";
+        return failure(code === "account_busy" ? 409 : 400, code);
+      } finally { managingAccount = false; }
+    }
     if (req.method === "GET" && path === "/v1/models") return (dependencies.models ?? modelsRequest)(req, config);
     if (req.method !== "POST" || path !== "/v1/responses") return failure(404, "not_found");
-    if (busy) return failure(429, "provider_busy");
+    if (busy || managingAccount || dependencies.account?.status().operation?.kind === "login") return failure(429, "provider_busy");
     busy = true;
     const deadline = AbortSignal.timeout(dependencies.timeoutMs ?? 180000);
     try {
