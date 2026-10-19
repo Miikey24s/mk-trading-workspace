@@ -1,0 +1,400 @@
+{
+  "upstream": "https://github.com/miuuyy/codex-chatgpt-web",
+  "source_revision": "3bde59b375e450a25b0d9a365d778b2c8ade55df",
+  "source_lineage": "Cockpit-custom v5.0.8 -> isolated VI Dubber core",
+  "imported_at": "2026-10-19",
+  "history_imported": false,
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "d8b06e8d802722749b8f09e4ed1f2439fde0995a09b7e47c65dca3cc54d43d6e"
+    },
+    {
+      "path": "LICENSES/Bun-1.4.0.md",
+      "sha256": "2cb858b2db8fc793bca2093489c5bc8eee615d002cc4924254904044c27a0afa"
+    },
+    {
+      "path": "LICENSES/libnotify-0.8.7-LGPL-2.1.md",
+      "sha256": "fb293dcf753752a80c7bec86cd406b53c55b086c1f1bbf71425ce437ea3f1e4c"
+    },
+    {
+      "path": "LICENSES/tiktoken-MIT.txt",
+      "sha256": "418cb499b436128d653d79941333a5437b7be2ea9213dcc2f04d15d5d2c51d86"
+    },
+    {
+      "path": "bun.lock",
+      "sha256": "269d4b7026f972d1da13ad7905aec645bf6c4715dcae4ed39e8027d911f050b6"
+    },
+    {
+      "path": "src/adapters/base.ts",
+      "sha256": "8441cdd6621d8fcd700383a07c01a234029b3adea854fc6f79119bdcc58ea4f2"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/adapter-error.ts",
+      "sha256": "64cd38d8cb168ccdaa04011999da9bba86916ea332faff1fc834a582392eb033"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/browser-helper-main.ts",
+      "sha256": "07cd7acfbe7858d50b08cfb5bf25281b3a206531b43a1b0dda88a112c58fc713"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/browser-helper-prompt-selection.ts",
+      "sha256": "72e0293b5aad62d99525e3e8552f5ddc1b702dab8520837a2128ea5e4dc6a96f"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/browser-worker.ts",
+      "sha256": "88064dc8d02dbf858b3ad7a45c62fd44c808d63e44094aa4bdee3d40d77ea7b2"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/codex-rollout-environment.ts",
+      "sha256": "8acf45ac4f85216174e1fc70cd2439a63f4c06082869b92ae97b6df4fed5f98d"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/compaction-continuation.ts",
+      "sha256": "722511cbc12788329d8fc1f19b01d04bf658a9bc4a1438f43e0a4989198e2ee1"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/compaction-handoff.ts",
+      "sha256": "eb7219de63b934b3ef3fcdb76bfd2ecae98943d4ef63f25f45a6cfd4b5a12946"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/compaction-transaction.ts",
+      "sha256": "f391d1fc43aee6a9dba17ceb10ac52f081481f9b5ae5d87f692085f3a48db77a"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/concurrency.ts",
+      "sha256": "4f826fac9913c3fcb468c92d46f58d9f46ad1da2b478a66a748de3a54ade0c83"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/conversation-key.ts",
+      "sha256": "536c5de53852e4073ad7ddffc31b3cbf28bbfd292967154495a8812d8b978ca0"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/environment.ts",
+      "sha256": "62b1468a32f2667a397a659a547d998dd14cf86d8b2827ec10177feca380e49f"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/index.ts",
+      "sha256": "67d3593d3aa66e1cdf1b416e05e0cbab4b42c9c1bb9bd9806a3667bef882bf95"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/input-tokens.ts",
+      "sha256": "7ae84e1ff914bc0c1338bac839c8a3759d009d81305d7b3c76bb34626dca8949"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/launcher-helper-client.ts",
+      "sha256": "6a0ca233efdf587751d7151ea25e47ae0b25276f00f3c37c78da386f63cd6c7e"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/markdown.ts",
+      "sha256": "2ddae8abc1df4b2a9873de5185871af41d797762fcd7d00fc9cb85f32a61eeb4"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/mcp-main.ts",
+      "sha256": "1d648681cf0d2481236c1ec5b2bc90836474725bdc34252b06a2f47f440fe317"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/mcp-observation.ts",
+      "sha256": "d1f69c11536327bde1ecb5c19cd8c1dd727b2e9d115585e3ae9a3f121afe70fe"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/mcp-server.ts",
+      "sha256": "cd361f7da2a312a758fc2f4d86c14efb923d99b0df6ed4d7899fb87f13e7c8b6"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/model-selection.ts",
+      "sha256": "1b6083f9cf59fe5cc84816ae9941743d4ac6b892df2da00f891729065f53fcac"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/model.ts",
+      "sha256": "95330db2ec89c0c58fb59050f1946b7326efa5d37f6c8225fc6fd6d8e7cc1611"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/native-compaction-control.ts",
+      "sha256": "1a9f77a76bb896a0c32e297108a5fd39ea1613c0f1188d8dc711bb2524f4375a"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/output-validation.ts",
+      "sha256": "f8e7e2c1fde027d0388a8a83241884c93729a41f2c3932b5d92e630a77db29fc"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/process-line-writer.ts",
+      "sha256": "727b115fc87663fdf476ec5af6fbb4763093d14da706780b9067dc180c0af91d"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/prompt.ts",
+      "sha256": "2b6a5b44e2bd8ed079e83dae35551a8a6b847e70c6479812e24e55dbd001b185"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/retry-policy.ts",
+      "sha256": "70c49df9b0baa80e997fd3c25c8efe50062f54e2cf49c863654df15a89a188e9"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/rolling-checkpoint.ts",
+      "sha256": "6e8e624f555cd42f1a5e32ab222b8494d1bdccf5f6e503e9557548845f283365"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/skill-attachments.ts",
+      "sha256": "eec8b77fb38954240375e862e7ed5a17d84426cc0f971c70c800061e302ff817"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/thread-environment.ts",
+      "sha256": "d49fe286e6e08768bc1bdfab9db270b132cd45e63553631bf86fd175dd5549b7"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/turn-broker.ts",
+      "sha256": "7ba0840aa674471da263c5ea745d6cbfec90018939acae8328168bf4dd13f692"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/turn-execution.ts",
+      "sha256": "aeb78372b7e202673725edfede287f63af450164c167bcb50be8ccb4444abb96"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/turn-progress.ts",
+      "sha256": "acbe4450cf7e7f6fd5f1507af6af88e78edd1b59f5e571177a2cf4eb6413f71e"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/ui-labels.ts",
+      "sha256": "3ffe3bba94951f7fe7aa98cb686ed8121f3ef5c0cca09c3bcc4fbb5f51ac3346"
+    },
+    {
+      "path": "src/adapters/chatgpt-web/usage.ts",
+      "sha256": "f505a3d183cce15b7e1932b004aa0814070b7e247a5e4bc5664c86ab85d52e36"
+    },
+    {
+      "path": "src/adapters/image.ts",
+      "sha256": "daabf37ff2147c319020e5675743e0ef1c8757bf29bb451a255f171a6ed471fb"
+    },
+    {
+      "path": "src/bridge.ts",
+      "sha256": "720408cb98557ddd430bbdbe28af8f70afbdbf700b60746d839b8a205c6dba1e"
+    },
+    {
+      "path": "src/browser-login.ts",
+      "sha256": "3422abab0015d9053b185ce369f9541617674f3b261ca673e41bd6626c9774cf"
+    },
+    {
+      "path": "src/chatgpt-session.ts",
+      "sha256": "ab8a117bb7a6c3d5b0c3b4223dac590752d6ec65f3cf7aa70a58542f3e40c56f"
+    },
+    {
+      "path": "src/chatgpt-web-models.ts",
+      "sha256": "a29b7ffb49b16b73043911395598d2aafe3fe454efd25dfd8e592febfba758e2"
+    },
+    {
+      "path": "src/cli.ts",
+      "sha256": "a655b73b3fa04d025c9e8ac953537a9dadc5e6f42ce2251cdbc664980048d515",
+      "upstream_sha256": "d173b5d5f7a5313f0b7ca97855833e4c00d048f7dea3d9a8ac40c207cb98e6e6"
+    },
+    {
+      "path": "src/cockpit.ts",
+      "sha256": "89e9fe319582f252cbe2459facb760326cc27ce80503e07e388f9f8a9631d245"
+    },
+    {
+      "path": "src/codex-integration-document.ts",
+      "sha256": "f358623998662de2673f66e8ba6cb88f2b9f8d7c897965a7686fc5495b27792b"
+    },
+    {
+      "path": "src/codex-integration-journal.ts",
+      "sha256": "bcc7cb5f960493bcc8651b889cfcb59287e24dc1eb74aede2cd7b4cde247d812"
+    },
+    {
+      "path": "src/codex-integration-route.ts",
+      "sha256": "99079e983be7247fa0385b05a13be0151954bffd9ef818aecb42104e415ca8c6"
+    },
+    {
+      "path": "src/codex-integration-shared.ts",
+      "sha256": "1d27e33582fe30fc7404ef88b17c07af4b5cb2b02f01854adb67dc6beb5c6e36"
+    },
+    {
+      "path": "src/codex-integration.ts",
+      "sha256": "1e2248906fc2d0bdb87b30f7ceba080932e1754bc99838040bbc72ec10c2252d"
+    },
+    {
+      "path": "src/codex-interrupt-hook.ts",
+      "sha256": "675a94580f558354ebe242957b9faedf6029dd1f79449f71c1d44d488afea416",
+      "upstream_sha256": "10af543c736c7b91df47f7b22797bb3e840123c4a25f59bca7f3dfcd2469ceaf"
+    },
+    {
+      "path": "src/config.ts",
+      "sha256": "9af750f54f58a864da969fbda6ed856d81d17615f42eabe7121688c580ed0d98"
+    },
+    {
+      "path": "src/dev-chat/cli.ts",
+      "sha256": "c94e6a3fb858d09d2b96d3edbba630867ef9f3860702675b0d649cfc92bf9a8c"
+    },
+    {
+      "path": "src/dev-chat/constants.ts",
+      "sha256": "9283b1e0cb36794d4b3adb9f08fdaf667a1bc0600b130fc026ec82608ad77389"
+    },
+    {
+      "path": "src/dev-chat/driver.ts",
+      "sha256": "9cdb7e662415d4013d8980be222cd6da8702811b3d9e47456bb97eca7cadbe95"
+    },
+    {
+      "path": "src/dev-chat/profile.ts",
+      "sha256": "76f098cc6fee783821135eee8393b9098d6d22551d1847188b8ae3ab0d3ccef3"
+    },
+    {
+      "path": "src/dev-chat/session.ts",
+      "sha256": "396b28557dd9885a3ac855278cc9e086fe235a2a12d009bb37960392c08b36db"
+    },
+    {
+      "path": "src/dev-chat/transport.ts",
+      "sha256": "88c9ccb3d05642765e2115087b96f20018011590eb09b40e1e7424e49955f44b"
+    },
+    {
+      "path": "src/doctor.ts",
+      "sha256": "3f0bb86679efa3db67864b51a124577bd61c62f0f1b5439c40a32b5c5b0d60cd"
+    },
+    {
+      "path": "src/event-queue.ts",
+      "sha256": "21f3be62898aeb317e785e128c2c325b2c6942ab552f82077d0c121c7a73fb88"
+    },
+    {
+      "path": "src/http-body.ts",
+      "sha256": "de03e4dd84d4732b9d1c6a7fa448bef6b318b50e3ef3b4a8b826896ae6189400"
+    },
+    {
+      "path": "src/launcher-browser-host.ts",
+      "sha256": "9d4d617defaeefb7d6c5d2016bce6403cc7da5a7a82653df038a0bc0706b7ea1"
+    },
+    {
+      "path": "src/lib/errors.ts",
+      "sha256": "1e9ecf1edffbe63d1c190bc060639bd394596253eb3ff809d523e229232d5939"
+    },
+    {
+      "path": "src/lib/token-estimate.ts",
+      "sha256": "ee52458858218eac6d9f012c1cec2955f4c04e14ad176851905c99f9942a2727"
+    },
+    {
+      "path": "src/model-catalog.ts",
+      "sha256": "9e282ee139fc50cedca3b50f2b67cf09a36242aa95f74b70bcf733e10e7b3c71"
+    },
+    {
+      "path": "src/native-network.ts",
+      "sha256": "d6ff1f4d13d67c54e72c92d5d1cb20c2eadcf6688c7d1df48c73c6f27d164b5e"
+    },
+    {
+      "path": "src/native-passthrough.ts",
+      "sha256": "9da225f9581e19914ed192ba4ccaf17c6b99f4eafa78aa6d30b426d164b4f22e"
+    },
+    {
+      "path": "src/process.ts",
+      "sha256": "788126f540921897b9d978af25b8b4de992ec2b088d1cb908c2ea1b330fc3e6a"
+    },
+    {
+      "path": "src/responses/compaction.ts",
+      "sha256": "fa588d39909d36778f36c01beac22608b7c0750aa3c02a914d1c5e4d6e9e9bcc"
+    },
+    {
+      "path": "src/responses/parser.ts",
+      "sha256": "f6fd53de3cd8ade71071082f26fc51ccaf26b244d6eae05f0806d62d5154b6c3"
+    },
+    {
+      "path": "src/responses/reasoning-envelope.ts",
+      "sha256": "5df8453122d8816358a013b6b96d4e53a0d2d3820a741754fc68622feebc3fe8"
+    },
+    {
+      "path": "src/responses/schema.ts",
+      "sha256": "8be73a8ebd278e1254fe615327eb85bed636f35d51ad752053f549fb3e2d1653"
+    },
+    {
+      "path": "src/responses/state.ts",
+      "sha256": "c23ffd95cf3d2c2c2c48e4c7349967a8d7e0d7151ce91ef0f1e8f66ba3b13363"
+    },
+    {
+      "path": "src/server.ts",
+      "sha256": "211533cdc79edb71fec457a456dde6150eb41c2b1ab75765b941b47da7a450b8"
+    },
+    {
+      "path": "src/service.ts",
+      "sha256": "a9026e84b3fd825ade6c9d69faaf208faef83662b504d12f64ef2dbcff2b0542"
+    },
+    {
+      "path": "src/setup.ts",
+      "sha256": "a9e22414ef9e43f62f3a25e66e3dc19d827167db67659ef2bfc5c901aea14982"
+    },
+    {
+      "path": "src/stall-timeout.ts",
+      "sha256": "3be4873187e20953627e3d9b59f65a52194756eb947384075b35ab9d0ce6a9f0"
+    },
+    {
+      "path": "src/tunnel-service.ts",
+      "sha256": "68ee49353a0bc1a5e4d8d6d6b6ee5e148fc89cd64d602d7307cc389c0fcb8511"
+    },
+    {
+      "path": "src/tunnel.ts",
+      "sha256": "ee1426a2b2b397d65452808ec397707b4a1d8676d63371e36af1fd901f433510"
+    },
+    {
+      "path": "src/turndown-plugin-gfm.d.ts",
+      "sha256": "ea990b5626ea8873e7b47591225d19b6b4c3816331cd5fc4980118779768bfd5"
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "e87ada4f4c9da30e606c07fb1b71b2f04b8c17de72fc08be8f35a38ebcad121e"
+    },
+    {
+      "path": "src/typesafe/client.ts",
+      "sha256": "0a90979761eb08430e028a928f5f8fe46d891df80cafd11741bd7f088bbd971e"
+    },
+    {
+      "path": "src/typesafe/config.ts",
+      "sha256": "fb610ed95f85eeadb3fc7cb8e2f1540075245bab5959d486c551c54de15b1d86"
+    },
+    {
+      "path": "src/typesafe/error-classifier.ts",
+      "sha256": "bf8165feebee86ebf170d7ee9e6c12c13c99bf6b246adb30f62527462811d70c"
+    },
+    {
+      "path": "src/typesafe/tool-discovery.ts",
+      "sha256": "cf4a9fad487c5eb3adac8429c632e1b2850038ac89dda0469288f98b9cf9025d"
+    },
+    {
+      "path": "src/typesafe/types.ts",
+      "sha256": "5ac32f9caca0e2be36e929808032d46a494e465d8d8d824ba42dff6b88bcd50a"
+    },
+    {
+      "path": "src/usage/totals.ts",
+      "sha256": "c2f05d79c896c9719dade24b0d31f2824abf86e7e77aacb3843f7fd32d2d8c13"
+    },
+    {
+      "path": "src/version.ts",
+      "sha256": "49467375bdccfe74565ee87122bad3bc2890b3a9b458169554c7d6da21fdab77"
+    },
+    {
+      "path": "tests/browser-login.test.ts",
+      "sha256": "8bc77011036c15de2a271fa4d2c7995b96e4efddf5ebc78a11af64e0c13187ce"
+    },
+    {
+      "path": "tests/browser-response-dom.test.ts",
+      "sha256": "62be70795123c0d75c068d837b2a1b616d6410dba855a03005853244d869620c"
+    },
+    {
+      "path": "tests/browser-worker-contract.test.ts",
+      "sha256": "0705ce5a4aac8637106312b5438e124fe39f3ba0c22d6056545f2b6ffabb9dcb"
+    },
+    {
+      "path": "tests/chatgpt-web-models.test.ts",
+      "sha256": "5744500af383d659a3df5eca98a2f97437636ac9e5052adbb7c3f32930213a63"
+    },
+    {
+      "path": "tests/server-models.test.ts",
+      "sha256": "12784a9f8f7671dac5f09a4798090424d21c2fb364959283ede59ae9d205bfdd"
+    },
+    {
+      "path": "tests/http-body.test.ts",
+      "sha256": "25f861514628a697f87279e37c8c668619164396dd1b193871ae8768ab41d640"
+    },
+    {
+      "path": "tests/fixtures/chatgpt-dil-smoke.html",
+      "sha256": "848a24b7f7db7204bb0ddeb701e8b614d0929a0728e4cb9bc37fb7ae28d52388"
+    }
+  ],
+  "content_normalization": "UTF-8 LF, enforced by .gitattributes",
+  "local_adjustments": [
+    "bun.lock root package name",
+    "Whitespace-only cleanup in src/cli.ts and src/codex-interrupt-hook.ts; original LF hashes retained"
+  ]
+}

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.runtime/
+.env
+*.log
+*.pid
+*.key
+storage-state*.json
+config.json
+runtime/
+browser/
+coverage/

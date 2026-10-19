@@ -1,0 +1,58 @@
+{
+  "name": "chatgpt-web-core",
+  "version": "5.0.8",
+  "private": true,
+  "description": "Workspace-scoped, tool-free ChatGPT Web Responses transport.",
+  "packageManager": "bun@1.4.2",
+  "type": "module",
+  "bin": {
+    "chatgpt-web-core": "./src/core-cli.ts"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE",
+    "LICENSES",
+    "SOURCE-MANIFEST.json"
+  ],
+  "scripts": {
+    "start": "bun run src/core-cli.ts",
+    "test": "bun test ./tests/core.test.ts",
+    "test:transport": "bun test ./tests/browser-login.test.ts ./tests/browser-response-dom.test.ts ./tests/browser-worker-contract.test.ts ./tests/chatgpt-web-models.test.ts ./tests/server-models.test.ts ./tests/http-body.test.ts",
+    "typecheck": "bun x --no-install --bun tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "chromium-bidi": "12.1.0",
+    "fflate": "^0.8.2",
+    "playwright-core": "^1.62.0",
+    "tiktoken": "1.0.22",
+    "turndown": "7.2.0",
+    "turndown-plugin-gfm": "1.0.2",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.0",
+    "@types/turndown": "5.0.5",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "bun": "1.4.2"
+  },
+  "overrides": {
+    "@hono/node-server": "2.0.12",
+    "fast-uri": "3.1.6",
+    "hono": "4.13.5",
+    "qs": "6.16.0",
+    "zod-to-json-schema": "3.25.1"
+  },
+  "keywords": [
+    "chatgpt",
+    "responses-api",
+    "provider",
+    "webgpt-core"
+  ],
+  "license": "MIT"
+}

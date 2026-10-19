@@ -35,7 +35,7 @@ Workspace chưa được nghiệm thu như một sản phẩm thống nhất. MT
 | `education/` | Course, bài tập và tiến độ học. |
 | `UI-Systems/` | Nền UI dùng chung, tokens và công cụ export được lưu trực tiếp trong repo; xem [UI Systems](UI-Systems/README.md). |
 | `UI/` | Hợp đồng UI đặc thù trading; xem [UI README](UI/README.md). |
-| `tooling/` | [Agent workflow](tooling/agent-workflow/README.md), [UI QA](tooling/ui-qa/README.md), [run registry](tooling/run_registry/README.md). `reverse-skill/` là submodule tham khảo riêng. |
+| `tooling/` | [ChatGPT Web core](tooling/chatgpt-web-core/README.md), [Agent workflow](tooling/agent-workflow/README.md), [UI QA](tooling/ui-qa/README.md), [run registry](tooling/run_registry/README.md). `reverse-skill/` là submodule tham khảo riêng. |
 | `miro/` | Tài liệu sơ đồ kiến trúc. |
 
 Các bản tải website, worktree nghiệm thu, cache, model, database và media không phải toàn bộ đều là source cần commit. File bị Git bỏ qua cũng có thể là dữ liệu duy nhất của người dùng; phải kiểm tra trước khi xoá.
