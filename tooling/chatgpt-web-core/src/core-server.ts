@@ -1,4 +1,4 @@
-import { timingSafeEqual } from "node:crypto";
+import { randomUUID, timingSafeEqual } from "node:crypto";
 import { browserLoginStateExists } from "./browser-login";
 import type { AppConfig } from "./config";
 import type { CoreAccount } from "./core-account";
@@ -42,6 +42,7 @@ export function validateCoreRequest(value: unknown): Record<string, unknown> {
           || typeof (part as { text?: unknown }).text !== "string")) throw new Error("text_messages_required");
     }
   } else throw new Error("text_input_required");
+  if (Array.isArray(body.input) && body.input.at(-1).role !== "user") throw new Error("user_message_required");
   return { ...body, stream: false, store: false };
 }
 
@@ -73,6 +74,7 @@ async function readBoundedJson(req: Request): Promise<unknown> {
 }
 
 export function createCoreHandler(config: AppConfig, dependencies: CoreDependencies = {}) {
+  const threadId = `core-${randomUUID()}`;
   let busy = false;
   let managingAccount = false;
   return async (req: Request): Promise<Response> => {
@@ -121,9 +123,18 @@ export function createCoreHandler(config: AppConfig, dependencies: CoreDependenc
       }
       if (!(dependencies.loginPresent ?? browserLoginStateExists)(config)) return failure(503, "login_required");
       const signal = AbortSignal.any([req.signal, deadline]);
+      // Upstream owns browser turns by identity even without tools. Generate it here,
+      // after validation; accepting caller lifecycle metadata would mix app ownership.
+      const turnId = randomUUID();
+      const input: Record<string, unknown>[] = typeof body.input === "string"
+        ? [{ type: "message", role: "user", content: body.input }]
+        : (body.input as Record<string, unknown>[]).map(message => ({ ...message, type: "message" }));
+      const last = input.length - 1;
+      input[last] = { ...input[last], internal_chat_message_metadata_passthrough: { turn_id: turnId } };
       // Rebuild headers and body so no Codex identity, tool registry or prior-response state enters the bridge.
       const clean = new Request("http://127.0.0.1/v1/responses", {
-        method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body), signal,
+        method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ ...body, input, client_metadata: { "x-codex-turn-metadata": { thread_id: threadId, turn_id: turnId } } }), signal,
       });
       const result = await (dependencies.respond ?? responseRequest)(clean, config, undefined, { rememberState: false });
       if (deadline.aborted) return failure(504, "provider_timeout");

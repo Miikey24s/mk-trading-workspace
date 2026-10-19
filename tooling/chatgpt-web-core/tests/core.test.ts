@@ -7,6 +7,8 @@ import { assertCoreProfile, initializeCore, loadCore } from "../src/core-profile
 import { createCoreHandler, validateCoreRequest } from "../src/core-server";
 import { providerConfig } from "../src/config";
 import { responseRequest } from "../src/server";
+import { extractChatGptTurnIdentity, extractChatGptTurnUserRevision } from "../src/adapters/chatgpt-web/environment";
+import { chatGptTurnExecutionKey, chatGptTurnRoundKey, chatGptThreadOwnershipKey } from "../src/adapters/chatgpt-web/turn-execution";
 
 const root = mkdtempSync(join(tmpdir(), "chatgpt-core-test-"));
 const oldEnvironment = Object.fromEntries(["CODEX_HOME", "CODEX_CHATGPT_WEB_HOME", "ANTIGRAVITY_COCKPIT_HOME", "VI_DUBBER_CORE_MODE", "TYPESAFE_ERROR_CLASSIFICATION", "TYPESAFE_TOOL_DISCOVERY"]
@@ -82,18 +84,30 @@ test("HTTP surface authenticates and does not expose agents, global controls or 
 
 test("validated requests cross the retained handler with clean headers and no response-state storage", async () => {
   let calls = 0;
+  const identities: { thread_id: string; turn_id: string }[] = [];
   const handler = createCoreHandler(config, { loginPresent: () => true, respond: async (req, cfg, factory, options) => {
     calls++;
     expect(cfg.mode).toBe("browser-only");
     expect(options?.rememberState).toBe(false);
     expect(req.headers.has("authorization")).toBe(false);
     expect(req.headers.has("x-codex-turn-metadata")).toBe(false);
-    expect(await req.json()).toEqual({ ...input, stream: false, store: false });
+    const body = await req.json();
+    const identity = body.client_metadata["x-codex-turn-metadata"];
+    expect(identity.thread_id).toStartWith("core-");
+    expect(identity.turn_id).toMatch(/^[0-9a-f-]{36}$/);
+    expect(Object.keys(identity).sort()).toEqual(["thread_id", "turn_id"]);
+    expect(body.input).toEqual([{ type: "message", role: "user", content: input.input,
+      internal_chat_message_metadata_passthrough: { turn_id: identity.turn_id } }]);
+    identities.push(identity);
     return Response.json({ status: "completed", output: [{ type: "message", content: [{ type: "output_text", text: "draft" }] }] });
   } });
   const response = await handler(request(input, "/v1/responses", { "x-codex-turn-metadata": "untrusted" }));
   expect((await response.json()).status).toBe("completed");
   expect(calls).toBe(1);
+  await handler(request());
+  expect(identities[1]!.thread_id).toBe(identities[0]!.thread_id);
+  expect(identities[1]!.turn_id).not.toBe(identities[0]!.turn_id);
+  expect(() => validateCoreRequest({ ...input, input: [{ role: "assistant", content: "no user turn" }] })).toThrow("user_message_required");
 });
 
 test("real loopback HTTP uses the retained Responses parser and envelope with a synthetic model adapter", async () => {
@@ -106,6 +120,13 @@ test("real loopback HTTP uses the retained Responses parser and envelope with a 
         expect(provider.chatgptWeb?.localToolsEnabled).toBe(false);
         expect(parsed.context.tools ?? []).toHaveLength(0);
         expect(incoming.headers.has("authorization")).toBe(false);
+        const identity = extractChatGptTurnIdentity(parsed);
+        expect(identity.threadId).toStartWith("core-");
+        expect(identity.turnId).toBeTruthy();
+        expect(extractChatGptTurnUserRevision(parsed)).toBe(input.input);
+        expect(chatGptTurnExecutionKey(parsed)).toBeTruthy();
+        expect(chatGptTurnRoundKey(parsed)).toBeTruthy();
+        expect(chatGptThreadOwnershipKey(parsed)).toBeTruthy();
         emit({ type: "text_delta", text: '{"draft":"synthetic"}' });
         emit({ type: "done", stopReason: "stop", endTurn: true });
       },

@@ -14,6 +14,13 @@ text-only, tool-free, không stream hoặc nối history tự động; một req
 lần, tối đa64KiB và deadline180giây. Data routes cần bearer token trong config
 private; browser Origin bị chặn. Không chạy UI Cockpit, harness, MCP hoặc agents.
 
+Core tự cấp thread ID riêng trong tiến trình và turn ID mới cho mỗi request,
+kèm định danh của user message cuối để tương thích browser ownership upstream.
+Metadata này chỉ phục vụ lifecycle/cancel, không cấp công cụ hay filesystem.
+Caller vẫn bị cấm gửi lifecycle metadata/identity của Codex. Input dạng chuỗi
+được chuẩn hóa thành user message; hội thoại phải kết thúc bằng user. Không
+khôi phục lượt cũ hoặc tự retry khi request mới gửi lại cùng nội dung.
+
 Các module tương thích cũ vẫn nằm trong source vì browser/session/Responses
 transport dùng chung một số kiểu và helper. CLI cũ `src/cli.ts` không phải
 điểm vào được hỗ trợ. Chưa tuyên bố đã loại hết dependency của harness khỏi
