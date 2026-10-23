@@ -1,0 +1,66 @@
+{
+  "scope": "offline production subgraph topology with simulated 50ms I/O",
+  "python": "3.12.10",
+  "os": "Windows-11-10.0.26300-SP0",
+  "langgraph": "1.2.12",
+  "tradingagents": "0.7.0",
+  "warmups_per_variant": 1,
+  "samples_per_variant": 20,
+  "equal_output_sha256": "d2ee88ef3930b3f127789e0b2917c2f90f503d0527db45b928f78111c5f69e2d",
+  "metrics": {
+    "1": {
+      "median_ms": 207.827,
+      "sample_p95_ms": 208.516,
+      "samples_ms": [
+        208.516,
+        208.328,
+        208.045,
+        207.963,
+        207.357,
+        208.278,
+        207.17,
+        207.309,
+        207.825,
+        207.828,
+        207.636,
+        207.493,
+        209.893,
+        208.006,
+        207.565,
+        208.081,
+        207.928,
+        207.438,
+        207.553,
+        207.608
+      ]
+    },
+    "4": {
+      "median_ms": 56.36,
+      "sample_p95_ms": 56.878,
+      "samples_ms": [
+        56.353,
+        56.878,
+        56.937,
+        56.477,
+        55.89,
+        55.895,
+        56.432,
+        56.388,
+        56.551,
+        56.221,
+        56.405,
+        56.367,
+        56.57,
+        56.129,
+        55.964,
+        56.47,
+        56.245,
+        56.163,
+        56.113,
+        55.833
+      ]
+    }
+  },
+  "median_speedup": 3.687,
+  "limits": "No real model, quota, UI, CPU/RAM stress or Rust comparison measured."
+}

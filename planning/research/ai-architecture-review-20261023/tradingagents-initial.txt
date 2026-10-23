@@ -1,0 +1,215 @@
+...............................................................sss...... [  5%]
+........................s.............................................F. [ 10%]
+...F.................................................................... [ 15%]
+........................................................................ [ 20%]
+.......................................................................F [ 25%]
+...........F............................................................ [ 30%]
+............................................................. [ 35%]
+........................................................................ [ 40%]
+........................................................................ [ 45%]
+....................................................... [ 49%]
+........................................................................ [ 54%]
+........................................................................ [ 59%]
+........................................................................ [ 65%]
+........................................................................ [ 70%]
+........................................................................ [ 75%]
+........................................................................ [ 80%]
+........................................................................ [ 85%]
+................F....................................................... [ 90%]
+........................................................................ [ 95%]
+........................................................                 [100%]
+================================== FAILURES ===================================
+______ test_a_token_near_expiry_is_renewed_with_the_stored_refresh_token ______
+
+home = WindowsPath('C:/Users/MIIKEY/AppData/Local/Temp/pytest-of-MIIKEY/pytest-1200/test_a_token_near_expiry_is_re0')
+openai = <tests.test_chatgpt_auth.FakeOpenAI object at 0x000001E8EDF43950>
+
+    @pytest.mark.unit
+    def test_a_token_near_expiry_is_renewed_with_the_stored_refresh_token(home, openai):
+        _signed_in(expires_at=time.time() + 60)
+        openai.token_body = _renewal
+        assert auth.access_token() == "a2"
+        (url, sent), = openai.posts
+        assert url == auth.TOKEN_URL and sent["refresh_token"] == "r1" and sent["client_id"] == CLIENT
+        stored = json.loads(auth.AUTH_FILE.read_text())
+        assert stored["tokens"]["refresh_token"] == "r2" and stored["account"]["subject"] == SUBJECT
+>       assert stat.S_IMODE(auth.AUTH_FILE.stat().st_mode) == 0o600
+E       AssertionError: assert 438 == 384
+E        +  where 438 = <built-in function S_IMODE>(33206)
+E        +    where <built-in function S_IMODE> = stat.S_IMODE
+E        +    and   33206 = os.stat_result(st_mode=33206, st_ino=2533274791030293, st_dev=8377359133872719024, st_nlink=1, st_uid=0, st_gid=0, st_size=343, st_atime=1792735481, st_mtime=1792735481, st_ctime=1792735481).st_mode
+E        +      where os.stat_result(st_mode=33206, st_ino=2533274791030293, st_dev=8377359133872719024, st_nlink=1, st_uid=0, st_gid=0, st_size=343, st_atime=1792735481, st_mtime=1792735481, st_ctime=1792735481) = stat()
+E        +        where stat = WindowsPath('C:/Users/MIIKEY/AppData/Local/Temp/pytest-of-MIIKEY/pytest-1200/test_a_token_near_expiry_is_re0/home/chatgpt-auth.json').stat
+E        +          where WindowsPath('C:/Users/MIIKEY/AppData/Local/Temp/pytest-of-MIIKEY/pytest-1200/test_a_token_near_expiry_is_re0/home/chatgpt-auth.json') = auth.AUTH_FILE
+
+tests\test_chatgpt_auth.py:168: AssertionError
+_______ test_signing_in_by_pasting_the_redirect_saves_a_private_sign_in _______
+
+home = WindowsPath('C:/Users/MIIKEY/AppData/Local/Temp/pytest-of-MIIKEY/pytest-1200/test_signing_in_by_pasting_the0')
+openai = <tests.test_chatgpt_auth.FakeOpenAI object at 0x000001E8EDF2DE80>
+
+    @pytest.mark.unit
+    def test_signing_in_by_pasting_the_redirect_saves_a_private_sign_in(home, openai):
+        printed = []
+
+        def token(data):
+            assert data["grant_type"] == "authorization_code" and data["client_id"] == CLIENT
+            assert data["code"] == "c1" and data["code_verifier"]
+            return {"access_token": "a1", "refresh_token": "r1", "expires_in": 3600,
+                    "id_token": _id_token(nonce=_nonce_of(printed)), "scope": auth.SCOPE}
+
+        openai.token_body = token
+        email = auth.sign_in(say=printed.append, read_line=_paster(printed), timeout=10, port=0)
+        assert email == "a@example.com"
+        stored = json.loads(auth.AUTH_FILE.read_text())
+        assert stored["account"] == {"client_id": CLIENT, "email": "a@example.com", "subject": SUBJECT}
+        assert stored["host_id"].startswith("urn:uuid:")
+>       assert stat.S_IMODE(auth.AUTH_FILE.stat().st_mode) == 0o600
+E       AssertionError: assert 438 == 384
+E        +  where 438 = <built-in function S_IMODE>(33206)
+E        +    where <built-in function S_IMODE> = stat.S_IMODE
+E        +    and   33206 = os.stat_result(st_mode=33206, st_ino=27584547718761474, st_dev=8377359133872719024, st_nlink=1, st_uid=0, st_gid=0, st_size=378, st_atime=1792735485, st_mtime=1792735485, st_ctime=1792735485).st_mode
+E        +      where os.stat_result(st_mode=33206, st_ino=27584547718761474, st_dev=8377359133872719024, st_nlink=1, st_uid=0, st_gid=0, st_size=378, st_atime=1792735485, st_mtime=1792735485, st_ctime=1792735485) = stat()
+E        +        where stat = WindowsPath('C:/Users/MIIKEY/AppData/Local/Temp/pytest-of-MIIKEY/pytest-1200/test_signing_in_by_pasting_the0/home/chatgpt-auth.json').stat
+E        +          where WindowsPath('C:/Users/MIIKEY/AppData/Local/Temp/pytest-of-MIIKEY/pytest-1200/test_signing_in_by_pasting_the0/home/chatgpt-auth.json') = auth.AUTH_FILE
+
+tests\test_chatgpt_auth.py:248: AssertionError
+________________ test_the_upgrade_command_follows_the_install _________________
+
+tmp_path = WindowsPath('C:/Users/MIIKEY/AppData/Local/Temp/pytest-of-MIIKEY/pytest-1200/test_the_upgrade_command_follo0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001E8EE3C3CB0>
+
+    @pytest.mark.unit
+    def test_the_upgrade_command_follows_the_install(tmp_path, monkeypatch):
+        clone = tmp_path / "TradingAgents"
+        (clone / ".git").mkdir(parents=True)
+        monkeypatch.delenv("TRADINGAGENTS_IN_DOCKER", raising=False)
+        monkeypatch.setattr(updates.sys, "executable", "/venv/bin/python")
+        url = clone.as_uri()
+
+        editable = updates.upgrade_command(_dist({"url": url, "dir_info": {"editable": True}}))
+>       assert editable == f"git -C {clone} pull && /venv/bin/python -m pip install -e {clone}"
+E       AssertionError: assert None == 'git -C C:\\Users\\MIIKEY\\AppData\\Local\\Temp\\pytest-of-MIIKEY\\pytest-1200\\test_the_upgrade_command_follo0\\Tradi...C:\\Users\\MIIKEY\\AppData\\Local\\Temp\\pytest-of-MIIKEY\\pytest-1200\\test_the_upgrade_command_follo0\\TradingAgents'
+
+tests\test_cli_updates.py:253: AssertionError
+__________________ test_a_uv_git_install_is_upgraded_with_uv __________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001E8EE3E6270>
+
+    @pytest.mark.unit
+    def test_a_uv_git_install_is_upgraded_with_uv(monkeypatch):
+        monkeypatch.delenv("TRADINGAGENTS_IN_DOCKER", raising=False)
+        monkeypatch.setattr(updates.sys, "executable", "/venv/bin/python")
+        vcs = updates.upgrade_command(_dist({"url": "https://github.com/TauricResearch/TradingAgents.git",
+                                             "vcs_info": {"vcs": "git"}}, installer="uv"))
+>       assert vcs == "uv pip install --python /venv/bin/python -U git+https://github.com/TauricResearch/TradingAgents.git"
+E       AssertionError: assert None == 'uv pip install --python /venv/bin/python -U git+https://github.com/TauricResearch/TradingAgents.git'
+
+tests\test_cli_updates.py:322: AssertionError
+_____________ test_yfinance_keeps_its_cache_out_of_the_users_home _____________
+
+    @pytest.mark.unit
+    def test_yfinance_keeps_its_cache_out_of_the_users_home():
+        """yfinance caches each symbol's time zone on disk, in the home directory by default."""
+        from pathlib import Path
+
+        from yfinance.cache import _TzDBManager
+
+>       assert not Path(_TzDBManager.get_location()).is_relative_to(Path.home())
+E       AssertionError: assert not True
+E        +  where True = is_relative_to(WindowsPath('C:/Users/MIIKEY'))
+E        +    where is_relative_to = WindowsPath('C:/Users/MIIKEY/AppData/Local/Temp/tradingagents-tests-yf-kzvky29k').is_relative_to
+E        +      where WindowsPath('C:/Users/MIIKEY/AppData/Local/Temp/tradingagents-tests-yf-kzvky29k') = <class 'pathlib.Path'>('C:\\Users\\MIIKEY\\AppData\\Local\\Temp\\tradingagents-tests-yf-kzvky29k')
+E        +        where 'C:\\Users\\MIIKEY\\AppData\\Local\\Temp\\tradingagents-tests-yf-kzvky29k' = get_location()
+E        +          where get_location = <class 'yfinance.cache._TzDBManager'>.get_location
+E        +    and   WindowsPath('C:/Users/MIIKEY') = home()
+E        +      where home = <class 'pathlib.Path'>.home
+
+tests\test_suite_isolation.py:42: AssertionError
+============================== warnings summary ===============================
+tests/test_anthropic_effort.py::TestEffortGate::test_unsupported_models_do_not_receive_effort[claude-haiku-5-0]
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\anthropic_client.py:61: RuntimeWarning: Model 'claude-haiku-5-0' is not in the known model list for provider 'anthropic'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_anthropic_effort.py::TestEffortGate::test_unsupported_models_do_not_receive_effort[claude-haiku-4-7-preview]
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\anthropic_client.py:61: RuntimeWarning: Model 'claude-haiku-4-7-preview' is not in the known model list for provider 'anthropic'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_anthropic_effort.py::TestEffortGate::test_unsupported_models_do_not_receive_effort[claude-sonnet-4-5]
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\anthropic_client.py:61: RuntimeWarning: Model 'claude-sonnet-4-5' is not in the known model list for provider 'anthropic'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_anthropic_effort.py::TestEffortGate::test_unsupported_models_do_not_receive_effort[claude-sonnet-4-0]
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\anthropic_client.py:61: RuntimeWarning: Model 'claude-sonnet-4-0' is not in the known model list for provider 'anthropic'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_anthropic_effort.py::TestEffortGate::test_current_opus_and_sonnet_receive_effort[claude-opus-4-5]
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\anthropic_client.py:61: RuntimeWarning: Model 'claude-opus-4-5' is not in the known model list for provider 'anthropic'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_anthropic_effort.py::TestEffortGate::test_current_opus_and_sonnet_receive_effort[claude-opus-4-6]
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\anthropic_client.py:61: RuntimeWarning: Model 'claude-opus-4-6' is not in the known model list for provider 'anthropic'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_anthropic_effort.py::TestEffortGate::test_current_opus_and_sonnet_receive_effort[claude-sonnet-4-6]
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\anthropic_client.py:61: RuntimeWarning: Model 'claude-sonnet-4-6' is not in the known model list for provider 'anthropic'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_anthropic_effort.py::TestEffortGate::test_future_opus_sonnet_inherit_effort_via_pattern[claude-opus-5-0]
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\anthropic_client.py:61: RuntimeWarning: Model 'claude-opus-5-0' is not in the known model list for provider 'anthropic'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_anthropic_effort.py::TestEffortGate::test_future_opus_sonnet_inherit_effort_via_pattern[claude-sonnet-5-0]
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\anthropic_client.py:61: RuntimeWarning: Model 'claude-sonnet-5-0' is not in the known model list for provider 'anthropic'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_anthropic_effort.py::TestEffortGate::test_claude_5_family_receives_effort[claude-mythos-5]
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\anthropic_client.py:61: RuntimeWarning: Model 'claude-mythos-5' is not in the known model list for provider 'anthropic'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_anthropic_effort.py::TestEffortGate::test_mythos_preview_receives_effort
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\anthropic_client.py:61: RuntimeWarning: Model 'claude-mythos-preview' is not in the known model list for provider 'anthropic'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_anthropic_effort.py::TestEffortGate::test_unknown_anthropic_model_does_not_receive_effort
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\anthropic_client.py:61: RuntimeWarning: Model 'claude-experimental-x' is not in the known model list for provider 'anthropic'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_google_thinking_level.py::test_latest_alias_remaps_minimal_to_low[gemini-flash-latest]
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\google_client.py:46: RuntimeWarning: Model 'gemini-flash-latest' is not in the known model list for provider 'google'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_google_thinking_level.py::test_latest_alias_remaps_minimal_to_low[gemini-pro-latest]
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\google_client.py:46: RuntimeWarning: Model 'gemini-pro-latest' is not in the known model list for provider 'google'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_ollama_base_url.py::test_resolver_does_not_affect_other_providers
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\openai_client.py:346: RuntimeWarning: Model 'm' is not in the known model list for provider 'xai'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_ollama_base_url.py::test_resolver_does_not_affect_other_providers
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\openai_client.py:346: RuntimeWarning: Model 'm' is not in the known model list for provider 'deepseek'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_openai_reasoning_effort.py::test_non_reasoning_model_drops_effort
+tests/test_temperature_config.py::TestTemperatureForwarding::test_temperature_reaches_client_when_set[openai-gpt-4.1]
+tests/test_temperature_config.py::TestTemperatureForwarding::test_temperature_omitted_leaves_provider_default
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\openai_client.py:346: RuntimeWarning: Model 'gpt-4.1' is not in the known model list for provider 'openai'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+tests/test_temperature_config.py::TestTemperatureForwarding::test_temperature_reaches_client_when_set[deepseek-deepseek-chat]
+  C:\Users\MIIKEY\AppData\Local\Temp\tw-tradingagents-upstream-v070\tradingagents\llm_clients\openai_client.py:346: RuntimeWarning: Model 'deepseek-chat' is not in the known model list for provider 'deepseek'. Continuing anyway.
+    self.warn_if_unknown_model()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+SKIPPED [1] tests\test_api_key_env.py:159: POSIX file modes
+SKIPPED [1] tests\test_api_key_env.py:173: POSIX file modes
+SKIPPED [1] tests\test_api_key_env.py:183: POSIX file modes
+SKIPPED [1] tests\test_bedrock_provider.py:74: could not import 'langchain_aws': No module named 'langchain_aws'
+FAILED tests/test_chatgpt_auth.py::test_a_token_near_expiry_is_renewed_with_the_stored_refresh_token
+FAILED tests/test_chatgpt_auth.py::test_signing_in_by_pasting_the_redirect_saves_a_private_sign_in
+FAILED tests/test_cli_updates.py::test_the_upgrade_command_follows_the_install
+FAILED tests/test_cli_updates.py::test_a_uv_git_install_is_upgraded_with_uv
+FAILED tests/test_suite_isolation.py::test_yfinance_keeps_its_cache_out_of_the_users_home
+5 failed, 1387 passed, 4 skipped, 1 deselected, 20 warnings, 100 subtests passed in 42.28s

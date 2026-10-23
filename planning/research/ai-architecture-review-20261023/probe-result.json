@@ -1,0 +1,25 @@
+{
+  "scope": "offline library fixtures, not product acceptance",
+  "langgraph_version": "1.2.12",
+  "passed": 5,
+  "checks": {
+    "parallel_shared_state": {
+      "expected_conflict_observed": true
+    },
+    "parallel_isolated_state": {
+      "separate_outputs_preserved": true
+    },
+    "join_once": {
+      "separate_edges_join_count": 2,
+      "explicit_barrier_join_count": 1
+    },
+    "checkpoint_identity_and_reopen": {
+      "same_thread_accumulates": true,
+      "separate_thread_isolated": true,
+      "sqlite_reopen_preserves_state": true
+    },
+    "interrupt_replays_node": {
+      "local_effect_count_before_and_after_resume": 2
+    }
+  }
+}
