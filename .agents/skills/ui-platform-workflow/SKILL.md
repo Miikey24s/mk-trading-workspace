@@ -1,72 +1,45 @@
 ---
 name: ui-platform-workflow
-description: Design, systemize, implement, scale, or migrate UI using the ANNAM layered UI platform. Use for UI exploration, reference selection, Stitch/Figma workflows, design-system work, visual QA, shared trading UI, project UI upgrades, and cross-project UI migrations.
+description: Design or change ANNAM product UI and shared design-system contracts. Use for layout, copy, interaction, exploration or UI migration; use project QA for verification and fullstack-performance for measured speed issues.
 ---
 
 # ANNAM UI platform workflow
 
-Use the layered UI platform and the project's current direction. Existing-product fixes and QA start from the shipped or in-progress implementation; exploration is a separate stage, not the default response to every UI task.
+Use the existing product direction and real components. A copy/layout fix does not
+reopen design exploration or a shared-system migration.
 
-## Read first
+## Read what the change needs
 
-For any task in `TradingWorkspace`:
+Resolve the target repository and closest `AGENTS.md` first:
 
-1. Read `D:\ANNAM\TradingWorkspace\AGENTS.md`.
-2. Read `D:\ANNAM\TradingWorkspace\planning\ui-platform\MASTER-UI-PLATFORM-PLAN.md` when the task changes workflow, architecture, reuse, scaling, or migration policy.
-3. Read `UI-Systems/AGENTS.md` from the TradingWorkspace root for global/shared changes.
-4. Read `D:\ANNAM\TradingWorkspace\UI\AGENTS.md` for trading-domain shared changes.
-5. Read the target project's closest `AGENTS.md` and `ui/` contract/config.
+- Existing screen, copy, controls or cross-mode parity: read
+  [product UI changes](references/product-ui.md) and the owning `ui/` contract.
+- Explicit new visual direction, Stitch/Figma work, tokens or migration: read
+  [design-system work](references/design-system.md). The workspace
+  `planning/ui-platform/MASTER-UI-PLATFORM-PLAN.md` is historical direction/context,
+  not permission to restart exploration.
+- Verification only: use the project's QA skill; do not load design references
+  unless verification exposes a design decision.
 
-## Route by task stage
+## Layer ownership
 
-### Exploration
+- `UI-Systems/`: product-agnostic foundations in TradingWorkspace.
+- `UI/`: shared trading semantics. Read its `AGENTS.md` when changing this layer.
+- `projects/<project>/ui/`: project contracts and consumer pins.
+- `planning/`: scope, decisions and checkpoints, not duplicated runtime contracts.
 
-- Enter this stage when the task explicitly requests a new direction or the current plan authorizes revisiting it. A historical exploration plan or generator prompt does not reopen the design decision.
-- Follow the project's recorded approval authority before locking tokens/components. MT5/Trading Workspace has owner-delegated agent UI approval since 23/09/2026; use its rubric and runtime QA, not a new user aesthetic gate. Other projects retain their user-approval requirements.
-- Break references into selectable parts; explain design terminology in plain Vietnamese when the user is choosing.
-- Use Stitch Web/Figma Make or another visual tool for divergent candidates when available.
-- Preserve rejected/alternate directions long enough to compare them; do not silently converge after the first generation.
-
-### Convergence
-
-- Compare candidates using a stable rubric: clarity, density, hierarchy, data storytelling, domain ergonomics, accessibility, scalability, and visual quality.
-- Consolidate into 1–2 finalists, then prove the direction across representative screens.
-
-### Systemization
-
-- Separate primitive values, semantic tokens, components, and patterns.
-- Keep canonical semantics/tool-independent data outside any single vendor canvas.
-- Generate agent-facing `DESIGN.md` from approved rules; do not treat it as the only source of truth.
-
-### Implementation
-
-- Read the real repository first and reuse its stack/components.
-- Do not rewrite a project into a generator's preferred framework without an approved architecture decision.
-- Keep global/domain/project ownership boundaries explicit.
-
-### Scaling
-
-- Prefer batch generation only after representative screens and design-system contracts are stable.
-- Stitch SDK, Magic Patterns, Builder, Figma agent/MCP, or similar tools may create candidates; generated output still requires project tests and visual QA.
-
-### Migration
-
-- Consumers pin versions.
-- Create isolated upgrade changes, run tests, render stable fixtures, produce visual diffs, and preserve the old version when checks fail.
-- Never silently propagate a breaking shared UI change into all projects.
+Read `UI-Systems/AGENTS.md` only when changing shared foundations. Promote code
+after real consumers demonstrate reuse and reduced maintenance. Ordinary product
+fixes stay in their owner.
 
 ## MT5 / WMREPLAY
 
-For `projects/mt5-tradingview-backtester`, also read:
+Use `foundation_v2` in the main product repository and its `ui/` contracts.
+For plan execution, follow Product Plan -> EXECUTION-ENTRYPOINT -> current evidence;
+WMREPLAY owns UI quality. A small directly assigned fix only needs the relevant
+component/contract and focused verification, not every historical plan.
 
-- `planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md`
-- Its `EXECUTION-ENTRYPOINT.md` and current task/evidence locators
-- `planning/mt5-tradingview-backtester/WMREPLAY-UI-MASTER-PLAN.md` for UI scope and quality gates
-- `projects/mt5-tradingview-backtester/ui/project-ui.json`
-
-Continue implementation and runtime QA in the main repository's `foundation_v2`; the selected direction does not mean all screens or product gates have passed. Follow its `AGENTS.md` for retired prototypes. Read old U1/Figma exploration plans only when investigating a decision, not as current tasks or instructions to recreate a deleted checkout.
-
-Use the project's `.agents/skills/trading-ui-qa/SKILL.md` for Playwright-first verification and the parent `tooling/ui-qa/README.md` for checked tooling. Return evidence to the existing task owner; do not create another progress tracker or edit generated state as acceptance. Do not use the legacy staged agent-workflow runner (which forbids browser access) as the UI-QA executor.
-
-Do not weaken broker/live/holdout/provider gates while doing UI work.
-
+Use the product `.agents/skills/trading-ui-qa/SKILL.md` for browser evidence.
+Do not use the legacy agent-workflow runner, which forbids browser access, as
+the UI-QA executor. Keep build, fixture, real runtime and broker acceptance distinct.
+Do not weaken execution gates while doing UI work.
