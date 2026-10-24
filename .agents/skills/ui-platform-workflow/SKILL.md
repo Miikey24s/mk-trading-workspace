@@ -18,6 +18,9 @@ Resolve the target repository and closest `AGENTS.md` first:
   [design-system work](references/design-system.md). The workspace
   `planning/ui-platform/MASTER-UI-PLATFORM-PLAN.md` is historical direction/context,
   not permission to restart exploration.
+- New screen composition, substantial layout decisions or visual critique: use
+  [frontend design guidance](references/frontend-design.md), adapted selectively
+  from Anthropic. Keep the accepted system unless redesign is requested.
 - Verification only: use the project's QA skill; do not load design references
   unless verification exposes a design decision.
 
