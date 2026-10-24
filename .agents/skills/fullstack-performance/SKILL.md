@@ -8,6 +8,8 @@ description: Diagnose frontend, API and database performance; measure bottleneck
 Turn a slow user journey into a measured bottleneck and a bounded change. Start
 with the current implementation; changing the framework is a candidate, not the
 default. In TradingWorkspace, read [the local measurement entrypoint](references/trading-workspace.md).
+For React/Vite loading, subscription or render bottlenecks, read only the relevant
+[frontend decisions](references/react-vite.md); they do not require a framework migration.
 
 ## Establish what is slow
 
