@@ -25,6 +25,10 @@ UI-Systems/
 
 ## Key rule
 
+The opt-in [data-table@0.1.0 contract](components/data-table/0.1.0/CONTRACT.md)
+covers header sorting, selection, full-scope filters, paging and scroll boundaries.
+WMREPLAY owns its first implementation and focused acceptance evidence.
+
 `UI-Systems` defines how reusable UI is described and evolved. A consumer project may pin a specific system/theme/version and add project-specific UI without forking the global platform.
 
 The first pilot consumer is [`../projects/mt5-tradingview-backtester`](../projects/mt5-tradingview-backtester/README.md), but trading-specific semantics live under [`../UI`](../UI/README.md).
