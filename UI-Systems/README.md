@@ -28,6 +28,8 @@ UI-Systems/
 The opt-in [data-table@0.1.0 contract](components/data-table/0.1.0/CONTRACT.md)
 covers header sorting, selection, full-scope filters, paging and scroll boundaries.
 WMREPLAY owns its first implementation and focused acceptance evidence.
+The opt-in [0.2.0 extension](components/data-table/0.2.0/CONTRACT.md) adds bounded
+repaint and fixed-row virtualization contracts while retaining native paging.
 
 `UI-Systems` defines how reusable UI is described and evolved. A consumer project may pin a specific system/theme/version and add project-specific UI without forking the global platform.
 
