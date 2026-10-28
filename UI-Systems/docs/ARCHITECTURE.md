@@ -53,6 +53,21 @@ component token (only when needed)
 
 Components should normally consume semantic tokens. This lets themes change visual values without changing business meaning.
 
+### Boundary ownership and optical alignment
+
+Every visible separator has one owner. A joined grid assigns internal seams to
+one consistent cell edge and assigns the outer frame to its parent or footer;
+state and hover painters reuse those coordinates instead of extending into a
+neighbor. A rounded surface owns its corner radius and clips child fills or
+strokes at that radius. This prevents doubled strokes and cropped hover corners.
+
+Use geometry first: shared keylines, 4/8px spacing and text baselines make the
+layout scannable. Apply optical correction only to the visual payload inside a
+stable box: an icon may move 1px to balance its shape against text, while the
+control's hit area, baseline and alignment box stay unchanged. Numeric columns
+align by their value edge; labels follow the reading edge; mixed icon/text rows
+use `inline-flex` with `align-items:center` and a fixed icon box.
+
 Token data should use a DTCG-compatible JSON structure when real values are committed. Figma variables, CSS variables, Tailwind mappings, Stitch `DESIGN.md`, and other representations are generated/adapted views of the same semantics.
 
 ## 4. Source-of-truth order
