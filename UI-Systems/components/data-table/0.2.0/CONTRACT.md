@@ -18,6 +18,20 @@ WMREPLAY owns the implementation and runnable reference.
 - Server paging bounds transfer/data work. Virtualization separately bounds DOM
   work. Neither substitutes for full-scope filters, sorting, counts or permissions.
 
+## Shared sort-header presentation
+
+- An active sort outline covers the full heading cell with square corners. Adjacent
+  active cells share the middle separator: do not leave a gap or draw a doubled
+  border between them.
+- Keep the heading label in its own content-sized track. The direction icon and
+  multi-sort priority use a fixed 28px indicator slot; an active column's clear
+  button uses a separate fixed 28px slot so text, icon and `×` never overlap.
+  Narrow viewports may scroll the table horizontally rather than collapsing the
+  label into the controls.
+- The row-number `#` reset becomes a square, full-cell `×` control while sorting
+  is active. Its border and surface use the same highlight token as the active
+  heading state and its accessible name describes clearing all sorts.
+
 ## Optional fixed-row virtualization
 
 - Use only for long collections with explicit fixed column widths (`colgroup`
