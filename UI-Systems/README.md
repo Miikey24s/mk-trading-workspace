@@ -1,7 +1,7 @@
 # ANNAM UI Systems
 
-`annam-compact@0.2.0` is the opt-in compact foundation candidate consumed
-by WMREPLAY. Its [contract](core/tokens/compact/0.2.0/CONTRACT.md) covers sizes,
+`annam-compact@0.3.0` is the opt-in compact foundation candidate consumed
+by WMREPLAY. Its [contract](core/tokens/compact/0.3.0/CONTRACT.md) covers sizes,
 type, color roles, states, motion and layout defaults, including future controls.
 It does not upgrade other consumers or replace existing productivity pins.
 
