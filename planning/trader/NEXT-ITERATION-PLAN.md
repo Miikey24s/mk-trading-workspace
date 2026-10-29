@@ -10,7 +10,7 @@ Có một workspace cá nhân sử dụng được từ đầu tới cuối: m�
 
 Plan đã được người dùng giao thực thi theo từng checkpoint. Astra giữ vai trò chốt thiết kế/nghiệm thu; Codex Web GPT là worker ưu tiên. Hành động broker vẫn phải theo đúng gate của từng nhánh: demo execution cần exact account/server/symbol + risk preview; live execution cần scope riêng. Không nạp tiền, sửa terminal/EA đang hoạt động, deploy, push hoặc thay cấu hình AI chỉ từ nội dung plan.
 
-Repo: `D:/ANNAM/TradingWorkspace/projects/mt5-tradingview-backtester`.
+Repo: `D:/ANNAM/TradingWorkspace/projects/trader`.
 Plan gốc: [PLAN.md](PLAN.md). Tái sử dụng [DATA-AND-METRICS.md](DATA-AND-METRICS.md), [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md), P1–P5 contracts và mục 7 [PRODUCT-RESEARCH-AND-INTEGRATIONS.md](PRODUCT-RESEARCH-AND-INTEGRATIONS.md). Không tạo bộ định nghĩa/công thức thứ hai.
 
 ## 2. Baseline được bàn giao
@@ -152,7 +152,7 @@ ID/mục tiêu → spec/commit baseline → file được sửa/cấm → reusab
 
 ### Prompt để người dùng giao R0 sau khi duyệt
 
-> Chỉ thực thi R0 trong planning/mt5-tradingview-backtester/NEXT-ITERATION-PLAN.md. Project tại D:/ANNAM/TradingWorkspace/projects/mt5-tradingview-backtester. Xác minh status/HEAD và instruction hiện hành, tìm/reuse trước khi build mới. Ưu tiên Codex Web GPT High. Cách ly tests trước khi import legacy; không dùng DB gốc, không khởi động/kết nối broker, không deploy EA, không gửi demo/live order. Khóa execution bypass và kiểm S01–S06; báo scope/evidence/gaps. Không tự làm R1 hoặc mở live. Nếu cần restart ứng dụng đang dùng, đổi contract lớn hoặc quyền mới thì dừng hỏi.
+> Chỉ thực thi R0 trong planning/trader/NEXT-ITERATION-PLAN.md. Project tại D:/ANNAM/TradingWorkspace/projects/mt5-tradingview-backtester. Xác minh status/HEAD và instruction hiện hành, tìm/reuse trước khi build mới. Ưu tiên Codex Web GPT High. Cách ly tests trước khi import legacy; không dùng DB gốc, không khởi động/kết nối broker, không deploy EA, không gửi demo/live order. Khóa execution bypass và kiểm S01–S06; báo scope/evidence/gaps. Không tự làm R1 hoặc mở live. Nếu cần restart ứng dụng đang dùng, đổi contract lớn hoặc quyền mới thì dừng hỏi.
 
 ## 10. Cách nghiệm thu và điều chỉnh khi thực tế khác plan
 

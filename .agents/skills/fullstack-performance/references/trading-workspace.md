@@ -2,7 +2,7 @@
 
 The workspace contains independent product repositories. Follow their current
 AGENTS/README and source authority before choosing a runtime. MT5's current runtime
-is `projects/mt5-tradingview-backtester/foundation_v2`, not the legacy Flask app.
+is `projects/trader/foundation_v2`, not the legacy Flask app.
 
 For MT5 API/page projection, use the existing read-only probe from `foundation_v2`:
 
@@ -40,7 +40,7 @@ Source locations worth verifying, not permanent bottleneck claims:
 
 The evidence at `foundation_v2/evidence/performance-assessment-20261009/` is an
 initial baseline and isolated experiment, not whole-product performance acceptance.
-Existing `ui/compact-system.md` owns presentation; the WMREPLAY plan owns its UI
+Existing `ui/compact-system.md` owns presentation; the Trader UI plan owns its UI
 performance gates. This skill supplies measurement workflow, not a new plan.
 
 Use current primary documentation when a proposed change depends on library behavior:

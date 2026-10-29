@@ -24,7 +24,7 @@ Không dùng bảng so sánh của hãng A để kết luận hãng B thiếu t�
 
 | Thành phần | Nguồn/giấy phép thấy khi khảo sát | Vai trò phù hợp | Quyết định hiện tại |
 |---|---|---|---|
-| Repo `mt5-tradingview-backtester` hiện có | LICENSE local: MIT; Flask, history/session store, chart/replay và bridge MT5 | Nguồn module để audit và đối chiếu | Theo PLAN v0.6: giữ/sửa/thay/bỏ theo bằng chứng; repo mới hoặc lớp API mới đều được cân nhắc. Có route giao dịch không đồng nghĩa sẵn sàng live |
+| Repo `trader` hiện có | LICENSE local: MIT; Flask, history/session store, chart/replay và bridge MT5 | Nguồn module để audit và đối chiếu | Theo PLAN v0.6: giữ/sửa/thay/bỏ theo bằng chứng; repo mới hoặc lớp API mới đều được cân nhắc. Có route giao dịch không đồng nghĩa sẵn sàng live |
 | [Lightweight Charts](https://github.com/tradingview/lightweight-charts) | Apache-2.0; README yêu cầu attribution/NOTICE và link TradingView | Bộ vẽ chart; app cung cấp data, thao tác và order UI | Một ứng viên chart chính; không phải bản TradingView Premium miễn phí |
 | [KLineChart](https://github.com/klinecharts/KLineChart), [overlay API](https://klinecharts.com/en-US/guide/overlay) | Apache-2.0; có cơ chế overlay tùy chỉnh | Ứng viên khi chú thích/vẽ vùng là nhu cầu lớn | So với Lightweight Charts bằng cùng một prototype; chỉ chọn một chart engine chính |
 | [MetaTrader5 Python integration](https://www.mql5.com/en/docs/python_metatrader5) | API chính thức; không được gọi là SDK nguồn mở nếu chưa kiểm tra license package | Đọc account, symbol, orders/deals/positions và gửi yêu cầu qua terminal | Đối chiếu với bridge MQL5 đang có; chọn một đường ghi lệnh chính. Web riêng không tự loại bỏ nhu cầu MT5 terminal |

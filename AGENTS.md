@@ -12,7 +12,7 @@ Khi user giao `planning/WORKSPACE-NEXT-STAGE-PLAN.md`, đọc profile và mọi 
 
 ## Trading Workspace / điều phối agent
 
-MT5 nhận scope từ `planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md` → `EXECUTION-ENTRYPOINT.md` → nguồn trạng thái/receipt được dẫn tới; `PLAN.md` là index và lịch sử, giữ các phân công còn hiệu lực. UI theo `WMREPLAY-UI-MASTER-PLAN.md`, không khởi động lại exploration từ prompt cũ. Khi được yêu cầu chạy task qua CLI, đọc `tooling/agent-workflow/README.md` và `POLICY.md`; `roles.json` giữ cấu hình model/effort, `VALIDATION.md` giữ khả năng đã kiểm chứng. Ưu tiên runner/model mà profile hiện hành chỉ định; không tự đổi provider/model để né gate. Mở workspace không cho phép tự chạy worker, sửa repo sản phẩm, giao dịch, merge hoặc deploy.
+MT5 nhận scope từ `planning/trader/PRODUCT-COMPLETION-PLAN.md` → `EXECUTION-ENTRYPOINT.md` → nguồn trạng thái/receipt được dẫn tới; `PLAN.md` là index và lịch sử, giữ các phân công còn hiệu lực. UI theo `TRADER-UI-MASTER-PLAN.md`, không khởi động lại exploration từ prompt cũ. Khi được yêu cầu chạy task qua CLI, đọc `tooling/agent-workflow/README.md` và `POLICY.md`; `roles.json` giữ cấu hình model/effort, `VALIDATION.md` giữ khả năng đã kiểm chứng. Ưu tiên runner/model mà profile hiện hành chỉ định; không tự đổi provider/model để né gate. Mở workspace không cho phép tự chạy worker, sửa repo sản phẩm, giao dịch, merge hoặc deploy.
 
 ## Học trading / Trading education
 
@@ -42,11 +42,11 @@ Khi sửa UI/copy/interaction hoặc làm design system, đọc `.agents/skills/
 
 Toàn bộ các dự án/repo được gom gọn trong thư mục `projects/`. Mỗi dự án tự quản lý git, môi trường ảo (.venv) và tài liệu kỹ thuật riêng:
 
-1. **MT5 TradingView Backtester** (`projects/mt5-tradingview-backtester/`):
+1. **Naqex Trader** (`projects/trader/`):
    - PATH-2 đã được duyệt: `foundation_v2` là nền mới; Flask/EA cũ là reference theo phạm vi. Đọc ADR/entrypoint trước chọn runtime, không mặc định chạy legacy app.
    - Môi trường/commands theo README và AGENTS của repo; không chạy provider/broker từ task planning.
-   - Kế hoạch audit & roadmap phát triển: `planning/mt5-tradingview-backtester/`.
-   - Đọc `projects/mt5-tradingview-backtester/README.md`.
+   - Kế hoạch audit & roadmap phát triển: `planning/trader/`.
+   - Đọc `projects/trader/README.md`.
 
 2. **Quant Lab** (`projects/quant-trading/`):
    - Phòng thí nghiệm nghiên cứu định lượng crypto spot khung ngày.

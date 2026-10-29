@@ -54,7 +54,7 @@ Role được khai báo không có nghĩa đã smoke-test. Đọc [VALIDATION.md
 
 ## Mở trong Antigravity để tự làm về sau
 
-1. Hiện tại mở **`D:\ANNAM\TradingWorkspace`** để xem plan và điều phối. Chưa chọn repo triển khai mới; `projects/mt5-tradingview-backtester` vẫn là nguồn audit/tái sử dụng, không tự rewrite.
+1. Hiện tại mở **`D:\ANNAM\TradingWorkspace`** để xem plan và điều phối. Chưa chọn repo triển khai mới; `projects/trader` vẫn là nguồn audit/tái sử dụng, không tự rewrite.
 2. Rules ở `.agents/rules/trading-workspace.md` dẫn về `AGENTS.md` và plan chung. Khi bắt đầu task mới, yêu cầu agent đọc đúng phần plan, tìm cái đã có và báo phạm vi trước khi sửa. Không dựa vào việc nó nhớ cuộc chat ở app khác.
 3. Muốn dùng **Codex Web GPT**: chạy runner trong terminal tại TradingWorkspace hoặc nhờ agent Antigravity gọi runner. Model trong model picker của Antigravity vẫn là model riêng; mở cùng folder không khiến nó tự dùng Web GPT. Nhờ agent AGY điều phối cũng tiêu quota của AGY; chạy lệnh trực tiếp thì không cần lượt model AGY.
 4. `roles.json` là nơi đổi model/effort cho **lượt runner kế tiếp**, không đổi model picker hay các job đang chạy. Không chọn model không có trong route hiện tại; không tự đổi auth/provider.

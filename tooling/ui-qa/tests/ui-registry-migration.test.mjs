@@ -67,9 +67,9 @@ test('candidate migration and rollback preserve VI/MT5 1.0.0 pins', async () => 
   const candidateProject = path.join(fixtureWorkspace, 'projects', 'candidate-productivity')
   const evidenceDir = path.join(fixtureWorkspace, 'evidence')
   const originalConsumerFiles = [
-    path.join(workspace, 'projects', 'mt5-tradingview-backtester', 'ui', 'project-ui.json'),
+    path.join(workspace, 'projects', 'trader', 'ui', 'project-ui.json'),
     path.join(workspace, 'projects', 'vi-dubber', 'ui', 'project-ui.json'),
-    path.join(workspace, 'projects', 'mt5-tradingview-backtester', 'foundation_v2', 'web', 'src', 'ui-system.snapshot.css'),
+    path.join(workspace, 'projects', 'trader', 'foundation_v2', 'web', 'src', 'ui-system.snapshot.css'),
     path.join(workspace, 'projects', 'vi-dubber', 'frontend', 'src', 'ui-system.snapshot.css'),
   ]
   const originalHashes = new Map()
@@ -77,19 +77,19 @@ test('candidate migration and rollback preserve VI/MT5 1.0.0 pins', async () => 
     for (const file of originalConsumerFiles) originalHashes.set(file, await sha256File(file))
 
     await copyConsumerFixture(
-      path.join(workspace, 'projects', 'mt5-tradingview-backtester', 'ui'),
-      path.join(fixtureWorkspace, 'projects', 'mt5-tradingview-backtester', 'ui'),
+      path.join(workspace, 'projects', 'trader', 'ui'),
+      path.join(fixtureWorkspace, 'projects', 'trader', 'ui'),
     )
     await copyConsumerFixture(
       path.join(workspace, 'projects', 'vi-dubber', 'ui'),
       path.join(fixtureWorkspace, 'projects', 'vi-dubber', 'ui'),
     )
-    await mkdir(path.join(fixtureWorkspace, 'projects', 'mt5-tradingview-backtester', 'foundation_v2', 'web', 'src'), { recursive: true })
+    await mkdir(path.join(fixtureWorkspace, 'projects', 'trader', 'foundation_v2', 'web', 'src'), { recursive: true })
     await mkdir(path.join(fixtureWorkspace, 'projects', 'vi-dubber', 'frontend', 'src'), { recursive: true })
     await Promise.all([
       cp(
-        path.join(workspace, 'projects', 'mt5-tradingview-backtester', 'foundation_v2', 'web', 'src', 'ui-system.snapshot.css'),
-        path.join(fixtureWorkspace, 'projects', 'mt5-tradingview-backtester', 'foundation_v2', 'web', 'src', 'ui-system.snapshot.css'),
+        path.join(workspace, 'projects', 'trader', 'foundation_v2', 'web', 'src', 'ui-system.snapshot.css'),
+        path.join(fixtureWorkspace, 'projects', 'trader', 'foundation_v2', 'web', 'src', 'ui-system.snapshot.css'),
       ),
       cp(
         path.join(workspace, 'projects', 'vi-dubber', 'frontend', 'src', 'ui-system.snapshot.css'),
@@ -146,7 +146,7 @@ test('candidate migration and rollback preserve VI/MT5 1.0.0 pins', async () => 
     assert.equal(migrated.summary.pinCount, 3)
     const migratedPins = migrated.projects.flatMap(project => project.sharedUiPins.map(pin => ({ project: project.project, ...pin })))
     assert.deepEqual(
-      migratedPins.filter(pin => pin.project.includes('mt5-tradingview-backtester') || pin.project === 'projects/vi-dubber')
+      migratedPins.filter(pin => pin.project.includes('trader') || pin.project === 'projects/vi-dubber')
         .map(pin => pin.version),
       ['1.0.0', '1.0.0'],
     )

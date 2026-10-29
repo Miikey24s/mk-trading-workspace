@@ -17,7 +17,7 @@ Research chi tiết, sources và E1–E7 được giữ nguyên tại [bản v0.
 | Partial | Connector thay được; quyền/traces chưa được kiểm end-to-end liên project |
 | Missing | Dubber→Learn, report→SaaS, external-ID mapping/reconcile/revoke và acceptance connector thật |
 
-Nguồn: [Product Plan](mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md), [Dubber PLAN](../projects/vi-dubber/PLAN.md). Trạng thái thực theo evidence của từng worker, không theo tài liệu này.
+Nguồn: [Product Plan](trader/PRODUCT-COMPLETION-PLAN.md), [Dubber PLAN](../projects/vi-dubber/PLAN.md). Trạng thái thực theo evidence của từng worker, không theo tài liệu này.
 
 ## Workflow và thứ tự
 | Mốc | Đầu ra | Điều kiện |

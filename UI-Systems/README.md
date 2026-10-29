@@ -33,7 +33,7 @@ repaint and fixed-row virtualization contracts while retaining native paging.
 
 `UI-Systems` defines how reusable UI is described and evolved. A consumer project may pin a specific system/theme/version and add project-specific UI without forking the global platform.
 
-The first pilot consumer is [`../projects/mt5-tradingview-backtester`](../projects/mt5-tradingview-backtester/README.md), but trading-specific semantics live under [`../UI`](../UI/README.md).
+The first pilot consumer is [`../projects/trader`](../projects/trader/README.md), but trading-specific semantics live under [`../UI`](../UI/README.md).
 
 ## Repository and tooling
 

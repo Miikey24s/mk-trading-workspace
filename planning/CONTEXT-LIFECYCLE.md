@@ -70,7 +70,7 @@ Lượt mới: **current context → review việc trước → compact giữ vi
 
 ## Quy trình dọn toàn workspace — đối chiếu tài liệu 01/10/2026
 
-Phần này ghi kết quả nghiên cứu và quy trình áp dụng; không xác nhận việc di chuyển/xoá đã diễn ra, không huỷ hạng mục sản phẩm hoặc thay authority của worker. Tái sử dụng convention này và [phụ lục cleanup MT5](mt5-tradingview-backtester/REPO-CLEANUP-PLAN.md), không mở một master PLAN hoặc task ledger mới.
+Phần này ghi kết quả nghiên cứu và quy trình áp dụng; không xác nhận việc di chuyển/xoá đã diễn ra, không huỷ hạng mục sản phẩm hoặc thay authority của worker. Tái sử dụng convention này và [phụ lục cleanup MT5](trader/REPO-CLEANUP-PLAN.md), không mở một master PLAN hoặc task ledger mới.
 
 ### Nguồn tham khảo và quyết định áp dụng
 
@@ -93,14 +93,14 @@ Các nguồn dưới đây được đọc trực tiếp ngày 01/10/2026. Cách
 |---|---|---|
 | Điểm vào workspace | `README.md` | Dẫn tới project và tài liệu; không giữ thêm bảng tiến độ chi tiết. |
 | Điều phối liên project | `WORKSPACE-NEXT-STAGE-PLAN.md` | Giữ phạm vi/dependency giữa các project; các mốc tổng hợp phải dẫn về nguồn trạng thái của domain. |
-| Phạm vi và tiêu chí MT5 | `mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md` cùng phụ lục được nó dẫn tới | WMREPLAY là phần UI theo scope, không thay Product Plan hoặc ledger backend. `PLAN.md` cũ vẫn giữ các section còn authority/caller cho tới khi được thay thế rõ ràng. |
+| Phạm vi và tiêu chí MT5 | `trader/PRODUCT-COMPLETION-PLAN.md` cùng phụ lục được nó dẫn tới | WMREPLAY là phần UI theo scope, không thay Product Plan hoặc ledger backend. `PLAN.md` cũ vẫn giữ các section còn authority/caller cho tới khi được thay thế rõ ràng. |
 | Trạng thái các task thuộc run MT5 | `ledger.sqlite3` của run được entrypoint dẫn tới | `STATE.json` là bản export; `.sha256` kiểm integrity; `RESUME.md` giải thích cách tiếp tục. Không sửa tay snapshot để tuyên bố task đã đạt. |
 | Phạm vi và tiến độ phát triển VI | `projects/vi-dubber/PLAN.md` | Checkpoint chứa bằng chứng chi tiết; không để `frontend/UI-FIX-PLAN.md` trở thành một tracker cạnh tranh sau reconcile. |
 | Trạng thái một job VI | State/artifact của chính job theo source runtime | PLAN chỉ dẫn tới bằng chứng. Hoàn tất xử lý, đạt QA và nghiệm thu sản phẩm là các kết luận riêng. |
 | Kiến trúc, contract và công thức | ADR/spec/code owner hiện hành | PLAN/README dẫn link; không copy thành định nghĩa hoặc công thức thứ hai. |
 | Lịch sử và bằng chứng | Receipt gốc hoặc snapshot có locator/hash | Index ngắn giúp tra cứu; không diễn giải archive thành việc đã hoàn tất. |
 
-Bằng chứng producer MT5: trong run `mt5-tradingview-backtester/research/foundation-validation/20260921T115933Z-315e8ddd/`, `controller.py::export_snapshot` xuất snapshot và hash; `record_post_r283_candidates.py` kết nối `ledger.sqlite3`, cập nhật task rồi gọi export. Đây là authority của các task trong run đó, không suy tất cả UI checkpoint hoặc job media đều có cùng ledger.
+Bằng chứng producer MT5: trong run `trader/research/foundation-validation/20260921T115933Z-315e8ddd/`, `controller.py::export_snapshot` xuất snapshot và hash; `record_post_r283_candidates.py` kết nối `ledger.sqlite3`, cập nhật task rồi gọi export. Đây là authority của các task trong run đó, không suy tất cả UI checkpoint hoặc job media đều có cùng ledger.
 
 ### Cấu trúc đích tối thiểu
 

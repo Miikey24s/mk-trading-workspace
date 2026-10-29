@@ -1,8 +1,31 @@
 # Phụ lục dọn repo — tích hợp trong U0 / U1–U8 / U9
 
-Phiên bản **1.2 · 20/09/2026** · **PHỤ LỤC, CHƯA DI CHUYỂN/XÓA FILE**.
+Phiên bản nền **1.2 · 20/09/2026**; migration hiện hành ở mục bên dưới.
 
-**Đối chiếu 01/10/2026:** quy trình dọn toàn workspace và nguồn tài liệu chính thức nằm tại [CONTEXT-LIFECYCLE](../CONTEXT-LIFECYCLE.md). Các mô tả entrypoint trong inventory bên dưới là baseline ngày 20/09, không thay hướng PATH-2 hiện tại trong [README sản phẩm](../../projects/mt5-tradingview-backtester/README.md). Phụ lục này giữ scope MT5; không tự huỷ hạng mục hoặc mở quyền xoá repo/dữ liệu khác.
+## Migration Naqex được owner duyệt — 29/10/2026
+
+Phạm vi hiện hành: Naqex Trader, repo mới `Naqex/trader`, source
+`projects/trader`, plan `planning/trader`; giữ lịch sử Git, MIT và attribution.
+Workspace tiếp tục giữ chung plan, education, UI và tooling. Sản phẩm vẫn là
+repo độc lập qua submodule; không tách frontend/API/worker của Trader thành repo con.
+Không đổi các fork hoặc repo sản phẩm ngoài phạm vi.
+
+Đợt này chuẩn hóa tên hiển thị/logo, đường dẫn setup/test, README, version,
+CI/PR, candidate Windows và recovery thư viện được cấp quyền riêng. Script tự
+suy ra repo root; DB/tool/vendor dùng cấu hình rõ. Giữ namespace, storage key,
+ID và receipts lịch sử để tương thích. Không sửa hash hoặc snapshot lịch sử.
+
+Bằng chứng, trạng thái và bước còn lại: [migration receipt](checkpoints/NAQEX-MIGRATION-20261029.md).
+Owner đã hoãn đóng gói Windows để phân phối sang đợt sau; đợt này chốt source,
+plan, GitHub và CI/PR. ZIP thử chỉ là bằng chứng build, chưa là bản cài được hỗ trợ.
+Checkout cũ và WIP còn được giữ để phục vụ runtime đã có; chỉ retire sau cutover,
+backup/rollback và xác nhận phù hợp. Public application release và runtime
+rollout giữ gate riêng. Các mục dưới đây là baseline lịch sử 20/09, không tự
+cấp quyền cleanup hay mở lại plan sản phẩm.
+
+
+
+**Đối chiếu 01/10/2026:** quy trình dọn toàn workspace và nguồn tài liệu chính thức nằm tại [CONTEXT-LIFECYCLE](../CONTEXT-LIFECYCLE.md). Các mô tả entrypoint trong inventory bên dưới là baseline ngày 20/09, không thay hướng PATH-2 hiện tại trong [README sản phẩm](../../projects/trader/README.md). Phụ lục này giữ scope MT5; không tự huỷ hạng mục hoặc mở quyền xoá repo/dữ liệu khác.
 
 **Greenfield gate:** cleanup không được ép giữ repo hoặc implementation. F5 trong [foundation plan](FOUNDATION-RESEARCH-PLAN.md) chọn PATH-1/2/3; scope đường dẫn/code disposition cập nhật theo quyết định đó. [Knowledge register](KNOWLEDGE-PRESERVATION-REGISTER.md) và data handoff phải đạt trước retire. Quyền nghiên cứu xây mới không là quyền xóa repo cũ ngay.
 
@@ -18,7 +41,7 @@ Tài liệu con của [PRODUCT-COMPLETION-PLAN.md](PRODUCT-COMPLETION-PLAN.md). 
 | C1 · Dọn theo lát | Khi U1–U8 thay hoặc mở rộng module | Refactor phần liên quan; update callers/tests/docs; bỏ dead code đã chứng minh sau replacement pass | Không kéo module khác vào rewrite, không đồng thời đổi logic tiền và chuyển hàng loạt file |
 | C2 · Đóng gói | U9 sau acceptance các tính năng | Dọn các mục đã duyệt, kiểm clean setup/backup/restore, release inventory | Không xóa lịch sử run/checkpoint hoặc bundle user để repo trông đẹp |
 
-Repo hiện có trong inventory: `D:/ANNAM/TradingWorkspace/projects/mt5-tradingview-backtester`. Nếu F5 chọn repo mới, chốt đường dẫn/scope ở lúc giao F6, không tự tạo trong research này. Plan ở `D:/ANNAM/TradingWorkspace/planning/mt5-tradingview-backtester`. `quant-trading`, `TradingAgents`, `vi-dubber`, course và AI tooling ngoài scope **không tự thuộc cleanup**. Không `git init` workspace cha hoặc đổi ownership repo.
+Repo hiện có trong inventory: `D:/ANNAM/TradingWorkspace/projects/trader`. Nếu F5 chọn repo mới, chốt đường dẫn/scope ở lúc giao F6, không tự tạo trong research này. Plan ở `D:/ANNAM/TradingWorkspace/planning/trader`. `quant-trading`, `TradingAgents`, `vi-dubber`, course và AI tooling ngoài scope **không tự thuộc cleanup**. Không `git init` workspace cha hoặc đổi ownership repo.
 
 ## 2. Những gì đã thấy — danh sách để kiểm tra, không phải danh sách xóa
 

@@ -1,7 +1,7 @@
-[submodule "projects/mt5-tradingview-backtester"]
-	path = projects/mt5-tradingview-backtester
-	url = https://github.com/wuangnv/mt5-tradingview-backtester.git
-	branch = Nam
+[submodule "projects/trader"]
+	path = projects/trader
+	url = https://github.com/Naqex/trader.git
+	branch = main
 [submodule "projects/vi-dubber"]
 	path = projects/vi-dubber
 	url = https://github.com/Miikey24s/mk-ai-dubber.git

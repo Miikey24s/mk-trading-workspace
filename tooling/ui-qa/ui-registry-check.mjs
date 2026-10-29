@@ -236,7 +236,16 @@ async function validatePin({ pin, projectRoot, manifestRegistry, workspace, syst
 
 export async function auditUiRegistry({ workspace = DEFAULT_WORKSPACE, systemsRoot = path.resolve(workspace, 'UI-Systems') } = {}) {
   const projectsRoot = path.join(workspace, 'projects')
-  const configPaths = await walk(projectsRoot, (file, name) => name === 'project-ui.json' && path.basename(path.dirname(file)) === 'ui')
+  // Registered products are canonical; retained runtime/backup checkouts are not
+  // additional consumers. Standalone fixture workspaces can omit .gitmodules.
+  const gitmodules = path.join(workspace, '.gitmodules')
+  const registered = await exists(gitmodules)
+    ? [...(await readFile(gitmodules, 'utf8')).matchAll(/^\s*path\s*=\s*(projects\/[^\r\n]+)\s*$/gm)]
+      .map(match => path.resolve(workspace, match[1].trim()))
+    : [projectsRoot]
+  if (registered.some(root => !isInside(projectsRoot, root))) throw new Error('registered project escapes projects root')
+  const configPaths = (await Promise.all(registered.map(root => walk(root,
+    (file, name) => name === 'project-ui.json' && path.basename(path.dirname(file)) === 'ui')))).flat().sort()
   const registry = await discoverManifests(systemsRoot)
   const projects = []
   const errors = []

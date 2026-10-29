@@ -36,7 +36,7 @@ bun run test:transport
 ```
 
 Dùng Bun1.4.2 theo package/lock. Cần Chrome để login và gửi yêu cầu thật.
-Hướng dẫn consumer đầu tiên: [MT5 ChatGPT Web](../../projects/mt5-tradingview-backtester/foundation_v2/docs/CHATGPT-WEB.md).
+Hướng dẫn consumer đầu tiên: [MT5 ChatGPT Web](../../projects/trader/foundation_v2/docs/CHATGPT-WEB.md).
 Không có bước tự đăng nhập, tự tạo service nền hoặc đổi route global.
 MT5 khởi động và sở hữu runtime khi owner bấm kết nối; tiến trình dừng cùng API.
 

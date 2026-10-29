@@ -3,13 +3,13 @@
 Version: 1.1  
 Date: 2026-09-19  
 Status: RESEARCH + ISOLATED API EXPERIMENTS COMPLETED; product implementation has not started  
-Target repository: `D:\ANNAM\TradingWorkspace\projects\mt5-tradingview-backtester`  
-Parent product plan: `D:\ANNAM\TradingWorkspace\planning\mt5-tradingview-backtester\PRODUCT-COMPLETION-PLAN.md`  
+Target repository: `D:\ANNAM\TradingWorkspace\projects\trader`
+Parent product plan: `D:\ANNAM\TradingWorkspace\planning\trader\PRODUCT-COMPLETION-PLAN.md`
 Relevant product milestone: U7 — AI integration in the product
 
 ## 0. Current decision after independent re-check (19 September)
 
-This is a **linked U7 work package**, not a second master plan. The user hands workers `mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md`; workers read this file at the TypeSafe slice. User authorization in the current research turn covers read-only code inspection, isolated synthetic API experiments and plan edits, **not product integration, provider deployment, broker activity or default AI enablement**.
+This is a **linked U7 work package**, not a second master plan. The user hands workers `trader/PRODUCT-COMPLETION-PLAN.md`; workers read this file at the TypeSafe slice. User authorization in the current research turn covers read-only code inspection, isolated synthetic API experiments and plan edits, **not product integration, provider deployment, broker activity or default AI enablement**.
 
 Read the [independent research and experiment report](typesafe-research-2026-09-19/REPORT.md) before using prior evidence. New run: 34 real API requests to `jev-1.13.0`, synthetic inputs only, approximately $0.00084 estimated from published input pricing. Search matched 6/7 positive queries versus substring 1/7 and rejected 2/2 absent queries; draft fields 27/30, not perfect; first journal entry-only labels 5/6. Clean-rubric journal development control 6/6 is **not held-out evaluation**. Raw results, scripts, wrong cases and limitations are linked in the report.
 
@@ -52,9 +52,9 @@ Do not implement all jobs in one large change. Each slice must have its own test
 Workers must read these files before modifying product source:
 
 1. `D:\ANNAM\TradingWorkspace\AGENTS.md`
-2. `D:\ANNAM\TradingWorkspace\projects\mt5-tradingview-backtester\README.md`
-3. `D:\ANNAM\TradingWorkspace\planning\mt5-tradingview-backtester\PLAN.md`
-4. `D:\ANNAM\TradingWorkspace\planning\mt5-tradingview-backtester\PRODUCT-COMPLETION-PLAN.md`
+2. `D:\ANNAM\TradingWorkspace\projects\trader\README.md`
+3. `D:\ANNAM\TradingWorkspace\planning\trader\PLAN.md`
+4. `D:\ANNAM\TradingWorkspace\planning\trader\PRODUCT-COMPLETION-PLAN.md`
 5. This file.
 
 This plan refines the TypeSafe portion of U7. It does not replace safety, data, replay, research, analytics, execution, or live-trading contracts already established by the parent plan.
@@ -1123,6 +1123,6 @@ Ordinary reversible implementation decisions inside the approved TypeSafe scope 
 
 Use this as the default handoff prompt for an implementation worker:
 
-> Continue the assigned U7 TypeSafe slice from `D:\ANNAM\TradingWorkspace\planning\mt5-tradingview-backtester\PRODUCT-COMPLETION-PLAN.md`. Read this linked `TYPESAFE-MT5-WORKER-PLAN.md` and its independent research report; verify U3/U5 prerequisites before starting UI/persistence work. Start from the first incomplete TS step in scope, freeze eval/security boundaries before user-facing implementation, use one reviewable slice at a time, and record evidence. Re-read current TypeSafe docs before SDK/API work. Keep exact rules/calculations/execution in code; TypeSafe provides typed semantic suggestions only. Preserve no-future-leak, user confirmation and existing execution gates. Do not open holdout, add another provider, migrate/delete user data or enable any broker action without explicit approval. Apply cleanup within the parent U milestone. Stop at required user-decision points; do not treat this appendix as authority to skip the main product plan.
+> Continue the assigned U7 TypeSafe slice from `D:\ANNAM\TradingWorkspace\planning\trader\PRODUCT-COMPLETION-PLAN.md`. Read this linked `TYPESAFE-MT5-WORKER-PLAN.md` and its independent research report; verify U3/U5 prerequisites before starting UI/persistence work. Start from the first incomplete TS step in scope, freeze eval/security boundaries before user-facing implementation, use one reviewable slice at a time, and record evidence. Re-read current TypeSafe docs before SDK/API work. Keep exact rules/calculations/execution in code; TypeSafe provides typed semantic suggestions only. Preserve no-future-leak, user confirmation and existing execution gates. Do not open holdout, add another provider, migrate/delete user data or enable any broker action without explicit approval. Apply cleanup within the parent U milestone. Stop at required user-decision points; do not treat this appendix as authority to skip the main product plan.
 
 This prompt is a handoff template. Creating this plan does not itself authorize or start implementation.

@@ -9,7 +9,7 @@ import { promisify } from 'node:util'
 const exec = promisify(execFile)
 export const KIT = path.dirname(fileURLToPath(import.meta.url))
 export const ROOT = path.resolve(KIT, '../..')
-export const PLAN = path.join(ROOT, 'planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md')
+export const PLAN = path.join(ROOT, 'planning/trader/PRODUCT-COMPLETION-PLAN.md')
 const require = createRequire(import.meta.url)
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'))
 const hash = file => createHash('sha256').update(fs.readFileSync(file)).digest('hex')
@@ -76,8 +76,8 @@ export function doctor(plan = PLAN) {
   const paths = [PLAN,
     path.join(path.dirname(PLAN), 'EXECUTION-ENTRYPOINT.md'),
     path.join(path.dirname(PLAN), 'UI-AUTONOMY-FIGMA-PROP-PLAN.md'),
-    path.join(ROOT, 'projects/mt5-tradingview-backtester/AGENTS.md'),
-    path.join(ROOT, 'projects/mt5-tradingview-backtester/.agents/skills/trading-ui-qa/SKILL.md'),
+    path.join(ROOT, 'projects/trader/AGENTS.md'),
+    path.join(ROOT, 'projects/trader/.agents/skills/trading-ui-qa/SKILL.md'),
     path.join(KIT, 'README.md'), path.join(KIT, 'playwright.config.mjs'), path.join(KIT, 'package-lock.json')]
   const missing = paths.filter(file => !fs.existsSync(file))
   const packages = {}
