@@ -64,3 +64,12 @@ Raw local logs/screenshots/reports live under the backup root; private scanner
 input is not a publishable artifact. Original runtime was left unchanged:
 UI5180 PID10820, API8010 PID28856. Runtime promotion/restart and public application
 release still require their separate authorization and health/rollback checks.
+
+## Existing workspace dependency outside this migration
+
+Hosted registry CI exposed that the pre-existing VI Dubber pin `317ced98` is
+not yet available on its remote (11 local commits ahead). This task does not
+publish or change VI Dubber. Workspace CI fetches and validates Trader only;
+other products remain independently owned. The current all-consumer local
+registry check passed, but fresh recursive cloning of every product is not
+claimed until those unrelated pins are published.

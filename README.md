@@ -49,15 +49,16 @@ Quy tắc phân loại, nguồn tiến độ và quy trình dọn nằm trong [V
 
 ## Lấy workspace về máy
 
-Clone repo gốc rồi khởi tạo đúng bốn repo sản phẩm theo commit đã được repo gốc ghi nhận:
+Clone repo gốc rồi khởi tạo Trader theo commit đã được workspace ghi nhận:
 
 ```powershell
 git clone https://github.com/Miikey24s/mk-trading-workspace.git
 cd mk-trading-workspace
-git submodule update --init -- projects/trader projects/vi-dubber projects/quant-trading projects/TradingAgents
+git submodule update --init -- projects/trader
 ```
 
-Lệnh trên lấy đúng bốn sản phẩm. Submodule `tooling/reverse-skill` là bộ tham khảo riêng, chỉ khởi tạo khi công việc cần đến. Fixture Git lịch sử đã được bỏ khỏi index và giữ local; nó không còn ảnh hưởng thao tác submodule.
+Các sản phẩm khác khởi tạo riêng khi cần, sau khi các commit đã pin được công bố
+ở remote của chúng. Đợt này chỉ chuẩn hóa và phát hành source Trader. Submodule `tooling/reverse-skill` là bộ tham khảo riêng, chỉ khởi tạo khi công việc cần đến. Fixture Git lịch sử đã được bỏ khỏi index và giữ local; nó không còn ảnh hưởng thao tác submodule.
 
 `UI-Systems/` được lấy cùng repo gốc, không cần khởi tạo thêm repo hoặc tải
 thư mục ngoài workspace. Kiểm tra các pins bằng `npm --prefix tooling/ui-qa run registry-check`.
