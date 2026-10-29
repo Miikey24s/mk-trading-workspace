@@ -8,8 +8,8 @@ Workspace cá nhân cho học trading, nghiên cứu định lượng và phát 
 |---|---|
 | Nắm việc đang làm và phần còn mở | [CURRENT-CONTEXT](planning/CURRENT-CONTEXT.md) → [checkpoint tiếp tục](planning/checkpoints/workspace-next-stage/RESUME.md) |
 | Điều phối công việc liên project | [WORKSPACE-NEXT-STAGE-PLAN](planning/WORKSPACE-NEXT-STAGE-PLAN.md) |
-| Phát triển sản phẩm MT5 | [Product Plan](planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md) → [execution entrypoint](planning/mt5-tradingview-backtester/EXECUTION-ENTRYPOINT.md) |
-| Theo dõi giao diện MT5 hiện tại | [WMREPLAY UI Plan](planning/mt5-tradingview-backtester/WMREPLAY-UI-MASTER-PLAN.md) |
+| Phát triển sản phẩm MT5 | [Product Plan](planning/trader/PRODUCT-COMPLETION-PLAN.md) → [execution entrypoint](planning/trader/EXECUTION-ENTRYPOINT.md) |
+| Theo dõi giao diện Trader hiện tại | [Trader UI Plan](planning/trader/TRADER-UI-MASTER-PLAN.md) |
 | Phát triển VI Dubber | [PLAN của VI Dubber](https://github.com/Miikey24s/mk-ai-dubber/blob/main/PLAN.md), local: `projects/vi-dubber/PLAN.md` |
 | Học trading | [Education](education/README.md) |
 
@@ -19,7 +19,7 @@ PLAN xác định phạm vi; checkpoint và ledger giữ bằng chứng thực h
 
 | Repo / đường dẫn | Vai trò hiện tại | Hướng dẫn |
 |---|---|---|
-| [MT5 Backtester](https://github.com/wuangnv/mt5-tradingview-backtester), `projects/mt5-tradingview-backtester/` | Replay, backtest và workspace giao dịch. `foundation_v2` là nền phát triển theo PATH-2; Flask/EA cũ là nguồn tham chiếu và chỉ được reuse theo phạm vi. | [README](https://github.com/wuangnv/mt5-tradingview-backtester/blob/Nam/README.md) · [Foundation v2](https://github.com/wuangnv/mt5-tradingview-backtester/blob/Nam/foundation_v2/README.md) |
+| [Naqex Trader](https://github.com/Naqex/trader), `projects/trader/` | Replay, backtest và workspace giao dịch. `foundation_v2` là nền phát triển theo PATH-2; Flask/EA cũ là nguồn tham chiếu và chỉ được reuse theo phạm vi. | [README](https://github.com/Naqex/trader/blob/main/README.md) · [Foundation v2](https://github.com/Naqex/trader/blob/main/foundation_v2/README.md) |
 | [VI Dubber](https://github.com/Miikey24s/mk-ai-dubber), `projects/vi-dubber/` | Dịch, phụ đề và lồng tiếng video. Có môi trường xử lý media và provider riêng. | [README](https://github.com/Miikey24s/mk-ai-dubber/blob/main/README.md) |
 | [Quant Lab](https://github.com/Miikey24s/mk-quant-trading), `projects/quant-trading/` | Nghiên cứu crypto spot khung ngày; kiểm tra dữ liệu, backtest, chi phí và ngoài mẫu. | [README](https://github.com/Miikey24s/mk-quant-trading/blob/master/README.md) |
 | [TradingAgents](https://github.com/Miikey24s/mk-trading-agents), `projects/TradingAgents/` | Fork framework phân tích thị trường bằng nhiều agent; giữ riêng dependency và cấu hình provider. | [README](https://github.com/Miikey24s/mk-trading-agents/blob/main/README.md) |
@@ -38,6 +38,11 @@ Workspace chưa được nghiệm thu như một sản phẩm thống nhất. MT
 | `tooling/` | [ChatGPT Web core](tooling/chatgpt-web-core/README.md), [Agent workflow](tooling/agent-workflow/README.md), [UI QA](tooling/ui-qa/README.md), [run registry](tooling/run_registry/README.md). `reverse-skill/` là submodule tham khảo riêng. |
 | `miro/` | Tài liệu sơ đồ kiến trúc. |
 
+Workspace giữ chung kế hoạch, education, UI và tooling. Các sản phẩm có vòng đời,
+dependency và cách phát hành riêng nên tiếp tục là submodule. Chuyển sang GitHub
+organization không thay đổi ranh giới này; Trader giữ frontend/API/worker trong
+cùng một repo. Các fork giữ nguyên upstream và attribution.
+
 Các bản tải website, worktree nghiệm thu, cache, model, database và media không phải toàn bộ đều là source cần commit. File bị Git bỏ qua cũng có thể là dữ liệu duy nhất của người dùng; phải kiểm tra trước khi xoá.
 
 Quy tắc phân loại, nguồn tiến độ và quy trình dọn nằm trong [Vòng đời context và PLAN](planning/CONTEXT-LIFECYCLE.md). Đây là quy trình chung; danh sách file cần xử lý được ghi theo từng nhóm có owner, bằng chứng và đường phục hồi.
@@ -49,7 +54,7 @@ Clone repo gốc rồi khởi tạo đúng bốn repo sản phẩm theo commit �
 ```powershell
 git clone https://github.com/Miikey24s/mk-trading-workspace.git
 cd mk-trading-workspace
-git submodule update --init -- projects/mt5-tradingview-backtester projects/vi-dubber projects/quant-trading projects/TradingAgents
+git submodule update --init -- projects/trader projects/vi-dubber projects/quant-trading projects/TradingAgents
 ```
 
 Lệnh trên lấy đúng bốn sản phẩm. Submodule `tooling/reverse-skill` là bộ tham khảo riêng, chỉ khởi tạo khi công việc cần đến. Fixture Git lịch sử đã được bỏ khỏi index và giữ local; nó không còn ảnh hưởng thao tác submodule.

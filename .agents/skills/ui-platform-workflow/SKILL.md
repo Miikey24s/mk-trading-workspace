@@ -35,11 +35,11 @@ Read `UI-Systems/AGENTS.md` only when changing shared foundations. Promote code
 after real consumers demonstrate reuse and reduced maintenance. Ordinary product
 fixes stay in their owner.
 
-## MT5 / WMREPLAY
+## Naqex Trader
 
 Use `foundation_v2` in the main product repository and its `ui/` contracts.
 For plan execution, follow Product Plan -> EXECUTION-ENTRYPOINT -> current evidence;
-WMREPLAY owns UI quality. A small directly assigned fix only needs the relevant
+Naqex Trader owns UI quality. A small directly assigned fix only needs the relevant
 component/contract and focused verification, not every historical plan.
 
 Use the product `.agents/skills/trading-ui-qa/SKILL.md` for browser evidence.

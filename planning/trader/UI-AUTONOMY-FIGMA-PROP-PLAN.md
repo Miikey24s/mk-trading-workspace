@@ -67,7 +67,7 @@ Lượt planning 23/09 không chỉnh AGENTS/skills/config. Theo yêu cầu tool
 
 ### Playwright-first — worker tooling ngày 24/09
 
-Đọc [trading-ui-qa](../../projects/mt5-tradingview-backtester/.agents/skills/trading-ui-qa/SKILL.md), [CLI kit](../../tooling/ui-qa/README.md) và [validation](../../tooling/ui-qa/VALIDATION.md). Không cần tạo browser MCP riêng hoặc tự tải SDK latest.
+Đọc [trading-ui-qa](../../projects/trader/.agents/skills/trading-ui-qa/SKILL.md), [CLI kit](../../tooling/ui-qa/README.md) và [validation](../../tooling/ui-qa/VALIDATION.md). Không cần tạo browser MCP riêng hoặc tự tải SDK latest.
 
 | Công việc | Công cụ mặc định | Evidence / giới hạn |
 |---|---|---|

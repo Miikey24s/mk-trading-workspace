@@ -9,7 +9,7 @@
 3. Current execution resume: `../checkpoints/workspace-next-stage/RESUME.md`.
 4. MT5 product authority: `PRODUCT-COMPLETION-PLAN.md`.
 5. MT5 startup/scope: `EXECUTION-ENTRYPOINT.md`.
-6. MT5 UI scope: `WMREPLAY-UI-MASTER-PLAN.md` and `UI-AUTONOMY-FIGMA-PROP-PLAN.md`.
+6. MT5 UI scope: `TRADER-UI-MASTER-PLAN.md` and `UI-AUTONOMY-FIGMA-PROP-PLAN.md`.
 7. Runtime attempt state: the controller ledger/`STATE.json`/receipts for the assigned run. This file must not copy or override that state.
 
 `../CONTEXT-LIFECYCLE.md` defines the authority map and compact/archive rules. The full pre-cleanup version of this file is preserved at `../archive/2026-10-01-cleanup/planning__mt5-tradingview-backtester__PLAN.md`; its SHA-256 is in `../archive/2026-10-01-cleanup/ORIGINAL-BYTES-MANIFEST.json`.
@@ -17,14 +17,14 @@
 ## Current product routing
 
 - PATH-2 foundation remains owner-approved. The Product Completion Plan owns product scope, U/Y requirements, acceptance and permission gates.
-- `WMREPLAY-UI-MASTER-PLAN.md` owns the current W0–W8 UI work. Its evidence is scoped to UI/function/visual/performance contracts and does not grant broker, provider, OAuth, deploy or live authority.
+- `TRADER-UI-MASTER-PLAN.md` owns the current W0–W8 UI work. Its evidence is scoped to UI/function/visual/performance contracts and does not grant broker, provider, OAuth, deploy or live authority.
 - `COORDINATOR-OPERATING-PLAN.md` and `EXECUTION-ENTRYPOINT.md` describe orchestration/startup constraints. They do not replace the run ledger or current `RESUME.md`.
 - `FOUNDATION-ADR-0001-PATH2.md`, `DATA-AND-METRICS.md`, contracts and knowledge register remain architecture/semantic references. Do not rewrite accepted decisions into this index.
 - Old R/P/U checkpoints and foundation reports remain historical evidence. Read them only when a receipt, regression or decision requires their provenance.
 
 ## Current MT5 state summary
 
-- WMREPLAY W7-A route recovery and W7-B shell/route-token repair have focused evidence; current integrated web suite is 56/56, build passes with the existing bundle warning, route matrix is 45/45 and W7-B structural/request-safety review is 18/18.
+- Naqex Trader W7-A route recovery and W7-B shell/route-token repair have focused evidence; current integrated web suite is 56/56, build passes with the existing bundle warning, route matrix is 45/45 and W7-B structural/request-safety review is 18/18.
 - W7/W8 is not a full product completion. Replay contrast, native browser zoom, axe/WCAG, canonical golden, full-bleed, long-duration heap/frame, Dashboard aggregate semantics and owner-gated external actions remain open.
 - Preserve dirty WIP and reconcile against current nested MT5 HEAD before any integration. Do not infer acceptance from a fixture-only packet.
 
@@ -47,5 +47,5 @@ The following remain reference only unless a later user decision opens them: clo
 ## Change policy
 
 - Add current status to `RESUME.md` or the owning project checkpoint, not to this history index.
-- Update Product Plan for product acceptance; update WMREPLAY for UI acceptance; update runtime ledger/STATE for attempts.
+- Update Product Plan for product acceptance; update Naqex Trader for UI acceptance; update runtime ledger/STATE for attempts.
 - Keep immutable receipt paths and negative findings. Archive after hash/link preservation, never silently replace an active writer.

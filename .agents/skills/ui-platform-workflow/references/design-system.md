@@ -3,7 +3,7 @@
 Read only for explicit new direction, Stitch/Figma work, token/component-system
 changes, scaling or consumer migration.
 
-- Exploration: confirm current scope/approval authority. Existing MT5 WMREPLAY
+- Exploration: confirm current scope/approval authority. Existing Naqex Trader
   direction and retired prototypes are not reopened by a historical prompt.
   Compare meaningful candidates using clarity, density, hierarchy, domain
   ergonomics, accessibility and maintainability; preserve alternatives for review.

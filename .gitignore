@@ -64,3 +64,6 @@ desktop.ini
 .vscode/
 *.swp
 *.swo
+
+# Previous Trader checkout retained temporarily for the owned runtime and WIP.
+/projects/mt5-tradingview-backtester/

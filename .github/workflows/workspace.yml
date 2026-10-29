@@ -1,0 +1,40 @@
+name: Workspace
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/workspace.yml'
+      - '.gitmodules'
+      - 'UI-Systems/**'
+      - 'UI/**'
+      - 'tooling/ui-qa/**'
+      - 'projects/trader'
+      - 'projects/vi-dubber'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/workspace.yml'
+      - '.gitmodules'
+      - 'UI-Systems/**'
+      - 'UI/**'
+      - 'tooling/ui-qa/**'
+      - 'projects/trader'
+      - 'projects/vi-dubber'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: workspace-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  registry:
+    name: Workspace UI registry
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Fetch pinned UI consumers
+        run: git submodule update --init -- projects/trader projects/vi-dubber
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with: {node-version: '22'}
+      - run: node tooling/ui-qa/ui-registry-check.mjs --json
+      - run: node --test tooling/ui-qa/tests/ui-registry.test.mjs tooling/ui-qa/tests/ui-registry-migration.test.mjs

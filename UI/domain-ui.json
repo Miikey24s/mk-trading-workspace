@@ -6,7 +6,7 @@
   "globalPlatform": "../UI-Systems",
   "supportedSystemFamilies": [],
   "pilotProjects": [
-    "mt5-tradingview-backtester"
+    "trader"
   ]
 }
 

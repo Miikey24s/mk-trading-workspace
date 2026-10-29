@@ -4,7 +4,7 @@
 
 ## Một đường dẫn giao việc
 
-Giao [PRODUCT-COMPLETION-PLAN.md](../../planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md). Plan dẫn tới entrypoint/state, phụ lục UI/Figma/Prop và [skill trading-ui-qa](../../projects/mt5-tradingview-backtester/.agents/skills/trading-ui-qa/SKILL.md). Worker đọc skill bằng đường dẫn nếu phiên hiện tại chưa tự discover. Không cần người dùng mở nhiều chat hoặc copy instructions giữa app.
+Giao [PRODUCT-COMPLETION-PLAN.md](../../planning/trader/PRODUCT-COMPLETION-PLAN.md). Plan dẫn tới entrypoint/state, phụ lục UI/Figma/Prop và [skill trading-ui-qa](../../projects/trader/.agents/skills/trading-ui-qa/SKILL.md). Worker đọc skill bằng đường dẫn nếu phiên hiện tại chưa tự discover. Không cần người dùng mở nhiều chat hoặc copy instructions giữa app.
 
 Kit không điều phối model, không sửa ledger, không tự khởi động app/backend và không thay runner `tooling/agent-workflow`. Runner legacy đó cấm browser trong staging; **không chạy UI kit bên trong role/policy legacy** hoặc tắt guard của nó. Coordinator hiện hành trực tiếp gọi kit trong scope UI-QA đã giao.
 
@@ -39,7 +39,7 @@ source directory moves.
 Từ TradingWorkspace (hoặc dùng đường dẫn tuyệt đối):
 
 ```powershell
-node tooling/ui-qa/qa.mjs doctor --plan D:/ANNAM/TradingWorkspace/planning/mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md
+node tooling/ui-qa/qa.mjs doctor --plan D:/ANNAM/TradingWorkspace/planning/trader/PRODUCT-COMPLETION-PLAN.md
 node tooling/ui-qa/qa.mjs smoke
 npm --prefix tooling/ui-qa test
 ```

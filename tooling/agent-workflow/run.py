@@ -14,7 +14,7 @@ import uuid
 BASE = Path(__file__).resolve().parent
 RUNS = BASE / "runs"
 ROLES = json.loads((BASE / "roles.json").read_text(encoding="utf-8"))
-SOURCES = {'fixtures': BASE, 'roadmap': BASE.parents[1], 'mt5': BASE.parents[1] / "projects" / "mt5-tradingview-backtester"}
+SOURCES = {'fixtures': BASE, 'roadmap': BASE.parents[1], 'mt5': BASE.parents[1] / "projects" / "trader"}
 MAX_FILE_BYTES = 200_000
 FORBIDDEN = {".git", ".codex", ".gemini", ".ssh", "node_modules", ".venv", "data", "holdout", "__pycache__"}
 

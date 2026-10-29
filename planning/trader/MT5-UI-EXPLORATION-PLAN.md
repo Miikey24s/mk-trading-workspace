@@ -36,7 +36,7 @@ Reuse the recorded references; do not reopen the selection questionnaire. For me
 
 The user chose to accelerate convergence by using FX Replay as the dominant structural reference because its chart/replay/journal/analytics workflow overlaps strongly with this product. Use the reference for composition and interaction patterns, not branding, proprietary assets, exact copy, or implementation code.
 
-Active review artifact: `projects/mt5-tradingview-backtester/static/u1-fxreplay-preview.html`.
+Active review artifact: `projects/trader/static/u1-fxreplay-preview.html`.
 
 The fast-track preview should prove one coherent workspace first:
 
@@ -90,6 +90,6 @@ Only then apply the agent-accepted system to supported product UI, following U1b
 
 Do not install or depend on Stitch SDK for the exploration gate. Add SDK automation when the approved system is stable enough that batch generation saves effort without amplifying inconsistency.
 
-Project machine-readable state: `projects/mt5-tradingview-backtester/ui/project-ui.json`.
+Project machine-readable state: `projects/trader/ui/project-ui.json`.
 
 That config and project AGENTS are not edited by this planning update. The execution worker reconciles their historical owner gate via the required environment-maintainer workflow and changes acceptance flags only after actual tests. No global UI policy or shared design-system release is silently changed.

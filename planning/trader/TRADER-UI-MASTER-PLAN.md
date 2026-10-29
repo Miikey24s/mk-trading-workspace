@@ -1,7 +1,7 @@
-# WMREPLAY — UI Master Plan
+# Naqex Trader — UI Master Plan
 
 **Ngày:** 30/09/2026\
-**Phạm vi:** chỉ projects/mt5-tradingview-backtester (WMREPLAY/MT5). VI Dubber không nằm trong plan này.\
+**Phạm vi:** chỉ projects/trader (Naqex Trader/MT5). VI Dubber không nằm trong plan này.\
 **Trạng thái:** kế hoạch đã được owner chốt hướng; chưa phải nghiệm thu UI.\
 **Planner:** GPT-6 Astra/Codex chịu trách nhiệm giữ contract, dependency, evidence và không để worker tự cắt scope.\
 **Worker:** agent được giao lát UI chịu trách nhiệm triển khai, tự review, ghi nhật ký và sửa đến khi qua gate.\
@@ -9,7 +9,7 @@
 
 ## 0. Quyết định của owner và quality contract
 
-Owner muốn WMREPLAY có chất lượng thị giác và trải nghiệm ở mức FXReplay hoặc cao hơn, nhưng dùng cấu trúc React và domain contracts phù hợp với WMREPLAY. Mục tiêu là học cách FXReplay tổ chức workflow, mật độ, chart và feedback; không bê source proprietary, thương hiệu, copy, ảnh đại diện hay lỗi semantics của sản phẩm tham khảo.
+Owner muốn Naqex Trader có chất lượng thị giác và trải nghiệm ở mức FXReplay hoặc cao hơn, nhưng dùng cấu trúc React và domain contracts phù hợp với Naqex Trader. Mục tiêu là học cách FXReplay tổ chức workflow, mật độ, chart và feedback; không bê source proprietary, thương hiệu, copy, ảnh đại diện hay lỗi semantics của sản phẩm tham khảo.
 
 Đây là yêu cầu chất lượng bắt buộc, không phải lời khuyên:
 
@@ -50,7 +50,7 @@ Hard gate: không sai số tiền/đơn vị/mode; không future leak; không bi
 
 ### 1.1 Học từ Apple theo nguyên tắc, không sao chép hình thức
 
-WMREPLAY áp dụng các nguyên tắc phù hợp với sản phẩm trading:
+Naqex Trader áp dụng các nguyên tắc phù hợp với sản phẩm trading:
 
 - **Clarity:** một màn có một nhiệm vụ chính; title, scope và trạng thái nói đúng việc đang xảy ra.
 - **Deference:** chrome phục vụ chart/dữ liệu; toolbar và panel không tranh sự chú ý với chart khi người dùng đang replay.
@@ -75,12 +75,12 @@ Không dùng glassmorphism, gradient, shadow, bounce hoặc animation dày chỉ
 - Toast không thay thế inline error; lỗi cần sửa ở field nằm cạnh field.
 - Không bắt người dùng đọc văn bản dài để hiểu một trạng thái đơn giản; copy ngắn, cụ thể, có “làm gì tiếp”.
 
-## 2. Kiến trúc thông tin WMREPLAY
+## 2. Kiến trúc thông tin Naqex Trader
 
 ### 2.1 App shell
 
     ┌─────────────────────────────────────────────────────────────────────────────┐
-    │ [collapse]  WMREPLAY                         [VI/EN] [dark/light] [help]    │
+    │ [collapse]  Naqex Trader                         [VI/EN] [dark/light] [help]    │
     ├───────────────┬─────────────────────────────────────────────────────────────┤
     │ Aside         │ Product subheader: Dashboard · Sessions · Trades · Analytics│
     │               ├─────────────────────────────────────────────────────────────┤
@@ -91,7 +91,7 @@ Không dùng glassmorphism, gradient, shadow, bounce hoặc animation dày chỉ
     │ Settings      │                                                             │
     └───────────────┴─────────────────────────────────────────────────────────────┘
 
-**Header:** collapse/expand aside, WMREPLAY logo, language, theme, help/shortcuts. Không đặt tenant id, broker lock, text debug hoặc metadata dài vào header chính; các thông tin đó nằm trong scope/status phù hợp.
+**Header:** collapse/expand aside, Naqex Trader logo, language, theme, help/shortcuts. Không đặt tenant id, broker lock, text debug hoặc metadata dài vào header chính; các thông tin đó nằm trong scope/status phù hợp.
 
 **Aside:**
 
@@ -137,7 +137,7 @@ Research, Data Desk, Risk, Journal, Playbook, Prop và AI là domain surfaces/dr
 
 Luồng phải giữ session_id, run_id, branch_id, cursor/cutoff, dataset/version, timezone, filter và mode. Một route đổi scope phải báo scope mới trước khi render metric/chart.
 
-## 3. Design system WMREPLAY
+## 3. Design system Naqex Trader
 
 ### 3.1 Token contract
 
@@ -287,7 +287,7 @@ Mục tiêu khuyến nghị, không thay benchmark thực tế: thao tác thư�
 
 ## 7. QA và evidence workflow
 
-Playwright-first theo projects/mt5-tradingview-backtester/.agents/skills/trading-ui-qa/SKILL.md và tooling/ui-qa/README.md.
+Playwright-first theo projects/trader/.agents/skills/trading-ui-qa/SKILL.md và tooling/ui-qa/README.md.
 
 ### 7.1 Visual baseline
 
@@ -415,4 +415,4 @@ W0 audit → W1 shell → W2 foundation → W3 dashboard/sessions → W4 chart �
 
 Sau W0, worker có thể chạy W1 và W2 ở các file ownership tách biệt; W3 phụ thuộc shell/foundation; W4 phụ thuộc foundation + chart audit; W5 phụ thuộc data/metric contracts; W7/W8 chỉ bắt đầu khi các màn đại diện đã chạy thật. Không giao một prompt “làm toàn bộ UI” không có packet.
 
-> **Authority note · 2026-10-01:** This plan owns only MT5 WMREPLAY UI W0–W8 scope, UI contracts and visual/a11y/performance evidence. The Product Completion Plan owns overall MT5 product acceptance; `../checkpoints/workspace-next-stage/RESUME.md` owns current cross-lane status; runtime ledger/`STATE.json` owns attempts. Current W7/W8 work is fixture/local QA and remains `FULL_PRODUCT_NOT_COMPLETE`; do not promote UI evidence to broker/provider/OAuth/deploy authority. Preserve the prior `ReplayWorkspace.css` WIP checkpoint at MT5 `a90526c` and use the dedicated checkpoint for each lane.
+> **Authority note · 2026-10-01:** This plan owns only MT5 Naqex Trader UI W0–W8 scope, UI contracts and visual/a11y/performance evidence. The Product Completion Plan owns overall MT5 product acceptance; `../checkpoints/workspace-next-stage/RESUME.md` owns current cross-lane status; runtime ledger/`STATE.json` owns attempts. Current W7/W8 work is fixture/local QA and remains `FULL_PRODUCT_NOT_COMPLETE`; do not promote UI evidence to broker/provider/OAuth/deploy authority. Preserve the prior `ReplayWorkspace.css` WIP checkpoint at MT5 `a90526c` and use the dedicated checkpoint for each lane.

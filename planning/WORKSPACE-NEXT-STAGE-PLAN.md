@@ -19,10 +19,10 @@ Kết luận chọn: **C — nền tối thiểu reuse → Make exploration nh�
 
 | Phạm vi | Authority / đọc khi cần |
 |---|---|
-| MT5 yêu cầu hiện tại | [Product Plan](mt5-tradingview-backtester/PRODUCT-COMPLETION-PLAN.md), [entrypoint](mt5-tradingview-backtester/EXECUTION-ENTRYPOINT.md) → operational ledger/STATE/receipts; [PATH-2 ADR](mt5-tradingview-backtester/FOUNDATION-ADR-0001-PATH2.md) |
+| MT5 yêu cầu hiện tại | [Product Plan](trader/PRODUCT-COMPLETION-PLAN.md), [entrypoint](trader/EXECUTION-ENTRYPOINT.md) → operational ledger/STATE/receipts; [PATH-2 ADR](trader/FOUNDATION-ADR-0001-PATH2.md) |
 | VI baseline | [PLAN hiện tại](../projects/vi-dubber/PLAN.md), [README](../projects/vi-dubber/README.md), checkpoints; [UI-FIX-PLAN](../projects/vi-dubber/frontend/UI-FIX-PLAN.md) chỉ reuse requirements còn thiếu sau reconciliation |
 | UI foundation | [UI skill](../.agents/skills/ui-platform-workflow/SKILL.md), [master UI plan](ui-platform/MASTER-UI-PLATFORM-PLAN.md), [UI-Systems](../UI-Systems/README.md) docs/contracts; [trading semantics](../UI/docs/TRADING-UI-CONTRACT.md) |
-| MT5 UI/Make acceptance | [UI autonomy/Figma/Prop](mt5-tradingview-backtester/UI-AUTONOMY-FIGMA-PROP-PLAN.md); reuse FM/PS/INT gates, không nghiệm thu lại phần đủ same-scope evidence |
+| MT5 UI/Make acceptance | [UI autonomy/Figma/Prop](trader/UI-AUTONOMY-FIGMA-PROP-PLAN.md); reuse FM/PS/INT gates, không nghiệm thu lại phần đủ same-scope evidence |
 | Integrations | [brief](WORKSPACE-INTEGRATIONS-RESEARCH-DRAFT.md), research archive E1–E7 chỉ khi tới connector |
 | Tinh gọn/handoff | [CONTEXT-LIFECYCLE](CONTEXT-LIFECYCLE.md); complete khác compacted |
 
@@ -209,7 +209,7 @@ Dùng [reverse-skill](../tooling/reverse-skill/AGENTS.md) làm **tài liệu tha
 | Operations | Clean supported setup/restore; deterministic evidence locator; owned processes/ports only; source/version/counts correct; restart không duplicate heavy job/export |
 | Fresh agent | Từ PLAN+RESUME chỉ ra next task/deps/owner/rights, tests known/not-run, no redoing accepted work; E6 rehearsal |
 
-Reuse [QA kit](../tooling/ui-qa/README.md), app tests và [trading-ui-qa](../projects/mt5-tradingview-backtester/.agents/skills/trading-ui-qa/SKILL.md) khi phù hợp. Kit smoke không full UI proof; Playwright scripts/CLI trước, selective screenshot/trace; computer use chỉ gap thật. Không khởi động production broker/provider từ browser smoke.
+Reuse [QA kit](../tooling/ui-qa/README.md), app tests và [trading-ui-qa](../projects/trader/.agents/skills/trading-ui-qa/SKILL.md) khi phù hợp. Kit smoke không full UI proof; Playwright scripts/CLI trước, selective screenshot/trace; computer use chỉ gap thật. Không khởi động production broker/provider từ browser smoke.
 
 ## 12. Permission gates và khi nào cần user
 
@@ -258,4 +258,4 @@ Plan-level review gate trước handoff: links/source authority rõ, every owner
 
 Prompt trên là mẫu bàn giao, **không phải lệnh chạy đang được planner thực hiện**.
 
-> **Cleanup authority note · 2026-10-01:** This file is the single cross-project handoff. `CURRENT-CONTEXT.md` routes into it; `checkpoints/workspace-next-stage/RESUME.md` owns current execution summary; project PLANs and runtime ledgers own domain state. Do not copy job status, `STATE.json`, SQLite ledger rows or raw worker chronology here. M2/M3/M4 remain accepted-scoped; current MT5 UI work is owned by `mt5-tradingview-backtester/WMREPLAY-UI-MASTER-PLAN.md`; M5–M7 and external/provider/broker gates remain scope-specific and open where the latest RESUME says so. Future connector/SaaS/multi-user/SDK/distributed-compute/frontier proposals remain reference-only unless a later user brief opens them.
+> **Cleanup authority note · 2026-10-01:** This file is the single cross-project handoff. `CURRENT-CONTEXT.md` routes into it; `checkpoints/workspace-next-stage/RESUME.md` owns current execution summary; project PLANs and runtime ledgers own domain state. Do not copy job status, `STATE.json`, SQLite ledger rows or raw worker chronology here. M2/M3/M4 remain accepted-scoped; current MT5 UI work is owned by `trader/TRADER-UI-MASTER-PLAN.md`; M5–M7 and external/provider/broker gates remain scope-specific and open where the latest RESUME says so. Future connector/SaaS/multi-user/SDK/distributed-compute/frontier proposals remain reference-only unless a later user brief opens them.
