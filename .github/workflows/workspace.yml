@@ -1,24 +1,8 @@
 name: Workspace
 on:
   pull_request:
-    paths:
-      - '.github/workflows/workspace.yml'
-      - '.gitmodules'
-      - 'UI-Systems/**'
-      - 'UI/**'
-      - 'tooling/ui-qa/**'
-      - 'projects/trader'
-      - 'projects/vi-dubber'
   push:
     branches: [main]
-    paths:
-      - '.github/workflows/workspace.yml'
-      - '.gitmodules'
-      - 'UI-Systems/**'
-      - 'UI/**'
-      - 'tooling/ui-qa/**'
-      - 'projects/trader'
-      - 'projects/vi-dubber'
   workflow_dispatch:
 permissions:
   contents: read
