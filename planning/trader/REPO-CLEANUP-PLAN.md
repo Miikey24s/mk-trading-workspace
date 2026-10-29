@@ -16,6 +16,8 @@ suy ra repo root; DB/tool/vendor dùng cấu hình rõ. Giữ namespace, storage
 ID và receipts lịch sử để tương thích. Không sửa hash hoặc snapshot lịch sử.
 
 Bằng chứng, trạng thái và bước còn lại: [migration receipt](checkpoints/NAQEX-MIGRATION-20261029.md).
+Owner đã hoãn đóng gói Windows để phân phối sang đợt sau; đợt này chốt source,
+plan, GitHub và CI/PR. ZIP thử chỉ là bằng chứng build, chưa là bản cài được hỗ trợ.
 Checkout cũ và WIP còn được giữ để phục vụ runtime đã có; chỉ retire sau cutover,
 backup/rollback và xác nhận phù hợp. Public application release và runtime
 rollout giữ gate riêng. Các mục dưới đây là baseline lịch sử 20/09, không tự
